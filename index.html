@@ -184,16 +184,16 @@ const ROOTS = [
 ];
 const TASKS = {
   bbb_martins: {
-    title: "BBB L1–L5 Trace Samples",
-    note: "Twenty-five near-balanced deterministic samples from the current best BBB progressive run. ",
+    title: "BBB L1–L5 Traces",
+    note: "All 397 queries from the current best BBB progressive validation run. ",
   },
   bioavailability_ma: {
-    title: "Oral Bioavailability L1–L6 Trace Samples",
-    note: "Twenty-five near-balanced deterministic samples from the current best oral-bioavailability progressive run. ",
+    title: "Oral Bioavailability L1–L6 Traces",
+    note: "All 262 queries from the current best oral-bioavailability progressive validation run. ",
   },
   skin_reaction: {
-    title: "Skin Reaction L1–L4 Trace Samples",
-    note: "Twenty-five near-balanced deterministic samples from the current best Skin progressive run. ",
+    title: "Skin Reaction L1–L4 Traces",
+    note: "All 246 queries from the current best Skin progressive validation run. ",
   },
 };
 const requestedTask = new URLSearchParams(location.search).get("task");
@@ -445,7 +445,10 @@ function setLoading(value, message = "") {
 function renderLoadingDetail(message) { els.detail.innerHTML = `<div class="section"><div class="loading">${esc(message)}</div></div>`; }
 function renderEmpty(message) { els.detail.innerHTML = `<div class="section"><div class="empty">${esc(message)}</div></div>`; }
 function showError(message) { els.detail.innerHTML = `<div class="error">${esc(message)}</div>`; }
-function statusClass(value) { return String(value).toLowerCase() === "ok" ? "ok" : "bad"; }
+function statusClass(value) {
+  const status = String(value).toLowerCase();
+  return status === "ok" ? "ok" : ["failed", "error"].includes(status) ? "bad" : "warn";
+}
 function metric(key, value) { return `<div class="metric"><div class="metric-key">${esc(key)}</div><div class="metric-value">${esc(text(value))}</div></div>`; }
 function usageText(usage) {
   if (!usage) return "";
@@ -545,8 +548,9 @@ function renderReasoning(record) {
 function renderStage(record, index) {
   const open = index === 0 ? " open" : "";
   const correctnessClass = record.correct === true ? "ok" : record.correct === false ? "bad" : "warn";
+  const carriedForward = record.status === "carried_forward" ? `<span class="pill">${esc(record.carry_forward_reason || "Prior state carried forward without an LLM call.")}</span>` : "";
   return `<details class="stage"${open}><summary><span class="${correctnessClass}" title="${record.correct === true ? "Correct" : record.correct === false ? "Incorrect" : "Unknown"} at this level">${esc(stageLabel(record.task))}</span><span class="${statusClass(record.status)}">${esc(record.status || "unknown")}</span></summary><div class="stage-content">
-    <div class="stage-meta"><span class="pill">${esc(record.trace_provenance || "provenance unavailable")}</span><span class="pill">tools ${esc(record.tool_count || 0)}</span><span class="pill">${esc(usageText(record.usage))}</span></div>
+    <div class="stage-meta"><span class="pill">${esc(record.trace_provenance || "provenance unavailable")}</span>${carriedForward}<span class="pill">tools ${esc(record.tool_count || 0)}</span><span class="pill">${esc(usageText(record.usage))}</span></div>
     ${renderInput(record)}
     ${renderReasoning(record)}
     <details class="trace-part"><summary>Final output</summary><div class="trace-part-body">${renderResponse(record)}</div></details>
