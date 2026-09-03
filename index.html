@@ -418,6 +418,12 @@ async function selectSample(row) {
     state.retrieval = retrieval;
     state.runManifest = runManifest;
     state.reuse = reuse;
+    const prompt = trace.flatMap(record => record.messages || [])
+      .filter(message => message.role === "user")
+      .map(message => parseMaybeJson(message.content))
+      .find(payload => payload?.query);
+    row.smiles ||= prompt?.query?.canonical_smiles || prompt?.query?.input_smiles || "";
+    renderSampleList();
     renderDetail();
   } catch (error) {
     showError(error.message);
