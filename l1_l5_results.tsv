@@ -1,0 +1,11 @@
+task	level	n_successful	n_failed	macro_f1	accuracy	prompt_version	model	result_provenance
+bbb_martins	L1	397	0	0.7466340645736738	0.7909319899244333	v4	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bbb_martins	L2	397	0	0.739453601953602	0.783375314861461	v4	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bbb_martins	L3	397	0	0.7467979260615429	0.7858942065491183	v4	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run_recovered_from_completion_receipt
+bbb_martins	L4	397	0	0.7444154988621392	0.783375314861461	v4	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run_recovered_from_completion_receipt
+bbb_martins	L5	397	0	0.7527944839317173	0.7934508816120907	v4	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run_recovered_from_completion_receipt
+bioavailability_ma	L1	262	0	0.7046092627390295	0.8053435114503816	v3	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bioavailability_ma	L2	262	0	0.7461404302047672	0.8282442748091603	v3	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bioavailability_ma	L3	262	0	0.7388176144244105	0.8244274809160306	v3	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run_recovered_from_completion_receipt
+bioavailability_ma	L4	262	0	0.775780915703894	0.8473282442748091	v3	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run_recovered_from_completion_receipt
+bioavailability_ma	L5	262	0	0.7812473908324288	0.8473282442748091	v3	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run_recovered_from_completion_receipt

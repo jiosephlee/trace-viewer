@@ -1,0 +1,16 @@
+{
+  "schema_version": "predict_trace_viewer_dataset.v1",
+  "task": "bbb_martins",
+  "condition": "best_prompt_l1_l5_sample",
+  "n_samples": 10,
+  "levels": [
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5"
+  ],
+  "prompt_version": "v4",
+  "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+  "notice": "Sample statistics are not the full-cohort benchmark metrics."
+}

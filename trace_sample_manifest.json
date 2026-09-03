@@ -1,0 +1,802 @@
+[
+  {
+    "task": "bbb_martins",
+    "query_index": 26,
+    "benchmark_row_id": "BBBCTX_5BBD701B73A9C890F6BF",
+    "label": 0,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 26,
+    "benchmark_row_id": "BBBCTX_5BBD701B73A9C890F6BF",
+    "label": 0,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 26,
+    "benchmark_row_id": "BBBCTX_5BBD701B73A9C890F6BF",
+    "label": 0,
+    "level": "L3",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 26,
+    "benchmark_row_id": "BBBCTX_5BBD701B73A9C890F6BF",
+    "label": 0,
+    "level": "L4",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 26,
+    "benchmark_row_id": "BBBCTX_5BBD701B73A9C890F6BF",
+    "label": 0,
+    "level": "L5",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 39,
+    "benchmark_row_id": "NULL_8ADD549E3866D996FDD2",
+    "label": 1,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 39,
+    "benchmark_row_id": "NULL_8ADD549E3866D996FDD2",
+    "label": 1,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 39,
+    "benchmark_row_id": "NULL_8ADD549E3866D996FDD2",
+    "label": 1,
+    "level": "L3",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 39,
+    "benchmark_row_id": "NULL_8ADD549E3866D996FDD2",
+    "label": 1,
+    "level": "L4",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 39,
+    "benchmark_row_id": "NULL_8ADD549E3866D996FDD2",
+    "label": 1,
+    "level": "L5",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 71,
+    "benchmark_row_id": "BBBCTX_8775CCF71EB32FABACD6",
+    "label": 1,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 71,
+    "benchmark_row_id": "BBBCTX_8775CCF71EB32FABACD6",
+    "label": 1,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 71,
+    "benchmark_row_id": "BBBCTX_8775CCF71EB32FABACD6",
+    "label": 1,
+    "level": "L3",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 71,
+    "benchmark_row_id": "BBBCTX_8775CCF71EB32FABACD6",
+    "label": 1,
+    "level": "L4",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 71,
+    "benchmark_row_id": "BBBCTX_8775CCF71EB32FABACD6",
+    "label": 1,
+    "level": "L5",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 88,
+    "benchmark_row_id": "NULL_4B15AC42735D951AEDB4",
+    "label": 1,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 88,
+    "benchmark_row_id": "NULL_4B15AC42735D951AEDB4",
+    "label": 1,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 88,
+    "benchmark_row_id": "NULL_4B15AC42735D951AEDB4",
+    "label": 1,
+    "level": "L3",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 88,
+    "benchmark_row_id": "NULL_4B15AC42735D951AEDB4",
+    "label": 1,
+    "level": "L4",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 88,
+    "benchmark_row_id": "NULL_4B15AC42735D951AEDB4",
+    "label": 1,
+    "level": "L5",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 124,
+    "benchmark_row_id": "NULL_7DF5270F8F1379CC3069",
+    "label": 0,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 124,
+    "benchmark_row_id": "NULL_7DF5270F8F1379CC3069",
+    "label": 0,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 124,
+    "benchmark_row_id": "NULL_7DF5270F8F1379CC3069",
+    "label": 0,
+    "level": "L3",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 124,
+    "benchmark_row_id": "NULL_7DF5270F8F1379CC3069",
+    "label": 0,
+    "level": "L4",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 124,
+    "benchmark_row_id": "NULL_7DF5270F8F1379CC3069",
+    "label": 0,
+    "level": "L5",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 140,
+    "benchmark_row_id": "NULL_28E6DA7022C7FEE8B75F",
+    "label": 1,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 140,
+    "benchmark_row_id": "NULL_28E6DA7022C7FEE8B75F",
+    "label": 1,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 140,
+    "benchmark_row_id": "NULL_28E6DA7022C7FEE8B75F",
+    "label": 1,
+    "level": "L3",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 140,
+    "benchmark_row_id": "NULL_28E6DA7022C7FEE8B75F",
+    "label": 1,
+    "level": "L4",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 140,
+    "benchmark_row_id": "NULL_28E6DA7022C7FEE8B75F",
+    "label": 1,
+    "level": "L5",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 149,
+    "benchmark_row_id": "NULL_D83DD759632C5EF3D1A5",
+    "label": 0,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 149,
+    "benchmark_row_id": "NULL_D83DD759632C5EF3D1A5",
+    "label": 0,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 149,
+    "benchmark_row_id": "NULL_D83DD759632C5EF3D1A5",
+    "label": 0,
+    "level": "L3",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 149,
+    "benchmark_row_id": "NULL_D83DD759632C5EF3D1A5",
+    "label": 0,
+    "level": "L4",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 149,
+    "benchmark_row_id": "NULL_D83DD759632C5EF3D1A5",
+    "label": 0,
+    "level": "L5",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 189,
+    "benchmark_row_id": "NULL_F9F2B383F7F33902643C",
+    "label": 0,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 189,
+    "benchmark_row_id": "NULL_F9F2B383F7F33902643C",
+    "label": 0,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 189,
+    "benchmark_row_id": "NULL_F9F2B383F7F33902643C",
+    "label": 0,
+    "level": "L3",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 189,
+    "benchmark_row_id": "NULL_F9F2B383F7F33902643C",
+    "label": 0,
+    "level": "L4",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 189,
+    "benchmark_row_id": "NULL_F9F2B383F7F33902643C",
+    "label": 0,
+    "level": "L5",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 209,
+    "benchmark_row_id": "NULL_BB641393CDB2969A0F35",
+    "label": 1,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 209,
+    "benchmark_row_id": "NULL_BB641393CDB2969A0F35",
+    "label": 1,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 209,
+    "benchmark_row_id": "NULL_BB641393CDB2969A0F35",
+    "label": 1,
+    "level": "L3",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 209,
+    "benchmark_row_id": "NULL_BB641393CDB2969A0F35",
+    "label": 1,
+    "level": "L4",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 209,
+    "benchmark_row_id": "NULL_BB641393CDB2969A0F35",
+    "label": 1,
+    "level": "L5",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 226,
+    "benchmark_row_id": "BBBCTX_F60365A15FC7B8E7DB90",
+    "label": 0,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 226,
+    "benchmark_row_id": "BBBCTX_F60365A15FC7B8E7DB90",
+    "label": 0,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 226,
+    "benchmark_row_id": "BBBCTX_F60365A15FC7B8E7DB90",
+    "label": 0,
+    "level": "L3",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 226,
+    "benchmark_row_id": "BBBCTX_F60365A15FC7B8E7DB90",
+    "label": 0,
+    "level": "L4",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bbb_martins",
+    "query_index": 226,
+    "benchmark_row_id": "BBBCTX_F60365A15FC7B8E7DB90",
+    "label": 0,
+    "level": "L5",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 0,
+    "benchmark_row_id": "NULL_B7EEF64F743F21E74F4B",
+    "label": 1,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 0,
+    "benchmark_row_id": "NULL_B7EEF64F743F21E74F4B",
+    "label": 1,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 0,
+    "benchmark_row_id": "NULL_B7EEF64F743F21E74F4B",
+    "label": 1,
+    "level": "L3",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 0,
+    "benchmark_row_id": "NULL_B7EEF64F743F21E74F4B",
+    "label": 1,
+    "level": "L4",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 0,
+    "benchmark_row_id": "NULL_B7EEF64F743F21E74F4B",
+    "label": 1,
+    "level": "L5",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 11,
+    "benchmark_row_id": "NULL_E01D5DEAA30A655B70FE",
+    "label": 0,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 11,
+    "benchmark_row_id": "NULL_E01D5DEAA30A655B70FE",
+    "label": 0,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 11,
+    "benchmark_row_id": "NULL_E01D5DEAA30A655B70FE",
+    "label": 0,
+    "level": "L3",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 11,
+    "benchmark_row_id": "NULL_E01D5DEAA30A655B70FE",
+    "label": 0,
+    "level": "L4",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 11,
+    "benchmark_row_id": "NULL_E01D5DEAA30A655B70FE",
+    "label": 0,
+    "level": "L5",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 98,
+    "benchmark_row_id": "NULL_8FF5EDF8F26973518632",
+    "label": 0,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 98,
+    "benchmark_row_id": "NULL_8FF5EDF8F26973518632",
+    "label": 0,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 98,
+    "benchmark_row_id": "NULL_8FF5EDF8F26973518632",
+    "label": 0,
+    "level": "L3",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 98,
+    "benchmark_row_id": "NULL_8FF5EDF8F26973518632",
+    "label": 0,
+    "level": "L4",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 98,
+    "benchmark_row_id": "NULL_8FF5EDF8F26973518632",
+    "label": 0,
+    "level": "L5",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 122,
+    "benchmark_row_id": "NULL_8F0A6CBA8881BE52CF6F",
+    "label": 1,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 122,
+    "benchmark_row_id": "NULL_8F0A6CBA8881BE52CF6F",
+    "label": 1,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 122,
+    "benchmark_row_id": "NULL_8F0A6CBA8881BE52CF6F",
+    "label": 1,
+    "level": "L3",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 122,
+    "benchmark_row_id": "NULL_8F0A6CBA8881BE52CF6F",
+    "label": 1,
+    "level": "L4",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 122,
+    "benchmark_row_id": "NULL_8F0A6CBA8881BE52CF6F",
+    "label": 1,
+    "level": "L5",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 159,
+    "benchmark_row_id": "NULL_4B93D90E5C2758077E78",
+    "label": 1,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 159,
+    "benchmark_row_id": "NULL_4B93D90E5C2758077E78",
+    "label": 1,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 159,
+    "benchmark_row_id": "NULL_4B93D90E5C2758077E78",
+    "label": 1,
+    "level": "L3",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 159,
+    "benchmark_row_id": "NULL_4B93D90E5C2758077E78",
+    "label": 1,
+    "level": "L4",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 159,
+    "benchmark_row_id": "NULL_4B93D90E5C2758077E78",
+    "label": 1,
+    "level": "L5",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 186,
+    "benchmark_row_id": "NULL_4F53B9F557C02C9218BC",
+    "label": 0,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 186,
+    "benchmark_row_id": "NULL_4F53B9F557C02C9218BC",
+    "label": 0,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 186,
+    "benchmark_row_id": "NULL_4F53B9F557C02C9218BC",
+    "label": 0,
+    "level": "L3",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 186,
+    "benchmark_row_id": "NULL_4F53B9F557C02C9218BC",
+    "label": 0,
+    "level": "L4",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 186,
+    "benchmark_row_id": "NULL_4F53B9F557C02C9218BC",
+    "label": 0,
+    "level": "L5",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 192,
+    "benchmark_row_id": "NULL_A833F56B8F14E0A5CD36",
+    "label": 0,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 192,
+    "benchmark_row_id": "NULL_A833F56B8F14E0A5CD36",
+    "label": 0,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 192,
+    "benchmark_row_id": "NULL_A833F56B8F14E0A5CD36",
+    "label": 0,
+    "level": "L3",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 192,
+    "benchmark_row_id": "NULL_A833F56B8F14E0A5CD36",
+    "label": 0,
+    "level": "L4",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 192,
+    "benchmark_row_id": "NULL_A833F56B8F14E0A5CD36",
+    "label": 0,
+    "level": "L5",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 205,
+    "benchmark_row_id": "BIOCTX2_4C3B2D915EEA05A557C9",
+    "label": 1,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 205,
+    "benchmark_row_id": "BIOCTX2_4C3B2D915EEA05A557C9",
+    "label": 1,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 205,
+    "benchmark_row_id": "BIOCTX2_4C3B2D915EEA05A557C9",
+    "label": 1,
+    "level": "L3",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 205,
+    "benchmark_row_id": "BIOCTX2_4C3B2D915EEA05A557C9",
+    "label": 1,
+    "level": "L4",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 205,
+    "benchmark_row_id": "BIOCTX2_4C3B2D915EEA05A557C9",
+    "label": 1,
+    "level": "L5",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 220,
+    "benchmark_row_id": "NULL_2E48BFD5394711DB0A64",
+    "label": 1,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 220,
+    "benchmark_row_id": "NULL_2E48BFD5394711DB0A64",
+    "label": 1,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 220,
+    "benchmark_row_id": "NULL_2E48BFD5394711DB0A64",
+    "label": 1,
+    "level": "L3",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 220,
+    "benchmark_row_id": "NULL_2E48BFD5394711DB0A64",
+    "label": 1,
+    "level": "L4",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 220,
+    "benchmark_row_id": "NULL_2E48BFD5394711DB0A64",
+    "label": 1,
+    "level": "L5",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 233,
+    "benchmark_row_id": "NULL_609DE340D02ACF25BA1A",
+    "label": 0,
+    "level": "L1",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 233,
+    "benchmark_row_id": "NULL_609DE340D02ACF25BA1A",
+    "label": 0,
+    "level": "L2",
+    "trace_provenance": "original_completed_run_snapshot"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 233,
+    "benchmark_row_id": "NULL_609DE340D02ACF25BA1A",
+    "label": 0,
+    "level": "L3",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 233,
+    "benchmark_row_id": "NULL_609DE340D02ACF25BA1A",
+    "label": 0,
+    "level": "L4",
+    "trace_provenance": "reconstructed_replay"
+  },
+  {
+    "task": "bioavailability_ma",
+    "query_index": 233,
+    "benchmark_row_id": "NULL_609DE340D02ACF25BA1A",
+    "label": 0,
+    "level": "L5",
+    "trace_provenance": "reconstructed_replay"
+  }
+]

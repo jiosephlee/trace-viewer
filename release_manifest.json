@@ -1,0 +1,42 @@
+{
+  "schema_version": "txagent_l1_l5_trace_release.v1",
+  "benchmark_split": "scaffold_valid",
+  "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+  "sampling": "five lowest SHA-256 benchmark-row IDs per binary label; BBB candidates required an original surviving L1-L5 chain; same queries at every level",
+  "full_result_finished_at": "2026-09-02T19:43:26.999444+00:00",
+  "full_result_failed_queries": 0,
+  "tasks": {
+    "bbb_martins": {
+      "prompt_version": "v4",
+      "query_indices": [
+        26,
+        39,
+        71,
+        88,
+        124,
+        140,
+        149,
+        189,
+        209,
+        226
+      ],
+      "trace_provenance": "original_completed_run_snapshot"
+    },
+    "bioavailability_ma": {
+      "prompt_version": "v3",
+      "query_indices": [
+        0,
+        11,
+        98,
+        122,
+        159,
+        186,
+        192,
+        205,
+        220,
+        233
+      ],
+      "trace_provenance": "L1-L2 original snapshot; L3-L5 reconstructed replay"
+    }
+  }
+}
