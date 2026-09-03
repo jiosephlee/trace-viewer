@@ -1,0 +1,20 @@
+{
+  "schema_version": "predict_trace_viewer_dataset.v1",
+  "task": "bioavailability_ma",
+  "condition": "best_progressive_sample",
+  "n_samples": 10,
+  "levels": [
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L6"
+  ],
+  "prompt_version": "v3",
+  "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+  "visibility_mode": "identity_blind_context_records",
+  "neighbor_identity_policy": "gold_split_parent_disjoint",
+  "source_artifact_root": "outputs/paper/starling_context_record_progressive_bio_l6_v1/scaffold_valid_deepseek_v4_flash_0731_epyc36_context10_l1cap10_l2add10_later50",
+  "notice": "Ten balanced deterministic samples from the original completed run; sample metrics are not reported."
+}

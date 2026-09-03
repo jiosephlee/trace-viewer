@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Cache-Control" content="no-store">
-<title>L1–L5 Trace Samples</title>
+<title>Progressive Trace Samples</title>
 <style>
   * { box-sizing: border-box; }
   :root {
@@ -136,11 +136,12 @@
 </head>
 <body>
 <header>
-  <h1 id="page-title">L1–L5 Trace Samples <span class="build">2026-09-03</span></h1>
+  <h1 id="page-title">Progressive Trace Samples <span class="build">2026-09-03</span></h1>
   <nav class="task-nav" aria-label="Trace collections">
     <a class="task-link" data-task="bbb_martins" href="?task=bbb_martins">BBB traces</a>
     <a class="task-link" data-task="bioavailability_ma" href="?task=bioavailability_ma">Oral bioavailability traces</a>
-    <a class="task-link download" href="l1_l5_results.tsv" download>Download full results TSV</a>
+    <a class="task-link" data-task="skin_reaction" href="?task=skin_reaction">Skin reaction traces</a>
+    <a class="task-link download" href="current_best_results.tsv" download>Download full results TSV</a>
   </nav>
   <div hidden>
     <select id="dataset"></select><select id="regime"></select><select id="task"></select><select id="condition"></select><button id="refresh"></button>
@@ -149,7 +150,7 @@
 <main>
   <div class="release-note">
     <span id="task-note"></span>
-    These are structure-visible prompts: query and reference SMILES are shown. Evidence selection is scaffold-disjoint for this release; L1–L2 inherit the scaffold-split train/valid separation and L3–L5 enforce it explicitly during cache generation.
+    The prompts are identity-blind but expose query and reference structures. Their recorded identity policy is <code>gold_split_parent_disjoint</code>. Prompt messages, reasoning, and final outputs come from the original completed runs.
   </div>
   <div class="layout">
     <aside>
@@ -182,11 +183,15 @@ const ROOTS = [
 const TASKS = {
   bbb_martins: {
     title: "BBB L1–L5 Trace Samples",
-    note: "Ten sampled BBB chains are shown from L1 through L5. All levels come from the original completed run. ",
+    note: "Ten balanced deterministic samples from the current best BBB progressive run. ",
   },
   bioavailability_ma: {
-    title: "Oral Bioavailability L1–L5 Trace Samples",
-    note: "Ten sampled oral-bioavailability chains are shown from L1 through L5. L1–L2 come from the original run and L3–L5 are reconstructed replays. ",
+    title: "Oral Bioavailability L1–L6 Trace Samples",
+    note: "Ten balanced deterministic samples from the current best oral-bioavailability progressive run. ",
+  },
+  skin_reaction: {
+    title: "Skin Reaction L1–L4 Trace Samples",
+    note: "Ten balanced deterministic samples from the current best Skin progressive run. ",
   },
 };
 const requestedTask = new URLSearchParams(location.search).get("task");
@@ -455,7 +460,7 @@ function groupDisplayLabel(groupId) {
   return GROUP_DISPLAY_LABELS[value] || value || "group";
 }
 function stageLabel(task) {
-  if (/^level_0*[1-5]$/.test(task)) return `L${Number(task.replace("level_", ""))}`;
+  if (/^level_0*[1-6]$/.test(task)) return `L${Number(task.replace("level_", ""))}`;
   if (task === "single_molecule") return "Single-molecule prior";
   if (task === "final_summary") return "Final synthesis";
   if (task === "Flat.all_evidence") return "Flat evidence reasoning";
@@ -607,7 +612,8 @@ function renderDetail() {
   ].join("");
   const stages = state.trace.map((record, index) => renderStage(record, index, state.trace.length)).join("");
   const pills = state.trace.map(record => `<span class="pill ${statusClass(record.status)}">${esc(stageLabel(record.task))}</span>`).join("");
-  els.detail.innerHTML = `<div class="section"><div class="section-head"><span>Sample overview</span><span class="tag">${esc(row.run_id || "")}</span></div><div class="overview">${overview}</div><div class="stage-nav">${pills}</div></div>${renderReuseProvenance(state.reuse)}${renderRetrieval(state.retrieval)}<div class="section"><div class="section-head"><span>Reasoning stages</span><span class="tag">L1 → L5</span></div>${stages}</div>`;
+  const levelRange = state.trace.length ? `${stageLabel(state.trace[0].task)} → ${stageLabel(state.trace.at(-1).task)}` : "";
+  els.detail.innerHTML = `<div class="section"><div class="section-head"><span>Sample overview</span><span class="tag">${esc(row.run_id || "")}</span></div><div class="overview">${overview}</div><div class="stage-nav">${pills}</div></div>${renderReuseProvenance(state.reuse)}${renderRetrieval(state.retrieval)}<div class="section"><div class="section-head"><span>Reasoning stages</span><span class="tag">${esc(levelRange)}</span></div>${stages}</div>`;
 }
 
 els.dataset.onchange = () => { populateRegimes(); loadSelectedCondition(); };

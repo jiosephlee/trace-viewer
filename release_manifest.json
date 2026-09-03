@@ -1,31 +1,33 @@
 {
-  "schema_version": "txagent_l1_l5_trace_release.v1",
+  "schema_version": "txagent_current_best_progressive_trace_release.v1",
   "benchmark_split": "scaffold_valid",
   "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
-  "visibility_mode": "structure_visible_context_records",
-  "neighbor_identity_policy": "L1-L2 inherit scaffold-split train/valid separation; L3-L5 explicitly scaffold-disjoint",
-  "sampling": "five lowest SHA-256 benchmark-row IDs per binary label; BBB candidates required an original surviving L1-L5 chain; same queries at every level",
-  "full_result_finished_at": "2026-09-02T19:43:26.999444+00:00",
-  "full_result_failed_queries": 0,
+  "visibility_mode": "identity_blind_context_records",
+  "neighbor_identity_policy": "gold_split_parent_disjoint",
+  "sampling": "five lowest SHA-256 benchmark-row IDs per binary label; complete original chains only",
   "tasks": {
     "bbb_martins": {
+      "source_artifact_root": "outputs/paper/starling_context_record_progressive_4_2_12_v1/scaffold_valid_deepseek_v4_flash_0731_epyc36_context10_l1cap4_l2add2_later12",
       "prompt_version": "v4",
+      "levels": 5,
       "query_indices": [
         26,
         39,
-        71,
-        88,
-        124,
-        140,
-        149,
-        189,
         209,
-        226
+        226,
+        231,
+        245,
+        340,
+        348,
+        388,
+        396
       ],
       "trace_provenance": "original_completed_run_snapshot"
     },
     "bioavailability_ma": {
+      "source_artifact_root": "outputs/paper/starling_context_record_progressive_bio_l6_v1/scaffold_valid_deepseek_v4_flash_0731_epyc36_context10_l1cap10_l2add10_later50",
       "prompt_version": "v3",
+      "levels": 6,
       "query_indices": [
         0,
         11,
@@ -38,7 +40,25 @@
         220,
         233
       ],
-      "trace_provenance": "L1-L2 original snapshot; L3-L5 reconstructed replay"
+      "trace_provenance": "original_completed_run_snapshot"
+    },
+    "skin_reaction": {
+      "source_artifact_root": "outputs/paper/starling_context_record_progressive_4_2_12_v1/scaffold_valid_deepseek_v4_flash_0731_epyc36_context10_l1cap4_l2add2_later12",
+      "prompt_version": "v6",
+      "levels": 4,
+      "query_indices": [
+        40,
+        41,
+        49,
+        67,
+        85,
+        104,
+        116,
+        137,
+        163,
+        210
+      ],
+      "trace_provenance": "original_completed_run_snapshot"
     }
   }
 }

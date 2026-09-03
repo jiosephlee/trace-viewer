@@ -1,2 +1,3 @@
-l1_l5	runs	bbb_martins	best_prompt_l1_l5_sample
-l1_l5	runs	bioavailability_ma	best_prompt_l1_l5_sample
+current_best	runs	bbb_martins	best_progressive_sample
+current_best	runs	bioavailability_ma	best_progressive_sample
+current_best	runs	skin_reaction	best_progressive_sample
