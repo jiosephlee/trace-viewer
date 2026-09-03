@@ -513,24 +513,21 @@ function renderEvidenceCard(item, index) {
 }
 function renderInput(record) {
   const messages = record.messages || [];
-  const system = messages.find(message => message.role === "system")?.content || "";
-  const user = messages.filter(message => message.role === "user").map(message => parseMaybeJson(message.content)).find(Boolean);
-  const systemPanel = `<details class="trace-part"><summary>System prompt</summary><div class="trace-part-body"><pre>${esc(system)}</pre></div></details>`;
-  if (!user) {
-    const input = messages.filter(message => message.role === "user");
-    const userPanel = `<details class="trace-part" open><summary>User prompt</summary><div class="trace-part-body">${input.map(message => renderValue(message)).join("") || '<div class="empty">No user prompt recorded.</div>'}</div></details>`;
-    return `<details class="trace-part" open><summary>Input</summary><div class="trace-part-body">${systemPanel}${userPanel}</div></details>`;
-  }
-  const query = user.query || {};
-  const querySmiles = query.canonical_smiles || query.input_smiles || "";
-  const queryFields = Object.fromEntries(Object.entries(query).filter(([key]) => !["canonical_smiles", "input_smiles"].includes(key)));
-  const evidence = Array.isArray(user.active_evidence) ? user.active_evidence : [];
-  const metadata = Object.fromEntries(Object.entries(user).filter(([key]) => !["query", "active_evidence"].includes(key)));
-  const userPanel = `<details class="trace-part" open><summary>User prompt</summary><div class="trace-part-body">
-    <article class="evidence-card"><div class="card-head">Query molecule</div><div class="card-body">${querySmiles ? `<div class="card-smiles">${esc(querySmiles)}</div>` : ""}${renderValue(queryFields, 1)}</div></article>
-    ${evidence.length ? `<div class="evidence-grid">${evidence.map(renderEvidenceCard).join("")}</div>` : ""}
-    ${renderValue(metadata)}
-  </div></details>`;
+  const system = messages.filter(message => message.role === "system");
+  const user = messages.filter(message => message.role === "user");
+  const systemPanel = `<details class="trace-part"><summary>System prompt</summary><div class="trace-part-body">${system.map(message => `<pre>${esc(message.content || "")}</pre>`).join("") || '<div class="empty">No system prompt recorded.</div>'}</div></details>`;
+  const userMessages = user.map((message, messageIndex) => {
+    const parsed = parseMaybeJson(message.content);
+    const messageLabel = user.length > 1 ? `<div class="tag">User message ${messageIndex + 1}</div>` : "";
+    if (!parsed || Array.isArray(parsed)) return `<div class="content-block">${messageLabel}<pre>${esc(message.content || "")}</pre></div>`;
+    const fields = Object.entries(parsed).map(([key, value]) => {
+      if (key === "query") return `<div class="json-row"><div class="json-key">${esc(key)}</div><article class="evidence-card"><div class="card-head">Query molecule</div><div class="card-body">${renderValue(value, 1)}</div></article></div>`;
+      if (key === "active_evidence" && Array.isArray(value)) return `<div class="json-row"><div class="json-key">${esc(key)}</div><div class="evidence-grid">${value.map(renderEvidenceCard).join("")}</div></div>`;
+      return `<div class="json-row"><div class="json-key">${esc(key)}</div><div class="json-value">${renderValue(value, 1)}</div></div>`;
+    }).join("");
+    return `<div class="content-block">${messageLabel}<div class="json-object json-depth-1">${fields}</div></div>`;
+  }).join("");
+  const userPanel = `<details class="trace-part" open><summary>User prompt</summary><div class="trace-part-body">${userMessages || '<div class="empty">No user prompt recorded.</div>'}</div></details>`;
   return `<details class="trace-part" open><summary>Input</summary><div class="trace-part-body">${systemPanel}${userPanel}</div></details>`;
 }
 function renderReasoning(record) {
