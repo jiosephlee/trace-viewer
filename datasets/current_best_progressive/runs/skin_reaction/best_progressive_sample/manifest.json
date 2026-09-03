@@ -2,7 +2,7 @@
   "schema_version": "predict_trace_viewer_dataset.v1",
   "task": "skin_reaction",
   "condition": "best_progressive_sample",
-  "n_samples": 10,
+  "n_samples": 25,
   "levels": [
     "L1",
     "L2",
@@ -14,5 +14,5 @@
   "visibility_mode": "identity_blind_context_records",
   "neighbor_identity_policy": "gold_split_parent_disjoint",
   "source_artifact_root": "outputs/paper/starling_context_record_progressive_4_2_12_v1/scaffold_valid_deepseek_v4_flash_0731_epyc36_context10_l1cap4_l2add2_later12",
-  "notice": "Ten balanced deterministic samples from the original completed run; sample metrics are not reported."
+  "notice": "Twenty-five near-balanced deterministic samples from the original completed run; sample metrics are not reported."
 }

@@ -46,6 +46,8 @@
   .sample.active { border-color: var(--blue); box-shadow: inset 3px 0 0 var(--blue); }
   .sample-main { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
   .sample-sub { margin-top: 4px; color: var(--muted); font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sample-levels { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+  .level-result { padding: 2px 6px; border: 1px solid currentColor; border-radius: 999px; font: 700 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
   .detail { min-width: 0; display: grid; gap: 12px; }
   .overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border-bottom: 1px solid var(--line); }
   .metric { min-width: 0; padding: 9px 11px; background: #fff; }
@@ -183,15 +185,15 @@ const ROOTS = [
 const TASKS = {
   bbb_martins: {
     title: "BBB L1–L5 Trace Samples",
-    note: "Ten balanced deterministic samples from the current best BBB progressive run. ",
+    note: "Twenty-five near-balanced deterministic samples from the current best BBB progressive run. ",
   },
   bioavailability_ma: {
     title: "Oral Bioavailability L1–L6 Trace Samples",
-    note: "Ten balanced deterministic samples from the current best oral-bioavailability progressive run. ",
+    note: "Twenty-five near-balanced deterministic samples from the current best oral-bioavailability progressive run. ",
   },
   skin_reaction: {
     title: "Skin Reaction L1–L4 Trace Samples",
-    note: "Ten balanced deterministic samples from the current best Skin progressive run. ",
+    note: "Twenty-five near-balanced deterministic samples from the current best Skin progressive run. ",
   },
 };
 const requestedTask = new URLSearchParams(location.search).get("task");
@@ -390,10 +392,11 @@ function renderSampleList() {
     const active = state.selected && row.query_index === state.selected.query_index ? " active" : "";
     const outcome = row.correct === true ? '<span class="ok">correct</span>' : row.correct === false ? '<span class="bad">wrong</span>' : '<span class="warn">unknown</span>';
     const prediction = row.pred_label ?? "";
+    const levels = Object.entries(row.level_correctness || {}).map(([level, correct]) => `<span class="level-result ${correct ? "ok" : "bad"}" title="${esc(`${level} ${correct ? "correct" : "incorrect"}`)}">${esc(level)}</span>`).join("");
     return `<button class="sample${active}" data-index="${esc(row.query_index)}">
       <div class="sample-main"><strong>#${esc(row.query_index)}</strong>${outcome}</div>
       <div class="sample-sub">label=${esc(row.label)} prediction=${esc(prediction)} confidence=${esc(row.confidence || "")}</div>
-      <div class="sample-sub">${esc(row.smiles || "")}</div>
+      <div class="sample-levels">${levels}</div>
     </button>`;
   }).join("");
   els.samples.querySelectorAll(".sample").forEach(button => {
@@ -541,7 +544,8 @@ function renderReasoning(record) {
 }
 function renderStage(record, index) {
   const open = index === 0 ? " open" : "";
-  return `<details class="stage"${open}><summary><span>${esc(stageLabel(record.task))}</span><span class="${statusClass(record.status)}">${esc(record.status || "unknown")}</span></summary><div class="stage-content">
+  const correctnessClass = record.correct === true ? "ok" : record.correct === false ? "bad" : "warn";
+  return `<details class="stage"${open}><summary><span class="${correctnessClass}" title="${record.correct === true ? "Correct" : record.correct === false ? "Incorrect" : "Unknown"} at this level">${esc(stageLabel(record.task))}</span><span class="${statusClass(record.status)}">${esc(record.status || "unknown")}</span></summary><div class="stage-content">
     <div class="stage-meta"><span class="pill">${esc(record.trace_provenance || "provenance unavailable")}</span><span class="pill">tools ${esc(record.tool_count || 0)}</span><span class="pill">${esc(usageText(record.usage))}</span></div>
     ${renderInput(record)}
     ${renderReasoning(record)}
@@ -611,7 +615,7 @@ function renderDetail() {
     `<div class="metric metric-wide"><div class="metric-key">SMILES</div><div class="metric-value">${esc(row.smiles || "")}</div></div>`,
   ].join("");
   const stages = state.trace.map((record, index) => renderStage(record, index, state.trace.length)).join("");
-  const pills = state.trace.map(record => `<span class="pill ${statusClass(record.status)}">${esc(stageLabel(record.task))}</span>`).join("");
+  const pills = state.trace.map(record => `<span class="pill ${record.correct === true ? "ok" : record.correct === false ? "bad" : "warn"}">${esc(stageLabel(record.task))}</span>`).join("");
   const levelRange = state.trace.length ? `${stageLabel(state.trace[0].task)} → ${stageLabel(state.trace.at(-1).task)}` : "";
   els.detail.innerHTML = `<div class="section"><div class="section-head"><span>Sample overview</span><span class="tag">${esc(row.run_id || "")}</span></div><div class="overview">${overview}</div><div class="stage-nav">${pills}</div></div>${renderReuseProvenance(state.reuse)}${renderRetrieval(state.retrieval)}<div class="section"><div class="section-head"><span>Reasoning stages</span><span class="tag">${esc(levelRange)}</span></div>${stages}</div>`;
 }
