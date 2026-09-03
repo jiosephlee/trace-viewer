@@ -511,24 +511,26 @@ function renderEvidenceCard(item, index) {
     ${item.source_schemas ? `<details class="raw"><summary>Source schemas</summary>${renderValue(item.source_schemas)}</details>` : ""}
   </div></details>`;
 }
-function renderInput(record) {
+function renderPromptPanels(record) {
   const messages = record.messages || [];
   const system = messages.find(message => message.role === "system")?.content || "";
   const user = messages.filter(message => message.role === "user").map(message => parseMaybeJson(message.content)).find(Boolean);
+  const systemPanel = `<details class="trace-part"><summary>System prompt</summary><div class="trace-part-body"><pre>${esc(system)}</pre></div></details>`;
   if (!user) {
-    return `<details class="trace-part" open><summary>Input</summary><div class="trace-part-body">${messages.filter(message => message.role !== "assistant").map(message => renderValue(message)).join("") || '<div class="empty">No input recorded.</div>'}</div></details>`;
+    const input = messages.filter(message => message.role === "user");
+    return `${systemPanel}<details class="trace-part" open><summary>User prompt</summary><div class="trace-part-body">${input.map(message => renderValue(message)).join("") || '<div class="empty">No user prompt recorded.</div>'}</div></details><details class="trace-part"><summary>JSON schema</summary><div class="trace-part-body"><div class="empty">No separate JSON schema recorded.</div></div></details>`;
   }
   const query = user.query || {};
   const querySmiles = query.canonical_smiles || query.input_smiles || "";
   const queryFields = Object.fromEntries(Object.entries(query).filter(([key]) => !["canonical_smiles", "input_smiles"].includes(key)));
   const evidence = Array.isArray(user.active_evidence) ? user.active_evidence : [];
-  const metadata = Object.fromEntries(Object.entries(user).filter(([key]) => !["query", "active_evidence"].includes(key)));
-  return `<details class="trace-part" open><summary>Input</summary><div class="trace-part-body">
+  const schema = user.required_json_schema || {};
+  const metadata = Object.fromEntries(Object.entries(user).filter(([key]) => !["query", "active_evidence", "required_json_schema"].includes(key)));
+  return `${systemPanel}<details class="trace-part" open><summary>User prompt</summary><div class="trace-part-body">
     <article class="evidence-card"><div class="card-head">Query molecule</div><div class="card-body">${querySmiles ? `<div class="card-smiles">${esc(querySmiles)}</div>` : ""}${renderValue(queryFields, 1)}</div></article>
     ${evidence.length ? `<div class="evidence-grid">${evidence.map(renderEvidenceCard).join("")}</div>` : ""}
-    <details class="raw"><summary>System instructions</summary><div class="content-block"><pre>${esc(system)}</pre></div></details>
-    <details class="raw"><summary>Prompt metadata and output schema</summary>${renderValue(metadata)}</details>
-  </div></details>`;
+    ${renderValue(metadata)}
+  </div></details><details class="trace-part"><summary>JSON schema</summary><div class="trace-part-body">${renderValue(schema)}</div></details>`;
 }
 function renderReasoning(record) {
   const reasoning = [...(record.messages || [])].reverse().find(message => message.role === "assistant" && message.reasoning)?.reasoning || record.reasoning || "";
@@ -538,7 +540,7 @@ function renderStage(record, index) {
   const open = index === 0 ? " open" : "";
   return `<details class="stage"${open}><summary><span>${esc(stageLabel(record.task))}</span><span class="${statusClass(record.status)}">${esc(record.status || "unknown")}</span></summary><div class="stage-content">
     <div class="stage-meta"><span class="pill">${esc(record.trace_provenance || "provenance unavailable")}</span><span class="pill">tools ${esc(record.tool_count || 0)}</span><span class="pill">${esc(usageText(record.usage))}</span></div>
-    ${renderInput(record)}
+    ${renderPromptPanels(record)}
     ${renderReasoning(record)}
     <details class="trace-part"><summary>Final output</summary><div class="trace-part-body">${renderResponse(record)}</div></details>
     <details class="raw"><summary>Raw trace record</summary><pre>${esc(JSON.stringify(record, null, 2))}</pre></details>
