@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Cache-Control" content="no-store">
-<title>BBB and Oral Bio L1–L5 Trace Samples</title>
+<title>L1–L5 Trace Samples</title>
 <style>
   * { box-sizing: border-box; }
   :root {
@@ -23,9 +23,10 @@
   header { position: sticky; top: 0; z-index: 10; padding: 12px 18px; color: #fff; background: var(--nav); box-shadow: 0 2px 8px rgba(0,0,0,.18); }
   h1 { margin: 0 0 10px; font-size: 18px; letter-spacing: 0; }
   .build { margin-left: 8px; color: #9bc5ed; font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
-  .toolbar { display: grid; grid-template-columns: 190px 190px 170px minmax(260px, 1fr) auto; gap: 8px; align-items: end; }
-  .control { display: grid; gap: 4px; }
-  label { color: #cbd5e1; font-size: 11px; font-weight: 700; }
+  .task-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+  .task-link { padding: 7px 11px; border: 1px solid #526171; border-radius: 5px; color: #dbe7f2; text-decoration: none; font-size: 13px; font-weight: 700; }
+  .task-link.active { border-color: #9bc5ed; color: #fff; background: var(--blue); }
+  .task-link.download { margin-left: auto; }
   select, input, button { min-height: 34px; border-radius: 5px; font: 13px inherit; }
   select, input { width: 100%; border: 1px solid #526171; padding: 6px 8px; color: #fff; background: #263442; }
   button { border: 0; padding: 7px 12px; color: #fff; background: var(--blue); cursor: pointer; font-weight: 700; }
@@ -33,9 +34,6 @@
   main { max-width: 1600px; margin: 0 auto; padding: 14px; }
   .release-note { margin-bottom: 14px; padding: 11px 13px; border: 1px solid #b8d3ec; background: #eef7ff; font-size: 13px; line-height: 1.5; }
   .release-note a { color: var(--blue); font-weight: 700; }
-  .results { width: 100%; margin-top: 9px; border-collapse: collapse; background: #fff; font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; }
-  .results th, .results td { padding: 5px 7px; border: 1px solid #cad9e7; text-align: right; }
-  .results th:first-child, .results td:first-child, .results th:nth-child(2), .results td:nth-child(2) { text-align: left; }
   .layout { display: grid; grid-template-columns: 350px minmax(0, 1fr); gap: 14px; }
   aside, .section { border: 1px solid var(--line); background: var(--panel); }
   aside { position: sticky; top: 116px; align-self: start; max-height: calc(100vh - 130px); overflow: hidden; }
@@ -127,7 +125,7 @@
   .empty, .loading { padding: 34px 20px; text-align: center; color: var(--muted); }
   .error { padding: 12px; color: var(--red); background: #fff1f0; border: 1px solid #f1b8b3; }
   @media (max-width: 900px) {
-    .toolbar { grid-template-columns: 1fr 1fr; }
+    .task-link.download { margin-left: 0; }
     .layout { grid-template-columns: 1fr; }
     aside { position: static; max-height: none; }
     .sample-list { max-height: 340px; }
@@ -139,34 +137,24 @@
 </head>
 <body>
 <header>
-  <h1>BBB and Oral Bio L1–L5 Trace Samples <span class="build">2026-09-03</span></h1>
-  <div class="toolbar">
-    <div class="control"><label for="dataset">Benchmark dataset</label><select id="dataset"></select></div>
-    <div class="control"><label for="regime">Visibility</label><select id="regime"></select></div>
-    <div class="control"><label for="task">Task</label><select id="task"></select></div>
-    <div class="control"><label for="condition">Experiment condition</label><select id="condition"></select></div>
-    <button id="refresh">Refresh</button>
+  <h1 id="page-title">L1–L5 Trace Samples <span class="build">2026-09-03</span></h1>
+  <nav class="task-nav" aria-label="Trace collections">
+    <a class="task-link" data-task="bbb_martins" href="?task=bbb_martins">BBB traces</a>
+    <a class="task-link" data-task="bioavailability_ma" href="?task=bioavailability_ma">Oral bioavailability traces</a>
+    <a class="task-link download" href="l1_l5_results.tsv" download>Download full results TSV</a>
+  </nav>
+  <div hidden>
+    <select id="dataset"></select><select id="regime"></select><select id="task"></select><select id="condition"></select><button id="refresh"></button>
   </div>
 </header>
 <main>
   <div class="release-note">
-    This viewer contains 10 label-balanced examples per task, with the same examples followed from L1 through L5.
-    Full-cohort metrics are authoritative and available in <a href="l1_l5_results.tsv">l1_l5_results.tsv</a>.
-    BBB traces are from the original run; oral-bio L3–L5 traces are explicitly marked reconstructed replays.
-    Metrics computed below describe only the displayed 10-example sample.
-    <table class="results">
-      <thead><tr><th>Task</th><th>Metric</th><th>L1</th><th>L2</th><th>L3</th><th>L4</th><th>L5</th></tr></thead>
-      <tbody>
-        <tr><td>BBB</td><td>Macro-F1</td><td>0.7466</td><td>0.7395</td><td>0.7468</td><td>0.7444</td><td>0.7528</td></tr>
-        <tr><td>BBB</td><td>Accuracy</td><td>0.7909</td><td>0.7834</td><td>0.7859</td><td>0.7834</td><td>0.7935</td></tr>
-        <tr><td>Oral bio</td><td>Macro-F1</td><td>0.7046</td><td>0.7461</td><td>0.7388</td><td>0.7758</td><td>0.7812</td></tr>
-        <tr><td>Oral bio</td><td>Accuracy</td><td>0.8053</td><td>0.8282</td><td>0.8244</td><td>0.8473</td><td>0.8473</td></tr>
-      </tbody>
-    </table>
+    <span id="task-note"></span>
+    These are structure-visible prompts: query and reference SMILES are shown. Evidence selection is scaffold-disjoint for this release; L1–L2 inherit the scaffold-split train/valid separation and L3–L5 enforce it explicitly during cache generation.
   </div>
   <div class="layout">
     <aside>
-      <div class="aside-head"><span>Test samples</span><span id="count" class="tag">0</span></div>
+      <div class="aside-head"><span>Trace samples</span><span id="count" class="tag">0</span></div>
       <div class="filters">
         <input id="search" type="text" placeholder="Search index, prediction, SMILES, summary">
         <select id="correctness">
@@ -189,9 +177,21 @@
 const ROOTS = [
   { id: "runs_deployment_visible_parent_disjoint", label: "Deployment-visible (parent-disjoint)" },
   { id: "runs_deployment_visible", label: "Deployment-visible (agentic tools)" },
-  { id: "runs", label: "Identity-blind" },
+  { id: "runs", label: "Structure-visible context records" },
   { id: "runs_deployment_visible_prefetched", label: "Deployment-visible (matched prefetch)" },
 ];
+const TASKS = {
+  bbb_martins: {
+    title: "BBB L1–L5 Trace Samples",
+    note: "Ten sampled BBB chains are shown from L1 through L5. All levels come from the original completed run. ",
+  },
+  bioavailability_ma: {
+    title: "Oral Bioavailability L1–L5 Trace Samples",
+    note: "Ten sampled oral-bioavailability chains are shown from L1 through L5. L1–L2 come from the original run and L3–L5 are reconstructed replays. ",
+  },
+};
+const requestedTask = new URLSearchParams(location.search).get("task");
+const activeTask = TASKS[requestedTask] ? requestedTask : "bbb_martins";
 const state = { datasets: [], catalog: [], condition: null, manifest: null, predictions: [], filtered: [], selected: null, trace: [], retrieval: null, runManifest: null, reuse: null, loading: false };
 const $ = id => document.getElementById(id);
 const els = { dataset: $("dataset"), regime: $("regime"), task: $("task"), condition: $("condition"), refresh: $("refresh"), search: $("search"), correctness: $("correctness"), status: $("status"), samples: $("samples"), count: $("count"), detail: $("detail") };
@@ -330,6 +330,7 @@ function populateRegimes() {
 function populateTasks() {
   const tasks = [...new Set(state.catalog.filter(x => x.datasetId === els.dataset.value && x.regime === els.regime.value).map(x => x.task))].sort();
   els.task.innerHTML = tasks.map(task => `<option value="${esc(task)}">${esc(task)}</option>`).join("");
+  if (tasks.includes(activeTask)) els.task.value = activeTask;
   populateConditions();
 }
 function populateConditions() {
@@ -436,56 +437,6 @@ function metric(key, value) { return `<div class="metric"><div class="metric-key
 function usageText(usage) {
   if (!usage) return "";
   return `${Number(usage.prompt_tokens || 0).toLocaleString()} in / ${Number(usage.completion_tokens || 0).toLocaleString()} out / ${Number(usage.total_tokens || 0).toLocaleString()} total`;
-}
-function rowFailed(row) {
-  const statuses = [row.status, row.final_status]
-    .filter(value => value !== null && value !== undefined && String(value) !== "")
-    .map(value => String(value).toLowerCase());
-  return statuses.some(status => status !== "ok");
-}
-function computeConditionMetrics(rows) {
-  const evaluated = rows.filter(row => !rowFailed(row) && row.label !== null && row.label !== undefined && row.pred_label !== null && row.pred_label !== undefined);
-  const classes = [...new Set(evaluated.flatMap(row => [String(row.label), String(row.pred_label)]))].sort();
-  const correct = evaluated.filter(row => String(row.label) === String(row.pred_label)).length;
-  const f1Values = classes.map(value => {
-    const tp = evaluated.filter(row => String(row.label) === value && String(row.pred_label) === value).length;
-    const fp = evaluated.filter(row => String(row.label) !== value && String(row.pred_label) === value).length;
-    const fn = evaluated.filter(row => String(row.label) === value && String(row.pred_label) !== value).length;
-    const denominator = (2 * tp) + fp + fn;
-    return denominator ? (2 * tp) / denominator : 0;
-  });
-  const confusion = classes.length === 2 && classes.includes("0") && classes.includes("1") ? {
-    tn: evaluated.filter(row => String(row.label) === "0" && String(row.pred_label) === "0").length,
-    fp: evaluated.filter(row => String(row.label) === "0" && String(row.pred_label) === "1").length,
-    fn: evaluated.filter(row => String(row.label) === "1" && String(row.pred_label) === "0").length,
-    tp: evaluated.filter(row => String(row.label) === "1" && String(row.pred_label) === "1").length,
-  } : null;
-  return {
-    total: rows.length,
-    evaluated: evaluated.length,
-    failed: rows.filter(rowFailed).length,
-    accuracy: evaluated.length ? correct / evaluated.length : null,
-    macroF1: f1Values.length ? f1Values.reduce((sum, value) => sum + value, 0) / f1Values.length : null,
-    confusion,
-  };
-}
-function formatScore(value) { return value === null ? "" : value.toFixed(4); }
-function renderConditionSummary() {
-  const summary = computeConditionMetrics(state.predictions);
-  const values = [
-    metric("Benchmark dataset", state.condition?.datasetLabel),
-    metric("Task", state.condition?.task),
-    metric("Condition", state.condition?.name),
-    metric("Samples", summary.total),
-    metric("Evaluated", summary.evaluated),
-    metric("Accuracy", formatScore(summary.accuracy)),
-    metric("Macro-F1", formatScore(summary.macroF1)),
-    metric("Failures", summary.failed),
-  ];
-  if (summary.confusion) {
-    values.push(metric("Confusion matrix", `TN ${summary.confusion.tn} / FP ${summary.confusion.fp} / FN ${summary.confusion.fn} / TP ${summary.confusion.tp}`));
-  }
-  return `<div class="section"><div class="section-head"><span>Displayed-sample results</span><span class="tag">10 examples only; download TSV for full cohort</span></div><div class="overview">${values.join("")}</div></div>`;
 }
 const GROUP_DISPLAY_LABELS = Object.freeze({
   "Observed.direct_oral_bioavailability": "Direct oral bioavailability (F%)",
@@ -597,10 +548,6 @@ function renderDetail() {
   const row = state.selected;
   if (!row) return renderEmpty("Select a test sample.");
   const final = state.trace.find(record => record.task === "final_summary") || [...state.trace].reverse().find(record => record.prediction);
-  const neighborPolicy = state.runManifest?.neighbor_identity_policy || state.manifest?.neighbor_identity_policy || state.retrieval?.experiment?.neighbor_identity_policy || "not recorded";
-  const parentDisjointExecution = state.condition?.regime === "runs_deployment_visible_parent_disjoint"
-    ? (state.reuse ? "reused (retrieval input unchanged)" : "rerun (retrieval changed)")
-    : "not applicable";
   const totalUsage = state.trace.reduce((sum, record) => {
     sum.prompt += Number(record.usage?.prompt_tokens || 0);
     sum.completion += Number(record.usage?.completion_tokens || 0);
@@ -608,12 +555,6 @@ function renderDetail() {
     return sum;
   }, { prompt: 0, completion: 0, total: 0 });
   const overview = [
-    metric("Benchmark dataset", state.condition?.datasetLabel),
-    metric("Task", state.condition?.task),
-    metric("Condition", state.condition?.name),
-    metric("Visibility", state.condition?.regimeLabel),
-    metric("Neighbor policy", neighborPolicy),
-    metric("Parent-disjoint execution", parentDisjointExecution),
     metric("Index", row.query_index),
     metric("Label", row.label),
     metric("Prediction", final?.prediction ?? row.pred_label),
@@ -625,7 +566,7 @@ function renderDetail() {
   ].join("");
   const stages = state.trace.map((record, index) => renderStage(record, index, state.trace.length)).join("");
   const pills = state.trace.map(record => `<span class="pill ${statusClass(record.status)}">${esc(stageLabel(record.task))}</span>`).join("");
-  els.detail.innerHTML = `${renderConditionSummary()}<div class="section"><div class="section-head"><span>Sample overview</span><span class="tag">${esc(row.run_id || "")}</span></div><div class="overview">${overview}</div><div class="stage-nav">${pills}</div></div>${renderReuseProvenance(state.reuse)}${renderRetrieval(state.retrieval)}<div class="section"><div class="section-head"><span>Reasoning stages</span><span class="tag">single -> group(s) -> final</span></div>${stages}</div>`;
+  els.detail.innerHTML = `<div class="section"><div class="section-head"><span>Sample overview</span><span class="tag">${esc(row.run_id || "")}</span></div><div class="overview">${overview}</div><div class="stage-nav">${pills}</div></div>${renderReuseProvenance(state.reuse)}${renderRetrieval(state.retrieval)}<div class="section"><div class="section-head"><span>Reasoning stages</span><span class="tag">L1 → L5</span></div>${stages}</div>`;
 }
 
 els.dataset.onchange = () => { populateRegimes(); loadSelectedCondition(); };
@@ -636,6 +577,10 @@ els.refresh.onclick = scanCatalog;
 els.search.oninput = applyFilters;
 els.correctness.onchange = applyFilters;
 els.status.onchange = applyFilters;
+document.title = TASKS[activeTask].title;
+$("page-title").firstChild.textContent = `${TASKS[activeTask].title} `;
+$("task-note").textContent = TASKS[activeTask].note;
+document.querySelector(`[data-task="${activeTask}"]`).classList.add("active");
 scanCatalog().catch(error => showError(error.message));
 </script>
 </body>

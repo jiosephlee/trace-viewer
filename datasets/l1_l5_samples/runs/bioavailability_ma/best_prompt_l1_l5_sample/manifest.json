@@ -12,5 +12,7 @@
   ],
   "prompt_version": "v3",
   "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
-  "notice": "Sample statistics are not the full-cohort benchmark metrics."
+  "visibility_mode": "structure_visible_context_records",
+  "neighbor_identity_policy": "L1-L2 inherit scaffold-split train/valid separation; L3-L5 explicitly scaffold-disjoint",
+  "notice": "Trace sample only; no sample-level performance metrics are reported."
 }

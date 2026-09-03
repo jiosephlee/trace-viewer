@@ -2,6 +2,8 @@
   "schema_version": "txagent_l1_l5_trace_release.v1",
   "benchmark_split": "scaffold_valid",
   "model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+  "visibility_mode": "structure_visible_context_records",
+  "neighbor_identity_policy": "L1-L2 inherit scaffold-split train/valid separation; L3-L5 explicitly scaffold-disjoint",
   "sampling": "five lowest SHA-256 benchmark-row IDs per binary label; BBB candidates required an original surviving L1-L5 chain; same queries at every level",
   "full_result_finished_at": "2026-09-02T19:43:26.999444+00:00",
   "full_result_failed_queries": 0,
