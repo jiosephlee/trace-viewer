@@ -1,2 +1,2 @@
-current_best	Current best progressive traces	datasets/current_best_progressive
+current_best	Assay-transfer-ranked traces	datasets/current_best_progressive
 morgan_ranked	Morgan-ranked progressive examples	datasets/morgan_ranked_progressive

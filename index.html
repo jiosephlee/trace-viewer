@@ -24,6 +24,8 @@
   h1 { margin: 0 0 10px; font-size: 18px; letter-spacing: 0; }
   .build { margin-left: 8px; color: #9bc5ed; font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
   .task-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+  .task-nav + .task-nav { margin-top: 8px; }
+  .nav-label { min-width: 58px; align-self: center; color: #9fb0c1; font-size: 11px; font-weight: 800; text-transform: uppercase; }
   .task-link { padding: 7px 11px; border: 1px solid #526171; border-radius: 5px; color: #dbe7f2; text-decoration: none; font-size: 13px; font-weight: 700; }
   .task-link.active { border-color: #9bc5ed; color: #fff; background: var(--blue); }
   .task-link.download { margin-left: auto; }
@@ -36,7 +38,7 @@
   .release-note a { color: var(--blue); font-weight: 700; }
   .layout { display: grid; grid-template-columns: 350px minmax(0, 1fr); gap: 14px; }
   aside, .section { border: 1px solid var(--line); background: var(--panel); }
-  aside { position: sticky; top: 116px; align-self: start; max-height: calc(100vh - 130px); overflow: hidden; }
+  aside { position: sticky; top: 148px; align-self: start; max-height: calc(100vh - 162px); overflow: hidden; }
   .aside-head, .section-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 9px 11px; border-bottom: 1px solid var(--line); background: #edf1f4; font-size: 13px; font-weight: 750; }
   .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; padding: 9px; border-bottom: 1px solid var(--line); }
   .filters input { grid-column: 1 / -1; color: var(--text); background: #fff; border-color: #b9c3ce; }
@@ -139,12 +141,16 @@
 <body>
 <header>
   <h1 id="page-title">Progressive Trace Samples <span class="build">2026-09-04</span></h1>
-  <nav class="task-nav" aria-label="Trace collections">
-    <a class="task-link" data-dataset="current_best" href="?dataset=current_best">Full cohorts</a>
+  <nav class="task-nav" aria-label="Retrieval method">
+    <span class="nav-label">Method</span>
+    <a class="task-link" data-dataset="current_best" href="?dataset=current_best">Assay-transfer ranked</a>
     <a class="task-link" data-dataset="morgan_ranked" href="?dataset=morgan_ranked">Morgan-ranked examples</a>
-    <a class="task-link" data-task="bbb_martins" href="?task=bbb_martins">BBB traces</a>
-    <a class="task-link" data-task="bioavailability_ma" href="?task=bioavailability_ma">Oral bioavailability traces</a>
-    <a class="task-link" data-task="skin_reaction" href="?task=skin_reaction">Skin reaction traces</a>
+  </nav>
+  <nav class="task-nav" aria-label="Dataset">
+    <span class="nav-label">Dataset</span>
+    <a class="task-link" data-task="bbb_martins" href="?task=bbb_martins">BBB</a>
+    <a class="task-link" data-task="bioavailability_ma" href="?task=bioavailability_ma">Oral bioavailability</a>
+    <a class="task-link" data-task="skin_reaction" href="?task=skin_reaction">Skin reaction</a>
     <a id="results-download" class="task-link download" href="current_best_results.tsv" download>Download results TSV</a>
   </nav>
   <div hidden>
