@@ -1,0 +1,16 @@
+task	level	n_successful	n_failed	macro_f1	accuracy	prompt_version	model	result_provenance
+bbb_martins	L1	397	0	0.7477372760523217	0.7934508816120907	morgan_v4	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bbb_martins	L2	397	0	0.7439883768811817	0.7909319899244333	morgan_v4	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bbb_martins	L3	397	0	0.7388157894736842	0.7884130982367759	morgan_v4	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bbb_martins	L4	397	0	0.7551649707061363	0.7984886649874056	morgan_v4	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bbb_martins	L5	397	0	0.7649496743635287	0.8060453400503779	morgan_v4	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bioavailability_ma	L1	262	0	0.8181241198754439	0.8664122137404581	morgan_v3	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bioavailability_ma	L2	262	0	0.8181241198754439	0.8664122137404581	morgan_v3	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bioavailability_ma	L3	262	0	0.8119167264895908	0.8625954198473282	morgan_v3	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bioavailability_ma	L4	262	0	0.8303208713570798	0.8740458015267175	morgan_v3	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bioavailability_ma	L5	262	0	0.8260835611089419	0.8702290076335878	morgan_v3	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+bioavailability_ma	L6	262	0	0.821882951653944	0.8664122137404581	morgan_v3	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+skin_reaction	L1	246	0	0.6509920838902025	0.7195121951219512	morgan_v6	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+skin_reaction	L2	246	0	0.6682228446934328	0.7357723577235772	morgan_v6	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+skin_reaction	L3	246	0	0.6813405983345329	0.7439024390243902	morgan_v6	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run
+skin_reaction	L4	246	0	0.6813405983345329	0.7439024390243902	morgan_v6	deepseek-ai/DeepSeek-V4-Flash-0731	original_completed_run

@@ -138,12 +138,14 @@
 </head>
 <body>
 <header>
-  <h1 id="page-title">Progressive Trace Samples <span class="build">2026-09-03</span></h1>
+  <h1 id="page-title">Progressive Trace Samples <span class="build">2026-09-04</span></h1>
   <nav class="task-nav" aria-label="Trace collections">
+    <a class="task-link" data-dataset="current_best" href="?dataset=current_best">Full cohorts</a>
+    <a class="task-link" data-dataset="morgan_ranked" href="?dataset=morgan_ranked">Morgan-ranked examples</a>
     <a class="task-link" data-task="bbb_martins" href="?task=bbb_martins">BBB traces</a>
     <a class="task-link" data-task="bioavailability_ma" href="?task=bioavailability_ma">Oral bioavailability traces</a>
     <a class="task-link" data-task="skin_reaction" href="?task=skin_reaction">Skin reaction traces</a>
-    <a class="task-link download" href="current_best_results.tsv" download>Download full results TSV</a>
+    <a id="results-download" class="task-link download" href="current_best_results.tsv" download>Download results TSV</a>
   </nav>
   <div hidden>
     <select id="dataset"></select><select id="regime"></select><select id="task"></select><select id="condition"></select><button id="refresh"></button>
@@ -197,7 +199,9 @@ const TASKS = {
   },
 };
 const requestedTask = new URLSearchParams(location.search).get("task");
+const requestedDataset = new URLSearchParams(location.search).get("dataset");
 const activeTask = TASKS[requestedTask] ? requestedTask : "bbb_martins";
+const activeDataset = ["current_best", "morgan_ranked"].includes(requestedDataset) ? requestedDataset : "current_best";
 const state = { datasets: [], catalog: [], condition: null, manifest: null, predictions: [], filtered: [], selected: null, trace: [], retrieval: null, runManifest: null, reuse: null, loading: false };
 const $ = id => document.getElementById(id);
 const els = { dataset: $("dataset"), regime: $("regime"), task: $("task"), condition: $("condition"), refresh: $("refresh"), search: $("search"), correctness: $("correctness"), status: $("status"), samples: $("samples"), count: $("count"), detail: $("detail") };
@@ -326,6 +330,7 @@ async function scanCatalog() {
 function populateDatasets() {
   const datasets = state.datasets.filter(dataset => state.catalog.some(item => item.datasetId === dataset.id));
   els.dataset.innerHTML = datasets.map(dataset => `<option value="${esc(dataset.id)}">${esc(dataset.label)}</option>`).join("");
+  if (datasets.some(dataset => dataset.id === activeDataset)) els.dataset.value = activeDataset;
   populateRegimes();
 }
 function populateRegimes() {
@@ -354,6 +359,8 @@ async function loadSelectedCondition() {
     ]);
     state.condition = condition;
     state.manifest = manifest;
+    $("task-note").textContent = manifest?.notice || TASKS[condition.task]?.note || "";
+    $("results-download").href = condition.datasetId === "morgan_ranked" ? "morgan_ranked_results.tsv" : "current_best_results.tsv";
     state.predictions = predictions;
     state.selected = null;
     state.runManifest = null;
@@ -636,6 +643,9 @@ document.title = TASKS[activeTask].title;
 $("page-title").firstChild.textContent = `${TASKS[activeTask].title} `;
 $("task-note").textContent = TASKS[activeTask].note;
 document.querySelector(`[data-task="${activeTask}"]`).classList.add("active");
+document.querySelector(`[data-dataset="${activeDataset}"]`).classList.add("active");
+document.querySelectorAll("[data-task]").forEach(link => link.href = `?dataset=${activeDataset}&task=${link.dataset.task}`);
+document.querySelectorAll("[data-dataset]").forEach(link => link.href = `?dataset=${link.dataset.dataset}&task=${activeTask}`);
 scanCatalog().catch(error => showError(error.message));
 </script>
 </body>

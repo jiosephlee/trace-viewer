@@ -1,3 +1,6 @@
 current_best	runs	bbb_martins	best_progressive_sample
 current_best	runs	bioavailability_ma	best_progressive_sample
 current_best	runs	skin_reaction	best_progressive_sample
+morgan_ranked	runs	bbb_martins	morgan_ranked_sample
+morgan_ranked	runs	bioavailability_ma	morgan_ranked_sample
+morgan_ranked	runs	skin_reaction	morgan_ranked_sample
