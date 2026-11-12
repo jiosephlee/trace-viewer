@@ -1,0 +1,558 @@
+{
+  "schema_version": "legacy_gold_trace_examples.v1",
+  "benchmark": "gold_v1",
+  "split": "test",
+  "model_family": "deepseek",
+  "sampling": "First query UID per TP/TN/FP/FN in direct + indirect; paired across configurations.",
+  "notice": "Illustrative examples, not an evaluation sample. These are recorded legacy selections; some configurations were selected after inspecting test scores. Provider routes can differ by query.",
+  "source_index_sha256": "4646d01c74c7c26ee48d4ee8411abb77bce4a38273fe87f11f88587fa83cfd94",
+  "source_collection_sha256": "c465b9df19ecd356983e1e5323d4af664bfcc9a8bf511c351b02993f59aa5a19",
+  "tasks": {
+    "bbb_martins": {
+      "title": "Gold BBB",
+      "configurations": {
+        "direct": {
+          "label": "Direct only",
+          "run_uid": "848c08c0-e961-4cba-8ee5-686e847b0ac2",
+          "source_arm": "gold_v1/bbb_martins/direct",
+          "prompt_version": "full_flat_context_v5_six_tasks_upstream_v2",
+          "identity_policy": "scaffold_disjoint",
+          "selection_parameters": {
+            "l1_molecules": 10,
+            "l1_records_per_molecule": 10,
+            "records_per_level": 10,
+            "record_limits_by_level": {
+              "L2": 10,
+              "L3": 10,
+              "L4": 10,
+              "L5": 10
+            },
+            "ranking_tie_seed": 0,
+            "max_level": 1,
+            "l1_min_contrast": 0,
+            "selection_policy": "evidence_flat_context_retrieval.v2"
+          },
+          "metrics": {
+            "n_total": 393,
+            "n_evaluable": 393,
+            "n_successful": 393,
+            "n_failed_runs": 0,
+            "accuracy": 0.770992,
+            "accuracy_including_failed": 0.770992,
+            "macro_f1": 0.673178,
+            "per_class": {
+              "0": {
+                "precision": 0.578947,
+                "recall": 0.431373,
+                "f1": 0.494382,
+                "tp": 44,
+                "fp": 32,
+                "fn": 58
+              },
+              "1": {
+                "precision": 0.817035,
+                "recall": 0.890034,
+                "f1": 0.851974,
+                "tp": 259,
+                "fp": 58,
+                "fn": 32
+              }
+            },
+            "positive_class_precision": 0.817035,
+            "positive_class_recall": 0.890034,
+            "positive_class_f1": 0.851974,
+            "confusion_matrix": {
+              "tn": 44,
+              "fp": 58,
+              "fn": 32,
+              "tp": 259
+            },
+            "prediction_distribution": {
+              "pass": 317,
+              "fail": 76
+            }
+          },
+          "source_hashes": {
+            "manifest.json": "8b781ee598059d1ea60b0a2408a9f0b6a9f5286c05bcb2b8e534c4e262a625fa",
+            "predictions.jsonl": "39ed69289e36f87045e6f8b320993a60288effe8ee30464e591eb1606be9085b",
+            "metrics.json": "deaccf78ff77e5de35c63a488674a701037ff54496ee0f7118fa9b13ee2c6a94",
+            "query_provenance.tsv": "98b1d268384a490cb82bb99e129440d4ac0cbf72fd9b69abee62dcd17e2e58cb",
+            "files.tsv": "ca7139ba952d79a7fc033b64315f231fd32c3551d7fc1930682b58dc9236bca1"
+          }
+        },
+        "direct_plus_indirect": {
+          "label": "Direct + indirect",
+          "run_uid": "0446414e-6c42-46d3-a3c9-f94064c2355d",
+          "source_arm": "deepseek/test/gold_v1/bbb_martins/direct_plus_indirect_coverage_control_20260925_v1",
+          "prompt_version": "full_flat_context_v5_six_tasks_upstream_v2",
+          "identity_policy": "scaffold_disjoint",
+          "selection_parameters": {
+            "direct_budget": 10,
+            "indirect_budget": 50
+          },
+          "metrics": {
+            "n_total": 393,
+            "n_evaluable": 393,
+            "n_successful": 393,
+            "n_failed_runs": 0,
+            "accuracy": 0.824427,
+            "accuracy_including_failed": 0.824427,
+            "macro_f1": 0.732966,
+            "per_class": {
+              "0": {
+                "precision": 0.770492,
+                "recall": 0.460784,
+                "f1": 0.576687,
+                "tp": 47,
+                "fp": 14,
+                "fn": 55
+              },
+              "1": {
+                "precision": 0.834337,
+                "recall": 0.95189,
+                "f1": 0.889245,
+                "tp": 277,
+                "fp": 55,
+                "fn": 14
+              }
+            },
+            "positive_class_precision": 0.834337,
+            "positive_class_recall": 0.95189,
+            "positive_class_f1": 0.889245,
+            "confusion_matrix": {
+              "tn": 47,
+              "fp": 55,
+              "fn": 14,
+              "tp": 277
+            },
+            "prediction_distribution": {
+              "pass": 332,
+              "fail": 61
+            }
+          },
+          "source_hashes": {
+            "manifest.json": "53917a61c0b7069e9d361f6a345c9d88f41bad98e4c0e0fdb6cc1fb25085934a",
+            "predictions.jsonl": "ddbc42e4ef189ff6047029f819f11aba2fdf1252646df62e1ecf88546f1f4d98",
+            "metrics.json": "4b4ed8932bba934b335b1ee7d279ef5819d708ffee79a529e2c1b6bf3bccd6c8",
+            "query_provenance.tsv": "268befd30b5346338341f634b1fada0a948f9270a993ebe897cdf90666e75609",
+            "files.tsv": "dd4ce70a40b6ddb93eea207ea0c89bc3298f7e7e2d3a466c344c5b50d4c7134d"
+          }
+        }
+      },
+      "samples": [
+        {
+          "query_uid": "BBBCTX_19F29C8B7A1D5CBC3566",
+          "query_index": 39,
+          "label": 1,
+          "smiles": "Cc1cc(-c2ccc(/N=N/c3ccc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4c3O)c(C)c2)ccc1/N=N/c1ccc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2c1O",
+          "selection_outcome": "TP",
+          "configurations": {
+            "direct": {
+              "path": "datasets/legacy_gold_v1/bbb_martins/direct/00039.json",
+              "sha256": "b849f9fe2a14accb472af0f452cba5c23bb1a9f4f4e2ad1a2c3dbb1a76fef2ff",
+              "pred_label": 1,
+              "correct": true,
+              "query_index": 39,
+              "source_hashes": {
+                "trace_messages.jsonl": "41a8859d752bbf3179e98eb8feb20964ab38018e876c089fe0a58232e15c4d7d",
+                "final_reasoning_output.json": "7a5e9da25aee8998af015e1871a7a5a1b7f6c9041242f5f40366047fbf442a13",
+                "request.json": "99a57f823f12ac1d4460e1c74788ba714174e0c9f277e573be7358fb770740b3"
+              }
+            },
+            "direct_plus_indirect": {
+              "path": "datasets/legacy_gold_v1/bbb_martins/direct_plus_indirect/00039.json",
+              "sha256": "e5d7cd2f4c5d30d309104cede874dd5cc5af5c546fbdbc5fb1b554a2d8f4e151",
+              "pred_label": 1,
+              "correct": true,
+              "query_index": 39,
+              "source_hashes": {
+                "trace_messages.jsonl": "b6c031552eee7fe70b18c2b040e0fcf79be4d2ce0421f828e4a734d6fdb64215",
+                "final_reasoning_output.json": "f4081f07c5dcf34f8a28c6b42d0cbe395094afa1a72239dd3d221174a2b84d87",
+                "request.json": "ce837046a0d6366228b4467c973860997cfdaaa5cf4d5bc9ec67dc5184ed47cb"
+              }
+            }
+          }
+        },
+        {
+          "query_uid": "BBBCTX_9F6F1992756C12A1501F",
+          "query_index": 146,
+          "label": 0,
+          "smiles": "COc1cc2c(cc1OC)CN(CCc1ccc(NC(=O)c3cc(OC)c(OC)cc3NC(=O)c3cnc4ccccc4c3)cc1)CC2",
+          "selection_outcome": "TN",
+          "configurations": {
+            "direct": {
+              "path": "datasets/legacy_gold_v1/bbb_martins/direct/00146.json",
+              "sha256": "5f9e1d326f02b7c1d3047d10930cd7a492a5ab8fafe25067b05f21613a4327a9",
+              "pred_label": 0,
+              "correct": true,
+              "query_index": 146,
+              "source_hashes": {
+                "trace_messages.jsonl": "cdc011d03c13fd6c669a0cacf839e9fbea1aa89449497a90891e79a6432165c0",
+                "final_reasoning_output.json": "2377eb76401b17351472fdf3229b1aae186c23be9f7b2368cf7a2bfffd860976",
+                "request.json": "3e1ea5fdcbe7fa65c9914ac0813bbec522cb4d1701fdac6fe9a27b189b2afdf5"
+              }
+            },
+            "direct_plus_indirect": {
+              "path": "datasets/legacy_gold_v1/bbb_martins/direct_plus_indirect/00146.json",
+              "sha256": "5ee7f9a744c1bc5a5bc350d440a2e00f2203e8d9119997bdf8dd79509a1edeb9",
+              "pred_label": 0,
+              "correct": true,
+              "query_index": 146,
+              "source_hashes": {
+                "trace_messages.jsonl": "d22443ea8d8efe8d5a5bf59fa514134a3416a03b3ec0ce1577e0c054a612dccf",
+                "final_reasoning_output.json": "e40dd031c5f8ac108f3ec1bf239f992457921f50b27fc03e9849561f6ea29fe8",
+                "request.json": "4b8df0f0081214ef16ccbff639eb015a311fbdcabf26478c0ff0df65a65524fe"
+              }
+            }
+          }
+        },
+        {
+          "query_uid": "BBBCTX_6285F118E1F828E47638",
+          "query_index": 125,
+          "label": 0,
+          "smiles": "CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C",
+          "selection_outcome": "FP",
+          "configurations": {
+            "direct": {
+              "path": "datasets/legacy_gold_v1/bbb_martins/direct/00125.json",
+              "sha256": "06d48a71b2cc759a82ae0cec6277e53e679db249ee612e035f004afb28b295f4",
+              "pred_label": 1,
+              "correct": false,
+              "query_index": 125,
+              "source_hashes": {
+                "trace_messages.jsonl": "7771e83c770637349833be9fa449484f407d7ed5d765cf02f9ee2a8295b5b921",
+                "final_reasoning_output.json": "38b67774db2da3592ca3c7f78a54bb151f59da21e50f962d88026934681ccca1",
+                "request.json": "87ce72ed47dc0c1066454b80262557f82f489b0f49df9b8f7979bb2ba8d09e18"
+              }
+            },
+            "direct_plus_indirect": {
+              "path": "datasets/legacy_gold_v1/bbb_martins/direct_plus_indirect/00125.json",
+              "sha256": "b4c6ac48be1d826157905f2d7603e6769a34dd05b99674b8260f0a0596c6e387",
+              "pred_label": 1,
+              "correct": false,
+              "query_index": 125,
+              "source_hashes": {
+                "trace_messages.jsonl": "2b7b7cbca95a8d6ebd7fec21a8984907b4b9e924d5d6c1917a1b68a6c5f12873",
+                "final_reasoning_output.json": "5720e7d9c1de3f08d3bba410c8a965ea12befe1896bc9e2ef8e568871ca0667f",
+                "request.json": "1191f2ed0e8e8cf46daff89e09e78633f9f58831e87d9ffe26e6395386ce2fbc"
+              }
+            }
+          }
+        },
+        {
+          "query_uid": "BBBCTX_B39449AC3F0064C7E3FE",
+          "query_index": 123,
+          "label": 1,
+          "smiles": "CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C",
+          "selection_outcome": "FN",
+          "configurations": {
+            "direct": {
+              "path": "datasets/legacy_gold_v1/bbb_martins/direct/00123.json",
+              "sha256": "830c24de309de97dc243ae6a9caf2843f9b435c2b868a347dcd24bbde789a269",
+              "pred_label": 1,
+              "correct": true,
+              "query_index": 123,
+              "source_hashes": {
+                "trace_messages.jsonl": "5fc6d825c12ccb4f9242aa974b7be3609cb7ca3317f2efe7e529e3799551fe80",
+                "final_reasoning_output.json": "66dae8ea86d5ee6fa40ad097acabe99aa4da621b13b7b17e7630cdba051dcb5a",
+                "request.json": "872177aee6810f4f32ed2b236cda30e3b8590f90bbc822e30fc4bf6316f69eab"
+              }
+            },
+            "direct_plus_indirect": {
+              "path": "datasets/legacy_gold_v1/bbb_martins/direct_plus_indirect/00123.json",
+              "sha256": "91cd53d8008afac86658aed1810078eb59205b27e4963af88aeac0f3fc8d093b",
+              "pred_label": 0,
+              "correct": false,
+              "query_index": 123,
+              "source_hashes": {
+                "trace_messages.jsonl": "b34c0e8a2fc855e92afdd3ca0d1184b9d6985473002cbb0534424a5c257a51fc",
+                "final_reasoning_output.json": "d126b6c912251d0d5b590f126e2a636144713ffecbdf77c397d759026938ddb0",
+                "request.json": "ad38663c3914185096fc5aa152539302c55c448383ecfa381e0aa97e53df8400"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "bioavailability_ma": {
+      "title": "Gold Oral Bioavailability",
+      "configurations": {
+        "direct": {
+          "label": "Direct only",
+          "run_uid": "750f6478-f83f-40ba-b169-435637fbe92d",
+          "source_arm": "gold_v1/bioavailability_ma/direct",
+          "prompt_version": "full_flat_context_v5_six_tasks_upstream_v2",
+          "identity_policy": "scaffold_disjoint",
+          "selection_parameters": {
+            "l1_molecules": 10,
+            "l1_records_per_molecule": 10,
+            "records_per_level": 10,
+            "record_limits_by_level": {
+              "L2": 10,
+              "L3": 10,
+              "L4": 10,
+              "L5": 10,
+              "L6": 10
+            },
+            "ranking_tie_seed": 0,
+            "max_level": 1,
+            "l1_min_contrast": 0,
+            "selection_policy": "evidence_flat_context_retrieval.v2"
+          },
+          "metrics": {
+            "n_total": 269,
+            "n_evaluable": 269,
+            "n_successful": 269,
+            "n_failed_runs": 0,
+            "accuracy": 0.832714,
+            "accuracy_including_failed": 0.832714,
+            "macro_f1": 0.768091,
+            "per_class": {
+              "0": {
+                "precision": 0.82,
+                "recall": 0.532468,
+                "f1": 0.64567,
+                "tp": 41,
+                "fp": 9,
+                "fn": 36
+              },
+              "1": {
+                "precision": 0.835616,
+                "recall": 0.953125,
+                "f1": 0.890511,
+                "tp": 183,
+                "fp": 36,
+                "fn": 9
+              }
+            },
+            "positive_class_precision": 0.835616,
+            "positive_class_recall": 0.953125,
+            "positive_class_f1": 0.890511,
+            "confusion_matrix": {
+              "tn": 41,
+              "fp": 36,
+              "fn": 9,
+              "tp": 183
+            },
+            "prediction_distribution": {
+              "high": 219,
+              "low": 50
+            }
+          },
+          "source_hashes": {
+            "manifest.json": "f8d033738ee0bfac1bcbc9e546657f10cee58d350937306e1471978fcc69df37",
+            "predictions.jsonl": "55b1e60a6893a54670e3578141e0a1a35a253769ee6e72d8abae1dfdad17a841",
+            "metrics.json": "ce48942767170cfd98ac20d1997cd2f6553b688c4fbac61bc22ec31ec511da10",
+            "query_provenance.tsv": "1526fa1cce99e0161dcd89ef8995bffb22000e73054536fff5cdd515c4bd6034",
+            "files.tsv": "9b6217f22779502985b96f1692bf97e1490e7688113d8b90fa3b954436b7f344"
+          }
+        },
+        "direct_plus_indirect": {
+          "label": "Direct + indirect",
+          "run_uid": "5c38acc0-f8b2-405e-b695-7aa1d6e0290d",
+          "source_arm": "gold_v1/bioavailability_ma/direct_plus_indirect",
+          "prompt_version": "full_flat_context_v5_six_tasks_upstream_v2",
+          "identity_policy": "scaffold_disjoint",
+          "selection_parameters": {
+            "l1_molecules": 10,
+            "l1_records_per_molecule": 10,
+            "records_per_level": 10,
+            "record_limits_by_level": {
+              "L2": 10,
+              "L3": 10,
+              "L4": 10,
+              "L5": 10,
+              "L6": 10
+            },
+            "ranking_tie_seed": 0,
+            "max_level": 6,
+            "l1_min_contrast": 0,
+            "selection_policy": "evidence_flat_context_retrieval.v2"
+          },
+          "metrics": {
+            "n_total": 269,
+            "n_evaluable": 269,
+            "n_successful": 269,
+            "n_failed_runs": 0,
+            "accuracy": 0.888476,
+            "accuracy_including_failed": 0.888476,
+            "macro_f1": 0.86134,
+            "per_class": {
+              "0": {
+                "precision": 0.821918,
+                "recall": 0.779221,
+                "f1": 0.8,
+                "tp": 60,
+                "fp": 13,
+                "fn": 17
+              },
+              "1": {
+                "precision": 0.913265,
+                "recall": 0.932292,
+                "f1": 0.92268,
+                "tp": 179,
+                "fp": 17,
+                "fn": 13
+              }
+            },
+            "positive_class_precision": 0.913265,
+            "positive_class_recall": 0.932292,
+            "positive_class_f1": 0.92268,
+            "confusion_matrix": {
+              "tn": 60,
+              "fp": 17,
+              "fn": 13,
+              "tp": 179
+            },
+            "prediction_distribution": {
+              "high": 196,
+              "low": 73
+            }
+          },
+          "source_hashes": {
+            "manifest.json": "1ca331ba9b042fec67eb3c98858a1508e70fdfd1a1e2496e4fb5e38da0b8b77c",
+            "predictions.jsonl": "fda9f2ca6d14eff2fab0de48c0a96b28e9d2c4c3ed0cb1d6428621f6f67b100c",
+            "metrics.json": "6c74f33e63ca7bc67ef15c39a5bb7d4c42f1021b2f1535f2d43e564c33472d09",
+            "query_provenance.tsv": "8e9ada596660200e2293cbbd9d2fd1615b8a724528bb18d9f32a1ea4bb25a875",
+            "files.tsv": "9bfc7cd3090f76d463e0ddf55fc09746d02c4f44362ba2a7356cf6d67116fbef"
+          }
+        }
+      },
+      "samples": [
+        {
+          "query_uid": "BIOCTX2_050BD16BA05661B636EC",
+          "query_index": 1,
+          "label": 1,
+          "smiles": "CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21",
+          "selection_outcome": "TP",
+          "configurations": {
+            "direct": {
+              "path": "datasets/legacy_gold_v1/bioavailability_ma/direct/00001.json",
+              "sha256": "114b591a1468ef4915501986ff4f4d13f27e72d6b74e6a5cb371440cbfba2a91",
+              "pred_label": 1,
+              "correct": true,
+              "query_index": 1,
+              "source_hashes": {
+                "trace_messages.jsonl": "92c03adb0ec590639ab62c16a1457af66e13986077d55e404f721a452a617ee9",
+                "final_reasoning_output.json": "29f416804d1bd2b4cc6d79f95b090bb3fe3030f717fdea23edc2b11b38467475",
+                "request.json": "db8699042091cdbad430d0132028f3a0a26c92a9b9c7ee20675e0fc74f5bc809"
+              }
+            },
+            "direct_plus_indirect": {
+              "path": "datasets/legacy_gold_v1/bioavailability_ma/direct_plus_indirect/00001.json",
+              "sha256": "a185bf6d1b06bf70a36309c259da0ca54183098b63b0a85bad5946bd2a6562ff",
+              "pred_label": 1,
+              "correct": true,
+              "query_index": 1,
+              "source_hashes": {
+                "trace_messages.jsonl": "e9d504ecb2b5edbc384c44c0739aed7e7fc96bb0ed60c74cb8d384393015ab65",
+                "final_reasoning_output.json": "edff7062c0de1a5e11c0b990678f60c8f124fe0c472b22ae6cd70d9e0ba9f3ca",
+                "request.json": "afb406894be2e9a29d518457722eec37490ca9fabfd7035c756575c46f4d9f09"
+              }
+            }
+          }
+        },
+        {
+          "query_uid": "BIOCTX2_1F76251A20559B851938",
+          "query_index": 103,
+          "label": 0,
+          "smiles": "Nc1nc(O)c2ncn(COC(CO)CO)c2n1",
+          "selection_outcome": "TN",
+          "configurations": {
+            "direct": {
+              "path": "datasets/legacy_gold_v1/bioavailability_ma/direct/00103.json",
+              "sha256": "f37fd0cd37e956c929dc169cb11cae5d07d5a8987ca7cd6ce3ec155a7cbc64bc",
+              "pred_label": 0,
+              "correct": true,
+              "query_index": 103,
+              "source_hashes": {
+                "trace_messages.jsonl": "6e942076d4dabdca7ede33034f93b5e37b877042c0bb385ca0c9f30ea1e3d955",
+                "final_reasoning_output.json": "b033ab56d7ccf516521c77a4ff454fb795b8dafdd1054b1da3694227e7d328ee",
+                "request.json": "ec1f37b25e43254948883e42a3d1e96de8b2e5427d0b668b63847d1752ce9101"
+              }
+            },
+            "direct_plus_indirect": {
+              "path": "datasets/legacy_gold_v1/bioavailability_ma/direct_plus_indirect/00103.json",
+              "sha256": "f40164fe3c480037545490b672e791d2ebbd3cdca967ff17d5eb48f318d27ea8",
+              "pred_label": 0,
+              "correct": true,
+              "query_index": 103,
+              "source_hashes": {
+                "trace_messages.jsonl": "28f0a25c8e634f664bba694f84db0e48e72d326dbf020abf434ecafc7fc11541",
+                "final_reasoning_output.json": "e77d8d5b77e061e7b3e30ede8c0390371d0233103cb43bf138f5a11c02877f8a",
+                "request.json": "0de27765739cb5cc4eb56063bf6376ce6aa68f985d668ec302de62adb323dffc"
+              }
+            }
+          }
+        },
+        {
+          "query_uid": "BIOCTX2_0A6969A6EEA88953F12B",
+          "query_index": 20,
+          "label": 0,
+          "smiles": "CC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)c3ccc(O)cc3)[C@H]2SC1",
+          "selection_outcome": "FP",
+          "configurations": {
+            "direct": {
+              "path": "datasets/legacy_gold_v1/bioavailability_ma/direct/00020.json",
+              "sha256": "6c7d8bdd318e3cb5336de6317acd037b0eb28241e5a5f708b3880f7dc4492e4d",
+              "pred_label": 1,
+              "correct": false,
+              "query_index": 20,
+              "source_hashes": {
+                "trace_messages.jsonl": "0d7c27e08fce2f52df1b51fd3553bd74c7edfae4a51eab4288700c9a898c5454",
+                "final_reasoning_output.json": "1536a49bd8d08c1b7b3ca7b157c35aa1cc7de2cf6189c53409f251826eb52472",
+                "request.json": "77ec587f7afebc3360a1620454f299a44cea74a8b888eaaf628aec8f22a13eff"
+              }
+            },
+            "direct_plus_indirect": {
+              "path": "datasets/legacy_gold_v1/bioavailability_ma/direct_plus_indirect/00020.json",
+              "sha256": "c1ffd5b06db593a470882e7ba3a987c39d6dee464c4ee48c935483362518ea06",
+              "pred_label": 1,
+              "correct": false,
+              "query_index": 20,
+              "source_hashes": {
+                "trace_messages.jsonl": "5795be6b8377ab305404d854e81ae2a7c6fa8a89e0b5cc96e3f76d589964d9bb",
+                "final_reasoning_output.json": "d26118562f14c846eccff532c52eba2f9c14702d59d42365d9bbf23673939a6f",
+                "request.json": "907e1b3f65e934050f5461fc0c8524600bcc2228766fc8269ab83f38d1ad4e59"
+              }
+            }
+          }
+        },
+        {
+          "query_uid": "BIOCTX2_731C5AE9994AC22EB220",
+          "query_index": 189,
+          "label": 1,
+          "smiles": "Nc1ncnc2c1ncn2CCOCP(=O)(O)O",
+          "selection_outcome": "FN",
+          "configurations": {
+            "direct": {
+              "path": "datasets/legacy_gold_v1/bioavailability_ma/direct/00189.json",
+              "sha256": "379c8d718efa32d37d8980eb04ad80ba6f39b8e78921e303d6bfd5a0f50a0e06",
+              "pred_label": 0,
+              "correct": false,
+              "query_index": 189,
+              "source_hashes": {
+                "trace_messages.jsonl": "c04160eae6ef65f9a856eec459f1157fcccc5d5c472bf47b2b2f82e4b927b4fd",
+                "final_reasoning_output.json": "d9b7ae8763d07b54cf2f9eaab0ccb6eb22bc1a6df341f7b9e42adcdb1603523c",
+                "request.json": "d464b0fae88dd70c84b6b7a41d76636a58bd86758f2b9a73a55dfa2d651a17db"
+              }
+            },
+            "direct_plus_indirect": {
+              "path": "datasets/legacy_gold_v1/bioavailability_ma/direct_plus_indirect/00189.json",
+              "sha256": "d06ec1e1c2aef8e221cef3b22a685a2d33a1703af67c7c18041f315c4981f7b4",
+              "pred_label": 0,
+              "correct": false,
+              "query_index": 189,
+              "source_hashes": {
+                "trace_messages.jsonl": "d647ce18f4cdcfbe14cd33cdeb7c44fdb2edcb06603c8cd5ee47b4373927d420",
+                "final_reasoning_output.json": "c27de99d7af91987c9097ad2942e86d4ca7e82de82fe98d09030376da16a229b",
+                "request.json": "02dda90e8b79e4766440fc34aac1d6ca09ba7fd5cce6feee9502ea5064682a0a"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "viewer_sha256": "3c583e9b8163881c7ce1ec3dfdff1a6fc44d21e65243fc5751d059daa9f1a3fc"
+}

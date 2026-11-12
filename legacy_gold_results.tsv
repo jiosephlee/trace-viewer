@@ -1,0 +1,5 @@
+task	configuration	n_queries	macro_f1	accuracy	run_uid
+bbb_martins	direct	393	0.673178	0.770992	848c08c0-e961-4cba-8ee5-686e847b0ac2
+bbb_martins	direct_plus_indirect	393	0.732966	0.824427	0446414e-6c42-46d3-a3c9-f94064c2355d
+bioavailability_ma	direct	269	0.768091	0.832714	750f6478-f83f-40ba-b169-435637fbe92d
+bioavailability_ma	direct_plus_indirect	269	0.86134	0.888476	5c38acc0-f8b2-405e-b695-7aa1d6e0290d

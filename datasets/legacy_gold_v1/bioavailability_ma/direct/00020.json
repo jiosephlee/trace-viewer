@@ -1,0 +1,397 @@
+{
+  "query_uid": "BIOCTX2_0A6969A6EEA88953F12B",
+  "configuration": "direct",
+  "references": [
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 1",
+      "stable_id": "RDLPVSKMFDYCOR-RWWNRMGGSA-N@L1",
+      "source_analog_id": "RDLPVSKMFDYCOR-RWWNRMGGSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 1",
+      "text": "SMILES: CC1=C(C(=O)O)N2C(=O)C(NC(=O)[C@H](N)C3=CCC=CC3)C2SC1\nTransfer likelihood: 0.9357"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 1-1",
+      "stable_id": "26bbc694664c7346b920c22b0a2c6afb5797f040958ad689e655f7d76e7a4802",
+      "source_analog_id": "RDLPVSKMFDYCOR-RWWNRMGGSA-N",
+      "containing_unit_id": "RDLPVSKMFDYCOR-RWWNRMGGSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 1-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: high oral bioavailability category\nSpecies: humans\nExperimental details:\n  - comparator: vs IV\n  - oral_exposure_mode: all dosage forms\n\nAdditional details: \"The drug was found to obey dose-independent kinetics.\"\nReported evidence: Pharmacokinetic parameters calculated from intravenous data were used to determine the bioavailability of cephradine administered intramuscularly and orally; the results indicate that biological availability is complete from all dosage forms and that cephradine obeys dose-independent kinetics."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 2",
+      "stable_id": "RDLPVSKMFDYCOR-UEKVPHQBSA-N@L1",
+      "source_analog_id": "RDLPVSKMFDYCOR-UEKVPHQBSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 2",
+      "text": "SMILES: CC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)C3=CCC=CC3)[C@H]2SC1\nTransfer likelihood: 0.8572"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-1",
+      "stable_id": "46870e8f2b4a383d4c2e29f7d1b1a20c12fe68bc1d1ebf4414bafd2c668fedf7",
+      "source_analog_id": "RDLPVSKMFDYCOR-UEKVPHQBSA-N",
+      "containing_unit_id": "RDLPVSKMFDYCOR-UEKVPHQBSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 94 %\nSpecies: elderly subjects\nAdditional details: \"The mean bioavailability was reported as about 94% in both the elderly and young groups.\"\nReported evidence: After oral administration of cephradine, the mean bioavailability was about 94% in elderly subjects."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-2",
+      "stable_id": "3ab7a7bce720710f87c5d617a307da6e01fc5deebf271ab61e4b65eb4adac0f7",
+      "source_analog_id": "RDLPVSKMFDYCOR-UEKVPHQBSA-N",
+      "containing_unit_id": "RDLPVSKMFDYCOR-UEKVPHQBSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-2",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 85 %\nSpecies: non-pregnant women\nExperimental details:\n  - comparator: IV\n  - dose: 0.5g\n\nAdditional details: \"almost completely absorbed\"\nReported evidence: Orally administered cephradine was almost completely absorbed in non-pregnant women, with an average bioavailability of 85%. Based on paragraph [p:22], the dose administered was 0.5g."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-3",
+      "stable_id": "6b8277b68880d386692a1041ce88071ac49691f73946a8e0f14eeeafbdbe3337",
+      "source_analog_id": "RDLPVSKMFDYCOR-UEKVPHQBSA-N",
+      "containing_unit_id": "RDLPVSKMFDYCOR-UEKVPHQBSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-3",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: approximately 90-100%\nSpecies: humans\nExperimental details:\n  - dose: 1-g\n  - oral_exposure_mode: capsule\n\nAdditional details: \"Bioavailability was indicated by the percentage of the total dose recovered in urine after 48 hours.\"\nReported evidence: The percentage of the total dose recovered in urine after 48 hours was similar for each drug and dosage form, indicating that cephalexin and cephradine were approximately 90-100% bioavailable."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-4",
+      "stable_id": "ded6503ec6fc9f2f8496009b68026c11bc59c3b3f68120ddb6fc9e078ba28ae1",
+      "source_analog_id": "RDLPVSKMFDYCOR-UEKVPHQBSA-N",
+      "containing_unit_id": "RDLPVSKMFDYCOR-UEKVPHQBSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-4",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: greater than 90%\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral\n\nAdditional details: \"Suggested to indicate complete absorption.\"\nReported evidence: The absolute bioavailability of oral cephalosporins such as cephalexin, cefadroxil, cephradine, and ceftrazine is greater than 90% and suggests complete absorption in humans."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-5",
+      "stable_id": "24c216f0430801285d674c8effe63a03f86b32c7c326f1d9d58b9e45c61bde24",
+      "source_analog_id": "RDLPVSKMFDYCOR-UEKVPHQBSA-N",
+      "containing_unit_id": "RDLPVSKMFDYCOR-UEKVPHQBSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-5",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 94 %\nSpecies: young subjects\nAdditional details: \"The mean bioavailability was reported as about 94% in both the elderly and young groups.\"\nReported evidence: After oral administration of cephradine, the mean bioavailability was about 94% in young subjects."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 3",
+      "stable_id": "MLYYVTUWGNIJIB-BXKDBHETSA-N@L1",
+      "source_analog_id": "MLYYVTUWGNIJIB-BXKDBHETSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 3",
+      "text": "SMILES: Cc1nnc(SCC2=C(C(=O)O)N3C(=O)[C@@H](NC(=O)Cn4cnnn4)[C@H]3SC2)s1\nTransfer likelihood: 0.0009"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-1",
+      "stable_id": "cd288f68cee2b401a4efbd1dcf1fc9713bed6c53b691ff20dea2b5fac8ffcb85",
+      "source_analog_id": "MLYYVTUWGNIJIB-BXKDBHETSA-N",
+      "containing_unit_id": "MLYYVTUWGNIJIB-BXKDBHETSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 1.5–2.0%\nSpecies: infants, children, and adolescents\nAdditional details: \"Reported for the inpatient setting.\"\nReported evidence: In the inpatient setting for pediatric patients, Cefazolin has a reported bioavailability of 1.5–2.0%."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 4",
+      "stable_id": "LSQZJLSUYDQPKJ-UHFFFAOYSA-N@L1",
+      "source_analog_id": "LSQZJLSUYDQPKJ-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 4",
+      "text": "SMILES: CC1(C)SC2C(NC(=O)C(N)c3ccc(O)cc3)C(=O)N2C1C(=O)O\nTransfer likelihood: 0.9699"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 4-1",
+      "stable_id": "7e15100d262d6a998d52a8331247be6f4b85acb18d45300570b50e4627ef01c1",
+      "source_analog_id": "LSQZJLSUYDQPKJ-UHFFFAOYSA-N",
+      "containing_unit_id": "LSQZJLSUYDQPKJ-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 4-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 90 %\nSpecies: infants, children, and adolescents\nAdditional details: \"Reported for the ambulatory setting.\"\nReported evidence: In the ambulatory setting for pediatric patients, Amoxicillin/Clavulanate has a reported bioavailability of 90%."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 5",
+      "stable_id": "LSQZJLSUYDQPKJ-NJBDSQKTSA-N@L1",
+      "source_analog_id": "LSQZJLSUYDQPKJ-NJBDSQKTSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 5",
+      "text": "SMILES: CC1(C)S[C@@H]2[C@H](NC(=O)[C@H](N)c3ccc(O)cc3)C(=O)N2[C@H]1C(=O)O\nTransfer likelihood: 0.9599"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-1",
+      "stable_id": "f08ded9889d4a95fe3b1ed3a852215cb03dc63dad59d1edcd4c456c807681a31",
+      "source_analog_id": "LSQZJLSUYDQPKJ-NJBDSQKTSA-N",
+      "containing_unit_id": "LSQZJLSUYDQPKJ-NJBDSQKTSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: prandial_state=fasted\nEndpoint: absolute\nResult: 0.7 ratio\nSpecies: ten healthy volunteers\nConditions: \"fasting\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 500 mg\n  - oral_exposure_mode: capsule\n\nAdditional details: \"Calculated as AUCoral/AUCiv; administered as amoxicillin-trihydrate.\"\nReported evidence: In a randomized cross-over study of ten healthy volunteers, the absolute bioavailability of 500 mg amoxicillin (AUCoral/AUCiv) was 0.70 ± 0.12."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-2",
+      "stable_id": "e0462986dd57fe48c2c87aab8407c2c19908675040ab30b988fd22595a140537",
+      "source_analog_id": "LSQZJLSUYDQPKJ-NJBDSQKTSA-N",
+      "containing_unit_id": "LSQZJLSUYDQPKJ-NJBDSQKTSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-2",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: prandial_state=fasted\nEndpoint: absolute\nResult: 77.4 %\nSpecies: healthy fasted subjects\nConditions: \"fasted\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 500-mg\n  - oral_exposure_mode: oral\n\nAdditional details: \"Calculated as the percentage of the intravenous AUC.\"\nReported evidence: In a study of healthy fasted subjects, the absolute bioavailability of amoxicillin after a single oral 500-mg dose was determined to be 77.4% when comparing the area under the curve (AUC) after oral administration to the intravenous AUC."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-3",
+      "stable_id": "96de65ba22d9d87534cfbf1cd0b2f84d6f4defa18bc0be1f3b39103bb109cfd0",
+      "source_analog_id": "LSQZJLSUYDQPKJ-NJBDSQKTSA-N",
+      "containing_unit_id": "LSQZJLSUYDQPKJ-NJBDSQKTSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-3",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: prandial_state=fasted\nEndpoint: absolute\nResult: 88.7 %\nSpecies: normal men\nConditions: \"fasting from midnight of the previous evening\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 250-mg\n  - oral_exposure_mode: capsule\n\nAdditional details: \"Calculation based on area under the serum concentration-time curves; oral doses were administered as 250-mg capsules (Amoxil\\u00ae) to 7 of 8 volunteers.\"\nReported evidence: Calculation of areas under individual oral and intravenous serum concentration-time curves indicated an absolute availability of the oral dose of amoxicillin of 88.7% (range, 70.9 to 105.5) in normal men given 250-mg doses."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 6",
+      "stable_id": "RDMOROXKXONCAL-UEKVPHQBSA-N@L1",
+      "source_analog_id": "RDMOROXKXONCAL-UEKVPHQBSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 6",
+      "text": "SMILES: COC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)C3=CCC=CC3)[C@H]2SC1\nTransfer likelihood: 0.9479"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-1",
+      "stable_id": "75b479bab409b8e41257693f0384d32621e6b3dad188acd5152364f3c646591e",
+      "source_analog_id": "RDMOROXKXONCAL-UEKVPHQBSA-N",
+      "containing_unit_id": "RDMOROXKXONCAL-UEKVPHQBSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 100 %\nSpecies: subjects\nExperimental details:\n  - comparator: compares to ampicillin prodrugs, like bacampicillin\n\nAdditional details: \"Described as unusually high.\"\nReported evidence: Cefroxadine demonstrated an unusually high bioavailability of nearly 100%, which compares favorably to ampicillin prodrugs like bacampicillin."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 7",
+      "stable_id": "VAAUVRVFOQPIGI-SPQHTLEESA-N@L1",
+      "source_analog_id": "VAAUVRVFOQPIGI-SPQHTLEESA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 7",
+      "text": "SMILES: CO/N=C(\\C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(CSc3nc(=O)c(=O)[nH]n3C)CS[C@H]12)c1csc(N)n1\nTransfer likelihood: 0.0039"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-1",
+      "stable_id": "d079bdfd7e0592f5ebd5ccde63f46c77050db73fdf15c1bfd537a489b9523ec4",
+      "source_analog_id": "VAAUVRVFOQPIGI-SPQHTLEESA-N",
+      "containing_unit_id": "VAAUVRVFOQPIGI-SPQHTLEESA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 8 %\nSpecies: human\nExperimental details:\n  - comparator: vs rectal\n  - oral_exposure_mode: oral\n\nAdditional details: \"The relative rectal vs oral bioavailability was reported as 297% (or 287% in the discussion section).\"\nReported evidence: In human clinical studies, ceftriaxone (CRO) administered orally showed an absolute bioavailability of 8%, which was compared to 24% for the rectal formulation."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 8",
+      "stable_id": "JAPHQRWPEGVNBT-UTUOFQBUSA-N@L1",
+      "source_analog_id": "JAPHQRWPEGVNBT-UTUOFQBUSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 8",
+      "text": "SMILES: N[C@@H](C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(Cl)CC[C@H]12)c1ccccc1\nTransfer likelihood: 0.9622"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-1",
+      "stable_id": "ae929606ed33c8abe1f9d343329b2a241da0396c5f6be1c9090cbbe6fc6e5743",
+      "source_analog_id": "JAPHQRWPEGVNBT-UTUOFQBUSA-N",
+      "containing_unit_id": "JAPHQRWPEGVNBT-UTUOFQBUSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: extent_f\nResult: at least 0.8\nSpecies: volunteers\nExperimental details:\n  - comparator: urinary recovery\n  - dose: 400 mg\n\nAdditional details: \"Estimated bioavailability based on 24-hour urinary recovery.\"\nReported evidence: For loracarbef administered orally at 400 mg to volunteers, the estimated bioavailability (f) was reported to be at least 0.8, a value derived from 24-hour urinary recovery."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-2",
+      "stable_id": "cd64bb545ad951bbdce4c64cde6ea29247ccec2513bd1384141b4092eb34b614",
+      "source_analog_id": "JAPHQRWPEGVNBT-UTUOFQBUSA-N",
+      "containing_unit_id": "JAPHQRWPEGVNBT-UTUOFQBUSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-2",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 90 %\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral administration\n\nReported evidence: After oral administration, loracarbef was rapidly and completely absorbed, with approximately 90 percent of the drug being bioavailable."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-3",
+      "stable_id": "e34053a3dfb1e2325553db72f237fede9e9d58e4071c61544fe3e6f6a145985a",
+      "source_analog_id": "JAPHQRWPEGVNBT-UTUOFQBUSA-N",
+      "containing_unit_id": "JAPHQRWPEGVNBT-UTUOFQBUSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-3",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: complete bioavailability\nSpecies: young, healthy volunteers\nExperimental details:\n  - dose: 400 mg\n  - oral_exposure_mode: capsules\n\nAdditional details: \"Bioavailability was inferred from the fact that the drug was virtually quantitatively excreted unchanged in urine and accounted for less than 7% of the daily dose in fecal filtrate.\"\nReported evidence: In 20 young, healthy volunteers, the pharmacokinetic disposition of 400-mg doses of loracarbef was evaluated. The data, including virtually quantitative excretion of the drug unchanged in urine and less than 7% recovery in fecal filtrate, are consistent with complete bioavailability."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-4",
+      "stable_id": "6ee30801bcfd7212ffc0646364bd94f000ad9fe1b8747d98b9c0083b3fa4b201",
+      "source_analog_id": "JAPHQRWPEGVNBT-UTUOFQBUSA-N",
+      "containing_unit_id": "JAPHQRWPEGVNBT-UTUOFQBUSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-4",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: complete bioavailability\nSpecies: young, healthy volunteers\nExperimental details:\n  - dose: 200 mg\n  - oral_exposure_mode: capsules\n\nAdditional details: \"Bioavailability was inferred from the fact that the drug was virtually quantitatively excreted unchanged in urine and accounted for less than 7% of the daily dose in fecal filtrate.\"\nReported evidence: In 20 young, healthy volunteers, the pharmacokinetic disposition of 200-mg doses of loracarbef was evaluated. The data, including virtually quantitative excretion of the drug unchanged in urine and less than 7% recovery in fecal filtrate, are consistent with complete bioavailability."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 9",
+      "stable_id": "GCFBRXLSHGKWDP-WTKTZPJXSA-N@L1",
+      "source_analog_id": "GCFBRXLSHGKWDP-WTKTZPJXSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 9",
+      "text": "SMILES: CCN1CCN(C(=O)NC(C(=O)N[C@@H]2C(=O)N3C(C(=O)O)=C(CSc4nnnn4C)CS[C@H]23)c2ccc(O)cc2)C(=O)C1=O\nTransfer likelihood: 0.9753"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 9-1",
+      "stable_id": "86cfee8dcf46065fe905cf0a55278a2d13ec8c36d5109c80802cc959451d8aa9",
+      "source_analog_id": "GCFBRXLSHGKWDP-WTKTZPJXSA-N",
+      "containing_unit_id": "GCFBRXLSHGKWDP-WTKTZPJXSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 9-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 40 %\nSpecies: humans\nReported evidence: The oral bioavailability (BA) of SP in humans is reported to be approximately 40%."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 10",
+      "stable_id": "AVKUERGKIZMTKX-NJBDSQKTSA-N@L1",
+      "source_analog_id": "AVKUERGKIZMTKX-NJBDSQKTSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 10",
+      "text": "SMILES: CC1(C)S[C@@H]2[C@H](NC(=O)[C@H](N)c3ccccc3)C(=O)N2[C@H]1C(=O)O\nTransfer likelihood: 0.9689"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 10-1",
+      "stable_id": "ee75d99663619309fc09c25ef4eaca5793ef0d2282fe4961b24729c9f439d4b8",
+      "source_analog_id": "AVKUERGKIZMTKX-NJBDSQKTSA-N",
+      "containing_unit_id": "AVKUERGKIZMTKX-NJBDSQKTSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 10-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: prandial_state=fasted\nResult: 29 %\nSpecies: female subjects\nConditions: \"fasting\"\nExperimental details:\n  - comparator: vs IV\n  - oral_exposure_mode: gelatin capsules\n\nAdditional details: \"Value corresponds to the mean FU of 0.293 in Table V.\"\nReported evidence: Data from crossover studies in female subjects suggest that ampicillin is absorbed at a rate of 29% when administered as ampicillin."
+    }
+  ],
+  "trace": [
+    {
+      "task": "single_molecule",
+      "status": "ok",
+      "prediction": null,
+      "response_text": "{\n  \"endpoint_prior\": \"pass\",\n  \"property_drivers\": [\n    \"Zwitterionic peptide-like structure (carboxylate + primary amine) supports carrier-mediated intestinal uptake\",\n    \"Moderate molecular weight (363 Da) and compact fused bicyclic scaffold\",\n    \"Low estimated logP (0.15) and high TPSA (133 Å²) are passive-permeability liabilities but favor aqueous solubility\",\n    \"Four rotatable bonds and multiple H-bond donors/acceptors define a polar, flexible molecule\"\n  ],\n  \"confidence\": \"moderate\",\n  \"reasoning_summary\": \"The query molecule is a zwitterionic cephalosporin-like bicyclic compound containing a beta-lactam fused to a sulfur-containing ring, a free carboxylic acid, a primary amine on a 4-hydroxyphenylglycyl side chain, and an amide linkage. At physiological pH, the carboxylic acid and primary amine are expected to be ionized, yielding a zwitterion with low estimated logP (0.15) and high TPSA (133 Å²). These properties would normally predict poor passive transcellular permeability. However, the molecule closely resembles a dipeptide: an amino-acid side chain is amide-bonded to a carboxylate-bearing bicyclic core. Such zwitterionic peptide-like structures are plausible substrates for intestinal peptide uptake transporters, which can provide efficient oral absorption despite unfavorable passive permeability. The molecular weight (363 Da), rotatable bond count (4), and lack of excessive lipophilicity are consistent with drug-like oral absorption. The main uncertainty is the absence of measured pKa/logD and transporter data, but the structural prior for F >= 20% is favorable.\",\n  \"caveats\": [\n    \"pKa predictor was unavailable, so exact charge state and logD at pH 7.4 were not computed; ionization is inferred from functional groups.\",\n    \"High TPSA and H-bond donor/acceptor counts could limit absorption if carrier-mediated uptake is absent or saturated.\",\n    \"No species, formulation, dose, or administration conditions are specified; absolute oral bioavailability depends on these factors.\",\n    \"The dipeptide-transporter hypothesis is a structural/mechanistic inference, not an observed transporter assay result.\"\n  ]\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chemist expert in oral bioavailability and you reason via analogies, taking evidence from related molecules to support your prediction. Return one complete JSON object."
+        },
+        {
+          "role": "user",
+          "content": "{\"task\": \"Assess the query molecule's structural and physicochemical prior for absolute oral bioavailability at the F >= 20% threshold.\", \"query\": {\"input_smiles\": \"CC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)c3ccc(O)cc3)[C@H]2SC1\", \"canonical_smiles\": \"CC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)c3ccc(O)cc3)[C@H]2SC1\", \"tools_prefetched\": true, \"prefetched_molecule_properties\": {\"tool_name\": \"molecule_properties\", \"status\": \"ok\", \"arguments\": {\"query_smiles\": \"CC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)c3ccc(O)cc3)[C@H]2SC1\", \"logd_ph\": 7.4}, \"content\": \"[molecule_properties]\\nneutral fraction: not applicable (pKa predictor unavailable)\\nestimated logD: not applicable (pKa predictor unavailable)\\nstrongest acidic pKa: not applicable (pKa predictor unavailable)\\nstrongest basic pKa: not applicable (pKa predictor unavailable)\\nnumber of acidic sites: not applicable (pKa predictor unavailable)\\nnumber of basic sites: not applicable (pKa predictor unavailable)\\nnumber of ionizable sites: not applicable (pKa predictor unavailable)\\nexact molecular weight: 363.09\\nfraction of sp3 carbons: 0.31\\nheavy-atom count: 25\\nheavy-atom molecular weight: 346.26\\nLabute surface area: 147.23\\nmaximum absolute partial charge: 0.51\\nmaximum partial charge: 0.35\\nminimum absolute partial charge: 0.35\\nminimum partial charge: -0.51\\nestimated logP: 0.15\\nmolecular weight: 363.4\\nNH/OH group count: 5\\nnitrogen/oxygen atom count: 8\\naliphatic carbocycle count: 0\\naliphatic heterocycle count: 2\\naliphatic ring count: 2\\naromatic carbocycle count: 1\\naromatic heterocycle count: 0\\naromatic ring count: 1\\nhydrogen-bond acceptor count: 6\\nhydrogen-bond donor count: 4\\nheteroatom count: 9\\nrotatable-bond count: 4\\nsaturated carbocycle count: 0\\nsaturated heterocycle count: 1\\nsaturated ring count: 1\\nring count: 3\\ntopological polar surface area: 132.96\\nQED drug-likeness: 0.56\\n\\nfunctional groups: none\\nWarnings: ModuleNotFoundError: No module named 'molgpka'; ModuleNotFoundError: No module named 'accfg'; Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\", \"warnings\": [\"ModuleNotFoundError: No module named 'molgpka'\", \"ModuleNotFoundError: No module named 'accfg'\", \"Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\"], \"errors\": [], \"latency_ms\": 2, \"cache_hit\": false}}, \"instructions\": [\"Use only the supplied structure and property-tool text, without analog evidence or memorized assay labels.\", \"Explain plausible structural and mechanistic liabilities, exposure limitations, and uncertainty.\", \"A structural alert is a hypothesis, not an observed endpoint. Absence of an alert does not establish a negative result.\", \"Do not invent species, population, strain, activation, exposure, or organism conditions.\"], \"required_json_schema\": {\"endpoint_prior\": \"pass | fail | mixed_or_unclear\", \"property_drivers\": [\"string\"], \"confidence\": \"high | moderate | low\", \"reasoning_summary\": \"string\", \"caveats\": [\"string\"]}}"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 2995,
+        "prompt_tokens": 978,
+        "total_tokens": 3973,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 768
+        },
+        "reasoning_tokens": 2529
+      },
+      "tool_count": 0
+    },
+    {
+      "task": "final_summary",
+      "status": "ok",
+      "prediction": null,
+      "response_text": "{\n  \"claims\": [\n    {\n      \"claim\": \"Cephradine, a structurally close oral cephalosporin with the same cephem core and 3-methyl-4-carboxy group, shows complete or high oral bioavailability in humans (85–100%), supporting a pass for the query cefadroxil-like molecule.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 1\",\n        \"Molecule 2\"\n      ],\n      \"record_ids\": [\n        \"Record 1-1\",\n        \"Record 2-1\",\n        \"Record 2-2\",\n        \"Record 2-3\",\n        \"Record 2-4\",\n        \"Record 2-5\"\n      ]\n    },\n    {\n      \"claim\": \"Amoxicillin, which shares the p-hydroxyphenylglycyl side chain with the query, has absolute oral bioavailability of 70–88.7% in fasted humans, and amoxicillin/clavulanate is reported at 90%, supporting high oral absorption for this structural class.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 4\",\n        \"Molecule 5\"\n      ],\n      \"record_ids\": [\n        \"Record 4-1\",\n        \"Record 5-1\",\n        \"Record 5-2\",\n        \"Record 5-3\"\n      ]\n    },\n    {\n      \"claim\": \"Other orally absorbed beta-lactams such as loracarbef and cefroxadine show complete or near-complete bioavailability, reinforcing that this cephalosporin-like scaffold is generally well absorbed orally.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 6\",\n        \"Molecule 8\"\n      ],\n      \"record_ids\": [\n        \"Record 6-1\",\n        \"Record 8-1\",\n        \"Record 8-2\",\n        \"Record 8-3\",\n        \"Record 8-4\"\n      ]\n    },\n    {\n      \"claim\": \"Ampicillin, a related beta-lactam with a phenylglycyl side chain, has about 29% oral bioavailability, which is still above the 20% threshold and therefore supportive of pass, though lower than the more directly analogous oral cephalosporins.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 10\"\n      ],\n      \"record_ids\": [\n        \"Record 10-1\"\n      ]\n    },\n    {\n      \"claim\": \"Cefazolin and ceftriaxone have low oral bioavailability (1.5–8%), but they are structurally dissimilar parenteral cephalosporins lacking the oral-absorption features of the query, so they provide only weak contradictory evidence.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\n        \"Molecule 3\",\n        \"Molecule 7\"\n      ],\n      \"record_ids\": [\n        \"Record 3-1\",\n        \"Record 7-1\"\n      ]\n    },\n    {\n      \"claim\": \"A cephalosporin-related compound with reported 40% human oral bioavailability provides additional supportive evidence that this chemical class can exceed the 20% threshold.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 9\"\n      ],\n      \"record_ids\": [\n        \"Record 9-1\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"pass\"\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chemist expert in oral bioavailability and you reason via analogies, taking evidence from related molecules to support your prediction.\n\nTask:\n- Endpoint: absolute oral bioavailability at the F >= 20% threshold\n- Label scope: absolute_oral_bioavailability_f20.v2\n- Positive: pass\n- Negative: fail\n- Predict pass when F >= 20% is better supported and fail when F < 20% is better supported.\n- Keep evidence direction separate from transferability; low transferability lowers weight but does not reverse direction.\n- Missing, neutral, uncertain, or weak evidence is not evidence for low bioavailability.\n- Predict fail only when affirmative threshold-relevant evidence supports it, not from generic drug-likeness concerns alone.\n- Compare directness, endpoint match, conditions, transferability, and uncertainty without counting repeated records independently.\n\nReasoning Instructions:\n- Your goal is to reason through the evidence via analogies. Is this molecule or record meaningfully similar to the query molecule? Does the experiment transfer? If it does transfer, how does this experimnetal value inform the property we're aiming to predict?\n- Morgan similarity measures structural similarity to the query. The assay-transfer score (0 to 1) estimates how transferable the evidence is to the query, representing a normalized distance polarized by a sigmoid function. So high scores like 0.99 don't mean the experimental values tranfers with 99% amount or 99% liklihood. These scores are reliable relative signal however, in which higher scores are more likely to transfer. But, again, don't blindly trust these scores.\n- Ensure you consider and analyze every evidence block.\n- Semantic evidence utility is a reviewed, task-level 0–1 score for how useful an evidence family is for this endpoint. It is not a probability, a query-specific transfer likelihood, or calibrated across evidence levels.\n- At the end, take the physicochemical properties and transferable evidence and come to a balanced conclusion for the query molecule.\n\nPitfalls to avoid:\n- Do not narrate schema bookkeeping.\n- Do not overly analyze the SMILES structures.\n- Do not blindly trust retrieval scores.\n- Do not infer the prediction from evidence order.\n- Do not skip records; briefly state why any materially uninformative evidence deserves little weight.\n\nOutput:\nReturn exactly one valid JSON object matching the requested schema. Return one or more concise claims using as many claims as needed to represent the experimental evidence that materially informs the decision. Each claim may cite any number of molecules, records, or both. At least one identifier is required per claim. Return only `claims` and `final_prediction`. `supportive` means evidence supporting your selected final prediction; `contradictory` means evidence supporting the alternative."
+        },
+        {
+          "role": "user",
+          "content": "Query molecule\nSMILES: CC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)c3ccc(O)cc3)[C@H]2SC1\n\nQuery condition\nCondition: This prediction concerns the query molecule under a fed state.\n\n# Experimental evidence\n\n# Level L1\nDirect absolute oral bioavailability outcomes.\n\n## Molecule 1\nSMILES: CC1=C(C(=O)O)N2C(=O)C(NC(=O)[C@H](N)C3=CCC=CC3)C2SC1\nTransfer likelihood: 0.9357\n\nRecord 1-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: high oral bioavailability category\nSpecies: humans\nExperimental details:\n  - comparator: vs IV\n  - oral_exposure_mode: all dosage forms\n\nAdditional details: \"The drug was found to obey dose-independent kinetics.\"\nReported evidence: Pharmacokinetic parameters calculated from intravenous data were used to determine the bioavailability of cephradine administered intramuscularly and orally; the results indicate that biological availability is complete from all dosage forms and that cephradine obeys dose-independent kinetics.\n\n## Molecule 2\nSMILES: CC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)C3=CCC=CC3)[C@H]2SC1\nTransfer likelihood: 0.8572\n\nRecord 2-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 94 %\nSpecies: elderly subjects\nAdditional details: \"The mean bioavailability was reported as about 94% in both the elderly and young groups.\"\nReported evidence: After oral administration of cephradine, the mean bioavailability was about 94% in elderly subjects.\n\nRecord 2-2\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 85 %\nSpecies: non-pregnant women\nExperimental details:\n  - comparator: IV\n  - dose: 0.5g\n\nAdditional details: \"almost completely absorbed\"\nReported evidence: Orally administered cephradine was almost completely absorbed in non-pregnant women, with an average bioavailability of 85%. Based on paragraph [p:22], the dose administered was 0.5g.\n\nRecord 2-3\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: approximately 90-100%\nSpecies: humans\nExperimental details:\n  - dose: 1-g\n  - oral_exposure_mode: capsule\n\nAdditional details: \"Bioavailability was indicated by the percentage of the total dose recovered in urine after 48 hours.\"\nReported evidence: The percentage of the total dose recovered in urine after 48 hours was similar for each drug and dosage form, indicating that cephalexin and cephradine were approximately 90-100% bioavailable.\n\nRecord 2-4\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: greater than 90%\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral\n\nAdditional details: \"Suggested to indicate complete absorption.\"\nReported evidence: The absolute bioavailability of oral cephalosporins such as cephalexin, cefadroxil, cephradine, and ceftrazine is greater than 90% and suggests complete absorption in humans.\n\nRecord 2-5\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 94 %\nSpecies: young subjects\nAdditional details: \"The mean bioavailability was reported as about 94% in both the elderly and young groups.\"\nReported evidence: After oral administration of cephradine, the mean bioavailability was about 94% in young subjects.\n\n## Molecule 3\nSMILES: Cc1nnc(SCC2=C(C(=O)O)N3C(=O)[C@@H](NC(=O)Cn4cnnn4)[C@H]3SC2)s1\nTransfer likelihood: 0.0009\n\nRecord 3-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 1.5–2.0%\nSpecies: infants, children, and adolescents\nAdditional details: \"Reported for the inpatient setting.\"\nReported evidence: In the inpatient setting for pediatric patients, Cefazolin has a reported bioavailability of 1.5–2.0%.\n\n## Molecule 4\nSMILES: CC1(C)SC2C(NC(=O)C(N)c3ccc(O)cc3)C(=O)N2C1C(=O)O\nTransfer likelihood: 0.9699\n\nRecord 4-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 90 %\nSpecies: infants, children, and adolescents\nAdditional details: \"Reported for the ambulatory setting.\"\nReported evidence: In the ambulatory setting for pediatric patients, Amoxicillin/Clavulanate has a reported bioavailability of 90%.\n\n## Molecule 5\nSMILES: CC1(C)S[C@@H]2[C@H](NC(=O)[C@H](N)c3ccc(O)cc3)C(=O)N2[C@H]1C(=O)O\nTransfer likelihood: 0.9599\n\nRecord 5-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: prandial_state=fasted\nEndpoint: absolute\nResult: 0.7 ratio\nSpecies: ten healthy volunteers\nConditions: \"fasting\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 500 mg\n  - oral_exposure_mode: capsule\n\nAdditional details: \"Calculated as AUCoral/AUCiv; administered as amoxicillin-trihydrate.\"\nReported evidence: In a randomized cross-over study of ten healthy volunteers, the absolute bioavailability of 500 mg amoxicillin (AUCoral/AUCiv) was 0.70 ± 0.12.\n\nRecord 5-2\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: prandial_state=fasted\nEndpoint: absolute\nResult: 77.4 %\nSpecies: healthy fasted subjects\nConditions: \"fasted\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 500-mg\n  - oral_exposure_mode: oral\n\nAdditional details: \"Calculated as the percentage of the intravenous AUC.\"\nReported evidence: In a study of healthy fasted subjects, the absolute bioavailability of amoxicillin after a single oral 500-mg dose was determined to be 77.4% when comparing the area under the curve (AUC) after oral administration to the intravenous AUC.\n\nRecord 5-3\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: prandial_state=fasted\nEndpoint: absolute\nResult: 88.7 %\nSpecies: normal men\nConditions: \"fasting from midnight of the previous evening\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 250-mg\n  - oral_exposure_mode: capsule\n\nAdditional details: \"Calculation based on area under the serum concentration-time curves; oral doses were administered as 250-mg capsules (Amoxil\\u00ae) to 7 of 8 volunteers.\"\nReported evidence: Calculation of areas under individual oral and intravenous serum concentration-time curves indicated an absolute availability of the oral dose of amoxicillin of 88.7% (range, 70.9 to 105.5) in normal men given 250-mg doses.\n\n## Molecule 6\nSMILES: COC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)C3=CCC=CC3)[C@H]2SC1\nTransfer likelihood: 0.9479\n\nRecord 6-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 100 %\nSpecies: subjects\nExperimental details:\n  - comparator: compares to ampicillin prodrugs, like bacampicillin\n\nAdditional details: \"Described as unusually high.\"\nReported evidence: Cefroxadine demonstrated an unusually high bioavailability of nearly 100%, which compares favorably to ampicillin prodrugs like bacampicillin.\n\n## Molecule 7\nSMILES: CO/N=C(\\C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(CSc3nc(=O)c(=O)[nH]n3C)CS[C@H]12)c1csc(N)n1\nTransfer likelihood: 0.0039\n\nRecord 7-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 8 %\nSpecies: human\nExperimental details:\n  - comparator: vs rectal\n  - oral_exposure_mode: oral\n\nAdditional details: \"The relative rectal vs oral bioavailability was reported as 297% (or 287% in the discussion section).\"\nReported evidence: In human clinical studies, ceftriaxone (CRO) administered orally showed an absolute bioavailability of 8%, which was compared to 24% for the rectal formulation.\n\n## Molecule 8\nSMILES: N[C@@H](C(=O)N[C@@H]1C(=O)N2C(C(=O)O)=C(Cl)CC[C@H]12)c1ccccc1\nTransfer likelihood: 0.9622\n\nRecord 8-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: extent_f\nResult: at least 0.8\nSpecies: volunteers\nExperimental details:\n  - comparator: urinary recovery\n  - dose: 400 mg\n\nAdditional details: \"Estimated bioavailability based on 24-hour urinary recovery.\"\nReported evidence: For loracarbef administered orally at 400 mg to volunteers, the estimated bioavailability (f) was reported to be at least 0.8, a value derived from 24-hour urinary recovery.\n\nRecord 8-2\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 90 %\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral administration\n\nReported evidence: After oral administration, loracarbef was rapidly and completely absorbed, with approximately 90 percent of the drug being bioavailable.\n\nRecord 8-3\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: complete bioavailability\nSpecies: young, healthy volunteers\nExperimental details:\n  - dose: 400 mg\n  - oral_exposure_mode: capsules\n\nAdditional details: \"Bioavailability was inferred from the fact that the drug was virtually quantitatively excreted unchanged in urine and accounted for less than 7% of the daily dose in fecal filtrate.\"\nReported evidence: In 20 young, healthy volunteers, the pharmacokinetic disposition of 400-mg doses of loracarbef was evaluated. The data, including virtually quantitative excretion of the drug unchanged in urine and less than 7% recovery in fecal filtrate, are consistent with complete bioavailability.\n\nRecord 8-4\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: complete bioavailability\nSpecies: young, healthy volunteers\nExperimental details:\n  - dose: 200 mg\n  - oral_exposure_mode: capsules\n\nAdditional details: \"Bioavailability was inferred from the fact that the drug was virtually quantitatively excreted unchanged in urine and accounted for less than 7% of the daily dose in fecal filtrate.\"\nReported evidence: In 20 young, healthy volunteers, the pharmacokinetic disposition of 200-mg doses of loracarbef was evaluated. The data, including virtually quantitative excretion of the drug unchanged in urine and less than 7% recovery in fecal filtrate, are consistent with complete bioavailability.\n\n## Molecule 9\nSMILES: CCN1CCN(C(=O)NC(C(=O)N[C@@H]2C(=O)N3C(C(=O)O)=C(CSc4nnnn4C)CS[C@H]23)c2ccc(O)cc2)C(=O)C1=O\nTransfer likelihood: 0.9753\n\nRecord 9-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 40 %\nSpecies: humans\nReported evidence: The oral bioavailability (BA) of SP in humans is reported to be approximately 40%.\n\n## Molecule 10\nSMILES: CC1(C)S[C@@H]2[C@H](NC(=O)[C@H](N)c3ccccc3)C(=O)N2[C@H]1C(=O)O\nTransfer likelihood: 0.9689\n\nRecord 10-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: prandial_state=fasted\nResult: 29 %\nSpecies: female subjects\nConditions: \"fasting\"\nExperimental details:\n  - comparator: vs IV\n  - oral_exposure_mode: gelatin capsules\n\nAdditional details: \"Value corresponds to the mean FU of 0.293 in Table V.\"\nReported evidence: Data from crossover studies in female subjects suggest that ampicillin is absorbed at a rate of 29% when administered as ampicillin.\n\n# Required JSON shape\n{\n  \"claims\": [\n    {\n      \"claim\": \"concise evidence-grounded statement\",\n      \"evidence_role\": \"supportive | contradictory\",\n      \"molecule_ids\": [\n        \"Molecule N\"\n      ],\n      \"record_ids\": [\n        \"Record N-N\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"pass | fail\"\n}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\n  \"claims\": [\n    {\n      \"claim\": \"Cephradine, a structurally close oral cephalosporin with the same cephem core and 3-methyl-4-carboxy group, shows complete or high oral bioavailability in humans (85–100%), supporting a pass for the query cefadroxil-like molecule.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 1\", \"Molecule 2\"],\n      \"record_ids\": [\"Record 1-1\", \"Record 2-1\", \"Record 2-2\", \"Record 2-3\", \"Record 2-4\", \"Record 2-5\"]\n    },\n    {\n      \"claim\": \"Amoxicillin, which shares the p-hydroxyphenylglycyl side chain with the query, has absolute oral bioavailability of 70–88.7% in fasted humans, and amoxicillin/clavulanate is reported at 90%, supporting high oral absorption for this structural class.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 4\", \"Molecule 5\"],\n      \"record_ids\": [\"Record 4-1\", \"Record 5-1\", \"Record 5-2\", \"Record 5-3\"]\n    },\n    {\n      \"claim\": \"Other orally absorbed beta-lactams such as loracarbef and cefroxadine show complete or near-complete bioavailability, reinforcing that this cephalosporin-like scaffold is generally well absorbed orally.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 6\", \"Molecule 8\"],\n      \"record_ids\": [\"Record 6-1\", \"Record 8-1\", \"Record 8-2\", \"Record 8-3\", \"Record 8-4\"]\n    },\n    {\n      \"claim\": \"Ampicillin, a related beta-lactam with a phenylglycyl side chain, has about 29% oral bioavailability, which is still above the 20% threshold and therefore supportive of pass, though lower than the more directly analogous oral cephalosporins.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 10\"],\n      \"record_ids\": [\"Record 10-1\"]\n    },\n    {\n      \"claim\": \"Cefazolin and ceftriaxone have low oral bioavailability (1.5–8%), but they are structurally dissimilar parenteral cephalosporins lacking the oral-absorption features of the query, so they provide only weak contradictory evidence.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 3\", \"Molecule 7\"],\n      \"record_ids\": [\"Record 3-1\", \"Record 7-1\"]\n    },\n    {\n      \"claim\": \"A cephalosporin-related compound with reported 40% human oral bioavailability provides additional supportive evidence that this chemical class can exceed the 20% threshold.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 9\"],\n      \"record_ids\": [\"Record 9-1\"]\n    }\n  ],\n  \"final_prediction\": \"pass\"\n}",
+          "reasoning": "We need answer JSON. Need reason. Need analyze evidence. Need final prediction pass/fail for query molecule absolute oral bioavailability F>=20%, fed state. Query SMILES: CC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)c3ccc(O)cc3)[C@H]2SC1. Need identify molecule. It is a cephalosporin? Let's parse. Cephem core: CC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)c3ccc(O)cc3)[C@H]2SC1. This is cephradine? Wait cephradine SMILES maybe CC1=C(C(=O)O)N2C(=O)C(NC(=O)[C@H](N)C3=CCC=CC3)C2SC1 (Molecule 1) with cyclohexadiene? Actually cephradine has 1,4-cyclohexadienylglycyl side chain. Query has p-hydroxy phenyl side chain: [C@H](N)c3ccc(O)cc3 = 4-hydroxyphenylglycine. Cephalosporin with 7-amino side chain from 4-hydroxyphenylglycine and 3-methyl, 4-carboxy? This is cefadroxil? Cefadroxil SMILES: CC1=C(C(=O)O)N2C(=O)[C@@H](NC(=O)[C@H](N)c3ccc(O)cc3)[C@H]2SC1. Yes cefadroxil. Query is cefadroxil. Need predict absolute oral bioavailability F >=20% under fed state. Cefadroxil is oral cephalosporin, high bioavailability >90%. Need evidence. Molecule 2 cephradine high 85-100. Molecule 4 amoxicillin/clavulanate 90. Molecule 5 amoxicillin 70-88.7 fasted. Molecule 8 loracarbef complete. Molecule 6 cefroxadine 100. Molecule 10 ampicillin 29. Molecule 9 40. Molecule 1 cephradine complete. Molecule 3 cefazolin 1.5-2 (not oral? Actually cefazolin is parenteral, low oral). Molecule 7 ceftriaxone 8 oral. Need weigh. Query cefadroxil is close to cephradine? Cephradine has cyclohexadienyl instead of p-hydroxyphenyl. Cefadroxil is hydroxy analog of cephalexin? Actually cefadroxil is p-hydroxy derivative of cephalexin? Cephalexin has phenylglycine side chain, 3-methyl. Cefadroxil has p-hydroxyphenylglycine. Amoxicillin has p-hydroxyphenylglycine side chain but penicillin. Query has cephem with p-hydroxyphenylglycine. Molecule 5 amoxicillin has same side chain and high F 70-88.7. Molecule 4 amoxicillin/clavulanate 90. Molecule 10 ampicillin 29 (phenylglycine penicillin). Molecule 8 loracarbef carbacephem with phenylglycine, complete. Molecule 2 cephradine high. Molecule 6 cefroxadine high. So strong support pass. Need consider fed state. Query condition fed state. Evidence mostly fasted or unspecified. Cefadroxil absorption maybe affected by food? Need know. Cefadroxil oral absorption is high, food may reduce rate but extent? Cephalosporins often absorption decreased by food? But F likely still >20. Need final pass.\n\nNeed produce claims with evidence roles. Need include all materially informative evidence. Need maybe mention low transferability of cefazolin/ceftriaxone contradictory but not enough. Need final prediction pass.\n\nNeed ensure JSON only. Need concise claims. Need cite molecule IDs and record IDs. Need maybe include claim for cefadroxil? No direct query evidence. Need analogies.\n\nLet's craft claims:\n- Cephradine (Molecule 1/2), structurally close cephalosporin with same cephem core and 3-methyl-4-carboxy, has complete/high oral bioavailability (85-100%) in humans, supporting pass.\n- Amoxicillin (Molecule 5) shares p-hydroxyphenylglycyl side chain and beta-lactam, absolute F 70-88.7% fasted, supporting pass; Molecule 4 amoxicillin/clavulanate 90%.\n- Loracarbef (Molecule 8) and cefroxadine (Molecule 6) oral cephalosporins/carbacephem high/complete.\n- Ampicillin (Molecule 10) 29% still above threshold, supportive but lower.\n- Cefazolin (Molecule 3) and ceftriaxone (Molecule 7) low oral F but structurally dissimilar (polar parenteral cephalosporins, no oral features), low transferability, contradictory but weak.\nNeed maybe mention Molecule 9 40% supportive.\n\nNeed final pass.\n\nNeed be careful \"supportive\" means evidence supporting selected final prediction; \"contradictory\" means evidence supporting alternative. So low F records are contradictory. Need include them? Yes.\n\nNeed maybe mention \"fed state\" not directly tested; most evidence fasted/unspecified. But high F likely persists. Could mention uncertainty. But final pass.\n\nNeed output exactly JSON."
+        }
+      ],
+      "usage": {
+        "completion_tokens": 1860,
+        "prompt_tokens": 3562,
+        "total_tokens": 5422,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 1186
+      },
+      "tool_count": 0
+    }
+  ],
+  "provenance": {
+    "source_kind": "original",
+    "requested_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "served_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "provider": "dgx027",
+    "upstream_provider": ""
+  },
+  "source_hashes": {
+    "trace_messages.jsonl": "0d7c27e08fce2f52df1b51fd3553bd74c7edfae4a51eab4288700c9a898c5454",
+    "final_reasoning_output.json": "1536a49bd8d08c1b7b3ca7b157c35aa1cc7de2cf6189c53409f251826eb52472",
+    "request.json": "77ec587f7afebc3360a1620454f299a44cea74a8b888eaaf628aec8f22a13eff"
+  }
+}

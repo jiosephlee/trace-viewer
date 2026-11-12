@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Cache-Control" content="no-store">
-<title>Progressive Trace Samples</title>
+<title>Legacy Gold Trace Samples</title>
 <style>
   * { box-sizing: border-box; }
   :root {
@@ -136,523 +136,183 @@
   @media (min-width: 901px) and (max-width: 1200px) {
     .json-object.json-depth-0 > .json-row { grid-template-columns: minmax(0, 1fr); gap: 3px; }
   }
+  .reference-link { color: var(--blue); text-decoration: underline; cursor: pointer; }
+  .unresolved { text-decoration: underline dotted; color: var(--amber); }
+  .record-card, .evidence-card { scroll-margin-top: 160px; }
+  .record-card:target, .evidence-card:target { outline: 3px solid var(--blue); }
+  .reference-intro { margin: 0 0 12px; font-size: 13px; line-height: 1.5; }
+  .record-card { margin-top: 8px; }
+  .card-body pre { font-size: 12px; }
+  .reference-grid { display: grid; gap: 8px; }
 </style>
 </head>
 <body>
 <header>
-  <h1 id="page-title">Progressive Trace Samples <span class="build">2026-09-04</span></h1>
-  <nav class="task-nav" aria-label="Retrieval method">
-    <span class="nav-label">Method</span>
-    <a class="task-link" data-dataset="current_best" href="?dataset=current_best">Assay-transfer ranked</a>
-    <a class="task-link" data-dataset="morgan_ranked" href="?dataset=morgan_ranked">Morgan-ranked examples</a>
+  <h1 id="page-title">Legacy Gold Trace Samples</h1>
+  <nav class="task-nav" aria-label="Configuration">
+    <span class="nav-label">Evidence</span>
+    <a class="task-link" data-config="direct" href="?configuration=direct">Direct only</a>
+    <a class="task-link" data-config="direct_plus_indirect" href="?configuration=direct_plus_indirect">Direct + indirect</a>
   </nav>
   <nav class="task-nav" aria-label="Dataset">
     <span class="nav-label">Dataset</span>
-    <a class="task-link" data-task="bbb_martins" href="?task=bbb_martins">BBB</a>
-    <a class="task-link" data-task="bioavailability_ma" href="?task=bioavailability_ma">Oral bioavailability</a>
-    <a class="task-link" data-task="skin_reaction" href="?task=skin_reaction">Skin reaction</a>
-    <a id="results-download" class="task-link download" href="current_best_results.tsv" download>Download results TSV</a>
+    <a class="task-link" data-task="bbb_martins" href="?task=bbb_martins">Gold BBB</a>
+    <a class="task-link" data-task="bioavailability_ma" href="?task=bioavailability_ma">Gold Oral bioavailability</a>
+    <a class="task-link download" href="legacy_gold_results.tsv" download>Full-run results TSV</a>
   </nav>
-  <div hidden>
-    <select id="dataset"></select><select id="regime"></select><select id="task"></select><select id="condition"></select><button id="refresh"></button>
-  </div>
 </header>
 <main>
-  <div class="release-note">
-    <span id="task-note"></span>
-    The prompts are identity-blind but expose query and reference structures. Their recorded identity policy is <code>gold_split_parent_disjoint</code>. Prompt messages, reasoning, and final outputs come from the original completed runs.
-  </div>
+  <div id="task-note" class="release-note">Loading saved legacy Gold test examples…</div>
   <div class="layout">
     <aside>
-      <div class="aside-head"><span>Trace samples</span><span id="count" class="tag">0</span></div>
+      <div class="aside-head"><span>Paired trace samples</span><span id="count" class="tag">0</span></div>
       <div class="filters">
-        <input id="search" type="text" placeholder="Search index, prediction, SMILES, summary">
-        <select id="correctness">
-          <option value="">All outcomes</option>
-          <option value="correct">Correct</option>
-          <option value="wrong">Wrong</option>
-        </select>
-        <select id="status">
-          <option value="">All statuses</option>
-          <option value="ok">OK</option>
-          <option value="failed">Failed</option>
-        </select>
+        <input id="search" type="text" placeholder="Search query, outcome, SMILES" aria-label="Search examples">
+        <select id="correctness" aria-label="Correctness"><option value="">All outcomes</option><option value="correct">Correct</option><option value="wrong">Wrong</option></select>
+        <select id="status" aria-label="Status"><option value="">All statuses</option><option value="ok">OK</option><option value="failed">Failed</option></select>
       </div>
-      <div id="samples" class="sample-list"><div class="loading">Scanning paper runs...</div></div>
+      <div id="samples" class="sample-list"></div>
     </aside>
-    <section id="detail" class="detail"><div class="section"><div class="empty">Select a paper experiment.</div></div></section>
+    <section id="detail" class="detail" aria-live="polite"></section>
   </div>
 </main>
 <script>
-const ROOTS = [
-  { id: "runs_deployment_visible_parent_disjoint", label: "Deployment-visible (parent-disjoint)" },
-  { id: "runs_deployment_visible", label: "Deployment-visible (agentic tools)" },
-  { id: "runs", label: "Structure-visible context records" },
-  { id: "runs_deployment_visible_prefetched", label: "Deployment-visible (matched prefetch)" },
-];
-const TASKS = {
-  bbb_martins: {
-    title: "BBB L1–L5 Traces",
-    note: "All 397 queries from the current best BBB progressive validation run. ",
-  },
-  bioavailability_ma: {
-    title: "Oral Bioavailability L1–L6 Traces",
-    note: "All 262 queries from the current best oral-bioavailability progressive validation run. ",
-  },
-  skin_reaction: {
-    title: "Skin Reaction L1–L4 Traces",
-    note: "All 246 queries from the current best Skin progressive validation run. ",
-  },
-};
-const requestedTask = new URLSearchParams(location.search).get("task");
-const requestedDataset = new URLSearchParams(location.search).get("dataset");
-const activeTask = TASKS[requestedTask] ? requestedTask : "bbb_martins";
-const activeDataset = ["current_best", "morgan_ranked"].includes(requestedDataset) ? requestedDataset : "current_best";
-const state = { datasets: [], catalog: [], condition: null, manifest: null, predictions: [], filtered: [], selected: null, trace: [], retrieval: null, runManifest: null, reuse: null, loading: false };
+const params = new URLSearchParams(location.search);
+const state = { release: null, task: params.get("task") || "bbb_martins",
+  config: params.get("configuration") || "direct_plus_indirect", selected: params.get("query"), payload: null, loading: 0 };
 const $ = id => document.getElementById(id);
-const els = { dataset: $("dataset"), regime: $("regime"), task: $("task"), condition: $("condition"), refresh: $("refresh"), search: $("search"), correctness: $("correctness"), status: $("status"), samples: $("samples"), count: $("count"), detail: $("detail") };
-
-function esc(value) {
-  return String(value ?? "").replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
-}
-function text(value) {
-  if (value == null) return "";
-  if (typeof value === "string") return value;
-  try { return JSON.stringify(value, null, 2); } catch { return String(value); }
-}
-function joinPath(...parts) { return parts.filter(Boolean).map(x => String(x).replace(/^\/+|\/+$/g, "")).join("/"); }
-function dirname(path) { return String(path).replace(/\/[^/]*$/, ""); }
-function resolveArtifactPath(path) {
-  const raw = String(path || "").replaceAll("\\", "/");
-  const condition = state.condition;
-  if (!condition) return raw.replace(/^\/+/, "");
-  if (raw === condition.datasetPath || raw.startsWith(`${condition.datasetPath}/`)) return raw;
-  if (raw === condition.regime || raw.startsWith(`${condition.regime}/`)) {
-    return joinPath(condition.datasetPath, raw);
-  }
-  const marker = `/${condition.regime}/`;
-  const index = raw.lastIndexOf(marker);
-  if (index >= 0) return joinPath(condition.datasetPath, raw.slice(index + 1));
-  return raw.replace(/^\/+/, "");
-}
-async function fetchText(path) {
+const outcomes = { TP: "True positive", TN: "True negative", FP: "False positive", FN: "False negative" };
+function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"}[c])); }
+function panel(title, content, open = false) { return `<details class="trace-part"${open ? " open" : ""}><summary>${esc(title)}</summary><div class="trace-part-body">${content}</div></details>`; }
+function metric(title, value) { return `<div class="metric"><div class="metric-key">${esc(title)}</div><div class="metric-value">${esc(value)}</div></div>`; }
+function referenceId(visibleId) { return `ref-${encodeURIComponent(visibleId)}`; }
+async function fetchJson(path) {
   const response = await fetch(path, { cache: "no-store" });
   if (!response.ok) throw new Error(`HTTP ${response.status}: ${path}`);
-  return response.text();
+  return response.json();
 }
-async function fetchJson(path) { return JSON.parse(await fetchText(path)); }
-async function fetchJsonOptional(path) { try { return await fetchJson(path); } catch { return null; } }
-async function fetchTextOptional(path) { try { return await fetchText(path); } catch { return null; } }
-async function exists(path) { try { const r = await fetch(path, { method: "HEAD", cache: "no-store" }); return r.ok; } catch { return false; } }
-function parseJsonl(source) { return source.split(/\r?\n/).filter(line => line.trim()).map(line => JSON.parse(line)); }
-async function listDirectories(path) {
-  const html = await fetchText(`${path.replace(/\/$/, "")}/`);
-  const doc = new DOMParser().parseFromString(html, "text/html");
-  const values = [];
-  for (const anchor of doc.querySelectorAll("a[href]")) {
-    const href = anchor.getAttribute("href") || "";
-    if (!href.endsWith("/") || href === "../" || href.startsWith("?")) continue;
-    const name = decodeURIComponent(href.replace(/\/$/, "").split("/").filter(Boolean).pop() || "");
-    if (!name || name.startsWith("." ) || name.startsWith("_")) continue;
-    values.push({ name, path: joinPath(path, name) });
+function linkedText(value, references = state.payload?.references || []) {
+  const ids = new Set(references.map(r => r.visible_id.toLowerCase()));
+  const aliases = references.map(r => r.visible_id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const pattern = new RegExp(`\\b(?:${[...aliases.sort((a, b) => b.length - a.length), "Molecule\\s+\\d+", "Record\\s+\\d+(?:-\\d+)?"].join("|")})\\b`, "gi");
+  const source = String(value ?? "");
+  let html = "", previous = 0;
+  for (const match of source.matchAll(pattern)) {
+    html += esc(source.slice(previous, match.index));
+    const known = ids.has(match[0].toLowerCase());
+    const reference = known && references.find(r => r.visible_id.toLowerCase() === match[0].toLowerCase());
+    html += known ? `<a class="reference-link" href="#${referenceId(reference.visible_id)}">${esc(match[0])}</a>`
+      : `<span class="unresolved" title="This exact reference is absent from the saved prompt index.">${esc(match[0])}</span>`;
+    previous = match.index + match[0].length;
   }
-  return values;
+  return html + esc(source.slice(previous));
 }
-
-async function loadDatasets() {
-  const source = await fetchTextOptional(".trace_viewer_sources.tsv");
-  if (!source) {
-    state.datasets = [{ id: "default", label: "Paper results", path: "." }];
-    return;
-  }
-  state.datasets = source.split(/\r?\n/).filter(line => line.trim()).map(line => {
-    const [id, label, path] = line.split("\t");
-    return { id, label, path };
-  }).filter(dataset => dataset.id && dataset.label && dataset.path);
-  if (!state.datasets.length) throw new Error("Trace viewer dataset config is empty.");
-}
-
-async function loadConfiguredCatalog() {
-  const source = await fetchTextOptional(".trace_viewer_catalog.tsv");
-  if (!source) return null;
-  const datasetsById = new Map(state.datasets.map(dataset => [dataset.id, dataset]));
-  const rootsById = new Map(ROOTS.map(root => [root.id, root]));
-  return source.split(/\r?\n/).filter(line => line.trim()).map(line => {
-    const [datasetId, regime, task, name] = line.split("\t");
-    const dataset = datasetsById.get(datasetId);
-    const root = rootsById.get(regime);
-    if (!dataset || !root || !task || !name) return null;
-    return {
-      datasetId,
-      datasetLabel: dataset.label,
-      datasetPath: dataset.path,
-      regime,
-      regimeLabel: root.label,
-      task,
-      name,
-      path: joinPath(dataset.path, regime, task, name),
-    };
-  }).filter(Boolean);
-}
-
-async function scanRemoteCatalog() {
-  const catalog = [];
-  for (const dataset of state.datasets) {
-    for (const root of ROOTS) {
-      const rootPath = joinPath(dataset.path, root.id);
-      if (!(await exists(`${rootPath}/`))) continue;
-      for (const task of await listDirectories(rootPath)) {
-        for (const condition of await listDirectories(task.path)) {
-          if (await exists(`${condition.path}/predictions.jsonl`)) {
-            catalog.push({
-              datasetId: dataset.id,
-              datasetLabel: dataset.label,
-              datasetPath: dataset.path,
-              regime: root.id,
-              regimeLabel: root.label,
-              task: task.name,
-              name: condition.name,
-              path: condition.path,
-            });
-          }
-        }
-      }
-    }
-  }
-  return catalog;
-}
-
-async function scanCatalog() {
-  setLoading(true, "Scanning final paper conditions...");
-  await loadDatasets();
-  const configuredCatalog = await loadConfiguredCatalog();
-  const catalog = configuredCatalog || await scanRemoteCatalog();
-  state.catalog = catalog.sort((a, b) => `${a.datasetId}/${a.regime}/${a.task}/${a.name}`.localeCompare(`${b.datasetId}/${b.regime}/${b.task}/${b.name}`));
-  populateDatasets();
-  setLoading(false);
-  if (state.catalog.length) await loadSelectedCondition();
-  else showError("No final paper conditions with predictions.jsonl were found.");
-}
-function populateDatasets() {
-  const datasets = state.datasets.filter(dataset => state.catalog.some(item => item.datasetId === dataset.id));
-  els.dataset.innerHTML = datasets.map(dataset => `<option value="${esc(dataset.id)}">${esc(dataset.label)}</option>`).join("");
-  if (datasets.some(dataset => dataset.id === activeDataset)) els.dataset.value = activeDataset;
-  populateRegimes();
-}
-function populateRegimes() {
-  const regimes = ROOTS.filter(root => state.catalog.some(item => item.datasetId === els.dataset.value && item.regime === root.id));
-  els.regime.innerHTML = regimes.map(root => `<option value="${esc(root.id)}">${esc(root.label)}</option>`).join("");
-  populateTasks();
-}
-function populateTasks() {
-  const tasks = [...new Set(state.catalog.filter(x => x.datasetId === els.dataset.value && x.regime === els.regime.value).map(x => x.task))].sort();
-  els.task.innerHTML = tasks.map(task => `<option value="${esc(task)}">${esc(task)}</option>`).join("");
-  if (tasks.includes(activeTask)) els.task.value = activeTask;
-  populateConditions();
-}
-function populateConditions() {
-  const conditions = state.catalog.filter(x => x.datasetId === els.dataset.value && x.regime === els.regime.value && x.task === els.task.value);
-  els.condition.innerHTML = conditions.map(item => `<option value="${esc(item.path)}">${esc(item.name)}</option>`).join("");
-}
-async function loadSelectedCondition() {
-  const condition = state.catalog.find(x => x.path === els.condition.value);
-  if (!condition) return;
-  setLoading(true, `Loading ${condition.name}...`);
-  try {
-    const [predictions, manifest] = await Promise.all([
-      fetchText(`${condition.path}/predictions.jsonl`).then(parseJsonl),
-      fetchJsonOptional(`${condition.path}/manifest.json`),
-    ]);
-    state.condition = condition;
-    state.manifest = manifest;
-    $("task-note").textContent = manifest?.notice || TASKS[condition.task]?.note || "";
-    $("results-download").href = condition.datasetId === "morgan_ranked" ? "morgan_ranked_results.tsv" : "current_best_results.tsv";
-    state.predictions = predictions;
-    state.selected = null;
-    state.runManifest = null;
-    state.reuse = null;
-    applyFilters();
-    if (state.filtered.length) await selectSample(state.filtered[0]);
-    else renderEmpty("This condition has no prediction rows.");
-  } catch (error) {
-    showError(error.message);
-  } finally {
-    setLoading(false);
-  }
-}
-function rowSearchText(row) {
-  return [row.query_index, row.smiles, row.label, row.pred_label, row.confidence, row.final_summary, row.status, row.final_status].map(text).join(" ").toLowerCase();
-}
-function applyFilters() {
-  const query = els.search.value.trim().toLowerCase();
-  const correctness = els.correctness.value;
-  const status = els.status.value;
-  state.filtered = state.predictions.filter(row => {
-    const okStatus = String(row.status || row.final_status || "").toLowerCase() === "ok";
-    if (query && !rowSearchText(row).includes(query)) return false;
-    if (correctness === "correct" && row.correct !== true) return false;
-    if (correctness === "wrong" && row.correct !== false) return false;
-    if (status === "ok" && !okStatus) return false;
-    if (status === "failed" && okStatus) return false;
-    return true;
-  });
-  renderSampleList();
-}
-function renderSampleList() {
-  els.count.textContent = `${state.filtered.length} / ${state.predictions.length}`;
-  if (!state.filtered.length) { els.samples.innerHTML = '<div class="empty">No matching samples.</div>'; return; }
-  els.samples.innerHTML = state.filtered.map(row => {
-    const active = state.selected && row.query_index === state.selected.query_index ? " active" : "";
-    const outcome = row.correct === true ? '<span class="ok">correct</span>' : row.correct === false ? '<span class="bad">wrong</span>' : '<span class="warn">unknown</span>';
-    const prediction = row.pred_label ?? "";
-    const levels = Object.entries(row.level_correctness || {}).map(([level, correct]) => `<span class="level-result ${correct ? "ok" : "bad"}" title="${esc(`${level} ${correct ? "correct" : "incorrect"}`)}">${esc(level)}</span>`).join("");
-    return `<button class="sample${active}" data-index="${esc(row.query_index)}">
-      <div class="sample-main"><strong>#${esc(row.query_index)}</strong>${outcome}</div>
-      <div class="sample-sub">label=${esc(row.label)} prediction=${esc(prediction)} confidence=${esc(row.confidence || "")}</div>
-      <div class="sample-levels">${levels}</div>
-    </button>`;
+function renderReferences() {
+  const references = state.payload.references;
+  const molecules = references.filter(r => r.unit_kind === "molecule");
+  const records = references.filter(r => r.unit_kind === "record");
+  const cards = molecules.map(molecule => {
+    const children = records.filter(r => r.containing_unit_id === molecule.stable_id);
+    const body = children.map(record => `<details class="record-card" id="${referenceId(record.visible_id)}"><summary class="card-head">${esc(record.visible_id)} · measurement for ${esc(molecule.visible_id)}</summary><div class="card-body"><pre>${esc(record.text)}</pre>${panel("Source identity", `<pre>${esc(JSON.stringify(record, null, 2))}</pre>`)}</div></details>`).join("");
+    return `<details class="evidence-card" id="${referenceId(molecule.visible_id)}"><summary>${esc(molecule.visible_id)} · reference molecule · L${esc(molecule.first_visible_level)} <span class="tag">${children.length} records</span></summary><div class="card-body"><pre>${esc(molecule.text)}</pre>${body}</div></details>`;
   }).join("");
-  els.samples.querySelectorAll(".sample").forEach(button => {
-    button.onclick = () => {
-      const row = state.predictions.find(item => String(item.query_index) === button.dataset.index);
-      if (row) selectSample(row);
-    };
-  });
-}
-async function selectSample(row) {
-  state.selected = row;
-  renderSampleList();
-  renderLoadingDetail(`Loading sample #${row.query_index}...`);
-  try {
-    let tracePath = resolveArtifactPath(row.trace_messages);
-    if (!tracePath && row.run_dir) tracePath = `${resolveArtifactPath(row.run_dir)}/trace_messages.jsonl`;
-    if (!tracePath) throw new Error("Prediction row does not contain a trace path.");
-    const runRoot = dirname(tracePath);
-    const [trace, retrieval, runManifest, reuse] = await Promise.all([
-      fetchText(tracePath).then(parseJsonl),
-      fetchJsonOptional(`${runRoot}/retrieval.json`),
-      fetchJsonOptional(`${runRoot}/manifest.json`),
-      fetchJsonOptional(`${runRoot}/reuse.json`),
-    ]);
-    state.trace = trace;
-    state.retrieval = retrieval;
-    state.runManifest = runManifest;
-    state.reuse = reuse;
-    const prompt = trace.flatMap(record => record.messages || [])
-      .filter(message => message.role === "user")
-      .map(message => parseMaybeJson(message.content))
-      .find(payload => payload?.query);
-    row.smiles ||= prompt?.query?.canonical_smiles || prompt?.query?.input_smiles || "";
-    renderSampleList();
-    renderDetail();
-  } catch (error) {
-    showError(error.message);
-  }
-}
-
-function setLoading(value, message = "") {
-  state.loading = value;
-  els.refresh.disabled = value;
-  if (value && message) els.samples.innerHTML = `<div class="loading">${esc(message)}</div>`;
-}
-function renderLoadingDetail(message) { els.detail.innerHTML = `<div class="section"><div class="loading">${esc(message)}</div></div>`; }
-function renderEmpty(message) { els.detail.innerHTML = `<div class="section"><div class="empty">${esc(message)}</div></div>`; }
-function showError(message) { els.detail.innerHTML = `<div class="error">${esc(message)}</div>`; }
-function statusClass(value) {
-  const status = String(value).toLowerCase();
-  return status === "ok" ? "ok" : ["failed", "error"].includes(status) ? "bad" : "warn";
-}
-function metric(key, value) { return `<div class="metric"><div class="metric-key">${esc(key)}</div><div class="metric-value">${esc(text(value))}</div></div>`; }
-function usageText(usage) {
-  if (!usage) return "";
-  return `${Number(usage.prompt_tokens || 0).toLocaleString()} in / ${Number(usage.completion_tokens || 0).toLocaleString()} out / ${Number(usage.total_tokens || 0).toLocaleString()} total`;
-}
-const GROUP_DISPLAY_LABELS = Object.freeze({
-  "Observed.direct_oral_bioavailability": "Direct oral bioavailability (F%)",
-  "Observed.oral_auc_cmax_exposure": "Oral exposure proxies (AUC/Cmax)",
-  "Fa.absorption_solubility_permeability": "Fa — Absorption, solubility & permeability",
-  "Fg.gut_wall_efflux_intestinal_metabolism": "Fg — Gut-wall transport & intestinal metabolism",
-  "Fh.hepatic_clearance_metabolic_stability": "Fh — Hepatic clearance & metabolic stability",
-});
-function groupDisplayLabel(groupId) {
-  const value = String(groupId || "");
-  return GROUP_DISPLAY_LABELS[value] || value || "group";
-}
-function stageLabel(task) {
-  if (/^level_0*[1-6]$/.test(task)) return `L${Number(task.replace("level_", ""))}`;
-  if (task === "single_molecule") return "Single-molecule prior";
-  if (task === "final_summary") return "Final synthesis";
-  if (task === "Flat.all_evidence") return "Flat evidence reasoning";
-  return groupDisplayLabel(task);
-}
-function parseMaybeJson(value) {
-  if (value && typeof value === "object") return value;
-  if (typeof value !== "string") return null;
-  const trimmed = value.trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
-  if (!trimmed || !["{", "["].includes(trimmed[0])) return null;
-  try { return JSON.parse(trimmed); } catch { return null; }
-}
-function renderValue(value, depth = 0) {
-  if (value == null) return '<span class="json-value"></span>';
-  const depthClass = depth === 0 ? "json-depth-0" : `json-depth-${((depth - 1) % 6) + 1}`;
-  if (Array.isArray(value)) {
-    if (!value.length) return '<span class="json-value">[]</span>';
-    return `<div class="json-array ${depthClass}">${value.map((item, index) => `<div class="array-item"><div class="tag">#${index + 1}</div>${renderValue(item, depth + 1)}</div>`).join("")}</div>`;
-  }
-  if (typeof value === "object") {
-    return `<div class="json-object ${depthClass}">${Object.entries(value).map(([key, item]) => `<div class="json-row"><div class="json-key">${esc(key)}</div><div class="json-value">${renderValue(item, depth + 1)}</div></div>`).join("")}</div>`;
-  }
-  return `<span class="json-value">${esc(String(value))}</span>`;
-}
-function renderResponse(record) {
-  const parsed = parseMaybeJson(record.response_text);
-  if (parsed) return renderValue(parsed);
-  return `<pre>${esc(record.response_text || "")}</pre>`;
-}
-function renderRecordCards(columns, rows) {
-  return rows.map((row, index) => {
-    const values = Array.isArray(row)
-      ? Object.fromEntries(columns.map((name, position) => [name, row[position]]))
-      : row;
-    const title = values.card_id || values.record_id || `Record ${index + 1}`;
-    const reference = values.reference_molecule_id ? ` · ${values.reference_molecule_id}` : "";
-    const fields = Object.fromEntries(Object.entries(values).filter(([key, value]) => !["card_id", "record_id", "reference_molecule_id"].includes(key) && value !== null && value !== ""));
-    return `<article class="record-card"><div class="card-head">${esc(title)}${esc(reference)}</div><div class="card-body">${renderValue(fields, 1)}</div></article>`;
-  }).join("");
-}
-function renderEvidenceCard(item, index) {
-  const title = item.context_card_id || item.level_card_id || `Evidence ${index + 1}`;
-  const rows = item.record_rows || item.record_cards || item.records || [];
-  const columns = item.record_columns || [];
-  const smiles = item.canonical_smiles || "";
-  const meta = Object.fromEntries(Object.entries(item).filter(([key]) => !["context_card_id", "level_card_id", "canonical_smiles", "record_columns", "record_rows", "record_cards", "records", "molecules", "reference_molecules", "source_schemas"].includes(key)));
-  const molecules = (item.reference_molecules || item.molecules || []).map(molecule => `<article class="record-card"><div class="card-head">${esc(molecule.molecule_id || "Molecule")}</div><div class="card-body"><div class="card-smiles">${esc(molecule.smiles || "")}</div></div></article>`).join("");
-  return `<details class="evidence-card"><summary>${esc(title)} <span class="tag">${rows.length} records</span></summary><div class="card-body">
-    ${smiles ? `<div class="card-smiles">${esc(smiles)}</div>` : ""}
-    ${renderValue(meta, 1)}
-    ${molecules ? `<div class="record-grid">${molecules}</div>` : ""}
-    ${rows.length ? `<div class="record-grid">${renderRecordCards(columns, rows)}</div>` : ""}
-    ${item.source_schemas ? `<details class="raw"><summary>Source schemas</summary>${renderValue(item.source_schemas)}</details>` : ""}
-  </div></details>`;
+  const unmatched = records.filter(r => !molecules.some(m => m.stable_id === r.containing_unit_id));
+  return `<div class="section"><div class="section-head">Reference guide <span class="tag">${molecules.length} molecules · ${records.length} records</span></div><div class="section-body">
+    <p class="reference-intro"><strong>Molecule 3</strong> identifies a reference molecule in this saved prompt. <strong>Record 3-2</strong> is its second experimental record. Click a reference in the reasoning or final answer to open its evidence below. Numbering is local to each trace.</p>
+    <p class="reference-intro">These legacy prompts use <strong>Molecule / Record</strong> labels. C1 or C2 inside chemical notation can describe atoms or ring closures; they are not automatically context IDs. Dotted amber references have no exact match in the saved index.</p>
+    ${panel(`Browse ${molecules.length} context molecules and ${records.length} records`, `<div class="reference-grid">${cards}</div>`)}${unmatched.length ? `<div class="warn">Records with no saved parent mapping: ${esc(unmatched.map(r => r.visible_id).join(", "))}</div>` : ""}
+  </div></div>`;
 }
 function renderInput(record) {
-  const messages = record.messages || [];
-  const system = messages.filter(message => message.role === "system");
-  const user = messages.filter(message => message.role === "user");
-  const systemPanel = `<details class="trace-part"><summary>System prompt</summary><div class="trace-part-body">${system.map(message => `<pre>${esc(message.content || "")}</pre>`).join("") || '<div class="empty">No system prompt recorded.</div>'}</div></details>`;
-  const userMessages = user.map((message, messageIndex) => {
-    const parsed = parseMaybeJson(message.content);
-    const messageLabel = user.length > 1 ? `<div class="tag">User message ${messageIndex + 1}</div>` : "";
-    if (!parsed || Array.isArray(parsed)) return `<div class="content-block">${messageLabel}<pre>${esc(message.content || "")}</pre></div>`;
-    const fields = Object.entries(parsed).map(([key, value]) => {
-      if (key === "query") return `<div class="json-row"><div class="json-key">${esc(key)}</div><article class="evidence-card"><div class="card-head">Query molecule</div><div class="card-body">${renderValue(value, 1)}</div></article></div>`;
-      if (key === "active_evidence" && Array.isArray(value)) return `<div class="json-row"><div class="json-key">${esc(key)}</div><div class="evidence-grid">${value.map(renderEvidenceCard).join("")}</div></div>`;
-      return `<div class="json-row"><div class="json-key">${esc(key)}</div><div class="json-value">${renderValue(value, 1)}</div></div>`;
-    }).join("");
-    return `<div class="content-block">${messageLabel}<div class="json-object json-depth-1">${fields}</div></div>`;
-  }).join("");
-  const userPanel = `<details class="trace-part" open><summary>User prompt</summary><div class="trace-part-body">${userMessages || '<div class="empty">No user prompt recorded.</div>'}</div></details>`;
-  return `<details class="trace-part" open><summary>Input</summary><div class="trace-part-body">${systemPanel}${userPanel}</div></details>`;
+  return record.messages.filter(m => m.role !== "assistant").map((message, index) =>
+    panel(`${message.role === "system" ? "System" : "User"} prompt${index > 1 ? " (retry)" : ""}`, `<pre>${esc(message.content)}</pre>`, message.role === "user")).join("");
 }
-function renderReasoning(record) {
-  const reasoning = [...(record.messages || [])].reverse().find(message => message.role === "assistant" && message.reasoning)?.reasoning || record.reasoning || "";
-  return `<details class="trace-part"><summary>Reasoning</summary><div class="trace-part-body">${reasoning ? `<pre>${esc(reasoning)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>'}</div></details>`;
+function renderDetail(sample) {
+  const arm = state.release.tasks[state.task].configurations[state.config];
+  const prediction = sample.configurations[state.config];
+  const final = state.payload.trace.find(r => r.task === "final_summary");
+  const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
+  const prior = state.payload.trace.filter(r => r.task !== "final_summary");
+  const provenance = state.payload.provenance;
+  const outcome = `${sample.label === prediction.pred_label ? "T" : "F"}${prediction.pred_label ? "P" : "N"}`;
+  const overview = [metric("Query index", prediction.query_index), metric("Gold label", sample.label), metric("Prediction", prediction.pred_label),
+    metric("Outcome", outcomes[outcome]), metric("Configuration", arm.label), metric("Served model", provenance.served_model),
+    metric("Provider", [provenance.provider, provenance.upstream_provider].filter(Boolean).join(" / ")), metric("Query UID", sample.query_uid), metric("SMILES", sample.smiles)].join("");
+  $("detail").innerHTML = `<div class="section"><div class="section-head">Sample overview <span class="tag">Gold test</span></div><div class="overview">${overview}</div></div>
+    ${renderReferences()}<div class="section"><div class="section-head">Saved prediction <span class="tag">${esc(arm.label)}</span></div><div class="stage-content">
+      ${panel("Input", renderInput(final), true)}
+      ${panel("Reasoning", assistant?.reasoning ? `<pre>${linkedText(assistant.reasoning)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>')}
+      ${panel("Final output", `<pre>${linkedText(final.response_text || assistant?.content || "")}</pre>`)}
+      ${panel("Cached query prior", prior.map(record => `${renderInput(record)}${panel("Saved prior output", `<pre>${esc(record.response_text)}</pre>`)}`).join("") || "No cached prior recorded.")}
+      ${panel("Provenance", `<pre>${esc(JSON.stringify({run_uid: arm.run_uid, prompt_version: arm.prompt_version, identity_policy: arm.identity_policy, ...provenance, source_hashes: state.payload.source_hashes}, null, 2))}</pre>`)}
+      ${panel("Raw saved messages", `<pre>${esc(JSON.stringify(state.payload.trace, null, 2))}</pre>`)}
+    </div></div>`;
 }
-function renderStage(record, index) {
-  const open = index === 0 ? " open" : "";
-  const correctnessClass = record.correct === true ? "ok" : record.correct === false ? "bad" : "warn";
-  const carriedForward = record.status === "carried_forward" ? `<span class="pill">${esc(record.carry_forward_reason || "Prior state carried forward without an LLM call.")}</span>` : "";
-  return `<details class="stage"${open}><summary><span class="${correctnessClass}" title="${record.correct === true ? "Correct" : record.correct === false ? "Incorrect" : "Unknown"} at this level">${esc(stageLabel(record.task))}</span><span class="${statusClass(record.status)}">${esc(record.status || "unknown")}</span></summary><div class="stage-content">
-    <div class="stage-meta"><span class="pill">${esc(record.trace_provenance || "provenance unavailable")}</span>${carriedForward}<span class="pill">tools ${esc(record.tool_count || 0)}</span><span class="pill">${esc(usageText(record.usage))}</span></div>
-    ${renderInput(record)}
-    ${renderReasoning(record)}
-    <details class="trace-part"><summary>Final output</summary><div class="trace-part-body">${renderResponse(record)}</div></details>
-    <details class="raw"><summary>Raw trace record</summary><pre>${esc(JSON.stringify(record, null, 2))}</pre></details>
-  </div></details>`;
+function updateNavigation() {
+  const query = new URLSearchParams({ task: state.task, configuration: state.config, query: state.selected || "" });
+  history.replaceState(null, "", `?${query}`);
+  document.querySelectorAll("[data-config], [data-task]").forEach(link => {
+    const next = new URLSearchParams(query);
+    if (link.dataset.config) next.set("configuration", link.dataset.config);
+    if (link.dataset.task) { next.set("task", link.dataset.task); next.delete("query"); }
+    link.href = `?${next}`;
+    link.classList.toggle("active", link.dataset.config ? link.dataset.config === state.config : link.dataset.task === state.task);
+  });
 }
-function renderRetrieval(retrieval) {
-  if (!retrieval) return "";
-  const groups = Array.isArray(retrieval.groups) ? retrieval.groups : [];
-  const header = [
-    metric("Status", retrieval.status),
-    metric("Source", retrieval.experiment?.source || retrieval.evidence_source?.type || ""),
-    metric("Mode", retrieval.experiment?.mode || ""),
-    metric("Groups", groups.length),
-    metric("Coverage", retrieval.coverage || ""),
-  ].join("");
-  const body = groups.map(renderRetrievalGroup).join("");
-  return `<div class="section"><div class="section-head"><span>Retrieved evidence</span><span class="tag">minimal_evidence.v1 compatible</span></div><div class="overview">${header}</div>${body}<details class="stage"><summary><span>Raw retrieval JSON</span><span class="tag">provenance</span></summary><div class="stage-content"><pre>${esc(JSON.stringify(retrieval, null, 2))}</pre></div></details></div>`;
+function renderSamples() {
+  const samples = state.release.tasks[state.task].samples;
+  const search = $("search").value.toLowerCase(), correctness = $("correctness").value, status = $("status").value;
+  const filtered = samples.filter(s => {
+    const p = s.configurations[state.config];
+    return (!search || `${s.query_index} ${s.query_uid} ${s.smiles} ${s.selection_outcome} ${outcomes[s.selection_outcome]}`.toLowerCase().includes(search))
+      && (!correctness || p.correct === (correctness === "correct")) && status !== "failed";
+  });
+  $("count").textContent = `${filtered.length} / ${samples.length}`;
+  $("samples").innerHTML = filtered.map(s => {
+    const p = s.configurations[state.config];
+    return `<button class="sample${state.selected === s.query_uid ? " active" : ""}" data-query="${esc(s.query_uid)}"><div class="sample-main"><strong>#${p.query_index}</strong><span class="${p.correct ? "ok" : "bad"}">${p.correct ? "correct" : "wrong"}</span></div><div class="sample-sub">label=${s.label} prediction=${p.pred_label}</div><div class="sample-sub">Selected as ${esc(outcomes[s.selection_outcome])} in direct + indirect</div></button>`;
+  }).join("") || '<div class="empty">No matching samples.</div>';
+  document.querySelectorAll("[data-query]").forEach(button => button.onclick = () => selectSample(button.dataset.query));
 }
-function renderRetrievalGroup(group) {
-  const neighbors = Array.isArray(group.neighbors) ? group.neighbors : [];
-  const meta = Object.fromEntries(Object.entries(group).filter(([key]) => key !== "neighbors"));
-  const groupId = group.group_id || group.endpoint_group || "group";
-  const displayLabel = groupDisplayLabel(groupId);
-  const rawIdTag = displayLabel !== groupId ? `<span class="tag">${esc(groupId)}</span>` : "";
-  return `<details class="stage"><summary><span>${esc(displayLabel)}</span>${rawIdTag}<span class="tag">${neighbors.length} neighbors</span></summary><div class="stage-content">${renderValue(meta)}${neighbors.map(renderNeighbor).join("")}</div></details>`;
+async function selectSample(uid) {
+  const loading = ++state.loading;
+  state.selected = uid;
+  renderSamples(); updateNavigation();
+  $("detail").innerHTML = '<div class="section"><div class="loading">Loading saved trace…</div></div>';
+  const sample = state.release.tasks[state.task].samples.find(s => s.query_uid === uid);
+  try {
+    const payload = await fetchJson(sample.configurations[state.config].path);
+    if (loading !== state.loading) return;
+    state.payload = payload;
+    renderDetail(sample);
+  } catch (error) {
+    if (loading === state.loading) $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`;
+  }
 }
-function renderNeighbor(neighbor) {
-  const evidence = Array.isArray(neighbor.evidence_rows) ? neighbor.evidence_rows : [];
-  const id = neighbor.molecule_chembl_id || neighbor.source_molecule_id || neighbor.molecule_id || "neighbor";
-  const meta = Object.fromEntries(Object.entries(neighbor).filter(([key]) => key !== "evidence_rows"));
-  return `<details class="raw"><summary>rank ${esc(neighbor.rank || "")} · ${esc(id)} · similarity ${esc(neighbor.similarity ?? "")} · ${evidence.length} evidence rows</summary><div class="json">${renderValue(meta)}${evidence.map(renderEvidenceRow).join("")}</div></details>`;
+function openReference(id) {
+  const target = document.getElementById(id);
+  if (!target) return;
+  for (let element = target; element; element = element.parentElement) if (element.tagName === "DETAILS") element.open = true;
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
 }
-function renderEvidenceRow(row, index) {
-  const measurement = [row.standard_type || row.endpoint?.name || "evidence", row.standard_relation, row.standard_value, row.standard_units].filter(value => value !== null && value !== undefined && value !== "").join(" ");
-  return `<details class="raw"><summary>#${index + 1} ${esc(measurement)}</summary><pre>${esc(JSON.stringify(row, null, 2))}</pre></details>`;
-}
-function renderReuseProvenance(reuse) {
-  if (!reuse) return "";
-  const values = [
-    metric("Reuse reason", reuse.reuse_reason || ""),
-    metric("Baseline input hash", reuse.baseline_prompt_hash || ""),
-    metric("Target input hash", reuse.target_prompt_hash || ""),
-    metric("Reused from", reuse.reused_from || ""),
-  ].join("");
-  return `<div class="section"><div class="section-head"><span>Parent-disjoint artifact reuse</span><span class="tag">identical LLM-visible input</span></div><div class="overview">${values}</div><details class="stage"><summary><span>Raw reuse provenance</span><span class="tag">reuse.json</span></summary><div class="stage-content"><pre>${esc(JSON.stringify(reuse, null, 2))}</pre></div></details></div>`;
-}
-function renderDetail() {
-  const row = state.selected;
-  if (!row) return renderEmpty("Select a test sample.");
-  const final = state.trace.find(record => record.task === "final_summary") || [...state.trace].reverse().find(record => record.prediction);
-  const totalUsage = state.trace.reduce((sum, record) => {
-    sum.prompt += Number(record.usage?.prompt_tokens || 0);
-    sum.completion += Number(record.usage?.completion_tokens || 0);
-    sum.total += Number(record.usage?.total_tokens || 0);
-    return sum;
-  }, { prompt: 0, completion: 0, total: 0 });
-  const overview = [
-    metric("Index", row.query_index),
-    metric("Label", row.label),
-    metric("Prediction", final?.prediction ?? row.pred_label),
-    metric("Correct", row.correct),
-    metric("Confidence", row.confidence || parseMaybeJson(final?.response_text)?.confidence || ""),
-    metric("Stages", state.trace.length),
-    metric("Tokens", `${totalUsage.prompt.toLocaleString()} in / ${totalUsage.completion.toLocaleString()} out / ${totalUsage.total.toLocaleString()} total`),
-    `<div class="metric metric-wide"><div class="metric-key">SMILES</div><div class="metric-value">${esc(row.smiles || "")}</div></div>`,
-  ].join("");
-  const stages = state.trace.map((record, index) => renderStage(record, index, state.trace.length)).join("");
-  const pills = state.trace.map(record => `<span class="pill ${record.correct === true ? "ok" : record.correct === false ? "bad" : "warn"}">${esc(stageLabel(record.task))}</span>`).join("");
-  const levelRange = state.trace.length ? `${stageLabel(state.trace[0].task)} → ${stageLabel(state.trace.at(-1).task)}` : "";
-  els.detail.innerHTML = `<div class="section"><div class="section-head"><span>Sample overview</span><span class="tag">${esc(row.run_id || "")}</span></div><div class="overview">${overview}</div><div class="stage-nav">${pills}</div></div>${renderReuseProvenance(state.reuse)}${renderRetrieval(state.retrieval)}<div class="section"><div class="section-head"><span>Reasoning stages</span><span class="tag">${esc(levelRange)}</span></div>${stages}</div>`;
-}
-
-els.dataset.onchange = () => { populateRegimes(); loadSelectedCondition(); };
-els.regime.onchange = () => { populateTasks(); loadSelectedCondition(); };
-els.task.onchange = () => { populateConditions(); loadSelectedCondition(); };
-els.condition.onchange = loadSelectedCondition;
-els.refresh.onclick = scanCatalog;
-els.search.oninput = applyFilters;
-els.correctness.onchange = applyFilters;
-els.status.onchange = applyFilters;
-document.title = TASKS[activeTask].title;
-$("page-title").firstChild.textContent = `${TASKS[activeTask].title} `;
-$("task-note").textContent = TASKS[activeTask].note;
-document.querySelector(`[data-task="${activeTask}"]`).classList.add("active");
-document.querySelector(`[data-dataset="${activeDataset}"]`).classList.add("active");
-document.querySelectorAll("[data-task]").forEach(link => link.href = `?dataset=${activeDataset}&task=${link.dataset.task}`);
-document.querySelectorAll("[data-dataset]").forEach(link => link.href = `?dataset=${link.dataset.dataset}&task=${activeTask}`);
-scanCatalog().catch(error => showError(error.message));
+document.addEventListener("click", event => {
+  const link = event.target.closest(".reference-link");
+  if (link) { event.preventDefault(); openReference(link.getAttribute("href").slice(1)); }
+});
+window.addEventListener("hashchange", () => openReference(location.hash.slice(1)));
+for (const id of ["search", "correctness", "status"]) $(id).addEventListener("input", () => { if (state.release) renderSamples(); });
+fetchJson("legacy_gold_release_manifest.json").then(async release => {
+  state.release = release;
+  if (!release.tasks[state.task]) state.task = "bbb_martins";
+  const task = release.tasks[state.task];
+  if (!task.configurations[state.config]) state.config = "direct_plus_indirect";
+  const arm = task.configurations[state.config];
+  document.title = `${task.title} · Legacy trace samples`;
+  $("page-title").textContent = `${task.title} · Legacy trace samples`;
+  $("task-note").textContent = `${release.notice} ${arm.label}: full test cohort n=${arm.metrics.n_total}, macro-F1=${arm.metrics.macro_f1.toFixed(4)}. Labels: 1=${state.task === "bbb_martins" ? "BBB pass" : "high oral bioavailability"}; 0=${state.task === "bbb_martins" ? "BBB fail" : "low oral bioavailability"}.`;
+  const sample = task.samples.find(s => s.query_uid === state.selected) || task.samples[0];
+  await selectSample(sample.query_uid);
+}).catch(error => { $("task-note").textContent = "Unable to load saved examples."; $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`; });
 </script>
 </body>
 </html>
