@@ -162,6 +162,7 @@
     <span class="nav-label">Evidence</span>
     <a class="task-link" data-config="direct" href="?configuration=direct">Direct only</a>
     <a class="task-link" data-config="direct_plus_indirect" href="?configuration=direct_plus_indirect">Direct + indirect</a>
+    <span id="repetition-control" hidden><label for="repetition">Repetition</label> <select id="repetition" class="task-link" aria-label="Repetition"></select></span>
   </nav>
   <nav class="task-nav" aria-label="Dataset">
     <span class="nav-label">Dataset</span>
@@ -192,13 +193,17 @@
 const params = new URLSearchParams(location.search);
 const state = { release: null, task: params.get("task") || "bbb_martins",
   config: params.get("configuration") || "direct_plus_indirect", selected: params.get("query"), payload: null, loading: 0,
-  entropyManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false };
+  repetition: params.get("repetition"), entropyManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false };
 const $ = id => document.getElementById(id);
 const outcomes = { TP: "True positive", TN: "True negative", FP: "False positive", FN: "False negative" };
 function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"}[c])); }
 function panel(title, content, open = false) { return `<details class="trace-part"${open ? " open" : ""}><summary>${esc(title)}</summary><div class="trace-part-body">${content}</div></details>`; }
 function metric(title, value) { return `<div class="metric"><div class="metric-key">${esc(title)}</div><div class="metric-value">${esc(value)}</div></div>`; }
 function referenceId(visibleId) { return `ref-${encodeURIComponent(visibleId)}`; }
+function probabilityPercent(logprob) {
+  const percent = 100 * Math.exp(logprob);
+  return percent === 0 ? "<1e-300%" : `${Number(percent.toPrecision(4))}%`;
+}
 async function fetchJson(path) {
   const response = await fetch(path, { cache: "no-store" });
   if (!response.ok) throw new Error(`HTTP ${response.status}: ${path}`);
@@ -251,7 +256,10 @@ function entropyText(name, text) {
     const ratio = Math.min(1, Math.max(...group.tokens.map(t => t.entropy)) / state.entropyManifest.color_max);
     group.color = `rgb(255,${Math.round(255 - 76 * ratio)},${Math.round(255 - 184 * ratio)})`;
     group.high = group.tokens.some(t => t.top20);
-    group.title = group.tokens.map(t => `Position ${t.position} · token ${t.token_id} · H=${t.entropy.toFixed(6)} nats · log p=${t.logprob.toFixed(6)}${t.alternate_entropy === undefined ? "" : ` · alternate H=${t.alternate_entropy.toFixed(6)} nats (half-sized chunks) · |ΔH|=${t.absolute_chunk_difference.toFixed(6)} nats`}${t.top20 ? " · top 20%" : ""}`).join("\n");
+    group.title = group.tokens.map(t => {
+      const tokenText = JSON.stringify(text.slice(offsets[t.start], offsets[t.end]));
+      return `Token ${tokenText} · probability ${probabilityPercent(t.logprob)}\nH=${t.entropy.toFixed(6)} nats${t.top20 ? " · top 20%" : ""}${t.alternate_entropy === undefined ? "" : `\nalternate H=${t.alternate_entropy.toFixed(6)} nats (half-sized chunks) · |ΔH|=${t.absolute_chunk_difference.toFixed(6)} nats`}\nPosition ${t.position} · token ${t.token_id}`;
+    }).join("\n\n");
   }
   return linkedText(text, state.payload.references, groups);
 }
@@ -266,7 +274,7 @@ function showEntropyTooltip(token, event) {
   const tooltip = $("entropy-tooltip"), rect = token.getBoundingClientRect();
   if (rect.bottom < 0 || rect.top > window.innerHeight || rect.right < 0 || rect.left > window.innerWidth) return;
   entropyTarget = token;
-  tooltip.textContent = `Token entropy (nats)\n${token.dataset.entropy}`;
+  tooltip.textContent = `Saved token probability · T=1\n${token.dataset.entropy}`;
   token.setAttribute("aria-describedby", "entropy-tooltip");
   tooltip.hidden = false;
   tooltip.style.left = "8px"; tooltip.style.top = "8px";
@@ -315,7 +323,7 @@ async function loadEntropy(sample, payload) {
       if (section?.text !== text || !Array.isArray(section.tokens)) throw new Error(`Saved ${name} text mismatch`);
       if (section.tokens.some(t => !Number.isInteger(t.position) || !Number.isInteger(t.token_id) || !Number.isInteger(t.start) || !Number.isInteger(t.end)
           || t.start < 0 || t.end < t.start || t.end > length || !Number.isFinite(t.entropy) || t.entropy < 0
-          || !Number.isFinite(t.logprob) || typeof t.top20 !== "boolean"
+          || !Number.isFinite(t.logprob) || t.logprob > 1e-5 || typeof t.top20 !== "boolean"
           || ((t.alternate_entropy !== undefined || t.absolute_chunk_difference !== undefined)
               && (!Number.isFinite(t.alternate_entropy) || t.alternate_entropy < 0
                   || !Number.isFinite(t.absolute_chunk_difference) || t.absolute_chunk_difference < 0)))) throw new Error(`Invalid ${name} token scores`);
@@ -366,7 +374,7 @@ function renderDetail(sample) {
     : state.entropyNotice ? `<div class="entropy-controls warn">${esc(state.entropyNotice)}</div>` : "";
   $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
   $("detail").innerHTML = `<div class="section"><div class="section-head">Sample overview <span class="tag">Gold test</span></div><div class="overview">${overview}</div></div>
-    ${renderReferences()}<div class="section"><div class="section-head">Saved prediction <span class="tag">${esc(arm.label)}</span></div><div class="stage-content">
+    ${renderReferences()}<div class="section"><div class="section-head">Saved prediction <span class="tag">${esc(arm.label)}${state.repetition ? ` · repetition ${esc(state.repetition)}` : ""}</span></div><div class="stage-content">
       ${panel("Input", renderInput(final), true)}
       ${entropyControls}
       ${panel("Reasoning", assistant?.reasoning ? `<pre>${entropyText("reasoning", assistant.reasoning)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>')}
@@ -379,11 +387,12 @@ function renderDetail(sample) {
 }
 function updateNavigation() {
   const query = new URLSearchParams({ task: state.task, configuration: state.config, query: state.selected || "" });
+  if (state.repetition) query.set("repetition", state.repetition);
   history.replaceState(null, "", `?${query}`);
   document.querySelectorAll("[data-config], [data-task]").forEach(link => {
     const next = new URLSearchParams(query);
     if (link.dataset.config) next.set("configuration", link.dataset.config);
-    if (link.dataset.task) { next.set("task", link.dataset.task); next.delete("query"); }
+    if (link.dataset.task) { next.set("task", link.dataset.task); next.delete("query"); next.delete("repetition"); }
     link.href = `?${next}`;
     link.classList.toggle("active", link.dataset.config ? link.dataset.config === state.config : link.dataset.task === state.task);
   });
@@ -399,7 +408,7 @@ function renderSamples() {
   $("count").textContent = `${filtered.length} / ${samples.length}`;
   $("samples").innerHTML = filtered.map(s => {
     const p = s.configurations[state.config];
-    return `<button class="sample${state.selected === s.query_uid ? " active" : ""}" data-query="${esc(s.query_uid)}"><div class="sample-main"><strong>Sample ${samples.indexOf(s) + 1}</strong><span class="${p.correct ? "ok" : "bad"}">${p.correct ? "correct" : "wrong"}</span></div><div class="sample-sub">label=${s.label} prediction=${p.pred_label}</div><div class="sample-sub">Selected as ${esc(outcomes[s.selection_outcome])} in direct + indirect</div></button>`;
+    return `<button class="sample${state.selected === s.query_uid ? " active" : ""}" data-query="${esc(s.query_uid)}"><div class="sample-main"><strong>Sample ${samples.indexOf(s) + 1}</strong><span class="${p.correct ? "ok" : "bad"}">${p.correct ? "correct" : "wrong"}</span></div><div class="sample-sub">label=${s.label} prediction=${p.pred_label}</div><div class="sample-sub">Selected as ${esc(outcomes[s.selection_outcome])} in direct + indirect${s.selection_outcome_repetition ? `, repetition ${esc(s.selection_outcome_repetition)}` : ""}</div></button>`;
   }).join("") || '<div class="empty">No matching samples.</div>';
   document.querySelectorAll("[data-query]").forEach(button => button.onclick = () => selectSample(button.dataset.query));
 }
@@ -433,6 +442,11 @@ document.addEventListener("click", event => {
 });
 window.addEventListener("hashchange", () => openReference(location.hash.slice(1)));
 for (const id of ["search", "correctness", "status"]) $(id).addEventListener("input", () => { if (state.release) renderSamples(); });
+$("repetition").onchange = async event => {
+  state.repetition = event.target.value;
+  for (const sample of state.release.tasks[state.task].samples) sample.configurations = sample.by_repetition[state.repetition];
+  await selectSample(state.selected);
+};
 fetchJson("legacy_gold_release_manifest.json").then(async release => {
   state.release = release;
   try {
@@ -448,10 +462,19 @@ fetchJson("legacy_gold_release_manifest.json").then(async release => {
   if (!release.tasks[state.task]) state.task = "bbb_martins";
   const task = release.tasks[state.task];
   if (!task.configurations[state.config]) state.config = "direct_plus_indirect";
+  if (task.repetitions) {
+    const repetitions = task.repetitions.map(String);
+    if (!repetitions.includes(state.repetition)) state.repetition = repetitions[0];
+    $("repetition-control").hidden = false;
+    $("repetition").innerHTML = repetitions.map(rep => `<option value="${esc(rep)}">${esc(rep)}</option>`).join("");
+    $("repetition").value = state.repetition;
+    for (const sample of task.samples) sample.configurations = sample.by_repetition[state.repetition];
+  } else state.repetition = null;
   const arm = task.configurations[state.config];
-  document.title = `${task.title} · Token entropy`;
-  $("page-title").textContent = `${task.title} · Token entropy`;
-  $("task-note").textContent = `These examples were selected using test results and are illustrative. ${arm.label}: full test cohort n=${arm.metrics.n_total}, macro-F1=${arm.metrics.macro_f1.toFixed(4)}. Labels: 1=${state.task === "bbb_martins" ? "BBB pass" : "high oral bioavailability"}; 0=${state.task === "bbb_martins" ? "BBB fail" : "low oral bioavailability"}.`;
+  document.title = `${task.title} · ${release.title || "Legacy trace samples"}`;
+  $("page-title").textContent = document.title;
+  const score = arm.metrics.n_repetitions ? `three-run mean macro-F1=${arm.metrics.macro_f1.toFixed(4)} (SD ${arm.metrics.std_macro_f1.toFixed(4)}), repetitions ${task.repetitions.join(", ")}` : `macro-F1=${arm.metrics.macro_f1.toFixed(4)}`;
+  $("task-note").textContent = `${release.notice || "These examples were selected using test results and are illustrative."} ${arm.label}: full test cohort n=${arm.metrics.n_total}, ${score}. Labels: 1=${state.task === "bbb_martins" ? "BBB pass" : "high oral bioavailability"}; 0=${state.task === "bbb_martins" ? "BBB fail" : "low oral bioavailability"}.`;
   const sample = task.samples.find(s => s.query_uid === state.selected) || task.samples[0];
   await selectSample(sample.query_uid);
 }).catch(error => { $("task-note").textContent = "Unable to load saved examples."; $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`; });

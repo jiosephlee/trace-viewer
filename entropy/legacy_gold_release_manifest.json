@@ -554,7 +554,8 @@
       ]
     }
   },
-  "viewer_sha256": "ef17a89554bbc48d39a9ca547c80261a047320be2202bff9709a8e74f503fede",
+  "viewer_sha256": "c694ce75d8f1ead703d833c757d31eb6e022f0a5e0e45808a0d078bf65e353d2",
   "source_release_sha256": "51edaac6af82cea3c4f19026e369181a09b5b139335142c9769c40e3cad47f07",
-  "entropy_manifest": "entropy_manifest.json"
+  "entropy_manifest": "entropy_manifest.json",
+  "title": "Token entropy"
 }
