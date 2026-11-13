@@ -34,8 +34,6 @@
   button { border: 0; padding: 7px 12px; color: #fff; background: var(--blue); cursor: pointer; font-weight: 700; }
   button:disabled { opacity: .55; cursor: wait; }
   main { width: 100%; margin: 0; padding: clamp(12px, 1vw, 24px); }
-  .release-note { margin-bottom: 14px; padding: 11px 13px; border: 1px solid #b8d3ec; background: #eef7ff; font-size: 13px; line-height: 1.5; }
-  .release-note a { color: var(--blue); font-weight: 700; }
   .layout { display: grid; grid-template-columns: clamp(260px, 18vw, 320px) minmax(0, 1fr); gap: 14px; }
   aside, .section { border: 1px solid var(--line); background: var(--panel); }
   aside { position: sticky; top: 148px; align-self: start; max-height: calc(100vh - 162px); overflow: hidden; }
@@ -178,7 +176,6 @@
   </nav>
 </header>
 <main>
-  <div id="task-note" class="release-note">Loading saved legacy Gold test examples…</div>
   <div class="layout">
     <aside>
       <div class="aside-head"><span>Paired trace samples</span><span id="count" class="tag">0</span></div>
@@ -522,14 +519,11 @@ fetchJson("legacy_gold_release_manifest.json").then(async release => {
     $("repetition").innerHTML = '<option value="all">All three repetitions</option>' + repetitions.map(rep => `<option value="${esc(rep)}">Repetition ${esc(repetitionNumber(rep))}</option>`).join("");
     $("repetition").value = state.repetition;
   } else state.repetition = null;
-  const arm = task.configurations[state.config];
   document.title = `${task.title} · ${release.title || "Legacy trace samples"}`;
   $("page-title").textContent = document.title;
-  const score = arm.metrics.n_repetitions ? `three-run mean macro-F1=${arm.metrics.macro_f1.toFixed(4)} (SD ${arm.metrics.std_macro_f1.toFixed(4)}), repetitions ${task.repetitions.map(repetitionNumber).join(", ")}` : `macro-F1=${arm.metrics.macro_f1.toFixed(4)}`;
-  $("task-note").textContent = `${release.notice || "These examples were selected using test results and are illustrative."} ${arm.label}: full test cohort n=${arm.metrics.n_total}, ${score}. Labels: 1=${state.task === "bbb_martins" ? "BBB pass" : "high oral bioavailability"}; 0=${state.task === "bbb_martins" ? "BBB fail" : "low oral bioavailability"}.`;
   const sample = task.samples.find(s => s.query_uid === state.selected) || task.samples[0];
   await selectSample(sample.query_uid);
-}).catch(error => { $("task-note").textContent = "Unable to load saved examples."; $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`; });
+}).catch(error => { $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`; });
 </script>
 </body>
 </html>
