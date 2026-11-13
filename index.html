@@ -144,6 +144,15 @@
   .record-card { margin-top: 8px; }
   .card-body pre { font-size: 12px; }
   .reference-grid { display: grid; gap: 8px; }
+  .entropy-controls { padding: 10px; border: 1px solid #b8d3ec; background: #f5faff; font-size: 12px; line-height: 1.5; }
+  .entropy-controls input { width: auto; min-height: auto; accent-color: var(--blue); }
+  .entropy-controls.provisional { border-color: #c88b35; background: #fff8eb; }
+  .entropy-provisional { color: #8a4800; }
+  .entropy-scale { display: inline-block; width: 110px; height: 12px; margin: 0 6px; vertical-align: middle; background: linear-gradient(to right, #fff, #ffb347); }
+  .entropy-token { background: var(--entropy-color); }
+  .entropy-token:hover, .entropy-token:focus { outline: 1px solid #a15c00; }
+  .entropy-top-only .entropy-token:not(.entropy-high) { background: transparent; }
+  #entropy-tooltip { position: fixed; z-index: 100; max-width: min(440px, calc(100vw - 16px)); max-height: calc(100vh - 16px); overflow: hidden; padding: 9px 11px; border-radius: 5px; color: #fff; background: #17212b; box-shadow: 0 3px 12px #0004; font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap; overflow-wrap: anywhere; pointer-events: none; }
 </style>
 </head>
 <body>
@@ -153,6 +162,7 @@
     <span class="nav-label">Evidence</span>
     <a class="task-link" data-config="direct" href="?configuration=direct">Direct only</a>
     <a class="task-link" data-config="direct_plus_indirect" href="?configuration=direct_plus_indirect">Direct + indirect</a>
+    <span id="repetition-control" hidden><label for="repetition">Repetition</label> <select id="repetition" class="task-link" aria-label="Repetition"></select></span>
   </nav>
   <nav class="task-nav" aria-label="Dataset">
     <span class="nav-label">Dataset</span>
@@ -167,7 +177,7 @@
     <aside>
       <div class="aside-head"><span>Paired trace samples</span><span id="count" class="tag">0</span></div>
       <div class="filters">
-        <input id="search" type="text" placeholder="Search query, outcome, SMILES" aria-label="Search examples">
+        <input id="search" type="text" placeholder="Search molecule or outcome" aria-label="Search examples">
         <select id="correctness" aria-label="Correctness"><option value="">All outcomes</option><option value="correct">Correct</option><option value="wrong">Wrong</option></select>
         <select id="status" aria-label="Status"><option value="">All statuses</option><option value="ok">OK</option><option value="failed">Failed</option></select>
       </div>
@@ -176,36 +186,157 @@
     <section id="detail" class="detail" aria-live="polite"></section>
   </div>
 </main>
+<div id="entropy-tooltip" role="tooltip" hidden></div>
 <script>
 const params = new URLSearchParams(location.search);
 const state = { release: null, task: params.get("task") || "bbb_martins",
-  config: params.get("configuration") || "direct_plus_indirect", selected: params.get("query"), payload: null, loading: 0 };
+  config: params.get("configuration") || "direct_plus_indirect", selected: params.get("query"), payload: null, loading: 0,
+  repetition: params.get("repetition"), entropyManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false };
 const $ = id => document.getElementById(id);
 const outcomes = { TP: "True positive", TN: "True negative", FP: "False positive", FN: "False negative" };
 function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"}[c])); }
 function panel(title, content, open = false) { return `<details class="trace-part"${open ? " open" : ""}><summary>${esc(title)}</summary><div class="trace-part-body">${content}</div></details>`; }
 function metric(title, value) { return `<div class="metric"><div class="metric-key">${esc(title)}</div><div class="metric-value">${esc(value)}</div></div>`; }
 function referenceId(visibleId) { return `ref-${encodeURIComponent(visibleId)}`; }
+function probabilityPercent(logprob) {
+  const percent = 100 * Math.exp(logprob);
+  return percent === 0 ? "<1e-300%" : `${Number(percent.toPrecision(4))}%`;
+}
 async function fetchJson(path) {
   const response = await fetch(path, { cache: "no-store" });
   if (!response.ok) throw new Error(`HTTP ${response.status}: ${path}`);
   return response.json();
 }
-function linkedText(value, references = state.payload?.references || []) {
+function scoredRange(source, start, end, groups) {
+  let html = "", previous = start;
+  for (const group of groups) {
+    const left = Math.max(start, group.start), right = Math.min(end, group.end);
+    if (left >= right) continue;
+    html += esc(source.slice(previous, left));
+    html += `<span class="entropy-token${group.high ? " entropy-high" : ""}" style="--entropy-color:${group.color}" tabindex="0" data-entropy="${esc(group.title)}">${esc(source.slice(left, right))}</span>`;
+    previous = right;
+  }
+  return html + esc(source.slice(previous, end));
+}
+function linkedText(value, references = state.payload?.references || [], groups = []) {
   const ids = new Set(references.map(r => r.visible_id.toLowerCase()));
   const aliases = references.map(r => r.visible_id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
   const pattern = new RegExp(`\\b(?:${[...aliases.sort((a, b) => b.length - a.length), "Molecule\\s+\\d+", "Record\\s+\\d+(?:-\\d+)?"].join("|")})\\b`, "gi");
   const source = String(value ?? "");
   let html = "", previous = 0;
   for (const match of source.matchAll(pattern)) {
-    html += esc(source.slice(previous, match.index));
+    html += scoredRange(source, previous, match.index, groups);
     const known = ids.has(match[0].toLowerCase());
     const reference = known && references.find(r => r.visible_id.toLowerCase() === match[0].toLowerCase());
-    html += known ? `<a class="reference-link" href="#${referenceId(reference.visible_id)}">${esc(match[0])}</a>`
-      : `<span class="unresolved" title="This exact reference is absent from the saved prompt index.">${esc(match[0])}</span>`;
+    const text = scoredRange(source, match.index, match.index + match[0].length, groups);
+    html += known ? `<a class="reference-link" href="#${referenceId(reference.visible_id)}">${text}</a>`
+      : `<span class="unresolved" title="This exact reference is absent from the saved prompt index.">${text}</span>`;
     previous = match.index + match[0].length;
   }
-  return html + esc(source.slice(previous));
+  return html + scoredRange(source, previous, source.length, groups);
+}
+function entropyText(name, text) {
+  const section = state.entropy?.sections[name];
+  if (!section) return linkedText(text);
+  const offsets = [0];
+  for (const char of text) offsets.push(offsets[offsets.length - 1] + char.length);
+  const groups = [];
+  for (const token of [...section.tokens].sort((a, b) => a.start - b.start || a.end - b.end)) {
+    if (token.start === token.end) continue;
+    const previous = groups[groups.length - 1];
+    if (previous && token.start < previous.end) {
+      previous.end = Math.max(previous.end, token.end);
+      previous.tokens.push(token);
+    } else groups.push({start: token.start, end: token.end, tokens: [token]});
+  }
+  for (const group of groups) {
+    group.start = offsets[group.start]; group.end = offsets[group.end];
+    const ratio = Math.min(1, Math.max(...group.tokens.map(t => t.entropy)) / state.entropyManifest.color_max);
+    group.color = `rgb(255,${Math.round(255 - 76 * ratio)},${Math.round(255 - 184 * ratio)})`;
+    group.high = group.tokens.some(t => t.top20);
+    group.title = group.tokens.map(t => {
+      const tokenText = JSON.stringify(text.slice(offsets[t.start], offsets[t.end]));
+      return `Token ${tokenText} · probability ${probabilityPercent(t.logprob)}\nH=${t.entropy.toFixed(6)} nats${t.top20 ? " · top 20%" : ""}${t.alternate_entropy === undefined ? "" : `\nalternate H=${t.alternate_entropy.toFixed(6)} nats (half-sized chunks) · |ΔH|=${t.absolute_chunk_difference.toFixed(6)} nats`}\nPosition ${t.position} · token ${t.token_id}`;
+    }).join("\n\n");
+  }
+  return linkedText(text, state.payload.references, groups);
+}
+let entropyTarget = null;
+function hideEntropyTooltip() {
+  $("entropy-tooltip").hidden = true;
+  entropyTarget?.removeAttribute("aria-describedby");
+  entropyTarget = null;
+}
+function showEntropyTooltip(token, event) {
+  hideEntropyTooltip();
+  const tooltip = $("entropy-tooltip"), rect = token.getBoundingClientRect();
+  if (rect.bottom < 0 || rect.top > window.innerHeight || rect.right < 0 || rect.left > window.innerWidth) return;
+  entropyTarget = token;
+  tooltip.textContent = `Saved token probability · T=1\n${token.dataset.entropy}`;
+  token.setAttribute("aria-describedby", "entropy-tooltip");
+  tooltip.hidden = false;
+  tooltip.style.left = "8px"; tooltip.style.top = "8px";
+  const x = event?.clientX ?? rect.left, y = event?.clientY ?? rect.bottom;
+  const top = y + 18 + tooltip.offsetHeight <= window.innerHeight - 8 ? y + 18 : y - tooltip.offsetHeight - 12;
+  tooltip.style.left = `${Math.max(8, Math.min(x + 12, window.innerWidth - tooltip.offsetWidth - 8))}px`;
+  tooltip.style.top = `${Math.max(8, Math.min(top, window.innerHeight - tooltip.offsetHeight - 8))}px`;
+}
+document.addEventListener("pointerover", event => {
+  const token = event.target.closest(".entropy-token");
+  if (token && event.pointerType !== "touch") showEntropyTooltip(token, event);
+});
+document.addEventListener("pointerout", event => {
+  if (event.target.closest(".entropy-token") && !entropyTarget?.contains(event.relatedTarget) && entropyTarget !== document.activeElement) hideEntropyTooltip();
+});
+document.addEventListener("focusin", event => {
+  const token = event.target.closest(".entropy-token");
+  if (token) showEntropyTooltip(token);
+});
+document.addEventListener("focusout", event => { if (event.target === entropyTarget) hideEntropyTooltip(); });
+document.addEventListener("click", event => {
+  const token = event.target.closest(".entropy-token");
+  if (token) showEntropyTooltip(token, event); else hideEntropyTooltip();
+});
+document.addEventListener("keydown", event => { if (event.key === "Escape") hideEntropyTooltip(); });
+window.addEventListener("scroll", () => { if (entropyTarget) showEntropyTooltip(entropyTarget); }, true);
+window.addEventListener("resize", hideEntropyTooltip);
+async function loadEntropy(sample, payload) {
+  const manifest = state.entropyManifest;
+  if (!manifest) return {entropy: null, notice: state.entropyNotice};
+  const key = `${state.task}/${state.config}/${String(sample.configurations[state.config].query_index).padStart(5, "0")}`;
+  const entry = manifest.examples[key];
+  if (!entry) return {entropy: null, notice: "Token entropy is not available for this example."};
+  try {
+    const response = await fetch(entry.path, {cache: "no-store"});
+    if (!response.ok) throw new Error(`HTTP ${response.status}: ${entry.path}`);
+    const bytes = await response.arrayBuffer();
+    const digest = await crypto.subtle.digest("SHA-256", bytes);
+    const sha256 = Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, "0")).join("");
+    if (sha256 !== entry.sha256) throw new Error("Sidecar hash mismatch");
+    const entropy = JSON.parse(new TextDecoder().decode(bytes));
+    const final = payload.trace.find(r => r.task === "final_summary");
+    const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
+    for (const [name, text] of Object.entries({reasoning: assistant?.reasoning || "", answer: assistant?.content || ""})) {
+      const section = entropy.sections?.[name], length = Array.from(text).length;
+      if (section?.text !== text || !Array.isArray(section.tokens)) throw new Error(`Saved ${name} text mismatch`);
+      if (section.tokens.some(t => !Number.isInteger(t.position) || !Number.isInteger(t.token_id) || !Number.isInteger(t.start) || !Number.isInteger(t.end)
+          || t.start < 0 || t.end < t.start || t.end > length || !Number.isFinite(t.entropy) || t.entropy < 0
+          || !Number.isFinite(t.logprob) || t.logprob > 1e-5 || typeof t.top20 !== "boolean"
+          || ((t.alternate_entropy !== undefined || t.absolute_chunk_difference !== undefined)
+              && (!Number.isFinite(t.alternate_entropy) || t.alternate_entropy < 0
+                  || !Number.isFinite(t.absolute_chunk_difference) || t.absolute_chunk_difference < 0)))) throw new Error(`Invalid ${name} token scores`);
+      let covered = 0;
+      for (const token of [...section.tokens].sort((a, b) => a.start - b.start)) {
+        if (token.start > covered) throw new Error(`Incomplete ${name} token scores`);
+        covered = Math.max(covered, token.end);
+      }
+      if (covered !== length) throw new Error(`Incomplete ${name} token scores`);
+    }
+    if (!Object.keys(payload.source_hashes).every(k => entropy.source_hashes?.[k] === payload.source_hashes[k])) throw new Error("Source trace hash mismatch");
+    return {entropy, notice: ""};
+  } catch (error) {
+    return {entropy: null, notice: `Token entropy unavailable: ${error.message}. The original trace is shown.`};
+  }
 }
 function renderReferences() {
   const references = state.payload.references;
@@ -213,13 +344,13 @@ function renderReferences() {
   const records = references.filter(r => r.unit_kind === "record");
   const cards = molecules.map(molecule => {
     const children = records.filter(r => r.containing_unit_id === molecule.stable_id);
-    const body = children.map(record => `<details class="record-card" id="${referenceId(record.visible_id)}"><summary class="card-head">${esc(record.visible_id)} · measurement for ${esc(molecule.visible_id)}</summary><div class="card-body"><pre>${esc(record.text)}</pre>${panel("Source identity", `<pre>${esc(JSON.stringify(record, null, 2))}</pre>`)}</div></details>`).join("");
+    const body = children.map(record => `<details class="record-card" id="${referenceId(record.visible_id)}"><summary class="card-head">${esc(record.visible_id)} · measurement for ${esc(molecule.visible_id)}</summary><div class="card-body"><pre>${esc(record.text)}</pre></div></details>`).join("");
     return `<details class="evidence-card" id="${referenceId(molecule.visible_id)}"><summary>${esc(molecule.visible_id)} · reference molecule · L${esc(molecule.first_visible_level)} <span class="tag">${children.length} records</span></summary><div class="card-body"><pre>${esc(molecule.text)}</pre>${body}</div></details>`;
   }).join("");
   const unmatched = records.filter(r => !molecules.some(m => m.stable_id === r.containing_unit_id));
   return `<div class="section"><div class="section-head">Reference guide <span class="tag">${molecules.length} molecules · ${records.length} records</span></div><div class="section-body">
-    <p class="reference-intro"><strong>Molecule 3</strong> identifies a reference molecule in this saved prompt. <strong>Record 3-2</strong> is its second experimental record. Click a reference in the reasoning or final answer to open its evidence below. Numbering is local to each trace.</p>
-    <p class="reference-intro">These legacy prompts use <strong>Molecule / Record</strong> labels. C1 or C2 inside chemical notation can describe atoms or ring closures; they are not automatically context IDs. Dotted amber references have no exact match in the saved index.</p>
+    <p class="reference-intro"><strong>Molecule 3</strong> identifies a reference molecule. <strong>Record 3-2</strong> is its second experimental record. Click a reference in the reasoning or final answer to open its evidence below. Numbering is local to each sample.</p>
+    <p class="reference-intro">References use <strong>Molecule / Record</strong> labels. C1 or C2 inside chemical notation can describe atoms or ring closures. Dotted amber references have no exact match in the evidence list.</p>
     ${panel(`Browse ${molecules.length} context molecules and ${records.length} records`, `<div class="reference-grid">${cards}</div>`)}${unmatched.length ? `<div class="warn">Records with no saved parent mapping: ${esc(unmatched.map(r => r.visible_id).join(", "))}</div>` : ""}
   </div></div>`;
 }
@@ -232,29 +363,34 @@ function renderDetail(sample) {
   const prediction = sample.configurations[state.config];
   const final = state.payload.trace.find(r => r.task === "final_summary");
   const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
-  const prior = state.payload.trace.filter(r => r.task !== "final_summary");
   const provenance = state.payload.provenance;
   const outcome = `${sample.label === prediction.pred_label ? "T" : "F"}${prediction.pred_label ? "P" : "N"}`;
-  const overview = [metric("Query index", prediction.query_index), metric("Gold label", sample.label), metric("Prediction", prediction.pred_label),
-    metric("Outcome", outcomes[outcome]), metric("Configuration", arm.label), metric("Served model", provenance.served_model),
-    metric("Provider", [provenance.provider, provenance.upstream_provider].filter(Boolean).join(" / ")), metric("Query UID", sample.query_uid), metric("SMILES", sample.smiles)].join("");
+  const overview = [metric("Gold label", sample.label), metric("Prediction", prediction.pred_label),
+    metric("Outcome", outcomes[outcome]), metric("Configuration", arm.label), metric("Model", provenance.served_model), metric("SMILES", sample.smiles)].join("");
+  const provisional = /\bPROVISIONAL\b/i.test(state.entropyManifest?.notice || "");
+  const entropyControls = state.entropy ? `<div class="entropy-controls${provisional ? " provisional" : ""}">${provisional ? '<strong class="entropy-provisional">Provisional entropy estimates</strong><br>' : ""}Token entropy · T=${esc(state.entropyManifest.temperature)} · nats. <span class="entropy-scale"></span> 0–${state.entropyManifest.color_max.toFixed(2)} nats (shared scale; darker values are clipped).<br><label><input id="entropy-top-only" type="checkbox"${state.entropyTopOnly ? " checked" : ""}> Highlight only the highest-entropy 20% of tokens in each section</label><br>${provisional ? "Local rescoring is sensitive to evaluation chunk size. " : ""}Hover, focus, or tap text to see entropy and the alternate chunk-size measurement. Scores follow the original generated text.</div>`
+    : state.entropyNotice ? `<div class="entropy-controls warn">${esc(state.entropyNotice)}</div>` : "";
+  $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
   $("detail").innerHTML = `<div class="section"><div class="section-head">Sample overview <span class="tag">Gold test</span></div><div class="overview">${overview}</div></div>
-    ${renderReferences()}<div class="section"><div class="section-head">Saved prediction <span class="tag">${esc(arm.label)}</span></div><div class="stage-content">
+    ${renderReferences()}<div class="section"><div class="section-head">Saved prediction <span class="tag">${esc(arm.label)}${state.repetition ? ` · repetition ${esc(state.repetition)}` : ""}</span></div><div class="stage-content">
       ${panel("Input", renderInput(final), true)}
-      ${panel("Reasoning", assistant?.reasoning ? `<pre>${linkedText(assistant.reasoning)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>')}
-      ${panel("Final output", `<pre>${linkedText(final.response_text || assistant?.content || "")}</pre>`)}
-      ${panel("Cached query prior", prior.map(record => `${renderInput(record)}${panel("Saved prior output", `<pre>${esc(record.response_text)}</pre>`)}`).join("") || "No cached prior recorded.")}
-      ${panel("Provenance", `<pre>${esc(JSON.stringify({run_uid: arm.run_uid, prompt_version: arm.prompt_version, identity_policy: arm.identity_policy, ...provenance, source_hashes: state.payload.source_hashes}, null, 2))}</pre>`)}
-      ${panel("Raw saved messages", `<pre>${esc(JSON.stringify(state.payload.trace, null, 2))}</pre>`)}
+      ${entropyControls}
+      ${panel("Reasoning", assistant?.reasoning ? `<pre>${entropyText("reasoning", assistant.reasoning)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>')}
+      ${panel("Final output", `<pre>${entropyText("answer", state.entropy ? assistant?.content || "" : final.response_text || assistant?.content || "")}</pre>`)}
     </div></div>`;
+  if ($("entropy-top-only")) $("entropy-top-only").onchange = event => {
+    state.entropyTopOnly = event.target.checked;
+    $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
+  };
 }
 function updateNavigation() {
   const query = new URLSearchParams({ task: state.task, configuration: state.config, query: state.selected || "" });
+  if (state.repetition) query.set("repetition", state.repetition);
   history.replaceState(null, "", `?${query}`);
   document.querySelectorAll("[data-config], [data-task]").forEach(link => {
     const next = new URLSearchParams(query);
     if (link.dataset.config) next.set("configuration", link.dataset.config);
-    if (link.dataset.task) { next.set("task", link.dataset.task); next.delete("query"); }
+    if (link.dataset.task) { next.set("task", link.dataset.task); next.delete("query"); next.delete("repetition"); }
     link.href = `?${next}`;
     link.classList.toggle("active", link.dataset.config ? link.dataset.config === state.config : link.dataset.task === state.task);
   });
@@ -270,7 +406,7 @@ function renderSamples() {
   $("count").textContent = `${filtered.length} / ${samples.length}`;
   $("samples").innerHTML = filtered.map(s => {
     const p = s.configurations[state.config];
-    return `<button class="sample${state.selected === s.query_uid ? " active" : ""}" data-query="${esc(s.query_uid)}"><div class="sample-main"><strong>#${p.query_index}</strong><span class="${p.correct ? "ok" : "bad"}">${p.correct ? "correct" : "wrong"}</span></div><div class="sample-sub">label=${s.label} prediction=${p.pred_label}</div><div class="sample-sub">Selected as ${esc(outcomes[s.selection_outcome])} in direct + indirect</div></button>`;
+    return `<button class="sample${state.selected === s.query_uid ? " active" : ""}" data-query="${esc(s.query_uid)}"><div class="sample-main"><strong>Sample ${samples.indexOf(s) + 1}</strong><span class="${p.correct ? "ok" : "bad"}">${p.correct ? "correct" : "wrong"}</span></div><div class="sample-sub">label=${s.label} prediction=${p.pred_label}</div><div class="sample-sub">Selected as ${esc(outcomes[s.selection_outcome])} in direct + indirect${s.selection_outcome_repetition ? `, repetition ${esc(s.selection_outcome_repetition)}` : ""}</div></button>`;
   }).join("") || '<div class="empty">No matching samples.</div>';
   document.querySelectorAll("[data-query]").forEach(button => button.onclick = () => selectSample(button.dataset.query));
 }
@@ -284,6 +420,9 @@ async function selectSample(uid) {
     const payload = await fetchJson(sample.configurations[state.config].path);
     if (loading !== state.loading) return;
     state.payload = payload;
+    const scored = await loadEntropy(sample, payload);
+    if (loading !== state.loading) return;
+    state.entropy = scored.entropy; state.entropyNotice = scored.notice;
     renderDetail(sample);
   } catch (error) {
     if (loading === state.loading) $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`;
@@ -301,15 +440,39 @@ document.addEventListener("click", event => {
 });
 window.addEventListener("hashchange", () => openReference(location.hash.slice(1)));
 for (const id of ["search", "correctness", "status"]) $(id).addEventListener("input", () => { if (state.release) renderSamples(); });
+$("repetition").onchange = async event => {
+  state.repetition = event.target.value;
+  for (const sample of state.release.tasks[state.task].samples) sample.configurations = sample.by_repetition[state.repetition];
+  await selectSample(state.selected);
+};
 fetchJson("legacy_gold_release_manifest.json").then(async release => {
   state.release = release;
+  try {
+    const response = await fetch("entropy_manifest.json", {cache: "no-store"});
+    if (response.status !== 404) {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const manifest = await response.json();
+      if (manifest.schema_version !== "trace_token_entropy.v1" || manifest.units !== "nats" || manifest.temperature !== 1
+          || !Number.isFinite(manifest.color_max) || manifest.color_max <= 0 || !manifest.examples || typeof manifest.examples !== "object") throw new Error("Invalid entropy manifest");
+      state.entropyManifest = manifest;
+    }
+  } catch (error) { state.entropyNotice = `Token entropy unavailable: ${error.message}. The original trace is shown.`; }
   if (!release.tasks[state.task]) state.task = "bbb_martins";
   const task = release.tasks[state.task];
   if (!task.configurations[state.config]) state.config = "direct_plus_indirect";
+  if (task.repetitions) {
+    const repetitions = task.repetitions.map(String);
+    if (!repetitions.includes(state.repetition)) state.repetition = repetitions[0];
+    $("repetition-control").hidden = false;
+    $("repetition").innerHTML = repetitions.map(rep => `<option value="${esc(rep)}">${esc(rep)}</option>`).join("");
+    $("repetition").value = state.repetition;
+    for (const sample of task.samples) sample.configurations = sample.by_repetition[state.repetition];
+  } else state.repetition = null;
   const arm = task.configurations[state.config];
-  document.title = `${task.title} · Legacy trace samples`;
-  $("page-title").textContent = `${task.title} · Legacy trace samples`;
-  $("task-note").textContent = `${release.notice} ${arm.label}: full test cohort n=${arm.metrics.n_total}, macro-F1=${arm.metrics.macro_f1.toFixed(4)}. Labels: 1=${state.task === "bbb_martins" ? "BBB pass" : "high oral bioavailability"}; 0=${state.task === "bbb_martins" ? "BBB fail" : "low oral bioavailability"}.`;
+  document.title = `${task.title} · ${release.title || "Legacy trace samples"}`;
+  $("page-title").textContent = document.title;
+  const score = arm.metrics.n_repetitions ? `three-run mean macro-F1=${arm.metrics.macro_f1.toFixed(4)} (SD ${arm.metrics.std_macro_f1.toFixed(4)}), repetitions ${task.repetitions.join(", ")}` : `macro-F1=${arm.metrics.macro_f1.toFixed(4)}`;
+  $("task-note").textContent = `${release.notice || "These examples were selected using test results and are illustrative."} ${arm.label}: full test cohort n=${arm.metrics.n_total}, ${score}. Labels: 1=${state.task === "bbb_martins" ? "BBB pass" : "high oral bioavailability"}; 0=${state.task === "bbb_martins" ? "BBB fail" : "low oral bioavailability"}.`;
   const sample = task.samples.find(s => s.query_uid === state.selected) || task.samples[0];
   await selectSample(sample.query_uid);
 }).catch(error => { $("task-note").textContent = "Unable to load saved examples."; $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`; });

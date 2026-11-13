@@ -1,0 +1,991 @@
+{
+  "query_uid": "BBBCTX_A7B44DA602774BAB1226",
+  "configuration": "direct_plus_indirect",
+  "repetition": 4,
+  "query_prior_included": true,
+  "references": [
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 1",
+      "stable_id": "CNCc1ccc(OC)c([C@@]2(N3CCC[C@H]3c3ncco3)C(=O)N(S(=O)(=O)c3ccc(OC)cc3)c3ccc(Cl)cc32)c1",
+      "source_analog_id": "CNCc1ccc(OC)c([C@@]2(N3CCC[C@H]3c3ncco3)C(=O)N(S(=O)(=O)c3ccc(OC)cc3)c3ccc(Cl)cc32)c1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 1",
+      "text": "SMILES: CNCc1ccc(OC)c([C@@]2(N3CCC[C@H]3c3ncco3)C(=O)N(S(=O)(=O)c3ccc(OC)cc3)c3ccc(Cl)cc32)c1\nMorgan similarity: 0.2269\nTransfer likelihood: 0.9095"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 1-1",
+      "stable_id": "sr_d2ca2405325543a2965d43cf93584efb",
+      "source_analog_id": "CNCc1ccc(OC)c([C@@]2(N3CCC[C@H]3c3ncco3)C(=O)N(S(=O)(=O)c3ccc(OC)cc3)c3ccc(Cl)cc32)c1",
+      "containing_unit_id": "CNCc1ccc(OC)c([C@@]2(N3CCC[C@H]3c3ncco3)C(=O)N(S(=O)(=O)c3ccc(OC)cc3)c3ccc(Cl)cc32)c1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 1-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: brain:plasma ratio\nResult: 0.31 ratio\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: permeable\n\nReported evidence: The pharmacokinetic profile of methylamine 18c in rat after intravenous administration of 2 mg/kg 18c showed a brain:plasma ratio of 0.31, indicating that this compound can penetrate the blood-brain barrier."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 2",
+      "stable_id": "Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1",
+      "source_analog_id": "Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 2",
+      "text": "SMILES: Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1\nMorgan similarity: 0.2791\nTransfer likelihood: 0.2956"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-1",
+      "stable_id": "sr_6509f503c8dd4b4784685bff97be91f1",
+      "source_analog_id": "Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1",
+      "containing_unit_id": "Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: CSF concentration\nResult: impermeable BBB permeability\nAssay context: clinical study\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Concentrations were measured in ventricular, cisternal, and lumbar CSF 1 hour after a 1000mg intravenous dose.\"\nReported evidence: After an intravenous dose, miconazole penetrates very poorly into the cerebrospinal fluid (CSF). In a limited number of patients, intravenous doses of 1000mg produced concentrations of 0.1 to 0.25 µg/ml in ventricular, cisternal, and lumbar CSF 1 hour after the dose."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-2",
+      "stable_id": "sr_7fc45d8a76ad4d798c3e4556de8f928f",
+      "source_analog_id": "Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1",
+      "containing_unit_id": "Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-2",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: cerebrospinal fluid concentration\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Miconazole showed meager entry into the cerebrospinal fluid, with concentrations ranging from 0.10-0.27 µg/ml."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-3",
+      "stable_id": "sr_95952d37054d42e8a860966cd7e6860b",
+      "source_analog_id": "Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1",
+      "containing_unit_id": "Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-3",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: cerebrospinal fluid concentration\nResult: impermeable BBB permeability\nAssay context: intravenous infusion\nExperimental details:\n  - bbb_permeability_label: low_permeability\n\nAdditional details: \"therapeutic dose\"\nReported evidence: Miconazole penetrates the cerebrospinal fluid in low concentrations (0.1 to 0.3µg/ml) following intravenous infusion of a therapeutic dose."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-4",
+      "stable_id": "sr_61f758530d0f40b9944648a65eabb279",
+      "source_analog_id": "Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1",
+      "containing_unit_id": "Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-4",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: impermeable BBB permeability\nAssay context: intravenous administration\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"CSF penetration after intravenous administration is described as poor.\"\nReported evidence: Miconazole must be administered intravenously, into the CSF, or both and has moderate toxicity; and CSF penetration after intravenous administration is poor."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 3",
+      "stable_id": "CCOC(=O)NC1CCN(c2ncnc3c2nc(-c2ccccc2Cl)n3-c2ccc(Cl)cc2)CC1",
+      "source_analog_id": "CCOC(=O)NC1CCN(c2ncnc3c2nc(-c2ccccc2Cl)n3-c2ccc(Cl)cc2)CC1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 3",
+      "text": "SMILES: CCOC(=O)NC1CCN(c2ncnc3c2nc(-c2ccccc2Cl)n3-c2ccc(Cl)cc2)CC1\nMorgan similarity: 0.2381\nTransfer likelihood: 0.9008"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-1",
+      "stable_id": "sr_807985559e1545fda2f85adb80a40a61",
+      "source_analog_id": "CCOC(=O)NC1CCN(c2ncnc3c2nc(-c2ccccc2Cl)n3-c2ccc(Cl)cc2)CC1",
+      "containing_unit_id": "CCOC(=O)NC1CCN(c2ncnc3c2nc(-c2ccccc2Cl)n3-c2ccc(Cl)cc2)CC1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: Brain to plasma ratio\nResult: permeable BBB permeability\nAssay context: oral dosing\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: good_penetration\n\nAdditional details: \"Sprague-Dawley (SD) rats; dose of 10 mg/kg\"\nReported evidence: Following oral dosing at 10 mg/kg in Sprague-Dawley (SD) rats, compound 6 showed brain to plasma ratios ranging from 0.14–0.46, representing significant brain penetration."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 4",
+      "stable_id": "CC(=O)N1CCC(c2nccnc2Oc2ccc(C(=O)c3nc4ccccc4[nH]3)cc2)CC1",
+      "source_analog_id": "CC(=O)N1CCC(c2nccnc2Oc2ccc(C(=O)c3nc4ccccc4[nH]3)cc2)CC1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 4",
+      "text": "SMILES: CC(=O)N1CCC(c2nccnc2Oc2ccc(C(=O)c3nc4ccccc4[nH]3)cc2)CC1\nMorgan similarity: 0.2255\nTransfer likelihood: 0.1738"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 4-1",
+      "stable_id": "sr_48bfa4f12aab46988e079ec969c3add1",
+      "source_analog_id": "CC(=O)N1CCC(c2nccnc2Oc2ccc(C(=O)c3nc4ccccc4[nH]3)cc2)CC1",
+      "containing_unit_id": "CC(=O)N1CCC(c2nccnc2Oc2ccc(C(=O)c3nc4ccccc4[nH]3)cc2)CC1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 4-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: CSF/plasma concentration ratio\nResult: impermeable BBB permeability\nAssay context: in vivo\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Dosed with 6 mg oral AMG 579\"\nReported evidence: In healthy human subjects administered a 6 mg oral dose of AMG 579, the concentrations of AMG 579 in the cerebrospinal fluid (CSF) were low relative to plasma, and were less than 5% of the corresponding plasma concentrations at all timepoints."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 5",
+      "stable_id": "C[C@]1(COc2ccc(N3CCC(Oc4ccc(OC(F)(F)F)cc4)CC3)cc2)Cn2cc([N+](=O)[O-])nc2O1",
+      "source_analog_id": "C[C@]1(COc2ccc(N3CCC(Oc4ccc(OC(F)(F)F)cc4)CC3)cc2)Cn2cc([N+](=O)[O-])nc2O1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 5",
+      "text": "SMILES: C[C@]1(COc2ccc(N3CCC(Oc4ccc(OC(F)(F)F)cc4)CC3)cc2)Cn2cc([N+](=O)[O-])nc2O1\nMorgan similarity: 0.2202\nTransfer likelihood: 0.9184"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-1",
+      "stable_id": "sr_4d2a5b4b43f64c8481a9651fa66fa3f2",
+      "source_analog_id": "C[C@]1(COc2ccc(N3CCC(Oc4ccc(OC(F)(F)F)cc4)CC3)cc2)Cn2cc([N+](=O)[O-])nc2O1",
+      "containing_unit_id": "C[C@]1(COc2ccc(N3CCC(Oc4ccc(OC(F)(F)F)cc4)CC3)cc2)Cn2cc([N+](=O)[O-])nc2O1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nAssay context: in vivo\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Radioactivity from 14C-delamanid was found broadly distributed in various tissues, including the central nervous system.\"\nReported evidence: After a single oral administration of 14C-delamanid to rats, radioactivity was broadly distributed in various tissues, including the central nervous system, indicating that 14C-delamanid permeated the brain blood barrier."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 6",
+      "stable_id": "Cc1cnc(-c2cc(N3CCN(C(=O)CCS(C)(=O)=O)CC3)ncc2Cl)c(C)c1",
+      "source_analog_id": "Cc1cnc(-c2cc(N3CCN(C(=O)CCS(C)(=O)=O)CC3)ncc2Cl)c(C)c1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 6",
+      "text": "SMILES: Cc1cnc(-c2cc(N3CCN(C(=O)CCS(C)(=O)=O)CC3)ncc2Cl)c(C)c1\nMorgan similarity: 0.2121\nTransfer likelihood: 0.9061"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-1",
+      "stable_id": "sr_7a1150f88b314b56be6fdc6d4c5728dc",
+      "source_analog_id": "Cc1cnc(-c2cc(N3CCN(C(=O)CCS(C)(=O)=O)CC3)ncc2Cl)c(C)c1",
+      "containing_unit_id": "Cc1cnc(-c2cc(N3CCN(C(=O)CCS(C)(=O)=O)CC3)ncc2Cl)c(C)c1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nAssay context: measurement of cerebrospinal fluid\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Significant concentrations of intact compound were measured in the CSF following oral dosing of 30 and 100 mg/kg.\"\nReported evidence: Following oral administration (30 and 100 mg/kg), significant concentrations of intact PF-5274857 were measured in the cerebrospinal fluid, indicating that pharmacologically effective doses achieved blood-brain barrier penetration."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 7",
+      "stable_id": "Cc1cc(-c2ccc(NC(=O)[C@H](CC(C)C)c3cccc(-c4ccc(N5CCOCC5)cc4)c3)cc2)ccn1",
+      "source_analog_id": "Cc1cc(-c2ccc(NC(=O)[C@H](CC(C)C)c3cccc(-c4ccc(N5CCOCC5)cc4)c3)cc2)ccn1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 7",
+      "text": "SMILES: Cc1cc(-c2ccc(NC(=O)[C@H](CC(C)C)c3cccc(-c4ccc(N5CCOCC5)cc4)c3)cc2)ccn1\nMorgan similarity: 0.233\nTransfer likelihood: 0.1121"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-1",
+      "stable_id": "sr_5dd31fd4585e4b84802b59de2bc4982d",
+      "source_analog_id": "Cc1cc(-c2ccc(NC(=O)[C@H](CC(C)C)c3cccc(-c4ccc(N5CCOCC5)cc4)c3)cc2)ccn1",
+      "containing_unit_id": "Cc1cc(-c2ccc(NC(=O)[C@H](CC(C)C)c3cccc(-c4ccc(N5CCOCC5)cc4)c3)cc2)ccn1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: CSF concentration / unbound plasma concentration\nResult: impermeable BBB permeability\nAssay context: in vivo PD model\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"The poor brain penetration was associated with high lipophilicity (cLog P 6.86) and poor passive permeability as measured in LLC-PK cells (Avg Papp <1 µcm/s).\"\nReported evidence: For compound 70, the measured CSF concentration (2 nM) was significantly lower than the unbound plasma concentration (290 nM), a shift attributed to high lipophilicity (cLog P 6.86) and poor passive permeability (LLC-PK Avg Papp <1 µcm/s)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 8",
+      "stable_id": "C[C@@H](NC(=O)c1nn(-c2ccc(Cl)cc2Cl)c2c1CCCC/C2=C\\c1ccc(Cl)cn1)c1ccccn1",
+      "source_analog_id": "C[C@@H](NC(=O)c1nn(-c2ccc(Cl)cc2Cl)c2c1CCCC/C2=C\\c1ccc(Cl)cn1)c1ccccn1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 8",
+      "text": "SMILES: C[C@@H](NC(=O)c1nn(-c2ccc(Cl)cc2Cl)c2c1CCCC/C2=C\\c1ccc(Cl)cn1)c1ccccn1\nMorgan similarity: 0.2054\nTransfer likelihood: 0.8976"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-1",
+      "stable_id": "sr_4c57b4cb398b4a36829bb319a06e361d",
+      "source_analog_id": "C[C@@H](NC(=O)c1nn(-c2ccc(Cl)cc2Cl)c2c1CCCC/C2=C\\c1ccc(Cl)cn1)c1ccccn1",
+      "containing_unit_id": "C[C@@H](NC(=O)c1nn(-c2ccc(Cl)cc2Cl)c2c1CCCC/C2=C\\c1ccc(Cl)cn1)c1ccccn1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: B/P ratio\nResult: 0.48 ratio\nAssay context: mouse tissue distribution study\nSpecies: mouse\nExperimental details:\n  - bbb_permeability_label: good_penetration\n\nAdditional details: \"Sample collected at 2 h.\"\nReported evidence: Compound 2s showed a higher degree of brain penetration with a brain/plasma (B/P) ratio of 0.48 in a mouse tissue distribution study."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 9",
+      "stable_id": "NC(=O)c1ccc(Oc2ccc(CN3CCC[C@H]3c3cccnc3)cc2)c(Cl)c1",
+      "source_analog_id": "NC(=O)c1ccc(Oc2ccc(CN3CCC[C@H]3c3cccnc3)cc2)c(Cl)c1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 9",
+      "text": "SMILES: NC(=O)c1ccc(Oc2ccc(CN3CCC[C@H]3c3cccnc3)cc2)c(Cl)c1\nMorgan similarity: 0.2115\nTransfer likelihood: 0.9225"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 9-1",
+      "stable_id": "sr_d655409c50ac4cf59eb08a74ceec50c9",
+      "source_analog_id": "NC(=O)c1ccc(Oc2ccc(CN3CCC[C@H]3c3cccnc3)cc2)c(Cl)c1",
+      "containing_unit_id": "NC(=O)c1ccc(Oc2ccc(CN3CCC[C@H]3c3cccnc3)cc2)c(Cl)c1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 9-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nAssay context: clinical trials\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: good_penetration\n\nReported evidence: [11C]LY2795050 was assessed in clinical trials and was shown to possess favorable brain uptake."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 10",
+      "stable_id": "CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1",
+      "source_analog_id": "CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 10",
+      "text": "SMILES: CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1\nMorgan similarity: 0.2268\nTransfer likelihood: 0.1927"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 10-1",
+      "stable_id": "sr_c9054e6f8725427bbcba6bd8b5985724",
+      "source_analog_id": "CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1",
+      "containing_unit_id": "CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 10-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: impermeable BBB permeability\nAssay context: whole body autoradiography\nSpecies: mice and monkeys\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: The absence of CNS effects of loratadine has been attributed to difficulty in crossing the blood-brain barrier, as shown by the results of whole body autoradiography in mice and monkeys."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 11",
+      "stable_id": "ISJVOEOJQLKSJU-QURBUZHQSA-N",
+      "source_analog_id": "ISJVOEOJQLKSJU-QURBUZHQSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 11",
+      "text": "SMILES: CC(O)C(C)n1ncn(-c2ccc(N3CCN(c4ccc(OC[C@H]5CO[C@](Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O\nMorgan similarity: 0.5638"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-1",
+      "stable_id": "sr_14f7d35fc5a745e4a2d48ae3dbaf7752",
+      "source_analog_id": "ISJVOEOJQLKSJU-QURBUZHQSA-N",
+      "containing_unit_id": "ISJVOEOJQLKSJU-QURBUZHQSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-1",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7725\nEndpoint: CSF concentration\nResult: not detectable\nAssay context: CSF measurement\nSpecies: human\nConditions: \"oral ITZ dose below 800 mg/d (specifically 200-600 mg/d)\"\nAdditional details: \"Lack of detectability is attributed to lipophilic characteristics.\"\nReported evidence: Mainly because of their lipophilic characteristics, neither ITZ nor hydroxy-ITZ was detectable in the CSF until the oral ITZ dose reached 800 mg/d."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-2",
+      "stable_id": "sr_1411b40e2e4d4ff59dce6d4f8bc26725",
+      "source_analog_id": "ISJVOEOJQLKSJU-QURBUZHQSA-N",
+      "containing_unit_id": "ISJVOEOJQLKSJU-QURBUZHQSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-2",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6324\nEndpoint: Cmin in CSF\nResult: <25 µg/L\nAssay context: CSF measurements\nSpecies: human\nConditions: \"cerebral histoplasmosis and meningitis\"\nAdditional details: \"Observed despite high plasma exposure and low serum protein levels (21 g/L).\"\nReported evidence: In a patient with cerebral histoplasmosis and meningitis, the CSF trough concentration (Cmin) of hydroxy-itraconazole was <25 µg/L, despite high plasma exposure and low serum protein levels (21 g/L)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 12",
+      "stable_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 12",
+      "text": "SMILES: CCC(C)n1ncn(-c2ccc(N3CCN(c4ccc(OC[C@H]5CO[C@](Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O\nMorgan similarity: 0.5532"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-1",
+      "stable_id": "sr_931db3ac29f0435790157e93f89f5f96",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-1",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8234\nEndpoint: CSF concentrations / plasma concentrations\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Itraconazole is characterized by poor brain penetration, with cerebrospinal fluid (CSF) concentrations typically being less than 0.2% of the plasma concentrations."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-2",
+      "stable_id": "sr_58e4a225bb4141d08296c49e2efc34a5",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-2",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7894\nEndpoint: blood-to-brain transport\nResult: The rabies virus-derived peptide RVG29 can deliver the small-molecule itraconazole across the BBB by utilizing the neuronal nicotinic acetylcholine receptor (AchR) [65].\nExperimental details:\n  - evidence_basis: qualitative substrate claim\n  - mediator_name: neuronal nicotinic acetylcholine receptor (AchR)\n  - transport_mechanism: receptor-mediated transcytosis\n\nReported evidence: The rabies virus-derived peptide RVG29 can deliver the small-molecule itraconazole across the BBB by utilizing the neuronal nicotinic acetylcholine receptor (AchR) [65]."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-3",
+      "stable_id": "sr_f1f771de6ae5410aa1ddba7d467a8795",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-3",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8002\nResult: impermeable BBB permeability\nSpecies: people and small animals\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Drug concentrations are typically low in cerebrospinal fluid (CSF).\"\nReported evidence: Concentrations of itraconazole are typically low in cerebrospinal fluid (CSF), and the drug does not cross the blood-brain, blood-prostate, or blood-ocular barriers well."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-4",
+      "stable_id": "sr_14a76e42fd7741ebb78b8b8b6741639e",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-4",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8043\nEndpoint: CSF/serum\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: In the pharmacology of azole antifungal agents, itraconazole is reported to have poor cerebrospinal fluid (CSF) penetration with a CSF/serum ratio of <10%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-5",
+      "stable_id": "sr_2a2247432ab04baaa5a9db40855e1268",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-5",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8258\nResult: impermeable BBB permeability\nSpecies: human, cat, rabbit\nExperimental details:\n  - bbb_permeability_label: low_permeability\n\nReported evidence: Despite limited CNS penetration, ITZ has been used successfully to treat cryptococcal meningitis in people, cats and experimental rabbits."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-6",
+      "stable_id": "sr_ceb3662800984ee6a1090bf7274056a2",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-6",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8567\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Noted as highly protein-bound.\"\nReported evidence: Itraconazole is highly protein-bound and penetrates poorly into the CNS."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-7",
+      "stable_id": "sr_8c5ebbf701664621a1c0a901b153d711",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-7",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8001\nEndpoint: CSF levels % of serum levels\nResult: impermeable BBB permeability\nSpecies: rabbit\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Itraconazole penetrates poorly into the CNS, with nine percent or less of corresponding serum levels found in the CSF of rabbits."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-8",
+      "stable_id": "sr_ffa4cac2abd947608707307e73997932",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-8",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7025\nEndpoint: CSF/serum concentration (%)\nResult: <10 %\nAssay context: administration of currently recommended doses to normal volunteers\nSpecies: human\nAdditional details: \"It is also noted to have less cerebrospinal fluid penetration compared with fluconazole.\"\nReported evidence: In a table of pharmacokinetic properties in normal volunteers, itraconazole showed a CSF/serum concentration of <10%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-9",
+      "stable_id": "sr_3dace5a0468b483b848fdca292ac6e65",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-9",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.624\nEndpoint: brain : plasma ratio\nResult: close to 1\nSpecies: dogs\nConditions: \"receiving itraconazole for 12 months\"\nReported evidence: The brain : plasma ratio for itraconazole is close to 1 in dogs receiving itraconazole for 12 months."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-10",
+      "stable_id": "sr_33b869b8155049c58abac0696f18f477",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-10",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6112\nEndpoint: brain or meningeal concentrations / plasma concentrations\nResult: slightly exceeded\nSpecies: dogs\nConditions: \"long-term administration\"\nReported evidence: In dogs, levels of itraconazole at brain or meningeal sites slightly exceeded plasma concentrations during long-term administration."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-11",
+      "stable_id": "sr_c92def6569dc44299363c1da5230eb98",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 12-11",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.8669\nEndpoint: BBB permeability\nResult: 4.8-fold\nAssay context: in vitro\nConditions: \"delivered via H-ApoE-PDA@ITZ-NPs compared to ITZ-NPs\"\nAdditional details: \"The value represents a 4.8-fold increase in permeability.\"\nReported evidence: H-ApoE-PDA@ITZ-NPs increased in vitro BBB permeability by 4.8-fold compared to the ITZ-NPs."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-12",
+      "stable_id": "sr_513fcb86929245aa89208a55b5036da9",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 12-12",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.8746\nResult: permeable BBB permeability\nAssay context: in vivo brain distribution\nSpecies: mice\nConditions: \"administered as ITZ-CD formulation\"\nExperimental details:\n  - bbb_permeability_label: permeable\n  - bbb_transport_label: passive_diffusion\n\nReported evidence: In mice, itraconazole administered in the ITZ-CD formulation released rapidly after administration and accumulated in the brain mainly by passive diffusion."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-13",
+      "stable_id": "sr_fa769fba2f0f40a1aad01e9d24bd9dab",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-13",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8506\nResult: substrate efflux-transporter substrate status\nAssay context: Mouse (OF1) in vivo brain concentration measurement after intraperitoneal administration of itraconazole (10 mg/kg) with and without P-gp inhibitor GF120918 (10 mg/kg i.p.) in mice infected with C. neoformans (NIH 52D strain).\nConditions: \"Intracerebral infection with C. neoformans (NIH 52D strain).\"\nExperimental details:\n  - evidence_type: in_vivo_brain_exposure\n  - interaction_conclusion: substrate\n  - perturbation: co-administration of P-gp inhibitor GF120918 at 10 mg/kg i.p.\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"The study included healthy mice (no infection) as a control. The infection itself increased ITC brain concentrations, and P-gp inhibition further increased them in infected mice. No significant differences in plasma AUC were observed between groups, indicating the effect is specific to brain exposure.\"\nReported evidence: Itraconazole (ITC) brain exposure was assessed in OF1 mice infected with C. neoformans after i.p. administration of 10 mg/kg ITC, with or without pretreatment with the P-gp inhibitor GF120918 (10 mg/kg i.p.). The brain concentration versus time curves and brain/plasma ratios showed significant differences between all three groups (healthy, infected, infected + GF120918). In infected mice, P-gp inhibition further increased ITC brain exposure, indicating that ITC is a substrate of P-gp at the BBB and that its brain penetration is limited by P-gp efflux."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-14",
+      "stable_id": "sr_c14238a0fcd84d14baa7ff95a09aeac1",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-14",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8495\nResult: permeable BBB permeability\nAssay context: in vivo\nSpecies: rodent\nExperimental details:\n  - bbb_permeability_label: high_permeability\n  - bbb_transport_label: efflux_substrate\n\nAdditional details: \"ABCB1/Abcb1a-dependent BBB permeability; identified as an ABCB1 substrate and ATPase activator.\"\nReported evidence: Itraconazole is described as an ABCB1 substrate and ATPase activator that displays high passive permeability and shows an ABCB1/Abcb1a-dependent BBB permeability in vivo, based on rodent BBB data."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-15",
+      "stable_id": "sr_37ebb5116e3740999731a1a69d3b2f0d",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-15",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.856\nResult: inhibitor efflux-transporter inhibition status\nAssay context: In vitro cellular uptake assay in HT-29, SKOV3, and YM-1 cancer cell lines; itraconazole used as a P-gp inhibitor at 1 µM and 5 µM\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n\nAdditional details: \"Itraconazole increased accumulation of the P-gp substrate 99mTc-MIBI in P-gp-expressing cells (HT-29 and SKOV3) but not in YM-1 (P-gp-negative), confirming its P-gp inhibition.\"\nReported evidence: In the paper, itraconazole is stated to be a P-gp inhibitor. This is supported by its ability to increase the cellular accumulation of the P-gp substrate 99mTc-MIBI in a concentration-dependent manner in HT-29 and SKOV3 cells."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-16",
+      "stable_id": "sr_3392ec911101411dbc6ccf55de9ce752",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-16",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8775\nEndpoint: inhibition_potency\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Caco-2 cell permeability assay using a P-gp substrate; IC50 calculated from normalized substrate flux (NSF) method\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n\nAdditional details: \"The IC50 value determined by the NSF method (6 µM) is compared with the ER method (2 µM) from the same publication. Substrate not explicitly specified in the immediate text but likely digoxin per paragraph 58.\"\nReported evidence: Sugimoto et al. found that the IC50 values generated for over 20 drugs from Papp,BL-AP were larger than those from ER for compounds tested, and there was a positive correlation between these IC50 values. Cook et al. found that for the majority of the 30 compounds they tested in a Caco-2 cell assay, IC50 values were 2-fold more potent by the ER method. For example, the IC50 value for itraconazole was 6 µM based upon NSF."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-17",
+      "stable_id": "sr_ef38f46f659a409594ec7227f2cec833",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-17",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8486\nResult: inhibitor efflux-transporter inhibition status\nAssay context: LLC-GA5-COL150 cell monolayers (MDR1-transfected), net basal-to-apical transport of [3H]digoxin, 50 µM inhibitor\nConditions: \"in vitro MDR1-overexpressing cell line\"\nExperimental details:\n  - evidence_type: bidirectional_transport\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Inhibitory effect measured as ratio of net basal-to-apical transport of [3H]digoxin in presence vs absence of antifungal drug (50 µM).\"\nReported evidence: In this study, itraconazole was found to have inhibitory effects on MDR1 transport activity, measured as the effect on net basal-to-apical transport of [3H]digoxin across LLC-GA5-COL150 cell monolayers at 50 µM."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-18",
+      "stable_id": "sr_2304daecdd824ccd97c4069af21f7114",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-18",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8554\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Human pharmacokinetic study; healthy volunteers received itraconazole (200 mg daily) for 5 days with a single oral 20-mg dose of domperidone on day 5\nConditions: \"Co-administered with domperidone in a human crossover study\"\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"The algorithm attributes the increased domperidone exposure to reduced first-pass elimination via inhibition of CYP3A and/or MDR1; no direct MDR1 inhibition assay was performed.\"\nReported evidence: The authors state: 'The interaction is probably mainly due to a reduced first pass elimination by inhibition of CYP3A and/or MDR1.' This suggests that itraconazole inhibits MDR1 (P-glycoprotein), although the attribution to MDR1 is speculative and based on increased plasma domperidone concentrations from a clinical interaction study."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-19",
+      "stable_id": "sr_35d8ba7317ca46dba2380e479bc4089b",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-19",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8535\nEndpoint: other\nResult: substrate efflux-transporter substrate status\nAssay context: Mice pretreated with GF-120918\nConditions: \"Pretreatment with GF-120918, Cryptococcus neoformans infection\"\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: substrate\n  - perturbation: Pretreatment with GF-120918 (P-gp inhibitor)\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Cerebral itraconazole AUC significantly increased in mice pretreated with the P-gp inhibitor GF-120918 compared to untreated mice infected with Cryptococcus neoformans\"\nReported evidence: GF-120918 (a P-gp inhibitor) in pretreated mice significantly increased the cerebral itraconazole AUC compared to that of untreated mice infected with Cryptococcus neoformans, confirming P-gp-mediated efflux of itraconazole."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-20",
+      "stable_id": "sr_63bd6d7f449c48ba97d31a71a1bc89d6",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-20",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8526\nResult: substrate efflux-transporter substrate status\nAssay context: P-gp knockout mice\nConditions: \"P-gp knockout mice\"\nExperimental details:\n  - evidence_type: genetic_perturbation\n  - interaction_conclusion: substrate\n  - perturbation: P-gp knockout\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Accumulation increased in knockout vs control; no numeric value reported\"\nReported evidence: Accumulation of itraconazole in the brain tissue of P-gp knockout mice was significantly increased compared to that in control mice, establishing itraconazole as a P-gp substrate."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-21",
+      "stable_id": "sr_62788d9c861a445cb1e9d568541ea528",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-21",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8647\nEndpoint: Hirngewebespiegel\nResult: höher\nSpecies: mice, rats\nConditions: \"P-glycoprotein-deficient mice; rats pretreated with Verapamil (P-gp inhibitor)\"\nAdditional details: \"Comparison against control animals with normal P-gp expression\"\nReported evidence: Itraconazole brain tissue levels were higher in P-glycoprotein-deficient mice compared to control animals and were also increased in rats after pretreatment with Verapamil, a P-glycoprotein inhibitor."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-22",
+      "stable_id": "sr_1c394f1421ed4a7b8add5ba0259c6389",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-22",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8514\nResult: substrate efflux-transporter substrate status\nAssay context: In vivo brain and plasma concentration comparison in mdr1a(-/-) vs (+/+) mice\nExperimental details:\n  - evidence_type: in_vivo_brain_exposure\n  - interaction_conclusion: substrate\n  - perturbation: mdr1a knockout\n  - transporter_identifier: UniProt:P21447\n\nAdditional details: \"Higher concentration in mdr1a(-/-) brains and plasma indicates substrate for mouse mdr1a.\"\nReported evidence: Another azole antifungal agent, itraconazole (ITZ), is a substrate for mdr1a Pgp. This evidence came in part from studies demonstrating a higher concentration of ITZ in the brains and plasma of mdr1a (-/-) compared with (+/+) mice."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-23",
+      "stable_id": "sr_ee7eed9920e44affb7c1e1b20ff6b3c8",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-23",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8694\nEndpoint: inhibition_potency\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Caco-2 cell monolayers, [3H]digoxin (1 µM) as substrate P-gp-mediated transport\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Itraconazole inhibited P-gp-mediated digoxin transport; IC50 not explicitly stated but less than some others.\"\nReported evidence: Itraconazole was among the P-gp inhibitors tested, following cyclosporin A in potency, for inhibition of P-gp-mediated digoxin transport in Caco-2 cells."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-24",
+      "stable_id": "sr_328c8a81125645f190345c637c6f4b91",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-24",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8583\nResult: inhibitor efflux-transporter inhibition status\nAssay context: In vitro: mouse brain capillary endothelial MBEC4 cells and porcine kidney epithelial LLC-PK1 cells; accumulation assays using vinblastine, vincristine, daunorubicin, doxorubicin as probe substrates\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"ITC inhibited P-gp-mediated efflux of vinblastine and vincristine in MBEC4 cells, and of vinblastine, daunorubicin, and doxorubicin in LLC-PK1 cells. MBEC4 cells are of mouse origin (mouse P-gp), LLC-PK1 are porcine (porcine P-gp).\"\nReported evidence: In vitro data reported itraconazole (ITC) as a P-gp inhibitor; it increased accumulation of vinblastine and vincristine in mouse brain capillary endothelial MBEC4 cells, and increased accumulation of vinblastine, daunorubicin, and doxorubicin in porcine kidney epithelial LLC-PK1 cells, consistent with inhibition of P-gp-mediated efflux."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-25",
+      "stable_id": "sr_49c321a8a1284ad6abae60bb3184f75a",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-25",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8574\nEndpoint: other\nResult: inhibitor efflux-transporter inhibition status\nAssay context: classification based on in vitro and in vivo evidence (review compilation)\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Clinical relevance: Yes. CYP3A4: Inh/sub. AUC digoxin + itraconazole / AUCdigoxin = 1.68.\"\nReported evidence: Itraconazole is classified as a P-gp inhibitor with clinical relevance 'Yes'. The AUC of digoxin increased 1.68-fold with itraconazole."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-26",
+      "stable_id": "sr_ec2c8578d3174f9d989774538601bf87",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-26",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8534\nResult: substrate efflux-transporter substrate status\nAssay context: Literature review; Table 1 summarizes P-glycoprotein substrate and inhibitor classifications.\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Table 1 in paragraph 33 includes P-glycoprotein (P-gp) substrate and inhibitor columns for various azoles and immunosuppressants.\"\nReported evidence: In Table 1, itraconazole is listed as a P-glycoprotein substrate (yes) and as a P-glycoprotein inhibitor (yes). No experimental details are provided beyond this classification."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-27",
+      "stable_id": "sr_fb7cd6a7c574410db544117e2da35c08",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-27",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8516\nResult: inhibitor efflux-transporter inhibition status\nAssay context: In vivo co-administration with ivermectin in sheep (Ballent et al. 2007)\nConditions: \"Intra-ruminal administration\"\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Itraconazole is described as a P-gp inhibitor; it increased ivermectin plasma and abomasums concentrations when co-administered intra-ruminally.\"\nReported evidence: Itraconazole is described as a P-gp inhibitor when co-administered with ivermectin, and it increased ivermectin plasma and tissue concentrations, consistent with P-gp inhibition."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-28",
+      "stable_id": "sr_62e0ffb31f994141b7448561233a0ee9",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-28",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8502\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Qualitative statement\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:Q9NGP5\n\nAdditional details: \"The entity list maps BCRP to UniProt:Q9NGP5 (zebrafish ortholog), though the text likely refers to the human BCRP.\"\nReported evidence: Itraconazole is reported as a BCRP inhibitor for the first time, based on a study cited in the paragraph. The text states: 'Recently, a study demonstrated for the first time that itraconazole is a BCRP inhibitor.' This provides molecular insights into pharmacokinetic drug interactions with triazole antifungals."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-29",
+      "stable_id": "sr_2cd692b322654292a2cbefbf85651ac1",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-29",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8487\nResult: inhibitor efflux-transporter inhibition status\nAssay context: rhodamine 123 accumulation assay in P-gp-overexpressing MCF7R cells\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: NCBIGene:5243\n\nAdditional details: \"One of the 16 reference P-gp inhibitors tested; 14/16 showed increased rhodamine 123 accumulation.\"\nReported evidence: Itraconazole was one of the 16 structurally-unrelated drugs known to interact with P-gp (P-gp inhibitors) evaluated using a rhodamine 123 accumulation assay in P-gp-overexpressing MCF7R cells; 14/16 of these P-gp inhibitors increased rhodamine 123 accumulation, allowing determination of IC50 values towards P-gp-mediated transport."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-30",
+      "stable_id": "sr_b158834b957b423fa8621386bce7ed7c",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-30",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8574\nResult: increased_permeability\nConditions: \"in response to the P-glycoprotein inhibitor GF120918\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n  - bbb_transport_label: efflux_substrate\n\nAdditional details: \"intracerebral distribution is closely related to the role of P-glycoprotein\"\nReported evidence: The intracerebral distribution of itraconazole is closely related to the role of P-glycoprotein, and its permeability to the BBB increases significantly in response to the P-glycoprotein inhibitor GF120918."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-31",
+      "stable_id": "sr_9705701fcc62477687214dfbf7f7a4ba",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-31",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.865\nEndpoint: inhibition_potency\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Caco-2 cell monolayers, PappBtoA of [14C]dabigatran etexilate (1 µM)\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"IC50 < 1 µM\"\nReported evidence: Itraconazole showed strong inhibition of P-gp-mediated transport of dabigatran etexilate in Caco-2 cells, with IC50 values less than 1 µM."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-32",
+      "stable_id": "sr_7836ac6f15fa425b97bbb24ad777b68b",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-32",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8506\nResult: efflux_substrate\nSpecies: mouse\nConditions: \"P-glycoprotein deficient mice\"\nExperimental details:\n  - bbb_transport_label: efflux_substrate\n\nAdditional details: \"P-glycoprotein mediated efflux of itraconazole at the blood-brain barrier\"\nReported evidence: Studies in mice with deficient expression of the P-glycoprotein revealed higher brain tissue concentrations of itraconazole compared to animals with normal P-glycoprotein expression, indicating that low CNS concentrations of itraconazole are at least in part caused by P-glycoprotein mediated efflux of itraconazole at the blood-brain barrier."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-33",
+      "stable_id": "sr_022644ac9a3844f48f024cc376a7a282",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-33",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8576\nEndpoint: other\nResult: inhibitor efflux-transporter inhibition status\nAssay context: LLC-PK1 cells expressing rat Abcb1a; probe substrate BODIPY-prazosin; flow cytometry accumulation assay\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P21447\n\nAdditional details: \"Emax for inhibition of BODIPY-prazosin efflux: 0.73\"\nReported evidence: One exception to this was itraconazole inhibition of BODIPY–prazosin efflux, for which Emax values of 0.81, 0.73, and 0.82 were calculated for cells expressing human ABCB1, rat Abcb1a, or Abcb1b, respectively."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-34",
+      "stable_id": "sr_2883f4bd27d84125a840ee3072c76d4b",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-34",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8564\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Bidirectional transport of [3H]digoxin (25 nM) across LLC-GA5-COL150 monolayers overexpressing human MDR1 (Pgp) in the presence of 10 µM itraconazole.\nConditions: \"LLC-GA5-COL150 monolayers overexpressing human MDR1 (Pgp); digoxin substrate present at 25 nM\"\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Itraconazole (10 µM) decreased basolateral-to-apical digoxin transport by 50% and increased apical-to-basolateral transport by approximately 3-fold, indicating inhibition of Pgp-mediated efflux. Itraconazole was more potent than amiodarone.\"\nReported evidence: In the same assay, 10 µM itraconazole inhibited Pgp-mediated efflux of [3H]digoxin, as shown by the decrease in basolateral-to-apical transport and increase in apical-to-basolateral transport. Itraconazole is therefore an inhibitor of Pgp."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-35",
+      "stable_id": "sr_6ca3b5f9e9d84468985fb62812cd5309",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-35",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8626\nResult: inhibitor efflux-transporter inhibition status\nAssay context: in vitro inhibition assay (referenced in table)\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Summary table from references 14,15,19,20,47,65\"\nReported evidence: A summary table listing interactions of triazole antifungals as inhibitors shows that itraconazole inhibits P-gp (ABCB1), with 'Yes' in the P-gp column."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-36",
+      "stable_id": "sr_947bb2a4d3f245f682d291f56ec7ba6b",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-36",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.853\nEndpoint: other\nResult: inhibitor efflux-transporter inhibition status\nAssay context: in vivo rat study, coadministered with IVM\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nReported evidence: The inhibitory effect of P-gp modulators on the IVM intestinal secretion accounted for a reduction in the ratio between the Cmax in intestinal content and Cmax in the intestinal wall of 43% (ITZ) compared with the control group, indicating that ITZ inhibits P-gp-mediated efflux of IVM."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-37",
+      "stable_id": "sr_c3dd5e094b1b491d877636daa2d2b030",
+      "source_analog_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-ZPGVKDDISA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 12-37",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8507\nEndpoint: other\nResult: inhibitor efflux-transporter inhibition status\nAssay context: clinical pharmacokinetic interaction study in humans\nConditions: \"coadministration with rosuvastatin\"\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:Q4GZT4\n\nAdditional details: \"AUC of rosuvastatin increased by up to 39% upon coadministration; rosuvastatin is a BCRP substrate.\"\nReported evidence: Itraconazole inhibits BCRP, as demonstrated by a study where coadministration of itraconazole with the BCRP substrate rosuvastatin increased rosuvastatin AUC by up to 39%; the text states that inhibition of BCRP by itraconazole could contribute to this interaction."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 13",
+      "stable_id": "LCWAVZISUIFMQY-UHFFFAOYSA-N",
+      "source_analog_id": "LCWAVZISUIFMQY-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 13",
+      "text": "SMILES: O=C(Nc1ccc(OC(F)(F)F)cc1)NC1CCN(C(=O)CCCCNc2c3c(nc4cc(Cl)ccc24)CCCC3)CC1\nMorgan similarity: 0.2"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-1",
+      "stable_id": "sr_e8769604fea74c73ba1fb0715e341df9",
+      "source_analog_id": "LCWAVZISUIFMQY-UHFFFAOYSA-N",
+      "containing_unit_id": "LCWAVZISUIFMQY-UHFFFAOYSA-N",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 13-1",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.7948\nEndpoint: Pe\nResult: 8.4 10^-6 cm/s\nAssay context: PAMPA-BBB\nExperimental details:\n  - bbb_permeability_label: high_permeability\n  - bbb_transport_label: passive_diffusion\n\nReported evidence: Compound 12c exhibited a BBB permeability (Pe) of 8.4 ± 0.7 x 10–6 cm s–1, which is categorized as high brain permeability (CNS+), as measured by the PAMPA-BBB assay modeling passive diffusion."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 14",
+      "stable_id": "DUYKABFFZOMTED-WGOQTCKBSA-N",
+      "source_analog_id": "DUYKABFFZOMTED-WGOQTCKBSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 14",
+      "text": "SMILES: COc1ccc(N2CCN(c3ccc(=O)n(CC(=O)N/N=C/c4ccc(Cl)cc4)n3)CC2)cc1\nMorgan similarity: 0.26"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-1",
+      "stable_id": "sr_ba04e02bc0074994bfd46dbe83433a76",
+      "source_analog_id": "DUYKABFFZOMTED-WGOQTCKBSA-N",
+      "containing_unit_id": "DUYKABFFZOMTED-WGOQTCKBSA-N",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 14-1",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.8704\nResult: high passive BBB permeability\nExperimental details:\n  - assay_type: PAMPA-BBB\n  - passive_bbb_interpretation: permeable_or_high\n\nAdditional details: \"Qualitative result from PAMPA test; no numeric permeability value reported.\"\nReported evidence: According to the PAMPA test, compound 40 (E)-N'-(4-chlorobenzylidene)-2-(3-(4-(4-methoxyphenyl)piperazin-1-yl)-6-oxopyridazin-1(6H)-yl)acetohydrazide crosses the blood–brain barrier very quickly and has good CNS permeability."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 15",
+      "stable_id": "PSPXJPWGVFNGQI-UHFFFAOYSA-N",
+      "source_analog_id": "PSPXJPWGVFNGQI-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 15",
+      "text": "SMILES: CC(C)Oc1ccc(C(=O)Cn2ccnc2)cc1-n1c(CN2CCN(C(=O)COc3ccc(Cl)cc3)CC2)nc2ccccc2c1=O\nMorgan similarity: 0.307"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 15-1",
+      "stable_id": "sr_42776b36f8904c498a650c6f21f612ce",
+      "source_analog_id": "PSPXJPWGVFNGQI-UHFFFAOYSA-N",
+      "containing_unit_id": "PSPXJPWGVFNGQI-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 15-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8484\nResult: substrate efflux-transporter substrate status\nAssay context: Cytotoxicity assays in A673 cells transfected with P-gp and UO-31 cells with CRISPR ABCB1 knockout\nExperimental details:\n  - evidence_type: genetic_perturbation\n  - interaction_conclusion: substrate\n  - perturbation: P-gp overexpression and CRISPR-mediated ABCB1 knockout\n  - transporter_identifier: NCBIGene:5243\n\nAdditional details: \"P-gp-mediated resistance was reversed by knockout.\"\nReported evidence: P-gp overexpression conferred resistance to imidazole ketone erastin in A673 cells expressing P-gp, and this resistance was reversed by CRISPR-mediated knockout of ABCB1 in UO-31 renal cancer cells, confirming that imidazole ketone erastin is a P-gp substrate."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 16",
+      "stable_id": "VHVPQPYKVGDNFY-UHFFFAOYSA-N",
+      "source_analog_id": "VHVPQPYKVGDNFY-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 16",
+      "text": "SMILES: CCC(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O\nMorgan similarity: 0.5532"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 16-1",
+      "stable_id": "sr_127bf59c5fd14c9eb475d35fbd5f4e9b",
+      "source_analog_id": "VHVPQPYKVGDNFY-UHFFFAOYSA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 16-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8514\nEndpoint: brain_to_plasma_ratio\nResult: substrate efflux-transporter substrate status\nAssay context: Rats, intravenous ITZ 5 mg/kg, ketoconazole 20 mg/kg coadministered 5 min prior\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: substrate\n  - perturbation: ketoconazole (20 mg/kg) coadministration\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Brain Kp of ITZ significantly increased; inhibitory effects of both verapamil and ketoconazole were considered competitive.\"\nReported evidence: Coadministration of ketoconazole (20 mg/kg) with ITZ (5 mg/kg) significantly increased the brain Kp value of ITZ in rats, and the authors considered the inhibitory effects of both verapamil and ketoconazole to be competitive, indicating that ITZ is a substrate of P-gp at the BBB."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 16-2",
+      "stable_id": "sr_e869665e5e48477a8f0904445a55d7fd",
+      "source_analog_id": "VHVPQPYKVGDNFY-UHFFFAOYSA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 16-2",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8543\nEndpoint: other\nResult: inhibitor efflux-transporter inhibition status\nAssay context: LLC-GA5-COL150 cells; co-administration with radiolabeled substrates; bidirectional transport measured at 3 h (digoxin, vinblastine) or 24 h (daunorubicin, doxorubicin)\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n\nAdditional details: \"Itraconazole (1 and 100 µM) decreased basal-to-apical transport and increased apical-to-basal transport of all four drugs in a concentration-dependent manner, confirming P-gp inhibition. For example, digoxin B-to-A reduced from 16.9% to 12.9% (1 µM) and 9.3% (100 µM); A-to-B increased from 1.4% to 3.9% and 6.8%. Vinblastine B-to-A was 22.3% (control), 23.6% (1 µM, not significantly different), and 22.0% (100 µM); A-to-B increased from 0.9% to 2.9% and 6.0%. The text explicitly states that itraconazole inhibited P-gp.\"\nReported evidence: The text explicitly states that itraconazole inhibited P-gp on the apical membrane, and the transport data in Table [p:28] shows that itraconazole (1 and 100 µM) reduced basal-to-apical transport and increased apical-to-basal transport of [3H]digoxin, [3H]vinblastine, [3H]daunorubicin, and [14C]doxorubicin in LLC-GA5-COL150 cells, confirming itraconazole as a P-gp inhibitor."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 16-3",
+      "stable_id": "sr_e404bcb12426456a83d066ab2057626e",
+      "source_analog_id": "VHVPQPYKVGDNFY-UHFFFAOYSA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 16-3",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8552\nResult: substrate efflux-transporter substrate status\nAssay context: mdr1a knockout mice, intravenous injection of ITZ, measurement of brain-to-plasma concentration ratio (Kp)\nConditions: \"mdr1a knockout mice\"\nExperimental details:\n  - evidence_type: genetic_perturbation\n  - interaction_conclusion: substrate\n  - perturbation: mdr1a knockout\n  - transporter_identifier: UniProt:P21447\n\nAdditional details: \"Brain Kp value significantly increased in mdr1a knockout mice compared to controls.\"\nReported evidence: In mdr1a knockout mice, the brain Kp value for itraconazole was significantly increased compared with that of control mice, indicating that P-gp (Mdr1a) mediates efflux of itraconazole from the brain."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 16-4",
+      "stable_id": "sr_40378f72e1274d85a46f6edadf6e22c2",
+      "source_analog_id": "VHVPQPYKVGDNFY-UHFFFAOYSA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 16-4",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8482\nResult: efflux_substrate\nAssay context: mdr1a −/− mice\nSpecies: mouse\nConditions: \"mdr1a knockout mice\"\nExperimental details:\n  - bbb_transport_label: efflux_substrate\n\nAdditional details: \"The increased brain accumulation in mdr1a −/− mice indicates ITZ is a substrate of the mdr1a P-gp expressed in the brain endothelial cells.\"\nReported evidence: In mdr1a −/− mice, the accumulation of ITZ in the brain tissue was significantly increased compared with that in mdr1a +/+ mice, suggesting that ITZ is a substrate of mdr1a P-gp expressed in mouse brain endothelial cells."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 16-5",
+      "stable_id": "sr_695b57e2da9f428bad38ca2cd42eec63",
+      "source_analog_id": "VHVPQPYKVGDNFY-UHFFFAOYSA-N",
+      "containing_unit_id": "VHVPQPYKVGDNFY-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 16-5",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8522\nEndpoint: brain_to_plasma_ratio\nResult: substrate efflux-transporter substrate status\nAssay context: Rats, intravenous ITZ 5 mg/kg, verapamil 5 mg/kg coadministered 5 min prior\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: substrate\n  - perturbation: verapamil (5 mg/kg) coadministration\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Brain Kp significantly increased with verapamil; plasma ITZ unchanged.\"\nReported evidence: Coadministration of verapamil (5 mg/kg) with ITZ (5 mg/kg) significantly increased the brain Kp value of ITZ in rats without altering plasma ITZ concentrations, suggesting that ITZ is a P-gp substrate and P-gp limits its brain exposure."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 17",
+      "stable_id": "LQBVNQSMGBZMKD-UHFFFAOYSA-N",
+      "source_analog_id": "LQBVNQSMGBZMKD-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 17",
+      "text": "SMILES: CC1(C)CCC(CN2CCN(c3ccc(C(=O)NS(=O)(=O)c4ccc(NCC5CCOCC5)c([N+](=O)[O-])c4)c(Oc4cnc5[nH]ccc5c4)c3)CC2)=C(c2ccc(Cl)cc2)C1\nMorgan similarity: 0.2254"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 17-1",
+      "stable_id": "sr_bbda40a5b61b417ba2c9004285a61b95",
+      "source_analog_id": "LQBVNQSMGBZMKD-UHFFFAOYSA-N",
+      "containing_unit_id": "LQBVNQSMGBZMKD-UHFFFAOYSA-N",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 17-1",
+      "text": "Level: L5\nEvidence family: influx_transport\nEndpoint: blood-to-brain transport\nResult: In a recently published case of chronic lymphocytic leukemia with CNS involvement, single agent venetoclax was given along with intrathecal chemotherapy and led to disease clearance. Authors have measured venetoclax concentration in the CSF and have shown that venetoclax can cross the blood brain barrier and able to achieve a potential therapeutic concentrations there [9].\nExperimental details:\n  - evidence_basis: qualitative substrate claim\n  - transport_mechanism: unspecified mediated BBB uptake\n\nAdditional details: \"Based on measurement of venetoclax concentration in CSF in a chronic lymphocytic leukemia patient with CNS involvement, as cited from reference 9.\"\nReported evidence: In a recently published case of chronic lymphocytic leukemia with CNS involvement, single agent venetoclax was given along with intrathecal chemotherapy and led to disease clearance. Authors have measured venetoclax concentration in the CSF and have shown that venetoclax can cross the blood brain barrier and able to achieve a potential therapeutic concentrations there [9]."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 18",
+      "stable_id": "UWKQSNNFCGGAFS-XIFFEERXSA-N",
+      "source_analog_id": "UWKQSNNFCGGAFS-XIFFEERXSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 18",
+      "text": "SMILES: CCc1c2c(nc3ccc(OC(=O)N4CCC(N5CCCCC5)CC4)cc13)-c1cc3c(c(=O)n1C2)COC(=O)[C@]3(O)CC\nMorgan similarity: 0.168"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 18-1",
+      "stable_id": "sr_f48f20342ef14f64afcafae083afaf99",
+      "source_analog_id": "UWKQSNNFCGGAFS-XIFFEERXSA-N",
+      "containing_unit_id": "UWKQSNNFCGGAFS-XIFFEERXSA-N",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 18-1",
+      "text": "Level: L5\nEvidence family: influx_transport\nResult: permeable BBB permeability\nAssay context: human BBB organoid model\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Referred to in the text as CPT-11.\"\nReported evidence: BTP-7-CPT displayed the highest influx into the organoids, comparable to that of CPT-11 which is known to cross the BBB."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 19",
+      "stable_id": "QZUDBNBUXVUHMW-UHFFFAOYSA-N",
+      "source_analog_id": "QZUDBNBUXVUHMW-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 19",
+      "text": "SMILES: CN1CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1\nMorgan similarity: 0.1978"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 19-1",
+      "stable_id": "sr_bbb91790d7e14372981cd202cf95e4db",
+      "source_analog_id": "QZUDBNBUXVUHMW-UHFFFAOYSA-N",
+      "containing_unit_id": "QZUDBNBUXVUHMW-UHFFFAOYSA-N",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 19-1",
+      "text": "Level: L5\nEvidence family: influx_transport\nEndpoint: Kp_uu brain\nResult: > 2\nAssay context: microdialysis\nSpecies: rodents\nExperimental details:\n  - bbb_transport_label: transporter_mediated\n\nAdditional details: \"Measurement performed using brain homogenate and microdialysis.\"\nReported evidence: Clozapine, determined both in brain homogenate and by microdialysis, has an unbound free drug concentration in the brain compared to the blood (Kp_uu brain) greater than 2 in rodents, suggesting that carrier-mediated transport of clozapine is responsible for this above unity Kp_uu brain."
+    }
+  ],
+  "trace": [
+    {
+      "task": "single_molecule",
+      "status": "ok",
+      "prediction": null,
+      "response_text": "{\n  \"endpoint_prior\": \"mixed_or_unclear\",\n  \"property_drivers\": [\n    \"High molecular weight (531 Da) exceeds the typical CNS-penetrant range and may reduce passive permeability and increase efflux liability.\",\n    \"Moderate-high lipophilicity (cLogP 4.21) may favor membrane permeation but also increase plasma protein and tissue binding, lowering unbound brain exposure.\",\n    \"Low topological polar surface area (69 Å²) and zero hydrogen-bond donors are favorable for passive blood-brain barrier diffusion.\",\n    \"Six hydrogen-bond acceptors and three aromatic rings may contribute to P-glycoprotein efflux and nonspecific binding.\",\n    \"The weakly basic imidazole is likely mostly neutral at pH 7.4, but pKa/logD were not measured, leaving ionization state uncertain.\",\n    \"Rotatable-bond count (7) and fraction sp3 (0.38) are moderate and do not strongly argue for or against CNS access.\"\n  ],\n  \"confidence\": \"moderate\",\n  \"reasoning_summary\": \"The molecule presents a mixed physicochemical prior for CNS access. Favorable features include zero HBD, TPSA near the CNS-favorable threshold, and a mostly neutral/weakly basic character. Unfavorable features include a high molecular weight of 531 Da, cLogP above 4, six HBA, and three aromatic rings, which together suggest a higher risk of efflux, high protein/tissue binding, and reduced unbound brain concentrations. Because the property profile is borderline and pKa/logD data are unavailable, meaningful or adequate CNS access cannot be confidently predicted from structure alone.\",\n  \"caveats\": [\n    \"pKa and logD predictions were unavailable; actual ionization at pH 7.4 could alter permeability and efflux behavior.\",\n    \"Structural alerts are hypotheses, not observed endpoints; no direct CNS exposure or efflux data are provided.\",\n    \"High lipophilicity may also affect aqueous solubility and free fraction, but systemic administration bypasses absorption-related limitations.\",\n    \"The imidazole moiety may inhibit cytochrome P450 enzymes, potentially altering systemic clearance and brain exposure unpredictably.\",\n    \"No species, strain, or experimental conditions were specified, so predictions are limited to general physicochemical principles.\"\n  ]\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a senior medicinal-chemist and CNS-exposure expert who reasons via analogies, taking evidence from related molecules to support your prediction. Return one complete JSON object."
+        },
+        {
+          "role": "user",
+          "content": "{\"task\": \"Assess the query molecule's structural and physicochemical prior for meaningful or adequate CNS access after systemic administration.\", \"query\": {\"input_smiles\": \"CC(=O)N1CCN(c2ccc(OCC3COC(Cn4ccnc4)(c4ccc(Cl)cc4Cl)O3)cc2)CC1\", \"canonical_smiles\": \"CC(=O)N1CCN(c2ccc(OCC3COC(Cn4ccnc4)(c4ccc(Cl)cc4Cl)O3)cc2)CC1\", \"tools_prefetched\": true, \"prefetched_molecule_properties\": {\"tool_name\": \"molecule_properties\", \"status\": \"ok\", \"arguments\": {\"query_smiles\": \"CC(=O)N1CCN(c2ccc(OCC3COC(Cn4ccnc4)(c4ccc(Cl)cc4Cl)O3)cc2)CC1\", \"logd_ph\": 7.4}, \"content\": \"[molecule_properties]\\nneutral fraction: not applicable (pKa predictor unavailable)\\nestimated logD: not applicable (pKa predictor unavailable)\\nstrongest acidic pKa: not applicable (pKa predictor unavailable)\\nstrongest basic pKa: not applicable (pKa predictor unavailable)\\nnumber of acidic sites: not applicable (pKa predictor unavailable)\\nnumber of basic sites: not applicable (pKa predictor unavailable)\\nnumber of ionizable sites: not applicable (pKa predictor unavailable)\\nexact molecular weight: 530.15\\nfraction of sp3 carbons: 0.38\\nheavy-atom count: 36\\nheavy-atom molecular weight: 503.22\\nLabute surface area: 219.82\\nmaximum absolute partial charge: 0.49\\nmaximum partial charge: 0.22\\nminimum absolute partial charge: 0.22\\nminimum partial charge: -0.49\\nestimated logP: 4.21\\nmolecular weight: 531.44\\nNH/OH group count: 0\\nnitrogen/oxygen atom count: 8\\naliphatic carbocycle count: 0\\naliphatic heterocycle count: 2\\naliphatic ring count: 2\\naromatic carbocycle count: 2\\naromatic heterocycle count: 1\\naromatic ring count: 3\\nhydrogen-bond acceptor count: 6\\nhydrogen-bond donor count: 0\\nheteroatom count: 10\\nrotatable-bond count: 7\\nsaturated carbocycle count: 0\\nsaturated heterocycle count: 2\\nsaturated ring count: 2\\nring count: 5\\ntopological polar surface area: 69.06\\nQED drug-likeness: 0.46\\n\\nfunctional groups: none\\nWarnings: ModuleNotFoundError: No module named 'molgpka'; ModuleNotFoundError: No module named 'accfg'; Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\", \"warnings\": [\"ModuleNotFoundError: No module named 'molgpka'\", \"ModuleNotFoundError: No module named 'accfg'\", \"Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\"], \"errors\": [], \"latency_ms\": 0, \"cache_hit\": false}}, \"instructions\": [\"Use only the supplied structure and property-tool text, without analog evidence or memorized assay labels.\", \"Explain plausible structural and mechanistic liabilities, exposure limitations, and uncertainty.\", \"A structural alert is a hypothesis, not an observed endpoint. Absence of an alert does not establish a negative result.\", \"Do not invent species, population, strain, activation, exposure, or organism conditions.\"], \"required_json_schema\": {\"endpoint_prior\": \"pass | fail | mixed_or_unclear\", \"property_drivers\": [\"string\"], \"confidence\": \"high | moderate | low\", \"reasoning_summary\": \"string\", \"caveats\": [\"string\"]}}"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 5725,
+        "prompt_tokens": 973,
+        "total_tokens": 6698,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 768
+        },
+        "reasoning_tokens": 5255
+      },
+      "tool_count": 0
+    },
+    {
+      "task": "final_summary",
+      "status": "ok",
+      "prediction": "fail",
+      "response_text": "{\n  \"claims\": [\n    {\n      \"claim\": \"The query is ketoconazole and is structurally closest to itraconazole/hydroxy-itraconazole. Direct human CSF measurements showed that itraconazole and hydroxy-itraconazole were not detectable in CSF at ordinary oral doses, and CSF exposure remained very low even in a meningitis/cerebral histoplasmosis patient, indicating inadequate CNS access.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 11\",\n        \"Molecule 12\"\n      ],\n      \"record_ids\": [\n        \"Record 11-1\",\n        \"Record 11-2\",\n        \"Record 12-1\",\n        \"Record 12-4\"\n      ]\n    },\n    {\n      \"claim\": \"Itraconazole is an efflux-limited CNS penetrant: CSF/plasma ratios are typically below 10%, CNS penetration is described as poor, and brain exposure increases substantially after P-gp inhibition or P-gp knockout. The high structural similarity between ketoconazole and itraconazole predicts similar efflux-limited, inadequate CNS access.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 12\",\n        \"Molecule 16\"\n      ],\n      \"record_ids\": [\n        \"Record 12-13\",\n        \"Record 12-30\",\n        \"Record 16-3\",\n        \"Record 16-5\"\n      ]\n    },\n    {\n      \"claim\": \"Miconazole, another imidazole antifungal containing the dichlorophenyl-imidazole motif, penetrates very poorly into human CSF after intravenous administration, with CSF concentrations of only about 0.1-0.3 µg/mL, directly supporting the expectation of poor meaningful CNS access for this close antifungal class.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 2\"\n      ],\n      \"record_ids\": [\n        \"Record 2-1\",\n        \"Record 2-3\"\n      ]\n    },\n    {\n      \"claim\": \"Some structurally unrelated molecules showed measurable brain or CSF penetration, but their low structural similarity and different physicochemical/azole profiles make them non-transferable to the query and do not outweigh the direct azole antifungal CNS-exposure evidence.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\n        \"Molecule 1\",\n        \"Molecule 3\",\n        \"Molecule 5\",\n        \"Molecule 6\",\n        \"Molecule 9\"\n      ],\n      \"record_ids\": [\n        \"Record 1-1\",\n        \"Record 3-1\",\n        \"Record 5-1\",\n        \"Record 6-1\",\n        \"Record 9-1\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"fail\"\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a senior medicinal-chemist and CNS-exposure expert who reasons via analogies, taking evidence from related molecules to support your prediction.\n\nTask:\n- Endpoint: meaningful or adequate CNS access after systemic administration\n- Label scope: meaningful_cns_access.v1\n- Positive: pass\n- Negative: fail\n- Predict pass for meaningful or adequate BBB/CNS access and fail for insufficient access.\n- Meaningful access does not require ideal passive diffusion, high unbound brain exposure, or absence of every efflux signal.\n- Give the most weight to transferable direct brain, plasma, CSF, uptake, perfusion, influx, or prodrug evidence.\n- Do not treat one physicochemical liability or repeated records as independent proof of failure.\n\nUse the supplied query-property assessment only as an uncertain physicochemical prior. It is not experimental evidence or a label prediction. Let stronger, transferable experimental evidence override it.\n\nReasoning Instructions:\n- Your goal is to reason through the evidence via analogies. Is this molecule or record meaningfully similar to the query molecule? Does the experiment transfer? If it does transfer, how does this experimnetal value inform the property we're aiming to predict?\n- Morgan similarity measures structural similarity to the query. Where shown, the assay-transfer score (0 to 1) is a relative transfer signal, not a probability or an effect size. Some records have no exact score; do not infer one from their neighbors or retrieval order.\n- Ensure you consider and analyze every evidence block.\n- At the end, take the physicochemical properties and transferable evidence and come to a balanced conclusion for the query molecule.\n\nPitfalls to avoid:\n- Do not narrate schema bookkeeping.\n- Do not overly analyze the SMILES structures.\n- Do not blindly trust retrieval scores.\n- Do not infer the prediction from evidence order.\n- Do not skip records; briefly state why any materially uninformative evidence deserves little weight.\n\nOutput:\nReturn exactly one valid JSON object matching the requested schema. Return one or more concise claims using as many claims as needed to represent the experimental evidence that materially informs the decision. Each claim may cite any number of molecules, records, or both. At least one identifier is required per claim. Return only `claims` and `final_prediction`. `supportive` means evidence supporting your selected final prediction; `contradictory` means evidence supporting the alternative."
+        },
+        {
+          "role": "user",
+          "content": "Query molecule\nSMILES: CC(=O)N1CCN(c2ccc(OCC3COC(Cn4ccnc4)(c4ccc(Cl)cc4Cl)O3)cc2)CC1\n\nQuery condition\nCondition: This prediction concerns the query molecule under the disease condition meningitis.\n\n# Query-property prior\nThis is a physicochemical prior.\n\nendpoint prior: \"mixed_or_unclear\"\nproperty drivers: [\"High molecular weight (531 Da) exceeds the typical CNS-penetrant range and may reduce passive permeability and increase efflux liability.\", \"Moderate-high lipophilicity (cLogP 4.21) may favor membrane permeation but also increase plasma protein and tissue binding, lowering unbound brain exposure.\", \"Low topological polar surface area (69 Å²) and zero hydrogen-bond donors are favorable for passive blood-brain barrier diffusion.\", \"Six hydrogen-bond acceptors and three aromatic rings may contribute to P-glycoprotein efflux and nonspecific binding.\", \"The weakly basic imidazole is likely mostly neutral at pH 7.4, but pKa/logD were not measured, leaving ionization state uncertain.\", \"Rotatable-bond count (7) and fraction sp3 (0.38) are moderate and do not strongly argue for or against CNS access.\"]\nconfidence: \"moderate\"\nreasoning summary: \"The molecule presents a mixed physicochemical prior for CNS access. Favorable features include zero HBD, TPSA near the CNS-favorable threshold, and a mostly neutral/weakly basic character. Unfavorable features include a high molecular weight of 531 Da, cLogP above 4, six HBA, and three aromatic rings, which together suggest a higher risk of efflux, high protein/tissue binding, and reduced unbound brain concentrations. Because the property profile is borderline and pKa/logD data are unavailable, meaningful or adequate CNS access cannot be confidently predicted from structure alone.\"\ncaveats: [\"pKa and logD predictions were unavailable; actual ionization at pH 7.4 could alter permeability and efflux behavior.\", \"Structural alerts are hypotheses, not observed endpoints; no direct CNS exposure or efflux data are provided.\", \"High lipophilicity may also affect aqueous solubility and free fraction, but systemic administration bypasses absorption-related limitations.\", \"The imidazole moiety may inhibit cytochrome P450 enzymes, potentially altering systemic clearance and brain exposure unpredictably.\", \"No species, strain, or experimental conditions were specified, so predictions are limited to general physicochemical principles.\"]\n\n# Experimental evidence\n\n## Molecule 1\nSMILES: CNCc1ccc(OC)c([C@@]2(N3CCC[C@H]3c3ncco3)C(=O)N(S(=O)(=O)c3ccc(OC)cc3)c3ccc(Cl)cc32)c1\nMorgan similarity: 0.2269\nTransfer likelihood: 0.9095\n\nRecord 1-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: brain:plasma ratio\nResult: 0.31 ratio\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: permeable\n\nReported evidence: The pharmacokinetic profile of methylamine 18c in rat after intravenous administration of 2 mg/kg 18c showed a brain:plasma ratio of 0.31, indicating that this compound can penetrate the blood-brain barrier.\n\n## Molecule 2\nSMILES: Clc1ccc(COC(Cn2ccnc2)c2ccc(Cl)cc2Cl)c(Cl)c1\nMorgan similarity: 0.2791\nTransfer likelihood: 0.2956\n\nRecord 2-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: CSF concentration\nResult: impermeable BBB permeability\nAssay context: clinical study\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Concentrations were measured in ventricular, cisternal, and lumbar CSF 1 hour after a 1000mg intravenous dose.\"\nReported evidence: After an intravenous dose, miconazole penetrates very poorly into the cerebrospinal fluid (CSF). In a limited number of patients, intravenous doses of 1000mg produced concentrations of 0.1 to 0.25 µg/ml in ventricular, cisternal, and lumbar CSF 1 hour after the dose.\n\nRecord 2-2\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: cerebrospinal fluid concentration\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Miconazole showed meager entry into the cerebrospinal fluid, with concentrations ranging from 0.10-0.27 µg/ml.\n\nRecord 2-3\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: cerebrospinal fluid concentration\nResult: impermeable BBB permeability\nAssay context: intravenous infusion\nExperimental details:\n  - bbb_permeability_label: low_permeability\n\nAdditional details: \"therapeutic dose\"\nReported evidence: Miconazole penetrates the cerebrospinal fluid in low concentrations (0.1 to 0.3µg/ml) following intravenous infusion of a therapeutic dose.\n\nRecord 2-4\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: impermeable BBB permeability\nAssay context: intravenous administration\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"CSF penetration after intravenous administration is described as poor.\"\nReported evidence: Miconazole must be administered intravenously, into the CSF, or both and has moderate toxicity; and CSF penetration after intravenous administration is poor.\n\n## Molecule 3\nSMILES: CCOC(=O)NC1CCN(c2ncnc3c2nc(-c2ccccc2Cl)n3-c2ccc(Cl)cc2)CC1\nMorgan similarity: 0.2381\nTransfer likelihood: 0.9008\n\nRecord 3-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: Brain to plasma ratio\nResult: permeable BBB permeability\nAssay context: oral dosing\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: good_penetration\n\nAdditional details: \"Sprague-Dawley (SD) rats; dose of 10 mg/kg\"\nReported evidence: Following oral dosing at 10 mg/kg in Sprague-Dawley (SD) rats, compound 6 showed brain to plasma ratios ranging from 0.14–0.46, representing significant brain penetration.\n\n## Molecule 4\nSMILES: CC(=O)N1CCC(c2nccnc2Oc2ccc(C(=O)c3nc4ccccc4[nH]3)cc2)CC1\nMorgan similarity: 0.2255\nTransfer likelihood: 0.1738\n\nRecord 4-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: CSF/plasma concentration ratio\nResult: impermeable BBB permeability\nAssay context: in vivo\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Dosed with 6 mg oral AMG 579\"\nReported evidence: In healthy human subjects administered a 6 mg oral dose of AMG 579, the concentrations of AMG 579 in the cerebrospinal fluid (CSF) were low relative to plasma, and were less than 5% of the corresponding plasma concentrations at all timepoints.\n\n## Molecule 5\nSMILES: C[C@]1(COc2ccc(N3CCC(Oc4ccc(OC(F)(F)F)cc4)CC3)cc2)Cn2cc([N+](=O)[O-])nc2O1\nMorgan similarity: 0.2202\nTransfer likelihood: 0.9184\n\nRecord 5-1\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nAssay context: in vivo\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Radioactivity from 14C-delamanid was found broadly distributed in various tissues, including the central nervous system.\"\nReported evidence: After a single oral administration of 14C-delamanid to rats, radioactivity was broadly distributed in various tissues, including the central nervous system, indicating that 14C-delamanid permeated the brain blood barrier.\n\n## Molecule 6\nSMILES: Cc1cnc(-c2cc(N3CCN(C(=O)CCS(C)(=O)=O)CC3)ncc2Cl)c(C)c1\nMorgan similarity: 0.2121\nTransfer likelihood: 0.9061\n\nRecord 6-1\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nAssay context: measurement of cerebrospinal fluid\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Significant concentrations of intact compound were measured in the CSF following oral dosing of 30 and 100 mg/kg.\"\nReported evidence: Following oral administration (30 and 100 mg/kg), significant concentrations of intact PF-5274857 were measured in the cerebrospinal fluid, indicating that pharmacologically effective doses achieved blood-brain barrier penetration.\n\n## Molecule 7\nSMILES: Cc1cc(-c2ccc(NC(=O)[C@H](CC(C)C)c3cccc(-c4ccc(N5CCOCC5)cc4)c3)cc2)ccn1\nMorgan similarity: 0.233\nTransfer likelihood: 0.1121\n\nRecord 7-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: CSF concentration / unbound plasma concentration\nResult: impermeable BBB permeability\nAssay context: in vivo PD model\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"The poor brain penetration was associated with high lipophilicity (cLog P 6.86) and poor passive permeability as measured in LLC-PK cells (Avg Papp <1 µcm/s).\"\nReported evidence: For compound 70, the measured CSF concentration (2 nM) was significantly lower than the unbound plasma concentration (290 nM), a shift attributed to high lipophilicity (cLog P 6.86) and poor passive permeability (LLC-PK Avg Papp <1 µcm/s).\n\n## Molecule 8\nSMILES: C[C@@H](NC(=O)c1nn(-c2ccc(Cl)cc2Cl)c2c1CCCC/C2=C\\c1ccc(Cl)cn1)c1ccccn1\nMorgan similarity: 0.2054\nTransfer likelihood: 0.8976\n\nRecord 8-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: B/P ratio\nResult: 0.48 ratio\nAssay context: mouse tissue distribution study\nSpecies: mouse\nExperimental details:\n  - bbb_permeability_label: good_penetration\n\nAdditional details: \"Sample collected at 2 h.\"\nReported evidence: Compound 2s showed a higher degree of brain penetration with a brain/plasma (B/P) ratio of 0.48 in a mouse tissue distribution study.\n\n## Molecule 9\nSMILES: NC(=O)c1ccc(Oc2ccc(CN3CCC[C@H]3c3cccnc3)cc2)c(Cl)c1\nMorgan similarity: 0.2115\nTransfer likelihood: 0.9225\n\nRecord 9-1\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nAssay context: clinical trials\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: good_penetration\n\nReported evidence: [11C]LY2795050 was assessed in clinical trials and was shown to possess favorable brain uptake.\n\n## Molecule 10\nSMILES: CCOC(=O)N1CCC(=C2c3ccc(Cl)cc3CCc3cccnc32)CC1\nMorgan similarity: 0.2268\nTransfer likelihood: 0.1927\n\nRecord 10-1\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: impermeable BBB permeability\nAssay context: whole body autoradiography\nSpecies: mice and monkeys\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: The absence of CNS effects of loratadine has been attributed to difficulty in crossing the blood-brain barrier, as shown by the results of whole body autoradiography in mice and monkeys.\n\n## Molecule 11\nSMILES: CC(O)C(C)n1ncn(-c2ccc(N3CCN(c4ccc(OC[C@H]5CO[C@](Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O\nMorgan similarity: 0.5638\n\nRecord 11-1\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7725\nEndpoint: CSF concentration\nResult: not detectable\nAssay context: CSF measurement\nSpecies: human\nConditions: \"oral ITZ dose below 800 mg/d (specifically 200-600 mg/d)\"\nAdditional details: \"Lack of detectability is attributed to lipophilic characteristics.\"\nReported evidence: Mainly because of their lipophilic characteristics, neither ITZ nor hydroxy-ITZ was detectable in the CSF until the oral ITZ dose reached 800 mg/d.\n\nRecord 11-2\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6324\nEndpoint: Cmin in CSF\nResult: <25 µg/L\nAssay context: CSF measurements\nSpecies: human\nConditions: \"cerebral histoplasmosis and meningitis\"\nAdditional details: \"Observed despite high plasma exposure and low serum protein levels (21 g/L).\"\nReported evidence: In a patient with cerebral histoplasmosis and meningitis, the CSF trough concentration (Cmin) of hydroxy-itraconazole was <25 µg/L, despite high plasma exposure and low serum protein levels (21 g/L).\n\n## Molecule 12\nSMILES: CCC(C)n1ncn(-c2ccc(N3CCN(c4ccc(OC[C@H]5CO[C@](Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O\nMorgan similarity: 0.5532\n\nRecord 12-1\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8234\nEndpoint: CSF concentrations / plasma concentrations\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Itraconazole is characterized by poor brain penetration, with cerebrospinal fluid (CSF) concentrations typically being less than 0.2% of the plasma concentrations.\n\nRecord 12-2\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7894\nEndpoint: blood-to-brain transport\nResult: The rabies virus-derived peptide RVG29 can deliver the small-molecule itraconazole across the BBB by utilizing the neuronal nicotinic acetylcholine receptor (AchR) [65].\nExperimental details:\n  - evidence_basis: qualitative substrate claim\n  - mediator_name: neuronal nicotinic acetylcholine receptor (AchR)\n  - transport_mechanism: receptor-mediated transcytosis\n\nReported evidence: The rabies virus-derived peptide RVG29 can deliver the small-molecule itraconazole across the BBB by utilizing the neuronal nicotinic acetylcholine receptor (AchR) [65].\n\nRecord 12-3\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8002\nResult: impermeable BBB permeability\nSpecies: people and small animals\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Drug concentrations are typically low in cerebrospinal fluid (CSF).\"\nReported evidence: Concentrations of itraconazole are typically low in cerebrospinal fluid (CSF), and the drug does not cross the blood-brain, blood-prostate, or blood-ocular barriers well.\n\nRecord 12-4\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8043\nEndpoint: CSF/serum\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: In the pharmacology of azole antifungal agents, itraconazole is reported to have poor cerebrospinal fluid (CSF) penetration with a CSF/serum ratio of <10%.\n\nRecord 12-5\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8258\nResult: impermeable BBB permeability\nSpecies: human, cat, rabbit\nExperimental details:\n  - bbb_permeability_label: low_permeability\n\nReported evidence: Despite limited CNS penetration, ITZ has been used successfully to treat cryptococcal meningitis in people, cats and experimental rabbits.\n\nRecord 12-6\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8567\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Noted as highly protein-bound.\"\nReported evidence: Itraconazole is highly protein-bound and penetrates poorly into the CNS.\n\nRecord 12-7\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8001\nEndpoint: CSF levels % of serum levels\nResult: impermeable BBB permeability\nSpecies: rabbit\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Itraconazole penetrates poorly into the CNS, with nine percent or less of corresponding serum levels found in the CSF of rabbits.\n\nRecord 12-8\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7025\nEndpoint: CSF/serum concentration (%)\nResult: <10 %\nAssay context: administration of currently recommended doses to normal volunteers\nSpecies: human\nAdditional details: \"It is also noted to have less cerebrospinal fluid penetration compared with fluconazole.\"\nReported evidence: In a table of pharmacokinetic properties in normal volunteers, itraconazole showed a CSF/serum concentration of <10%.\n\nRecord 12-9\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.624\nEndpoint: brain : plasma ratio\nResult: close to 1\nSpecies: dogs\nConditions: \"receiving itraconazole for 12 months\"\nReported evidence: The brain : plasma ratio for itraconazole is close to 1 in dogs receiving itraconazole for 12 months.\n\nRecord 12-10\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6112\nEndpoint: brain or meningeal concentrations / plasma concentrations\nResult: slightly exceeded\nSpecies: dogs\nConditions: \"long-term administration\"\nReported evidence: In dogs, levels of itraconazole at brain or meningeal sites slightly exceeded plasma concentrations during long-term administration.\n\nRecord 12-11\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.8669\nEndpoint: BBB permeability\nResult: 4.8-fold\nAssay context: in vitro\nConditions: \"delivered via H-ApoE-PDA@ITZ-NPs compared to ITZ-NPs\"\nAdditional details: \"The value represents a 4.8-fold increase in permeability.\"\nReported evidence: H-ApoE-PDA@ITZ-NPs increased in vitro BBB permeability by 4.8-fold compared to the ITZ-NPs.\n\nRecord 12-12\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.8746\nResult: permeable BBB permeability\nAssay context: in vivo brain distribution\nSpecies: mice\nConditions: \"administered as ITZ-CD formulation\"\nExperimental details:\n  - bbb_permeability_label: permeable\n  - bbb_transport_label: passive_diffusion\n\nReported evidence: In mice, itraconazole administered in the ITZ-CD formulation released rapidly after administration and accumulated in the brain mainly by passive diffusion.\n\nRecord 12-13\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8506\nResult: substrate efflux-transporter substrate status\nAssay context: Mouse (OF1) in vivo brain concentration measurement after intraperitoneal administration of itraconazole (10 mg/kg) with and without P-gp inhibitor GF120918 (10 mg/kg i.p.) in mice infected with C. neoformans (NIH 52D strain).\nConditions: \"Intracerebral infection with C. neoformans (NIH 52D strain).\"\nExperimental details:\n  - evidence_type: in_vivo_brain_exposure\n  - interaction_conclusion: substrate\n  - perturbation: co-administration of P-gp inhibitor GF120918 at 10 mg/kg i.p.\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"The study included healthy mice (no infection) as a control. The infection itself increased ITC brain concentrations, and P-gp inhibition further increased them in infected mice. No significant differences in plasma AUC were observed between groups, indicating the effect is specific to brain exposure.\"\nReported evidence: Itraconazole (ITC) brain exposure was assessed in OF1 mice infected with C. neoformans after i.p. administration of 10 mg/kg ITC, with or without pretreatment with the P-gp inhibitor GF120918 (10 mg/kg i.p.). The brain concentration versus time curves and brain/plasma ratios showed significant differences between all three groups (healthy, infected, infected + GF120918). In infected mice, P-gp inhibition further increased ITC brain exposure, indicating that ITC is a substrate of P-gp at the BBB and that its brain penetration is limited by P-gp efflux.\n\nRecord 12-14\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8495\nResult: permeable BBB permeability\nAssay context: in vivo\nSpecies: rodent\nExperimental details:\n  - bbb_permeability_label: high_permeability\n  - bbb_transport_label: efflux_substrate\n\nAdditional details: \"ABCB1/Abcb1a-dependent BBB permeability; identified as an ABCB1 substrate and ATPase activator.\"\nReported evidence: Itraconazole is described as an ABCB1 substrate and ATPase activator that displays high passive permeability and shows an ABCB1/Abcb1a-dependent BBB permeability in vivo, based on rodent BBB data.\n\nRecord 12-15\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.856\nResult: inhibitor efflux-transporter inhibition status\nAssay context: In vitro cellular uptake assay in HT-29, SKOV3, and YM-1 cancer cell lines; itraconazole used as a P-gp inhibitor at 1 µM and 5 µM\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n\nAdditional details: \"Itraconazole increased accumulation of the P-gp substrate 99mTc-MIBI in P-gp-expressing cells (HT-29 and SKOV3) but not in YM-1 (P-gp-negative), confirming its P-gp inhibition.\"\nReported evidence: In the paper, itraconazole is stated to be a P-gp inhibitor. This is supported by its ability to increase the cellular accumulation of the P-gp substrate 99mTc-MIBI in a concentration-dependent manner in HT-29 and SKOV3 cells.\n\nRecord 12-16\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8775\nEndpoint: inhibition_potency\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Caco-2 cell permeability assay using a P-gp substrate; IC50 calculated from normalized substrate flux (NSF) method\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n\nAdditional details: \"The IC50 value determined by the NSF method (6 µM) is compared with the ER method (2 µM) from the same publication. Substrate not explicitly specified in the immediate text but likely digoxin per paragraph 58.\"\nReported evidence: Sugimoto et al. found that the IC50 values generated for over 20 drugs from Papp,BL-AP were larger than those from ER for compounds tested, and there was a positive correlation between these IC50 values. Cook et al. found that for the majority of the 30 compounds they tested in a Caco-2 cell assay, IC50 values were 2-fold more potent by the ER method. For example, the IC50 value for itraconazole was 6 µM based upon NSF.\n\nRecord 12-17\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8486\nResult: inhibitor efflux-transporter inhibition status\nAssay context: LLC-GA5-COL150 cell monolayers (MDR1-transfected), net basal-to-apical transport of [3H]digoxin, 50 µM inhibitor\nConditions: \"in vitro MDR1-overexpressing cell line\"\nExperimental details:\n  - evidence_type: bidirectional_transport\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Inhibitory effect measured as ratio of net basal-to-apical transport of [3H]digoxin in presence vs absence of antifungal drug (50 µM).\"\nReported evidence: In this study, itraconazole was found to have inhibitory effects on MDR1 transport activity, measured as the effect on net basal-to-apical transport of [3H]digoxin across LLC-GA5-COL150 cell monolayers at 50 µM.\n\nRecord 12-18\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8554\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Human pharmacokinetic study; healthy volunteers received itraconazole (200 mg daily) for 5 days with a single oral 20-mg dose of domperidone on day 5\nConditions: \"Co-administered with domperidone in a human crossover study\"\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"The algorithm attributes the increased domperidone exposure to reduced first-pass elimination via inhibition of CYP3A and/or MDR1; no direct MDR1 inhibition assay was performed.\"\nReported evidence: The authors state: 'The interaction is probably mainly due to a reduced first pass elimination by inhibition of CYP3A and/or MDR1.' This suggests that itraconazole inhibits MDR1 (P-glycoprotein), although the attribution to MDR1 is speculative and based on increased plasma domperidone concentrations from a clinical interaction study.\n\nRecord 12-19\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8535\nEndpoint: other\nResult: substrate efflux-transporter substrate status\nAssay context: Mice pretreated with GF-120918\nConditions: \"Pretreatment with GF-120918, Cryptococcus neoformans infection\"\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: substrate\n  - perturbation: Pretreatment with GF-120918 (P-gp inhibitor)\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Cerebral itraconazole AUC significantly increased in mice pretreated with the P-gp inhibitor GF-120918 compared to untreated mice infected with Cryptococcus neoformans\"\nReported evidence: GF-120918 (a P-gp inhibitor) in pretreated mice significantly increased the cerebral itraconazole AUC compared to that of untreated mice infected with Cryptococcus neoformans, confirming P-gp-mediated efflux of itraconazole.\n\nRecord 12-20\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8526\nResult: substrate efflux-transporter substrate status\nAssay context: P-gp knockout mice\nConditions: \"P-gp knockout mice\"\nExperimental details:\n  - evidence_type: genetic_perturbation\n  - interaction_conclusion: substrate\n  - perturbation: P-gp knockout\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Accumulation increased in knockout vs control; no numeric value reported\"\nReported evidence: Accumulation of itraconazole in the brain tissue of P-gp knockout mice was significantly increased compared to that in control mice, establishing itraconazole as a P-gp substrate.\n\nRecord 12-21\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8647\nEndpoint: Hirngewebespiegel\nResult: höher\nSpecies: mice, rats\nConditions: \"P-glycoprotein-deficient mice; rats pretreated with Verapamil (P-gp inhibitor)\"\nAdditional details: \"Comparison against control animals with normal P-gp expression\"\nReported evidence: Itraconazole brain tissue levels were higher in P-glycoprotein-deficient mice compared to control animals and were also increased in rats after pretreatment with Verapamil, a P-glycoprotein inhibitor.\n\nRecord 12-22\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8514\nResult: substrate efflux-transporter substrate status\nAssay context: In vivo brain and plasma concentration comparison in mdr1a(-/-) vs (+/+) mice\nExperimental details:\n  - evidence_type: in_vivo_brain_exposure\n  - interaction_conclusion: substrate\n  - perturbation: mdr1a knockout\n  - transporter_identifier: UniProt:P21447\n\nAdditional details: \"Higher concentration in mdr1a(-/-) brains and plasma indicates substrate for mouse mdr1a.\"\nReported evidence: Another azole antifungal agent, itraconazole (ITZ), is a substrate for mdr1a Pgp. This evidence came in part from studies demonstrating a higher concentration of ITZ in the brains and plasma of mdr1a (-/-) compared with (+/+) mice.\n\nRecord 12-23\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8694\nEndpoint: inhibition_potency\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Caco-2 cell monolayers, [3H]digoxin (1 µM) as substrate P-gp-mediated transport\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Itraconazole inhibited P-gp-mediated digoxin transport; IC50 not explicitly stated but less than some others.\"\nReported evidence: Itraconazole was among the P-gp inhibitors tested, following cyclosporin A in potency, for inhibition of P-gp-mediated digoxin transport in Caco-2 cells.\n\nRecord 12-24\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8583\nResult: inhibitor efflux-transporter inhibition status\nAssay context: In vitro: mouse brain capillary endothelial MBEC4 cells and porcine kidney epithelial LLC-PK1 cells; accumulation assays using vinblastine, vincristine, daunorubicin, doxorubicin as probe substrates\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"ITC inhibited P-gp-mediated efflux of vinblastine and vincristine in MBEC4 cells, and of vinblastine, daunorubicin, and doxorubicin in LLC-PK1 cells. MBEC4 cells are of mouse origin (mouse P-gp), LLC-PK1 are porcine (porcine P-gp).\"\nReported evidence: In vitro data reported itraconazole (ITC) as a P-gp inhibitor; it increased accumulation of vinblastine and vincristine in mouse brain capillary endothelial MBEC4 cells, and increased accumulation of vinblastine, daunorubicin, and doxorubicin in porcine kidney epithelial LLC-PK1 cells, consistent with inhibition of P-gp-mediated efflux.\n\nRecord 12-25\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8574\nEndpoint: other\nResult: inhibitor efflux-transporter inhibition status\nAssay context: classification based on in vitro and in vivo evidence (review compilation)\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Clinical relevance: Yes. CYP3A4: Inh/sub. AUC digoxin + itraconazole / AUCdigoxin = 1.68.\"\nReported evidence: Itraconazole is classified as a P-gp inhibitor with clinical relevance 'Yes'. The AUC of digoxin increased 1.68-fold with itraconazole.\n\nRecord 12-26\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8534\nResult: substrate efflux-transporter substrate status\nAssay context: Literature review; Table 1 summarizes P-glycoprotein substrate and inhibitor classifications.\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Table 1 in paragraph 33 includes P-glycoprotein (P-gp) substrate and inhibitor columns for various azoles and immunosuppressants.\"\nReported evidence: In Table 1, itraconazole is listed as a P-glycoprotein substrate (yes) and as a P-glycoprotein inhibitor (yes). No experimental details are provided beyond this classification.\n\nRecord 12-27\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8516\nResult: inhibitor efflux-transporter inhibition status\nAssay context: In vivo co-administration with ivermectin in sheep (Ballent et al. 2007)\nConditions: \"Intra-ruminal administration\"\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Itraconazole is described as a P-gp inhibitor; it increased ivermectin plasma and abomasums concentrations when co-administered intra-ruminally.\"\nReported evidence: Itraconazole is described as a P-gp inhibitor when co-administered with ivermectin, and it increased ivermectin plasma and tissue concentrations, consistent with P-gp inhibition.\n\nRecord 12-28\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8502\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Qualitative statement\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:Q9NGP5\n\nAdditional details: \"The entity list maps BCRP to UniProt:Q9NGP5 (zebrafish ortholog), though the text likely refers to the human BCRP.\"\nReported evidence: Itraconazole is reported as a BCRP inhibitor for the first time, based on a study cited in the paragraph. The text states: 'Recently, a study demonstrated for the first time that itraconazole is a BCRP inhibitor.' This provides molecular insights into pharmacokinetic drug interactions with triazole antifungals.\n\nRecord 12-29\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8487\nResult: inhibitor efflux-transporter inhibition status\nAssay context: rhodamine 123 accumulation assay in P-gp-overexpressing MCF7R cells\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: NCBIGene:5243\n\nAdditional details: \"One of the 16 reference P-gp inhibitors tested; 14/16 showed increased rhodamine 123 accumulation.\"\nReported evidence: Itraconazole was one of the 16 structurally-unrelated drugs known to interact with P-gp (P-gp inhibitors) evaluated using a rhodamine 123 accumulation assay in P-gp-overexpressing MCF7R cells; 14/16 of these P-gp inhibitors increased rhodamine 123 accumulation, allowing determination of IC50 values towards P-gp-mediated transport.\n\nRecord 12-30\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8574\nResult: increased_permeability\nConditions: \"in response to the P-glycoprotein inhibitor GF120918\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n  - bbb_transport_label: efflux_substrate\n\nAdditional details: \"intracerebral distribution is closely related to the role of P-glycoprotein\"\nReported evidence: The intracerebral distribution of itraconazole is closely related to the role of P-glycoprotein, and its permeability to the BBB increases significantly in response to the P-glycoprotein inhibitor GF120918.\n\nRecord 12-31\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.865\nEndpoint: inhibition_potency\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Caco-2 cell monolayers, PappBtoA of [14C]dabigatran etexilate (1 µM)\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"IC50 < 1 µM\"\nReported evidence: Itraconazole showed strong inhibition of P-gp-mediated transport of dabigatran etexilate in Caco-2 cells, with IC50 values less than 1 µM.\n\nRecord 12-32\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8506\nResult: efflux_substrate\nSpecies: mouse\nConditions: \"P-glycoprotein deficient mice\"\nExperimental details:\n  - bbb_transport_label: efflux_substrate\n\nAdditional details: \"P-glycoprotein mediated efflux of itraconazole at the blood-brain barrier\"\nReported evidence: Studies in mice with deficient expression of the P-glycoprotein revealed higher brain tissue concentrations of itraconazole compared to animals with normal P-glycoprotein expression, indicating that low CNS concentrations of itraconazole are at least in part caused by P-glycoprotein mediated efflux of itraconazole at the blood-brain barrier.\n\nRecord 12-33\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8576\nEndpoint: other\nResult: inhibitor efflux-transporter inhibition status\nAssay context: LLC-PK1 cells expressing rat Abcb1a; probe substrate BODIPY-prazosin; flow cytometry accumulation assay\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P21447\n\nAdditional details: \"Emax for inhibition of BODIPY-prazosin efflux: 0.73\"\nReported evidence: One exception to this was itraconazole inhibition of BODIPY–prazosin efflux, for which Emax values of 0.81, 0.73, and 0.82 were calculated for cells expressing human ABCB1, rat Abcb1a, or Abcb1b, respectively.\n\nRecord 12-34\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8564\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Bidirectional transport of [3H]digoxin (25 nM) across LLC-GA5-COL150 monolayers overexpressing human MDR1 (Pgp) in the presence of 10 µM itraconazole.\nConditions: \"LLC-GA5-COL150 monolayers overexpressing human MDR1 (Pgp); digoxin substrate present at 25 nM\"\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Itraconazole (10 µM) decreased basolateral-to-apical digoxin transport by 50% and increased apical-to-basolateral transport by approximately 3-fold, indicating inhibition of Pgp-mediated efflux. Itraconazole was more potent than amiodarone.\"\nReported evidence: In the same assay, 10 µM itraconazole inhibited Pgp-mediated efflux of [3H]digoxin, as shown by the decrease in basolateral-to-apical transport and increase in apical-to-basolateral transport. Itraconazole is therefore an inhibitor of Pgp.\n\nRecord 12-35\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8626\nResult: inhibitor efflux-transporter inhibition status\nAssay context: in vitro inhibition assay (referenced in table)\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Summary table from references 14,15,19,20,47,65\"\nReported evidence: A summary table listing interactions of triazole antifungals as inhibitors shows that itraconazole inhibits P-gp (ABCB1), with 'Yes' in the P-gp column.\n\nRecord 12-36\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.853\nEndpoint: other\nResult: inhibitor efflux-transporter inhibition status\nAssay context: in vivo rat study, coadministered with IVM\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nReported evidence: The inhibitory effect of P-gp modulators on the IVM intestinal secretion accounted for a reduction in the ratio between the Cmax in intestinal content and Cmax in the intestinal wall of 43% (ITZ) compared with the control group, indicating that ITZ inhibits P-gp-mediated efflux of IVM.\n\nRecord 12-37\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8507\nEndpoint: other\nResult: inhibitor efflux-transporter inhibition status\nAssay context: clinical pharmacokinetic interaction study in humans\nConditions: \"coadministration with rosuvastatin\"\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:Q4GZT4\n\nAdditional details: \"AUC of rosuvastatin increased by up to 39% upon coadministration; rosuvastatin is a BCRP substrate.\"\nReported evidence: Itraconazole inhibits BCRP, as demonstrated by a study where coadministration of itraconazole with the BCRP substrate rosuvastatin increased rosuvastatin AUC by up to 39%; the text states that inhibition of BCRP by itraconazole could contribute to this interaction.\n\n## Molecule 13\nSMILES: O=C(Nc1ccc(OC(F)(F)F)cc1)NC1CCN(C(=O)CCCCNc2c3c(nc4cc(Cl)ccc24)CCCC3)CC1\nMorgan similarity: 0.2\n\nRecord 13-1\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.7948\nEndpoint: Pe\nResult: 8.4 10^-6 cm/s\nAssay context: PAMPA-BBB\nExperimental details:\n  - bbb_permeability_label: high_permeability\n  - bbb_transport_label: passive_diffusion\n\nReported evidence: Compound 12c exhibited a BBB permeability (Pe) of 8.4 ± 0.7 x 10–6 cm s–1, which is categorized as high brain permeability (CNS+), as measured by the PAMPA-BBB assay modeling passive diffusion.\n\n## Molecule 14\nSMILES: COc1ccc(N2CCN(c3ccc(=O)n(CC(=O)N/N=C/c4ccc(Cl)cc4)n3)CC2)cc1\nMorgan similarity: 0.26\n\nRecord 14-1\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.8704\nResult: high passive BBB permeability\nExperimental details:\n  - assay_type: PAMPA-BBB\n  - passive_bbb_interpretation: permeable_or_high\n\nAdditional details: \"Qualitative result from PAMPA test; no numeric permeability value reported.\"\nReported evidence: According to the PAMPA test, compound 40 (E)-N'-(4-chlorobenzylidene)-2-(3-(4-(4-methoxyphenyl)piperazin-1-yl)-6-oxopyridazin-1(6H)-yl)acetohydrazide crosses the blood–brain barrier very quickly and has good CNS permeability.\n\n## Molecule 15\nSMILES: CC(C)Oc1ccc(C(=O)Cn2ccnc2)cc1-n1c(CN2CCN(C(=O)COc3ccc(Cl)cc3)CC2)nc2ccccc2c1=O\nMorgan similarity: 0.307\n\nRecord 15-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8484\nResult: substrate efflux-transporter substrate status\nAssay context: Cytotoxicity assays in A673 cells transfected with P-gp and UO-31 cells with CRISPR ABCB1 knockout\nExperimental details:\n  - evidence_type: genetic_perturbation\n  - interaction_conclusion: substrate\n  - perturbation: P-gp overexpression and CRISPR-mediated ABCB1 knockout\n  - transporter_identifier: NCBIGene:5243\n\nAdditional details: \"P-gp-mediated resistance was reversed by knockout.\"\nReported evidence: P-gp overexpression conferred resistance to imidazole ketone erastin in A673 cells expressing P-gp, and this resistance was reversed by CRISPR-mediated knockout of ABCB1 in UO-31 renal cancer cells, confirming that imidazole ketone erastin is a P-gp substrate.\n\n## Molecule 16\nSMILES: CCC(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O\nMorgan similarity: 0.5532\n\nRecord 16-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8514\nEndpoint: brain_to_plasma_ratio\nResult: substrate efflux-transporter substrate status\nAssay context: Rats, intravenous ITZ 5 mg/kg, ketoconazole 20 mg/kg coadministered 5 min prior\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: substrate\n  - perturbation: ketoconazole (20 mg/kg) coadministration\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Brain Kp of ITZ significantly increased; inhibitory effects of both verapamil and ketoconazole were considered competitive.\"\nReported evidence: Coadministration of ketoconazole (20 mg/kg) with ITZ (5 mg/kg) significantly increased the brain Kp value of ITZ in rats, and the authors considered the inhibitory effects of both verapamil and ketoconazole to be competitive, indicating that ITZ is a substrate of P-gp at the BBB.\n\nRecord 16-2\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8543\nEndpoint: other\nResult: inhibitor efflux-transporter inhibition status\nAssay context: LLC-GA5-COL150 cells; co-administration with radiolabeled substrates; bidirectional transport measured at 3 h (digoxin, vinblastine) or 24 h (daunorubicin, doxorubicin)\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n\nAdditional details: \"Itraconazole (1 and 100 µM) decreased basal-to-apical transport and increased apical-to-basal transport of all four drugs in a concentration-dependent manner, confirming P-gp inhibition. For example, digoxin B-to-A reduced from 16.9% to 12.9% (1 µM) and 9.3% (100 µM); A-to-B increased from 1.4% to 3.9% and 6.8%. Vinblastine B-to-A was 22.3% (control), 23.6% (1 µM, not significantly different), and 22.0% (100 µM); A-to-B increased from 0.9% to 2.9% and 6.0%. The text explicitly states that itraconazole inhibited P-gp.\"\nReported evidence: The text explicitly states that itraconazole inhibited P-gp on the apical membrane, and the transport data in Table [p:28] shows that itraconazole (1 and 100 µM) reduced basal-to-apical transport and increased apical-to-basal transport of [3H]digoxin, [3H]vinblastine, [3H]daunorubicin, and [14C]doxorubicin in LLC-GA5-COL150 cells, confirming itraconazole as a P-gp inhibitor.\n\nRecord 16-3\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8552\nResult: substrate efflux-transporter substrate status\nAssay context: mdr1a knockout mice, intravenous injection of ITZ, measurement of brain-to-plasma concentration ratio (Kp)\nConditions: \"mdr1a knockout mice\"\nExperimental details:\n  - evidence_type: genetic_perturbation\n  - interaction_conclusion: substrate\n  - perturbation: mdr1a knockout\n  - transporter_identifier: UniProt:P21447\n\nAdditional details: \"Brain Kp value significantly increased in mdr1a knockout mice compared to controls.\"\nReported evidence: In mdr1a knockout mice, the brain Kp value for itraconazole was significantly increased compared with that of control mice, indicating that P-gp (Mdr1a) mediates efflux of itraconazole from the brain.\n\nRecord 16-4\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8482\nResult: efflux_substrate\nAssay context: mdr1a −/− mice\nSpecies: mouse\nConditions: \"mdr1a knockout mice\"\nExperimental details:\n  - bbb_transport_label: efflux_substrate\n\nAdditional details: \"The increased brain accumulation in mdr1a −/− mice indicates ITZ is a substrate of the mdr1a P-gp expressed in the brain endothelial cells.\"\nReported evidence: In mdr1a −/− mice, the accumulation of ITZ in the brain tissue was significantly increased compared with that in mdr1a +/+ mice, suggesting that ITZ is a substrate of mdr1a P-gp expressed in mouse brain endothelial cells.\n\nRecord 16-5\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8522\nEndpoint: brain_to_plasma_ratio\nResult: substrate efflux-transporter substrate status\nAssay context: Rats, intravenous ITZ 5 mg/kg, verapamil 5 mg/kg coadministered 5 min prior\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: substrate\n  - perturbation: verapamil (5 mg/kg) coadministration\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Brain Kp significantly increased with verapamil; plasma ITZ unchanged.\"\nReported evidence: Coadministration of verapamil (5 mg/kg) with ITZ (5 mg/kg) significantly increased the brain Kp value of ITZ in rats without altering plasma ITZ concentrations, suggesting that ITZ is a P-gp substrate and P-gp limits its brain exposure.\n\n## Molecule 17\nSMILES: CC1(C)CCC(CN2CCN(c3ccc(C(=O)NS(=O)(=O)c4ccc(NCC5CCOCC5)c([N+](=O)[O-])c4)c(Oc4cnc5[nH]ccc5c4)c3)CC2)=C(c2ccc(Cl)cc2)C1\nMorgan similarity: 0.2254\n\nRecord 17-1\nLevel: L5\nEvidence family: influx_transport\nEndpoint: blood-to-brain transport\nResult: In a recently published case of chronic lymphocytic leukemia with CNS involvement, single agent venetoclax was given along with intrathecal chemotherapy and led to disease clearance. Authors have measured venetoclax concentration in the CSF and have shown that venetoclax can cross the blood brain barrier and able to achieve a potential therapeutic concentrations there [9].\nExperimental details:\n  - evidence_basis: qualitative substrate claim\n  - transport_mechanism: unspecified mediated BBB uptake\n\nAdditional details: \"Based on measurement of venetoclax concentration in CSF in a chronic lymphocytic leukemia patient with CNS involvement, as cited from reference 9.\"\nReported evidence: In a recently published case of chronic lymphocytic leukemia with CNS involvement, single agent venetoclax was given along with intrathecal chemotherapy and led to disease clearance. Authors have measured venetoclax concentration in the CSF and have shown that venetoclax can cross the blood brain barrier and able to achieve a potential therapeutic concentrations there [9].\n\n## Molecule 18\nSMILES: CCc1c2c(nc3ccc(OC(=O)N4CCC(N5CCCCC5)CC4)cc13)-c1cc3c(c(=O)n1C2)COC(=O)[C@]3(O)CC\nMorgan similarity: 0.168\n\nRecord 18-1\nLevel: L5\nEvidence family: influx_transport\nResult: permeable BBB permeability\nAssay context: human BBB organoid model\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Referred to in the text as CPT-11.\"\nReported evidence: BTP-7-CPT displayed the highest influx into the organoids, comparable to that of CPT-11 which is known to cross the BBB.\n\n## Molecule 19\nSMILES: CN1CCN(C2=Nc3cc(Cl)ccc3Nc3ccccc32)CC1\nMorgan similarity: 0.1978\n\nRecord 19-1\nLevel: L5\nEvidence family: influx_transport\nEndpoint: Kp_uu brain\nResult: > 2\nAssay context: microdialysis\nSpecies: rodents\nExperimental details:\n  - bbb_transport_label: transporter_mediated\n\nAdditional details: \"Measurement performed using brain homogenate and microdialysis.\"\nReported evidence: Clozapine, determined both in brain homogenate and by microdialysis, has an unbound free drug concentration in the brain compared to the blood (Kp_uu brain) greater than 2 in rodents, suggesting that carrier-mediated transport of clozapine is responsible for this above unity Kp_uu brain.\n\n# Required JSON shape\n{\n  \"claims\": [\n    {\n      \"claim\": \"concise evidence-grounded statement\",\n      \"evidence_role\": \"supportive | contradictory\",\n      \"molecule_ids\": [\n        \"Molecule N\"\n      ],\n      \"record_ids\": [\n        \"Record N-N\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"pass | fail\"\n}"
+        },
+        {
+          "role": "user",
+          "content": "Retry the flat-context-final response (attempt 2 of 4). Return one complete JSON object matching the required schema. Validation errors: unknown_identifiers:0:record_ids:11-1,11-2,12-1,12-4,12-6,12-8, unknown_identifiers:1:record_ids:2-1,2-2,2-3,2-4, unknown_identifiers:2:record_ids:12-13,12-14,12-19,12-20,12-22,12-30,12-32,15-1,16-3,16-4,16-5, unknown_identifiers:3:record_ids:1-1,13-1,14-1,17-1,18-1,19-1,3-1,6-1,8-1, unknown_identifiers:4:record_ids:12-10,12-12,12-5,12-9."
+        },
+        {
+          "role": "assistant",
+          "content": "{\n  \"claims\": [\n    {\n      \"claim\": \"The query is ketoconazole and is structurally closest to itraconazole/hydroxy-itraconazole. Direct human CSF measurements showed that itraconazole and hydroxy-itraconazole were not detectable in CSF at ordinary oral doses, and CSF exposure remained very low even in a meningitis/cerebral histoplasmosis patient, indicating inadequate CNS access.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 11\", \"Molecule 12\"],\n      \"record_ids\": [\"Record 11-1\", \"Record 11-2\", \"Record 12-1\", \"Record 12-4\"]\n    },\n    {\n      \"claim\": \"Itraconazole is an efflux-limited CNS penetrant: CSF/plasma ratios are typically below 10%, CNS penetration is described as poor, and brain exposure increases substantially after P-gp inhibition or P-gp knockout. The high structural similarity between ketoconazole and itraconazole predicts similar efflux-limited, inadequate CNS access.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 12\", \"Molecule 16\"],\n      \"record_ids\": [\"Record 12-13\", \"Record 12-30\", \"Record 16-3\", \"Record 16-5\"]\n    },\n    {\n      \"claim\": \"Miconazole, another imidazole antifungal containing the dichlorophenyl-imidazole motif, penetrates very poorly into human CSF after intravenous administration, with CSF concentrations of only about 0.1-0.3 µg/mL, directly supporting the expectation of poor meaningful CNS access for this close antifungal class.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 2\"],\n      \"record_ids\": [\"Record 2-1\", \"Record 2-3\"]\n    },\n    {\n      \"claim\": \"Some structurally unrelated molecules showed measurable brain or CSF penetration, but their low structural similarity and different physicochemical/azole profiles make them non-transferable to the query and do not outweigh the direct azole antifungal CNS-exposure evidence.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 1\", \"Molecule 3\", \"Molecule 5\", \"Molecule 6\", \"Molecule 9\"],\n      \"record_ids\": [\"Record 1-1\", \"Record 3-1\", \"Record 5-1\", \"Record 6-1\", \"Record 9-1\"]\n    }\n  ],\n  \"final_prediction\": \"fail\"\n}",
+          "reasoning": "We need answer JSON with claims and final_prediction. Need use only valid identifiers? Validation errors unknown_identifiers for record_ids? Need ensure record IDs referenced exist in evidence? They do exist but maybe schema expects molecule IDs? Let's inspect. The error says unknown_identifiers:0:record_ids:11-1,11-2,12-1,12-4,12-6,12-8 etc. Maybe record IDs in evidence blocks are not registered? But provided. Need output only claims and final_prediction; molecule_ids and record_ids should be identifiers maybe \"Molecule 1\" and \"Record 1-1\" exactly. The errors point perhaps include molecule IDs as well with record IDs? Let's understand. We need return exactly one valid JSON. Claims each may cite any number of molecules, records, or both. At least one identifier required per claim. The validation errors unknown_identifiers:0:record_ids:11-1,11-2,12-1,12-4,12-6,12-8 maybe because we didn't include molecule IDs? Hmm. Need craft valid. Maybe use molecule_ids and record_ids as strings but unknown because record IDs not in evidence? They are in evidence. But maybe known format expects Molecule 11 for record 11-1. Use molecule_ids only to be safe. But instruction: each claim may cite any number of molecules, records, or both. At least one identifier required. Could cite molecule_ids only no record_ids. But unknown_identifiers indicates maybe need molecule references too. We can include both molecule_ids and record_ids, but ensure IDs are exactly valid? Let's review all records:\n\nMolecule 1 has Record 1-1 (L1 direct brain exposure rat B:P 0.31).\nMolecule 2 records 2-1,2-2,2-3,2-4 (miconazole CSF poor penetration human).\nMolecule 3 Record 3-1 (rat B:P 0.14-0.46 good penetration).\nMolecule 4 Record 4-1 (AMG 579 CSF/plasma <5% poor).\nMolecule 5 Record 5-1 (delamanid brain distributed permeable).\nMolecule 6 Record 6-1 (PF-5274857 CSF permeable).\nMolecule 7 Record 7-1 (compound 70 poor).\nMolecule 8 Record 8-1 (compound 2s B/P 0.48 mouse good).\nMolecule 9 Record 9-1 (LY2795050 human good).\nMolecule 10 Record 10-1 (loratadine poor).\nMolecule 11 records 11-1,11-2 (ITZ/hydroxy-ITZ human CSF not detectable/low).\nMolecule 12 many records 12-1 to 12-37 (ITZ poor CSF, P-gp substrate/inhibitor, etc).\nMolecule 13 Record 13-1 (PAMPA high for compound 12c).\nMolecule 14 Record 14-1 (PAMPA high for compound 40).\nMolecule 15 Record 15-1 (imidazole ketone erastin P-gp substrate).\nMolecule 16 records 16-1 to 16-5 (ITZ P-gp substrate brain Kp).\nMolecule 17 Record 17-1 (venetoclax CSF crosses).\nMolecule 18 Record 18-1 (CPT-11 organoid).\nMolecule 19 Record 19-1 (clozapine Kpuu >2).\n\nQuery molecule: CC(=O)N1CCN(c2ccc(OCC3COC(Cn4ccnc4)(c4ccc(Cl)cc4Cl)O3)cc2)CC1\nIt's a 4-acetylpiperazinylphenoxy methyl? It has dichlorophenyl, imidazole, ketal/dioxane? Actually OCC3COC(...)(... )O3 maybe a substituted 1,3-dioxane? Contains imidazole and dichlorophenyl, similar to itraconazole/ketoconazole core? Let's compare: Query has N-acetylpiperazine, phenoxy ether, an acetal/ketal carbon with dichlorophenyl and imidazole methyl. It resembles \"spermidine\" maybe? Notably molecule 16 SMILES: CCC(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O (itraconazole) Morgan 0.5532. Query is similar to itraconazole? Query has N-acetyl piperazine instead of triazolone, and imidazole instead of triazole? It is probably a simplified azole antifungal. Molecule 12 and 16 are itraconazole and highly similar. Direct evidence for itraconazole: poor CSF penetration, P-gp substrate and inhibitor, but brain:plasma ratio close to 1 in dogs long-term, CSF/serum <10%, low human CSF until high dose. Under meningitis condition, inflammation may increase BBB permeability, and P-gp inhibition? Actually itraconazole has poor CNS penetration generally, but may be used in cryptococcal meningitis with limited penetration. Query has similar structure, high MW 531, high cLogP, imidazole, dichlorophenyl, piperazine, ketal. Likely P-gp substrate? Need decide pass/fail for CNS access after systemic administration under meningitis.\n\nWe need weigh molecular analogies. The most similar molecule is itraconazole (Molecule 12/16, Morgan 0.5532/0.5532) and also Molecule 11 (hydroxy-itraconazole, similarity 0.5638). Strong transferable direct evidence: itraconazole poor CSF penetration in humans, low CSF/serum (<10%), not detectable below 800mg/d, despite high plasma exposure; brain-to-plasma close to 1 in dogs long-term but meningeal levels slightly exceeded plasma in dogs. P-gp efflux limits brain distribution and P-gp inhibition increases. Under meningitis, blood-brain barrier/inflammation may affect but still limited. The query molecule differs: replaces triazolone? Let's map exact. Query: CC(=O)N1CCN(c2ccc(OCC3COC(Cn4ccnc4)(c4ccc(Cl)cc4Cl)O3)cc2)CC1.\nThis structure includes an N-acetylpiperazine phenyl ether attached to a cyclic acetal (O-CH2-C? O3) with a dichlorophenyl and imidazole-methyl substituent. Itraconazole: CCC(C)n1ncn(-c2ccc(N3CCN(c4ccc(OCC5COC(Cn6cncn6)(c6ccc(Cl)cc6Cl)O5)cc4)CC3)cc2)c1=O. Query lacks triazolone and has a methylen-imidazole instead of triazole? Actually query has imidazole (Cn4ccnc4) and no triazolone. It is closer to ketoconazole? Ketoconazole SMILES maybe O=C1N(C(C)C?)...? Wait ketoconazole has imidazole and dioxolane with dichlorophenyl, piperazine, acetylpiperazine? The query is likely \"ketoconazole-like\" but without deacylated? Let's recall ketoconazole: 1-acetyl-4-[4-[[2-(2,4-dichlorophenyl)-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methoxy]phenyl]piperazine. Yes! Query has CC(=O)N1CCN(c2ccc(OCC3COC(Cn4ccnc4)(c4ccc(Cl)cc4Cl)O3)cc2)CC1. This is ketoconazole? Ketoconazole: CC(=O)N1CCN(C2=CC=C(OCC3COC(CN4C=CN=C4)(C5=C(Cl)C=C(Cl)C=C5)O3)C=C2)CC1. Yes query exactly ketoconazole! Nice. The query is ketoconazole. Ketoconazole is an azole antifungal, similar to itraconazole but with imidazole. Experimental evidence for ketoconazole itself not listed, but itraconazole and hydroxy-itraconazole are close. Miconazole also azole with imidazole/dichlorophenyl, poor CSF in humans. Need predict CNS access after systemic administration under meningitis. Ketoconazole: known poor CNS penetration? Let's recall. Ketoconazole is used topically/oral, high protein binding, poor CSF penetration. It is also P-gp substrate/inhibitor. Under meningitis maybe some? Need evaluate.\n\nEvidence:\n- Miconazole (Molecule 2, similarity 0.2791, azole antifungal, imidazole, dichlorophenyl? miconazole has dichlorophenyl and imidazole but no piperazine; direct CSF poor in humans. Transfer moderate.\n- Itraconazole (Molecule 12/16, similarity 0.5532/0.5532) direct CSF poor in humans, P-gp substrate, low CNS. But brain:plasma close to 1 in dogs long-term, CSF/serum <10%. Transfer high due to structural similarity.\n- Molecule 1: methylamine 18c has B:P 0.31 permeable rat. Some structural features? Similarity 0.2269, transfer likelihood 0.9095. It is not similar? Not enough.\n- Molecule 3: compound 6 B:P 0.14-0.46 good penetration rat. Similarity 0.2381.\n- Molecule 4: AMG579 CSF<5% poor. Similarity 0.2255.\n- Molecule 5: delamanid permeable rat. Similarity 0.2202.\n- Molecule 6: PF-5274857 CSF permeable. Similarity 0.2121.\n- Molecule 7: compound 70 poor CSF, high lipophilicity. Similarity 0.233.\n- Molecule 8: compound 2s B/P 0.48 mouse. Similarity 0.2054.\n- Molecule 9: LY2795050 human good. Similarity 0.2115.\n- Molecule 10: loratadine poor. Similarity 0.2268.\n- Molecule 11: hydroxy-itraconazole not detectable/low CSF human. Similarity 0.5638.\n- Molecules 13/14: PAMPA high but different.\n- Molecule 15: imidazole ketone erastin P-gp substrate.\n- Molecule 17/18/19 unrelated.\n\nNeed produce claims. The final prediction likely fail because query is ketoconazole, and closely related azoles (itraconazole, miconazole) have poor CNS penetration despite meningitis? Actually in meningitis, BBB penetration can increase for some drugs due to inflammation, but azoles like ketoconazole? Let's investigate known ketoconazole CNS: Ketoconazole is highly protein bound and poorly penetrates CSF. However, maybe under fungal meningitis, inflammation enhances penetration? Need decide based on evidence. The endpoint label \"meaningful_cns_access.v1\", positive pass if meaningful/adequate CNS access after systemic administration. For ketoconazole, likely fail.\n\nNeed align reasoning with final prediction. Claims should cite evidence blocks. Need include evidence role supportive/contradictory relative to final prediction. If final fail, supportive evidence = fail evidence (poor penetration). Contradictory evidence = pass evidence. Need mention physicochemical prior? Only experimental claims. The prompt says physicochemical prior uncertain, not evidence. We can include claims about itraconazole poor CSF, miconazole poor CSF, efflux substrate. Need maybe use molecule IDs and record IDs. But validation errors suggest if we use record IDs, maybe need avoid errors. We can cite molecule_ids only. Let's use molecule_ids only to avoid record ID validation issues. Each claim cite molecule(s). Need at least one identifier. We'll include molecule_ids and perhaps no record_ids. But the required JSON allows any number. To be safe and concise, include both? If record IDs cause errors, maybe use only molecule_ids. But the instruction says \"Each claim may cite any number of molecules, records, or both.\" At least one identifier required. So molecule ids sufficient.\n\nNeed ensure final_prediction \"fail\".\n\nLet's draft claims with evidence_role:\n1. \"Ketoconazole (query) is structurally analogous to itraconazole/hydroxy-itraconazole; in humans, itraconazole and hydroxy-itraconazole were not detectable in CSF at normal doses or were <25 µg/L even during cerebral histoplasmosis/meningitis, indicating poor CSF access.\" Cite Molecule 11 and 12. Evidence role supportive (fail).\n2. \"Itraconazole CSF concentrations are typically <0.2% of plasma and CSF/serum <10%, poor CNS penetration, despite long-term dog brain/plasma ratio close to 1 and meningeal levels slightly exceeding plasma.\" Cite Molecule 12. Supportive fail.\n3. \"Itraconazole is a P-gp substrate at the BBB; brain concentrations increase with P-gp inhibition/knockout, indicating efflux limits CNS exposure.\" Cite Molecule 12, 16. Supportive fail.\n4. \"Miconazole, an imidazole antifungal with dichlorophenyl/imidazole structural features similar to ketoconazole, has very poor CSF penetration in humans after IV administration (CSF 0.1-0.3 µg/mL).\" Cite Molecule 2. Supportive fail.\n5. \"Some structurally dissimilar compounds showed brain/CSF penetration (e.g., 18c B:P 0.31, compound 6 B:P 0.14-0.46, PF-5274857 CSF, LY2795050 human) but they are not close structural analogs and do not outweigh direct azole evidence.\" Contradictory (pass evidence) but low weight. Need include? The instruction says evidence roles supportive means evidence supporting final prediction; contradictory means evidence supporting alternative. We can mention contradictory evidence and explain it doesn't transfer. Maybe final evidence summary. Use molecule ids 1,3,6,9 perhaps. But maybe final prediction fail despite these.\n6. \"PAMPA permeability high for unrelated compounds (Molecule 13,14) does not translate to adequate in vivo CNS exposure for azole ketoconazole.\" Contradictory? Those are pass evidence but unrelated. Maybe omit? We can include to show considered.\n\nNeed avoid too many claims? \"Return one or more concise claims using as many claims as needed to represent experimental evidence that materially informs decision.\" We'll include 4-6 claims.\n\nNeed maybe include record IDs to satisfy \"record_ids\" but if unknown errors occur. The validation errors from retry maybe due to using record IDs that aren't known? Hmm. The system likely has a validator expecting molecule_ids and record_ids among all known. But errors on specific record IDs? Let's re-read prompt: \"Validation errors: unknown_identifiers:0:record_ids:11-1,11-2,12-1,12-4,12-6,12-8...\" Could be because I mistakenly included references to record IDs without full \"Record 11-1\"? Actually in previous retry likely used record_ids as \"11-1\" not \"Record 11-1\". Need use full strings \"Record 11-1\". The evidence block labels are \"Record 11-1\". So to avoid validation, use \"Record 11-1\" not \"11-1\". In final, include \"Record 11-1\" etc, or just molecule IDs. But to be safe, use full \"Molecule 12\" and \"Record 12-1\". At least one identifier required. The validator may accept if exact strings. Let's use exact strings. We can include molecule_ids and record_ids with exact names. Need not include record_ids if unsure. But the instruction \"Each claim may cite any number of molecules, records, or both.\" We can cite molecule ids only, no record ids. That should be valid. But perhaps \"At least one identifier\" means molecule_ids or record_ids; using Molecule IDs is fine.\n\nLet's structure final JSON:\n\n{\n  \"claims\": [\n    {\n      \"claim\": \"The query is ketoconazole and is structurally closest to itraconazole/hydroxy-itraconazole. Direct human CSF measurements of itraconazole and hydroxy-itraconazole showed non-detectable CSF concentrations at ordinary oral doses and very low CSF exposure even in meningitis/cerebral histoplasmosis, indicating inadequate CNS access.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 11\", \"Molecule 12\"]\n    },\n    {\n      \"claim\": \"Itraconazole is reported to have poor brain penetration with CSF/plasma ratios generally below 10% and CSF concentrations often <0.2% of plasma; this is reinforced by P-gp-mediated efflux at the BBB, as brain exposure increases after P-gp inhibition or knockout. The structural similarity of the query to itraconazole therefore predicts similar efflux-limited CNS access.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 12\", \"Molecule 16\"]\n    },\n    {\n      \"claim\": \"Miconazole, another imidazole antifungal with a dichlorophenyl-imidazole motif related to the query, shows very poor CSF penetration in humans after intravenous administration (CSF concentrations ~0.1-0.3 µg/mL), directly supporting poor meaningful CNS access for this class.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 2\"]\n    },\n    {\n      \"claim\": \"A few structurally unrelated molecules with measured brain/CSF penetration (e.g., 18c, compound 6, PF-5274857, LY2795050, delamanid) provide positive CNS-access evidence, but their low structural similarity and different physicochemical/azole profiles make them non-transferable to the query.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 1\", \"Molecule 3\", \"Molecule 5\", \"Molecule 6\", \"Molecule 9\"]\n    }\n  ],\n  \"final_prediction\": \"fail\"\n}\n\nNeed consider if \"contradictory\" should be \"pass evidence\" but final fail. Yes.\n\nHowever, maybe need mention \"under meningitis\" inflammation could improve access? The evidence from Molecule 11-2: patient with cerebral histoplasmosis and meningitis, CSF Cmin <25 µg/L despite high plasma and low serum protein. That's directly under meningitis. Good. We can mention in claim 1. Need maybe cite record 11-2? We can include record IDs exact. But molecule ID enough. We can include records to be more precise. Let's include exact record IDs where known:\n- \"Record 11-1\", \"Record 11-2\", \"Record 12-1\", \"Record 12-4\", \"Record 12-6\", \"Record 12-8\" etc. But if validator unknown with exact? Should be okay. Yet earlier errors may be due to no \"Record \" prefix. Need be safe. I'll include record_ids for key claims, with full \"Record 11-1\" etc. The unknown identifier errors included record_ids:11-1 without prefix. Let's use full.\n\nNeed not cite every record. But claim 1: Molecule 11, 12; record_ids \"Record 11-1\", \"Record 11-2\", \"Record 12-1\", \"Record 12-4\". Claim 2: Molecule 12, 16; record_ids \"Record 12-13\", \"Record 16-3\", \"Record 16-5\", \"Record 12-30\". Claim 3: Molecule 2; record_ids \"Record 2-1\", \"Record 2-3\". Claim 4: multiple pass molecules. Maybe record ids not necessary. If include, use \"Record 1-1\", \"Record 3-1\", \"Record 6-1\", \"Record 9-1\", \"Record 5-1\". But if validator is strict, might be okay. The prompt says \"valid JSON object matching requested schema\" not necessarily validator. I can include.\n\nNeed ensure final pred fail. Let's craft final with concise claims."
+        }
+      ],
+      "usage": {
+        "completion_tokens": 4960,
+        "prompt_tokens": 13022,
+        "total_tokens": 17982,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 12800
+        },
+        "reasoning_tokens": 4409
+      },
+      "tool_count": 0
+    }
+  ],
+  "source_hashes": {
+    "request.json": "1a1ffaca739fc696c82bf3bdbe7fe24d305f9f7b22e475eaf103045246fc24b6",
+    "trace_messages.jsonl": "6dd39ded647de14e98d64cbe0f5033c5101e67d4f0d2ee988a7bfab83211b5a2",
+    "final_reasoning_output.json": "5e5dd7ab2e0e4cb770de7ab1b888f7645c9b75f303d6780a8352464ddfb9e824",
+    "single_molecule_reasoning_output.json": "4e32199f51663ec68cb2a32edab19d25f1fe3d544f10bd2ece46643347557cc0"
+  },
+  "provenance": {
+    "run_uid": "923bd24d-5f68-41a3-bef7-34e2400b98ba",
+    "repetition": 4,
+    "provider": "dgx025_50001",
+    "upstream_provider": null,
+    "requested_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "served_model": "deepseek-ai/DeepSeek-V4-Flash-0731"
+  }
+}
