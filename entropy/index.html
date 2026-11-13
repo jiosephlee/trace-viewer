@@ -142,6 +142,12 @@
   .record-card { margin-top: 8px; }
   .card-body pre { font-size: 12px; }
   .reference-grid { display: grid; gap: 8px; }
+  .completion-scroll { min-width: 0; overflow-x: auto; }
+  .completion-grid { display: grid; grid-template-columns: repeat(3, minmax(280px, 1fr)); gap: 12px; padding: 11px; }
+  .completion-card { min-width: 0; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
+  .completion-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 10px; background: #edf1f4; }
+  .completion-grid .trace-part-body > pre { max-height: 65vh; overflow-y: auto; }
+  #completion-area { min-width: 0; scroll-margin-top: 165px; }
   .entropy-controls { padding: 10px; border: 1px solid #b8d3ec; background: #f5faff; font-size: 12px; line-height: 1.5; }
   .entropy-controls input { width: auto; min-height: auto; accent-color: var(--blue); }
   .entropy-controls.provisional { border-color: #c88b35; background: #fff8eb; }
@@ -190,7 +196,7 @@
 const params = new URLSearchParams(location.search);
 const state = { release: null, task: params.get("task") || "bbb_martins",
   config: params.get("configuration") || "direct_plus_indirect", selected: params.get("query"), payload: null, loading: 0,
-  repetition: params.get("repetition"), entropyManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false };
+  repetition: params.get("repetition"), completions: [], entropyManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false };
 const $ = id => document.getElementById(id);
 const outcomes = { TP: "True positive", TN: "True negative", FP: "False positive", FN: "False negative" };
 function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"}[c])); }
@@ -234,9 +240,9 @@ function linkedText(value, references = state.payload?.references || [], groups 
   }
   return html + scoredRange(source, previous, source.length, groups);
 }
-function entropyText(name, text) {
-  const section = state.entropy?.sections[name];
-  if (!section) return linkedText(text);
+function entropyText(name, text, entropy = state.entropy, references = state.payload?.references || []) {
+  const section = entropy?.sections[name];
+  if (!section) return linkedText(text, references);
   const offsets = [0];
   for (const char of text) offsets.push(offsets[offsets.length - 1] + char.length);
   const groups = [];
@@ -255,10 +261,11 @@ function entropyText(name, text) {
     group.high = group.tokens.some(t => t.top20);
     group.title = group.tokens.map(t => {
       const tokenText = JSON.stringify(text.slice(offsets[t.start], offsets[t.end]));
-      return `Token ${tokenText} · probability ${probabilityPercent(t.logprob)}\nH=${t.entropy.toFixed(6)} nats${t.top20 ? " · top 20%" : ""}${t.alternate_entropy === undefined ? "" : `\nalternate H=${t.alternate_entropy.toFixed(6)} nats (half-sized chunks) · |ΔH|=${t.absolute_chunk_difference.toFixed(6)} nats`}\nPosition ${t.position} · token ${t.token_id}`;
+      const alternatives = t.alternatives ? `\nTop 4 other tokens:\n${t.alternatives.map((a, index) => `${index + 1}. ${JSON.stringify(a.text)} · ${probabilityPercent(a.logprob)}`).join("\n")}` : "";
+      return `Token ${tokenText} · probability ${probabilityPercent(t.logprob)}${alternatives}\nH=${t.entropy.toFixed(6)} nats${t.top20 ? " · top 20%" : ""}${t.alternate_entropy === undefined ? "" : `\nalternate H=${t.alternate_entropy.toFixed(6)} nats (half-sized chunks) · |ΔH|=${t.absolute_chunk_difference.toFixed(6)} nats`}\nPosition ${t.position} · token ${t.token_id}`;
     }).join("\n\n");
   }
-  return linkedText(text, state.payload.references, groups);
+  return linkedText(text, references, groups);
 }
 let entropyTarget = null;
 function hideEntropyTooltip() {
@@ -270,6 +277,11 @@ function showEntropyTooltip(token, event) {
   hideEntropyTooltip();
   const tooltip = $("entropy-tooltip"), rect = token.getBoundingClientRect();
   if (rect.bottom < 0 || rect.top > window.innerHeight || rect.right < 0 || rect.left > window.innerWidth) return;
+  for (const clip of [token.closest(".completion-grid pre"), token.closest(".completion-scroll")]) {
+    if (!clip) continue;
+    const bounds = clip.getBoundingClientRect();
+    if (rect.bottom <= bounds.top || rect.top >= bounds.bottom || rect.right <= bounds.left || rect.left >= bounds.right) return;
+  }
   entropyTarget = token;
   tooltip.textContent = `Saved token probability · T=1\n${token.dataset.entropy}`;
   token.setAttribute("aria-describedby", "entropy-tooltip");
@@ -299,10 +311,16 @@ document.addEventListener("click", event => {
 document.addEventListener("keydown", event => { if (event.key === "Escape") hideEntropyTooltip(); });
 window.addEventListener("scroll", () => { if (entropyTarget) showEntropyTooltip(entropyTarget); }, true);
 window.addEventListener("resize", hideEntropyTooltip);
+document.addEventListener("change", event => {
+  if (event.target.id !== "entropy-top-only") return;
+  state.entropyTopOnly = event.target.checked;
+  $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
+});
 async function loadEntropy(sample, payload) {
   const manifest = state.entropyManifest;
   if (!manifest) return {entropy: null, notice: state.entropyNotice};
-  const key = `${state.task}/${state.config}/${String(sample.configurations[state.config].query_index).padStart(5, "0")}`;
+  const repetition = payload.repetition == null ? "" : `/rep-${String(payload.repetition).padStart(2, "0")}`;
+  const key = `${state.task}/${state.config}${repetition}/${String(sample.configurations[state.config].query_index).padStart(5, "0")}`;
   const entry = manifest.examples[key];
   if (!entry) return {entropy: null, notice: "Token entropy is not available for this example."};
   try {
@@ -324,6 +342,14 @@ async function loadEntropy(sample, payload) {
           || ((t.alternate_entropy !== undefined || t.absolute_chunk_difference !== undefined)
               && (!Number.isFinite(t.alternate_entropy) || t.alternate_entropy < 0
                   || !Number.isFinite(t.absolute_chunk_difference) || t.absolute_chunk_difference < 0)))) throw new Error(`Invalid ${name} token scores`);
+      if (section.tokens.some(t => t.alternatives !== undefined && (
+          !Array.isArray(t.alternatives) || t.alternatives.length !== 4
+          || new Set(t.alternatives.map(a => a.token_id)).size !== 4
+          || t.alternatives.some((a, i) => !Number.isInteger(a.token_id) || a.token_id < 0 || a.token_id >= 129280
+              || a.token_id === t.token_id || typeof a.text !== "string" || !Number.isFinite(a.logprob) || a.logprob > 1e-5
+              || (i > 0 && a.logprob > t.alternatives[i - 1].logprob))
+          || Math.exp(t.logprob) + t.alternatives.reduce((sum, a) => sum + Math.exp(a.logprob), 0) > 1 + 1e-5)))
+        throw new Error(`Invalid ${name} token alternatives`);
       let covered = 0;
       for (const token of [...section.tokens].sort((a, b) => a.start - b.start)) {
         if (token.start > covered) throw new Error(`Incomplete ${name} token scores`);
@@ -357,30 +383,71 @@ function renderInput(record) {
   return record.messages.filter(m => m.role !== "assistant").map((message, index) =>
     panel(`${message.role === "system" ? "System" : "User"} prompt${index > 1 ? " (retry)" : ""}`, `<pre>${esc(message.content)}</pre>`, message.role === "user")).join("");
 }
+function predictionFor(sample, repetition = state.repetition) {
+  return (sample.by_repetition?.[repetition] || sample.configurations)[state.config];
+}
+function repetitionNumber(repetition) {
+  const index = state.release.tasks[state.task].repetitions?.map(String).indexOf(String(repetition)) ?? -1;
+  return index >= 0 ? index + 1 : repetition;
+}
 function renderDetail(sample) {
   const arm = state.release.tasks[state.task].configurations[state.config];
-  const prediction = sample.configurations[state.config];
+  const final = state.payload.trace.find(r => r.task === "final_summary");
+  const overview = [metric("Gold label", sample.label), metric("Configuration", arm.label),
+    metric("Model", state.payload.provenance.served_model), metric("SMILES", sample.smiles)].join("");
+  const base = state.sharedInput || final.messages.filter(m => m.role !== "assistant" && !m.content?.startsWith("Retry the flat-context-final response"));
+  $("detail").innerHTML = `<div class="section"><div class="section-head">Sample overview <span class="tag">Gold test</span></div><div class="overview">${overview}</div></div>
+    ${renderReferences()}<div class="section" id="shared-input"><div class="section-head">${sample.by_repetition ? "Shared input · identical across repetitions" : "Input"}</div><div class="stage-content">${panel("Input", renderInput({messages: base}), !sample.by_repetition)}</div></div>
+    <div id="completion-area" class="section"></div>`;
+  renderCompletions(sample);
+}
+function renderCompletions(sample) {
+  const arm = state.release.tasks[state.task].configurations[state.config];
+  const all = state.repetition === "all" && state.completions.length > 1;
+  const hasEntropy = all ? state.completions.some(c => c.entropy) : Boolean(state.entropy);
+  const provisional = /\bPROVISIONAL\b/i.test(state.entropyManifest?.notice || "");
+  const entropyControls = hasEntropy ? `<div class="entropy-controls${provisional ? " provisional" : ""}">${provisional ? '<strong class="entropy-provisional">Provisional local rescoring</strong><br>' : ""}Token entropy · T=${esc(state.entropyManifest.temperature)} · nats. <span class="entropy-scale"></span> 0–${state.entropyManifest.color_max.toFixed(2)} nats (shared scale; darker values are clipped).<br><label><input id="entropy-top-only" type="checkbox"${state.entropyTopOnly ? " checked" : ""}> Highlight only the highest-entropy 20% of tokens in each section</label><br>${provisional ? "Scores may depend on the evaluation configuration. " : ""}Hover, focus, or tap text to see token probabilities and entropy. Scores follow the original generated text.</div>`
+    : !all && state.entropyNotice ? `<div class="entropy-controls warn">${esc(state.entropyNotice)}</div>` : "";
+  $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
+  if (all) {
+    const columns = state.completions.map(({repetition, payload, entropy, notice}) => {
+      const final = payload.trace.find(r => r.task === "final_summary");
+      const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
+      const prediction = predictionFor(sample, repetition);
+      const retries = final.messages.filter(m => m.role === "user" && m.content.startsWith("Retry the flat-context-final response"));
+      return `<article class="completion-card" data-repetition="${esc(repetition)}"><div class="completion-heading"><button data-focus-repetition="${esc(repetition)}" title="Open this repetition at full width">Repetition ${esc(repetitionNumber(repetition))} ↗</button><span class="${prediction.correct ? "ok" : "bad"}">Prediction ${esc(prediction.pred_label)} · ${prediction.correct ? "correct" : "wrong"}</span></div><div class="stage-content">
+        ${retries.length ? panel("Additional retry instructions", retries.map(m => `<pre>${esc(m.content)}</pre>`).join("")) : ""}
+        ${notice ? `<div class="entropy-controls warn">${esc(notice)}</div>` : ""}
+        ${panel("Reasoning", assistant?.reasoning ? `<pre>${entropyText("reasoning", assistant.reasoning, entropy, payload.references)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>', true)}
+        ${panel("Final output", `<pre>${entropyText("answer", entropy ? assistant?.content || "" : final.response_text || assistant?.content || "", entropy, payload.references)}</pre>`, true)}
+      </div></article>`;
+    }).join("");
+    $("completion-area").innerHTML = `<div class="section-head">Reasoning and output · all three repetitions <span class="tag">Click a repetition to open it</span></div>${entropyControls}<div class="completion-scroll"><div class="completion-grid">${columns}</div></div>`;
+    $("completion-area").querySelectorAll("[data-focus-repetition]").forEach(button => button.onclick = () => showRepetition(button.dataset.focusRepetition));
+    return;
+  }
+  const prediction = predictionFor(sample);
   const final = state.payload.trace.find(r => r.task === "final_summary");
   const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
-  const provenance = state.payload.provenance;
   const outcome = `${sample.label === prediction.pred_label ? "T" : "F"}${prediction.pred_label ? "P" : "N"}`;
-  const overview = [metric("Gold label", sample.label), metric("Prediction", prediction.pred_label),
-    metric("Outcome", outcomes[outcome]), metric("Configuration", arm.label), metric("Model", provenance.served_model), metric("SMILES", sample.smiles)].join("");
-  const provisional = /\bPROVISIONAL\b/i.test(state.entropyManifest?.notice || "");
-  const entropyControls = state.entropy ? `<div class="entropy-controls${provisional ? " provisional" : ""}">${provisional ? '<strong class="entropy-provisional">Provisional entropy estimates</strong><br>' : ""}Token entropy · T=${esc(state.entropyManifest.temperature)} · nats. <span class="entropy-scale"></span> 0–${state.entropyManifest.color_max.toFixed(2)} nats (shared scale; darker values are clipped).<br><label><input id="entropy-top-only" type="checkbox"${state.entropyTopOnly ? " checked" : ""}> Highlight only the highest-entropy 20% of tokens in each section</label><br>${provisional ? "Local rescoring is sensitive to evaluation chunk size. " : ""}Hover, focus, or tap text to see entropy and the alternate chunk-size measurement. Scores follow the original generated text.</div>`
-    : state.entropyNotice ? `<div class="entropy-controls warn">${esc(state.entropyNotice)}</div>` : "";
-  $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
-  $("detail").innerHTML = `<div class="section"><div class="section-head">Sample overview <span class="tag">Gold test</span></div><div class="overview">${overview}</div></div>
-    ${renderReferences()}<div class="section"><div class="section-head">Saved prediction <span class="tag">${esc(arm.label)}${state.repetition ? ` · repetition ${esc(state.repetition)}` : ""}</span></div><div class="stage-content">
-      ${panel("Input", renderInput(final), true)}
+  const retries = final.messages.filter(m => m.role === "user" && m.content.startsWith("Retry the flat-context-final response"));
+  $("completion-area").innerHTML = `<div class="section-head"><span>Saved prediction${state.repetition ? ` · Repetition ${esc(repetitionNumber(state.repetition))}` : ""}</span>${sample.by_repetition ? '<button id="show-all-repetitions">← All three repetitions</button>' : `<span class="tag">${esc(arm.label)}</span>`}</div><div class="stage-content">
+      <div class="${prediction.correct ? "ok" : "bad"}">Prediction ${esc(prediction.pred_label)} · ${esc(outcomes[outcome])}</div>
+      ${retries.length ? panel("Additional retry instructions", retries.map(m => `<pre>${esc(m.content)}</pre>`).join("")) : ""}
       ${entropyControls}
-      ${panel("Reasoning", assistant?.reasoning ? `<pre>${entropyText("reasoning", assistant.reasoning)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>')}
-      ${panel("Final output", `<pre>${entropyText("answer", state.entropy ? assistant?.content || "" : final.response_text || assistant?.content || "")}</pre>`)}
-    </div></div>`;
-  if ($("entropy-top-only")) $("entropy-top-only").onchange = event => {
-    state.entropyTopOnly = event.target.checked;
-    $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
-  };
+      ${panel("Reasoning", assistant?.reasoning ? `<pre>${entropyText("reasoning", assistant.reasoning)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>', Boolean(sample.by_repetition))}
+      ${panel("Final output", `<pre>${entropyText("answer", state.entropy ? assistant?.content || "" : final.response_text || assistant?.content || "")}</pre>`, Boolean(sample.by_repetition))}
+    </div>`;
+  if (sample.by_repetition) $("show-all-repetitions").onclick = () => showRepetition("all");
+}
+function showRepetition(repetition) {
+  state.repetition = repetition;
+  $("repetition").value = repetition;
+  const selected = state.completions.find(c => c.repetition === repetition) || state.completions[0];
+  if (!selected) return;
+  state.payload = selected.payload; state.entropy = selected.entropy; state.entropyNotice = selected.notice;
+  const sample = state.release.tasks[state.task].samples.find(s => s.query_uid === state.selected);
+  renderSamples(); updateNavigation(); renderCompletions(sample);
 }
 function updateNavigation() {
   const query = new URLSearchParams({ task: state.task, configuration: state.config, query: state.selected || "" });
@@ -398,30 +465,41 @@ function renderSamples() {
   const samples = state.release.tasks[state.task].samples;
   const search = $("search").value.toLowerCase(), correctness = $("correctness").value, status = $("status").value;
   const filtered = samples.filter(s => {
-    const p = s.configurations[state.config];
+    const predictions = state.repetition === "all" && s.by_repetition ? Object.values(s.by_repetition).map(c => c[state.config]) : [predictionFor(s)];
     return (!search || `${s.query_index} ${s.query_uid} ${s.smiles} ${s.selection_outcome} ${outcomes[s.selection_outcome]}`.toLowerCase().includes(search))
-      && (!correctness || p.correct === (correctness === "correct")) && status !== "failed";
+      && (!correctness || predictions.some(p => p.correct === (correctness === "correct"))) && status !== "failed";
   });
   $("count").textContent = `${filtered.length} / ${samples.length}`;
   $("samples").innerHTML = filtered.map(s => {
-    const p = s.configurations[state.config];
-    return `<button class="sample${state.selected === s.query_uid ? " active" : ""}" data-query="${esc(s.query_uid)}"><div class="sample-main"><strong>Sample ${samples.indexOf(s) + 1}</strong><span class="${p.correct ? "ok" : "bad"}">${p.correct ? "correct" : "wrong"}</span></div><div class="sample-sub">label=${s.label} prediction=${p.pred_label}</div><div class="sample-sub">Selected as ${esc(outcomes[s.selection_outcome])} in direct + indirect${s.selection_outcome_repetition ? `, repetition ${esc(s.selection_outcome_repetition)}` : ""}</div></button>`;
+    const predictions = state.repetition === "all" && s.by_repetition ? Object.values(s.by_repetition).map(c => c[state.config]) : [predictionFor(s)];
+    const correct = predictions.filter(p => p.correct).length;
+    const outcome = predictions.length > 1 ? `${correct}/${predictions.length} correct` : correct ? "correct" : "wrong";
+    return `<button class="sample${state.selected === s.query_uid ? " active" : ""}" data-query="${esc(s.query_uid)}"><div class="sample-main"><strong>Sample ${samples.indexOf(s) + 1}</strong><span class="${correct === predictions.length ? "ok" : correct === 0 ? "bad" : "warn"}">${outcome}</span></div><div class="sample-sub">label=${s.label} prediction=${predictions.map(p => p.pred_label).join(" / ")}</div><div class="sample-sub">Selected as ${esc(outcomes[s.selection_outcome])} in direct + indirect${s.selection_outcome_repetition ? `, Repetition ${esc(repetitionNumber(s.selection_outcome_repetition))}` : ""}</div></button>`;
   }).join("") || '<div class="empty">No matching samples.</div>';
   document.querySelectorAll("[data-query]").forEach(button => button.onclick = () => selectSample(button.dataset.query));
 }
 async function selectSample(uid) {
   const loading = ++state.loading;
   state.selected = uid;
+  state.completions = [];
   renderSamples(); updateNavigation();
   $("detail").innerHTML = '<div class="section"><div class="loading">Loading saved trace…</div></div>';
   const sample = state.release.tasks[state.task].samples.find(s => s.query_uid === uid);
   try {
-    const payload = await fetchJson(sample.configurations[state.config].path);
+    const repetitions = state.release.tasks[state.task].repetitions?.map(String) || [null];
+    const completions = await Promise.all(repetitions.map(async repetition => {
+      const configurations = sample.by_repetition?.[repetition] || sample.configurations;
+      const payload = await fetchJson(configurations[state.config].path);
+      const scored = await loadEntropy({...sample, configurations}, payload);
+      return {repetition, payload, ...scored};
+    }));
     if (loading !== state.loading) return;
-    state.payload = payload;
-    const scored = await loadEntropy(sample, payload);
-    if (loading !== state.loading) return;
-    state.entropy = scored.entropy; state.entropyNotice = scored.notice;
+    const inputs = completions.map(c => c.payload.trace.find(r => r.task === "final_summary").messages.filter(m => m.role !== "assistant" && !m.content?.startsWith("Retry the flat-context-final response")));
+    if (inputs.some(messages => JSON.stringify(messages) !== JSON.stringify(inputs[0]))
+        || completions.some(c => JSON.stringify(c.payload.references) !== JSON.stringify(completions[0].payload.references))) throw new Error("Saved inputs differ across repetitions; a shared input cannot be shown.");
+    state.sharedInput = inputs[0]; state.completions = completions;
+    const selected = completions.find(c => c.repetition === state.repetition) || completions[0];
+    state.payload = selected.payload; state.entropy = selected.entropy; state.entropyNotice = selected.notice;
     renderDetail(sample);
   } catch (error) {
     if (loading === state.loading) $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`;
@@ -439,11 +517,7 @@ document.addEventListener("click", event => {
 });
 window.addEventListener("hashchange", () => openReference(location.hash.slice(1)));
 for (const id of ["search", "correctness", "status"]) $(id).addEventListener("input", () => { if (state.release) renderSamples(); });
-$("repetition").onchange = async event => {
-  state.repetition = event.target.value;
-  for (const sample of state.release.tasks[state.task].samples) sample.configurations = sample.by_repetition[state.repetition];
-  await selectSample(state.selected);
-};
+$("repetition").onchange = event => showRepetition(event.target.value);
 fetchJson("legacy_gold_release_manifest.json").then(async release => {
   state.release = release;
   try {
@@ -461,11 +535,10 @@ fetchJson("legacy_gold_release_manifest.json").then(async release => {
   if (!task.configurations[state.config]) state.config = "direct_plus_indirect";
   if (task.repetitions) {
     const repetitions = task.repetitions.map(String);
-    if (!repetitions.includes(state.repetition)) state.repetition = repetitions[0];
+    if (state.repetition !== "all" && !repetitions.includes(state.repetition)) state.repetition = "all";
     $("repetition-control").hidden = false;
-    $("repetition").innerHTML = repetitions.map(rep => `<option value="${esc(rep)}">${esc(rep)}</option>`).join("");
+    $("repetition").innerHTML = '<option value="all">All three repetitions</option>' + repetitions.map(rep => `<option value="${esc(rep)}">Repetition ${esc(repetitionNumber(rep))}</option>`).join("");
     $("repetition").value = state.repetition;
-    for (const sample of task.samples) sample.configurations = sample.by_repetition[state.repetition];
   } else state.repetition = null;
   document.title = `${task.title} · ${release.title || "Legacy trace samples"}`;
   $("page-title").textContent = document.title;

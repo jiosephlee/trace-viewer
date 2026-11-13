@@ -1,5 +1,5 @@
-task	configuration	n_queries	macro_f1	accuracy	run_uid
-bbb_martins	direct	393	0.673178	0.770992	848c08c0-e961-4cba-8ee5-686e847b0ac2
-bbb_martins	direct_plus_indirect	393	0.732966	0.824427	0446414e-6c42-46d3-a3c9-f94064c2355d
-bioavailability_ma	direct	269	0.768091	0.832714	750f6478-f83f-40ba-b169-435637fbe92d
-bioavailability_ma	direct_plus_indirect	269	0.86134	0.888476	5c38acc0-f8b2-405e-b695-7aa1d6e0290d
+task	configuration	n_queries	n_repetitions	mean_macro_f1	std_macro_f1	mean_accuracy	repetitions
+bbb_martins	direct	393	3	0.6645986666666667	0.002280733726968851	0.7430026666666666	4,5,6
+bbb_martins	direct_plus_indirect	393	3	0.73912	0.013437018009960382	0.8193383333333334	4,5,6
+bioavailability_ma	direct	269	3	0.8083163333333333	0.01410455253928084	0.8537796666666667	7,8,9
+bioavailability_ma	direct_plus_indirect	269	3	0.8415733333333333	0.006898181016277625	0.8736056666666666	7,8,9

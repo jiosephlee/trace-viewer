@@ -2,72 +2,200 @@
   "schema_version": "trace_token_entropy.v1",
   "temperature": 1,
   "units": "nats",
-  "notice": "Full-vocabulary local checkpoint rescoring at analysis temperature 1 (nats); original requests used temperature 0. Hosted-provider logits and hidden prompt encoding are not recovered. Three Baidu examples have a 23-token prompt-count discrepancy. Examples are illustrative, not a population evaluation. PROVISIONAL: entropy is sensitive to evaluation chunk geometry. Each token also includes an alternate half-size-chunk entropy and absolute difference. Strict cross-geometry validation has not passed; these are not exact historical API entropies.",
-  "color_max": 2.355666952133179,
+  "notice": "PROVISIONAL: full-vocabulary local A100 checkpoint rescoring at analysis temperature 1 (nats), using one prefill chunk geometry. Cross-geometry sensitivity has not been measured. Original provider logits are not recovered. Native tokenization is reconstructed from saved text; all prompt counts match and four completion counts differ by one token. These selected examples are illustrative, not a population evaluation.",
+  "color_max": 2.909053277969359,
   "examples": {
-    "bbb_martins/direct/00039": {
-      "path": "entropy/bbb_martins/direct/00039.json",
-      "sha256": "4ce9c5f68172b6010896753c9ea57724c4e66df66b83df18acafe13cf25dd4f6"
+    "bbb_martins/direct/rep-04/00039": {
+      "path": "entropy/bbb_martins/direct/rep-04/00039.json",
+      "sha256": "c2b28addf8c46f32ed5d8eb9baed7c3eb58f44687f9e0b09a8c9edb7253b6d83"
     },
-    "bbb_martins/direct_plus_indirect/00039": {
-      "path": "entropy/bbb_martins/direct_plus_indirect/00039.json",
-      "sha256": "266bc4cb1b3722114d6923f24a14435895ddad2b9310856360d75b0de016e114"
+    "bbb_martins/direct_plus_indirect/rep-04/00039": {
+      "path": "entropy/bbb_martins/direct_plus_indirect/rep-04/00039.json",
+      "sha256": "0ed33793b2f6395e1e61e7d9eb7ac2bab6dd3e7c95d7f314f378b0095b236404"
     },
-    "bbb_martins/direct/00146": {
-      "path": "entropy/bbb_martins/direct/00146.json",
-      "sha256": "3011f1970381788a704858f40bc2dc50b10370bc26c12a7edf1f8a974c04a36e"
+    "bbb_martins/direct/rep-05/00039": {
+      "path": "entropy/bbb_martins/direct/rep-05/00039.json",
+      "sha256": "fecc8929ec1e2e63a2cf091c4fbd8de13ea5c293ea7b9d5b766d5673aad97512"
     },
-    "bbb_martins/direct_plus_indirect/00146": {
-      "path": "entropy/bbb_martins/direct_plus_indirect/00146.json",
-      "sha256": "7e263cbab689ee123601fe17e9cc2b6d253aa559ee6a05efe34df654ee90559d"
+    "bbb_martins/direct_plus_indirect/rep-05/00039": {
+      "path": "entropy/bbb_martins/direct_plus_indirect/rep-05/00039.json",
+      "sha256": "0b7f06c7b33c4f6a103b709b9d62d02accceae0e17d155c1054ad910d69eac12"
     },
-    "bbb_martins/direct/00125": {
-      "path": "entropy/bbb_martins/direct/00125.json",
-      "sha256": "ec19f2a9fde4b251023bccab24ca6eaf5f2430e1ff45104622f0b57049ab94c1"
+    "bbb_martins/direct/rep-06/00039": {
+      "path": "entropy/bbb_martins/direct/rep-06/00039.json",
+      "sha256": "bc2d6951a896a772a3171a0fe7de4dd96770865d291cc6b92884c4991ceb4a30"
     },
-    "bbb_martins/direct_plus_indirect/00125": {
-      "path": "entropy/bbb_martins/direct_plus_indirect/00125.json",
-      "sha256": "8cadfac671b9d76458f4faa5989ff49d78d55e861686ccc01286ee3501bc1f04"
+    "bbb_martins/direct_plus_indirect/rep-06/00039": {
+      "path": "entropy/bbb_martins/direct_plus_indirect/rep-06/00039.json",
+      "sha256": "e32c0667e66824ff173dede1642191e570b489751811617ec3b51e7da20f8da7"
     },
-    "bbb_martins/direct/00123": {
-      "path": "entropy/bbb_martins/direct/00123.json",
-      "sha256": "ec58bda69cbb47a9debf472471d967723f64eccae7dc541cc2de9bfa67749c92"
+    "bbb_martins/direct/rep-04/00146": {
+      "path": "entropy/bbb_martins/direct/rep-04/00146.json",
+      "sha256": "028267b3c4433bc90526819784fc648f02cccf8622ae06d07568c880d873cb2c"
     },
-    "bbb_martins/direct_plus_indirect/00123": {
-      "path": "entropy/bbb_martins/direct_plus_indirect/00123.json",
-      "sha256": "0de0f33e5bfd9cc9ac22575def992f55a17ed45d27a71b5a45a610055f5eaf61"
+    "bbb_martins/direct_plus_indirect/rep-04/00146": {
+      "path": "entropy/bbb_martins/direct_plus_indirect/rep-04/00146.json",
+      "sha256": "17faf3b90c90e1b759811ec3302ef63296571cb4a762d06d1c22395c9e45bec7"
     },
-    "bioavailability_ma/direct/00001": {
-      "path": "entropy/bioavailability_ma/direct/00001.json",
-      "sha256": "4f7600ac86becf82dda5a91cd221c73d246de6ab9c982a2ac29ed007f7a07bae"
+    "bbb_martins/direct/rep-05/00146": {
+      "path": "entropy/bbb_martins/direct/rep-05/00146.json",
+      "sha256": "fd35e9ce3602dbe7d4bc730d4c6711d2ea882550d2346aa59140f7d57aa28f55"
     },
-    "bioavailability_ma/direct_plus_indirect/00001": {
-      "path": "entropy/bioavailability_ma/direct_plus_indirect/00001.json",
-      "sha256": "9110e6ae606282835e91b21e0f34e7ad7e129257ce7edd12b3b2ae14a3a433aa"
+    "bbb_martins/direct_plus_indirect/rep-05/00146": {
+      "path": "entropy/bbb_martins/direct_plus_indirect/rep-05/00146.json",
+      "sha256": "7c9cbbdb66a98d7e3599876e7f1880594dfc2f84f5bb2f1d91452be4958fb1b3"
     },
-    "bioavailability_ma/direct/00103": {
-      "path": "entropy/bioavailability_ma/direct/00103.json",
-      "sha256": "a37bfe60c1d4b97335c8dfb8ca340b0c8f6ed363ccb05a785481df13639f2b92"
+    "bbb_martins/direct/rep-06/00146": {
+      "path": "entropy/bbb_martins/direct/rep-06/00146.json",
+      "sha256": "be67d4d708665e81dc29613641ab221941fbe40ee9212131fbe2cf08aec48684"
     },
-    "bioavailability_ma/direct_plus_indirect/00103": {
-      "path": "entropy/bioavailability_ma/direct_plus_indirect/00103.json",
-      "sha256": "9b7b99b2ba9f7f38053667fad2559f90c17b8b65f0fd16b3da49f10de6da29bb"
+    "bbb_martins/direct_plus_indirect/rep-06/00146": {
+      "path": "entropy/bbb_martins/direct_plus_indirect/rep-06/00146.json",
+      "sha256": "95ba8475a0a1efcc72495730980b29ed8991205bcdb59d7a484887c82481b0e4"
     },
-    "bioavailability_ma/direct/00020": {
-      "path": "entropy/bioavailability_ma/direct/00020.json",
-      "sha256": "eff8f0d01bb4a22ddd08766c9b956b8e5094f16b0e537770ad90506b5ab724de"
+    "bbb_martins/direct/rep-04/00125": {
+      "path": "entropy/bbb_martins/direct/rep-04/00125.json",
+      "sha256": "6d48716be2d075dcf8e4d34d1b61d5ee0481b7407d431be91041333c05714be6"
     },
-    "bioavailability_ma/direct_plus_indirect/00020": {
-      "path": "entropy/bioavailability_ma/direct_plus_indirect/00020.json",
-      "sha256": "b3f0c9c2f90288862b1f23db204d040401ec70b3dc94bd5db95719db60f69a4c"
+    "bbb_martins/direct_plus_indirect/rep-04/00125": {
+      "path": "entropy/bbb_martins/direct_plus_indirect/rep-04/00125.json",
+      "sha256": "3c1007c7a873f646464879cd4a03e5116e18f7c5ea15c5f6d8ed8facaf269ef9"
     },
-    "bioavailability_ma/direct/00189": {
-      "path": "entropy/bioavailability_ma/direct/00189.json",
-      "sha256": "9e58b1602314db62fbdb2385af54776f644532e4109cc6ad80f67f78bad15212"
+    "bbb_martins/direct/rep-05/00125": {
+      "path": "entropy/bbb_martins/direct/rep-05/00125.json",
+      "sha256": "af20f1ca0f8d512e926ae65f4e6557dd898ea41a02afc06cccaae139e13b76b0"
     },
-    "bioavailability_ma/direct_plus_indirect/00189": {
-      "path": "entropy/bioavailability_ma/direct_plus_indirect/00189.json",
-      "sha256": "811990e020a130af0097e7242c17cdbc9f53b277e9132fe3d8792f9ba8e7784b"
+    "bbb_martins/direct_plus_indirect/rep-05/00125": {
+      "path": "entropy/bbb_martins/direct_plus_indirect/rep-05/00125.json",
+      "sha256": "4f7dbc6a208128917b26a1d53802a342e286c70142729ad218a36a45c43b3ae7"
+    },
+    "bbb_martins/direct/rep-06/00125": {
+      "path": "entropy/bbb_martins/direct/rep-06/00125.json",
+      "sha256": "d72bf1a0f9e036496fccf4dc8d323e32b22fca32a9eac5d8b9eb63d11100ae68"
+    },
+    "bbb_martins/direct_plus_indirect/rep-06/00125": {
+      "path": "entropy/bbb_martins/direct_plus_indirect/rep-06/00125.json",
+      "sha256": "2b737fcc92166735f9cc04bab6bad817d31e0fa52bd12cf8985e7720d228f229"
+    },
+    "bbb_martins/direct/rep-04/00349": {
+      "path": "entropy/bbb_martins/direct/rep-04/00349.json",
+      "sha256": "4d8171ad4ac8af10fcc809c81e038ae87d843bdf2f22e052e53f78aae986a7fc"
+    },
+    "bbb_martins/direct_plus_indirect/rep-04/00349": {
+      "path": "entropy/bbb_martins/direct_plus_indirect/rep-04/00349.json",
+      "sha256": "8f2d9b305e2af64eba37ce531603cedae3220d243c5139ae1d78240e04935e1d"
+    },
+    "bbb_martins/direct/rep-05/00349": {
+      "path": "entropy/bbb_martins/direct/rep-05/00349.json",
+      "sha256": "7e1bb83858ab9354e00950e2793d765573953596c2b4881ccbd4a4e4bc22f768"
+    },
+    "bbb_martins/direct_plus_indirect/rep-05/00349": {
+      "path": "entropy/bbb_martins/direct_plus_indirect/rep-05/00349.json",
+      "sha256": "29d3c1c4e9b5c9a162418c12096700fc4779e80069ec738b2986fea281c1a48d"
+    },
+    "bbb_martins/direct/rep-06/00349": {
+      "path": "entropy/bbb_martins/direct/rep-06/00349.json",
+      "sha256": "402f4ec34c36f3cd9fd317be78df98d5410916bf106c39ebe072700b79a04cc4"
+    },
+    "bbb_martins/direct_plus_indirect/rep-06/00349": {
+      "path": "entropy/bbb_martins/direct_plus_indirect/rep-06/00349.json",
+      "sha256": "5616acaca1d821c9356fd9081796d37b8417d0521f298d5dffe93e6e1aaf6d79"
+    },
+    "bioavailability_ma/direct/rep-07/00001": {
+      "path": "entropy/bioavailability_ma/direct/rep-07/00001.json",
+      "sha256": "ebf8748125e83768faabb3fff5ebefbac8888fbf813ff676a11de20792e9924f"
+    },
+    "bioavailability_ma/direct_plus_indirect/rep-07/00001": {
+      "path": "entropy/bioavailability_ma/direct_plus_indirect/rep-07/00001.json",
+      "sha256": "fd1cbcc736e93d1ec2036cd2e1b6aed0581a663fc5768e16b465e9b7ae0b0cdd"
+    },
+    "bioavailability_ma/direct/rep-08/00001": {
+      "path": "entropy/bioavailability_ma/direct/rep-08/00001.json",
+      "sha256": "798fea54acff1187a07f1bc88d3dfcbdd77ada1667849f09253c4534662b7df1"
+    },
+    "bioavailability_ma/direct_plus_indirect/rep-08/00001": {
+      "path": "entropy/bioavailability_ma/direct_plus_indirect/rep-08/00001.json",
+      "sha256": "f935785c373cfdb74106f9a632e7dcb6e0aedbcb136daece88f029dae55844be"
+    },
+    "bioavailability_ma/direct/rep-09/00001": {
+      "path": "entropy/bioavailability_ma/direct/rep-09/00001.json",
+      "sha256": "3cfd66b9ba93df9066c240e396c07fa170e0c5be35f74d1376ac5d8c5b357a4d"
+    },
+    "bioavailability_ma/direct_plus_indirect/rep-09/00001": {
+      "path": "entropy/bioavailability_ma/direct_plus_indirect/rep-09/00001.json",
+      "sha256": "c9a25b2cc08759a6067991a96658bbb864c5aa1e51634d176f53032503f4f457"
+    },
+    "bioavailability_ma/direct/rep-07/00103": {
+      "path": "entropy/bioavailability_ma/direct/rep-07/00103.json",
+      "sha256": "d0409627db317e815bb55a7e91148741972555f5e3a6e5ec1d7c01a6acfe0a19"
+    },
+    "bioavailability_ma/direct_plus_indirect/rep-07/00103": {
+      "path": "entropy/bioavailability_ma/direct_plus_indirect/rep-07/00103.json",
+      "sha256": "34426a7ad44f59202f6d668d2541ef2c41b07ab786b226d0ea1c9d8106436cd3"
+    },
+    "bioavailability_ma/direct/rep-08/00103": {
+      "path": "entropy/bioavailability_ma/direct/rep-08/00103.json",
+      "sha256": "9a28f917af2793229a1110d140ef0b56d4c8b8bd99272d6a04ee711ffe2e6b90"
+    },
+    "bioavailability_ma/direct_plus_indirect/rep-08/00103": {
+      "path": "entropy/bioavailability_ma/direct_plus_indirect/rep-08/00103.json",
+      "sha256": "dda68e824591be4808f72fc0c44e5f2689edf482930d1f27270c94d011d4d218"
+    },
+    "bioavailability_ma/direct/rep-09/00103": {
+      "path": "entropy/bioavailability_ma/direct/rep-09/00103.json",
+      "sha256": "9d847f3eeee11d7215e904c1fc84ccede278908323c300c0b2bddf8e0abd49d8"
+    },
+    "bioavailability_ma/direct_plus_indirect/rep-09/00103": {
+      "path": "entropy/bioavailability_ma/direct_plus_indirect/rep-09/00103.json",
+      "sha256": "afc92de677614ebcc7af6e480fb470094b7faebee9e2f5171190f29dea5e21a5"
+    },
+    "bioavailability_ma/direct/rep-07/00020": {
+      "path": "entropy/bioavailability_ma/direct/rep-07/00020.json",
+      "sha256": "349864ace12c1f5a760bc87ea8019ceeb5cbfe79a003f331bceaddfa0c541aef"
+    },
+    "bioavailability_ma/direct_plus_indirect/rep-07/00020": {
+      "path": "entropy/bioavailability_ma/direct_plus_indirect/rep-07/00020.json",
+      "sha256": "94588bf2f69f58c51a357af4800f064b4dc29a743ce349863f4afc6f337f7768"
+    },
+    "bioavailability_ma/direct/rep-08/00020": {
+      "path": "entropy/bioavailability_ma/direct/rep-08/00020.json",
+      "sha256": "2bb6554614979c3babd5c93f77613380621a747a49c309a6824a820e492c9f50"
+    },
+    "bioavailability_ma/direct_plus_indirect/rep-08/00020": {
+      "path": "entropy/bioavailability_ma/direct_plus_indirect/rep-08/00020.json",
+      "sha256": "caaa1c7c6479e1dc5b943cacba4611c67a3e5f69b884088e654464ece9e2ae6a"
+    },
+    "bioavailability_ma/direct/rep-09/00020": {
+      "path": "entropy/bioavailability_ma/direct/rep-09/00020.json",
+      "sha256": "e4b811c9d2f2a2979a63990178abbfc18821a6045fdaa6d26a0803d4d850c5ab"
+    },
+    "bioavailability_ma/direct_plus_indirect/rep-09/00020": {
+      "path": "entropy/bioavailability_ma/direct_plus_indirect/rep-09/00020.json",
+      "sha256": "8eabe9335083636bfc04d2cd104b6c2a47d4cd4e4547fe246702481e4bdd55b4"
+    },
+    "bioavailability_ma/direct/rep-07/00189": {
+      "path": "entropy/bioavailability_ma/direct/rep-07/00189.json",
+      "sha256": "9ff8efb27f1bd72418022719466a7a78840282dce3cb22bbe6fa3e611225b613"
+    },
+    "bioavailability_ma/direct_plus_indirect/rep-07/00189": {
+      "path": "entropy/bioavailability_ma/direct_plus_indirect/rep-07/00189.json",
+      "sha256": "1e8648622133521e7a0f30f7506068c5a0864cac9577308beabfff998e8694e8"
+    },
+    "bioavailability_ma/direct/rep-08/00189": {
+      "path": "entropy/bioavailability_ma/direct/rep-08/00189.json",
+      "sha256": "78252ab9862f9d3947a4e90fb7105fe8784a5b82503e09488d6e6287626b2084"
+    },
+    "bioavailability_ma/direct_plus_indirect/rep-08/00189": {
+      "path": "entropy/bioavailability_ma/direct_plus_indirect/rep-08/00189.json",
+      "sha256": "22d37cb1b20beac012d153417f2749e77d9f88aa0d4aafaf9cce09f4fb86b771"
+    },
+    "bioavailability_ma/direct/rep-09/00189": {
+      "path": "entropy/bioavailability_ma/direct/rep-09/00189.json",
+      "sha256": "d8492c2da007951ac32cbea4a2b3db433a861d1a0a270a7ba73fa6f750979970"
+    },
+    "bioavailability_ma/direct_plus_indirect/rep-09/00189": {
+      "path": "entropy/bioavailability_ma/direct_plus_indirect/rep-09/00189.json",
+      "sha256": "da6907df40a17283096e06a783101a7c42749237c73cd8fc12d728bb4785e15c"
     }
   }
 }

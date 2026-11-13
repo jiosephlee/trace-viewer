@@ -1,0 +1,1014 @@
+{
+  "query_uid": "BBBCTX_19F29C8B7A1D5CBC3566",
+  "configuration": "direct_plus_indirect",
+  "repetition": 4,
+  "query_prior_included": true,
+  "references": [
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 1",
+      "stable_id": "Cc1cc(-c2ccc(N/N=C3\\C=Cc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4C3=O)c(C)c2)ccc1N/N=C1\\C=Cc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2C1=O",
+      "source_analog_id": "Cc1cc(-c2ccc(N/N=C3\\C=Cc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4C3=O)c(C)c2)ccc1N/N=C1\\C=Cc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2C1=O",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 1",
+      "text": "SMILES: Cc1cc(-c2ccc(N/N=C3\\C=Cc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4C3=O)c(C)c2)ccc1N/N=C1\\C=Cc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2C1=O\nMorgan similarity: 0.3968\nTransfer likelihood: 0.4445"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 1-1",
+      "stable_id": "sr_25a02907f7654ccaae06bf091d534462",
+      "source_analog_id": "Cc1cc(-c2ccc(N/N=C3\\C=Cc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4C3=O)c(C)c2)ccc1N/N=C1\\C=Cc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2C1=O",
+      "containing_unit_id": "Cc1cc(-c2ccc(N/N=C3\\C=Cc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4C3=O)c(C)c2)ccc1N/N=C1\\C=Cc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2C1=O",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 1-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: impermeable BBB permeability\nAssay context: macroscopic inspection\nSpecies: dogs\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"Used to assess the integrity of the blood-brain barrier.\"\nReported evidence: Evans blue dye was injected i.v. to assess the integrity of the blood-brain barrier; after 20 min, no dye was observed in the brain, CSF, and brain IF, although the remainder of the body and viscera was intensely colored."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 2",
+      "stable_id": "Nc1cc(S(=O)(=O)O)c2ccccc2c1N",
+      "source_analog_id": "Nc1cc(S(=O)(=O)O)c2ccccc2c1N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 2",
+      "text": "SMILES: Nc1cc(S(=O)(=O)O)c2ccccc2c1N\nMorgan similarity: 0.3333\nTransfer likelihood: 0.8019"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-1",
+      "stable_id": "sr_c45132a6dedc4871be15c6dd5409a6b0",
+      "source_analog_id": "Nc1cc(S(=O)(=O)O)c2ccccc2c1N",
+      "containing_unit_id": "Nc1cc(S(=O)(=O)O)c2ccccc2c1N",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: brain/plasma concentration ratio\nResult: 2 %\nAssay context: pharmacokinetics\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"CSF concentrations were similar to those found in brain tissue.\"\nReported evidence: In a pharmacokinetic study of CRA, brain concentrations were about 2% of those in plasma. The ability of CRA to cross the blood–brain barrier was evidenced by the fact that its CSF concentrations were similar to those found in brain tissue."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 3",
+      "stable_id": "O=S(=O)(O)c1ccc(/N=N/c2cc(S(=O)(=O)O)c3ccccc3c2O)c2ccccc12",
+      "source_analog_id": "O=S(=O)(O)c1ccc(/N=N/c2cc(S(=O)(=O)O)c3ccccc3c2O)c2ccccc12",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 3",
+      "text": "SMILES: O=S(=O)(O)c1ccc(/N=N/c2cc(S(=O)(=O)O)c3ccccc3c2O)c2ccccc12\nMorgan similarity: 0.3889\nTransfer likelihood: 0.5117"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-1",
+      "stable_id": "sr_7359fccd29b24d9ba3f1de4784c77ab3",
+      "source_analog_id": "O=S(=O)(O)c1ccc(/N=N/c2cc(S(=O)(=O)O)c3ccccc3c2O)c2ccccc12",
+      "containing_unit_id": "O=S(=O)(O)c1ccc(/N=N/c2cc(S(=O)(=O)O)c3ccccc3c2O)c2ccccc12",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: impermeable BBB permeability\nSpecies: rats\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"No radioactivity was detected in the brain for either the parent compound or its metabolites.\"\nReported evidence: In studies involving male and female rats, no radioactivity was found in the brain at any time, showing that neither Carmoisine nor its metabolites cross the blood-brain barrier."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 4",
+      "stable_id": "CS(=O)(=O)c1ccc(-c2ccc3c(NC4CCC4)c(C(N)=O)nnc3c2)cc1",
+      "source_analog_id": "CS(=O)(=O)c1ccc(-c2ccc3c(NC4CCC4)c(C(N)=O)nnc3c2)cc1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 4",
+      "text": "SMILES: CS(=O)(=O)c1ccc(-c2ccc3c(NC4CCC4)c(C(N)=O)nnc3c2)cc1\nMorgan similarity: 0.2133\nTransfer likelihood: 0.7216"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 4-1",
+      "stable_id": "sr_23766b1ddb6b4e43bf794255facba81b",
+      "source_analog_id": "CS(=O)(=O)c1ccc(-c2ccc3c(NC4CCC4)c(C(N)=O)nnc3c2)cc1",
+      "containing_unit_id": "CS(=O)(=O)c1ccc(-c2ccc3c(NC4CCC4)c(C(N)=O)nnc3c2)cc1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 4-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: Kp\nResult: 0.76 ratio\nAssay context: in vivo\nSpecies: FVB mice\nExperimental details:\n  - bbb_permeability_label: good_penetration\n  - bbb_transport_label: not_subject_to_efflux\n\nAdditional details: \"1 mg/kg IV dose, measured at 5 min; negligible in vivo P-gp efflux measured.\"\nReported evidence: In wild-type FVB mice, compound 14 showed good to excellent CNS penetration at 5 min following a 1 mg/kg IV dose, with a brain concentration to plasma concentration ratio (Kp) of 0.76. Negligible in vivo P-gp efflux was also measured."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 5",
+      "stable_id": "CC(C)(C)/[N+]([O-])=C/c1ccc(S(=O)(=O)O)cc1S(=O)(=O)O",
+      "source_analog_id": "CC(C)(C)/[N+]([O-])=C/c1ccc(S(=O)(=O)O)cc1S(=O)(=O)O",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 5",
+      "text": "SMILES: CC(C)(C)/[N+]([O-])=C/c1ccc(S(=O)(=O)O)cc1S(=O)(=O)O\nMorgan similarity: 0.2131\nTransfer likelihood: 0.7761"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-1",
+      "stable_id": "sr_2189e01ff8ae45dd9e4176b3cb0d279d",
+      "source_analog_id": "CC(C)(C)/[N+]([O-])=C/c1ccc(S(=O)(=O)O)cc1S(=O)(=O)O",
+      "containing_unit_id": "CC(C)(C)/[N+]([O-])=C/c1ccc(S(=O)(=O)O)cc1S(=O)(=O)O",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Brain tissue levels measured via HPLC showed OKN-007 was taken up by both normal brain and tumor tissue equally following oral administration.\"\nReported evidence: OKN-007 is a small molecule that crosses the BBB. In rats, high performance liquid chromatography-derived brain tissue levels demonstrated that OKN-007 was taken up by both normal brain and tumor tissue equally following oral administration."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 6",
+      "stable_id": "Nc1ccc(S(=O)(=O)O)cc1",
+      "source_analog_id": "Nc1ccc(S(=O)(=O)O)cc1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 6",
+      "text": "SMILES: Nc1ccc(S(=O)(=O)O)cc1\nMorgan similarity: 0.2245\nTransfer likelihood: 0.4317"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-1",
+      "stable_id": "sr_a2e40fbcb80e4c7c822e883caa3cb05a",
+      "source_analog_id": "Nc1ccc(S(=O)(=O)O)cc1",
+      "containing_unit_id": "Nc1ccc(S(=O)(=O)O)cc1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: concentration in the brain\nResult: impermeable BBB permeability\nAssay context: in vivo\nSpecies: mice\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Baseline control group given water.\"\nReported evidence: Sulphanilic acid normally penetrates the brain in only very small amounts. In mice, concentrations of sulphanilic acid in the brain under control conditions (water) were measured at 0.84, 0.29, and 0.30 mg per 100 g brain."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 7",
+      "stable_id": "Cn1cc(-c2cccc3cc(C(=O)N=C(N)N)ccc23)cn1",
+      "source_analog_id": "Cn1cc(-c2cccc3cc(C(=O)N=C(N)N)ccc23)cn1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 7",
+      "text": "SMILES: Cn1cc(-c2cccc3cc(C(=O)N=C(N)N)ccc23)cn1\nMorgan similarity: 0.1757\nTransfer likelihood: 0.7691"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-1",
+      "stable_id": "sr_4ebc837e9242400eb34d5a88e060f909",
+      "source_analog_id": "Cn1cc(-c2cccc3cc(C(=O)N=C(N)N)ccc23)cn1",
+      "containing_unit_id": "Cn1cc(-c2cccc3cc(C(=O)N=C(N)N)ccc23)cn1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: CSF/plasma ratio\nResult: permeable BBB permeability\nAssay context: CSF measurement\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Measured approximately 4-5 hours after the day 10 dose; absolute CSF concentrations were 87.8 and 24.4 ng/mL.\"\nReported evidence: BIT225 was measured in CSF in two patients at ~4-5 h after the day 10 dose. CSF concentrations were 87.8 and 24.4 ng/mL and the respective CSF/plasma ratios were 2.5 and 1.5%, indicating that BIT225 penetrates the blood-brain barrier."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 8",
+      "stable_id": "Cc1ccc(/N=C/N(C)/C=N/c2ccc(C)cc2C)c(C)c1",
+      "source_analog_id": "Cc1ccc(/N=C/N(C)/C=N/c2ccc(C)cc2C)c(C)c1",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 8",
+      "text": "SMILES: Cc1ccc(/N=C/N(C)/C=N/c2ccc(C)cc2C)c(C)c1\nMorgan similarity: 0.2182\nTransfer likelihood: 0.3136"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-1",
+      "stable_id": "sr_5048f6daf2b14e5a83c807f50d619478",
+      "source_analog_id": "Cc1ccc(/N=C/N(C)/C=N/c2ccc(C)cc2C)c(C)c1",
+      "containing_unit_id": "Cc1ccc(/N=C/N(C)/C=N/c2ccc(C)cc2C)c(C)c1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: total exposure in rat brain tissues\nResult: 0.0234 µM h\nAssay context: 10 mg/kg oral administration\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Following 10 mg/kg oral administration of amitraz in rats, amitraz showed a low brain-to-plasma distribution ratio and a total brain tissue exposure of 0.0234 µM*hr."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 9",
+      "stable_id": "O=c1oc2cc(O)ccc2c2ccccc12",
+      "source_analog_id": "O=c1oc2cc(O)ccc2c2ccccc12",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 9",
+      "text": "SMILES: O=c1oc2cc(O)ccc2c2ccccc12\nMorgan similarity: 0.1897\nTransfer likelihood: 0.7668"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 9-1",
+      "stable_id": "sr_9461cd9c0d834ee788cbbed7d35661e6",
+      "source_analog_id": "O=c1oc2cc(O)ccc2c2ccccc12",
+      "containing_unit_id": "O=c1oc2cc(O)ccc2c2ccccc12",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 9-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nAssay context: intravenous administration\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Compound was detected in the brain.\"\nReported evidence: Urolithin B was detected in the brain of rats upon intravenous administration, confirming that this compound can cross the blood brain barrier."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 10",
+      "stable_id": "CC(C)(C)[N+]([O-])=Cc1ccc(S(=O)(=O)O)cc1S(=O)(=O)O",
+      "source_analog_id": "CC(C)(C)[N+]([O-])=Cc1ccc(S(=O)(=O)O)cc1S(=O)(=O)O",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 10",
+      "text": "SMILES: CC(C)(C)[N+]([O-])=Cc1ccc(S(=O)(=O)O)cc1S(=O)(=O)O\nMorgan similarity: 0.2131\nTransfer likelihood: 0.407"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 10-1",
+      "stable_id": "sr_474362a597a74945afb4c18dd75f3f4e",
+      "source_analog_id": "CC(C)(C)[N+]([O-])=Cc1ccc(S(=O)(=O)O)cc1S(=O)(=O)O",
+      "containing_unit_id": "CC(C)(C)[N+]([O-])=Cc1ccc(S(=O)(=O)O)cc1S(=O)(=O)O",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 10-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEvidence condition: disease=cerebral_ischemia\nResult: impermeable BBB permeability\nConditions: \"transient focal ischemia\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: A recent study demonstrated that NXY-059 had poor brain uptake in animals subjected to transient focal ischemia."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 11",
+      "stable_id": "OHMJKMNGYYWCHB-UHFFFAOYSA-N",
+      "source_analog_id": "OHMJKMNGYYWCHB-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 11",
+      "text": "SMILES: COc1cc(-c2ccc(N=Nc3ccc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4c3O)c(OC)c2)ccc1N=Nc1ccc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2c1O\nMorgan similarity: 0.74"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-1",
+      "stable_id": "sr_f9853c9d80fc4b24be00406df2b2a76a",
+      "source_analog_id": "OHMJKMNGYYWCHB-UHFFFAOYSA-N",
+      "containing_unit_id": "OHMJKMNGYYWCHB-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-1",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8302\nResult: impermeable BBB permeability\nConditions: \"physiologic conditions\"\nExperimental details:\n  - bbb_permeability_label: restricted\n\nAdditional details: \"The dye strongly binds to albumin, and this complex is impermeable to the BBB.\"\nReported evidence: Under physiologic conditions, the blood-brain barrier (BBB) is impermeable to macromolecules such as albumin. Because Evans Blue (EB) dye binds strongly to albumin, it remains restricted within the blood circulation and cannot cross the barrier."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 12",
+      "stable_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 12",
+      "text": "SMILES: Cc1cc(-c2ccc(/N=N/c3c(S(=O)(=O)[O-])cc4cc(S(=O)(=O)[O-])cc(N)c4c3O)c(C)c2)ccc1/N=N/c1c(S(=O)(=O)[O-])cc2cc(S(=O)(=O)[O-])cc(N)c2c1O.[Na+].[Na+].[Na+].[Na+]\nMorgan similarity: 0.4444"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-1",
+      "stable_id": "sr_c298cabce5734d9d8cda54645921b726",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-1",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7731\nResult: impermeable BBB permeability\nAssay context: in situ brain examination\nSpecies: goldfish\nConditions: \"except for some special areas such as the anterior and posterior choroid plexus and the saccus vasculosus\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"1% dye solution used.\"\nReported evidence: Examination of the brains in situ 4 hr after injection of 1% trypan blue in goldfish yielded the finding that these dyes are confined to the blood vessels except for some special areas such as the anterior and posterior choroid plexus and the saccus vasculosus."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-2",
+      "stable_id": "sr_e419a9108ebf4994a51c2ce57daed1bf",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-2",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8179\nResult: impermeable BBB permeability\nAssay context: intravenous injection\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Max Goldmann showed that while trypan blue injected into the lumbar subarachnoid space stained the CNS, intravenous injections stained the body but not the nervous system."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-3",
+      "stable_id": "sr_fa6a25ad235e49cab7fd4c37231a4b36",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-3",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7549\nResult: increased_permeability\nAssay context: intraventricular injection of collagenase\nSpecies: rat\nConditions: \"BBB permeability increased reversibly by proteolytic enzymes (specifically collagenase) acting on basement membrane collagen\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nReported evidence: Intraventricularly injected collagenase and other proteolytic enzymes are able to reversibly increase the permeability of the blood-brain barrier (BBB) to different tracers such as trypan blue in rats."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-4",
+      "stable_id": "sr_878d68c606144ed480a33bcc6c4750a2",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-4",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.81\nResult: increased_permeability\nAssay context: Pentschew and Garro model\nSpecies: rat\nConditions: \"severe disruption of the blood-brain barrier associated with high-dose lead-induced encephalopathy\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"Trypan blue was used as an extracellular tracer.\"\nReported evidence: In the Pentschew and Garro model involving high doses that produce encephalopathy, there is a severe disruption of the blood-brain barrier to extracellular tracers such as trypan blue."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-5",
+      "stable_id": "sr_5563603361e84f009423e646766cb5d0",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-5",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8234\nResult: impermeable BBB permeability\nSpecies: human\nConditions: \"normal conditions (non-anoxic)\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"Based on studies of human fetuses.\"\nReported evidence: Based on Gröntoft's work on human fetuses, it is necessary for the brain to be anoxic to permit a trypan blue infiltration into the brain tissue, implying it is impermeable under normal conditions."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-6",
+      "stable_id": "sr_3e463c92ffb8468c90b1823e2ef2335d",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-6",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8248\nResult: impermeable BBB permeability\nSpecies: human, rat\nConditions: \"foetuses\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: In human and rat foetuses, no significant penetration of trypan blue into the brain was observed."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-7",
+      "stable_id": "sr_d9d31a3960174ce4b88fbe41e2dba054",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-7",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8114\nResult: impermeable BBB permeability\nAssay context: carotid artery injection\nSpecies: guinea pig\nConditions: \"control animals (plasma injection only)\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"The barrier in the neocortex remained intact.\"\nReported evidence: In matched control guinea pigs injected with plasma only, the blood-brain barrier in the neocortex remained intact and did not show extravasation of trypan blue."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-8",
+      "stable_id": "sr_6b7122bfaf08420ba6ff01249fa8e2ac",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-8",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.823\nResult: impermeable BBB permeability\nSpecies: dog\nConditions: \"brain temperature of 13° C and higher\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: The blood-brain barrier of the new-born pup was found to withstand hypothermic brain temperatures of 13-16° C without passing trypan blue, remaining efficient at 13° C and higher."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-9",
+      "stable_id": "sr_c1de18a07e8a4245baaac6ba566df89d",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-9",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7933\nResult: increased_permeability\nAssay context: vital staining\nConditions: \"Specific brain regions with sinusoidal blood vessels, including area postrema, hypothalamus, choroid plexus, dura, hypophysis, tuber cinereum, paraphysis, pineal gland, and preoptic recess\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"Compound: trypan blue.\"\nReported evidence: Regions such as the area postrema and hypothalamus, as well as the choroid plexus, dura, hypophysis, tuber cinereum, paraphysis, pineal gland, and preoptic recess, have been credited with increased permeability of the blood-brain barrier to trypan blue due to the sinusoidal blood vessels characteristic of these areas."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-10",
+      "stable_id": "sr_cdacc10150094ec2b1882123c33fc6d5",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-10",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.803\nResult: impermeable BBB permeability\nAssay context: animal experiments\nConditions: \"intravenous injection\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: In animal experiments, it was shown that after intravenous injection of trypan blue, all tissues with the exception of the brain and the spinal cord were colored, demonstrating that the blood-brain barrier is impermeable to the dye."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-11",
+      "stable_id": "sr_e99d5a02157e4daaa3ee342a041b6fc2",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-11",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8103\nResult: impermeable BBB permeability\nAssay context: in vivo\nConditions: \"water-intoxicated animals\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"administered parenterally\"\nReported evidence: In water-intoxicated animals, the blood-brain barrier is intact, as evidenced by the fact that parenterally administered trypan blue does not penetrate into the brain."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-12",
+      "stable_id": "sr_2f0f132040c0411d97773edd01f15db5",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-12",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.83\nResult: impermeable BBB permeability\nAssay context: in vivo injection\nSpecies: mice, rats\nConditions: \"dye-protein complexes\"\nExperimental details:\n  - bbb_permeability_label: restricted\n\nAdditional details: \"Staining was observed in CVOs and the choroid plexus; no accumulation of dye was observed in neurons with projections beyond the BBB.\"\nReported evidence: In neonatal and adult mice and rats injected with 1-2% Trypan blue, staining was restricted to the vessels of the brain and the circumventricular organs (CVOs), including the choroid plexus of all ventricles."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-13",
+      "stable_id": "sr_660a49dde67e48c6961eaa952b34c27f",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-13",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8178\nResult: impermeable BBB permeability\nAssay context: in vivo injection\nSpecies: dogs and rabbits\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Experiments in dogs and rabbits showed that while intravenous injection of the acidic dye Trypan blue stained the whole animal, the brain and spinal cord remained unstained."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-14",
+      "stable_id": "sr_75f529d3a9244f38813f0aab300dc344",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-14",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8269\nResult: impermeable BBB permeability\nSpecies: cats, rabbits and rats\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: In experiments with cats, rabbits and rats, it was shown that the brain vessel wall is impermeable to trypan blue."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-15",
+      "stable_id": "sr_2c5536d3c2b4442481795379b906d968",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-15",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7355\nResult: impermeable BBB permeability\nAssay context: tracer permeability method\nSpecies: rat\nConditions: \"normal condition\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Trypan blue is identified as a tracer that does not pass the blood-brain barrier (BBB) under normal conditions, although gross spots of staining were observed in the brain stem and hypothalamus after 20–60 Gy irradiation."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-16",
+      "stable_id": "sr_f7b0843870da4b8f826eeed6c437228d",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-16",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7904\nResult: impermeable BBB permeability\nAssay context: IV injection vs spinal cavity injection\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Goldmann observed that while intravenous injection of Trypan blue did not result in brain staining or toxicity, direct injection into the spinal cavity caused convulsions, paralysis, and deep blue staining of the brain, leading to the conclusion that a barrier exists between the blood and brain tissue that does not let Trypan blue pass."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-17",
+      "stable_id": "sr_0d1cf5a9400948d88a85a4610073934b",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-17",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7984\nResult: increased_permeability\nAssay context: macroscopic observation\nConditions: \"Urokon (sodium acetrizoate) damage\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nReported evidence: Macroscopic observations of trypan blue patterns showed that Urokon-damaged brains usually exhibited a confluent staining pattern, indicating dye penetration."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-18",
+      "stable_id": "sr_7b3e08b32be94acfb2efc97899969dca",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-18",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8199\nResult: impermeable BBB permeability\nSpecies: guinea pig\nConditions: \"lead poisoned\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Trypan blue fails to enter the brain of lead poisoned guinea-pigs."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-19",
+      "stable_id": "sr_41a0246f86a444f1afd9004e890f0db2",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-19",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6604\nResult: increased_permeability\nAssay context: ligation of the common carotid artery followed by exposure to an environmental pO2 of 30 mm Hg\nSpecies: rat\nConditions: \"alteration of the blood-brain barrier caused by ischemia\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"Extravasation of trypan blue was directly correlated with increased brain water content.\"\nReported evidence: In rats, after ligation of the common carotid artery and exposure to an environmental pO2 of 30 mm Hg, a direct correlation was found between increased cerebral water content and the amount of extravasated trypan blue, which was attributed to an alteration of the blood-brain barrier caused by ischemia."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-20",
+      "stable_id": "sr_bbc70d3c26034c8fbf32e113ace9de64",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-20",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8255\nResult: impermeable BBB permeability\nAssay context: intravenous administration\nSpecies: dog\nConditions: \"cerebral hypothermia (brain temperature 8-27.8° C), tested 18-76 days post-hypothermia\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Four dogs subjected to cerebral hypothermia (lowest brain temperature 8° C., highest 27.8° C.) were given 1% trypan blue intravenously; none of these brains were blue at sacrifice (18 to 76 days post-hypothermia), suggesting no immediate or delayed disturbance of the barrier."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-21",
+      "stable_id": "sr_aa5810c21d42471ca9cf3a4160ffcac4",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-21",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8283\nResult: impermeable BBB permeability\nSpecies: mouse\nConditions: \"adult mouse\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Dyes, such as trypan blue, injected into the circulation, are not taken up by the brain of the adult mouse."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-22",
+      "stable_id": "sr_c592e2d133c04dfb989de725a13cf41a",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-22",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7706\nResult: increased_permeability\nSpecies: dog\nConditions: \"BBB injury following resuscitation (open-chest cardiac compression method)\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nReported evidence: In a study using Trypan blue as a BBB tracer, extravasation of the dye was found in 3 of 7 resuscitated dogs."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-23",
+      "stable_id": "sr_e0756bccf11c4c70b0b895e2524e1b8c",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-23",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8297\nResult: impermeable BBB permeability\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Trypan blue is described as a tracer that does not normally penetrate the blood-brain barrier."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-24",
+      "stable_id": "sr_6d04b5f4486e4fd98d8d7fa03f3d1406",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-24",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7496\nResult: increased_permeability\nAssay context: in vivo and supravital experiments\nConditions: \"air embolism causing BBB damage\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"Invasion of trypan blue into vascular wall structures occurs after exposure to air embolism for only a few seconds, while extra-vascular staining requires about 6-7 minutes of exposure.\"\nReported evidence: The results confirm that air embolism, in vivo as well as supravitaly, causes a BBB damage as indicated by abnormal permeation of trypan blue."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-25",
+      "stable_id": "sr_0036b5f24e3f4717912db1b0105fb237",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-25",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7696\nResult: impermeable BBB permeability\nAssay context: inspection of the removed brain\nSpecies: rabbit\nConditions: \"normal barrier conditions\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Trypan blue is used to demonstrate the existence or absence of barrier alteration.\"\nReported evidence: Trypan blue is unable to pass from blood to brain under normal barrier conditions and shows a marked tissue affinity and poor diffusibility."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-26",
+      "stable_id": "sr_a7982f9c4d854b46835a2dc9ded065b3",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-26",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8044\nResult: impermeable BBB permeability\nAssay context: i.v. injection\nSpecies: laboratory animals\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: In laboratory animals, intravenous injection of dyes such as trypan blue colored all tissues except the brain, demonstrating that the dye does not cross the blood-brain barrier."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-27",
+      "stable_id": "sr_d83ed51b197e4b3fb9047683be1c2721",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-27",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7975\nResult: increased_permeability\nAssay context: visual evidence\nConditions: \"intracarotid injections of serotonin (3.65 to 6.15 mg)\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"The increased permeability was typically observed on the side of injection only, although one case showed generalized permeability.\"\nReported evidence: In five experiments, clear-cut visual evidence of increased permeability of the cerebral vascular bed to trypan blue was observed after total intracarotid injections of serotonin varying from 3.65 to 6.15 mg."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-28",
+      "stable_id": "sr_51833f3570f8433db3bddec7ecf61542",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-28",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8259\nResult: impermeable BBB permeability\nSpecies: rabbit\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: BROMAN & OLSSON (1948) developed a method in the rabbit using trypan blue, which will not normally leak through the blood-brain barrier, as an indicator to demonstrate lesions."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-29",
+      "stable_id": "sr_8d118341445e4e8c908fb233a5c7f34e",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-29",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7577\nResult: impermeable BBB permeability\nAssay context: intravenous injection\nSpecies: albino mice\nConditions: \"bound to albumin\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"penetration occurs only after opening of the BBB\"\nReported evidence: Trypan blue, bound to albumin and administered intravenously to albino mice, escapes to the brain parenchyma only after the opening of the blood brain barrier (BBB)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-30",
+      "stable_id": "sr_1807d3aad2ea495babcf47e54a48f177",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-30",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7467\nResult: impermeable BBB permeability\nAssay context: histological observation\nSpecies: dog\nConditions: \"control group (intact BBB)\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"The 1% trypan blue was administered via intravenous drip for 30 to 40 minutes prior to slaughter.\"\nReported evidence: In the control group of dogs, there was no leakage of the pigment (trypan blue) into the brainstem, and histological examination showed no extravasation of the pigment from the arteries, veins, and capillaries of the brainstem."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-31",
+      "stable_id": "sr_9220468645ca46678621a82bc9be8e5f",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-31",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7569\nResult: impermeable BBB permeability\nAssay context: dye penetration assay\nSpecies: rat\nConditions: \"sham-operated (intact spinal cord BBB)\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: No trypan blue dye penetration was noted at any postoperative time in the spinal cord of sham-operated animals."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-32",
+      "stable_id": "sr_5c4db68028cc4bdea856ea1ffe1bf259",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-32",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7861\nResult: impermeable BBB permeability\nAssay context: embryonic chick/quail transplant model\nSpecies: chick/quail\nConditions: \"embryonic chick brain transplanted to embryonic quail gut\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"Exclusion of trypan blue was noted as a typical biochemical and morphological feature of the BBB in this model.\"\nReported evidence: In experiments where embryonic chick brain was transplanted into embryonic quail gut, the resulting brain transplant was vascularized by vessels of gut origin that exhibited typical BBB features, including the exclusion of trypan blue."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-33",
+      "stable_id": "sr_72b947b5c800419c8f8b482aee41e816",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-33",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7598\nResult: impermeable BBB permeability\nAssay context: CEC in vitro\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"Used as a marker for albumin.\"\nReported evidence: The impermeability of brain microvessel endothelial cell (CEC) monolayers in vitro for trypan blue, a marker for albumin, was demonstrated."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-34",
+      "stable_id": "sr_cd4b604d8202457e85f31876154644be",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-34",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.762\nResult: impermeable BBB permeability\nAssay context: intraperitoneal injection\nSpecies: rat, mouse\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Trypan blue injected intraperitoneally did not stain the brain, an indication that the blood brain barrier was intact as far as trypan blue was concerned."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-35",
+      "stable_id": "sr_f709d84e38144f6885e57d83b02ace4d",
+      "source_analog_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "containing_unit_id": "GLNADSQYFUSGOU-GPTZEZBUSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-35",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7832\nResult: impermeable BBB permeability\nAssay context: fluorescence microscope\nSpecies: rabbit\nConditions: \"control hemisphere\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"Fluorescence was observed only within the blood vessels, with no extravascular fluorescence.\"\nReported evidence: In the cortex from the control hemisphere of a cold lesion, no specific fluorescence of either trypan blue or catecholamines can be seen outside the vessels."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 13",
+      "stable_id": "BPHHNXJPFPEJOF-UHFFFAOYSA-J",
+      "source_analog_id": "BPHHNXJPFPEJOF-UHFFFAOYSA-J",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 13",
+      "text": "SMILES: COc1cc(-c2ccc(N=Nc3ccc4c(S(=O)(=O)[O-])cc(S(=O)(=O)[O-])c(N)c4c3O)c(OC)c2)ccc1N=Nc1ccc2c(S(=O)(=O)[O-])cc(S(=O)(=O)[O-])c(N)c2c1O.[Na+].[Na+].[Na+].[Na+]\nMorgan similarity: 0.5714"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-1",
+      "stable_id": "sr_01a64573051f43bda1d75d4805bd325a",
+      "source_analog_id": "BPHHNXJPFPEJOF-UHFFFAOYSA-J",
+      "containing_unit_id": "BPHHNXJPFPEJOF-UHFFFAOYSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-1",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8039\nResult: increased_permeability\nAssay context: in vivo\nSpecies: mouse\nConditions: \"infected brain; development of a 'leak' in the capillary endothelium beginning on the 3rd day of infection\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"The increase in permeability caused the brains to become progressively bluer as the dye fixed in brain cells.\"\nReported evidence: Experiments with Pontamine sky blue in infected mice indicated the development of a 'leak' in the capillary endothelium beginning on the 3rd day, resulting in the brains becoming progressively bluer until death on the 6th day."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-2",
+      "stable_id": "sr_108a8aca42ac458394cfd7721fac18e9",
+      "source_analog_id": "BPHHNXJPFPEJOF-UHFFFAOYSA-J",
+      "containing_unit_id": "BPHHNXJPFPEJOF-UHFFFAOYSA-J",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-2",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.5015\nResult: increased_permeability\nSpecies: mice\nConditions: \"breakdown of the blood-brain barrier\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"Marked leakage of Pontamine blue was used to demonstrate the breakdown of the blood-brain barrier.\"\nReported evidence: The breakdown of the blood-brain barrier in both actively and passively protected mice is demonstrated by the marked leakage of Pontamine blue and γ-globulins."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 14",
+      "stable_id": "KBNIFDASRCWYGC-GXNXWABVSA-J",
+      "source_analog_id": "KBNIFDASRCWYGC-GXNXWABVSA-J",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 14",
+      "text": "SMILES: Cc1cc(-c2ccc(N/N=C3\\C=Cc4c(S(=O)(=O)[O-])cc(S(=O)(=O)[O-])c(N)c4C3=O)c(C)c2)ccc1N/N=C1\\C=Cc2c(S(=O)(=O)[O-])cc(S(=O)(=O)[O-])c(N)c2C1=O.[Na+].[Na+].[Na+].[Na+]\nMorgan similarity: 0.2857"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-1",
+      "stable_id": "sr_fe9b55cfc73c4c9e958356cd2908ba31",
+      "source_analog_id": "KBNIFDASRCWYGC-GXNXWABVSA-J",
+      "containing_unit_id": "KBNIFDASRCWYGC-GXNXWABVSA-J",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 14-1",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.796\nEndpoint: leakage\nResult: ~2-fold increase\nAssay context: intravenous injection\nSpecies: mouse\nConditions: \"DR6 knockout adult mice\"\nAdditional details: \"The observed leakage was similar in magnitude to barrier deficits seen after intracortical delivery of VEGF.\"\nReported evidence: Adult DR6 knockout mice exhibited an approximately 2-fold increase in Evans blue dye leakage compared to wild-type littermate controls following intravenous injection."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 15",
+      "stable_id": "WPVJPKXENBARHX-UHFFFAOYSA-N",
+      "source_analog_id": "WPVJPKXENBARHX-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 15",
+      "text": "SMILES: C=CC(=O)Nc1cc(C)cc(-n2c(=O)ccc3cnc4cc(-c5ccc(NS(C)(=O)=O)cc5)ccc4c32)c1\nMorgan similarity: 0.1778"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 15-1",
+      "stable_id": "sr_fa1eaadf5f3b4760ad2f65601a29b5d3",
+      "source_analog_id": "WPVJPKXENBARHX-UHFFFAOYSA-N",
+      "containing_unit_id": "WPVJPKXENBARHX-UHFFFAOYSA-N",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 15-1",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.064\nEndpoint: permeability\nResult: 28.5 %\nAssay context: in vitro HBEC-5i cell model\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Measured at 24 h; permeability was attributed to be lower than ibrutinib due to higher retention rates of JS25 in the cells.\"\nReported evidence: JS25 effectively crosses the blood-brain barrier, showing a permeability of 28.5% in an in vitro HBEC-5i cell model at 24 h."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 16",
+      "stable_id": "XQDIBVYGJNSKTD-IRIIKGHASA-N",
+      "source_analog_id": "XQDIBVYGJNSKTD-IRIIKGHASA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 16",
+      "text": "SMILES: C[n+]1c2c(c(N)c3ccccc31)C(=O)/C(=C\\c1cccc(Cl)c1)CC2.[I-]\nMorgan similarity: 0.1558"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 16-1",
+      "stable_id": "sr_b8904d0191834091bd5942ba794bee51",
+      "source_analog_id": "XQDIBVYGJNSKTD-IRIIKGHASA-N",
+      "containing_unit_id": "XQDIBVYGJNSKTD-IRIIKGHASA-N",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 16-1",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.6093\nEndpoint: Pe\nResult: 4.6 10^-6 cm/s\nExperimental details:\n  - bbb_permeability_label: permeable\n\nReported evidence: Compound 41 showed a Pe of 4.6 ± 0.1 × 10-6 cm/s, and compounds with Pe > 3.8 × 10-6 cm/s are able to permeate the BBB."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 17",
+      "stable_id": "RLWCDORLWHHVNI-UHFFFAOYSA-N",
+      "source_analog_id": "RLWCDORLWHHVNI-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 17",
+      "text": "SMILES: CCOC(=O)c1cnc(N)n2nc(-c3ccc(O)c(O)c3)nc12\nMorgan similarity: 0.1711"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 17-1",
+      "stable_id": "sr_fdfafb9ba8e147be80bfa8497c6d55f7",
+      "source_analog_id": "RLWCDORLWHHVNI-UHFFFAOYSA-N",
+      "containing_unit_id": "RLWCDORLWHHVNI-UHFFFAOYSA-N",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 17-1",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.8822\nResult: impermeable BBB permeability\nAssay context: PAMPA\nConditions: \"in vitro assay\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Many of the tested 2,5,8-trisubstituted TPs, including compound 20, found difficult to pass the BBB in the in vitro PAMPA assay."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 18",
+      "stable_id": "RPKCZJYDUKVMGF-UHFFFAOYSA-L",
+      "source_analog_id": "RPKCZJYDUKVMGF-UHFFFAOYSA-L",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 18",
+      "text": "SMILES: NNC(=O)NN1C(=O)c2cc(S(=O)(=O)[O-])cc3c(N)c(S(=O)(=O)[O-])cc(c23)C1=O.[Li+].[Li+]\nMorgan similarity: 0.1781"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 18-1",
+      "stable_id": "sr_43d1d3d9092e4d10a303162162f0450d",
+      "source_analog_id": "RPKCZJYDUKVMGF-UHFFFAOYSA-L",
+      "containing_unit_id": "RPKCZJYDUKVMGF-UHFFFAOYSA-L",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 18-1",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.7891\nEndpoint: PLY\nResult: 1.65 10^-6 cm/s\nAssay context: cerebral venular capillaries\nSpecies: rats\nConditions: \"first phase of spontaneous disruption (between 20 and 54 min after exposure of the pial surface)\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"Permeability in this phase ranged from 0.66 x 10^-6 to 4.45 x 10^-6 cm s^-1.\"\nReported evidence: In rat cerebral venular capillaries, the first phase of spontaneous permeability increase for Lucifer Yellow occurred between 20 and 54 min after pial surface exposure, with a mean PLY of (1.65 ± 0.603) x 10^-6 cm s^-1."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 19",
+      "stable_id": "NJOQJMJBSVKKRD-UHFFFAOYSA-N",
+      "source_analog_id": "NJOQJMJBSVKKRD-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 19",
+      "text": "SMILES: CCN(CC)c1ccc2c(-c3ccc(S(=O)(=O)NCCSS(C)(=O)=O)cc3S(=O)(=O)O)c3ccc(=[N+](CC)CC)cc-3oc2c1.[Cl-]\nMorgan similarity: 0.1809"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 19-1",
+      "stable_id": "sr_df3cc1cb06aa45ff96f1df4484234d93",
+      "source_analog_id": "NJOQJMJBSVKKRD-UHFFFAOYSA-N",
+      "containing_unit_id": "NJOQJMJBSVKKRD-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 19-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8288\nResult: substrate efflux-transporter substrate status\nAssay context: Cys-less P-gp (recombinant, in vitro)\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Claim is supported by a citation (28) within the text.\"\nReported evidence: Because MTS-rhodamine was shown to be a substrate of Cys-less P-gp (28), the results indicate that the unreacted compound was effectively removed during nickel-chelate chromatography."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 20",
+      "stable_id": "ASXSCWPVQXPLAZ-UHFFFAOYSA-N",
+      "source_analog_id": "ASXSCWPVQXPLAZ-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 20",
+      "text": "SMILES: COc1ccc(-c2oc3c4c(cc(O)c3c(=O)c2O)OC(C)(C)CC4)cc1S(=O)(=O)O\nMorgan similarity: 0.2346"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 20-1",
+      "stable_id": "sr_137f634dda58416a9c2a2a9a2c35c1a8",
+      "source_analog_id": "ASXSCWPVQXPLAZ-UHFFFAOYSA-N",
+      "containing_unit_id": "ASXSCWPVQXPLAZ-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 20-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8393\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Intracellular adriamycin accumulation assay in MCF-7/ADR cells\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Compound 10 had higher activity in increasing adriamycin accumulation than other derivatives, consistent with inhibition of P-gp efflux.\"\nReported evidence: In intracellular adriamycin accumulation assays in MCF-7/ADR cells, compound 10 had higher activity in increasing adriamycin accumulation than other derivatives, consistent with inhibition of P-gp efflux function."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 21",
+      "stable_id": "FIAFUQMPZJWCLV-UHFFFAOYSA-N",
+      "source_analog_id": "FIAFUQMPZJWCLV-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 21",
+      "text": "SMILES: Cc1ccc(C(=O)Nc2ccc(S(=O)(=O)O)c3cc(S(=O)(=O)O)cc(S(=O)(=O)O)c23)cc1NC(=O)c1cccc(NC(=O)Nc2cccc(C(=O)Nc3cc(C(=O)Nc4ccc(S(=O)(=O)O)c5cc(S(=O)(=O)O)cc(S(=O)(=O)O)c45)ccc3C)c2)c1\nMorgan similarity: 0.2179"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 21-1",
+      "stable_id": "sr_ddb821ecb098477799f7e5127c49664c",
+      "source_analog_id": "FIAFUQMPZJWCLV-UHFFFAOYSA-N",
+      "containing_unit_id": "FIAFUQMPZJWCLV-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 21-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8424\nResult: impermeable BBB permeability\nAssay context: in situ brain perfusion\nSpecies: mouse\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Penetration was not affected by P-gp knockout animals or the presence of other trypanocidal drugs.\"\nReported evidence: In studies using in situ brain perfusion mouse models, it was discovered that suramin poorly crossed the blood-brain barrier (BBB) and this penetration was not affected by P-gp knockout animals or other trypanocidal drugs."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 22",
+      "stable_id": "CQRHJEVIKOKQMO-UHFFFAOYSA-N",
+      "source_analog_id": "CQRHJEVIKOKQMO-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 22",
+      "text": "SMILES: O=c1c(-c2ccc(OS(=O)(=O)O)cc2)coc2cc(O)ccc12\nMorgan similarity: 0.2059"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 22-1",
+      "stable_id": "sr_dcc2c34b7f684e0c8e18b58ecf273154",
+      "source_analog_id": "CQRHJEVIKOKQMO-UHFFFAOYSA-N",
+      "containing_unit_id": "CQRHJEVIKOKQMO-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 22-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8507\nResult: substrate efflux-transporter substrate status\nAssay context: Sf9 insect cell vesicles overexpressing human BCRP, inside-out orientation, ATP-dependent uptake\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: NCBIGene:9429\n\nAdditional details: \"Used isoflavone metabolites from urine of Bcrp -/- mice.\"\nReported evidence: Using Sf9-BCRP inverted membrane vesicles, van de Wetering and Sapthu (2012) demonstrated a high rate of ATP-dependent transport of daidzein-4'-sulfate, confirming BCRP-dependent transport."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 23",
+      "stable_id": "SBMYTIDEWFOIDD-YUZLPWPTSA-N",
+      "source_analog_id": "SBMYTIDEWFOIDD-YUZLPWPTSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 23",
+      "text": "SMILES: Cc1cc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)ccc1NCC1CNc2nc(N)[nH]c(=O)c2N1\nMorgan similarity: 0.1354"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 23-1",
+      "stable_id": "sr_4781fb35296341229a38f3586b464680",
+      "source_analog_id": "SBMYTIDEWFOIDD-YUZLPWPTSA-N",
+      "containing_unit_id": "SBMYTIDEWFOIDD-YUZLPWPTSA-N",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 23-1",
+      "text": "Level: L5\nEvidence family: influx_transport\nEndpoint: blood-to-brain transport\nResult: The BBB permeability-surface area (PS) product of [3H]-MTFA, 1.1 ± 0.3 µL/min/g, was 6-fold greater than that of [14C]-sucrose following intravenous injection in anesthetized rats.\nAssay context: in vivo rat BBB, intravenous injection\nExperimental details:\n  - evidence_basis: quantitative absolute\n  - mediator_identifier: UniProt:A8MPH9\n  - mediator_name: folate receptor\n  - transport_mechanism: unspecified mediated BBB uptake\n\nReported evidence: The BBB permeability-surface area (PS) product of [3H]-MTFA, 1.1 ± 0.3 µL/min/g, was 6-fold greater than that of [14C]-sucrose following intravenous injection in anesthetized rats."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 24",
+      "stable_id": "COIVODZMVVUETJ-UHFFFAOYSA-N",
+      "source_analog_id": "COIVODZMVVUETJ-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 24",
+      "text": "SMILES: O=S(=O)([O-])c1ccc(-c2c3cc4c5c(c3[o+]c3c6c7c(cc23)CCCN7CCC6)CCCN5CCC4)c(S(=O)(=O)O)c1\nMorgan similarity: 0.1818"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 24-1",
+      "stable_id": "sr_fc43fc4e672e4790b2542df1a568c521",
+      "source_analog_id": "COIVODZMVVUETJ-UHFFFAOYSA-N",
+      "containing_unit_id": "COIVODZMVVUETJ-UHFFFAOYSA-N",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 24-1",
+      "text": "Level: L5\nEvidence family: influx_transport\nEndpoint: Vmax\nResult: 194 pmol/min/mg of protein\nAssay context: hCMEC/D3 cells\nSpecies: human\nConditions: \"absence of extracellular Ca2+\"\nExperimental details:\n  - bbb_transport_label: transporter_mediated\n\nReported evidence: In hCMEC/D3 cells in the absence of extracellular Ca2+, the uptake of SR-101 consisted of a single saturable component with a Vmax of 194 ± 16 pmol/(mg of protein·min), indicating that SR-101 is predominantly taken up via a carrier-mediated transport system."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 25",
+      "stable_id": "KQKPFRSPSRPDEB-UHFFFAOYSA-N",
+      "source_analog_id": "KQKPFRSPSRPDEB-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 25",
+      "text": "SMILES: CNS(=O)(=O)Cc1ccc2[nH]cc(CCN(C)C)c2c1\nMorgan similarity: 0.137"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 25-1",
+      "stable_id": "sr_63bff7c1f8b94b268c8fe67e5010a9f2",
+      "source_analog_id": "KQKPFRSPSRPDEB-UHFFFAOYSA-N",
+      "containing_unit_id": "KQKPFRSPSRPDEB-UHFFFAOYSA-N",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 25-1",
+      "text": "Level: L5\nEvidence family: influx_transport\nEndpoint: BBB substrate relationship\nResult: In the context of CNS drug discovery, the authors state that they found sumatriptan to be an OATP1A2 substrate (Cheng et al., 2012), and this likely contributed to the species difference in brain penetration between rodents and humans, as OATP1A2 is expressed at the human BBB.\nExperimental details:\n  - evidence_basis: qualitative substrate claim\n  - mediator_identifier: UniProt:O88397\n  - mediator_name: OATP1A2\n  - transport_mechanism: carrier-mediated influx\n\nAdditional details: \"Cited from Cheng et al., 2012.\"\nReported evidence: In the context of CNS drug discovery, the authors state that they found sumatriptan to be an OATP1A2 substrate (Cheng et al., 2012), and this likely contributed to the species difference in brain penetration between rodents and humans, as OATP1A2 is expressed at the human BBB."
+    }
+  ],
+  "trace": [
+    {
+      "task": "single_molecule",
+      "status": "ok",
+      "prediction": null,
+      "response_text": "{\n  \"endpoint_prior\": \"fail\",\n  \"property_drivers\": [\n    \"Molecular weight 872.89 Da far exceeds the range typically associated with passive CNS permeability\",\n    \"Topological polar surface area 359.42 Å² is extremely high, creating a large desolvation and polar-surface penalty for membrane crossing\",\n    \"Hydrogen-bond donor count 8 and acceptor count 16 are far above CNS-permeability-like thresholds\",\n    \"Four sulfonic acid groups are strongly acidic and expected to be largely ionized at physiological pH, producing multiple negative charges and a very low logD at pH 7.4\",\n    \"Very low fraction of sp3 carbons (0.06) and six aromatic rings give a large, flat, extended scaffold with poor solubility and permeability characteristics\",\n    \"Estimated logP 6.67 is misleading for CNS access because it does not account for the dominant ionization of the sulfonate groups at pH 7.4\"\n  ],\n  \"confidence\": \"high\",\n  \"reasoning_summary\": \"The query molecule is a large bis-azo naphthalene tetrasulfonate with a molecular weight of 872.89 Da, a topological polar surface area of 359.42 Å², 8 hydrogen-bond donors, 16 hydrogen-bond acceptors, and four strongly acidic sulfonic acid groups. At physiological pH these sulfonic acids will be almost entirely deprotonated, yielding a multiply negatively charged species with very low passive membrane permeability. The high estimated logP does not reflect the expected ionization state; the actual logD at pH 7.4 is likely very low. The combination of extreme size, high polar surface area, extensive hydrogen-bonding capacity, and multiple fixed negative charges makes passive diffusion across the blood-brain barrier highly implausible. No structural feature suggests a specialized uptake mechanism. Therefore, the physicochemical prior for meaningful CNS access of the intact molecule after systemic administration is a clear fail.\",\n  \"caveats\": [\n    \"The pKa/logD predictor was unavailable, but sulfonic acid groups are intrinsically strongly acidic, so ionization at pH 7.4 is expected.\",\n    \"No measured permeability, efflux-transporter, or in vivo CNS concentration data are supplied; this is a structural and physicochemical prior, not an observed endpoint.\",\n    \"Metabolic cleavage of the azo bonds could generate smaller fragments, but that would not constitute CNS access of the parent molecule.\",\n    \"An active uptake transporter could theoretically alter CNS exposure, but no evidence for such a mechanism is available and the structure provides no basis to assume it.\"\n  ]\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a senior medicinal-chemist and CNS-exposure expert who reasons via analogies, taking evidence from related molecules to support your prediction. Return one complete JSON object."
+        },
+        {
+          "role": "user",
+          "content": "{\"task\": \"Assess the query molecule's structural and physicochemical prior for meaningful or adequate CNS access after systemic administration.\", \"query\": {\"input_smiles\": \"Cc1cc(-c2ccc(/N=N/c3ccc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4c3O)c(C)c2)ccc1/N=N/c1ccc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2c1O\", \"canonical_smiles\": \"Cc1cc(-c2ccc(/N=N/c3ccc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4c3O)c(C)c2)ccc1/N=N/c1ccc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2c1O\", \"tools_prefetched\": true, \"prefetched_molecule_properties\": {\"tool_name\": \"molecule_properties\", \"status\": \"ok\", \"arguments\": {\"query_smiles\": \"Cc1cc(-c2ccc(/N=N/c3ccc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4c3O)c(C)c2)ccc1/N=N/c1ccc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2c1O\", \"logd_ph\": 7.4}, \"content\": \"[molecule_properties]\\nneutral fraction: not applicable (pKa predictor unavailable)\\nestimated logD: not applicable (pKa predictor unavailable)\\nstrongest acidic pKa: not applicable (pKa predictor unavailable)\\nstrongest basic pKa: not applicable (pKa predictor unavailable)\\nnumber of acidic sites: not applicable (pKa predictor unavailable)\\nnumber of basic sites: not applicable (pKa predictor unavailable)\\nnumber of ionizable sites: not applicable (pKa predictor unavailable)\\nexact molecular weight: 872.05\\nfraction of sp3 carbons: 0.06\\nheavy-atom count: 58\\nheavy-atom molecular weight: 844.67\\nLabute surface area: 328.37\\nmaximum absolute partial charge: 0.5\\nmaximum partial charge: 0.3\\nminimum absolute partial charge: 0.3\\nminimum partial charge: -0.5\\nestimated logP: 6.67\\nmolecular weight: 872.89\\nNH/OH group count: 10\\nnitrogen/oxygen atom count: 20\\naliphatic carbocycle count: 0\\naliphatic heterocycle count: 0\\naliphatic ring count: 0\\naromatic carbocycle count: 6\\naromatic heterocycle count: 0\\naromatic ring count: 6\\nhydrogen-bond acceptor count: 16\\nhydrogen-bond donor count: 8\\nheteroatom count: 24\\nrotatable-bond count: 9\\nsaturated carbocycle count: 0\\nsaturated heterocycle count: 0\\nsaturated ring count: 0\\nring count: 6\\ntopological polar surface area: 359.42\\nQED drug-likeness: 0.04\\n\\nfunctional groups: none\\nWarnings: ModuleNotFoundError: No module named 'molgpka'; ModuleNotFoundError: No module named 'accfg'; Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\", \"warnings\": [\"ModuleNotFoundError: No module named 'molgpka'\", \"ModuleNotFoundError: No module named 'accfg'\", \"Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\"], \"errors\": [], \"latency_ms\": 1, \"cache_hit\": false}}, \"instructions\": [\"Use only the supplied structure and property-tool text, without analog evidence or memorized assay labels.\", \"Explain plausible structural and mechanistic liabilities, exposure limitations, and uncertainty.\", \"A structural alert is a hypothesis, not an observed endpoint. Absence of an alert does not establish a negative result.\", \"Do not invent species, population, strain, activation, exposure, or organism conditions.\"], \"required_json_schema\": {\"endpoint_prior\": \"pass | fail | mixed_or_unclear\", \"property_drivers\": [\"string\"], \"confidence\": \"high | moderate | low\", \"reasoning_summary\": \"string\", \"caveats\": [\"string\"]}}"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 2159,
+        "prompt_tokens": 1081,
+        "total_tokens": 3240,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 1622
+      },
+      "tool_count": 0
+    },
+    {
+      "task": "final_summary",
+      "status": "ok",
+      "prediction": "pass",
+      "response_text": "{\n  \"claims\": [\n    {\n      \"claim\": \"Under an intact BBB, Evans blue—the query dye—remains intravascular: after i.v. injection in dogs no dye was detectable in brain, CSF, or brain interstitial fluid, whereas the body stained intensely. This confirms the intact barrier blocks the tetrasulfonate bis-azo dye.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\n        \"Molecule 1\"\n      ],\n      \"record_ids\": [\n        \"Record 1-1\"\n      ]\n    },\n    {\n      \"claim\": \"When the BBB is disrupted, the structurally analogous tetrasulfonate bis-azo dye trypan blue extravasates into brain in multiple independent models, including collagenase opening, lead encephalopathy, irradiation, Urokon injury, ischemia/hypoxia, post-resuscitation injury, air embolism, and serotonin-induced barrier opening. This demonstrates meaningful CNS access for this dye class once barrier integrity is compromised.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 12\"\n      ],\n      \"record_ids\": [\n        \"Record 12-3\",\n        \"Record 12-4\",\n        \"Record 12-15\",\n        \"Record 12-17\",\n        \"Record 12-19\",\n        \"Record 12-22\",\n        \"Record 12-24\",\n        \"Record 12-27\",\n        \"Record 12-29\"\n      ]\n    },\n    {\n      \"claim\": \"Direct Evans blue leakage is increased by approximately 2-fold in DR6 knockout mice with BBB deficits compared with wild-type controls, confirming that the query molecule itself can enter CNS tissue under disrupted-barrier conditions.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 14\"\n      ],\n      \"record_ids\": [\n        \"Record 14-1\"\n      ]\n    },\n    {\n      \"claim\": \"Pontamine sky blue, a closely related bis-azo tetrasulfonate dye, shows marked leakage into brain during infection-induced BBB breakdown, providing additional support that this dye class gains CNS access when the barrier is disrupted.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 13\"\n      ],\n      \"record_ids\": [\n        \"Record 13-1\",\n        \"Record 13-2\"\n      ]\n    },\n    {\n      \"claim\": \"Some other sulfonated/polyanionic molecules—carmoisine, NXY-059, and suramin—show poor brain penetration, including under ischemic conditions for NXY-059. These are less transferable than the direct Evans blue/trypan blue disruption evidence because they lack the same albumin-bound tracer behavior and bis-azo tetrasulfonate scaffold, but they illustrate that not all highly charged sulfonates cross even with barrier compromise.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\n        \"Molecule 3\",\n        \"Molecule 10\",\n        \"Molecule 21\"\n      ],\n      \"record_ids\": [\n        \"Record 3-1\",\n        \"Record 10-1\",\n        \"Record 21-1\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"pass\"\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a senior medicinal-chemist and CNS-exposure expert who reasons via analogies, taking evidence from related molecules to support your prediction.\n\nTask:\n- Endpoint: meaningful or adequate CNS access after systemic administration\n- Label scope: meaningful_cns_access.v1\n- Positive: pass\n- Negative: fail\n- Predict pass for meaningful or adequate BBB/CNS access and fail for insufficient access.\n- Meaningful access does not require ideal passive diffusion, high unbound brain exposure, or absence of every efflux signal.\n- Give the most weight to transferable direct brain, plasma, CSF, uptake, perfusion, influx, or prodrug evidence.\n- Do not treat one physicochemical liability or repeated records as independent proof of failure.\n\nUse the supplied query-property assessment only as an uncertain physicochemical prior. It is not experimental evidence or a label prediction. Let stronger, transferable experimental evidence override it.\n\nReasoning Instructions:\n- Your goal is to reason through the evidence via analogies. Is this molecule or record meaningfully similar to the query molecule? Does the experiment transfer? If it does transfer, how does this experimnetal value inform the property we're aiming to predict?\n- Morgan similarity measures structural similarity to the query. Where shown, the assay-transfer score (0 to 1) is a relative transfer signal, not a probability or an effect size. Some records have no exact score; do not infer one from their neighbors or retrieval order.\n- Ensure you consider and analyze every evidence block.\n- At the end, take the physicochemical properties and transferable evidence and come to a balanced conclusion for the query molecule.\n\nPitfalls to avoid:\n- Do not narrate schema bookkeeping.\n- Do not overly analyze the SMILES structures.\n- Do not blindly trust retrieval scores.\n- Do not infer the prediction from evidence order.\n- Do not skip records; briefly state why any materially uninformative evidence deserves little weight.\n\nOutput:\nReturn exactly one valid JSON object matching the requested schema. Return one or more concise claims using as many claims as needed to represent the experimental evidence that materially informs the decision. Each claim may cite any number of molecules, records, or both. At least one identifier is required per claim. Return only `claims` and `final_prediction`. `supportive` means evidence supporting your selected final prediction; `contradictory` means evidence supporting the alternative."
+        },
+        {
+          "role": "user",
+          "content": "Query molecule\nSMILES: Cc1cc(-c2ccc(/N=N/c3ccc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4c3O)c(C)c2)ccc1/N=N/c1ccc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2c1O\n\nQuery condition\nCondition: This prediction concerns the query molecule under a disrupted biological barrier.\n\n# Query-property prior\nThis is a physicochemical prior.\n\nendpoint prior: \"fail\"\nproperty drivers: [\"Molecular weight 872.89 Da far exceeds the range typically associated with passive CNS permeability\", \"Topological polar surface area 359.42 Å² is extremely high, creating a large desolvation and polar-surface penalty for membrane crossing\", \"Hydrogen-bond donor count 8 and acceptor count 16 are far above CNS-permeability-like thresholds\", \"Four sulfonic acid groups are strongly acidic and expected to be largely ionized at physiological pH, producing multiple negative charges and a very low logD at pH 7.4\", \"Very low fraction of sp3 carbons (0.06) and six aromatic rings give a large, flat, extended scaffold with poor solubility and permeability characteristics\", \"Estimated logP 6.67 is misleading for CNS access because it does not account for the dominant ionization of the sulfonate groups at pH 7.4\"]\nconfidence: \"high\"\nreasoning summary: \"The query molecule is a large bis-azo naphthalene tetrasulfonate with a molecular weight of 872.89 Da, a topological polar surface area of 359.42 Å², 8 hydrogen-bond donors, 16 hydrogen-bond acceptors, and four strongly acidic sulfonic acid groups. At physiological pH these sulfonic acids will be almost entirely deprotonated, yielding a multiply negatively charged species with very low passive membrane permeability. The high estimated logP does not reflect the expected ionization state; the actual logD at pH 7.4 is likely very low. The combination of extreme size, high polar surface area, extensive hydrogen-bonding capacity, and multiple fixed negative charges makes passive diffusion across the blood-brain barrier highly implausible. No structural feature suggests a specialized uptake mechanism. Therefore, the physicochemical prior for meaningful CNS access of the intact molecule after systemic administration is a clear fail.\"\ncaveats: [\"The pKa/logD predictor was unavailable, but sulfonic acid groups are intrinsically strongly acidic, so ionization at pH 7.4 is expected.\", \"No measured permeability, efflux-transporter, or in vivo CNS concentration data are supplied; this is a structural and physicochemical prior, not an observed endpoint.\", \"Metabolic cleavage of the azo bonds could generate smaller fragments, but that would not constitute CNS access of the parent molecule.\", \"An active uptake transporter could theoretically alter CNS exposure, but no evidence for such a mechanism is available and the structure provides no basis to assume it.\"]\n\n# Experimental evidence\n\n## Molecule 1\nSMILES: Cc1cc(-c2ccc(N/N=C3\\C=Cc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4C3=O)c(C)c2)ccc1N/N=C1\\C=Cc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2C1=O\nMorgan similarity: 0.3968\nTransfer likelihood: 0.4445\n\nRecord 1-1\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: impermeable BBB permeability\nAssay context: macroscopic inspection\nSpecies: dogs\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"Used to assess the integrity of the blood-brain barrier.\"\nReported evidence: Evans blue dye was injected i.v. to assess the integrity of the blood-brain barrier; after 20 min, no dye was observed in the brain, CSF, and brain IF, although the remainder of the body and viscera was intensely colored.\n\n## Molecule 2\nSMILES: Nc1cc(S(=O)(=O)O)c2ccccc2c1N\nMorgan similarity: 0.3333\nTransfer likelihood: 0.8019\n\nRecord 2-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: brain/plasma concentration ratio\nResult: 2 %\nAssay context: pharmacokinetics\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"CSF concentrations were similar to those found in brain tissue.\"\nReported evidence: In a pharmacokinetic study of CRA, brain concentrations were about 2% of those in plasma. The ability of CRA to cross the blood–brain barrier was evidenced by the fact that its CSF concentrations were similar to those found in brain tissue.\n\n## Molecule 3\nSMILES: O=S(=O)(O)c1ccc(/N=N/c2cc(S(=O)(=O)O)c3ccccc3c2O)c2ccccc12\nMorgan similarity: 0.3889\nTransfer likelihood: 0.5117\n\nRecord 3-1\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: impermeable BBB permeability\nSpecies: rats\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"No radioactivity was detected in the brain for either the parent compound or its metabolites.\"\nReported evidence: In studies involving male and female rats, no radioactivity was found in the brain at any time, showing that neither Carmoisine nor its metabolites cross the blood-brain barrier.\n\n## Molecule 4\nSMILES: CS(=O)(=O)c1ccc(-c2ccc3c(NC4CCC4)c(C(N)=O)nnc3c2)cc1\nMorgan similarity: 0.2133\nTransfer likelihood: 0.7216\n\nRecord 4-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: Kp\nResult: 0.76 ratio\nAssay context: in vivo\nSpecies: FVB mice\nExperimental details:\n  - bbb_permeability_label: good_penetration\n  - bbb_transport_label: not_subject_to_efflux\n\nAdditional details: \"1 mg/kg IV dose, measured at 5 min; negligible in vivo P-gp efflux measured.\"\nReported evidence: In wild-type FVB mice, compound 14 showed good to excellent CNS penetration at 5 min following a 1 mg/kg IV dose, with a brain concentration to plasma concentration ratio (Kp) of 0.76. Negligible in vivo P-gp efflux was also measured.\n\n## Molecule 5\nSMILES: CC(C)(C)/[N+]([O-])=C/c1ccc(S(=O)(=O)O)cc1S(=O)(=O)O\nMorgan similarity: 0.2131\nTransfer likelihood: 0.7761\n\nRecord 5-1\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Brain tissue levels measured via HPLC showed OKN-007 was taken up by both normal brain and tumor tissue equally following oral administration.\"\nReported evidence: OKN-007 is a small molecule that crosses the BBB. In rats, high performance liquid chromatography-derived brain tissue levels demonstrated that OKN-007 was taken up by both normal brain and tumor tissue equally following oral administration.\n\n## Molecule 6\nSMILES: Nc1ccc(S(=O)(=O)O)cc1\nMorgan similarity: 0.2245\nTransfer likelihood: 0.4317\n\nRecord 6-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: concentration in the brain\nResult: impermeable BBB permeability\nAssay context: in vivo\nSpecies: mice\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Baseline control group given water.\"\nReported evidence: Sulphanilic acid normally penetrates the brain in only very small amounts. In mice, concentrations of sulphanilic acid in the brain under control conditions (water) were measured at 0.84, 0.29, and 0.30 mg per 100 g brain.\n\n## Molecule 7\nSMILES: Cn1cc(-c2cccc3cc(C(=O)N=C(N)N)ccc23)cn1\nMorgan similarity: 0.1757\nTransfer likelihood: 0.7691\n\nRecord 7-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: CSF/plasma ratio\nResult: permeable BBB permeability\nAssay context: CSF measurement\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Measured approximately 4-5 hours after the day 10 dose; absolute CSF concentrations were 87.8 and 24.4 ng/mL.\"\nReported evidence: BIT225 was measured in CSF in two patients at ~4-5 h after the day 10 dose. CSF concentrations were 87.8 and 24.4 ng/mL and the respective CSF/plasma ratios were 2.5 and 1.5%, indicating that BIT225 penetrates the blood-brain barrier.\n\n## Molecule 8\nSMILES: Cc1ccc(/N=C/N(C)/C=N/c2ccc(C)cc2C)c(C)c1\nMorgan similarity: 0.2182\nTransfer likelihood: 0.3136\n\nRecord 8-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: total exposure in rat brain tissues\nResult: 0.0234 µM h\nAssay context: 10 mg/kg oral administration\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Following 10 mg/kg oral administration of amitraz in rats, amitraz showed a low brain-to-plasma distribution ratio and a total brain tissue exposure of 0.0234 µM*hr.\n\n## Molecule 9\nSMILES: O=c1oc2cc(O)ccc2c2ccccc12\nMorgan similarity: 0.1897\nTransfer likelihood: 0.7668\n\nRecord 9-1\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nAssay context: intravenous administration\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Compound was detected in the brain.\"\nReported evidence: Urolithin B was detected in the brain of rats upon intravenous administration, confirming that this compound can cross the blood brain barrier.\n\n## Molecule 10\nSMILES: CC(C)(C)[N+]([O-])=Cc1ccc(S(=O)(=O)O)cc1S(=O)(=O)O\nMorgan similarity: 0.2131\nTransfer likelihood: 0.407\n\nRecord 10-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEvidence condition: disease=cerebral_ischemia\nResult: impermeable BBB permeability\nConditions: \"transient focal ischemia\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: A recent study demonstrated that NXY-059 had poor brain uptake in animals subjected to transient focal ischemia.\n\n## Molecule 11\nSMILES: COc1cc(-c2ccc(N=Nc3ccc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4c3O)c(OC)c2)ccc1N=Nc1ccc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2c1O\nMorgan similarity: 0.74\n\nRecord 11-1\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8302\nResult: impermeable BBB permeability\nConditions: \"physiologic conditions\"\nExperimental details:\n  - bbb_permeability_label: restricted\n\nAdditional details: \"The dye strongly binds to albumin, and this complex is impermeable to the BBB.\"\nReported evidence: Under physiologic conditions, the blood-brain barrier (BBB) is impermeable to macromolecules such as albumin. Because Evans Blue (EB) dye binds strongly to albumin, it remains restricted within the blood circulation and cannot cross the barrier.\n\n## Molecule 12\nSMILES: Cc1cc(-c2ccc(/N=N/c3c(S(=O)(=O)[O-])cc4cc(S(=O)(=O)[O-])cc(N)c4c3O)c(C)c2)ccc1/N=N/c1c(S(=O)(=O)[O-])cc2cc(S(=O)(=O)[O-])cc(N)c2c1O.[Na+].[Na+].[Na+].[Na+]\nMorgan similarity: 0.4444\n\nRecord 12-1\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7731\nResult: impermeable BBB permeability\nAssay context: in situ brain examination\nSpecies: goldfish\nConditions: \"except for some special areas such as the anterior and posterior choroid plexus and the saccus vasculosus\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"1% dye solution used.\"\nReported evidence: Examination of the brains in situ 4 hr after injection of 1% trypan blue in goldfish yielded the finding that these dyes are confined to the blood vessels except for some special areas such as the anterior and posterior choroid plexus and the saccus vasculosus.\n\nRecord 12-2\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8179\nResult: impermeable BBB permeability\nAssay context: intravenous injection\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Max Goldmann showed that while trypan blue injected into the lumbar subarachnoid space stained the CNS, intravenous injections stained the body but not the nervous system.\n\nRecord 12-3\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7549\nResult: increased_permeability\nAssay context: intraventricular injection of collagenase\nSpecies: rat\nConditions: \"BBB permeability increased reversibly by proteolytic enzymes (specifically collagenase) acting on basement membrane collagen\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nReported evidence: Intraventricularly injected collagenase and other proteolytic enzymes are able to reversibly increase the permeability of the blood-brain barrier (BBB) to different tracers such as trypan blue in rats.\n\nRecord 12-4\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.81\nResult: increased_permeability\nAssay context: Pentschew and Garro model\nSpecies: rat\nConditions: \"severe disruption of the blood-brain barrier associated with high-dose lead-induced encephalopathy\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"Trypan blue was used as an extracellular tracer.\"\nReported evidence: In the Pentschew and Garro model involving high doses that produce encephalopathy, there is a severe disruption of the blood-brain barrier to extracellular tracers such as trypan blue.\n\nRecord 12-5\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8234\nResult: impermeable BBB permeability\nSpecies: human\nConditions: \"normal conditions (non-anoxic)\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"Based on studies of human fetuses.\"\nReported evidence: Based on Gröntoft's work on human fetuses, it is necessary for the brain to be anoxic to permit a trypan blue infiltration into the brain tissue, implying it is impermeable under normal conditions.\n\nRecord 12-6\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8248\nResult: impermeable BBB permeability\nSpecies: human, rat\nConditions: \"foetuses\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: In human and rat foetuses, no significant penetration of trypan blue into the brain was observed.\n\nRecord 12-7\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8114\nResult: impermeable BBB permeability\nAssay context: carotid artery injection\nSpecies: guinea pig\nConditions: \"control animals (plasma injection only)\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"The barrier in the neocortex remained intact.\"\nReported evidence: In matched control guinea pigs injected with plasma only, the blood-brain barrier in the neocortex remained intact and did not show extravasation of trypan blue.\n\nRecord 12-8\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.823\nResult: impermeable BBB permeability\nSpecies: dog\nConditions: \"brain temperature of 13° C and higher\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: The blood-brain barrier of the new-born pup was found to withstand hypothermic brain temperatures of 13-16° C without passing trypan blue, remaining efficient at 13° C and higher.\n\nRecord 12-9\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7933\nResult: increased_permeability\nAssay context: vital staining\nConditions: \"Specific brain regions with sinusoidal blood vessels, including area postrema, hypothalamus, choroid plexus, dura, hypophysis, tuber cinereum, paraphysis, pineal gland, and preoptic recess\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"Compound: trypan blue.\"\nReported evidence: Regions such as the area postrema and hypothalamus, as well as the choroid plexus, dura, hypophysis, tuber cinereum, paraphysis, pineal gland, and preoptic recess, have been credited with increased permeability of the blood-brain barrier to trypan blue due to the sinusoidal blood vessels characteristic of these areas.\n\nRecord 12-10\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.803\nResult: impermeable BBB permeability\nAssay context: animal experiments\nConditions: \"intravenous injection\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: In animal experiments, it was shown that after intravenous injection of trypan blue, all tissues with the exception of the brain and the spinal cord were colored, demonstrating that the blood-brain barrier is impermeable to the dye.\n\nRecord 12-11\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8103\nResult: impermeable BBB permeability\nAssay context: in vivo\nConditions: \"water-intoxicated animals\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"administered parenterally\"\nReported evidence: In water-intoxicated animals, the blood-brain barrier is intact, as evidenced by the fact that parenterally administered trypan blue does not penetrate into the brain.\n\nRecord 12-12\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.83\nResult: impermeable BBB permeability\nAssay context: in vivo injection\nSpecies: mice, rats\nConditions: \"dye-protein complexes\"\nExperimental details:\n  - bbb_permeability_label: restricted\n\nAdditional details: \"Staining was observed in CVOs and the choroid plexus; no accumulation of dye was observed in neurons with projections beyond the BBB.\"\nReported evidence: In neonatal and adult mice and rats injected with 1-2% Trypan blue, staining was restricted to the vessels of the brain and the circumventricular organs (CVOs), including the choroid plexus of all ventricles.\n\nRecord 12-13\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8178\nResult: impermeable BBB permeability\nAssay context: in vivo injection\nSpecies: dogs and rabbits\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Experiments in dogs and rabbits showed that while intravenous injection of the acidic dye Trypan blue stained the whole animal, the brain and spinal cord remained unstained.\n\nRecord 12-14\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8269\nResult: impermeable BBB permeability\nSpecies: cats, rabbits and rats\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: In experiments with cats, rabbits and rats, it was shown that the brain vessel wall is impermeable to trypan blue.\n\nRecord 12-15\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7355\nResult: impermeable BBB permeability\nAssay context: tracer permeability method\nSpecies: rat\nConditions: \"normal condition\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Trypan blue is identified as a tracer that does not pass the blood-brain barrier (BBB) under normal conditions, although gross spots of staining were observed in the brain stem and hypothalamus after 20–60 Gy irradiation.\n\nRecord 12-16\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7904\nResult: impermeable BBB permeability\nAssay context: IV injection vs spinal cavity injection\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Goldmann observed that while intravenous injection of Trypan blue did not result in brain staining or toxicity, direct injection into the spinal cavity caused convulsions, paralysis, and deep blue staining of the brain, leading to the conclusion that a barrier exists between the blood and brain tissue that does not let Trypan blue pass.\n\nRecord 12-17\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7984\nResult: increased_permeability\nAssay context: macroscopic observation\nConditions: \"Urokon (sodium acetrizoate) damage\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nReported evidence: Macroscopic observations of trypan blue patterns showed that Urokon-damaged brains usually exhibited a confluent staining pattern, indicating dye penetration.\n\nRecord 12-18\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8199\nResult: impermeable BBB permeability\nSpecies: guinea pig\nConditions: \"lead poisoned\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Trypan blue fails to enter the brain of lead poisoned guinea-pigs.\n\nRecord 12-19\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6604\nResult: increased_permeability\nAssay context: ligation of the common carotid artery followed by exposure to an environmental pO2 of 30 mm Hg\nSpecies: rat\nConditions: \"alteration of the blood-brain barrier caused by ischemia\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"Extravasation of trypan blue was directly correlated with increased brain water content.\"\nReported evidence: In rats, after ligation of the common carotid artery and exposure to an environmental pO2 of 30 mm Hg, a direct correlation was found between increased cerebral water content and the amount of extravasated trypan blue, which was attributed to an alteration of the blood-brain barrier caused by ischemia.\n\nRecord 12-20\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8255\nResult: impermeable BBB permeability\nAssay context: intravenous administration\nSpecies: dog\nConditions: \"cerebral hypothermia (brain temperature 8-27.8° C), tested 18-76 days post-hypothermia\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Four dogs subjected to cerebral hypothermia (lowest brain temperature 8° C., highest 27.8° C.) were given 1% trypan blue intravenously; none of these brains were blue at sacrifice (18 to 76 days post-hypothermia), suggesting no immediate or delayed disturbance of the barrier.\n\nRecord 12-21\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8283\nResult: impermeable BBB permeability\nSpecies: mouse\nConditions: \"adult mouse\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Dyes, such as trypan blue, injected into the circulation, are not taken up by the brain of the adult mouse.\n\nRecord 12-22\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7706\nResult: increased_permeability\nSpecies: dog\nConditions: \"BBB injury following resuscitation (open-chest cardiac compression method)\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nReported evidence: In a study using Trypan blue as a BBB tracer, extravasation of the dye was found in 3 of 7 resuscitated dogs.\n\nRecord 12-23\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8297\nResult: impermeable BBB permeability\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Trypan blue is described as a tracer that does not normally penetrate the blood-brain barrier.\n\nRecord 12-24\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7496\nResult: increased_permeability\nAssay context: in vivo and supravital experiments\nConditions: \"air embolism causing BBB damage\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"Invasion of trypan blue into vascular wall structures occurs after exposure to air embolism for only a few seconds, while extra-vascular staining requires about 6-7 minutes of exposure.\"\nReported evidence: The results confirm that air embolism, in vivo as well as supravitaly, causes a BBB damage as indicated by abnormal permeation of trypan blue.\n\nRecord 12-25\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7696\nResult: impermeable BBB permeability\nAssay context: inspection of the removed brain\nSpecies: rabbit\nConditions: \"normal barrier conditions\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Trypan blue is used to demonstrate the existence or absence of barrier alteration.\"\nReported evidence: Trypan blue is unable to pass from blood to brain under normal barrier conditions and shows a marked tissue affinity and poor diffusibility.\n\nRecord 12-26\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8044\nResult: impermeable BBB permeability\nAssay context: i.v. injection\nSpecies: laboratory animals\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: In laboratory animals, intravenous injection of dyes such as trypan blue colored all tissues except the brain, demonstrating that the dye does not cross the blood-brain barrier.\n\nRecord 12-27\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7975\nResult: increased_permeability\nAssay context: visual evidence\nConditions: \"intracarotid injections of serotonin (3.65 to 6.15 mg)\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"The increased permeability was typically observed on the side of injection only, although one case showed generalized permeability.\"\nReported evidence: In five experiments, clear-cut visual evidence of increased permeability of the cerebral vascular bed to trypan blue was observed after total intracarotid injections of serotonin varying from 3.65 to 6.15 mg.\n\nRecord 12-28\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8259\nResult: impermeable BBB permeability\nSpecies: rabbit\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: BROMAN & OLSSON (1948) developed a method in the rabbit using trypan blue, which will not normally leak through the blood-brain barrier, as an indicator to demonstrate lesions.\n\nRecord 12-29\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7577\nResult: impermeable BBB permeability\nAssay context: intravenous injection\nSpecies: albino mice\nConditions: \"bound to albumin\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"penetration occurs only after opening of the BBB\"\nReported evidence: Trypan blue, bound to albumin and administered intravenously to albino mice, escapes to the brain parenchyma only after the opening of the blood brain barrier (BBB).\n\nRecord 12-30\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7467\nResult: impermeable BBB permeability\nAssay context: histological observation\nSpecies: dog\nConditions: \"control group (intact BBB)\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"The 1% trypan blue was administered via intravenous drip for 30 to 40 minutes prior to slaughter.\"\nReported evidence: In the control group of dogs, there was no leakage of the pigment (trypan blue) into the brainstem, and histological examination showed no extravasation of the pigment from the arteries, veins, and capillaries of the brainstem.\n\nRecord 12-31\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7569\nResult: impermeable BBB permeability\nAssay context: dye penetration assay\nSpecies: rat\nConditions: \"sham-operated (intact spinal cord BBB)\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: No trypan blue dye penetration was noted at any postoperative time in the spinal cord of sham-operated animals.\n\nRecord 12-32\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7861\nResult: impermeable BBB permeability\nAssay context: embryonic chick/quail transplant model\nSpecies: chick/quail\nConditions: \"embryonic chick brain transplanted to embryonic quail gut\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"Exclusion of trypan blue was noted as a typical biochemical and morphological feature of the BBB in this model.\"\nReported evidence: In experiments where embryonic chick brain was transplanted into embryonic quail gut, the resulting brain transplant was vascularized by vessels of gut origin that exhibited typical BBB features, including the exclusion of trypan blue.\n\nRecord 12-33\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7598\nResult: impermeable BBB permeability\nAssay context: CEC in vitro\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"Used as a marker for albumin.\"\nReported evidence: The impermeability of brain microvessel endothelial cell (CEC) monolayers in vitro for trypan blue, a marker for albumin, was demonstrated.\n\nRecord 12-34\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.762\nResult: impermeable BBB permeability\nAssay context: intraperitoneal injection\nSpecies: rat, mouse\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Trypan blue injected intraperitoneally did not stain the brain, an indication that the blood brain barrier was intact as far as trypan blue was concerned.\n\nRecord 12-35\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7832\nResult: impermeable BBB permeability\nAssay context: fluorescence microscope\nSpecies: rabbit\nConditions: \"control hemisphere\"\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nAdditional details: \"Fluorescence was observed only within the blood vessels, with no extravascular fluorescence.\"\nReported evidence: In the cortex from the control hemisphere of a cold lesion, no specific fluorescence of either trypan blue or catecholamines can be seen outside the vessels.\n\n## Molecule 13\nSMILES: COc1cc(-c2ccc(N=Nc3ccc4c(S(=O)(=O)[O-])cc(S(=O)(=O)[O-])c(N)c4c3O)c(OC)c2)ccc1N=Nc1ccc2c(S(=O)(=O)[O-])cc(S(=O)(=O)[O-])c(N)c2c1O.[Na+].[Na+].[Na+].[Na+]\nMorgan similarity: 0.5714\n\nRecord 13-1\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8039\nResult: increased_permeability\nAssay context: in vivo\nSpecies: mouse\nConditions: \"infected brain; development of a 'leak' in the capillary endothelium beginning on the 3rd day of infection\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"The increase in permeability caused the brains to become progressively bluer as the dye fixed in brain cells.\"\nReported evidence: Experiments with Pontamine sky blue in infected mice indicated the development of a 'leak' in the capillary endothelium beginning on the 3rd day, resulting in the brains becoming progressively bluer until death on the 6th day.\n\nRecord 13-2\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.5015\nResult: increased_permeability\nSpecies: mice\nConditions: \"breakdown of the blood-brain barrier\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"Marked leakage of Pontamine blue was used to demonstrate the breakdown of the blood-brain barrier.\"\nReported evidence: The breakdown of the blood-brain barrier in both actively and passively protected mice is demonstrated by the marked leakage of Pontamine blue and γ-globulins.\n\n## Molecule 14\nSMILES: Cc1cc(-c2ccc(N/N=C3\\C=Cc4c(S(=O)(=O)[O-])cc(S(=O)(=O)[O-])c(N)c4C3=O)c(C)c2)ccc1N/N=C1\\C=Cc2c(S(=O)(=O)[O-])cc(S(=O)(=O)[O-])c(N)c2C1=O.[Na+].[Na+].[Na+].[Na+]\nMorgan similarity: 0.2857\n\nRecord 14-1\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.796\nEndpoint: leakage\nResult: ~2-fold increase\nAssay context: intravenous injection\nSpecies: mouse\nConditions: \"DR6 knockout adult mice\"\nAdditional details: \"The observed leakage was similar in magnitude to barrier deficits seen after intracortical delivery of VEGF.\"\nReported evidence: Adult DR6 knockout mice exhibited an approximately 2-fold increase in Evans blue dye leakage compared to wild-type littermate controls following intravenous injection.\n\n## Molecule 15\nSMILES: C=CC(=O)Nc1cc(C)cc(-n2c(=O)ccc3cnc4cc(-c5ccc(NS(C)(=O)=O)cc5)ccc4c32)c1\nMorgan similarity: 0.1778\n\nRecord 15-1\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.064\nEndpoint: permeability\nResult: 28.5 %\nAssay context: in vitro HBEC-5i cell model\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"Measured at 24 h; permeability was attributed to be lower than ibrutinib due to higher retention rates of JS25 in the cells.\"\nReported evidence: JS25 effectively crosses the blood-brain barrier, showing a permeability of 28.5% in an in vitro HBEC-5i cell model at 24 h.\n\n## Molecule 16\nSMILES: C[n+]1c2c(c(N)c3ccccc31)C(=O)/C(=C\\c1cccc(Cl)c1)CC2.[I-]\nMorgan similarity: 0.1558\n\nRecord 16-1\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.6093\nEndpoint: Pe\nResult: 4.6 10^-6 cm/s\nExperimental details:\n  - bbb_permeability_label: permeable\n\nReported evidence: Compound 41 showed a Pe of 4.6 ± 0.1 × 10-6 cm/s, and compounds with Pe > 3.8 × 10-6 cm/s are able to permeate the BBB.\n\n## Molecule 17\nSMILES: CCOC(=O)c1cnc(N)n2nc(-c3ccc(O)c(O)c3)nc12\nMorgan similarity: 0.1711\n\nRecord 17-1\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.8822\nResult: impermeable BBB permeability\nAssay context: PAMPA\nConditions: \"in vitro assay\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Many of the tested 2,5,8-trisubstituted TPs, including compound 20, found difficult to pass the BBB in the in vitro PAMPA assay.\n\n## Molecule 18\nSMILES: NNC(=O)NN1C(=O)c2cc(S(=O)(=O)[O-])cc3c(N)c(S(=O)(=O)[O-])cc(c23)C1=O.[Li+].[Li+]\nMorgan similarity: 0.1781\n\nRecord 18-1\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.7891\nEndpoint: PLY\nResult: 1.65 10^-6 cm/s\nAssay context: cerebral venular capillaries\nSpecies: rats\nConditions: \"first phase of spontaneous disruption (between 20 and 54 min after exposure of the pial surface)\"\nExperimental details:\n  - bbb_permeability_label: increased_permeability\n\nAdditional details: \"Permeability in this phase ranged from 0.66 x 10^-6 to 4.45 x 10^-6 cm s^-1.\"\nReported evidence: In rat cerebral venular capillaries, the first phase of spontaneous permeability increase for Lucifer Yellow occurred between 20 and 54 min after pial surface exposure, with a mean PLY of (1.65 ± 0.603) x 10^-6 cm s^-1.\n\n## Molecule 19\nSMILES: CCN(CC)c1ccc2c(-c3ccc(S(=O)(=O)NCCSS(C)(=O)=O)cc3S(=O)(=O)O)c3ccc(=[N+](CC)CC)cc-3oc2c1.[Cl-]\nMorgan similarity: 0.1809\n\nRecord 19-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8288\nResult: substrate efflux-transporter substrate status\nAssay context: Cys-less P-gp (recombinant, in vitro)\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Claim is supported by a citation (28) within the text.\"\nReported evidence: Because MTS-rhodamine was shown to be a substrate of Cys-less P-gp (28), the results indicate that the unreacted compound was effectively removed during nickel-chelate chromatography.\n\n## Molecule 20\nSMILES: COc1ccc(-c2oc3c4c(cc(O)c3c(=O)c2O)OC(C)(C)CC4)cc1S(=O)(=O)O\nMorgan similarity: 0.2346\n\nRecord 20-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8393\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Intracellular adriamycin accumulation assay in MCF-7/ADR cells\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Compound 10 had higher activity in increasing adriamycin accumulation than other derivatives, consistent with inhibition of P-gp efflux.\"\nReported evidence: In intracellular adriamycin accumulation assays in MCF-7/ADR cells, compound 10 had higher activity in increasing adriamycin accumulation than other derivatives, consistent with inhibition of P-gp efflux function.\n\n## Molecule 21\nSMILES: Cc1ccc(C(=O)Nc2ccc(S(=O)(=O)O)c3cc(S(=O)(=O)O)cc(S(=O)(=O)O)c23)cc1NC(=O)c1cccc(NC(=O)Nc2cccc(C(=O)Nc3cc(C(=O)Nc4ccc(S(=O)(=O)O)c5cc(S(=O)(=O)O)cc(S(=O)(=O)O)c45)ccc3C)c2)c1\nMorgan similarity: 0.2179\n\nRecord 21-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8424\nResult: impermeable BBB permeability\nAssay context: in situ brain perfusion\nSpecies: mouse\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Penetration was not affected by P-gp knockout animals or the presence of other trypanocidal drugs.\"\nReported evidence: In studies using in situ brain perfusion mouse models, it was discovered that suramin poorly crossed the blood-brain barrier (BBB) and this penetration was not affected by P-gp knockout animals or other trypanocidal drugs.\n\n## Molecule 22\nSMILES: O=c1c(-c2ccc(OS(=O)(=O)O)cc2)coc2cc(O)ccc12\nMorgan similarity: 0.2059\n\nRecord 22-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8507\nResult: substrate efflux-transporter substrate status\nAssay context: Sf9 insect cell vesicles overexpressing human BCRP, inside-out orientation, ATP-dependent uptake\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: NCBIGene:9429\n\nAdditional details: \"Used isoflavone metabolites from urine of Bcrp -/- mice.\"\nReported evidence: Using Sf9-BCRP inverted membrane vesicles, van de Wetering and Sapthu (2012) demonstrated a high rate of ATP-dependent transport of daidzein-4'-sulfate, confirming BCRP-dependent transport.\n\n## Molecule 23\nSMILES: Cc1cc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)ccc1NCC1CNc2nc(N)[nH]c(=O)c2N1\nMorgan similarity: 0.1354\n\nRecord 23-1\nLevel: L5\nEvidence family: influx_transport\nEndpoint: blood-to-brain transport\nResult: The BBB permeability-surface area (PS) product of [3H]-MTFA, 1.1 ± 0.3 µL/min/g, was 6-fold greater than that of [14C]-sucrose following intravenous injection in anesthetized rats.\nAssay context: in vivo rat BBB, intravenous injection\nExperimental details:\n  - evidence_basis: quantitative absolute\n  - mediator_identifier: UniProt:A8MPH9\n  - mediator_name: folate receptor\n  - transport_mechanism: unspecified mediated BBB uptake\n\nReported evidence: The BBB permeability-surface area (PS) product of [3H]-MTFA, 1.1 ± 0.3 µL/min/g, was 6-fold greater than that of [14C]-sucrose following intravenous injection in anesthetized rats.\n\n## Molecule 24\nSMILES: O=S(=O)([O-])c1ccc(-c2c3cc4c5c(c3[o+]c3c6c7c(cc23)CCCN7CCC6)CCCN5CCC4)c(S(=O)(=O)O)c1\nMorgan similarity: 0.1818\n\nRecord 24-1\nLevel: L5\nEvidence family: influx_transport\nEndpoint: Vmax\nResult: 194 pmol/min/mg of protein\nAssay context: hCMEC/D3 cells\nSpecies: human\nConditions: \"absence of extracellular Ca2+\"\nExperimental details:\n  - bbb_transport_label: transporter_mediated\n\nReported evidence: In hCMEC/D3 cells in the absence of extracellular Ca2+, the uptake of SR-101 consisted of a single saturable component with a Vmax of 194 ± 16 pmol/(mg of protein·min), indicating that SR-101 is predominantly taken up via a carrier-mediated transport system.\n\n## Molecule 25\nSMILES: CNS(=O)(=O)Cc1ccc2[nH]cc(CCN(C)C)c2c1\nMorgan similarity: 0.137\n\nRecord 25-1\nLevel: L5\nEvidence family: influx_transport\nEndpoint: BBB substrate relationship\nResult: In the context of CNS drug discovery, the authors state that they found sumatriptan to be an OATP1A2 substrate (Cheng et al., 2012), and this likely contributed to the species difference in brain penetration between rodents and humans, as OATP1A2 is expressed at the human BBB.\nExperimental details:\n  - evidence_basis: qualitative substrate claim\n  - mediator_identifier: UniProt:O88397\n  - mediator_name: OATP1A2\n  - transport_mechanism: carrier-mediated influx\n\nAdditional details: \"Cited from Cheng et al., 2012.\"\nReported evidence: In the context of CNS drug discovery, the authors state that they found sumatriptan to be an OATP1A2 substrate (Cheng et al., 2012), and this likely contributed to the species difference in brain penetration between rodents and humans, as OATP1A2 is expressed at the human BBB.\n\n# Required JSON shape\n{\n  \"claims\": [\n    {\n      \"claim\": \"concise evidence-grounded statement\",\n      \"evidence_role\": \"supportive | contradictory\",\n      \"molecule_ids\": [\n        \"Molecule N\"\n      ],\n      \"record_ids\": [\n        \"Record N-N\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"pass | fail\"\n}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\n  \"claims\": [\n    {\n      \"claim\": \"Under an intact BBB, Evans blue—the query dye—remains intravascular: after i.v. injection in dogs no dye was detectable in brain, CSF, or brain interstitial fluid, whereas the body stained intensely. This confirms the intact barrier blocks the tetrasulfonate bis-azo dye.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 1\"],\n      \"record_ids\": [\"Record 1-1\"]\n    },\n    {\n      \"claim\": \"When the BBB is disrupted, the structurally analogous tetrasulfonate bis-azo dye trypan blue extravasates into brain in multiple independent models, including collagenase opening, lead encephalopathy, irradiation, Urokon injury, ischemia/hypoxia, post-resuscitation injury, air embolism, and serotonin-induced barrier opening. This demonstrates meaningful CNS access for this dye class once barrier integrity is compromised.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 12\"],\n      \"record_ids\": [\n        \"Record 12-3\",\n        \"Record 12-4\",\n        \"Record 12-15\",\n        \"Record 12-17\",\n        \"Record 12-19\",\n        \"Record 12-22\",\n        \"Record 12-24\",\n        \"Record 12-27\",\n        \"Record 12-29\"\n      ]\n    },\n    {\n      \"claim\": \"Direct Evans blue leakage is increased by approximately 2-fold in DR6 knockout mice with BBB deficits compared with wild-type controls, confirming that the query molecule itself can enter CNS tissue under disrupted-barrier conditions.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 14\"],\n      \"record_ids\": [\"Record 14-1\"]\n    },\n    {\n      \"claim\": \"Pontamine sky blue, a closely related bis-azo tetrasulfonate dye, shows marked leakage into brain during infection-induced BBB breakdown, providing additional support that this dye class gains CNS access when the barrier is disrupted.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 13\"],\n      \"record_ids\": [\"Record 13-1\", \"Record 13-2\"]\n    },\n    {\n      \"claim\": \"Some other sulfonated/polyanionic molecules—carmoisine, NXY-059, and suramin—show poor brain penetration, including under ischemic conditions for NXY-059. These are less transferable than the direct Evans blue/trypan blue disruption evidence because they lack the same albumin-bound tracer behavior and bis-azo tetrasulfonate scaffold, but they illustrate that not all highly charged sulfonates cross even with barrier compromise.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 3\", \"Molecule 10\", \"Molecule 21\"],\n      \"record_ids\": [\"Record 3-1\", \"Record 10-1\", \"Record 21-1\"]\n    }\n  ],\n  \"final_prediction\": \"pass\"\n}",
+          "reasoning": "We need answer JSON. Need reason. Need analyze all evidence blocks. Need final prediction. Query is bis-azo naphthalene tetrasulfonate with two naphthalene sulfonic acid amino hydroxy groups and central dimethyl biphenyl? Condition disrupted biological barrier. Need predict meaningful CNS access after systemic administration under disrupted barrier. Need weigh direct evidence. Query structure resembles Evans blue? Let's identify. SMILES: Cc1cc(-c2ccc(/N=N/c3ccc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4c3O)c(C)c2)ccc1/N=N/c1ccc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2c1O. This is sym? It has two naphthalene disulfonate azo arms on a dimethyl biphenyl core. This is Evans blue? Evans blue has tetrasulfonate naphthalene azo biphenyl? Evans blue formula: C34H24N6Na4O14S4, structure: 4-amino-5-hydroxy-2,7-naphthalenedisulfonic acid coupled with 3,3'-dimethylbiphenyl? Actually Evans blue: [4,4'-bis(4-amino-5-hydroxy-2,7-disulfo-1-naphthylazo)-3,3'-dimethylbiphenyl] tetrasodium. Yes query looks exactly Evans blue tetrasulfonic acid. So molecule is Evans blue (acid form). Known BBB probe impermeable under normal; with disrupted barrier may enter? Condition \"disrupted biological barrier.\" Need predict meaningful CNS access after systemic administration under disrupted barrier. Evidence includes Evans blue analog records (Molecule 11? actually query itself variants? Molecule 11 is methoxy-substituted? Molecule 12 trypan blue? Evans blue? Let's map.)\n\nMolecule 1: SMILES resembles hydrazone tautomer of Evans blue? Cc1cc(-c2ccc(N/N=C3\\C=Cc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4C3=O)c(C)c2)ccc1N/N=C1\\C=Cc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2C1=O, Morgan 0.3968. Record 1-1 L1 direct brain exposure dogs: Evans blue dye injected i.v. assess BBB integrity; no dye in brain, CSF, brain IF after 20 min; body colored. This is essentially query (Evans blue) maybe tautomer. Direct evidence impermeable under normal BBB. But query condition disrupted barrier. Need consider disrupted condition may allow. Need evaluate evidence under disrupted.\n\nMolecule 12 trypan blue? SMILES Cc1cc(-c2ccc(/N=N/c3c(S(=O)(=O)[O-])cc4cc(S(=O)(=O)[O-])cc(N)c4c3O)c(C)c2)ccc1/N=N/c1c(S(=O)(=O)[O-])cc2cc(S(=O)(=O)[O-])cc(N)c2c1O.[Na] etc. Morgan 0.4444. Wait trypan blue structure has tolyl azo? Trypan blue is 3,3'-dimethylbiphenyl-4,4'-bis(azo-2-amino-1-naphthol-3,6-disulfonate)? Actually trypan blue: C34H28N6O14S4? Query maybe Evans blue vs trypan blue differ substitution positions? Evans blue: 4-amino-5-hydroxy-2,7-naphthalenedisulfonic acid; trypan blue: 3,3'-dimethyl-4,4'-bis[(2-amino-3,6-disulfo-1-naphthyl)azo]biphenyl? Need not.\nMolecule 11 is COc instead of C methyl? Actually query has Cc1cc(...)ccc1/N=N...; Molecule 11 COc1cc(...ccc1...), tetrasulfonate naphthalene azo. Molecule 12 has sulfonate free salt with pattern c(N)c4c3O. Molecule 13 is methoxy with salts. These are Evans blue variants/dyes.\n\nMany records for trypan blue under normal BBB impermeable; under disrupted conditions increased permeability (collagenase, lead encephalopathy, ischemia, serotonin, air embolism, etc). The query condition \"disrupted biological barrier\" likely specifically asks whether under disrupted BBB, Evans blue gets CNS access? Need predict pass? Need interpret \"meaningful CNS access after systemic administration\" under disrupted barrier. The prior says fail physicochemical. But experimental evidence includes many records showing trypan blue/Evans blue are impermeable normally but can extravasate/penetrate when BBB disrupted. Condition says \"This prediction concerns the query molecule under a disrupted biological barrier.\" So likely we should consider disrupted barrier: macromolecule dyes like Evans blue can enter brain if BBB compromised. The endpoint meaningful CNS access after systemic administration under disrupted barrier. Need decide pass/fail. Need weigh direct brain exposure evidence. It may be that Evans blue is standard tracer to assess BBB disruption; when barrier disrupted, it extravasates into brain, giving meaningful access. But \"meaningful CNS access\" after systemic administration under disrupted biological barrier—maybe yes because with disrupted BBB, Evans blue does enter brain parenchyma and stains. But need be careful: condition \"disrupted biological barrier\" not necessarily severe BBB breakdown? It says this prediction concerns query molecule under a disrupted biological barrier. So relevant evidence includes increased permeability under various disruption conditions. Need final pass? Let's examine labels.\n\nThe task: Endpoint meaningful or adequate CNS access after systemic administration. Label scope meaningful_cns_access.v1. Positive pass for meaningful access, fail for insufficient. \"Meaningful access does not require ideal passive diffusion, high unbound brain exposure, or absence of every efflux signal.\" Query prior fail but caveat condition disrupted barrier? The prior says no structural feature suggests specialized uptake; but under disrupted barrier, passive diffusion not needed; barrier disruption allows paracellular/extravasation of dyes. The evidence includes direct records showing trypan blue and Evans blue are impermeable under intact BBB but in disrupted conditions show increased permeability/extravasation. Since query condition is disrupted, likely positive. Need craft claims.\n\nNeed analyze every evidence block. Let's list.\n\nMolecule 1: Evans blue (or tautomer) direct in dogs normal BBB impermeable; no dye observed brain/CSF/IF after 20 min. This is contradictory to pass under normal, but condition disrupted. It indicates intact barrier blocks; not applicable to disrupted? But under disrupted, maybe if barrier intact fail. We can include as contradictory? It's direct evidence for parent-like molecule under normal, but query condition disrupted. It supports fail in intact barrier, but because condition disrupted, less weight maybe. Actually evidence_role in final claims? Need include claims, each role relative to final prediction. If final pass, evidence that says impermeable under intact BBB is contradictory to pass? It doesn't support pass; but final condition disrupted, so not necessarily contradictory? It is evidence that under normal/20 min no CNS access. Since final prediction pass under disrupted, record could be contradictory to final (supports alternative fail) or supportive? We can label contradictory if it supports fail under intact barrier. But maybe \"contradictory\" means evidence supporting alternative. If final pass, any fail evidence is contradictory. Need include.\n\nMolecule 2: CRA (aminocaproic? \"CRA\" maybe 1-aminonaphthalene-2,7-disulfonic acid? SMILES Nc1cc(S(=O)(=O)O)c2ccccc2c1N, MW? 254? It's naphthalene diamine monosulfonate? Record: brain/plasma 2%, CSF similar, \"permeable\". This is structurally smaller, one sulfonic acid, not like query. Transfer? Morgan 0.333, transfer 0.8019. It shows a sulfonated aminonaphthalene can cross BBB to limited extent 2%. But query has four sulfonic acids and high MW. Could this support pass? It's direct evidence for monosulfonated analog, not tetrasulfonate. It suggests some acidic dye can have low but detectable brain concentrations. \"permeable\" label. But 2% brain/plasma is low; CSF similar. Meaningful? Maybe not? But could support that certain sulfonated naphthalenes have some CNS access. However query much larger, four sulfonates. Need decide.\n\nMolecule 3: Carmoisine (azorubine) mono azo disulfonate naphthalene? Record: no radioactivity brain for parent/metabolites in rats, impermeable. This is direct evidence for related azo sulfonate dye; supports fail. Query has two azo, tetrasulfonate. Similar structure but not exact. Transfer score 0.5117. Use as contradictory to pass.\n\nMolecule 4: Compound 14 good CNS penetration Kp 0.76, no P-gp efflux. Structurally unrelated (methylsulfonyl phenyl pyrazolopyridine?); not relevant physicochemical. Transfer 0.7216 but structural similarity 0.2133. This small molecule with sulfone maybe CNS penetrant. It doesn't inform query; maybe weak? We should mention little transfer due to small non-azo sulfone; not material.\n\nMolecule 5: OKN-007 small molecule disulfonate? SMILES CC(C)(C)/[N+]([O-])=C/c1ccc(S(=O)(=O)O)cc1S(=O)(=O)O. It's a disulfonate phenyl nitrone, crosses BBB equally normal/tumor. This is relevant: compound with two sulfonic acids (charged) crosses BBB? Actually OKN-007 (disufenton? maybe NXY-059 related? Wait OKN-007 is 2,4-disulfonyl phenyl tert-butyl nitrone, \"NXY-059\"? NXY-059 is disodium 4-[(tert-butylimino)methyl]benzene-1,3-disulfonate N-oxide. Yes OKN-007? Record says small molecule crosses BBB in normal and tumor tissue after oral. That is direct evidence that a disulfonate anion can have BBB penetration? However NXY-059 itself (Molecule 10) showed poor brain uptake in ischemia. Molecule 5 \"OKN-007\" same-ish but transfer? It reports permeable. Contradictory records for same type? Need handle. Molecule 5 has two sulfonic acids, lower MW, one nitrone; query has four sulfonic acids and huge azo. It may support that sulfonates aren't absolutely impermeable. But query much larger.\n\nMolecule 6: Sulphanilic acid (4-aminobenzenesulfonic acid) poor penetration; brain concentrations 0.84,0.29,0.30 mg/100g. This is direct evidence for simple sulfanilic acid under normal, poor. Supports fail. It's smaller but charged sulfonate; poor.\n\nMolecule 7: BIT225 CSF/plasma ratios 1.5-2.5%, permeable; structurally unrelated (indole carboxamide guanidine). Not relevant.\n\nMolecule 8: Amitraz poor brain exposure; unrelated. Not relevant.\n\nMolecule 9: Urolithin B detected in brain; unrelated small phenol. Not relevant.\n\nMolecule 10: NXY-059 poor brain uptake in transient focal ischemia. Very relevant! Query is tetrasulfonate, but NXY-059 is a disulfonate nitrone with poor brain uptake, even under disrupted condition (ischemia). This is direct evidence that a highly polar bis-sulfonate does not achieve meaningful brain uptake even with BBB disruption/ischemia. It supports fail. Need weigh this against Evans blue extravasation under disruption. NXY-059 is smaller (MW ~290) than query, and its poor uptake despite disrupted barrier suggests sulfonates may not cross even when BBB compromised? But Evans blue/trypan blue under disruption do extravasate. Difference: Evans blue binds to plasma albumin and extravasates as albumin-dye complex through disrupted BBB; NXY-059 is free small molecule, may not extravasate? Wait query Evans blue under disrupted barrier: yes dye bound to albumin leaks where BBB disrupted. The question \"meaningful CNS access after systemic administration\" under disrupted barrier: likely pass if barrier disruption allows albumin-bound dye extravasation. But is that \"CNS access\" of query? Evans blue-albumin complex enters brain parenchyma at sites of barrier disruption. Direct evidence (Molecule 1) says under intact BBB no dye. Many Molecule 12 records show trypan blue extravasates under disrupted conditions. Molecule 13 Pontamine sky blue extravasates in infected brain. So strong evidence for this class.\n\nMolecule 11: L2 central_functional_access_proxy: Evans Blue? SMILES CO variants? Record: \"Under physiologic conditions, BBB impermeable to macromolecules such as albumin. Because Evans Blue (EB) dye binds strongly to albumin, it remains restricted within blood circulation and cannot cross barrier.\" This describes Evans Blue under physiologic (normal) impermeable. It is a central functional proxy, not direct parent? It says Evans Blue binds albumin. Since query is Evans Blue. Under disrupted barrier, the albumin-bound dye can cross. This record is contradictory to pass under normal; but it's evidence mechanism. Need include.\n\nMolecule 12: Trypan blue many records. Most under normal impermeable; many under disrupted increased permeability. Since query condition is disrupted, relevant increased permeability records support pass. Need decide. Records 12-1..35. Some \"increased_permeability\" under collagenase, lead encephalopathy, CVOs, ischemia/hypoxia, urokon damage, air embolism, serotonin, cardiac arrest. These show under disruptions trypan blue enters brain. They are L2 central functional access proxy, not direct parent but analog. Strong transfer? Morgan 0.4444; transfer scores high. Need use.\n\nMolecule 13: Pontamine sky blue (similar azo tetrasulfonate? SMILES with methoxy? Actually Pontamine sky blue maybe similar) increased permeability in infected brain. Supports pass under disrupted/BBB leak.\n\nMolecule 14: Evans blue leakage in DR6 knockout adult mice ~2-fold increase compared WT. This is L3 passive permeability? Actually evidence family passive_permeability, but result increased permeability/leakage. It uses Evans blue IV, adult DR6 KO, measured leakage. This is direct-ish Evans blue under disrupted barrier (DR6 KO? barrier deficits). Supports pass under disruption. Need include.\n\nMolecule 15: JS25 in vitro BBB permeability 28.5%; unrelated. Not relevant.\n\nMolecule 16: Compound 41 Pe 4.6; unrelated. Not relevant.\n\nMolecule 17: PAMPA poor for trisubstituted TPs; unrelated. Not relevant.\n\nMolecule 18: Lucifer Yellow permeability in rat cerebral venules during spontaneous disruption; PLY 1.65e-6. This is a polar fluorescent tracer that can cross disrupted BBB to some extent. Supports that small charged tracer has measurable permeability under barrier disruption. But query Evans blue much larger and binds albumin; maybe relevant.\n\nMolecule 19: rhodamine P-gp substrate; unrelated.\n\nMolecule 20: compound 10 P-gp inhibitor; unrelated.\n\nMolecule 21: suramin poor BBB penetration, not affected by P-gp knockout; suramin is polysulfonated naphthalene urea (MW 1297), structurally related in terms of multiple sulfonates. Direct evidence: suramin poorly crossed BBB in in situ brain perfusion mouse. This is highly relevant! Query is tetrasulfonate dye; suramin is hexasulfonate? It also has many sulfonates, poor brain penetration. Supports fail even under maybe not disrupted? Record no condition disrupted; normal BBB, poor. Transfer 0.8424. Need include.\n\nMolecule 22: daidzein-4'-sulfate BCRP substrate; not relevant.\n\nMolecule 23: MTFA folate receptor mediated BBB uptake; unrelated.\n\nMolecule 24: SR-101 (sulforhodamine 101) carrier-mediated uptake in hCMEC/D3, Vmax. SR-101 is sulfonated fluorescence dye, but uptake via carrier in vitro. Could suggest some sulfonated dyes have transporter-mediated uptake. However in vivo SR-101 doesn't cross intact BBB? Actually sulforhodamine 101 is used for astrocyte staining after topical application; not systemic? It may not cross BBB. This record is influx transport in hCMEC/D3, no direct in vivo CNS access. Not strong.\n\nMolecule 25: sumatriptan OATP1A2 substrate; unrelated.\n\nNeed formulate final. The condition \"disrupted biological barrier\" is key. Query is Evans blue, a well-known BBB integrity tracer. Under intact BBB, it is impermeable (Molecule 1, 11, 12 many). Under disrupted BBB, it extravasates into brain (Molecule 12 many, 13, 14). The physicochemical prior says fail for passive diffusion, but \"disrupted biological barrier\" bypasses need for passive permeability; macromolecular albumin-dye complex can enter through disrupted tight junctions/vascular damage. So final pass.\n\nNeed ensure \"meaningful CNS access\" under disrupted barrier: Evans blue is used to detect BBB disruption because it stains brain at sites of damage. That is meaningful access. Even though access may be restricted to disrupted regions and bound to albumin, it is adequate under condition. So pass.\n\nNeed craft claims with evidence_role: supportive/contradictory. Need include multiple claims. Need exactly JSON with claims array and final_prediction. Each claim concise evidence-grounded statement, cite molecule_ids and record_ids. Need at least one identifier. Need include all material evidence? We can summarize.\n\nPotential claims:\n\n1. Query is Evans blue/tetrasulfonate bis-azo dye; direct evidence in dogs (Molecule 1) shows no dye in brain/CSF/IF after i.v. under intact BBB, establishing it is normally impermeable. Role contradictory (to final pass) or supportive? Since final pass under disrupted, this is contradictory (supports fail under intact). But because condition is disrupted, it's only partially contradictory. Could label contradictory.\n\n2. Evans blue binds strongly to albumin and is restricted to vasculature under physiologic conditions (Molecule 11). Role contradictory to pass? It explains mechanism of normal impermeability; under disrupted, albumin extravasates. Could be supportive? Since final pass under disrupted, the fact it is albumin-bound isn't itself supportive of pass. Could be \"contradictory\" as normal restriction. But maybe claim: Despite albumin binding/restriction under intact barrier, barrier disruption opens access. Need separate.\n\n3. In multiple animal models with BBB disruption (collagenase, lead encephalopathy, ischemia/hypoxia, air embolism, serotonin, cardiac arrest, urokon damage), trypan blue (structurally analogous tetrasulfonate azo dye) extravasates into brain, showing disrupted barrier permits CNS access for this dye class. Role supportive. Cite Molecule 12 records 12-3,12-4,12-15? Let's select relevant increased permeability records: 12-3, 12-4, 12-9? 12-9 is CVOs normal permeable, not disruption. 12-15 irradiation spots? Actually 12-15 says normal condition impermeable, gross spots after 20-60 Gy irradiation. Could cite 12-15? It says under normal tracer does not pass; however gross spots in brain stem/hypothalamus after irradiation. That's disrupted. Record 12-17 Urokon damage; 12-19 ischemia; 12-22 resuscitation; 12-24 air embolism; 12-27 serotonin. Also 12-29 says penetration only after opening of BBB. These are supportive. Need cite appropriate record IDs. Could cite many.\n\n4. Evans blue shows increased leakage/BBB uptake in DR6 knockout mice with barrier deficits (Molecule 14, Record 14-1): ~2-fold increase compared WT. Supportive. It is direct Evans blue under disrupted barrier. Great.\n\n5. Pontamine sky blue (structurally similar tetrasulfonate azo dye) shows BBB leakage in infected mice (Molecule 13 records 13-1, 13-2). Supportive.\n\n6. However, related polysulfonated molecules such as suramin and Carmoisine/NXY-059 demonstrate poor brain uptake even under some conditions: suramin poor in situ perfusion (Molecule 21), carmoisine no brain radioactivity (Molecule 3), NXY-059 poor in ischemia (Molecule 10). Role contradictory to final pass. Need mention because they are transferable? They indicate not every sulfonate/dye crosses even with disruption. But query is Evans blue with direct evidence of extravasation under disruption, so final pass.\n\n7. Physicochemical prior fail due to size/charge; but under disrupted barrier, passive permeability requirements are relaxed; strong direct experimental evidence of dye extravasation overrides. Could be a claim? Maybe not evidence.\n\nNeed be nuanced: \"meaningful CNS access\" under disrupted barrier: The evidence of Evans blue extravasation is often qualitative staining in regions of damage; is it \"meaningful adequate\"? The endpoint positive pass for meaningful/adequate CNS access. In BBB disruption, Evans blue is used to identify damage, so yes.\n\nNeed consider \"disrupted biological barrier\" could mean any disruption, not necessarily severe. If barrier is only mildly disrupted, Evans blue may not cross. But many disruption models show increased permeability. The presence of condition \"disrupted\" suggests expect positive for BBB-impermeable dyes. The prior fail says no experimental evidence; but evidence has increased permeability under disruption. Need final pass.\n\nLet's examine all records to ensure not missing. There is Molecule 1 direct Evans blue in dogs: no dye observed after 20 min in brain, CSF, IF. This is direct evidence that even after systemic administration, Evans blue does not access CNS under intact. The query condition disrupted; but if the disruption is \"biological barrier\" perhaps maybe the prediction is under a disrupted barrier, so the intact BBB result is actually not applicable. We can label contradictory but caveat condition mismatch.\n\nRecord 12-3: \"Intraventricularly injected collagenase and other proteolytic enzymes are able to reversibly increase permeability of BBB to different tracers such as trypan blue in rats.\" This is trypan blue, not query? Trypan blue is structurally similar (bis-azo tetrasulfonate). It is central functional access proxy, L2. Transfer likelihood 0.7549. Supports pass under disruption.\n\nRecord 12-4: lead-induced encephalopathy severe disruption, trypan blue extravasates. Supportive.\n\nRecord 12-15: \"Trypan blue identified as tracer that does not pass BBB under normal conditions, although gross spots of staining observed in brain stem/hypothalamus after 20–60 Gy irradiation.\" Supports both normal impermeable (contradictory) and irradiation disruption (supportive). Could cite as supportive for disruption.\n\nRecord 12-17: Urokon-damaged brains confluent staining. Supportive.\n\nRecord 12-19: ischemia alteration, extravasation correlated with brain water. Supportive.\n\nRecord 12-22: resuscitated dogs extravasation 3/7. Supportive.\n\nRecord 12-24: air embolism BBB damage, extravasation. Supportive.\n\nRecord 12-27: serotonin increased permeability. Supportive.\n\nRecord 12-29: \"penetration occurs only after opening of BBB\" — supportive for disrupted condition.\n\nRecord 13-1: Pontamine sky blue leak in infected brain. Supportive.\n\nMolecule 14: Evans blue leakage in DR6 KO ~2-fold. Supportive direct.\n\nContradictory: Molecule 1 (normal impermeable), Molecule 3 (carmoisine no brain even metabolites), Molecule 6 (sulphanilic acid poor), Molecule 10 (NXY-059 poor under ischemia), Molecule 21 (suramin poor). Molecule 2 (CRA 2% brain/plasma) actually \"permeable\" but low; could be supportive weak or contradictory? It shows a disulfonated? Need know CRA. SMILES Nc1cc(S(=O)(=O)O)c2ccccc2c1N. Could be \"C.R.A.\"? Might be Chicago Acid? Actually 4-amino-5-hydroxy-2,7-naphthalenedisulfonic acid? Wait SMILES has naphthalene with two nitrogens and one sulfonic? Not sure. It says CRA crosses BBB, brain 2% plasma, CSF similar. That is direct brain exposure for a sulfonated amino naphthalene; result 2% might be low but considered permeable. It could support that even sulfonated naphthalenes can have slight CNS entry. But query much larger. Maybe include as supportive? Need avoid overcomplicating.\n\nThe final JSON should be concise. Need include enough claims but not too many. Desired oververbosity 5. Need one or more concise.\n\nLet's outline claims:\n\nClaim A: \"The query is Evans blue; under intact BBB, Evans blue does not enter brain/CSF/IF after i.v. in dogs, confirming the dye is normally BBB-impermeable and largely albumin-bound.\" role contradictory (to pass) citing Molecule 1 Record 1-1, Molecule 11 Record 11-1 maybe.\nClaim B: \"When the BBB is disrupted, structurally analogous tetrasulfonate azo dyes such as trypan blue extravasate into brain across multiple models, including collagenase, lead encephalopathy, ischemia/hypoxia, air embolism, serotonin, urokon damage, and post-resuscitation injury.\" role supportive citing Molecule 12 records: 12-3,12-4,12-15,12-17,12-19,12-22,12-24,12-27,12-29 maybe. Need maybe cite record IDs.\nClaim C: \"Direct Evans blue leakage is increased ~2-fold in DR6 knockout mice with BBB deficits, showing Evans blue itself gains CNS access when barrier integrity is compromised.\" role supportive citing Molecule 14 Record 14-1.\nClaim D: \"Pontamine sky blue, another related bis-azo tetrasulfonate dye, exhibits marked leakage into brain during infection-induced BBB breakdown.\" role supportive citing Molecule 13 Records 13-1,13-2.\nClaim E: \"Some other sulfonated/polyanionic molecules (suramin, carmoisine, NXY-059) show poor brain penetration even under disruption/ischemia, indicating that not all sulfonates cross; however the direct Evans blue/trypan blue disruption evidence is more transferable to the query.\" role contradictory citing Molecule 21 Record 21-1, Molecule 3 Record 3-1, Molecule 10 Record 10-1. Need maybe mention Molecule 6? Could include but maybe not necessary.\n\nNeed final prediction pass. The \"evidence_role\" for final claims: supportive means evidence supporting selected final prediction; contradictory means supporting alternative. So Claim A and E contradictory; B/C/D supportive. Good.\n\nNeed be careful: Molecule 12 is trypan blue, not query. But query Evans blue. Trypan blue has azo tetrasulfonate but different substitution? The transfer likelihood scores high. It is close. We can call \"structurally analogous tetrasulfonate azo dye.\"\n\nMolecule 11 is Evans Blue? Its SMILES COc1cc(-c2ccc(N=Nc3ccc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4c3O)c(OC)c2)ccc1N=Nc1ccc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2c1O. This is actually \"Evans blue\" with methoxy? Wait Evans blue has methyl substituents on biphenyl, not methoxy. The record text says \"Evans Blue (EB) dye binds strongly to albumin...\" But the SMILES has methoxy groups? Could be \"Evans blue\" variant? Actually Evans blue has two methyl groups, not methoxy. Query has methyl groups. Molecule 11 has methoxy (OCH3) instead of methyl; maybe a derivative? Record says Evans Blue but SMILES mismatch? Maybe because Evans blue acidic form? Query Cc1cc... Maybe Molecule 11 is \"Trypan blue\"?? Trypan blue has methyl groups too, not methoxy. \"Pontamine sky blue\" maybe methoxy tetrasulfonate? Let's identify: Pontamine Sky Blue (Direct Blue 1) has two methoxy groups? Yes Pontamine sky blue is C34H24N6Na4O16S4? Actually Direct Blue 1 has structure with two methoxy groups. Molecule 13 is COc1cc... salts, likely Pontamine sky blue. Molecule 11 is acid form of Pontamine? So Molecule 11 record text saying Evans Blue may be inaccurate? It says \"Evans Blue (EB) dye binds strongly to albumin\"—perhaps the record refers to Evans Blue, not exactly SMILES? The SMILES with methoxy might be \"Evans Blue\" derivative? Wait Evans blue formula: C34H24N6Na4O14S4 has no methoxy; Direct Blue 1 (Pontamine sky blue) formula C34H24N6Na4O16S4 has four additional oxygens? Actually Pontamine sky blue is bis(azo) with two methoxy groups? Hmm. Query has methyl groups, maybe Evans blue; molecule 11 has methoxy groups, maybe \"Evans blue\" not exact. But record text explicitly Evans Blue. Need maybe not rely on molecule 11 for mechanism; can cite molecule 1 for Evans blue. The claim A can cite Molecule 1 only.\n\nNeed consider \"disrupted biological barrier\" could be a generic condition not necessarily \"BBB disruption.\" Maybe query condition in dataset means \"This prediction concerns the query molecule under a disrupted biological barrier.\" It might be an instruction to evaluate if a normally impermeable dye would cross if barrier disrupted. The final should be pass because with disrupted BBB, Evans blue enters brain. Good.\n\nLet's ensure final JSON valid. It must be exactly one valid JSON object with \"claims\" and \"final_prediction\". Need no extra text. Use double quotes. Molecule ids like \"Molecule 1\", record ids \"Record 1-1\". Need include arrays. Need ensure roles are \"supportive\" or \"contradictory\". Good.\n\nPotential final:\n\n{\n  \"claims\": [\n    {\n      \"claim\": \"Under an intact BBB, Evans blue (the query dye) remains confined to the vasculature: i.v. Evans blue produced no brain, CSF, or brain interstitial-fluid staining in dogs, confirming that the intact barrier blocks this tetrasulfonate bis-azo dye.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 1\"],\n      \"record_ids\": [\"Record 1-1\"]\n    },\n    {\n      \"claim\": \"When the BBB is disrupted, structurally analogous tetrasulfonate azo dyes such as trypan blue extravasate into brain tissue across multiple independent disruption models, including collagenase treatment, lead encephalopathy, ischemia/hypoxia, air embolism, serotonin challenge, Urokon damage, and post-resuscitation injury.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 12\"],\n      \"record_ids\": [\"Record 12-3\", \"Record 12-4\", \"Record 12-15\", \"Record 12-17\", \"Record 12-19\", \"Record 12-22\", \"Record 12-24\", \"Record 12-27\", \"Record 12-29\"]\n    },\n    {\n      \"claim\": \"Evans blue itself shows increased CNS leakage in a disrupted-barrier setting: DR6 knockout adult mice with BBB deficits had roughly twice the Evans blue extravasation into brain versus wild-type controls.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 14\"],\n      \"record_ids\": [\"Record 14-1\"]\n    },\n    {\n      \"claim\": \"Pontamine sky blue, another structurally related bis-azo tetrasulfonate dye, shows marked brain leakage during infection-induced BBB breakdown in mice.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 13\"],\n      \"record_ids\": [\"Record 13-1\", \"Record 13-2\"]\n    },\n    {\n      \"claim\": \"Some other sulfonated/polyanionic molecules (suramin, carmoisine, NXY-059) show poor brain penetration, including under ischemic conditions for NXY-059, illustrating that not all sulfonates cross; however, the direct Evans blue/trypan blue extravasation evidence is more structurally and mechanistically transferable to the query under the specified disrupted-barrier condition.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 21\", \"Molecule 3\", \"Molecule 10\"],\n      \"record_ids\": [\"Record 21-1\", \"Record 3-1\", \"Record 10-1\"]\n    }\n  ],\n  \"final_prediction\": \"pass\"\n}\n\nNeed maybe include Molecule 2? Not necessary. But \"Do not skip records; briefly state why any materially uninformative evidence deserves little weight.\" The final JSON doesn't include all uninformative. But task says \"Ensure you consider and analyze every evidence block.\" In final we don't need discuss each. The claims should represent experimental evidence materially informing decision. We can mention in a claim that unrelated small molecules were not considered? Not necessary in JSON? Maybe need include all material evidence. We can include a claim with many unrelated records: \"Several chemically dissimilar small molecules with positive CNS penetration (Molecules 4,5,7,9,15,16, etc.) are not transferable due to low structural similarity and lack of tetrasulfonate azo dye features.\" But that's not a material evidence claim. Maybe not.\n\nNeed consider if Molecule 5 OKN-007 is actually relevant. It is disulfonate small molecule crosses BBB; could be considered supportive of sulfonate CNS access. But query much larger. Maybe include in contradictory? Actually supportive. But if final pass, including all supportive is okay. But to be balanced, we can include a claim about OKN-007? It has two sulfonates and crosses BBB, maybe supports that sulfonates are not categorically excluded. However the experimental evidence says \"OKN-007 is a small molecule that crosses the BBB\"; direct brain tissue levels after oral. It has two sulfonic acid groups, lower MW. It could provide some support for pass for sulfonate-containing compounds if barrier disrupted? It was normal brain/tumor equally, not disrupted. But it's not close enough. Better not overemphasize.\n\nLet's think deeper: Is final prediction definitely pass? Let's challenge. The query condition \"disrupted biological barrier\" may mean the molecule is being tested in a disease state where BBB is disrupted. For Evans blue, this is exactly the condition where it crosses. But endpoint \"meaningful or adequate CNS access after systemic administration\" could be interpreted as \"does the molecule reach brain parenchyma in pharmacologically meaningful concentrations?\" Evans blue is a diagnostic dye; when BBB is disrupted, it leaks into brain parenchyma bound to albumin. But is that \"CNS access\" of the molecule? Yes, it's detected in brain tissue. It does not necessarily mean free drug exposure, but label \"meaningful access does not require high unbound brain exposure.\" So pass.\n\nNeed maybe account for \"disrupted biological barrier\" plural? \"under a disrupted biological barrier\" could include the blood-CSF barrier? The evidence includes choroid plexus etc. Query is Evans blue used to assess BBB integrity. In disrupted barriers, it extravasates. Yes.\n\nPotential issue: Many trypan blue records are L2 central_functional_access_proxy, not direct brain exposure. But they are experiments with dye extravasation. The task says \"Give most weight to transferable direct brain, plasma, CSF, uptake, perfusion, influx, or prodrug evidence.\" Direct brain exposure with Evans blue in dog is L1 but intact. Direct Evans blue leakage in DR6 KO is L3? Actually Molecule 14 evidence family passive_permeability but assay in vivo Evans blue leakage. It is direct brain exposure? It is L3, central? It says \"passive_permeability\" but measure dye leakage. It is direct Evans blue. Good.\n\nLet's maybe include Molecule 1 as \"contradictory\" but note intact barrier. Since final condition disrupted, the record is less applicable; but still included. Could role be \"supportive\" because it confirms the dye is a valid BBB tracer and under disruption extravasates? No, it is normal impermeability. It supports alternative fail. So contradictory.\n\nNeed perhaps include \"Molecule 12\" records where result \"increased_permeability\" under disrupted conditions. Some records have result \"increased_permeability\" but not necessarily \"meaningful CNS access\"? E.g., CVOs normal \"increased_permeability\" due to sinusoidal vessels; not relevant? We cited specific disruption records. Need ensure record 12-15 is not \"increased\" but normal impermeable with spots after irradiation. The result field is \"impermeable BBB permeability\"; additional details says gross spots after irradiation. It may be contradictory/supportive? We cite in supportive because it shows after irradiation spots; but the primary result is impermeable. Maybe avoid citing 12-15 to not confuse. Use clearly increased records: 12-3,12-4,12-17,12-19,12-22,12-24,12-27. Also 12-29 \"increased? Result impermeable BBB permeability\" but additional details \"penetration occurs only after opening of BBB\" - result field impermeable under normal, but implies after opening penetration. Could cite? Better avoid if result label doesn't match. Use records with \"increased_permeability\": 12-3, 12-4, 12-17, 12-19, 12-22, 12-24, 12-27. Also 12-9 is increased permeability at CVOs but not disruption. Not needed. 12-15? no. 12-29? result impermeable but details says after opening; maybe not. Fine.\n\nNeed cite Molecule 13 records: 13-1 increased permeability infected; 13-2 increased permeability. Good.\n\nNeed perhaps include Molecule 10 NXY-059 as contradictory: It is under transient focal ischemia (disrupted barrier), poor brain uptake. It's a disulfonate nitrone, not an azo dye. Query is tetrasulfonate bis-azo. Could be relevant because it shows charged sulfonates may still fail under disrupted barrier. But Evans blue's extravasation is due to albumin binding and size? Actually NXY-059 poor brain uptake in ischemia despite BBB disruption; why? Maybe because BBB disruption in ischemia is regional and NXY-059 is low molecular weight but highly protein-bound? It may be that NXY-059's brain uptake is limited even with disrupted BBB because it's not a large tracer that extravasates with albumin? Wait Evans blue also binds albumin; when BBB disrupted, albumin extravasates; NXY-059 maybe binds plasma protein less? Not sure. But direct evidence for Evans blue under disruption is stronger.\n\nNeed perhaps include suramin: It is polysulfonated, large, poor brain penetration in situ perfusion. But condition normal, not disrupted. Supports alternative fail. Fine.\n\nNeed maybe include Carmoisine: no radioactivity in brain in normal rats. Also not disrupted. Good.\n\nNeed perhaps include Molecule 6 sulphanilic acid poor normal; not necessary. But \"Do not skip records\" maybe final JSON should include a claim about \"unrelated small molecules...\" Might not be needed.\n\nLet's review all evidence blocks systematically to ensure final claims cover:\n\nMolecule 1: Evans blue no brain in dogs intact. Included contradictory.\n\nMolecule 2: CRA brain/plasma 2%, CSF similar, permeable. Should we include? It is a sulfonated aromatic amine, direct brain exposure. It might be supportive for low-level CNS access of related charged small molecules. But query is much larger. Could include in a claim? Example: \"A smaller monosulfonated naphthalenediamine (CRA) achieved ~2% brain/plasma, suggesting some related sulfonated naphthalenes can reach brain at low levels.\" This is supportive? It supports pass weakly. But final pass already. However if we include, need be accurate. Molecule 2 SMILES has two amino and one sulfonic acid? It's \"CRA\" maybe \"Chicago Red Acid\"? Let's not include to avoid ambiguity. But instructions \"consider and analyze every evidence block\" — we can mention in reasoning but final JSON not necessarily. Yet maybe final answer should reflect material evidence. Unrelated small molecules (4,5,7,8,9,15,16,17,18,19,20,22,23,24,25) are not material. We can include a claim: \"Most chemically dissimilar CNS-penetrant small-molecule records are not transferable due to lack of tetrasulfonate bis-azo structure.\" But no need.\n\nNeed maybe include Molecule 5 OKN-007? It's a disulfonate small molecule that crosses BBB; could be considered supportive of charge not absolute barrier. But query has four sulfonates; still. Might be worth including as supporting? Let's assess: Molecule 5 \"OKN-007\" (2,4-disulfonyl phenyl tert-butyl nitrone) after oral uptake in both normal and tumor brain tissue. It has two sulfonic acid groups, MW ~? It is highly ionized but crosses BBB. This contradicts the generic idea that sulfonates cannot cross. It could support final pass? However under normal barrier, not disrupted. But it shows CNS access for a disulfonate. Yet query is 872 Da, four sulfonates, not comparable. Mayer? Transfer likelihood 0.7761, Morgan 0.2131. We can mention in claim: \"A smaller disulfonate (OKN-007) can enter brain, so sulfonate charge alone does not preclude CNS access; however size/charge differences limit transfer.\" Role supportive? It supports possibility of pass for sulfonates, but not specifically disrupted barrier. It is material. Could include to be balanced. But final pass doesn't rely on it. If include, need not.\n\nMolecule 10 NXY-059 is same class as OKN-007 (disulfonyl nitrone) but poor in ischemia. Interesting: Molecule 5 says OKN-007 crosses; Molecule 10 says NXY-059 poor in ischemia. They are similar but different? OKN-007 may be \"OKN-007\" (2,4-disulfonyl phenyl N-tert-butyl nitrone) and NXY-059 is disodium 4-[(tert-butylimino)methyl]benzene-1,3-disulfonate N-oxide, essentially same? Maybe one is disulfonyl? Actually OKN-007 is a \"nitrone\" that could be NXY-059? Let's compare SMILES:\n\nMolecule 5: CC(C)(C)/[N+]([O-])=C/c1ccc(S(=O)(=O)O)cc1S(=O)(=O)O. This is N-tert-butyl-α-(2,4-disulfophenyl)nitrone? Positions? Benzene with sulfonic at para and one meta? \"2,4-disulfonyl phenyl N-tert-butyl nitrone\" maybe OKN-007. Molecule 10: CC(C)(C)[N+]([O-])=Cc1ccc(S(=O)(=O)O)cc1S(=O)(=O)O. Same? The location of nitro? Wait Molecule 5 has /N+([O-])=C/c1ccc... (nitrone with double bond to benzylic carbon). Molecule 10 has [N+]([O-])=Cc1ccc... also same maybe E/Z isomer? So OKN-007 and NXY-059 might actually be same compound? NXY-059 has \"disodium 4-[(tert-butylimino)methyl]benzene-1,3-disulfonate N-oxide\"; OKN-007 maybe same? The records conflict: one says permeable, one says poor. Could be due to different conditions (oral vs ischemia), different formulations. Not necessary.\n\nNeed maybe include Molecule 18 Lucifer Yellow: a charged fluorescent tracer with measurable permeability across disrupted cerebral venules (PLY 1.65e-6). This is direct evidence that even hydrophilic charged tracers can cross disrupted BBB. Supports pass under disruption. But query is much larger and bound to albumin. Could include as supportive? Maybe.\n\nNeed maybe include Molecule 24 SR-101: sulfonated dye carrier-mediated uptake in brain endothelial cells; not in vivo CNS access. Not material.\n\nNeed maybe include Molecule 23 folate receptor-mediated uptake: unrelated.\n\nNeed maybe include Molecule 21 suramin: It is a polysulfonated naphthalene derivative with poor brain penetration. Strong contradictory due to structural similarity (multiple sulfonates). But suramin is not an azo dye; it has naphthalene trisulfonate urea. Query is bis-azo tetrasulfonate. Still relevant.\n\nNeed maybe include Molecule 3 carmoisine: azo disulfonate dye, no brain radioactivity. Supports fail. It is more structurally similar than suramin? It has azo naphthalene sulfonate. Query has two azo naphthalene disulfonates. Carmoisine has one azo with two sulfonates. Direct evidence no brain in rats. That is important. It suggests azo sulfonate dyes remain impermeable. But under disrupted barrier? Not tested. Still contradictory.\n\nNeed maybe include Molecule 6 sulphanilic acid: very small sulfanilate, poor penetration. Supports fail. But query much larger. Could include in contradictory claim along with carmoisine? Maybe.\n\nNeed maybe include Molecule 2: CRA small sulfonated naphthalenediamine crosses 2%; this could be contradictory? Actually \"permeable\" but 2% low. It might be used by the prior? Hmm.\n\nLet's decide final claims set. Maybe include 6 claims:\n\n1. Normal intact BBB: Evans blue (query) impermeable in dog; role contradictory.\n2. Trypan blue extravasation under multiple disruption models; role supportive.\n3. Evans blue direct leakage in DR6 KO; role supportive.\n4. Pontamine sky blue leakage in infection; role supportive.\n5. Polyanionic/sulfonated comparators (carmoisine, NXY-059, suramin) show poor brain penetration; role contradictory.\n6. Physicochemical prior fail but disrupted condition means transferable dye-extravasation evidence overrides; role supportive? This is not experimental evidence. Better not.\n\nNeed maybe include a claim about \"unrelated CNS-penetrant small molecules are not transferable\" maybe no.\n\nLet's think about \"evidence_role\" for final prediction. If final pass, claim 1 \"Evans blue impermeable intact\" is contradictory (supports fail). Claim 5 contradictory. Claim 2/3/4 supportive. Good.\n\nNeed maybe include record IDs in claim 1: Record 1-1. Molecule 1 is possibly exact query tautomer? Morgan 0.3968, not exact; but structure is Evans blue hydrazone tautomer. It is very close. The record is direct brain exposure. Good.\n\nCould include Molecule 11 record 11-1 in claim 1 to show albumin binding. But molecule 11 SMILES not exact and record L2. Maybe include \"Evans blue binds albumin\" in claim? It supports mechanism. Let's include in claim 1? Claim 1 would then cite Molecule 1 and Molecule 11. Record 11-1 says \"Under physiologic conditions, BBB impermeable to macromolecules such as albumin. Because Evans Blue dye binds strongly to albumin, it remains restricted within blood circulation.\" This is a central functional proxy, not direct. It explains. We can cite. But Molecule 11's SMILES is methoxy variant; still record explicitly Evans Blue. Hmm. Maybe avoid to keep clean. Use Molecule 1 only.\n\nNeed maybe include Molecule 12 record 12-2? It says Goldmann iv injection stained body not nervous system; normal. Could include in claim 1? Not necessary.\n\nNeed maybe include Molecule 12 records \"increased_permeability\" but note some are species specific CVOs. We cite only disruption.\n\nLet's verify query structure vs Evans blue. Query SMILES: Cc1cc(-c2ccc(/N=N/c3ccc4c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c4c3O)c(C)c2)ccc1/N=N/c1ccc2c(S(=O)(=O)O)cc(S(=O)(=O)O)c(N)c2c1O. This is exactly Evans blue (acid form). Evans blue is used as BBB tracer, normally excluded, extravasates with albumin upon BBB disruption. Thus pass under disrupted condition.\n\nPotential concern: \"meaningful CNS access\" under disrupted barrier maybe \"access\" could mean reaching brain parenchyma; Evans blue does not cross intact BBB but can enter when barrier disrupted. But if barrier is disrupted, many plasma proteins enter, so \"CNS access\" of dye is a marker of barrier breakdown, not intrinsic CNS penetration. However endpoint doesn't require intrinsic; under disrupted barrier, it's enough. The condition explicitly says disrupted biological barrier, so yes.\n\nLet's consider if \"disrupted biological barrier\" might refer to query molecule being tested in an assay with artificially permeabilized membrane (e.g., cell model), not in vivo. But evidence includes in vivo disruption. The final answer can infer.\n\nNeed maybe include \"Molecule 1\" is \"Evans blue dye was injected i.v. to assess integrity of BBB; no dye observed in brain, CSF, brain IF after 20 min, remainder body colored.\" This is direct evidence that Evans blue itself does not cross intact barrier. It does not address disrupted. Under disrupted, if Evans blue extravasates, it enters brain. Good.\n\nNeed maybe include \"Molecule 14\" is L3 passive_permeability but experimental details \"intravenous injection, DR6 knockout adult mice; 2-fold increase in Evans blue dye leakage.\" It is direct Evans blue. Good.\n\nNeed maybe include \"Molecule 13\" Pontamine sky blue is similar dye with methoxy substituents; not exact. But good.\n\nNeed maybe include \"Molecule 12\" trypan blue is close analog. Some records are L2 but transfer high.\n\nLet's decide whether to mention \"physicochemical prior\" in final? The task says return only claims and final_prediction. Claims should be evidence-grounded. No need.\n\nNeed ensure JSON no markdown. final answer exactly JSON. We can include escaped? Fine.\n\nLet's refine claim texts:\n\nClaim 1: \"Under an intact BBB, Evans blue—the query dye—remains intravascular: after i.v. injection in dogs no dye was detectable in brain, CSF, or brain interstitial fluid, whereas the rest of the body stained intensely.\"\n\nRole contradictory (supports fail under intact barrier).\n\nClaim 2: \"With BBB disruption, analogous tetrasulfonate bis-azo dye trypan blue extravasates into brain in multiple independent models (collagenase opening, lead encephalopathy, Urokon injury, ischemia/hypoxia, cardiac-resuscitation injury, air embolism, serotonin-induced opening), demonstrating meaningful CNS access of this dye class when the barrier is compromised.\"\n\nCite Molecule 12 records. Good.\n\nClaim 3: \"Direct Evans blue brain leakage is increased ~2-fold in DR6 knockout mice with BBB deficits compared with wild-type, confirming the query itself accesses CNS parenchyma under disrupted-barrier conditions.\"\n\nCite Molecule 14.\n\nClaim 4: \"Pontamine sky blue, a close bis-azo tetrasulfonate dye, shows marked brain leakage during infection-induced BBB breakdown.\"\n\nCite Molecule 13.\n\nClaim 5: \"By contrast, other sulfonated/polyanionic molecules—carmoisine, NXY-059, and suramin—show poor brain penetration, including under ischemic conditions for NXY-059; these records are less transferable than the direct Evans blue/trypan blue disruption data because they differ in azo-dye scaffold/albumin-tracer behavior.\"\n\nRole contradictory. Good.\n\nNeed maybe include \"Physicochemical prior fail is not decisive because disrupted barrier allows macromolecular/albumin-bound extravasation.\" That could be a claim? It is not experimental evidence. But maybe as a concluding claim? The schema says claims should evidence-grounded; final_prediction enough. Avoid.\n\nNeed maybe include \"Molecule 2 CRA 2% brain/plasma\" in claim 5? Not needed.\n\nLet's consider if claim 5's inclusion of NXY-059 could undermine final? It is contradictory but less transferable. Good.\n\nNeed maybe mention \"sulphanilic acid\" as contradictory? Maybe include in claim 5? It is a simple sulfonate with poor brain penetration. But query is azo dye, not direct. Could cite Molecule 6. But perhaps too many. Could include \"sulphanilic acid\" to show small sulfonates also poor. But final already has enough.\n\nNeed maybe mention \"Molecule 4,5,7,9,15,16,17,18,19,20,22,23,24,25 are not structurally relevant.\" The final answer doesn't need mention every uninformative record? But user explicitly \"Ensure you consider and analyze every evidence block.\" We have considered; final claims can omit uninformative. However \"Return one or more concise claims using as many claims as needed to represent the experimental evidence that materially informs the decision.\" So only material evidence. Uninformative records not material. Good.\n\nLet's ensure no \"Molecule 11\" in claims? It is Evans Blue albumin binding; maybe material. Could include in claim 1: \"This is explained by strong albumin binding (Molecule 11).\" But if we cite molecule 11, record 11-1 is L2 central functional proxy. It is material for mechanism. Let's include? Claim 1: \"Under intact BBB, Evans blue remains intravascular/albumin-bound and does not enter brain/CSF.\" Cite Molecule 1 and Molecule 11. But Molecule 11 SMILES is not exact but record text says Evans Blue. It might be okay. However if SMILES mismatch, maybe avoid to not introduce inaccuracy. We can say \"consistent with albumin binding reported for Evans blue\" without citing? Better cite Molecule 1 only.\n\nNeed maybe include Molecule 12 record 12-29 \"penetration occurs only after opening of BBB\" in supportive? It is a direct statement that trypan blue enters after BBB opening. The result field \"impermeable\" but additional details: \"Trypan blue, bound to albumin and administered intravenously to albino mice, escapes to brain parenchyma only after opening of BBB.\" This is highly supportive for disrupted condition. It is L2, result \"impermeable\" but text says after opening escapes. Should include in claim 2? The result field is \"impermeable BBB permeability\" but the sentence confirms after opening. We can cite Record 12-29 in supportive. Since evidence_role based on evidence not result label. We can include. Also Record 12-15 says gross spots after irradiation. Maybe include? Let's include 12-15 in supportive? It says \"Trypan blue ... does not pass BBB under normal conditions, although gross spots of staining were observed in the brain stem and hypothalamus after 20–60 Gy irradiation.\" Yes under irradiation disruption, staining. Good. Include 12-15. Also 12-29. So claim 2 record list: 12-3, 12-4, 12-15, 12-17, 12-19, 12-22, 12-24, 12-27, 12-29. Good.\n\nRecord 12-1 \"goldfish except CVOs\" normal no. 12-2 normal no. 12-9 CVOs increased permeability, not disruption maybe \"sinusoidal blood vessels\" special areas; could support some access but not disrupted. Don't include. 12-10 no. 12-11 water-intoxicated no. 12-12 no. 12-13 no. 12-14 no. 12-16 no. 12-18 lead poisoned guinea-pigs no (interesting: \"Trypan blue fails to enter brain of lead poisoned guinea-pigs\" contradictory to 12-4 rat lead encephalopathy. Species/model differences. Could be contradictory. But final pass due to multiple disruption models. Should we include in claim 5? Maybe not.\n12-20 no. 12-21 no. 12-23 no. 12-25 no. 12-26 no. 12-28 no. 12-30 no. 12-31 no. 12-32 no. 12-33 no. 12-34 no. 12-35 no. Good.\n\nNeed maybe include 12-18 as contradictory? It says trypan blue fails to enter brain of lead poisoned guinea-pigs, which contradicts 12-4 in rats. But final pass not absolute. Could mention \"some species/models show continued exclusion\" in claim 5? Not necessary.\n\nNeed perhaps include \"Molecule 10 NXY-059 poor under ischemia\" is direct evidence under disrupted barrier; strong contradictory. Good.\n\nNeed perhaps include \"Molecule 21 suramin poor in situ perfusion\" is direct, but no disruption; strong due to similar polyanionic nature. Good.\n\nNeed perhaps include \"Molecule 3 carmoisine no brain radioactivity\" direct normal; good.\n\nNeed maybe include \"Molecule 6 sulphanilic acid poor\" direct normal; maybe include in claim 5? It is a small sulfonate and might show even small charged molecules are poor. But it's not an azo dye. Could include to bolster. However final claim 5 already cites three. Fine.\n\nLet's think if final prediction could be \"fail\" due to suramin and NXY-059? The condition disrupted barrier is crucial. Evans blue is the gold-standard tracer for BBB disruption. If the query is Evans blue, under disrupted BBB it will enter. So pass. If the endpoint were \"intrinsic passive CNS penetration under intact barrier\", fail. But condition disrupted overrides. Good.\n\nNeed maybe mention \"The physicochemical prior (fail) is based on intact-barrier passive diffusion and is less relevant when the barrier is disrupted.\" Could be a claim? It isn't experimental evidence. But final prediction reasoning can be implicit. The JSON only claims and final_prediction. We can put final pass.\n\nLet's ensure claim 5 \"role contradictory\" includes \"less transferable\" but still contradictory evidence. That's okay.\n\nNeed maybe \"claims\" array with at least one identifier per claim. Yes.\n\nPotential issue: The \"evidence_role\" values are \"supportive\" or \"contradictory\" relative to final. Claim 1 \"Evans blue impermeable under intact BBB\" is contradictory to pass. But since final condition disrupted, maybe it is not actually contradictory? It supports fail for intact, but not for disrupted. Still \"contradictory\" in the sense evidence supports alternative. Fine.\n\nNeed maybe include \"Molecule 1\" record \"impermeable BBB permeability\" under normal. Good.\n\nLet's finalize JSON. Need ensure no trailing commas. Use double quotes. Record IDs strings.\n\nLet's produce final."
+        }
+      ],
+      "usage": {
+        "completion_tokens": 13490,
+        "prompt_tokens": 10916,
+        "total_tokens": 24406,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 12837
+      },
+      "tool_count": 0
+    }
+  ],
+  "source_hashes": {
+    "request.json": "7d8a1935f3564a7dca545baaecfafc566d6ed35b5a7a1b91f95093a4aedc9c42",
+    "trace_messages.jsonl": "d747cfd93916974a4c5e1c0fcc4cb388cd1c5472bee97fc884d28cdc10a0a0c8",
+    "final_reasoning_output.json": "6547c8dfe1176eb4070526d5b83457b545bc98d82a3ac10f6fccfafea6907e26",
+    "single_molecule_reasoning_output.json": "75dda9ac8fe875dd7618bfa2ca6619f009527d89ff3d57aa81973e7dec10b9a2"
+  },
+  "provenance": {
+    "run_uid": "923bd24d-5f68-41a3-bef7-34e2400b98ba",
+    "repetition": 4,
+    "provider": "dgx025_50001",
+    "upstream_provider": null,
+    "requested_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "served_model": "deepseek-ai/DeepSeek-V4-Flash-0731"
+  }
+}
