@@ -1,0 +1,1215 @@
+{
+  "query_uid": "BIOCTX2_1F76251A20559B851938",
+  "configuration": "direct_plus_indirect",
+  "references": [
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 1",
+      "stable_id": "ACBSZTQIFTYFGH-IAPPQJPRSA-N@L1",
+      "source_analog_id": "ACBSZTQIFTYFGH-IAPPQJPRSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 1",
+      "text": "SMILES: CCCCCCCCCCCCCCCCCC(=O)OC[C@H](CCOC(=O)[C@@H](N)C(C)C)Cn1cnc2c(=O)[nH]c(N)nc21\nTransfer likelihood: 0.9833"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 1-1",
+      "stable_id": "sr_5d84662da6714345840f44b8c167fcb5",
+      "source_analog_id": "ACBSZTQIFTYFGH-IAPPQJPRSA-N",
+      "containing_unit_id": "ACBSZTQIFTYFGH-IAPPQJPRSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 1-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: >60%\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral administration\n\nReported evidence: The bioavailability of H2G was dramatically improved with oral administration of valomaciclovir stearate (>70% in rats and monkeys and >60% in humans)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 2",
+      "stable_id": "GVADNNFIVHPBKE-CRKDRTNXSA-N@L1",
+      "source_analog_id": "GVADNNFIVHPBKE-CRKDRTNXSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 2",
+      "text": "SMILES: Nc1ncnc2c1ncn2[C@]1(S(N)(=O)=O)O[C@H](CO)[C@@H](O)[C@H]1O\nTransfer likelihood: 0.0002"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-1",
+      "stable_id": "sr_05461b40b0f246218a98434b2629c8ec",
+      "source_analog_id": "GVADNNFIVHPBKE-CRKDRTNXSA-N",
+      "containing_unit_id": "GVADNNFIVHPBKE-CRKDRTNXSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 4 %\nSpecies: humans\nAdditional details: \"Mentioned as the commercial product in a clinical study.\"\nReported evidence: In the clinical study, the average absolute bioavailability of the commercial product INVIRASE® is 4% (range 1% to 9%)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 3",
+      "stable_id": "OISLSHLAXHALQZ-LZEIJKKFSA-N@L1",
+      "source_analog_id": "OISLSHLAXHALQZ-LZEIJKKFSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 3",
+      "text": "SMILES: CNc1nc(N)nc2c1ncn2[C@@H]1O[C@H](CO[P@@](=O)(N[C@@H](C)C(=O)OC(C)C)Oc2ccccc2)[C@@H](O)[C@@]1(C)F\nTransfer likelihood: 0.984"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-1",
+      "stable_id": "sr_32995b36a4694745979ff52ee5f5201a",
+      "source_analog_id": "OISLSHLAXHALQZ-LZEIJKKFSA-N",
+      "containing_unit_id": "OISLSHLAXHALQZ-LZEIJKKFSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: at least 50%\nSpecies: humans\nExperimental details:\n  - dose: 550 mg BID\n  - oral_exposure_mode: oral\n\nAdditional details: \"Reported in conjunction with a long intracellular t1/2 of the active metabolite.\"\nReported evidence: AT-527 is reported to have excellent pharmacokinetics, with an estimated oral bioavailability of at least 50% associated with a dosing regimen of 550 mg BID."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 4",
+      "stable_id": "LXFOLMYKSYSZQS-LURJZOHASA-N@L1",
+      "source_analog_id": "LXFOLMYKSYSZQS-LURJZOHASA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 4",
+      "text": "SMILES: CC(C)N(C[C@H]1O[C@@H](n2cnc3c(N)ncnc32)[C@H](O)[C@@H]1O)[C@H]1C[C@@H](CCc2nc3ccc(C(C)(C)C)cc3[nH]2)C1\nTransfer likelihood: 0.0001"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 4-1",
+      "stable_id": "sr_03b22816c6154c81a08ba8755b33f43c",
+      "source_analog_id": "LXFOLMYKSYSZQS-LURJZOHASA-N",
+      "containing_unit_id": "LXFOLMYKSYSZQS-LURJZOHASA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 4-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 0 %\nSpecies: humans\nAdditional details: \"Reported in the context of clinical trials; accompanied by a high clearance of 68 mL/kg/min.\"\nReported evidence: EPZ5676, described as the only DOT1L inhibitor in clinical trials, exhibited an inferior pharmacokinetic profile characterized by high clearance (68 mL/kg/min) and low oral bioavailability (F = 0%)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 5",
+      "stable_id": "NWPRCRWQMGIBOT-UHFFFAOYSA-N@L1",
+      "source_analog_id": "NWPRCRWQMGIBOT-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 5",
+      "text": "SMILES: Cn1c(=O)c2c(ncn2CCO)n(C)c1=O\nTransfer likelihood: 0.9845"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-1",
+      "stable_id": "sr_3f0da4b4b58a4b13ae0fa2329d3ffe42",
+      "source_analog_id": "NWPRCRWQMGIBOT-UHFFFAOYSA-N",
+      "containing_unit_id": "NWPRCRWQMGIBOT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 93.4 %\nSpecies: children\nExperimental details:\n  - comparator: intravenous theophylline\n  - oral_exposure_mode: oral preparation\n\nAdditional details: \"Sample size n=3\"\nReported evidence: The absolute biological availability for the children tested both after intravenous theophylline and after Oxyphyllin® (n=3) was 93.4±6.3 (mean±S.E.)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 6",
+      "stable_id": "PTOAARAWEBMLNO-KVQBGUIXSA-N@L1",
+      "source_analog_id": "PTOAARAWEBMLNO-KVQBGUIXSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 6",
+      "text": "SMILES: Nc1nc(Cl)nc2c1ncn2[C@H]1C[C@H](O)[C@@H](CO)O1\nTransfer likelihood: 0.9845"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-1",
+      "stable_id": "sr_0f4faca72c334e11a6b19356a7992ee1",
+      "source_analog_id": "PTOAARAWEBMLNO-KVQBGUIXSA-N",
+      "containing_unit_id": "PTOAARAWEBMLNO-KVQBGUIXSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: prandial_state=fasted\nResult: 40 %\nSpecies: patients\nConditions: \"fasted state\"\nExperimental details:\n  - dose: 10 mg\n  - oral_exposure_mode: tablet\n\nAdditional details: \"possibly limited by breast cancer resistance protein (BCRP)-mediated intestinal efflux\"\nReported evidence: The oral bioavailability of Cladribine Tablets when administered in the fasted state is approximately 40%, possibly limited by breast cancer resistance protein (BCRP)-mediated intestinal efflux. This was observed following the oral administration of a single 10 mg tablet."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-2",
+      "stable_id": "sr_0b4c20080dad4ef8b035a7288478789d",
+      "source_analog_id": "PTOAARAWEBMLNO-KVQBGUIXSA-N",
+      "containing_unit_id": "PTOAARAWEBMLNO-KVQBGUIXSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-2",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: prandial_state=fasted\nResult: 46 %\nSpecies: human\nConditions: \"without food\"\nReported evidence: Oral bioavailability of 2-CdA is 46% when taken without food."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 7",
+      "stable_id": "HTCJUBZBSJQWBW-AWEZNQCLSA-N@L1",
+      "source_analog_id": "HTCJUBZBSJQWBW-AWEZNQCLSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 7",
+      "text": "SMILES: CCCC[C@@](C)(CO)Nc1nc(N)nc2cc(F)cnc12\nTransfer likelihood: 0.0001"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-1",
+      "stable_id": "sr_0fe7039acb43408b8a59dd6b6990a67d",
+      "source_analog_id": "HTCJUBZBSJQWBW-AWEZNQCLSA-N",
+      "containing_unit_id": "HTCJUBZBSJQWBW-AWEZNQCLSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: extremely poor\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral\n\nAdditional details: \"The poor bioavailability is purposely designed to restrict exposure to the gut and avoid severe toxicity caused by systemic exposure.\"\nReported evidence: Selgantolimod (GS-9688) is administered orally, but its bioavailability is described as extremely poor, which is intended to restrict exposure to the gut and avoid severe toxicity from systemic exposure."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 8",
+      "stable_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N@L1",
+      "source_analog_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 8",
+      "text": "SMILES: Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1O\nTransfer likelihood: 0.9434"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-1",
+      "stable_id": "sr_61c2fe6c100944cfa5c422ec32d8e035",
+      "source_analog_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+      "containing_unit_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 50–65%\nSpecies: patients with various types of non-Hodgkin's lymphoma\nExperimental details:\n  - dose: single or multiple doses\n  - oral_exposure_mode: tablet\n\nAdditional details: \"Bioavailability appears to be independent of dosage and is unaffected or only slightly affected by food.\"\nReported evidence: The bioavailability of oral fludarabine after single or multiple doses is 50–65%; it appears to be independent of dosage and is unaffected or only slightly affected by food."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-2",
+      "stable_id": "sr_1623c4c5c7b44e80a64653ba271430af",
+      "source_analog_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+      "containing_unit_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-2",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 51–65%\nSpecies: patients with non-Hodgkin's lymphomas\nExperimental details:\n  - comparator: intravenous formulation\n  - oral_exposure_mode: oral\n\nAdditional details: \"Bioavailability is reported to be independent of dosage; oral pharmacokinetics are linear and dose-dependent, similar to the intravenous route.\"\nReported evidence: Fludarabine taken orally exhibits a bioavailability of 51–65% that is independent of dosage, with pharmacokinetic characteristics similar, linear, and dose-dependent to those of the intravenous formulation."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-3",
+      "stable_id": "sr_abff78bfa9604ec3bca4c73298b5c097",
+      "source_analog_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+      "containing_unit_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-3",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 50–65%\nSpecies: patients with various types of NHL\nExperimental details:\n  - dose: 50–90 mg\n  - oral_exposure_mode: 10 mg immediate-release tablet\n\nAdditional details: \"Bioavailability is reported for single or multiple doses, appears to be independent of dosage, and is unaffected or only slightly affected by food.\"\nReported evidence: For patients with various types of NHL, the bioavailability of oral fludarabine (administered as a 10 mg immediate-release tablet in doses of 50–90 mg) after single or multiple doses is 50–65%. This value appears to be independent of dosage and is unaffected or only slightly affected by food."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-4",
+      "stable_id": "sr_6b711e521baf4a3f88a8c1eca996d96c",
+      "source_analog_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+      "containing_unit_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-4",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 55 %\nSpecies: patients with low-grade non-Hodgkin's lymphoma and B-cell chronic lymphocytic leukemia\nExperimental details:\n  - comparator: subcutaneous administration\n  - oral_exposure_mode: oral administration\n\nAdditional details: \"The reported oral bioavailability of 55% was described as substantially lower than the 105% observed after subcutaneous administration.\"\nReported evidence: In patients with low-grade non-Hodgkin's lymphoma and B-cell chronic lymphocytic leukemia, bioavailability after oral administration of fludarabine averaged 55%, which was substantially lower than the 105% observed after subcutaneous administration."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-5",
+      "stable_id": "sr_b85adb2a968741a0962d78e03ec38885",
+      "source_analog_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+      "containing_unit_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-5",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 51–55%\nSpecies: patients with cancer\nExperimental details:\n  - comparator: vs IV\n  - oral_exposure_mode: oral\n\nAdditional details: \"Reported for both single- and multiple-dose administration with low intraindividual variation; sample size was 36 patients according to Table 1.\"\nReported evidence: The bioavailability of oral fludarabine in patients with cancer is approximately 51–55% following single- and multiple-dose administration, with low intraindividual variation."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-6",
+      "stable_id": "sr_19519f43b2f6462c900e0f1d5411d95a",
+      "source_analog_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+      "containing_unit_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-6",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 55 %\nSpecies: patients with CLL and NHL\nExperimental details:\n  - comparator: intravenous preparation\n  - oral_exposure_mode: oral\n\nAdditional details: \"Reported in a phase I trial; activity was comparable with the intravenous preparation reported in previous studies in similar patients.\"\nReported evidence: A phase I trial noted approximately 55% bioavailability of oral fludarabine with activity in CLL and NHL that was comparable with what had been reported with the intravenous preparation in previous studies in similar patients."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-7",
+      "stable_id": "sr_76593fc6dc6e454faf2fbaade8af7938",
+      "source_analog_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+      "containing_unit_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-7",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 55 %\nSpecies: patients with low-grade non-Hodgkin’s lymphoma and B-cell chronic lymphocytic leukaemia (CLL)\nExperimental details:\n  - comparator: vs IV\n  - dose: 10 mg\n  - oral_exposure_mode: immediate-release tablet\n\nAdditional details: \"low intraindividual variation; bioavailability based on plasma concentrations of the main metabolite 2-fluoroarabinofuranosyl-adenine (2F-ara-A)\"\nReported evidence: In a 1999 pharmacokinetic study, an oral formulation (10 mg immediate-release tablet) of Fludarabine phosphate was administered to patients with low-grade non-Hodgkin’s lymphoma and B-cell chronic lymphocytic leukaemia (CLL). The oral bioavailability was reported to be ~55%, with low intraindividual variation, determined by comparing plasma concentrations of the main metabolite 2-fluoroarabinofuranosyl-adenine (2F-ara-A) against intravenous administration."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-8",
+      "stable_id": "sr_d8b7bb9b0cd041baa6c2c68b90b24a25",
+      "source_analog_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+      "containing_unit_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-8",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 55 %\nSpecies: patients with low-grade non-Hodgkin's lymphoma and CLL\nExperimental details:\n  - comparator: IV fludarabine phosphate\n  - dose: 10 mg\n  - oral_exposure_mode: immediate-release tablet\n\nAdditional details: \"low intraindividual variation; dose-independent bioavailability\"\nReported evidence: An oral formulation of fludarabine phosphate, consisting of an immediate-release tablet containing 10 mg, was administered to patients with low-grade non-Hodgkin's lymphoma and CLL. The bioavailability was reported to be approximately 55%, with low intraindividual variation and dose-independent bioavailability."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-9",
+      "stable_id": "sr_08728f6b511b4aa8b4354b7111a77f94",
+      "source_analog_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+      "containing_unit_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-9",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 30 - 80%\nSpecies: patients\nExperimental details:\n  - comparator: intravenous dosing\n  - oral_exposure_mode: oral\n\nReported evidence: Studies in patients given oral fludarabine demonstrated 30 - 80% bioavailability of F-ara-A compared with intravenous dosing."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-10",
+      "stable_id": "sr_e76991b401b349189b97ed7541391408",
+      "source_analog_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+      "containing_unit_id": "HBUBKKRHXORPQB-FJFJXFQQSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-10",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 30% to 80%\nSpecies: patients\nExperimental details:\n  - dose: 50, 70, and 90 mg\n  - oral_exposure_mode: 10-mg immediate-release tablets\n\nAdditional details: \"This range represents the interpatient variability in bioavailability.\"\nReported evidence: Bioavailability of Fludarabine phosphate (F-AMP) oral tablets ranged from 30% to 80% between patients."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 9",
+      "stable_id": "BTIHMVBBUGXLCJ-OAHLLOKOSA-N@L1",
+      "source_analog_id": "BTIHMVBBUGXLCJ-OAHLLOKOSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 9",
+      "text": "SMILES: CC[C@H](CO)Nc1nc(NCc2ccccc2)c2ncn(C(C)C)c2n1\nTransfer likelihood: 0.9864"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 9-1",
+      "stable_id": "sr_96dc4d253fa749cda7e2b2c825411478",
+      "source_analog_id": "BTIHMVBBUGXLCJ-OAHLLOKOSA-N",
+      "containing_unit_id": "BTIHMVBBUGXLCJ-OAHLLOKOSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 9-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: good oral bioavailability\nSpecies: patients with cancer\nExperimental details:\n  - dose: up to 2 g/day\n\nAdditional details: \"dose-proportional increases in blood levels\"\nReported evidence: In an ongoing dose escalation study where Roscovitine (ROS) was given for 5 days every 3 weeks to patients with cancer, PK analysis showed good oral bioavailability with dose-proportional increases in blood levels at doses up to 2 g/day."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 9-2",
+      "stable_id": "sr_20528206fff04033b0d36bd508e9eab3",
+      "source_analog_id": "BTIHMVBBUGXLCJ-OAHLLOKOSA-N",
+      "containing_unit_id": "BTIHMVBBUGXLCJ-OAHLLOKOSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 9-2",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: good\nSpecies: patients\nExperimental details:\n  - oral_exposure_mode: oral\n\nReported evidence: Pharmacokinetic data for seliciclib showed good oral bioavailability in patients."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 9-3",
+      "stable_id": "sr_bd508a4216984e718c7e96ed53528f22",
+      "source_analog_id": "BTIHMVBBUGXLCJ-OAHLLOKOSA-N",
+      "containing_unit_id": "BTIHMVBBUGXLCJ-OAHLLOKOSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 9-3",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: high\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: capsule\n\nReported evidence: Seliciclib has high oral bioavailability and is in clinical development in a capsule formulation."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 10",
+      "stable_id": "QDGZDCVAUDNJFG-FXQIFTODSA-N@L1",
+      "source_analog_id": "QDGZDCVAUDNJFG-FXQIFTODSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 10",
+      "text": "SMILES: C=C1[C@H](CO)[C@@H](O)C[C@@H]1n1cnc2c(=O)nc(N)[nH]c21\nTransfer likelihood: 0.9847"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 10-1",
+      "stable_id": "sr_650bf61729bc496ca82f27dcc1429abc",
+      "source_analog_id": "QDGZDCVAUDNJFG-FXQIFTODSA-N",
+      "containing_unit_id": "QDGZDCVAUDNJFG-FXQIFTODSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 10-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 100 %\nSpecies: human\nAdditional details: \"PPB%: 13%; CL: 383.2 \\u00b1 101.8 mL/min\"\nReported evidence: In humans, Entecavir showed an oral bioavailability (F%) of 100%."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 11",
+      "stable_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 11",
+      "text": "SMILES: CC(C)[C@H](N)C(=O)OCC(CO)OCn1cnc2c(=O)nc(N)[nH]c21"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-1",
+      "stable_id": "sr_13e51a94c98c4900a5c03e45f7d8edde",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-1",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.9689\nEndpoint: absolute\nResult: high oral bioavailability category\nSpecies: dogs\nExperimental details:\n  - oral_exposure_mode: oral\n\nReported evidence: In dogs, the prodrug valganciclovir is completely bioavailable by the oral route."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-2",
+      "stable_id": "sr_be5646e418d74bd09dc41d4a95f4fdb7",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-2",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.8303\nResult: 43 %\nSpecies: 6-year-old child, HIV positive\nExperimental details:\n  - dose: 26.3 mg/kg\n\nAdditional details: \"AUC was half the target range accepted for adults; no viral shedding noted.\"\nReported evidence: In a study by Burri et al. (2004), a 6-year-old HIV-positive child received 26.3 mg/kg of valganciclovir once daily 3-times/week for 12 months, showing 43% bioavailability."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-3",
+      "stable_id": "sr_d64495ccb7d64c71bfa61ac59e4198c1",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-3",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.8097\nResult: 43 %\nSpecies: 6-year-old child, HIV positive\nExperimental details:\n  - dose: 13.2 mg/kg\n\nAdditional details: \"AUC in target range accepted for adults.\"\nReported evidence: In a study by Burri et al. (2004), a 6-year-old HIV-positive child received a single dose of 13.2 mg/kg of valganciclovir, which showed 43% bioavailability."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-4",
+      "stable_id": "sr_8c4a72adf8ca4ee8adade8d511e2594c",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-4",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7624\nResult: 60 %\nConditions: \"valine ester prodrug of GCV\"\nExperimental details:\n  - comparator: vs ganciclovir\n  - oral_exposure_mode: oral\n\nReported evidence: Valganciclovir (VGCV) is described as having an oral bioavailability of 60% compared to 6% for ganciclovir (GCV)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-5",
+      "stable_id": "sr_8b7b84ae524a466aba9e7d013cb79c36",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-5",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7402\nResult: 60 %\nExperimental details:\n  - oral_exposure_mode: oral solution and as a tablet\n\nReported evidence: Valganciclovir is an L-valine ester pro-drug of ganciclovir that is formulated as an oral solution and as a tablet; its oral bioavailability has been reported to be ~ 60%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-6",
+      "stable_id": "sr_cacd566a561942cdaf6046f51de7e597",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-6",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7379\nResult: 48 %\nSpecies: subjects <1 month of age with symptomatic congenital CMV disease\nConditions: \"approximately 4 weeks of life\"\nExperimental details:\n  - dose: 15.62 mg/kg\n\nAdditional details: \"A dose of 15.62 mg/kg provided an AUC12 of 27.4 \\u00b5g \\u00d7 hour/mL.\"\nReported evidence: In subjects under 1 month of age with symptomatic congenital CMV disease, a dose of 15.62 mg/kg of valganciclovir resulted in an oral bioavailability of 48% at approximately 4 weeks of life."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-7",
+      "stable_id": "sr_05ddd0db6c684d6a87d95cc0d1e4794d",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-7",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7127\nResult: 0.6 fraction\nSpecies: adult SOT recipients\nExperimental details:\n  - comparator: intravenous ganciclovir 5 mg/kg 2dd\n  - dose: 900 mg 2dd, 900 mg 1dd, or 450 mg 1dd\n\nAdditional details: \"Study by Perrotet et al, 2009.\"\nReported evidence: Perrotet et al (2009) reported a bioavailability (F) of 0.6 for valganciclovir in adult SOT recipients receiving doses of 900 mg 2dd (therapy), 900 mg 1dd (prophylaxis), or 450 mg 1dd (renal impairment), with intravenous ganciclovir 5 mg/kg 2dd used as a comparator."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-8",
+      "stable_id": "sr_4707c541440d4a869b086c3e18cf3c2b",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-8",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7125\nResult: 60 %\nConditions: \"given with food\"\nAdditional details: \"Converted to active metabolite in the intestinal wall and liver\"\nReported evidence: Valganciclovir is converted to its active metabolite in the intestinal wall and liver and exhibits 60% bioavailability when administered with food."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-9",
+      "stable_id": "sr_8cfba60550dc44afa22b92c7450f4fa0",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-9",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7077\nResult: 43 %\nSpecies: 6-year-old child\nExperimental details:\n  - oral_exposure_mode: tablets\n\nReported evidence: In another evaluation of valganciclovir tablets, a bioavailability of 43% was found in a 6-year-old child."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-10",
+      "stable_id": "sr_b22f17a4f3ce44969171875a8e7a4f2f",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-10",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7073\nResult: 54 %\nSpecies: neonates\nReported evidence: In a population of neonates, valganciclovir demonstrated an overall bioavailability of 54%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-11",
+      "stable_id": "sr_155e07dd3bb0439f9edc4bfb34b27448",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-11",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7008\nEndpoint: absolute\nResult: 60 %\nSpecies: stable liver transplant recipients\nExperimental details:\n  - comparator: i.v. GCV 5 mg/kg\n  - dose: 450 mg\n  - oral_exposure_mode: oral\n\nAdditional details: \"Study by Pescovitz and colleagues; sample size of 24 recipients.\"\nReported evidence: In a study of 24 stable liver transplant recipients by Pescovitz and colleagues, the estimated absolute bioavailability for valganciclovir at a dose of 450 mg was 60.0%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-12",
+      "stable_id": "sr_5e241e16e45b4b99964c4c78169f63d1",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-12",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6983\nResult: 41.1 %\nSpecies: neonates with symptomatic congenital CMV disease\nExperimental details:\n  - comparator: intravenous ganciclovir\n  - dose: 16 mg/kg\n  - oral_exposure_mode: oral solution\n\nAdditional details: \"The dose produced a geometric mean AUC12 of 27.4 mg \\u00d7 h/L.\"\nReported evidence: In a study of neonates with symptomatic congenital CMV disease, the median dose of oral valganciclovir oral solution administered was 16 mg/kg, resulting in a bioavailability of 41.1%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-13",
+      "stable_id": "sr_863fc42868cc45db9b6aded069f32282",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-13",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6828\nEndpoint: extent_f\nResult: less than 65%\nSpecies: subjects younger than three years\nConditions: \"pediatric kidney and liver transplant patients\"\nExperimental details:\n  - comparator: subjects older than three years\n  - dose: 11.1 (10.1 to 12.1) mg/kg every 12 hours and 7.4 (5.3 to 11.3) mg/kg every 24 hours\n  - oral_exposure_mode: suspension\n\nAdditional details: \"The observed decrease in bioavailability was not statistically significant due to the limited sample size; dose values represent the median (range) for the study population.\"\nReported evidence: In pediatric kidney and liver transplant patients, exploration of an age effect on the bioavailability of valganciclovir showed evidence of decreasing bioavailability (F less than 65%) in subjects younger than three years compared with subjects older than three years, although the signal was not statistically significant due to the limited sample size."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-14",
+      "stable_id": "sr_d59007d0b98447198dbb9229c65f88bf",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-14",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6771\nResult: 60 %\nSpecies: adults\nExperimental details:\n  - oral_exposure_mode: oral\n\nReported evidence: The oral bioavailability of Valganciclovir was approximately 60% in adults."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-15",
+      "stable_id": "sr_a6ad4aedb93a4f0ca3b75e4e72461a3c",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-15",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6768\nResult: 60 %\nSpecies: adults\nConditions: \"taken with food\"\nReported evidence: In adult studies, the oral bioavailability of valganciclovir has been reported to be around 60% when taken with food."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-16",
+      "stable_id": "sr_82e8bba0105142be85e1ffd1a3a5c6ea",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-16",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6736\nResult: 48 %\nSpecies: congenitally infected neonates\nConditions: \"day 6\"\nExperimental details:\n  - dose: 16 mg/kg twice daily\n  - oral_exposure_mode: solution\n\nAdditional details: \"Dose and formulation information derived from the associated phase II evaluation description in paragraph [p:34].\"\nReported evidence: A phase II evaluation of valganciclovir solution in congenitally infected neonates reported oral bioavailability of 48% on day 6."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-17",
+      "stable_id": "sr_9b8bdb21ee23409cbba4261a94d3716f",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-17",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6615\nEndpoint: absolute\nResult: 43 %\nSpecies: 6-year-old girl with congenital human immunodeficiency virus type 1 and cytomegalovirus coinfection\nConditions: \"congenital HIV-1 and CMV coinfection\"\nExperimental details:\n  - comparator: vs ganciclovir 4.4 mg/kg iv\n  - dose: 13.2 and 26.3 mg/kg\n  - oral_exposure_mode: po\n\nAdditional details: \"The oral dosages yielded AUCs of 14.3 and 28.7 \\u00b5g\\u00b7h/ml, which were compared to the AUC of 11.1 \\u00b5g\\u00b7h/ml from the iv ganciclovir dose.\"\nReported evidence: In a 6-year-old girl with congenital human immunodeficiency virus type 1 and cytomegalovirus coinfection, oral valganciclovir at doses of 13.2 and 26.3 mg/kg yielded an absolute bioavailability of 43% for ganciclovir, compared to a 4.4 mg/kg iv dose of ganciclovir."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-18",
+      "stable_id": "sr_f914833d09754e98bda38643d0821737",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-18",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6593\nResult: 0.699 fraction\nConditions: \"VGCV dose was converted to GCV dose based on the conversion equation DoseGCV=DoseVGCV\\u00d70.72\"\nAdditional details: \"Reported as a fixed effect parameter in a PPK model.\"\nReported evidence: In the study by Lalagkas et al. (2023), the fixed effect parameter for bioavailability (F) of valganciclovir was reported as 0.699."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-19",
+      "stable_id": "sr_b1d343cc8b5d4ff6ab87ec434acd2552",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-19",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6534\nEndpoint: absolute\nResult: 34 %\nSpecies: kidney transplant recipients\nConditions: \"administered with a low fat meal\"\nExperimental details:\n  - dose: 900 mg daily\n  - oral_exposure_mode: oral\n\nAdditional details: \"Reported as lower than the 60% previously seen in healthy volunteers and HIV-positive/CMV-positive adults.\"\nReported evidence: In kidney transplant recipients, the absolute bioavailability (F) of valganciclovir (VGCV) administered at 900 mg was 34%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-20",
+      "stable_id": "sr_12834e3cd9f44e91b9e9e309c34c7389",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-20",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6514\nResult: 60 %\nConditions: \"extensive metabolism (especially by esterases in the intestinal membrane)\"\nAdditional details: \"described as low\"\nReported evidence: Valganciclovir, a prodrug of Ganciclovir, has a reported low oral bioavailability of approximately 60% due to extensive metabolism, particularly by esterases in the intestinal membrane."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-21",
+      "stable_id": "sr_7e0c59a1d5d94c159954b39022d2090e",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-21",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6456\nResult: 0.6 fraction\nAdditional details: \"Reported as a fixed effect parameter in a PPK model.\"\nReported evidence: In the study by Perrottet et al. (2009), the fixed effect parameter for bioavailability (F) of valganciclovir was reported as 0.6."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-22",
+      "stable_id": "sr_28a4426fc2ce471e91b4afc8f8f647d8",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-22",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6427\nEndpoint: absolute\nResult: 48 %\nSpecies: young infants\nConditions: \"day 6 of life\"\nExperimental details:\n  - comparator: vs IV ganciclovir\n  - oral_exposure_mode: oral solution\n\nAdditional details: \"Part of Version 1.0 of the study protocol; bioavailability increased by 32% over the first 6 weeks of life.\"\nReported evidence: In young infants (Version 1.0), the bioavailability (F) of valganciclovir oral solution was 48% on day 6 of life."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-23",
+      "stable_id": "sr_9ab70a6d3064468c9cdab5761bcdacd0",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-23",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.638\nResult: 0.43 fraction\nAdditional details: \"Reported as a fixed effect parameter in a PPK model.\"\nReported evidence: In the study by Franck et al. (2021), the fixed effect parameter for bioavailability (F) of valganciclovir was reported as 0.43."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-24",
+      "stable_id": "sr_1b94c5d686ae482597a73d98e8ba0700",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-24",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6318\nResult: 43 %\nAdditional details: \"Reported in literature.\"\nReported evidence: The authors note that their data are almost identical to the 43% bioavailability of Valganciclovir reported in the literature."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-25",
+      "stable_id": "sr_fd94c42e25554bf09f93c5529092acbc",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-25",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6084\nResult: 41 %\nSpecies: rats\nReported evidence: The bioavailability study in rats indicated that famciclovir (41%) was more effective than 6-deoxy penciclovir (9%) and penciclovir (1.5%)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-26",
+      "stable_id": "sr_f7d75a19b0da4be3834fe4c879b5a15f",
+      "source_analog_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N",
+      "containing_unit_id": "WPVFJKSGQUFQAP-GKAPJAKFSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-26",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6015\nEndpoint: absolute\nResult: 59 %\nSpecies: stable liver transplant recipients\nExperimental details:\n  - comparator: i.v. GCV 5 mg/kg\n  - dose: 900 mg\n  - oral_exposure_mode: oral\n\nAdditional details: \"Study by Pescovitz and colleagues; sample size of 24 recipients.\"\nReported evidence: In a study of 24 stable liver transplant recipients by Pescovitz and colleagues, the estimated absolute bioavailability for valganciclovir at a dose of 900 mg was 59.0%."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 12",
+      "stable_id": "DWSFCAKOSWFTCK-UHFFFAOYSA-N@L2",
+      "source_analog_id": "DWSFCAKOSWFTCK-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 12",
+      "text": "SMILES: O=[N+]([O-])c1nccn1COC(CO)CO"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-1",
+      "stable_id": "sr_031884641ebc4843b3f67325261d462a",
+      "source_analog_id": "DWSFCAKOSWFTCK-UHFFFAOYSA-N",
+      "containing_unit_id": "DWSFCAKOSWFTCK-UHFFFAOYSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-1",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7087\nResult: 73 %\nSpecies: dogs\nExperimental details:\n  - oral_exposure_mode: oral administration\n\nAdditional details: \"Larger than the expected value of 64%.\"\nReported evidence: In dogs, the oral bioavailability of RP-170 is 73%, which is larger than the expected value of 64%."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 13",
+      "stable_id": "QULDDKSCVCJTPV-UHFFFAOYSA-N@L2",
+      "source_analog_id": "QULDDKSCVCJTPV-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 13",
+      "text": "SMILES: COc1c(C)cnc(Cn2cnc3c(Cl)nc(N)nc32)c1C"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-1",
+      "stable_id": "sr_f2547491b24143489316cfdc331198eb",
+      "source_analog_id": "QULDDKSCVCJTPV-UHFFFAOYSA-N",
+      "containing_unit_id": "QULDDKSCVCJTPV-UHFFFAOYSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-1",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.8358\nEndpoint: systemic_availability\nResult: orally bioavailable\nSpecies: patients with refractory GIST\nExperimental details:\n  - comparator: IPI-504\n  - dose: 400 mg versus 600 mg\n\nReported evidence: In a study of patients with refractory GIST, the formulation of BIIB021 tested was found to be orally bioavailable and relatively well-tolerated, especially compared with the HSP90 inhibitor IPI-504."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 14",
+      "stable_id": "KDDCPBBHHHXDCG-GPNIZQGCSA-N@L2",
+      "source_analog_id": "KDDCPBBHHHXDCG-GPNIZQGCSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 14",
+      "text": "SMILES: CCCCCCCCCCCCCCCCCC(=O)OCC(COC(=O)[C@@H](N)C(C)C)OCn1cnc2c(=O)[nH]c(N)nc21"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-1",
+      "stable_id": "sr_f40782bf672f4af78dbf4f2a0596217c",
+      "source_analog_id": "KDDCPBBHHHXDCG-GPNIZQGCSA-N",
+      "containing_unit_id": "KDDCPBBHHHXDCG-GPNIZQGCSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 14-1",
+      "text": "Level: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7238\nResult: 40 %\nSpecies: rats\nConditions: \"administered as a prodrug\"\nAdditional details: \"Measured by microdialysis sampling.\"\nReported evidence: The bioavailability of ganciclovir, when administered orally as the prodrug in rats, was 40±7% by microdialysis sampling."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 15",
+      "stable_id": "KDNSSKPZBDNJDF-UHFFFAOYSA-N@L3",
+      "source_analog_id": "KDNSSKPZBDNJDF-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 15",
+      "text": "SMILES: Nc1ncc2ncn(CC3(OCP(=O)(O)O)CC3)c2n1"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 15-1",
+      "stable_id": "sr_7f57657b68044122a9662317b0d39940",
+      "source_analog_id": "KDNSSKPZBDNJDF-UHFFFAOYSA-N",
+      "containing_unit_id": "KDNSSKPZBDNJDF-UHFFFAOYSA-N@L3",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 15-1",
+      "text": "Level: L3\nEvidence family: oral_auc_cmax_exposure\nTransfer likelihood: 0.6082\nEndpoint: AUC0_inf\nResult: 2105 ng·h/mL\nExperimental details:\n  - oral_dose: 60 mg (multiple doses)\n  - statistic_type: arithmetic_mean\n  - study_context: CHB patients, oral LB80380, plasma, steady state\n\nReported evidence: After multiple oral doses of LB80380 60 mg (steady state), the mean AUC0‐∞ of LB80331 was 2,105 ng·h/ml (±274)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 16",
+      "stable_id": "XAUDJQYHKZQPEU-KVQBGUIXSA-N@L3",
+      "source_analog_id": "XAUDJQYHKZQPEU-KVQBGUIXSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 16",
+      "text": "SMILES: Nc1ncn([C@H]2C[C@H](O)[C@@H](CO)O2)c(=O)n1"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 16-1",
+      "stable_id": "sr_67ed48333afa4496a8021b7960e048da",
+      "source_analog_id": "XAUDJQYHKZQPEU-KVQBGUIXSA-N",
+      "containing_unit_id": "XAUDJQYHKZQPEU-KVQBGUIXSA-N@L3",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 16-1",
+      "text": "Level: L3\nEvidence family: oral_auc_cmax_exposure\nTransfer likelihood: 0.6583\nEndpoint: oral_iv_comparison\nResult: 93.5 %\nExperimental details:\n  - comparator_exposure: IV decitabine 20 mg/m2, AUClast; oral/IV ratio 93.5% (geometric LSM).\n  - oral_dose: cedazuridine 100 mg / decitabine 35 mg (dose‐confirmation stage)\n  - statistic_type: geometric_mean\n  - study_context: Phase 2 study in adult patients with intermediate‐1/2 or high‐risk myelodysplastic syndrome or chronic myelomonocytic leukemia; oral administration of cedazuridine/decitabine for 5 days, plasma decitabine concentrations measured.\n\nAdditional details: \"90% confidence interval 82.1%\\u2013106.5% reported.\"\nReported evidence: In the dose‐confirmation stage of the phase 2 trial, the geometric least‐squares mean (LSM) ratio of oral to IV decitabine 5‐day AUClast was 93.5% (90% CI 82.1%–106.5%)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 17",
+      "stable_id": "BPEGJWRSRHCHSN-UHFFFAOYSA-N@L3",
+      "source_analog_id": "BPEGJWRSRHCHSN-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 17",
+      "text": "SMILES: Cn1nnc2c(C(N)=O)ncn2c1=O"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 17-1",
+      "stable_id": "sr_bd997892a0bd406bb14bef205e2d0ca5",
+      "source_analog_id": "BPEGJWRSRHCHSN-UHFFFAOYSA-N",
+      "containing_unit_id": "BPEGJWRSRHCHSN-UHFFFAOYSA-N@L3",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 17-1",
+      "text": "Level: L3\nEvidence family: oral_auc_cmax_exposure\nTransfer likelihood: 0.5905\nEndpoint: AUC0_inf\nResult: 23.6 µg·h/mL\nExperimental details:\n  - comparator_exposure: IV AUC(I) 24.6 µg·h/mL; i.v./p.o. ratio 105%\n  - oral_dose: 150 mg/m2\n  - statistic_type: arithmetic_mean\n  - study_context: human subjects, single oral dose, plasma matrix\n\nReported evidence: In the oral (p.o.) arm, temozolomide showed a mean AUC(I) of 23.6 µg·h/mL (CV 15%)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 18",
+      "stable_id": "NVKAMPJSWMHVDK-GITKWUPZSA-N@L3",
+      "source_analog_id": "NVKAMPJSWMHVDK-GITKWUPZSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 18",
+      "text": "SMILES: C[C@@]1(O)[C@H](O)[C@@H](CO)O[C@H]1n1cnc2c(=O)[nH]c(N)nc21"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 18-1",
+      "stable_id": "sr_96f41e4ee2b74049af8c1aebf7b1daee",
+      "source_analog_id": "NVKAMPJSWMHVDK-GITKWUPZSA-N",
+      "containing_unit_id": "NVKAMPJSWMHVDK-GITKWUPZSA-N@L3",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 18-1",
+      "text": "Level: L3\nEvidence family: oral_auc_cmax_exposure\nTransfer likelihood: 0.6084\nEndpoint: AUC0_inf\nResult: 81.9 ng·h/mL\nExperimental details:\n  - oral_dose: 25 mg\n  - statistic_type: arithmetic_mean\n  - study_context: single oral dose in fasted healthy human subjects, plasma (metabolite of IDX184)\n\nAdditional details: \"Mean \\u00b1 SD reported\"\nReported evidence: A 25 mg oral dose gave a mean AUC0‐∞ of 81.9 ng·h/ml (± 23.2) for 2'-MeG."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 19",
+      "stable_id": "JNTOCHDNEULJHD-UHFFFAOYSA-N@L3",
+      "source_analog_id": "JNTOCHDNEULJHD-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 19",
+      "text": "SMILES: Nc1nc(=O)c2ncn(CCC(CO)CO)c2[nH]1"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 19-1",
+      "stable_id": "sr_59434d1ac6c44db09e0e68f125e8af70",
+      "source_analog_id": "JNTOCHDNEULJHD-UHFFFAOYSA-N",
+      "containing_unit_id": "JNTOCHDNEULJHD-UHFFFAOYSA-N@L3",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 19-1",
+      "text": "Level: L3\nEvidence family: oral_auc_cmax_exposure\nTransfer likelihood: 0.7657\nEndpoint: AUC0_inf\nResult: 8.94 µg/ml·h\nExperimental details:\n  - oral_dose: 500 mg\n  - statistic_type: arithmetic_mean\n  - study_context: single‐dose oral famciclovir in healthy adult volunteers (fasted), plasma penciclovir measured\n\nAdditional details: \"Mean \\u00b1 SD (range) from historical data\"\nReported evidence: In healthy adult volunteers (single oral 500 mg famciclovir) the mean AUC0‐∞ of penciclovir was 8.94 µg·ml·h (± 1.69, range 6.31–11.84)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 20",
+      "stable_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N@L4",
+      "source_analog_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 20",
+      "text": "SMILES: Nc1ncc2ncn(CCC(CO)CO)c2n1"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 20-1",
+      "stable_id": "sr_07f4706c4ba549dfb49e6a738f63dfa6",
+      "source_analog_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N",
+      "containing_unit_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 20-1",
+      "text": "Level: L4\nEvidence family: absorption_solubility_permeability\nTransfer likelihood: 0.5804\nEndpoint: fraction_absorbed\nResult: well absorbed\nAssay context: oral administration in mice\nExperimental details:\n  - biological_context: mouse\n\nAdditional details: \"Compound was converted efficiently to the active drug (1) after oral dosing.\"\nReported evidence: Both 5 and its esters (14-17, 21, 22) and also 18 were well absorbed after oral administration and converted efficiently to 1."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 20-2",
+      "stable_id": "sr_61586fb3556a4d619ef57822ff94085a",
+      "source_analog_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N",
+      "containing_unit_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 20-2",
+      "text": "Level: L4\nEvidence family: absorption_solubility_permeability\nTransfer likelihood: 0.4485\nEndpoint: fraction_absorbed\nResult: improved absorption\nAssay context: oral administration to mice\nExperimental details:\n  - biological_context: mouse\n\nAdditional details: \"Compared with compound 1 (9-[4\\u2010hydroxy\\u20103\\u2010(hydroxymethyl)but\\u20101\\u2010yl]guanine).\"\nReported evidence: The 2-aminopurine 5 showed improved absorption in comparison with 1."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 21",
+      "stable_id": "OKQHSIGMOWQUIK-UHFFFAOYSA-N@L4",
+      "source_analog_id": "OKQHSIGMOWQUIK-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 21",
+      "text": "SMILES: Nc1ncc2ncn(COCCO)c2n1"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 21-1",
+      "stable_id": "sr_a5b0b43bb9a5412691db6bc8428ee884",
+      "source_analog_id": "OKQHSIGMOWQUIK-UHFFFAOYSA-N",
+      "containing_unit_id": "OKQHSIGMOWQUIK-UHFFFAOYSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 21-1",
+      "text": "Level: L4\nEvidence family: absorption_solubility_permeability\nTransfer likelihood: 0.4306\nEndpoint: fraction_absorbed\nResult: >70% %\nAssay context: human oral administration (clinical study)\nExperimental details:\n  - biological_context: human\n  - formulation_or_solid_form: 250 mg oral dose of desciclovir\n\nAdditional details: \"Absorption measured after oral administration of 250 mg desciclovir; reported as over 70%.\"\nReported evidence: Human clinical studies yielded over 70% absorption following oral administration of 250 mg desciclovir, which was significantly higher than that from oral administration of acyclovir."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 22",
+      "stable_id": "HOHRTORVULTITN-JTQLQIEISA-N@L4",
+      "source_analog_id": "HOHRTORVULTITN-JTQLQIEISA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 22",
+      "text": "SMILES: CC(C)[C@H](NC(=O)CN)C(=O)OCCOCn1cnc2c(=O)[nH]c(N)nc21"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 22-1",
+      "stable_id": "sr_b657eec3812a4c27a2d623ca81cef269",
+      "source_analog_id": "HOHRTORVULTITN-JTQLQIEISA-N",
+      "containing_unit_id": "HOHRTORVULTITN-JTQLQIEISA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 22-1",
+      "text": "Level: L4\nEvidence family: absorption_solubility_permeability\nTransfer likelihood: 0.8566\nEndpoint: caco2_mdck_pampa_permeability\nResult: 2.89 10^-6 cm/s\nAssay context: Caco‐2 monolayer transport assay\nExperimental details:\n  - biological_context: Caco‐2 cells\n  - condition_medium: pH 6.0 buffer\n  - formulation_or_solid_form: GVACV (Gly‐Val‐ACV) 1 mM\n\nReported evidence: The Caco‐2 permeability (Papp) of GVACV (Gly‐Val‐ACV) at pH 6.0 was 2.89 ± 0.59 ×10−6 cm/s."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 23",
+      "stable_id": "JZRWCGZRTZMZEH-UHFFFAOYSA-N@L4",
+      "source_analog_id": "JZRWCGZRTZMZEH-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 23",
+      "text": "SMILES: Cc1ncc(C[n+]2csc(CCO)c2C)c(N)n1"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 23-1",
+      "stable_id": "sr_ae504bcb3e3649c9bc9a27456aa9bbb5",
+      "source_analog_id": "JZRWCGZRTZMZEH-UHFFFAOYSA-N",
+      "containing_unit_id": "JZRWCGZRTZMZEH-UHFFFAOYSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 23-1",
+      "text": "Level: L4\nEvidence family: absorption_solubility_permeability\nTransfer likelihood: 0.3984\nEndpoint: fraction_absorbed\nResult: 75 %\nAssay context: oral administration of C14-labelled thiamine in rats\nExperimental details:\n  - biological_context: rat, 20‐24 months old\n\nAdditional details: \"Decrease in fraction absorbed observed in older rats; same oral dosing protocol as above.\"\nReported evidence: The efficiency of absorption of the labelled material decreased to about 75 % in animals 20 to 24 months of age."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 24",
+      "stable_id": "MCGSCOLBFJQGHM-SCZZXKLOSA-N@L5",
+      "source_analog_id": "MCGSCOLBFJQGHM-SCZZXKLOSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 24",
+      "text": "SMILES: Nc1nc(NC2CC2)c2ncn([C@H]3C=C[C@@H](CO)C3)c2n1\nMorgan similarity: 0.2769"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 24-1",
+      "stable_id": "sr_dd5ea7b7cb284749b960d9491ff0a833",
+      "source_analog_id": "MCGSCOLBFJQGHM-SCZZXKLOSA-N",
+      "containing_unit_id": "MCGSCOLBFJQGHM-SCZZXKLOSA-N@L5",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 24-1",
+      "text": "Level: L5\nEvidence family: gut_wall_efflux_intestinal_metabolism\nEndpoint: oral_exposure_change_due_to_gut_wall\nResult: substrate transporter substrate status\nAssay context: in vivo oral administration in male Wistar rats\nConditions: \"co\\u2010administration with rilpivirine; inhibition of MDR1/BCRP\"\nExperimental details:\n  - intestinal_site: small intestine\n  - substrate_status: substrate\n  - transporter_or_enzyme: MDR1/ABCB1, BCRP/ABCG2\n\nReported evidence: In vivo experiments in male Wistar rats confirmed inhibition of MDR1/BCRP in the small intestine, leading to significant increase in oral bioavailability of abacavir."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 24-2",
+      "stable_id": "sr_ed8cd87231bd48b88042cb7e419f091d",
+      "source_analog_id": "MCGSCOLBFJQGHM-SCZZXKLOSA-N",
+      "containing_unit_id": "MCGSCOLBFJQGHM-SCZZXKLOSA-N@L5",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 24-2",
+      "text": "Level: L5\nEvidence family: gut_wall_efflux_intestinal_metabolism\nEndpoint: efflux_or_secretory_transport\nResult: substrate transporter substrate status\nAssay context: intestinal barrier (general)\nExperimental details:\n  - substrate_status: substrate\n  - transporter_or_enzyme: BCRP/ABCG2\n\nReported evidence: The BCRP substrates include numerous antiviral drugs (zidovudine, lamivudine, abacavir)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 25",
+      "stable_id": "JFVZFKDSXNQEJW-CQSZACIVSA-N@L5",
+      "source_analog_id": "JFVZFKDSXNQEJW-CQSZACIVSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 25",
+      "text": "SMILES: CC(C)OC(=O)OCOP(=O)(CO[C@H](C)Cn1cnc2c(N)ncnc21)OCOC(=O)OC(C)C\nMorgan similarity: 0.2466"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 25-1",
+      "stable_id": "sr_3cfd6b45844b4d1a942028d62448eeac",
+      "source_analog_id": "JFVZFKDSXNQEJW-CQSZACIVSA-N",
+      "containing_unit_id": "JFVZFKDSXNQEJW-CQSZACIVSA-N@L5",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 25-1",
+      "text": "Level: L5\nEvidence family: gut_wall_efflux_intestinal_metabolism\nEndpoint: oral_exposure_change_due_to_gut_wall\nResult: 1.72‐fold increase in bioavailability at 400 mg/kg PP + TPGS\nAssay context: oral pharmacokinetic study in rats\nConditions: \"high dose PP (400 mg/kg) with TPGS\"\nExperimental details:\n  - substrate_status: substrate\n\nReported evidence: At the highest tested dose (400 mg/kg PP) together with TPGS, TDF bioavailability in rats increased by 1.72‐fold over controls."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 26",
+      "stable_id": "GGXKWVWZWMLJEH-UHFFFAOYSA-N@L5",
+      "source_analog_id": "GGXKWVWZWMLJEH-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 26",
+      "text": "SMILES: CC(=O)OCC(CCn1cnc2cnc(N)nc21)COC(C)=O\nMorgan similarity: 0.3115"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 26-1",
+      "stable_id": "sr_e27834856c414fa0851bde6dc0c20bd9",
+      "source_analog_id": "GGXKWVWZWMLJEH-UHFFFAOYSA-N",
+      "containing_unit_id": "GGXKWVWZWMLJEH-UHFFFAOYSA-N@L5",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 26-1",
+      "text": "Level: L5\nEvidence family: gut_wall_efflux_intestinal_metabolism\nEndpoint: efflux_or_secretory_transport\nResult: substrate transporter substrate status\nAssay context: MDRI-MDCKII monolayer permeability assay\nExperimental details:\n  - substrate_status: substrate\n  - transporter_or_enzyme: P-gp/ABCB1\n\nAdditional details: \"Identified as an exceptional drug with low P\\u2010gp\\u2010mediated efflux in the dataset.\"\nReported evidence: Exceptional drugs (acrivastine, cetirizine, cimetidine, famciclovir, labetolol, neostigmine, pirenzapine, trimethoprim) are less permeable and also demonstrated less attenuation with P‐gp, indicating that while they are P‐gp substrates they experience limited efflux."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 27",
+      "stable_id": "FBOZXECLQNJBKD-ZDUSSCGKSA-N@L5",
+      "source_analog_id": "FBOZXECLQNJBKD-ZDUSSCGKSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 27",
+      "text": "SMILES: CN(Cc1cnc2nc(N)nc(N)c2n1)c1ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc1\nMorgan similarity: 0.1585"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 27-1",
+      "stable_id": "sr_2a07fcca9bc6463599a139b4846c1c81",
+      "source_analog_id": "FBOZXECLQNJBKD-ZDUSSCGKSA-N",
+      "containing_unit_id": "FBOZXECLQNJBKD-ZDUSSCGKSA-N@L5",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 27-1",
+      "text": "Level: L5\nEvidence family: gut_wall_efflux_intestinal_metabolism\nEndpoint: oral_exposure_change_due_to_gut_wall\nResult: AUC increased 107%\nAssay context: in situ single-pass jejunal perfusion in rats\nConditions: \"co-perfused with bestatin (inhibitory group)\"\nExperimental details:\n  - intestinal_site: jejunum\n\nAdditional details: \"Portal vein concentrations significantly increased\"\nReported evidence: In the in situ jejunal perfusion, when MTX and bestatin were perfused simultaneously, portal vein concentrations of both drugs significantly increased. The AUCs of MTX and bestatin in the inhibitory groups increased by 107% and 105% compared to control."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 28",
+      "stable_id": "SGOIRFVFHAKUTI-ZCFIWIBFSA-N@L5",
+      "source_analog_id": "SGOIRFVFHAKUTI-ZCFIWIBFSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 28",
+      "text": "SMILES: C[C@H](Cn1cnc2c(N)ncnc21)OCP(=O)(O)O\nMorgan similarity: 0.2951"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 28-1",
+      "stable_id": "sr_259795aa557a46bf8c3a61e694d4b386",
+      "source_analog_id": "SGOIRFVFHAKUTI-ZCFIWIBFSA-N",
+      "containing_unit_id": "SGOIRFVFHAKUTI-ZCFIWIBFSA-N@L5",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 28-1",
+      "text": "Level: L5\nEvidence family: gut_wall_efflux_intestinal_metabolism\nEndpoint: efflux_or_secretory_transport\nResult: not substrate transporter substrate status\nAssay context: Caco-2 permeability assay (also calcein AM uptake and ATPase)\nExperimental details:\n  - substrate_status: not_substrate\n  - transporter_or_enzyme: Pgp/ABCB1\n\nAdditional details: \"Combined Caco-2 permeability, calcein AM uptake, and ATPase assays were used to assess P\\u2010gp interaction.\"\nReported evidence: Our results obtained in Caco-2 permeability, calcein AM uptake, and ATPase studies show that Tenofovir (TFV) is not a substrate for P‐gp."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 29",
+      "stable_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N@L6",
+      "source_analog_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 6,
+      "is_new": true,
+      "prompt_heading": "## Molecule 29",
+      "text": "SMILES: Nc1ncc2ncn(CCC(CO)CO)c2n1"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 29-1",
+      "stable_id": "sr_0a20475c041b46f39a35eea65326ffd8",
+      "source_analog_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N",
+      "containing_unit_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N@L6",
+      "first_visible_level": 6,
+      "is_new": true,
+      "prompt_heading": "Record 29-1",
+      "text": "Level: L6\nEvidence family: hepatic_clearance_metabolic_stability\nTransfer likelihood: 0.4791\nEndpoint: hepatic_clearance\nResult: 11.5 mL/min/kg\nAssay context: scaled from cytosol data\nSpecies: human (pooled)\nReported evidence: The predicted blood clearance (fu(blood) only) for 6‐deoxypenciclovir in human pooled cytosol is 11.5 mL/min/kg, representing hepatic clearance."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 29-2",
+      "stable_id": "sr_ab903e7ca61143f29a351507912974fe",
+      "source_analog_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N",
+      "containing_unit_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N@L6",
+      "first_visible_level": 6,
+      "is_new": true,
+      "prompt_heading": "Record 29-2",
+      "text": "Level: L6\nEvidence family: hepatic_clearance_metabolic_stability\nTransfer likelihood: 0.5055\nEndpoint: intrinsic_clearance\nResult: 46.1 µL/min/mg protein\nAssay context: cytosol\nSpecies: female minipig\nConditions: \"menadione 100 \\u00b5M co\\u2010incubation\"\nReported evidence: Table II shows 6‐deoxypenciclovir intrinsic clearance in female minipig liver cytosol with menadione (100 µM) as 46.1 µL/min/mg protein."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 29-3",
+      "stable_id": "sr_fa505f20c82347089f7c74df2a267240",
+      "source_analog_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N",
+      "containing_unit_id": "WJOWACPJSFGNRM-UHFFFAOYSA-N@L6",
+      "first_visible_level": 6,
+      "is_new": true,
+      "prompt_heading": "Record 29-3",
+      "text": "Level: L6\nEvidence family: hepatic_clearance_metabolic_stability\nTransfer likelihood: 0.4556\nEndpoint: hepatic_clearance\nResult: 6.49 mL/min/kg\nAssay context: scaled from cytosol data\nSpecies: male minipig\nReported evidence: The predicted blood clearance (fu(blood) only) for 6‐deoxypenciclovir in male minipig cytosol is 6.49 mL/min/kg."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 30",
+      "stable_id": "GWNHAOBXDGOXRR-HJFSHJIFSA-N@L6",
+      "source_analog_id": "GWNHAOBXDGOXRR-HJFSHJIFSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 6,
+      "is_new": true,
+      "prompt_heading": "## Molecule 30",
+      "text": "SMILES: Nc1ncnc2c1ncn2CCOC[P@@]1(=O)OCC[C@@H](c2cccc(Cl)c2)O1"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 30-1",
+      "stable_id": "sr_3d2e0e1ed44c495992077fefab3a0826",
+      "source_analog_id": "GWNHAOBXDGOXRR-HJFSHJIFSA-N",
+      "containing_unit_id": "GWNHAOBXDGOXRR-HJFSHJIFSA-N@L6",
+      "first_visible_level": 6,
+      "is_new": true,
+      "prompt_heading": "Record 30-1",
+      "text": "Level: L6\nEvidence family: hepatic_clearance_metabolic_stability\nTransfer likelihood: 0.4071\nEndpoint: hepatic_first_pass_metabolism\nResult: 86.7 %\nAssay context: rat liver microsomes\nSpecies: rat\nExperimental details:\n  - molecular_form: pradefovir (parent drug)\n\nAdditional details: \"Derived from metabolite formation method; based on in vitro CLint measurement.\"\nReported evidence: The authors also report that FH was predicted as 86.7% from the same rat liver microsomal intrinsic clearance data when using the metabolite formation method."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 31",
+      "stable_id": "LXFOLMYKSYSZQS-IOJWVLQPSA-N@L6",
+      "source_analog_id": "LXFOLMYKSYSZQS-IOJWVLQPSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 6,
+      "is_new": true,
+      "prompt_heading": "## Molecule 31",
+      "text": "SMILES: CC(C)N(C[C@H]1O[C@@H](n2cnc3c(N)ncnc32)C(O)[C@@H]1O)C1CC(CCc2nc3ccc(C(C)(C)C)cc3[nH]2)C1"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 31-1",
+      "stable_id": "sr_c503db20f73c4075882e66f169a269f3",
+      "source_analog_id": "LXFOLMYKSYSZQS-IOJWVLQPSA-N",
+      "containing_unit_id": "LXFOLMYKSYSZQS-IOJWVLQPSA-N@L6",
+      "first_visible_level": 6,
+      "is_new": true,
+      "prompt_heading": "Record 31-1",
+      "text": "Level: L6\nEvidence family: hepatic_clearance_metabolic_stability\nTransfer likelihood: 0.4234\nEndpoint: extraction_ratio\nResult: 0.97 fraction\nAssay context: in vivo intravenous bolus\nSpecies: rat\nReported evidence: The estimated hepatic extraction ratios were 0.80 in mouse, 0.97 in rat, and 0.61 in dog, derived from the in vivo intravenous clearance data."
+    }
+  ],
+  "trace": [
+    {
+      "task": "single_molecule",
+      "status": "ok",
+      "prediction": null,
+      "response_text": "{\n  \"endpoint_prior\": \"fail\",\n  \"property_drivers\": [\n    \"low estimated logP (-1.56)\",\n    \"high topological polar surface area (139.54 Å²)\",\n    \"high hydrogen-bond donor count (4) and acceptor count (8)\",\n    \"multiple rotatable bonds (5) and polar heteroatoms (9 N/O atoms)\"\n  ],\n  \"confidence\": \"moderate\",\n  \"reasoning_summary\": \"The query molecule is a small, highly polar purine acyclic nucleoside. Its estimated logP is very low (-1.56), TPSA is high (139.54 Å²), and it has 4 HBD and 8 HBA. These physicochemical properties are generally associated with poor passive membrane permeability and limited oral absorption. Although the molecular weight is low and aqueous solubility is likely high, the extensive polar surface area and hydrogen-bonding capacity create a substantial permeability barrier. Without evidence of active transport or other absorption mechanisms, the structural and physicochemical prior for achieving oral bioavailability F >= 20% is unfavorable.\",\n  \"caveats\": [\n    \"pKa and ionization state at pH 7.4 are not available, so the neutral fraction and exact charge state are unknown.\",\n    \"No direct permeability or efflux data are supplied; transporter-mediated absorption could alter the prediction.\",\n    \"High aqueous solubility may improve dissolution but does not ensure sufficient membrane permeation.\",\n    \"Metabolic stability and first-pass extraction are not assessed, adding uncertainty to the bioavailability estimate.\"\n  ]\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chemist expert in oral bioavailability and you reason via analogies, taking evidence from related molecules to support your prediction. Return one complete JSON object."
+        },
+        {
+          "role": "user",
+          "content": "{\"task\": \"Assess the query molecule's structural and physicochemical prior for absolute oral bioavailability at the F >= 20% threshold.\", \"query\": {\"input_smiles\": \"Nc1nc(O)c2ncn(COC(CO)CO)c2n1\", \"canonical_smiles\": \"Nc1nc(O)c2ncn(COC(CO)CO)c2n1\", \"tools_prefetched\": true, \"prefetched_molecule_properties\": {\"tool_name\": \"molecule_properties\", \"status\": \"ok\", \"arguments\": {\"query_smiles\": \"Nc1nc(O)c2ncn(COC(CO)CO)c2n1\", \"logd_ph\": 7.4}, \"content\": \"[molecule_properties]\\nneutral fraction: not applicable (pKa predictor unavailable)\\nestimated logD: not applicable (pKa predictor unavailable)\\nstrongest acidic pKa: not applicable (pKa predictor unavailable)\\nstrongest basic pKa: not applicable (pKa predictor unavailable)\\nnumber of acidic sites: not applicable (pKa predictor unavailable)\\nnumber of basic sites: not applicable (pKa predictor unavailable)\\nnumber of ionizable sites: not applicable (pKa predictor unavailable)\\nexact molecular weight: 255.1\\nfraction of sp3 carbons: 0.44\\nheavy-atom count: 18\\nheavy-atom molecular weight: 242.13\\nLabute surface area: 101.49\\nmaximum absolute partial charge: 0.49\\nmaximum partial charge: 0.24\\nminimum absolute partial charge: 0.24\\nminimum partial charge: -0.49\\nestimated logP: -1.56\\nmolecular weight: 255.23\\nNH/OH group count: 5\\nnitrogen/oxygen atom count: 9\\naliphatic carbocycle count: 0\\naliphatic heterocycle count: 0\\naliphatic ring count: 0\\naromatic carbocycle count: 0\\naromatic heterocycle count: 2\\naromatic ring count: 2\\nhydrogen-bond acceptor count: 8\\nhydrogen-bond donor count: 4\\nheteroatom count: 9\\nrotatable-bond count: 5\\nsaturated carbocycle count: 0\\nsaturated heterocycle count: 0\\nsaturated ring count: 0\\nring count: 2\\ntopological polar surface area: 139.54\\nQED drug-likeness: 0.5\\n\\nfunctional groups: none\\nWarnings: ModuleNotFoundError: No module named 'molgpka'; ModuleNotFoundError: No module named 'accfg'; Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\", \"warnings\": [\"ModuleNotFoundError: No module named 'molgpka'\", \"ModuleNotFoundError: No module named 'accfg'\", \"Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\"], \"errors\": [], \"latency_ms\": 2, \"cache_hit\": false}}, \"instructions\": [\"Use only the supplied structure and property-tool text, without analog evidence or memorized assay labels.\", \"Explain plausible structural and mechanistic liabilities, exposure limitations, and uncertainty.\", \"A structural alert is a hypothesis, not an observed endpoint. Absence of an alert does not establish a negative result.\", \"Do not invent species, population, strain, activation, exposure, or organism conditions.\"], \"required_json_schema\": {\"endpoint_prior\": \"pass | fail | mixed_or_unclear\", \"property_drivers\": [\"string\"], \"confidence\": \"high | moderate | low\", \"reasoning_summary\": \"string\", \"caveats\": [\"string\"]}}"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 1244,
+        "prompt_tokens": 915,
+        "total_tokens": 2159,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 925
+      },
+      "tool_count": 0
+    },
+    {
+      "task": "final_summary",
+      "status": "ok",
+      "prediction": null,
+      "response_text": "{\n  \"claims\": [\n    {\n      \"claim\": \"Ganciclovir itself has only about 6% oral bioavailability, directly below the 20% threshold, as stated in the comparison with its prodrug valganciclovir (60%).\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 11\"\n      ],\n      \"record_ids\": [\n        \"Record 11-4\"\n      ]\n    },\n    {\n      \"claim\": \"Prodrugs of ganciclovir are required to achieve meaningful oral exposure: valganciclovir reaches about 43-60% in humans and a ganciclovir prodrug reaches about 40% in rats, confirming that the unmodified query molecule is poorly absorbed.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 11\",\n        \"Molecule 14\"\n      ],\n      \"record_ids\": [\n        \"Record 11-1\",\n        \"Record 11-4\",\n        \"Record 11-14\",\n        \"Record 14-1\"\n      ]\n    },\n    {\n      \"claim\": \"High oral bioavailability in other purine nucleoside analogs such as fludarabine, cladribine, entecavir, and roscovitine is not transferable because they contain furanose or carbocyclic sugar moieties and do not share ganciclovir's acyclic guanine absorption limitations.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\n        \"Molecule 8\",\n        \"Molecule 6\",\n        \"Molecule 10\",\n        \"Molecule 9\"\n      ],\n      \"record_ids\": [\n        \"Record 8-1\",\n        \"Record 6-1\",\n        \"Record 10-1\",\n        \"Record 9-1\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"fail\"\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chemist expert in oral bioavailability and you reason via analogies, taking evidence from related molecules to support your prediction.\n\nTask:\n- Endpoint: absolute oral bioavailability at the F >= 20% threshold\n- Label scope: absolute_oral_bioavailability_f20.v2\n- Positive: pass\n- Negative: fail\n- Predict pass when F >= 20% is better supported and fail when F < 20% is better supported.\n- Keep evidence direction separate from transferability; low transferability lowers weight but does not reverse direction.\n- Missing, neutral, uncertain, or weak evidence is not evidence for low bioavailability.\n- Predict fail only when affirmative threshold-relevant evidence supports it, not from generic drug-likeness concerns alone.\n- Compare directness, endpoint match, conditions, transferability, and uncertainty without counting repeated records independently.\n\nReasoning Instructions:\n- Your goal is to reason through the evidence via analogies. Is this molecule or record meaningfully similar to the query molecule? Does the experiment transfer? If it does transfer, how does this experimnetal value inform the property we're aiming to predict?\n- Morgan similarity measures structural similarity to the query. The assay-transfer score (0 to 1) estimates how transferable the evidence is to the query, representing a normalized distance polarized by a sigmoid function. So high scores like 0.99 don't mean the experimental values tranfers with 99% amount or 99% liklihood. These scores are reliable relative signal however, in which higher scores are more likely to transfer. But, again, don't blindly trust these scores.\n- Ensure you consider and analyze every evidence block.\n- Semantic evidence utility is a reviewed, task-level 0–1 score for how useful an evidence family is for this endpoint. It is not a probability, a query-specific transfer likelihood, or calibrated across evidence levels.\n- At the end, take the physicochemical properties and transferable evidence and come to a balanced conclusion for the query molecule.\n\nPitfalls to avoid:\n- Do not narrate schema bookkeeping.\n- Do not overly analyze the SMILES structures.\n- Do not blindly trust retrieval scores.\n- Do not infer the prediction from evidence order.\n- Do not skip records; briefly state why any materially uninformative evidence deserves little weight.\n\nOutput:\nReturn exactly one valid JSON object matching the requested schema. Return one or more concise claims using as many claims as needed to represent the experimental evidence that materially informs the decision. Each claim may cite any number of molecules, records, or both. At least one identifier is required per claim. Return only `claims` and `final_prediction`. `supportive` means evidence supporting your selected final prediction; `contradictory` means evidence supporting the alternative."
+        },
+        {
+          "role": "user",
+          "content": "Query molecule\nSMILES: Nc1nc(O)c2ncn(COC(CO)CO)c2n1\n\nQuery condition\nCondition: This prediction concerns the query molecule under a fasted state.\n\n# Experimental evidence\n\n# Level L1\nDirect absolute oral bioavailability outcomes.\n\n## Molecule 1\nSMILES: CCCCCCCCCCCCCCCCCC(=O)OC[C@H](CCOC(=O)[C@@H](N)C(C)C)Cn1cnc2c(=O)[nH]c(N)nc21\nTransfer likelihood: 0.9833\n\nRecord 1-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: >60%\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral administration\n\nReported evidence: The bioavailability of H2G was dramatically improved with oral administration of valomaciclovir stearate (>70% in rats and monkeys and >60% in humans).\n\n## Molecule 2\nSMILES: Nc1ncnc2c1ncn2[C@]1(S(N)(=O)=O)O[C@H](CO)[C@@H](O)[C@H]1O\nTransfer likelihood: 0.0002\n\nRecord 2-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 4 %\nSpecies: humans\nAdditional details: \"Mentioned as the commercial product in a clinical study.\"\nReported evidence: In the clinical study, the average absolute bioavailability of the commercial product INVIRASE® is 4% (range 1% to 9%).\n\n## Molecule 3\nSMILES: CNc1nc(N)nc2c1ncn2[C@@H]1O[C@H](CO[P@@](=O)(N[C@@H](C)C(=O)OC(C)C)Oc2ccccc2)[C@@H](O)[C@@]1(C)F\nTransfer likelihood: 0.984\n\nRecord 3-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: at least 50%\nSpecies: humans\nExperimental details:\n  - dose: 550 mg BID\n  - oral_exposure_mode: oral\n\nAdditional details: \"Reported in conjunction with a long intracellular t1/2 of the active metabolite.\"\nReported evidence: AT-527 is reported to have excellent pharmacokinetics, with an estimated oral bioavailability of at least 50% associated with a dosing regimen of 550 mg BID.\n\n## Molecule 4\nSMILES: CC(C)N(C[C@H]1O[C@@H](n2cnc3c(N)ncnc32)[C@H](O)[C@@H]1O)[C@H]1C[C@@H](CCc2nc3ccc(C(C)(C)C)cc3[nH]2)C1\nTransfer likelihood: 0.0001\n\nRecord 4-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 0 %\nSpecies: humans\nAdditional details: \"Reported in the context of clinical trials; accompanied by a high clearance of 68 mL/kg/min.\"\nReported evidence: EPZ5676, described as the only DOT1L inhibitor in clinical trials, exhibited an inferior pharmacokinetic profile characterized by high clearance (68 mL/kg/min) and low oral bioavailability (F = 0%).\n\n## Molecule 5\nSMILES: Cn1c(=O)c2c(ncn2CCO)n(C)c1=O\nTransfer likelihood: 0.9845\n\nRecord 5-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 93.4 %\nSpecies: children\nExperimental details:\n  - comparator: intravenous theophylline\n  - oral_exposure_mode: oral preparation\n\nAdditional details: \"Sample size n=3\"\nReported evidence: The absolute biological availability for the children tested both after intravenous theophylline and after Oxyphyllin® (n=3) was 93.4±6.3 (mean±S.E.).\n\n## Molecule 6\nSMILES: Nc1nc(Cl)nc2c1ncn2[C@H]1C[C@H](O)[C@@H](CO)O1\nTransfer likelihood: 0.9845\n\nRecord 6-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: prandial_state=fasted\nResult: 40 %\nSpecies: patients\nConditions: \"fasted state\"\nExperimental details:\n  - dose: 10 mg\n  - oral_exposure_mode: tablet\n\nAdditional details: \"possibly limited by breast cancer resistance protein (BCRP)-mediated intestinal efflux\"\nReported evidence: The oral bioavailability of Cladribine Tablets when administered in the fasted state is approximately 40%, possibly limited by breast cancer resistance protein (BCRP)-mediated intestinal efflux. This was observed following the oral administration of a single 10 mg tablet.\n\nRecord 6-2\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: prandial_state=fasted\nResult: 46 %\nSpecies: human\nConditions: \"without food\"\nReported evidence: Oral bioavailability of 2-CdA is 46% when taken without food.\n\n## Molecule 7\nSMILES: CCCC[C@@](C)(CO)Nc1nc(N)nc2cc(F)cnc12\nTransfer likelihood: 0.0001\n\nRecord 7-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: extremely poor\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral\n\nAdditional details: \"The poor bioavailability is purposely designed to restrict exposure to the gut and avoid severe toxicity caused by systemic exposure.\"\nReported evidence: Selgantolimod (GS-9688) is administered orally, but its bioavailability is described as extremely poor, which is intended to restrict exposure to the gut and avoid severe toxicity from systemic exposure.\n\n## Molecule 8\nSMILES: Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1O\nTransfer likelihood: 0.9434\n\nRecord 8-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 50–65%\nSpecies: patients with various types of non-Hodgkin's lymphoma\nExperimental details:\n  - dose: single or multiple doses\n  - oral_exposure_mode: tablet\n\nAdditional details: \"Bioavailability appears to be independent of dosage and is unaffected or only slightly affected by food.\"\nReported evidence: The bioavailability of oral fludarabine after single or multiple doses is 50–65%; it appears to be independent of dosage and is unaffected or only slightly affected by food.\n\nRecord 8-2\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 51–65%\nSpecies: patients with non-Hodgkin's lymphomas\nExperimental details:\n  - comparator: intravenous formulation\n  - oral_exposure_mode: oral\n\nAdditional details: \"Bioavailability is reported to be independent of dosage; oral pharmacokinetics are linear and dose-dependent, similar to the intravenous route.\"\nReported evidence: Fludarabine taken orally exhibits a bioavailability of 51–65% that is independent of dosage, with pharmacokinetic characteristics similar, linear, and dose-dependent to those of the intravenous formulation.\n\nRecord 8-3\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 50–65%\nSpecies: patients with various types of NHL\nExperimental details:\n  - dose: 50–90 mg\n  - oral_exposure_mode: 10 mg immediate-release tablet\n\nAdditional details: \"Bioavailability is reported for single or multiple doses, appears to be independent of dosage, and is unaffected or only slightly affected by food.\"\nReported evidence: For patients with various types of NHL, the bioavailability of oral fludarabine (administered as a 10 mg immediate-release tablet in doses of 50–90 mg) after single or multiple doses is 50–65%. This value appears to be independent of dosage and is unaffected or only slightly affected by food.\n\nRecord 8-4\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 55 %\nSpecies: patients with low-grade non-Hodgkin's lymphoma and B-cell chronic lymphocytic leukemia\nExperimental details:\n  - comparator: subcutaneous administration\n  - oral_exposure_mode: oral administration\n\nAdditional details: \"The reported oral bioavailability of 55% was described as substantially lower than the 105% observed after subcutaneous administration.\"\nReported evidence: In patients with low-grade non-Hodgkin's lymphoma and B-cell chronic lymphocytic leukemia, bioavailability after oral administration of fludarabine averaged 55%, which was substantially lower than the 105% observed after subcutaneous administration.\n\nRecord 8-5\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 51–55%\nSpecies: patients with cancer\nExperimental details:\n  - comparator: vs IV\n  - oral_exposure_mode: oral\n\nAdditional details: \"Reported for both single- and multiple-dose administration with low intraindividual variation; sample size was 36 patients according to Table 1.\"\nReported evidence: The bioavailability of oral fludarabine in patients with cancer is approximately 51–55% following single- and multiple-dose administration, with low intraindividual variation.\n\nRecord 8-6\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 55 %\nSpecies: patients with CLL and NHL\nExperimental details:\n  - comparator: intravenous preparation\n  - oral_exposure_mode: oral\n\nAdditional details: \"Reported in a phase I trial; activity was comparable with the intravenous preparation reported in previous studies in similar patients.\"\nReported evidence: A phase I trial noted approximately 55% bioavailability of oral fludarabine with activity in CLL and NHL that was comparable with what had been reported with the intravenous preparation in previous studies in similar patients.\n\nRecord 8-7\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 55 %\nSpecies: patients with low-grade non-Hodgkin’s lymphoma and B-cell chronic lymphocytic leukaemia (CLL)\nExperimental details:\n  - comparator: vs IV\n  - dose: 10 mg\n  - oral_exposure_mode: immediate-release tablet\n\nAdditional details: \"low intraindividual variation; bioavailability based on plasma concentrations of the main metabolite 2-fluoroarabinofuranosyl-adenine (2F-ara-A)\"\nReported evidence: In a 1999 pharmacokinetic study, an oral formulation (10 mg immediate-release tablet) of Fludarabine phosphate was administered to patients with low-grade non-Hodgkin’s lymphoma and B-cell chronic lymphocytic leukaemia (CLL). The oral bioavailability was reported to be ~55%, with low intraindividual variation, determined by comparing plasma concentrations of the main metabolite 2-fluoroarabinofuranosyl-adenine (2F-ara-A) against intravenous administration.\n\nRecord 8-8\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 55 %\nSpecies: patients with low-grade non-Hodgkin's lymphoma and CLL\nExperimental details:\n  - comparator: IV fludarabine phosphate\n  - dose: 10 mg\n  - oral_exposure_mode: immediate-release tablet\n\nAdditional details: \"low intraindividual variation; dose-independent bioavailability\"\nReported evidence: An oral formulation of fludarabine phosphate, consisting of an immediate-release tablet containing 10 mg, was administered to patients with low-grade non-Hodgkin's lymphoma and CLL. The bioavailability was reported to be approximately 55%, with low intraindividual variation and dose-independent bioavailability.\n\nRecord 8-9\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 30 - 80%\nSpecies: patients\nExperimental details:\n  - comparator: intravenous dosing\n  - oral_exposure_mode: oral\n\nReported evidence: Studies in patients given oral fludarabine demonstrated 30 - 80% bioavailability of F-ara-A compared with intravenous dosing.\n\nRecord 8-10\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 30% to 80%\nSpecies: patients\nExperimental details:\n  - dose: 50, 70, and 90 mg\n  - oral_exposure_mode: 10-mg immediate-release tablets\n\nAdditional details: \"This range represents the interpatient variability in bioavailability.\"\nReported evidence: Bioavailability of Fludarabine phosphate (F-AMP) oral tablets ranged from 30% to 80% between patients.\n\n## Molecule 9\nSMILES: CC[C@H](CO)Nc1nc(NCc2ccccc2)c2ncn(C(C)C)c2n1\nTransfer likelihood: 0.9864\n\nRecord 9-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: good oral bioavailability\nSpecies: patients with cancer\nExperimental details:\n  - dose: up to 2 g/day\n\nAdditional details: \"dose-proportional increases in blood levels\"\nReported evidence: In an ongoing dose escalation study where Roscovitine (ROS) was given for 5 days every 3 weeks to patients with cancer, PK analysis showed good oral bioavailability with dose-proportional increases in blood levels at doses up to 2 g/day.\n\nRecord 9-2\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: good\nSpecies: patients\nExperimental details:\n  - oral_exposure_mode: oral\n\nReported evidence: Pharmacokinetic data for seliciclib showed good oral bioavailability in patients.\n\nRecord 9-3\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: high\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: capsule\n\nReported evidence: Seliciclib has high oral bioavailability and is in clinical development in a capsule formulation.\n\n## Molecule 10\nSMILES: C=C1[C@H](CO)[C@@H](O)C[C@@H]1n1cnc2c(=O)nc(N)[nH]c21\nTransfer likelihood: 0.9847\n\nRecord 10-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 100 %\nSpecies: human\nAdditional details: \"PPB%: 13%; CL: 383.2 \\u00b1 101.8 mL/min\"\nReported evidence: In humans, Entecavir showed an oral bioavailability (F%) of 100%.\n\n# Level L2\nNondirect oral-bioavailability evidence.\n\n## Molecule 11\nSMILES: CC(C)[C@H](N)C(=O)OCC(CO)OCn1cnc2c(=O)nc(N)[nH]c21\n\nRecord 11-1\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.9689\nEndpoint: absolute\nResult: high oral bioavailability category\nSpecies: dogs\nExperimental details:\n  - oral_exposure_mode: oral\n\nReported evidence: In dogs, the prodrug valganciclovir is completely bioavailable by the oral route.\n\nRecord 11-2\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.8303\nResult: 43 %\nSpecies: 6-year-old child, HIV positive\nExperimental details:\n  - dose: 26.3 mg/kg\n\nAdditional details: \"AUC was half the target range accepted for adults; no viral shedding noted.\"\nReported evidence: In a study by Burri et al. (2004), a 6-year-old HIV-positive child received 26.3 mg/kg of valganciclovir once daily 3-times/week for 12 months, showing 43% bioavailability.\n\nRecord 11-3\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.8097\nResult: 43 %\nSpecies: 6-year-old child, HIV positive\nExperimental details:\n  - dose: 13.2 mg/kg\n\nAdditional details: \"AUC in target range accepted for adults.\"\nReported evidence: In a study by Burri et al. (2004), a 6-year-old HIV-positive child received a single dose of 13.2 mg/kg of valganciclovir, which showed 43% bioavailability.\n\nRecord 11-4\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7624\nResult: 60 %\nConditions: \"valine ester prodrug of GCV\"\nExperimental details:\n  - comparator: vs ganciclovir\n  - oral_exposure_mode: oral\n\nReported evidence: Valganciclovir (VGCV) is described as having an oral bioavailability of 60% compared to 6% for ganciclovir (GCV).\n\nRecord 11-5\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7402\nResult: 60 %\nExperimental details:\n  - oral_exposure_mode: oral solution and as a tablet\n\nReported evidence: Valganciclovir is an L-valine ester pro-drug of ganciclovir that is formulated as an oral solution and as a tablet; its oral bioavailability has been reported to be ~ 60%.\n\nRecord 11-6\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7379\nResult: 48 %\nSpecies: subjects <1 month of age with symptomatic congenital CMV disease\nConditions: \"approximately 4 weeks of life\"\nExperimental details:\n  - dose: 15.62 mg/kg\n\nAdditional details: \"A dose of 15.62 mg/kg provided an AUC12 of 27.4 \\u00b5g \\u00d7 hour/mL.\"\nReported evidence: In subjects under 1 month of age with symptomatic congenital CMV disease, a dose of 15.62 mg/kg of valganciclovir resulted in an oral bioavailability of 48% at approximately 4 weeks of life.\n\nRecord 11-7\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7127\nResult: 0.6 fraction\nSpecies: adult SOT recipients\nExperimental details:\n  - comparator: intravenous ganciclovir 5 mg/kg 2dd\n  - dose: 900 mg 2dd, 900 mg 1dd, or 450 mg 1dd\n\nAdditional details: \"Study by Perrotet et al, 2009.\"\nReported evidence: Perrotet et al (2009) reported a bioavailability (F) of 0.6 for valganciclovir in adult SOT recipients receiving doses of 900 mg 2dd (therapy), 900 mg 1dd (prophylaxis), or 450 mg 1dd (renal impairment), with intravenous ganciclovir 5 mg/kg 2dd used as a comparator.\n\nRecord 11-8\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7125\nResult: 60 %\nConditions: \"given with food\"\nAdditional details: \"Converted to active metabolite in the intestinal wall and liver\"\nReported evidence: Valganciclovir is converted to its active metabolite in the intestinal wall and liver and exhibits 60% bioavailability when administered with food.\n\nRecord 11-9\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7077\nResult: 43 %\nSpecies: 6-year-old child\nExperimental details:\n  - oral_exposure_mode: tablets\n\nReported evidence: In another evaluation of valganciclovir tablets, a bioavailability of 43% was found in a 6-year-old child.\n\nRecord 11-10\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7073\nResult: 54 %\nSpecies: neonates\nReported evidence: In a population of neonates, valganciclovir demonstrated an overall bioavailability of 54%.\n\nRecord 11-11\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7008\nEndpoint: absolute\nResult: 60 %\nSpecies: stable liver transplant recipients\nExperimental details:\n  - comparator: i.v. GCV 5 mg/kg\n  - dose: 450 mg\n  - oral_exposure_mode: oral\n\nAdditional details: \"Study by Pescovitz and colleagues; sample size of 24 recipients.\"\nReported evidence: In a study of 24 stable liver transplant recipients by Pescovitz and colleagues, the estimated absolute bioavailability for valganciclovir at a dose of 450 mg was 60.0%.\n\nRecord 11-12\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6983\nResult: 41.1 %\nSpecies: neonates with symptomatic congenital CMV disease\nExperimental details:\n  - comparator: intravenous ganciclovir\n  - dose: 16 mg/kg\n  - oral_exposure_mode: oral solution\n\nAdditional details: \"The dose produced a geometric mean AUC12 of 27.4 mg \\u00d7 h/L.\"\nReported evidence: In a study of neonates with symptomatic congenital CMV disease, the median dose of oral valganciclovir oral solution administered was 16 mg/kg, resulting in a bioavailability of 41.1%.\n\nRecord 11-13\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6828\nEndpoint: extent_f\nResult: less than 65%\nSpecies: subjects younger than three years\nConditions: \"pediatric kidney and liver transplant patients\"\nExperimental details:\n  - comparator: subjects older than three years\n  - dose: 11.1 (10.1 to 12.1) mg/kg every 12 hours and 7.4 (5.3 to 11.3) mg/kg every 24 hours\n  - oral_exposure_mode: suspension\n\nAdditional details: \"The observed decrease in bioavailability was not statistically significant due to the limited sample size; dose values represent the median (range) for the study population.\"\nReported evidence: In pediatric kidney and liver transplant patients, exploration of an age effect on the bioavailability of valganciclovir showed evidence of decreasing bioavailability (F less than 65%) in subjects younger than three years compared with subjects older than three years, although the signal was not statistically significant due to the limited sample size.\n\nRecord 11-14\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6771\nResult: 60 %\nSpecies: adults\nExperimental details:\n  - oral_exposure_mode: oral\n\nReported evidence: The oral bioavailability of Valganciclovir was approximately 60% in adults.\n\nRecord 11-15\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6768\nResult: 60 %\nSpecies: adults\nConditions: \"taken with food\"\nReported evidence: In adult studies, the oral bioavailability of valganciclovir has been reported to be around 60% when taken with food.\n\nRecord 11-16\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6736\nResult: 48 %\nSpecies: congenitally infected neonates\nConditions: \"day 6\"\nExperimental details:\n  - dose: 16 mg/kg twice daily\n  - oral_exposure_mode: solution\n\nAdditional details: \"Dose and formulation information derived from the associated phase II evaluation description in paragraph [p:34].\"\nReported evidence: A phase II evaluation of valganciclovir solution in congenitally infected neonates reported oral bioavailability of 48% on day 6.\n\nRecord 11-17\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6615\nEndpoint: absolute\nResult: 43 %\nSpecies: 6-year-old girl with congenital human immunodeficiency virus type 1 and cytomegalovirus coinfection\nConditions: \"congenital HIV-1 and CMV coinfection\"\nExperimental details:\n  - comparator: vs ganciclovir 4.4 mg/kg iv\n  - dose: 13.2 and 26.3 mg/kg\n  - oral_exposure_mode: po\n\nAdditional details: \"The oral dosages yielded AUCs of 14.3 and 28.7 \\u00b5g\\u00b7h/ml, which were compared to the AUC of 11.1 \\u00b5g\\u00b7h/ml from the iv ganciclovir dose.\"\nReported evidence: In a 6-year-old girl with congenital human immunodeficiency virus type 1 and cytomegalovirus coinfection, oral valganciclovir at doses of 13.2 and 26.3 mg/kg yielded an absolute bioavailability of 43% for ganciclovir, compared to a 4.4 mg/kg iv dose of ganciclovir.\n\nRecord 11-18\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6593\nResult: 0.699 fraction\nConditions: \"VGCV dose was converted to GCV dose based on the conversion equation DoseGCV=DoseVGCV\\u00d70.72\"\nAdditional details: \"Reported as a fixed effect parameter in a PPK model.\"\nReported evidence: In the study by Lalagkas et al. (2023), the fixed effect parameter for bioavailability (F) of valganciclovir was reported as 0.699.\n\nRecord 11-19\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6534\nEndpoint: absolute\nResult: 34 %\nSpecies: kidney transplant recipients\nConditions: \"administered with a low fat meal\"\nExperimental details:\n  - dose: 900 mg daily\n  - oral_exposure_mode: oral\n\nAdditional details: \"Reported as lower than the 60% previously seen in healthy volunteers and HIV-positive/CMV-positive adults.\"\nReported evidence: In kidney transplant recipients, the absolute bioavailability (F) of valganciclovir (VGCV) administered at 900 mg was 34%.\n\nRecord 11-20\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6514\nResult: 60 %\nConditions: \"extensive metabolism (especially by esterases in the intestinal membrane)\"\nAdditional details: \"described as low\"\nReported evidence: Valganciclovir, a prodrug of Ganciclovir, has a reported low oral bioavailability of approximately 60% due to extensive metabolism, particularly by esterases in the intestinal membrane.\n\nRecord 11-21\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6456\nResult: 0.6 fraction\nAdditional details: \"Reported as a fixed effect parameter in a PPK model.\"\nReported evidence: In the study by Perrottet et al. (2009), the fixed effect parameter for bioavailability (F) of valganciclovir was reported as 0.6.\n\nRecord 11-22\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6427\nEndpoint: absolute\nResult: 48 %\nSpecies: young infants\nConditions: \"day 6 of life\"\nExperimental details:\n  - comparator: vs IV ganciclovir\n  - oral_exposure_mode: oral solution\n\nAdditional details: \"Part of Version 1.0 of the study protocol; bioavailability increased by 32% over the first 6 weeks of life.\"\nReported evidence: In young infants (Version 1.0), the bioavailability (F) of valganciclovir oral solution was 48% on day 6 of life.\n\nRecord 11-23\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.638\nResult: 0.43 fraction\nAdditional details: \"Reported as a fixed effect parameter in a PPK model.\"\nReported evidence: In the study by Franck et al. (2021), the fixed effect parameter for bioavailability (F) of valganciclovir was reported as 0.43.\n\nRecord 11-24\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6318\nResult: 43 %\nAdditional details: \"Reported in literature.\"\nReported evidence: The authors note that their data are almost identical to the 43% bioavailability of Valganciclovir reported in the literature.\n\nRecord 11-25\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6084\nResult: 41 %\nSpecies: rats\nReported evidence: The bioavailability study in rats indicated that famciclovir (41%) was more effective than 6-deoxy penciclovir (9%) and penciclovir (1.5%).\n\nRecord 11-26\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.6015\nEndpoint: absolute\nResult: 59 %\nSpecies: stable liver transplant recipients\nExperimental details:\n  - comparator: i.v. GCV 5 mg/kg\n  - dose: 900 mg\n  - oral_exposure_mode: oral\n\nAdditional details: \"Study by Pescovitz and colleagues; sample size of 24 recipients.\"\nReported evidence: In a study of 24 stable liver transplant recipients by Pescovitz and colleagues, the estimated absolute bioavailability for valganciclovir at a dose of 900 mg was 59.0%.\n\n## Molecule 12\nSMILES: O=[N+]([O-])c1nccn1COC(CO)CO\n\nRecord 12-1\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7087\nResult: 73 %\nSpecies: dogs\nExperimental details:\n  - oral_exposure_mode: oral administration\n\nAdditional details: \"Larger than the expected value of 64%.\"\nReported evidence: In dogs, the oral bioavailability of RP-170 is 73%, which is larger than the expected value of 64%.\n\n## Molecule 13\nSMILES: COc1c(C)cnc(Cn2cnc3c(Cl)nc(N)nc32)c1C\n\nRecord 13-1\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.8358\nEndpoint: systemic_availability\nResult: orally bioavailable\nSpecies: patients with refractory GIST\nExperimental details:\n  - comparator: IPI-504\n  - dose: 400 mg versus 600 mg\n\nReported evidence: In a study of patients with refractory GIST, the formulation of BIIB021 tested was found to be orally bioavailable and relatively well-tolerated, especially compared with the HSP90 inhibitor IPI-504.\n\n## Molecule 14\nSMILES: CCCCCCCCCCCCCCCCCC(=O)OCC(COC(=O)[C@@H](N)C(C)C)OCn1cnc2c(=O)[nH]c(N)nc21\n\nRecord 14-1\nLevel: L2\nEvidence family: nondirect_oral_bioavailability\nTransfer likelihood: 0.7238\nResult: 40 %\nSpecies: rats\nConditions: \"administered as a prodrug\"\nAdditional details: \"Measured by microdialysis sampling.\"\nReported evidence: The bioavailability of ganciclovir, when administered orally as the prodrug in rats, was 40±7% by microdialysis sampling.\n\n# Level L3\nOral AUC or Cmax exposure evidence.\n\n## Molecule 15\nSMILES: Nc1ncc2ncn(CC3(OCP(=O)(O)O)CC3)c2n1\n\nRecord 15-1\nLevel: L3\nEvidence family: oral_auc_cmax_exposure\nTransfer likelihood: 0.6082\nEndpoint: AUC0_inf\nResult: 2105 ng·h/mL\nExperimental details:\n  - oral_dose: 60 mg (multiple doses)\n  - statistic_type: arithmetic_mean\n  - study_context: CHB patients, oral LB80380, plasma, steady state\n\nReported evidence: After multiple oral doses of LB80380 60 mg (steady state), the mean AUC0‐∞ of LB80331 was 2,105 ng·h/ml (±274).\n\n## Molecule 16\nSMILES: Nc1ncn([C@H]2C[C@H](O)[C@@H](CO)O2)c(=O)n1\n\nRecord 16-1\nLevel: L3\nEvidence family: oral_auc_cmax_exposure\nTransfer likelihood: 0.6583\nEndpoint: oral_iv_comparison\nResult: 93.5 %\nExperimental details:\n  - comparator_exposure: IV decitabine 20 mg/m2, AUClast; oral/IV ratio 93.5% (geometric LSM).\n  - oral_dose: cedazuridine 100 mg / decitabine 35 mg (dose‐confirmation stage)\n  - statistic_type: geometric_mean\n  - study_context: Phase 2 study in adult patients with intermediate‐1/2 or high‐risk myelodysplastic syndrome or chronic myelomonocytic leukemia; oral administration of cedazuridine/decitabine for 5 days, plasma decitabine concentrations measured.\n\nAdditional details: \"90% confidence interval 82.1%\\u2013106.5% reported.\"\nReported evidence: In the dose‐confirmation stage of the phase 2 trial, the geometric least‐squares mean (LSM) ratio of oral to IV decitabine 5‐day AUClast was 93.5% (90% CI 82.1%–106.5%).\n\n## Molecule 17\nSMILES: Cn1nnc2c(C(N)=O)ncn2c1=O\n\nRecord 17-1\nLevel: L3\nEvidence family: oral_auc_cmax_exposure\nTransfer likelihood: 0.5905\nEndpoint: AUC0_inf\nResult: 23.6 µg·h/mL\nExperimental details:\n  - comparator_exposure: IV AUC(I) 24.6 µg·h/mL; i.v./p.o. ratio 105%\n  - oral_dose: 150 mg/m2\n  - statistic_type: arithmetic_mean\n  - study_context: human subjects, single oral dose, plasma matrix\n\nReported evidence: In the oral (p.o.) arm, temozolomide showed a mean AUC(I) of 23.6 µg·h/mL (CV 15%).\n\n## Molecule 18\nSMILES: C[C@@]1(O)[C@H](O)[C@@H](CO)O[C@H]1n1cnc2c(=O)[nH]c(N)nc21\n\nRecord 18-1\nLevel: L3\nEvidence family: oral_auc_cmax_exposure\nTransfer likelihood: 0.6084\nEndpoint: AUC0_inf\nResult: 81.9 ng·h/mL\nExperimental details:\n  - oral_dose: 25 mg\n  - statistic_type: arithmetic_mean\n  - study_context: single oral dose in fasted healthy human subjects, plasma (metabolite of IDX184)\n\nAdditional details: \"Mean \\u00b1 SD reported\"\nReported evidence: A 25 mg oral dose gave a mean AUC0‐∞ of 81.9 ng·h/ml (± 23.2) for 2'-MeG.\n\n## Molecule 19\nSMILES: Nc1nc(=O)c2ncn(CCC(CO)CO)c2[nH]1\n\nRecord 19-1\nLevel: L3\nEvidence family: oral_auc_cmax_exposure\nTransfer likelihood: 0.7657\nEndpoint: AUC0_inf\nResult: 8.94 µg/ml·h\nExperimental details:\n  - oral_dose: 500 mg\n  - statistic_type: arithmetic_mean\n  - study_context: single‐dose oral famciclovir in healthy adult volunteers (fasted), plasma penciclovir measured\n\nAdditional details: \"Mean \\u00b1 SD (range) from historical data\"\nReported evidence: In healthy adult volunteers (single oral 500 mg famciclovir) the mean AUC0‐∞ of penciclovir was 8.94 µg·ml·h (± 1.69, range 6.31–11.84).\n\n# Level L4\nAbsorption\n\n## Molecule 20\nSMILES: Nc1ncc2ncn(CCC(CO)CO)c2n1\n\nRecord 20-1\nLevel: L4\nEvidence family: absorption_solubility_permeability\nTransfer likelihood: 0.5804\nEndpoint: fraction_absorbed\nResult: well absorbed\nAssay context: oral administration in mice\nExperimental details:\n  - biological_context: mouse\n\nAdditional details: \"Compound was converted efficiently to the active drug (1) after oral dosing.\"\nReported evidence: Both 5 and its esters (14-17, 21, 22) and also 18 were well absorbed after oral administration and converted efficiently to 1.\n\nRecord 20-2\nLevel: L4\nEvidence family: absorption_solubility_permeability\nTransfer likelihood: 0.4485\nEndpoint: fraction_absorbed\nResult: improved absorption\nAssay context: oral administration to mice\nExperimental details:\n  - biological_context: mouse\n\nAdditional details: \"Compared with compound 1 (9-[4\\u2010hydroxy\\u20103\\u2010(hydroxymethyl)but\\u20101\\u2010yl]guanine).\"\nReported evidence: The 2-aminopurine 5 showed improved absorption in comparison with 1.\n\n## Molecule 21\nSMILES: Nc1ncc2ncn(COCCO)c2n1\n\nRecord 21-1\nLevel: L4\nEvidence family: absorption_solubility_permeability\nTransfer likelihood: 0.4306\nEndpoint: fraction_absorbed\nResult: >70% %\nAssay context: human oral administration (clinical study)\nExperimental details:\n  - biological_context: human\n  - formulation_or_solid_form: 250 mg oral dose of desciclovir\n\nAdditional details: \"Absorption measured after oral administration of 250 mg desciclovir; reported as over 70%.\"\nReported evidence: Human clinical studies yielded over 70% absorption following oral administration of 250 mg desciclovir, which was significantly higher than that from oral administration of acyclovir.\n\n## Molecule 22\nSMILES: CC(C)[C@H](NC(=O)CN)C(=O)OCCOCn1cnc2c(=O)[nH]c(N)nc21\n\nRecord 22-1\nLevel: L4\nEvidence family: absorption_solubility_permeability\nTransfer likelihood: 0.8566\nEndpoint: caco2_mdck_pampa_permeability\nResult: 2.89 10^-6 cm/s\nAssay context: Caco‐2 monolayer transport assay\nExperimental details:\n  - biological_context: Caco‐2 cells\n  - condition_medium: pH 6.0 buffer\n  - formulation_or_solid_form: GVACV (Gly‐Val‐ACV) 1 mM\n\nReported evidence: The Caco‐2 permeability (Papp) of GVACV (Gly‐Val‐ACV) at pH 6.0 was 2.89 ± 0.59 ×10−6 cm/s.\n\n## Molecule 23\nSMILES: Cc1ncc(C[n+]2csc(CCO)c2C)c(N)n1\n\nRecord 23-1\nLevel: L4\nEvidence family: absorption_solubility_permeability\nTransfer likelihood: 0.3984\nEndpoint: fraction_absorbed\nResult: 75 %\nAssay context: oral administration of C14-labelled thiamine in rats\nExperimental details:\n  - biological_context: rat, 20‐24 months old\n\nAdditional details: \"Decrease in fraction absorbed observed in older rats; same oral dosing protocol as above.\"\nReported evidence: The efficiency of absorption of the labelled material decreased to about 75 % in animals 20 to 24 months of age.\n\n# Level L5\nGut-wall efflux and intestinal metabolism evidence.\n\n## Molecule 24\nSMILES: Nc1nc(NC2CC2)c2ncn([C@H]3C=C[C@@H](CO)C3)c2n1\nMorgan similarity: 0.2769\n\nRecord 24-1\nLevel: L5\nEvidence family: gut_wall_efflux_intestinal_metabolism\nEndpoint: oral_exposure_change_due_to_gut_wall\nResult: substrate transporter substrate status\nAssay context: in vivo oral administration in male Wistar rats\nConditions: \"co\\u2010administration with rilpivirine; inhibition of MDR1/BCRP\"\nExperimental details:\n  - intestinal_site: small intestine\n  - substrate_status: substrate\n  - transporter_or_enzyme: MDR1/ABCB1, BCRP/ABCG2\n\nReported evidence: In vivo experiments in male Wistar rats confirmed inhibition of MDR1/BCRP in the small intestine, leading to significant increase in oral bioavailability of abacavir.\n\nRecord 24-2\nLevel: L5\nEvidence family: gut_wall_efflux_intestinal_metabolism\nEndpoint: efflux_or_secretory_transport\nResult: substrate transporter substrate status\nAssay context: intestinal barrier (general)\nExperimental details:\n  - substrate_status: substrate\n  - transporter_or_enzyme: BCRP/ABCG2\n\nReported evidence: The BCRP substrates include numerous antiviral drugs (zidovudine, lamivudine, abacavir).\n\n## Molecule 25\nSMILES: CC(C)OC(=O)OCOP(=O)(CO[C@H](C)Cn1cnc2c(N)ncnc21)OCOC(=O)OC(C)C\nMorgan similarity: 0.2466\n\nRecord 25-1\nLevel: L5\nEvidence family: gut_wall_efflux_intestinal_metabolism\nEndpoint: oral_exposure_change_due_to_gut_wall\nResult: 1.72‐fold increase in bioavailability at 400 mg/kg PP + TPGS\nAssay context: oral pharmacokinetic study in rats\nConditions: \"high dose PP (400 mg/kg) with TPGS\"\nExperimental details:\n  - substrate_status: substrate\n\nReported evidence: At the highest tested dose (400 mg/kg PP) together with TPGS, TDF bioavailability in rats increased by 1.72‐fold over controls.\n\n## Molecule 26\nSMILES: CC(=O)OCC(CCn1cnc2cnc(N)nc21)COC(C)=O\nMorgan similarity: 0.3115\n\nRecord 26-1\nLevel: L5\nEvidence family: gut_wall_efflux_intestinal_metabolism\nEndpoint: efflux_or_secretory_transport\nResult: substrate transporter substrate status\nAssay context: MDRI-MDCKII monolayer permeability assay\nExperimental details:\n  - substrate_status: substrate\n  - transporter_or_enzyme: P-gp/ABCB1\n\nAdditional details: \"Identified as an exceptional drug with low P\\u2010gp\\u2010mediated efflux in the dataset.\"\nReported evidence: Exceptional drugs (acrivastine, cetirizine, cimetidine, famciclovir, labetolol, neostigmine, pirenzapine, trimethoprim) are less permeable and also demonstrated less attenuation with P‐gp, indicating that while they are P‐gp substrates they experience limited efflux.\n\n## Molecule 27\nSMILES: CN(Cc1cnc2nc(N)nc(N)c2n1)c1ccc(C(=O)N[C@@H](CCC(=O)O)C(=O)O)cc1\nMorgan similarity: 0.1585\n\nRecord 27-1\nLevel: L5\nEvidence family: gut_wall_efflux_intestinal_metabolism\nEndpoint: oral_exposure_change_due_to_gut_wall\nResult: AUC increased 107%\nAssay context: in situ single-pass jejunal perfusion in rats\nConditions: \"co-perfused with bestatin (inhibitory group)\"\nExperimental details:\n  - intestinal_site: jejunum\n\nAdditional details: \"Portal vein concentrations significantly increased\"\nReported evidence: In the in situ jejunal perfusion, when MTX and bestatin were perfused simultaneously, portal vein concentrations of both drugs significantly increased. The AUCs of MTX and bestatin in the inhibitory groups increased by 107% and 105% compared to control.\n\n## Molecule 28\nSMILES: C[C@H](Cn1cnc2c(N)ncnc21)OCP(=O)(O)O\nMorgan similarity: 0.2951\n\nRecord 28-1\nLevel: L5\nEvidence family: gut_wall_efflux_intestinal_metabolism\nEndpoint: efflux_or_secretory_transport\nResult: not substrate transporter substrate status\nAssay context: Caco-2 permeability assay (also calcein AM uptake and ATPase)\nExperimental details:\n  - substrate_status: not_substrate\n  - transporter_or_enzyme: Pgp/ABCB1\n\nAdditional details: \"Combined Caco-2 permeability, calcein AM uptake, and ATPase assays were used to assess P\\u2010gp interaction.\"\nReported evidence: Our results obtained in Caco-2 permeability, calcein AM uptake, and ATPase studies show that Tenofovir (TFV) is not a substrate for P‐gp.\n\n# Level L6\nHepatic clearance and metabolic-stability evidence.\n\n## Molecule 29\nSMILES: Nc1ncc2ncn(CCC(CO)CO)c2n1\n\nRecord 29-1\nLevel: L6\nEvidence family: hepatic_clearance_metabolic_stability\nTransfer likelihood: 0.4791\nEndpoint: hepatic_clearance\nResult: 11.5 mL/min/kg\nAssay context: scaled from cytosol data\nSpecies: human (pooled)\nReported evidence: The predicted blood clearance (fu(blood) only) for 6‐deoxypenciclovir in human pooled cytosol is 11.5 mL/min/kg, representing hepatic clearance.\n\nRecord 29-2\nLevel: L6\nEvidence family: hepatic_clearance_metabolic_stability\nTransfer likelihood: 0.5055\nEndpoint: intrinsic_clearance\nResult: 46.1 µL/min/mg protein\nAssay context: cytosol\nSpecies: female minipig\nConditions: \"menadione 100 \\u00b5M co\\u2010incubation\"\nReported evidence: Table II shows 6‐deoxypenciclovir intrinsic clearance in female minipig liver cytosol with menadione (100 µM) as 46.1 µL/min/mg protein.\n\nRecord 29-3\nLevel: L6\nEvidence family: hepatic_clearance_metabolic_stability\nTransfer likelihood: 0.4556\nEndpoint: hepatic_clearance\nResult: 6.49 mL/min/kg\nAssay context: scaled from cytosol data\nSpecies: male minipig\nReported evidence: The predicted blood clearance (fu(blood) only) for 6‐deoxypenciclovir in male minipig cytosol is 6.49 mL/min/kg.\n\n## Molecule 30\nSMILES: Nc1ncnc2c1ncn2CCOC[P@@]1(=O)OCC[C@@H](c2cccc(Cl)c2)O1\n\nRecord 30-1\nLevel: L6\nEvidence family: hepatic_clearance_metabolic_stability\nTransfer likelihood: 0.4071\nEndpoint: hepatic_first_pass_metabolism\nResult: 86.7 %\nAssay context: rat liver microsomes\nSpecies: rat\nExperimental details:\n  - molecular_form: pradefovir (parent drug)\n\nAdditional details: \"Derived from metabolite formation method; based on in vitro CLint measurement.\"\nReported evidence: The authors also report that FH was predicted as 86.7% from the same rat liver microsomal intrinsic clearance data when using the metabolite formation method.\n\n## Molecule 31\nSMILES: CC(C)N(C[C@H]1O[C@@H](n2cnc3c(N)ncnc32)C(O)[C@@H]1O)C1CC(CCc2nc3ccc(C(C)(C)C)cc3[nH]2)C1\n\nRecord 31-1\nLevel: L6\nEvidence family: hepatic_clearance_metabolic_stability\nTransfer likelihood: 0.4234\nEndpoint: extraction_ratio\nResult: 0.97 fraction\nAssay context: in vivo intravenous bolus\nSpecies: rat\nReported evidence: The estimated hepatic extraction ratios were 0.80 in mouse, 0.97 in rat, and 0.61 in dog, derived from the in vivo intravenous clearance data.\n\n# Required JSON shape\n{\n  \"claims\": [\n    {\n      \"claim\": \"concise evidence-grounded statement\",\n      \"evidence_role\": \"supportive | contradictory\",\n      \"molecule_ids\": [\n        \"Molecule N\"\n      ],\n      \"record_ids\": [\n        \"Record N-N\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"pass | fail\"\n}"
+        },
+        {
+          "role": "user",
+          "content": "Retry the flat-context-final response (attempt 4 of 4). Return one complete JSON object matching the required schema. Validation errors: empty_or_non_object_json. Start the response immediately with `{`. Do not emit repeated punctuation or extended internal reasoning; keep the complete JSON under about 1,200 words and use short sentences for every field."
+        },
+        {
+          "role": "assistant",
+          "content": "{\n  \"claims\": [\n    {\n      \"claim\": \"Ganciclovir itself has only about 6% oral bioavailability, directly below the 20% threshold, as stated in the comparison with its prodrug valganciclovir (60%).\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 11\"],\n      \"record_ids\": [\"Record 11-4\"]\n    },\n    {\n      \"claim\": \"Prodrugs of ganciclovir are required to achieve meaningful oral exposure: valganciclovir reaches about 43-60% in humans and a ganciclovir prodrug reaches about 40% in rats, confirming that the unmodified query molecule is poorly absorbed.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 11\", \"Molecule 14\"],\n      \"record_ids\": [\"Record 11-1\", \"Record 11-4\", \"Record 11-14\", \"Record 14-1\"]\n    },\n    {\n      \"claim\": \"High oral bioavailability in other purine nucleoside analogs such as fludarabine, cladribine, entecavir, and roscovitine is not transferable because they contain furanose or carbocyclic sugar moieties and do not share ganciclovir's acyclic guanine absorption limitations.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 8\", \"Molecule 6\", \"Molecule 10\", \"Molecule 9\"],\n      \"record_ids\": [\"Record 8-1\", \"Record 6-1\", \"Record 10-1\", \"Record 9-1\"]\n    }\n  ],\n  \"final_prediction\": \"fail\"\n}",
+          "reasoning": "We need answer JSON only. Need analyze evidence. Need produce claims and final prediction. Need reason carefully.\n\nQuery molecule: SMILES Nc1nc(O)c2ncn(COC(CO)CO)c2n1. Let's parse structure. It is guanine? Nc1nc(O)c2ncn(COC(CO)CO)c2n1. This is acyclovir? Acyclovir is 2-amino-1,9-dihydro-9-[(2-hydroxyethoxy)methyl]-6H-purin-6-one: SMILES Nc1nc(=O)c2ncn(COCCO)c2[nH]1. Query has Nc1nc(O)c2ncn(COC(CO)CO)c2n1. It is guanine with N-9 side chain -COC(CO)CO? Actually side chain: COC(CO)CO = -CH2-O-CH(CH2OH)CH2OH? That is ganciclovir side chain? Ganciclovir is 9-[[2-hydroxy-1-(hydroxymethyl)ethoxy]methyl]guanine: SMILES Nc1nc(=O)c2ncn(COC(CO)CO)c2[nH]1. Query has Nc1nc(O)c2ncn(COC(CO)CO)c2n1. It is ganciclovir (GCV) tautomer? Yes ganciclovir. Query condition fasted state. Need predict absolute oral bioavailability F >=20%? Ganciclovir oral bioavailability is low ~5-6%? Wait ganciclovir oral bioavailability is about 5-6% in humans, valganciclovir prodrug ~60%. Query is ganciclovir itself. Need decide pass/fail at F>=20%. Likely fail because ganciclovir oral bioavailability is ~5-6%. But need use evidence analogies. There is no direct ganciclovir record? Molecule 11 valganciclovir prodrug, molecule 14 valomaciclovir stearate? Need identify.\n\nQuery is ganciclovir. Evidence includes:\n- Molecule 1 valomaciclovir stearate (prodrug of H2G? Actually SMILES long fatty ester of valine? It is valomaciclovir stearate, prodrug of H2G? Record says bioavailability >60% humans. Transfer likelihood 0.9833 but molecule is prodrug with long lipid chain, not ganciclovir. It is structurally similar? It has guanine with side chain? Let's parse: CCCCCCCCCCCCCCCCCC(=O)OC[C@H](CCOC(=O)[C@@H](N)C(C)C)Cn1cnc2c(=O)[nH]c(N)nc21. This is valomaciclovir stearate? It is a prodrug of H2G? Actually H2G is 9-(2,3-dihydroxy-1-propoxymethyl)guanine? Wait valomaciclovir stearate is valine ester of H2G stearate? It has high oral bioavailability. But query is ganciclovir, not H2G. Need not transfer directly because prodrug improves bioavailability.\n\n- Molecule 2 saquinavir? SMILES Nc1ncnc2c1ncn2[C@]1(S(N)(=O)=O)O[C@H](CO)[C@@H](O)[C@H]1O. This is an antiviral nucleoside? Actually saquinavir? No, it's a nucleoside with sulfonamide? Record F=4% humans. Transfer likelihood 0.0002, low structural similarity. Not relevant.\n\n- Molecule 3 AT-527 (prodrug) F at least 50%, high transfer 0.984 but prodrug of guanosine nucleotide? Not ganciclovir.\n\n- Molecule 4 EPZ5676 F=0%, low transfer 0.0001.\n\n- Molecule 5 theophylline? SMILES Cn1c(=O)c2c(ncn2CCO)n(C)c1=O, F=93.4% children. Transfer 0.9845 but not guanine? It is xanthine derivative, no 2-amino, no sugar side chain? Actually it's etofylline? Theophylline derivative. Not relevant.\n\n- Molecule 6 cladribine (2-chloro-2'-deoxyadenosine) F 40-46% fasted. Transfer 0.9845. It is a nucleoside analog, but not ganciclovir. It has chloropurine and deoxyribose. Could be somewhat relevant? But query is ganciclovir, a guanine nucleoside with acyclic side chain. Cladribine is a purine nucleoside with sugar, oral bioavailability ~40%. But not same class? It is an antiviral/anticancer nucleoside. However ganciclovir is known poorly absorbed due to acyclic side chain? Need use direct evidence.\n\n- Molecule 7 selgantolimod extremely poor, low transfer 0.0001.\n\n- Molecule 8 fludarabine (F-ara-A) oral bioavailability 50-65%, transfer 0.9434. It is a purine nucleoside analog (adenine with fluorine and arabinose). Not ganciclovir. But high transfer? Morgan similarity 0.9434? Wait transfer likelihood is not Morgan? It says transfer likelihood 0.9434. But molecule 8 SMILES Nc1nc(F)nc2c1ncn2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1O. This is fludarabine (9-β-D-arabinofuranosyl-2-fluoroadenine). It is a nucleoside with sugar, not acyclic. Oral bioavailability high. But query is ganciclovir, which is a guanine analog with acyclic side chain. Need not transfer.\n\n- Molecule 9 roscovitine/seliciclib good oral bioavailability, transfer 0.9864. It is a purine with cyclin-dependent kinase inhibitor, not ganciclovir.\n\n- Molecule 10 entecavir F=100%, transfer 0.9847. It is a guanine analog with carbocyclic sugar. Not ganciclovir.\n\n- Molecule 11 valganciclovir (L-valyl ester prodrug of ganciclovir) many records F ~43-60%. This is highly relevant because it is the prodrug of the query molecule. But query is ganciclovir, not valganciclovir. The evidence shows prodrug improves bioavailability from ganciclovir's low F to ~60%. Record 11-4 explicitly: \"Valganciclovir (VGCV) is described as having an oral bioavailability of 60% compared to 6% for ganciclovir (GCV).\" This is key evidence: ganciclovir F=6%, below 20%. This is affirmative threshold-relevant evidence. Need cite record 11-4. Also record 11-20 says valganciclovir low oral bioavailability approximately 60% due to extensive metabolism; but compared to ganciclovir 6%. This supports fail.\n\n- Molecule 12 RP-170 (a prodrug of ganciclovir? SMILES O=[N+]([O-])c1nccn1COC(CO)CO, a nitroimidazole? Actually RP-170 is 2-amino-6-nitro-9-(2,3-dihydroxypropyl)purine? Wait SMILES is nitropyrimidine? It is a prodrug of ganciclovir? Record says oral bioavailability 73% in dogs. Not query.\n\n- Molecule 13 BIIB021 orally bioavailable, not relevant.\n\n- Molecule 14 valomaciclovir stearate? SMILES long chain prodrug of ganciclovir? Record says bioavailability of ganciclovir when administered orally as prodrug in rats 40±7%. This is relevant: prodrug of ganciclovir yields 40% in rats, but query is ganciclovir itself, not prodrug. It implies ganciclovir itself lower.\n\n- Molecule 15 LB80380 (prodrug of adefovir? Actually SMILES Nc1ncc2ncn(CC3(OCP(=O)(O)O)CC3)c2n1, an acyclic nucleotide phosphonate) AUC exposure, not direct F.\n\n- Molecule 16 decitabine/cedazuridine oral/IV AUC ratio 93.5%, not relevant.\n\n- Molecule 17 temozolomide AUC oral/IV ratio 105%, not relevant.\n\n- Molecule 18 IDX184 metabolite AUC, not relevant.\n\n- Molecule 19 famciclovir/penciclovir AUC, not direct F. Famciclovir is prodrug of penciclovir, oral bioavailability ~77%? But not ganciclovir.\n\n- Molecule 20 2-aminopurine acyclic nucleoside well absorbed in mice, not query.\n\n- Molecule 21 desciclovir absorption >70% in humans, not query.\n\n- Molecule 22 GVACV Caco-2 permeability, not query.\n\n- Molecule 23 thiamine absorption, not relevant.\n\n- Molecule 24 abacavir substrate MDR1/BCRP, not query.\n\n- Molecule 25 tenofovir disoproxil bioavailability increase, not query.\n\n- Molecule 26 famciclovir P-gp substrate, not query.\n\n- Molecule 27 methotrexate, not relevant.\n\n- Molecule 28 tenofovir not P-gp substrate, not query.\n\n- Molecule 29 6-deoxypenciclovir hepatic clearance, not query.\n\n- Molecule 30 pradefovir hepatic first pass, not query.\n\n- Molecule 31 EPZ5676 hepatic extraction, not query.\n\nNeed decide final prediction. Query is ganciclovir. Known oral bioavailability of ganciclovir is ~5-6% in humans. The evidence includes record 11-4 explicitly comparing valganciclovir 60% vs ganciclovir 6%. This is direct evidence for ganciclovir F=6%, below 20%. Also record 11-20 says valganciclovir low oral bioavailability approximately 60% due to extensive metabolism, but \"low\" relative? Actually 60% is not low; maybe \"low\" compared to IV? Wait text: \"Valganciclovir, a prodrug of Ganciclovir, has a reported low oral bioavailability of approximately 60% due to extensive metabolism, particularly by esterases in the intestinal membrane.\" That seems contradictory: 60% is not low. Maybe they mean ganciclovir? But record says valganciclovir. Regardless, record 11-4 is clear.\n\nNeed also consider query condition fasted. Ganciclovir oral bioavailability may be affected by food? Ganciclovir F ~5-6% fasted? Actually ganciclovir capsules with food increase AUC by ~22%? Still low. Valganciclovir F ~60% with food. Query is ganciclovir, fasted. F <20%. So final fail.\n\nNeed produce claims. Need include supportive and contradictory? The final prediction is fail. Supportive evidence for fail: record 11-4 (ganciclovir 6% vs valganciclovir 60%), maybe record 11-20 (valganciclovir prodrug needed; ganciclovir low), record 14-1 (prodrug in rats 40%, implying ganciclovir lower), record 11-1 (valganciclovir completely bioavailable in dogs, prodrug), record 11-8 etc. Contradictory evidence for pass: direct oral bioavailability of nucleoside analogs like fludarabine, cladribine, entecavir, etc. But these are not ganciclovir and have different structures/transporters. Need mention they are structurally related purine nucleosides but not acyclic guanine; high F in those does not transfer because ganciclovir's low F is due to poor permeability/efflux? Actually ganciclovir is poorly absorbed due to hydrophilicity and limited permeability; prodrugs improve. Need include contradictory claims? The schema says claims may include supportive and contradictory. We can include one or two contradictory claims noting high F in other nucleoside analogs but low transferability due to structural differences. But final prediction fail.\n\nNeed ensure \"claims\" each have molecule_ids and record_ids. At least one identifier per claim. Need concise.\n\nLet's craft claims:\n\n1. Claim: \"Valganciclovir, the L-valyl ester prodrug of the query molecule ganciclovir, has oral bioavailability ~60%, whereas ganciclovir itself has only ~6% oral bioavailability; this directly places ganciclovir below the 20% threshold.\" Evidence role supportive. Molecule 11, record 11-4. Also maybe record 11-20.\n\n2. Claim: \"The need for prodrugs to achieve meaningful oral exposure is corroborated by rat data: oral ganciclovir as a prodrug reached 40% bioavailability, and valganciclovir is described as a prodrug designed to overcome ganciclovir's poor absorption.\" Supportive. Molecule 14 record 14-1; Molecule 11 record 11-1/11-20.\n\n3. Claim: \"High oral bioavailability values in other purine nucleoside analogs (fludarabine, cladribine, entecavir, roscovitine) do not transfer to ganciclovir because they contain sugar or carbocyclic moieties and different absorption/efflux properties; they do not provide affirmative evidence for pass.\" Contradictory? Actually they are evidence for pass but we dismiss. In schema, \"contradictory means evidence supporting the alternative\" i.e., supporting pass. So include as contradictory with low weight. Need be careful: \"contradictory\" evidence supports alternative final prediction. We can include claim: \"Several nucleoside analogs show high oral bioavailability, but structural differences make them non-transferable; thus they are weak contradictory evidence.\" Role contradictory. Molecule 8, 6, 10, 9 maybe. But if we include too many, okay.\n\nNeed maybe include record 11-4 as direct evidence. Also record 11-20? Let's parse record 11-20: \"Valganciclovir, a prodrug of Ganciclovir, has a reported low oral bioavailability of approximately 60% due to extensive metabolism, particularly by esterases in the intestinal membrane.\" This is weird but it says valganciclovir 60%. Not directly ganciclovir. Record 11-4 is best.\n\nNeed maybe include record 11-1: \"In dogs, the prodrug valganciclovir is completely bioavailable by the oral route.\" This supports prodrug improves, but not ganciclovir. Could include.\n\nNeed maybe include record 14-1: \"The bioavailability of ganciclovir, when administered orally as the prodrug in rats, was 40±7%.\" This is not ganciclovir itself, but prodrug. It supports that ganciclovir itself is lower. However, it's in rats, not humans. Still supportive.\n\nNeed maybe include record 11-4's \"compared to 6% for ganciclovir\" is the key. Need cite molecule 11 record 11-4.\n\nNeed maybe include record 11-20? It says valganciclovir low oral bioavailability approx 60% due to extensive metabolism. Not needed.\n\nNeed maybe include record 11-8 \"Valganciclovir is converted to active metabolite in intestinal wall and liver and exhibits 60% bioavailability when administered with food.\" Not needed.\n\nNeed maybe include record 11-19 \"In kidney transplant recipients, absolute bioavailability of VGCV 900 mg was 34%.\" Not needed.\n\nNeed maybe include record 11-4 only.\n\nNeed maybe include record 11-1? \"In dogs, prodrug valganciclovir completely bioavailable\" supports prodrug. But not necessary.\n\nNeed maybe include record 14-1? It is a prodrug of ganciclovir, not query. But it shows prodrug needed. Could include.\n\nNeed maybe include record 11-4 and 14-1.\n\nNeed maybe include record 11-20? Hmm.\n\nNeed maybe include record 11-4 and 11-20? Let's include 11-4 and 11-20 as supportive? 11-20 says valganciclovir 60%, not ganciclovir. But it says \"low oral bioavailability of approximately 60%\" maybe they consider 60% low? Not relevant. Better not.\n\nNeed maybe include record 11-1? \"In dogs, the prodrug valganciclovir is completely bioavailable by the oral route.\" This is not ganciclovir. But it supports prodrug. Could include in claim 2.\n\nNeed maybe include record 14-1? \"The bioavailability of ganciclovir, when administered orally as the prodrug in rats, was 40±7%.\" This is prodrug, not ganciclovir. But it says \"ganciclovir, when administered orally as the prodrug\" meaning ganciclovir exposure from prodrug. It doesn't give ganciclovir itself. Still supportive of prodrug strategy.\n\nNeed maybe include record 11-4 only as direct evidence. But the instructions say \"Do not skip records; briefly state why any materially uninformative evidence deserves little weight.\" We don't need to mention every record in claims, but need consider all. The final JSON can have claims summarizing. We can include a claim about non-transferable high-F nucleoside analogs.\n\nNeed ensure final_prediction \"fail\".\n\nLet's craft final JSON with 3 claims.\n\nClaim 1 supportive: \"Ganciclovir itself has only ~6% oral bioavailability, directly below the 20% threshold, as stated in the comparison with its prodrug valganciclovir (60%).\" Molecule 11, record 11-4.\n\nClaim 2 supportive: \"Prodrugs of ganciclovir are required to raise oral bioavailability (valganciclovir ~43-60% in humans; a ganciclovir prodrug ~40% in rats), confirming that the unmodified query molecule is poorly absorbed.\" Molecule 11 records 11-1, 11-4, 11-14? Molecule 14 record 14-1. Need be accurate: valganciclovir ~43-60% in humans from records. Record 11-4 says 60%, record 11-14 says 60%, record 11-1 dogs. Record 14-1 rats 40%. We can cite multiple.\n\nClaim 3 contradictory: \"High oral bioavailability in other purine nucleoside analogs (fludarabine 50-65%, cladribine 40-46%, entecavir 100%, roscovitine good) is not transferable because these molecules have furanose/carbocyclic ribose or different substitution patterns and do not share ganciclovir's acyclic guanine absorption limitations.\" Role contradictory. Molecule 8, 6, 10, 9. Need include record IDs maybe 8-1, 6-1, 10-1, 9-1. But \"contradictory\" means supporting pass. This claim acknowledges but dismisses. Good.\n\nNeed maybe include claim 4: \"Other evidence (AUC, permeability, efflux, hepatic clearance) is either from prodrugs, different nucleosides, or non-human systems and does not directly inform ganciclovir's human F.\" Role supportive? Not necessary. But maybe include to show considered. Could include as supportive? It doesn't support fail directly. Better not.\n\nNeed ensure \"molecule_ids\" and \"record_ids\" arrays. Use \"Molecule 11\" etc.\n\nNeed final JSON only. Start with `{`.\n\nLet's write concise."
+        }
+      ],
+      "usage": {
+        "completion_tokens": 4761,
+        "prompt_tokens": 11574,
+        "total_tokens": 16335,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 512
+        },
+        "reasoning_tokens": 4383
+      },
+      "tool_count": 0
+    }
+  ],
+  "provenance": {
+    "source_kind": "original",
+    "requested_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "served_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "provider": "dgx027",
+    "upstream_provider": ""
+  },
+  "source_hashes": {
+    "trace_messages.jsonl": "28f0a25c8e634f664bba694f84db0e48e72d326dbf020abf434ecafc7fc11541",
+    "final_reasoning_output.json": "e77d8d5b77e061e7b3e30ede8c0390371d0233103cb43bf138f5a11c02877f8a",
+    "request.json": "0de27765739cb5cc4eb56063bf6376ce6aa68f985d668ec302de62adb323dffc"
+  }
+}

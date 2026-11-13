@@ -1,0 +1,731 @@
+{
+  "query_uid": "BIOCTX2_050BD16BA05661B636EC",
+  "configuration": "direct",
+  "references": [
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 1",
+      "stable_id": "VREFGVBLTWBCJP-UHFFFAOYSA-N@L1",
+      "source_analog_id": "VREFGVBLTWBCJP-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 1",
+      "text": "SMILES: Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2\nTransfer likelihood: 0.9884"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 1-1",
+      "stable_id": "b97c9ab07a467f542025a31b31032c14c8cd49aa176d02b5c3ef7b5cdf2b124e",
+      "source_analog_id": "VREFGVBLTWBCJP-UHFFFAOYSA-N",
+      "containing_unit_id": "VREFGVBLTWBCJP-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 1-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: release_profile=modified_release\nEndpoint: absolute\nResult: >0.84\nSpecies: healthy, normal, male volunteers\nConditions: \"sustained-release (SR)\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 1-mg, 3-mg, or 6-mg\n  - oral_exposure_mode: SR tablet\n\nAdditional details: \"Mean value reported for single doses; study involved 42 subjects.\"\nReported evidence: In 42 healthy, normal, male volunteers, the mean absolute bioavailabilities of alprazolam sustained-release (SR) tablets were >0.84 after single SR doses (1 mg, 3 mg, or 6 mg), compared to intravenous administration."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 1-2",
+      "stable_id": "c1581713fc7d9df886683c9509dfe0348aaed6a35b9e3f93db5455450cc88e5f",
+      "source_analog_id": "VREFGVBLTWBCJP-UHFFFAOYSA-N",
+      "containing_unit_id": "VREFGVBLTWBCJP-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 1-2",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: release_profile=modified_release\nEndpoint: absolute\nResult: 0.913 fraction\nSpecies: healthy volunteers\nConditions: \"sustained-release formulation\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 3 mg\n  - oral_exposure_mode: SR\n\nAdditional details: \"Value in parentheses represents standard deviation.\"\nReported evidence: Following a single 3 mg SR dose of alprazolam in healthy volunteers, the absolute bioavailability (F) was reported as 0.913 (0.204)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 1-3",
+      "stable_id": "ca02d9ff1b730a6f1e349feac502e1be8a29da4505ab1b625c0c16da2feacb35",
+      "source_analog_id": "VREFGVBLTWBCJP-UHFFFAOYSA-N",
+      "containing_unit_id": "VREFGVBLTWBCJP-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 1-3",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: release_profile=modified_release\nEndpoint: absolute\nResult: 0.842 fraction\nSpecies: healthy volunteers\nConditions: \"sustained-release formulation\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 6 mg\n  - oral_exposure_mode: SR\n\nAdditional details: \"Value in parentheses represents standard deviation.\"\nReported evidence: Following a single 6 mg SR dose of alprazolam in healthy volunteers, the absolute bioavailability (F) was reported as 0.842 (0.093)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 1-4",
+      "stable_id": "f11d5de57be27a6cf6fc85ec27143c8beea46591a3c6386f7c265f59b0ae15fe",
+      "source_analog_id": "VREFGVBLTWBCJP-UHFFFAOYSA-N",
+      "containing_unit_id": "VREFGVBLTWBCJP-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 1-4",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: release_profile=modified_release\nEndpoint: absolute\nResult: 0.857 fraction\nSpecies: healthy volunteers\nConditions: \"sustained-release formulation\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 1 mg\n  - oral_exposure_mode: SR\n\nAdditional details: \"Value in parentheses represents standard deviation.\"\nReported evidence: Following a single 1 mg SR dose of alprazolam in healthy volunteers, the absolute bioavailability (F) was reported as 0.857 (0.290)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 2",
+      "stable_id": "CDCHDCWJMGXXRH-UHFFFAOYSA-N@L1",
+      "source_analog_id": "CDCHDCWJMGXXRH-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 2",
+      "text": "SMILES: Clc1ccc2c(c1)C(c1ccccc1)=NCc1nncn1-2\nTransfer likelihood: 0.9891"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-1",
+      "stable_id": "a1b962024ac7dd960ac0c15168eb4badf0b569bb1de3ac39a891e83eaa548e09",
+      "source_analog_id": "CDCHDCWJMGXXRH-UHFFFAOYSA-N",
+      "containing_unit_id": "CDCHDCWJMGXXRH-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 87 %\nSpecies: eight healthy volunteers\nExperimental details:\n  - dose: 4 mg\n  - oral_exposure_mode: oral\n\nReported evidence: Following a single oral 4 mg dose of estazolam in eight healthy volunteers, the bioavailability of estazolam was reported to be 87%."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 3",
+      "stable_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N@L1",
+      "source_analog_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 3",
+      "text": "SMILES: CN1CCN(CCCN2c3ccccc3Sc3ccc(Cl)cc32)CC1\nTransfer likelihood: 0.0"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-1",
+      "stable_id": "33069e4426be775dc09ee68fa8ad7fa1a48c082bc5a053380b8d08f809140885",
+      "source_analog_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N",
+      "containing_unit_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 12.5 %\nSpecies: patients\nAdditional details: \"Peak concentration reached within one and a half to 5 h.\"\nReported evidence: Prochlorperazine has a bioavailability of 12.5% with peak concentration reached within one and a half to 5 h."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-2",
+      "stable_id": "a677e9c307d39072cc974e9b2b3e6285fc9f99af1537de74f02272aa4f43119b",
+      "source_analog_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N",
+      "containing_unit_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-2",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 5.7\nSpecies: humans\nExperimental details:\n  - comparator: vs IV\n  - dose: 5 mg\n  - oral_exposure_mode: tablet\n\nAdditional details: \"Single-dose study; value represents the geometric mean ratio of dose-normalized AUC.\"\nReported evidence: In a single-dose study in humans, the absolute bioavailability of prochlorperazine following administration of a 5 mg oral tablet was 5.7."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-3",
+      "stable_id": "e99afe8878ba0d97951a5937f0d1b5f28654f45d05bdf080ddbea8ec81b6b1f9",
+      "source_analog_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N",
+      "containing_unit_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-3",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: ?<10%\nSpecies: volunteers\nReported evidence: In volunteers, the oral bioavailability (F) of prochlorperazine is reported as ?<10%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-4",
+      "stable_id": "dc1d279e2f803394089c528f1568888c758bc477ffdfe27bb7f8b6908f92d883",
+      "source_analog_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N",
+      "containing_unit_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-4",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: clearly low\nSpecies: volunteers\nExperimental details:\n  - comparator: intravenous\n  - dose: 25mg\n  - oral_exposure_mode: oral\n\nAdditional details: \"Also described as \\u0027very poorly bioavailable\\u0027; drug detected in only 4 of 8 subjects studied.\"\nReported evidence: In volunteers given oral doses of 25mg of prochlorperazine, the drug was very poorly bioavailable, with the bioavailability described as clearly low and detected in only 4 of 8 subjects."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-5",
+      "stable_id": "72eded1d4f87c78c144f2780682d75b2d244ef9753db254f586cf46db301acd7",
+      "source_analog_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N",
+      "containing_unit_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-5",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 12.5 %\nSpecies: subjects\nExperimental details:\n  - comparator: i.v. dose\n\nAdditional details: \"Mean oral bioavailability; the oral dose was four times higher than the i.v. dose.\"\nReported evidence: The mean oral bioavailability of the parent drug, prochlorperazine, was 12.5%, where the oral dose was four times higher than the i.v. dose."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-6",
+      "stable_id": "e06b2706b03e36d391f8edf77824217d90cdbbb29aaf34e00e2835d74af516a4",
+      "source_analog_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N",
+      "containing_unit_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-6",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: extent_f\nResult: 0-0·16\nSpecies: adult healthy volunteers\nAdditional details: \"The bioavailability was described as poor.\"\nReported evidence: The intravenous route of administration was chosen for prochlorperazine because of its poor bioavailability (F: 0-0·16) after oral administration in adult healthy volunteers."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-7",
+      "stable_id": "b02bfbf5151a9d9fe63db92c4761755d288b68114201af91e4522a81f2344c4d",
+      "source_analog_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N",
+      "containing_unit_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-7",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: very low\nSpecies: healthy volunteers\nExperimental details:\n  - comparator: i.v.\n  - dose: 25 mg\n  - oral_exposure_mode: oral\n\nAdditional details: \"Absorption of the oral dose appeared to be slow.\"\nReported evidence: In healthy volunteers who received a 25 mg oral dose and comparative i.v. doses of prochlorperazine, the absorption of oral prochlorperazine appeared slow and the bioavailability was reported as very low."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-8",
+      "stable_id": "cf301cffde9db1736f167f62c812379e7fc112cc13326543e30b8ef0d690c61c",
+      "source_analog_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N",
+      "containing_unit_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-8",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: low\nSpecies: volunteers\nExperimental details:\n  - dose: 25mg\n  - oral_exposure_mode: oral\n\nReported evidence: Akathisia was not observed in volunteers given a single 25mg oral dose of prochlorperazine, for which bioavailability was described as low."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-9",
+      "stable_id": "bde339e4df742c42197d8f79f2a4d09efcabdb0d40a3fd4048ff334a26138692",
+      "source_analog_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N",
+      "containing_unit_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-9",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: low\nSpecies: healthy volunteers\nExperimental details:\n  - dose: 25 mg\n\nReported evidence: Following oral administration of 25 mg prochlorperazine, the drug could only be detected in four out of eight healthy volunteers, partly due to the low bioavailability of prochlorperazine."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-10",
+      "stable_id": "663e03033a5763d4f506273e2e19195d58101a8bfd4dc5cda230a3466fac4fb0",
+      "source_analog_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N",
+      "containing_unit_id": "WIKYUJGCLQQFNW-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-10",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: poor\nSpecies: volunteers\nExperimental details:\n  - comparator: i.v.\n  - dose: 25 mg\n\nAdditional details: \"plasma prochlorperazine was detectable in only 50% of subjects (lower limit of detection of assay 1 ng ml\\u22121) and tCmax was 1.5\\u20135 h\"\nReported evidence: In volunteers, the oral bioavailability of prochlorperazine was reported as poor; following an oral dose of 25 mg, plasma concentrations were detectable in only 50% of the subjects."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 4",
+      "stable_id": "GJSLOMWRLALDCT-UHFFFAOYSA-N@L1",
+      "source_analog_id": "GJSLOMWRLALDCT-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 4",
+      "text": "SMILES: CN(C)Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2\nTransfer likelihood: 0.9889"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 4-1",
+      "stable_id": "b503c1d234d1b5c814fe825306cbce94571a5eb840923ff836a7de96e17f5f87",
+      "source_analog_id": "GJSLOMWRLALDCT-UHFFFAOYSA-N",
+      "containing_unit_id": "GJSLOMWRLALDCT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 4-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 40 %\nSpecies: healthy volunteers\nExperimental details:\n  - oral_exposure_mode: oral\n\nReported evidence: Adinazolam has an absolute oral bioavailability of approximately 40% in healthy volunteers."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 4-2",
+      "stable_id": "765cf3667822f4199f714e0895d80cdbe5ffa972d06e7a414edba91f6777e5f4",
+      "source_analog_id": "GJSLOMWRLALDCT-UHFFFAOYSA-N",
+      "containing_unit_id": "GJSLOMWRLALDCT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 4-2",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: average between 33% and 45%\nSpecies: human\nAdditional details: \"These are average reported values from previous literature.\"\nReported evidence: Reported values for oral bioavailability of adinazolam average between 33% and 45%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 4-3",
+      "stable_id": "6a2757105dece5ca8d5a7134de5a4f54700dcfbe958538f621b44888fcbd4621",
+      "source_analog_id": "GJSLOMWRLALDCT-UHFFFAOYSA-N",
+      "containing_unit_id": "GJSLOMWRLALDCT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 4-3",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 39 %\nSpecies: 14 healthy male volunteers\nExperimental details:\n  - comparator: vs IV\n  - dose: 15 mg\n  - oral_exposure_mode: solution\n\nAdditional details: \"Calculated as the dose-corrected ratio of oral to IV AUC values; IV dose was 5 mg.\"\nReported evidence: The absolute bioavailability (F) of adinazolam mesylate was found to be 39% in 14 healthy male volunteers who received 15 mg of the compound orally as a solution, calculated as the dose-corrected ratio of oral to IV (5 mg) area under the curve (AUC) values."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 4-4",
+      "stable_id": "4f58d839c913d656e91e11967768fad04524f5b470003fe9600f5111303572ae",
+      "source_analog_id": "GJSLOMWRLALDCT-UHFFFAOYSA-N",
+      "containing_unit_id": "GJSLOMWRLALDCT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 4-4",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 40 %\nSpecies: humans\nReported evidence: In humans, the absolute bioavailability of adinazolam is approximately 40%."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 5",
+      "stable_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N@L1",
+      "source_analog_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 5",
+      "text": "SMILES: CN1C(=O)CC(=O)N(c2ccccc2)c2cc(Cl)ccc21\nTransfer likelihood: 0.9849"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-1",
+      "stable_id": "ccf64f6ebfa0515ae8d2ffe11cc740094759de00c01de5807fafdab4483f1ad5",
+      "source_analog_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N",
+      "containing_unit_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 87 to 100%\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: tablets\n\nAdditional details: \"Food doesn\\u0027t affect its absorption.\"\nReported evidence: Clobazam is rapidly and extensively absorbed after oral administration, and food doesn't affect its absorption. Tablets have a bioavailability from 87 to 100%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-2",
+      "stable_id": "a5dc040fbb8e3bfd99eb769b389e52fce74deff128ddf38d1aa8c43e2b4d8911",
+      "source_analog_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N",
+      "containing_unit_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-2",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 87 to 100%\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral solution\n\nAdditional details: \"Food doesn\\u0027t affect its absorption.\"\nReported evidence: Clobazam is rapidly and extensively absorbed after oral administration, and food doesn't affect its absorption. Oral solution has a bioavailability from 87 to 100%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-3",
+      "stable_id": "3d307d024479aadc6ece12594ae206e4566a2bc1943a10fbd06a26030dcc5c52",
+      "source_analog_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N",
+      "containing_unit_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-3",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 87 %\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral administration\n\nAdditional details: \"Clobazam is rapidly and extensively absorbed; time to peak concentration (Tmax) ranging from 1 to 4 hours.\"\nReported evidence: Clobazam is rapidly and extensively absorbed following oral administration, with a bioavailability of approximately 87% and a time to peak concentration (Tmax) ranging from 1 to 4 hours."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-4",
+      "stable_id": "547cb4b2ac77946fbc230988ed30686d878e6850835b78765d21e33627922c54",
+      "source_analog_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N",
+      "containing_unit_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-4",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: >95%\nSpecies: human\nExperimental details:\n  - oral_exposure_mode: oral ingestion\n\nReported evidence: After oral ingestion, Clobazam is rapidly absorbed with a bioavailability of >95%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-5",
+      "stable_id": "0cce1f0ebfefc915e2b808dc5e0040220f6b94117191055725580fe9b6f52bfc",
+      "source_analog_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N",
+      "containing_unit_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-5",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: good\nSpecies: human\nExperimental details:\n  - oral_exposure_mode: oral preparation\n\nReported evidence: Clonazepam and clobazam, which are available in the United States as oral preparations, both have good oral bioavailability."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-6",
+      "stable_id": "35e2375b12fd9c775dda2e19a8dd990798335ac6cbd3ba2c497beb23575bbdc1",
+      "source_analog_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N",
+      "containing_unit_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-6",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 90–100\nSpecies: humans\nAdditional details: \"Absorption is described as rapid.\"\nReported evidence: In a table of pharmacological properties of antiseizure drugs for genetic generalised epilepsies, clobazam is reported to have 90–100% bioavailability with rapid absorption."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-7",
+      "stable_id": "373e8ec6848a50ae39394abb24bc3d1df5a542a7795656b76b1fbe459b8ccb74",
+      "source_analog_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N",
+      "containing_unit_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-7",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 100 %\nSpecies: human\nExperimental details:\n  - oral_exposure_mode: oral ingestion\n\nReported evidence: In a table summarizing pharmacokinetic characteristics for antiepileptic drugs, clobazam (CLB) is reported to have an oral bioavailability of 100%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-8",
+      "stable_id": "89147c3ac8d7f3ed058c610effe14876bc3b9d60e7e4f8b9033b5b2e1f2a5027",
+      "source_analog_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N",
+      "containing_unit_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-8",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: extent_f\nResult: >0.8\nSpecies: human\nReported evidence: In a table of representative pharmacokinetic parameters for older antiepileptic drugs, Clobazam is reported to have a bioavailable fraction of oral dose (FPO) of >0.8."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-9",
+      "stable_id": "5ff9a95adf65e7a07b642c0c09fb8987455643a6e44c985ee60c65be5944eb6d",
+      "source_analog_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N",
+      "containing_unit_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-9",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 87 %\nSpecies: humans\nReported evidence: According to the pharmacokinetic characteristics table, the oral bioavailability of Clobazam is 87%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-10",
+      "stable_id": "33c1322a7aab7f01506c083cdd6ffd8e06d6cbbe944822551b59e58b86af245b",
+      "source_analog_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N",
+      "containing_unit_id": "CXOXHMZGEKVPMT-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-10",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 100 %\nSpecies: human\nExperimental details:\n  - oral_exposure_mode: oral film (Sympazan®)\n\nAdditional details: \"Complete absorption.\"\nReported evidence: Clobazam (Onfi®) is reported to have 100% bioavailability and complete absorption."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 6",
+      "stable_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N@L1",
+      "source_analog_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 6",
+      "text": "SMILES: Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1Cl)=NC2\nTransfer likelihood: 0.9881"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-1",
+      "stable_id": "bc780a7d9360e380410bf10060e5a4ee8c4f6f01153386ee3f4017b8caac6b56",
+      "source_analog_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N",
+      "containing_unit_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 60 %\nSpecies: healthy subjects\nReported evidence: Triazolam oral bioavailability is 60% in 16 healthy subjects (ages 19–28)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-2",
+      "stable_id": "5e91b7af1018dae69789e4a478f1c1a83782055deb52d15d86fe7523222a156f",
+      "source_analog_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N",
+      "containing_unit_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-2",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 55 %\nSpecies: 21 healthy subjects\nAdditional details: \"Bioavailability was linked to CYP3A-mediated extraction by the intestine and liver.\"\nReported evidence: In a study of 21 healthy subjects, triazolam had an oral bioavailability of 55% ± 20%, which was attributed to the CYP3A-mediated extraction by the intestine and liver."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-3",
+      "stable_id": "fe6b2f9609eccf327708a0fcaf1c206fcfac06539db16d7d7db2015d8eed0006",
+      "source_analog_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N",
+      "containing_unit_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-3",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 44 %\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: Oral\n\nReported evidence: In a table summarizing the physical and pharmacokinetic characteristics of three benzodiazepines, triazolam is reported to have an oral bioavailability of 44%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-4",
+      "stable_id": "9d65cf5f67a081da53cdead904eddb4254fcf148df95fe71d400cbb8c660d664",
+      "source_analog_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N",
+      "containing_unit_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-4",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 44 %\nSpecies: volunteers or patients\nExperimental details:\n  - dose: 0.25 mg\n  - oral_exposure_mode: Compressed oral tablet\n\nReported evidence: In a study of benzodiazepines in volunteers or patients, compressed oral tablets of triazolam at a dose of 0.25 mg showed a bioavailability (F) of 44%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-5",
+      "stable_id": "d2cec92cfa5323d3a14ffbacfa682447c558ef9ac347532f8862ead64378329a",
+      "source_analog_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N",
+      "containing_unit_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-5",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 0.85 fraction\nSpecies: virtual subjects (healthy volunteers or cancer patients)\nAdditional details: \"Geometric mean for 300\\u2013500 virtual subjects; PBPK model simulation.\"\nReported evidence: In a PBPK model simulation for virtual subjects, Triazolam showed a single-agent oral bioavailability (F) of 0.85."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-6",
+      "stable_id": "333b01082e8d216e0e464a7e1858c420e919a4c02e924f4ce836e674091b582e",
+      "source_analog_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N",
+      "containing_unit_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-6",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: approximately 45% to 50%\nSpecies: humans\nExperimental details:\n  - comparator: vs IV\n\nAdditional details: \"Estimated hepatic extraction ratios are on the order of 0.2; presystemic extraction is primarily attributed to enteric metabolism.\"\nReported evidence: Previous studies of intravenous and oral triazolam in humans have indicated an absolute bioavailability of approximately 45% to 50%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-7",
+      "stable_id": "4ae812ca09d8e57ea6c46400d06270d171403b95dde8f9f2cc74660d428ce2e0",
+      "source_analog_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N",
+      "containing_unit_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-7",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: systemic_availability\nResult: 0.358 fraction\nSpecies: human\nExperimental details:\n  - comparator: vs IV\n\nAdditional details: \"Reported as interstudy bioavailability (BA\\u03b7,obs); derived from clinical pharmacokinetic data after oral and intravenous administration.\"\nReported evidence: The observed interstudy bioavailability (BAη,obs) for Triazolam was reported as 0.358."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-8",
+      "stable_id": "ff48667c850111dd023888fa90f276bfd3b626c17d2f2a611a07ac4f3e4a3b12",
+      "source_analog_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N",
+      "containing_unit_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-8",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: systemic_availability\nResult: 75 %\nSpecies: humans\nExperimental details:\n  - comparator: vs IV\n  - oral_exposure_mode: oral administration\n\nAdditional details: \"Value is predicted based on systemic clearance after intravenous administration.\"\nReported evidence: Systemic clearance after intravenous administration in these subjects indicates that triazolam should undergo only modest first-pass metabolism with a predicted systemic availability of approximately 75% on average after oral administration."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-9",
+      "stable_id": "27b534f7db8587009c6d774d659c0a29b93961dfeef5beb00a419f9fc9184e9d",
+      "source_analog_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N",
+      "containing_unit_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-9",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 30-40%\nSpecies: human\nReported evidence: Table 1 lists the innate oral drug bioavailability of Triazolam as 30-40%."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-10",
+      "stable_id": "223a25b4e65a579a735233bb76ed7d978228eb660c0d73e588e95d536fdc2696",
+      "source_analog_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N",
+      "containing_unit_id": "JOFWLTCLBGQGBO-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-10",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 50 %\nSpecies: human\nExperimental details:\n  - oral_exposure_mode: oral\n\nAdditional details: \"Clearance is 10 ml/min/kg relative to hepatic blood flow of 20 ml/min/kg; bioavailability is likely due to first-pass metabolism.\"\nReported evidence: Triazolam has a clearance (10 ml/min/kg) in the intermediate range relative to hepatic blood flow (20 ml/min/kg) and bioavailability of ~50%, probably due, in large part, to its first-pass metabolism."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 7",
+      "stable_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N@L1",
+      "source_analog_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 7",
+      "text": "SMILES: CN(C)C(=O)C(CCN1CCC(O)(c2ccc(Cl)cc2)CC1)(c1ccccc1)c1ccccc1\nTransfer likelihood: 0.0001"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-1",
+      "stable_id": "2a4b1300367063a2a8f7b3a8d49254fb82c7b1e7e63aeaa9d6c2ae799f64bd3c",
+      "source_analog_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N",
+      "containing_unit_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: systemic_availability\nResult: low oral bioavailability category\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral\n\nAdditional details: \"Low systemic oral bioavailability is cited as a reason for the molecule\\u0027s poor penetration of the blood-brain barrier.\"\nReported evidence: The poor central nervous system (CNS) penetration of loperamide is attributed both to LOP active cellular efflux via the multidrug resistance transporter P-glycoprotein (P-gp) in the blood-brain barrier and to low systemic oral bioavailability."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-2",
+      "stable_id": "fc2392d25373de95a8cb4083b871f2c347be8e5c967cfa987448fa13e4efcb77",
+      "source_analog_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N",
+      "containing_unit_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-2",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: low\nSpecies: humans\nAdditional details: \"The exact value is unknown; it is thought that absorption is incomplete and subject to considerable first-pass metabolism.\"\nReported evidence: The exact oral bioavailability of loperamide in humans is unknown, but it is described as low. This is thought to be due to incomplete absorption and considerable first-pass metabolism."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-3",
+      "stable_id": "da31c0862df0b9cfe666f0842d86eb1d55e348499c642e3f6b0e60f9a0590e7b",
+      "source_analog_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N",
+      "containing_unit_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-3",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 0.3 %\nSpecies: humans\nExperimental details:\n  - dose: 2–8 mg/day\n\nAdditional details: \"Associated with P-gp liability (efflux ratio = 10.4).\"\nReported evidence: At the recommended therapeutic dose of 2–8 mg/day, loperamide has low oral bioavailability (%F = 0.3%), which is associated with its P-gp liability (efflux ratio = 10.4)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-4",
+      "stable_id": "7076f59b7ae29033caf9333c14c3503ce261b4e119e5ef951f5af39d453b1148",
+      "source_analog_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N",
+      "containing_unit_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-4",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 0.3 %\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral\n\nReported evidence: In humans, oral bioavailability is much lower (%F = 0.3%)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-5",
+      "stable_id": "164d59e8db21f61400bcc538fc7f55f6bf310044dd3a97c5311a4e78ce3e412d",
+      "source_analog_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N",
+      "containing_unit_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-5",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: low\nSpecies: human\nAdditional details: \"Low oral bioavailability is ascribed in part to the molecule\\u0027s low solubility and its affinity for Pgp as a substrate.\"\nReported evidence: Loperamide low oral bioavailability has been ascribed, in part, to its low solubility and affinity for Pgp as a substrate."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-6",
+      "stable_id": "4693e137ff12b1396c6c650e8a836bce7da016c35cd5fd19c9e1c303cd15c8d0",
+      "source_analog_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N",
+      "containing_unit_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-6",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: low\nSpecies: patients\nExperimental details:\n  - dose: 200–400 mg per day\n  - oral_exposure_mode: orally\n\nAdditional details: \"While standard antidiarrheal doses are 4\\u201316 mg per day, the low bioavailability requires doses of 200\\u2013400 mg per day for euphoric effects.\"\nReported evidence: Loperamide hydrochloride is an antidiarrheal administered orally at 4–16 mg per day; however, due to the drug's low bioavailability, doses upwards of 200–400 mg per day are needed to achieve a euphoric effect."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-7",
+      "stable_id": "e491a49fc67710d5d86ad623d9b3c511c56919dc2c483680445636f4e26ff336",
+      "source_analog_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N",
+      "containing_unit_id": "RDOIQAHITMMDAJ-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-7",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nResult: 40 %\nSpecies: humans\nExperimental details:\n  - dose: 2mg\n  - oral_exposure_mode: capsule\n\nReported evidence: The bioavailability of loperamide is about 40% in humans, where plasma concentrations remain below 2 µg/L after an oral dose of 2mg in capsule form."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 8",
+      "stable_id": "LXIKEPCNDFVJKC-QXMHVHEDSA-N@L1",
+      "source_analog_id": "LXIKEPCNDFVJKC-QXMHVHEDSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 8",
+      "text": "SMILES: NC(=O)N1C(=O)/C(=C(\\O)c2cccs2)c2cc(Cl)ccc21\nTransfer likelihood: 0.9856"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-1",
+      "stable_id": "1a7e6355c6ed1c35e3dd9e49f7c48eeaad3fe51b8be39819761604883b30690a",
+      "source_analog_id": "LXIKEPCNDFVJKC-QXMHVHEDSA-N",
+      "containing_unit_id": "LXIKEPCNDFVJKC-QXMHVHEDSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 85 %\nSpecies: healthy male volunteers\nExperimental details:\n  - comparator: vs 20 mg iv infusion\n  - dose: 120 mg\n  - oral_exposure_mode: oral\n\nAdditional details: \"The value was calculated for both single and multiple doses.\"\nReported evidence: In Study 2, thirteen healthy male volunteers received a single 120 mg oral dose and a 20 mg iv infusion of deuterated tenidap. Absolute bioavailability (single and multiple dose) for tenidap was calculated as 85%."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 9",
+      "stable_id": "HDOZVRUNCMBHFH-UHFFFAOYSA-N@L1",
+      "source_analog_id": "HDOZVRUNCMBHFH-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 9",
+      "text": "SMILES: CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21\nTransfer likelihood: 0.0"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 9-1",
+      "stable_id": "b31b5b2828844355566f19b1296cfb1d1358f9848db956c56349aeb0ccd42199",
+      "source_analog_id": "HDOZVRUNCMBHFH-UHFFFAOYSA-N",
+      "containing_unit_id": "HDOZVRUNCMBHFH-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 9-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 7 bis 13%\nSpecies: patients\nReported evidence: In a table of pharmacokinetic data for atypical antipsychotics, Zotepin is reported to have a bioavailability ranging from 7 to 13%."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 10",
+      "stable_id": "XJGVXQDUIWGIRW-UHFFFAOYSA-N@L1",
+      "source_analog_id": "XJGVXQDUIWGIRW-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 10",
+      "text": "SMILES: CN1CCN(C2=Nc3ccccc3Oc3ccc(Cl)cc32)CC1\nTransfer likelihood: 0.9892"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 10-1",
+      "stable_id": "703c41c9bf7423e763e53cd6416511b9650ba3c67efc5f05da763c7164352f0c",
+      "source_analog_id": "XJGVXQDUIWGIRW-UHFFFAOYSA-N",
+      "containing_unit_id": "XJGVXQDUIWGIRW-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 10-1",
+      "text": "Level: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: systemic_availability\nResult: 0.29 fraction\nSpecies: humans\nAdditional details: \"The drug is described as highly extracted with a hepatic extraction ratio (EH) of 0.71.\"\nReported evidence: For loxapine, the fraction of the parent drug absorbed into the systemic circulation (F) was estimated as 0.29, indicating that the drug is highly extracted with a hepatic extraction ratio (EH) of 0.71."
+    }
+  ],
+  "trace": [
+    {
+      "task": "single_molecule",
+      "status": "ok",
+      "prediction": null,
+      "response_text": "{\n  \"endpoint_prior\": \"pass\",\n  \"property_drivers\": [\n    \"Low molecular weight (284.75 Da) favors absorption\",\n    \"Moderate lipophilicity (estimated logP 3.15) supports passive permeability without extreme insolubility\",\n    \"Low topological polar surface area (32.67 Å²) is consistent with good membrane permeation\",\n    \"Zero hydrogen-bond donors and only two acceptors reduce desolvation penalty for membrane crossing\",\n    \"Very low rotatable-bond count (1) minimizes conformational flexibility and entropy cost\",\n    \"No acidic ionizable groups; the weakly basic imine is unlikely to be significantly charged at intestinal pH\",\n    \"Favorable QED drug-likeness (0.79) supports overall drug-like physicochemical profile\"\n  ],\n  \"confidence\": \"moderate\",\n  \"reasoning_summary\": \"The molecule is a small, moderately lipophilic, largely neutral fused bicyclic lactam-imine with no hydrogen-bond donors, low TPSA, and very low conformational flexibility. These physicochemical features strongly favor passive transcellular absorption. The main uncertainties are aqueous solubility (moderate logP, high aromatic content, low fraction of sp3 carbons) and first-pass metabolism (aromatic rings, N-methyl, imine/lactam), but these are unlikely to reduce absolute oral bioavailability below the modest 20% threshold given the favorable absorption characteristics.\",\n  \"caveats\": [\n    \"pKa and logD at pH 7.4 were not available; ionization state is inferred from structure rather than measured\",\n    \"No measured aqueous solubility or permeability data are available\",\n    \"High aromatic ring count and low Fsp3 (0.12) may increase CYP-mediated first-pass metabolism\",\n    \"The lactam and imine groups could be hydrolytically labile in the GI tract or liver\",\n    \"Absolute oral bioavailability also depends on formulation and gut-wall/hepatic extraction, which are not captured by these structural properties\"\n  ]\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chemist expert in oral bioavailability and you reason via analogies, taking evidence from related molecules to support your prediction. Return one complete JSON object."
+        },
+        {
+          "role": "user",
+          "content": "{\"task\": \"Assess the query molecule's structural and physicochemical prior for absolute oral bioavailability at the F >= 20% threshold.\", \"query\": {\"input_smiles\": \"CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21\", \"canonical_smiles\": \"CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21\", \"tools_prefetched\": true, \"prefetched_molecule_properties\": {\"tool_name\": \"molecule_properties\", \"status\": \"ok\", \"arguments\": {\"query_smiles\": \"CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21\", \"logd_ph\": 7.4}, \"content\": \"[molecule_properties]\\nneutral fraction: not applicable (pKa predictor unavailable)\\nestimated logD: not applicable (pKa predictor unavailable)\\nstrongest acidic pKa: not applicable (pKa predictor unavailable)\\nstrongest basic pKa: not applicable (pKa predictor unavailable)\\nnumber of acidic sites: not applicable (pKa predictor unavailable)\\nnumber of basic sites: not applicable (pKa predictor unavailable)\\nnumber of ionizable sites: not applicable (pKa predictor unavailable)\\nexact molecular weight: 284.07\\nfraction of sp3 carbons: 0.12\\nheavy-atom count: 20\\nheavy-atom molecular weight: 271.64\\nLabute surface area: 122.06\\nmaximum absolute partial charge: 0.31\\nmaximum partial charge: 0.25\\nminimum absolute partial charge: 0.25\\nminimum partial charge: -0.31\\nestimated logP: 3.15\\nmolecular weight: 284.75\\nNH/OH group count: 0\\nnitrogen/oxygen atom count: 3\\naliphatic carbocycle count: 0\\naliphatic heterocycle count: 1\\naliphatic ring count: 1\\naromatic carbocycle count: 2\\naromatic heterocycle count: 0\\naromatic ring count: 2\\nhydrogen-bond acceptor count: 2\\nhydrogen-bond donor count: 0\\nheteroatom count: 4\\nrotatable-bond count: 1\\nsaturated carbocycle count: 0\\nsaturated heterocycle count: 0\\nsaturated ring count: 0\\nring count: 3\\ntopological polar surface area: 32.67\\nQED drug-likeness: 0.79\\n\\nfunctional groups: none\\nWarnings: ModuleNotFoundError: No module named 'molgpka'; ModuleNotFoundError: No module named 'accfg'; Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\", \"warnings\": [\"ModuleNotFoundError: No module named 'molgpka'\", \"ModuleNotFoundError: No module named 'accfg'\", \"Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\"], \"errors\": [], \"latency_ms\": 0, \"cache_hit\": false}}, \"instructions\": [\"Use only the supplied structure and property-tool text, without analog evidence or memorized assay labels.\", \"Explain plausible structural and mechanistic liabilities, exposure limitations, and uncertainty.\", \"A structural alert is a hypothesis, not an observed endpoint. Absence of an alert does not establish a negative result.\", \"Do not invent species, population, strain, activation, exposure, or organism conditions.\"], \"required_json_schema\": {\"endpoint_prior\": \"pass | fail | mixed_or_unclear\", \"property_drivers\": [\"string\"], \"confidence\": \"high | moderate | low\", \"reasoning_summary\": \"string\", \"caveats\": [\"string\"]}}"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 2413,
+        "prompt_tokens": 918,
+        "total_tokens": 3331,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 2000
+      },
+      "tool_count": 0
+    },
+    {
+      "task": "final_summary",
+      "status": "ok",
+      "prediction": null,
+      "response_text": "{\n  \"claims\": [\n    {\n      \"claim\": \"Alprazolam, a close triazolobenzodiazepine analogue, showed mean absolute oral bioavailability >0.84 (84-91%) after single oral sustained-release doses in healthy volunteers, strongly supporting high oral bioavailability for the benzodiazepine scaffold.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 1\"\n      ],\n      \"record_ids\": [\n        \"Record 1-1\",\n        \"Record 1-2\",\n        \"Record 1-3\",\n        \"Record 1-4\"\n      ]\n    },\n    {\n      \"claim\": \"Estazolam, a closely related benzodiazepine, had 87% oral bioavailability in healthy volunteers after a single 4 mg oral dose.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 2\"\n      ],\n      \"record_ids\": [\n        \"Record 2-1\"\n      ]\n    },\n    {\n      \"claim\": \"Adinazolam, a benzodiazepine analogue, has absolute oral bioavailability of approximately 39-40% (reported range 33-45%) in healthy volunteers/humans, above the 20% threshold.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 4\"\n      ],\n      \"record_ids\": [\n        \"Record 4-1\",\n        \"Record 4-2\",\n        \"Record 4-3\",\n        \"Record 4-4\"\n      ]\n    },\n    {\n      \"claim\": \"Clobazam, a 1,5-benzodiazepine, has oral bioavailability of 87-100% in humans, with rapid absorption and no food effect, supporting high F for benzodiazepine-type structures.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 5\"\n      ],\n      \"record_ids\": [\n        \"Record 5-1\",\n        \"Record 5-2\",\n        \"Record 5-3\",\n        \"Record 5-4\",\n        \"Record 5-5\",\n        \"Record 5-6\",\n        \"Record 5-7\",\n        \"Record 5-8\",\n        \"Record 5-9\",\n        \"Record 5-10\"\n      ]\n    },\n    {\n      \"claim\": \"Triazolam, a close triazolobenzodiazepine, has reported oral bioavailability values mostly 44-60% (with PBPK/predicted estimates of 75-85% and an interstudy estimate of 0.358), all above 20%.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 6\"\n      ],\n      \"record_ids\": [\n        \"Record 6-1\",\n        \"Record 6-2\",\n        \"Record 6-3\",\n        \"Record 6-4\",\n        \"Record 6-5\",\n        \"Record 6-6\",\n        \"Record 6-7\",\n        \"Record 6-8\",\n        \"Record 6-9\",\n        \"Record 6-10\"\n      ]\n    },\n    {\n      \"claim\": \"Tenidap, a chlorophenyl heterocycle with high transfer likelihood, had absolute oral bioavailability of 85% in healthy male volunteers.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 8\"\n      ],\n      \"record_ids\": [\n        \"Record 8-1\"\n      ]\n    },\n    {\n      \"claim\": \"Loxapine, despite high hepatic extraction, had systemic availability of 0.29 (29%) in humans, above the 20% threshold.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 10\"\n      ],\n      \"record_ids\": [\n        \"Record 10-1\"\n      ]\n    },\n    {\n      \"claim\": \"Prochlorperazine has low oral bioavailability (5.7%, 12.5%, <10%, poor), but its transfer likelihood is 0.0 and it is a phenothiazine antipsychotic lacking the benzodiazepine core, so it provides only weak contradictory evidence.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\n        \"Molecule 3\"\n      ],\n      \"record_ids\": [\n        \"Record 3-1\",\n        \"Record 3-2\",\n        \"Record 3-3\",\n        \"Record 3-4\",\n        \"Record 3-5\",\n        \"Record 3-6\",\n        \"Record 3-7\",\n        \"Record 3-8\",\n        \"Record 3-9\",\n        \"Record 3-10\"\n      ]\n    },\n    {\n      \"claim\": \"Zotepine has low oral bioavailability (7-13%), but its transfer likelihood is 0.0 and it is a dibenzothiepine antipsychotic, so it provides weak contradictory evidence.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\n        \"Molecule 9\"\n      ],\n      \"record_ids\": [\n        \"Record 9-1\"\n      ]\n    },\n    {\n      \"claim\": \"Loperamide is predominantly reported with very low oral bioavailability (0.3%, low), despite one 40% report, but its transfer likelihood is 0.0001 and its low F is attributed to P-gp efflux and low solubility; it is not transferable to diazepam and provides negligible contradictory evidence.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\n        \"Molecule 7\"\n      ],\n      \"record_ids\": [\n        \"Record 7-1\",\n        \"Record 7-2\",\n        \"Record 7-3\",\n        \"Record 7-4\",\n        \"Record 7-5\",\n        \"Record 7-6\",\n        \"Record 7-7\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"pass\"\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a chemist expert in oral bioavailability and you reason via analogies, taking evidence from related molecules to support your prediction.\n\nTask:\n- Endpoint: absolute oral bioavailability at the F >= 20% threshold\n- Label scope: absolute_oral_bioavailability_f20.v2\n- Positive: pass\n- Negative: fail\n- Predict pass when F >= 20% is better supported and fail when F < 20% is better supported.\n- Keep evidence direction separate from transferability; low transferability lowers weight but does not reverse direction.\n- Missing, neutral, uncertain, or weak evidence is not evidence for low bioavailability.\n- Predict fail only when affirmative threshold-relevant evidence supports it, not from generic drug-likeness concerns alone.\n- Compare directness, endpoint match, conditions, transferability, and uncertainty without counting repeated records independently.\n\nReasoning Instructions:\n- Your goal is to reason through the evidence via analogies. Is this molecule or record meaningfully similar to the query molecule? Does the experiment transfer? If it does transfer, how does this experimnetal value inform the property we're aiming to predict?\n- Morgan similarity measures structural similarity to the query. The assay-transfer score (0 to 1) estimates how transferable the evidence is to the query, representing a normalized distance polarized by a sigmoid function. So high scores like 0.99 don't mean the experimental values tranfers with 99% amount or 99% liklihood. These scores are reliable relative signal however, in which higher scores are more likely to transfer. But, again, don't blindly trust these scores.\n- Ensure you consider and analyze every evidence block.\n- Semantic evidence utility is a reviewed, task-level 0–1 score for how useful an evidence family is for this endpoint. It is not a probability, a query-specific transfer likelihood, or calibrated across evidence levels.\n- At the end, take the physicochemical properties and transferable evidence and come to a balanced conclusion for the query molecule.\n\nPitfalls to avoid:\n- Do not narrate schema bookkeeping.\n- Do not overly analyze the SMILES structures.\n- Do not blindly trust retrieval scores.\n- Do not infer the prediction from evidence order.\n- Do not skip records; briefly state why any materially uninformative evidence deserves little weight.\n\nOutput:\nReturn exactly one valid JSON object matching the requested schema. Return one or more concise claims using as many claims as needed to represent the experimental evidence that materially informs the decision. Each claim may cite any number of molecules, records, or both. At least one identifier is required per claim. Return only `claims` and `final_prediction`. `supportive` means evidence supporting your selected final prediction; `contradictory` means evidence supporting the alternative."
+        },
+        {
+          "role": "user",
+          "content": "Query molecule\nSMILES: CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21\n\nQuery condition\nCondition: This prediction concerns the query molecule under a fasted state.\n\n# Experimental evidence\n\n# Level L1\nDirect absolute oral bioavailability outcomes.\n\n## Molecule 1\nSMILES: Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2\nTransfer likelihood: 0.9884\n\nRecord 1-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: release_profile=modified_release\nEndpoint: absolute\nResult: >0.84\nSpecies: healthy, normal, male volunteers\nConditions: \"sustained-release (SR)\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 1-mg, 3-mg, or 6-mg\n  - oral_exposure_mode: SR tablet\n\nAdditional details: \"Mean value reported for single doses; study involved 42 subjects.\"\nReported evidence: In 42 healthy, normal, male volunteers, the mean absolute bioavailabilities of alprazolam sustained-release (SR) tablets were >0.84 after single SR doses (1 mg, 3 mg, or 6 mg), compared to intravenous administration.\n\nRecord 1-2\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: release_profile=modified_release\nEndpoint: absolute\nResult: 0.913 fraction\nSpecies: healthy volunteers\nConditions: \"sustained-release formulation\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 3 mg\n  - oral_exposure_mode: SR\n\nAdditional details: \"Value in parentheses represents standard deviation.\"\nReported evidence: Following a single 3 mg SR dose of alprazolam in healthy volunteers, the absolute bioavailability (F) was reported as 0.913 (0.204).\n\nRecord 1-3\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: release_profile=modified_release\nEndpoint: absolute\nResult: 0.842 fraction\nSpecies: healthy volunteers\nConditions: \"sustained-release formulation\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 6 mg\n  - oral_exposure_mode: SR\n\nAdditional details: \"Value in parentheses represents standard deviation.\"\nReported evidence: Following a single 6 mg SR dose of alprazolam in healthy volunteers, the absolute bioavailability (F) was reported as 0.842 (0.093).\n\nRecord 1-4\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEvidence condition: release_profile=modified_release\nEndpoint: absolute\nResult: 0.857 fraction\nSpecies: healthy volunteers\nConditions: \"sustained-release formulation\"\nExperimental details:\n  - comparator: vs IV\n  - dose: 1 mg\n  - oral_exposure_mode: SR\n\nAdditional details: \"Value in parentheses represents standard deviation.\"\nReported evidence: Following a single 1 mg SR dose of alprazolam in healthy volunteers, the absolute bioavailability (F) was reported as 0.857 (0.290).\n\n## Molecule 2\nSMILES: Clc1ccc2c(c1)C(c1ccccc1)=NCc1nncn1-2\nTransfer likelihood: 0.9891\n\nRecord 2-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 87 %\nSpecies: eight healthy volunteers\nExperimental details:\n  - dose: 4 mg\n  - oral_exposure_mode: oral\n\nReported evidence: Following a single oral 4 mg dose of estazolam in eight healthy volunteers, the bioavailability of estazolam was reported to be 87%.\n\n## Molecule 3\nSMILES: CN1CCN(CCCN2c3ccccc3Sc3ccc(Cl)cc32)CC1\nTransfer likelihood: 0.0\n\nRecord 3-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 12.5 %\nSpecies: patients\nAdditional details: \"Peak concentration reached within one and a half to 5 h.\"\nReported evidence: Prochlorperazine has a bioavailability of 12.5% with peak concentration reached within one and a half to 5 h.\n\nRecord 3-2\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 5.7\nSpecies: humans\nExperimental details:\n  - comparator: vs IV\n  - dose: 5 mg\n  - oral_exposure_mode: tablet\n\nAdditional details: \"Single-dose study; value represents the geometric mean ratio of dose-normalized AUC.\"\nReported evidence: In a single-dose study in humans, the absolute bioavailability of prochlorperazine following administration of a 5 mg oral tablet was 5.7.\n\nRecord 3-3\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: ?<10%\nSpecies: volunteers\nReported evidence: In volunteers, the oral bioavailability (F) of prochlorperazine is reported as ?<10%.\n\nRecord 3-4\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: clearly low\nSpecies: volunteers\nExperimental details:\n  - comparator: intravenous\n  - dose: 25mg\n  - oral_exposure_mode: oral\n\nAdditional details: \"Also described as \\u0027very poorly bioavailable\\u0027; drug detected in only 4 of 8 subjects studied.\"\nReported evidence: In volunteers given oral doses of 25mg of prochlorperazine, the drug was very poorly bioavailable, with the bioavailability described as clearly low and detected in only 4 of 8 subjects.\n\nRecord 3-5\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 12.5 %\nSpecies: subjects\nExperimental details:\n  - comparator: i.v. dose\n\nAdditional details: \"Mean oral bioavailability; the oral dose was four times higher than the i.v. dose.\"\nReported evidence: The mean oral bioavailability of the parent drug, prochlorperazine, was 12.5%, where the oral dose was four times higher than the i.v. dose.\n\nRecord 3-6\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: extent_f\nResult: 0-0·16\nSpecies: adult healthy volunteers\nAdditional details: \"The bioavailability was described as poor.\"\nReported evidence: The intravenous route of administration was chosen for prochlorperazine because of its poor bioavailability (F: 0-0·16) after oral administration in adult healthy volunteers.\n\nRecord 3-7\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: very low\nSpecies: healthy volunteers\nExperimental details:\n  - comparator: i.v.\n  - dose: 25 mg\n  - oral_exposure_mode: oral\n\nAdditional details: \"Absorption of the oral dose appeared to be slow.\"\nReported evidence: In healthy volunteers who received a 25 mg oral dose and comparative i.v. doses of prochlorperazine, the absorption of oral prochlorperazine appeared slow and the bioavailability was reported as very low.\n\nRecord 3-8\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: low\nSpecies: volunteers\nExperimental details:\n  - dose: 25mg\n  - oral_exposure_mode: oral\n\nReported evidence: Akathisia was not observed in volunteers given a single 25mg oral dose of prochlorperazine, for which bioavailability was described as low.\n\nRecord 3-9\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: low\nSpecies: healthy volunteers\nExperimental details:\n  - dose: 25 mg\n\nReported evidence: Following oral administration of 25 mg prochlorperazine, the drug could only be detected in four out of eight healthy volunteers, partly due to the low bioavailability of prochlorperazine.\n\nRecord 3-10\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: poor\nSpecies: volunteers\nExperimental details:\n  - comparator: i.v.\n  - dose: 25 mg\n\nAdditional details: \"plasma prochlorperazine was detectable in only 50% of subjects (lower limit of detection of assay 1 ng ml\\u22121) and tCmax was 1.5\\u20135 h\"\nReported evidence: In volunteers, the oral bioavailability of prochlorperazine was reported as poor; following an oral dose of 25 mg, plasma concentrations were detectable in only 50% of the subjects.\n\n## Molecule 4\nSMILES: CN(C)Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1)=NC2\nTransfer likelihood: 0.9889\n\nRecord 4-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 40 %\nSpecies: healthy volunteers\nExperimental details:\n  - oral_exposure_mode: oral\n\nReported evidence: Adinazolam has an absolute oral bioavailability of approximately 40% in healthy volunteers.\n\nRecord 4-2\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: average between 33% and 45%\nSpecies: human\nAdditional details: \"These are average reported values from previous literature.\"\nReported evidence: Reported values for oral bioavailability of adinazolam average between 33% and 45%.\n\nRecord 4-3\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 39 %\nSpecies: 14 healthy male volunteers\nExperimental details:\n  - comparator: vs IV\n  - dose: 15 mg\n  - oral_exposure_mode: solution\n\nAdditional details: \"Calculated as the dose-corrected ratio of oral to IV AUC values; IV dose was 5 mg.\"\nReported evidence: The absolute bioavailability (F) of adinazolam mesylate was found to be 39% in 14 healthy male volunteers who received 15 mg of the compound orally as a solution, calculated as the dose-corrected ratio of oral to IV (5 mg) area under the curve (AUC) values.\n\nRecord 4-4\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 40 %\nSpecies: humans\nReported evidence: In humans, the absolute bioavailability of adinazolam is approximately 40%.\n\n## Molecule 5\nSMILES: CN1C(=O)CC(=O)N(c2ccccc2)c2cc(Cl)ccc21\nTransfer likelihood: 0.9849\n\nRecord 5-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 87 to 100%\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: tablets\n\nAdditional details: \"Food doesn\\u0027t affect its absorption.\"\nReported evidence: Clobazam is rapidly and extensively absorbed after oral administration, and food doesn't affect its absorption. Tablets have a bioavailability from 87 to 100%.\n\nRecord 5-2\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 87 to 100%\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral solution\n\nAdditional details: \"Food doesn\\u0027t affect its absorption.\"\nReported evidence: Clobazam is rapidly and extensively absorbed after oral administration, and food doesn't affect its absorption. Oral solution has a bioavailability from 87 to 100%.\n\nRecord 5-3\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 87 %\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral administration\n\nAdditional details: \"Clobazam is rapidly and extensively absorbed; time to peak concentration (Tmax) ranging from 1 to 4 hours.\"\nReported evidence: Clobazam is rapidly and extensively absorbed following oral administration, with a bioavailability of approximately 87% and a time to peak concentration (Tmax) ranging from 1 to 4 hours.\n\nRecord 5-4\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: >95%\nSpecies: human\nExperimental details:\n  - oral_exposure_mode: oral ingestion\n\nReported evidence: After oral ingestion, Clobazam is rapidly absorbed with a bioavailability of >95%.\n\nRecord 5-5\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: good\nSpecies: human\nExperimental details:\n  - oral_exposure_mode: oral preparation\n\nReported evidence: Clonazepam and clobazam, which are available in the United States as oral preparations, both have good oral bioavailability.\n\nRecord 5-6\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 90–100\nSpecies: humans\nAdditional details: \"Absorption is described as rapid.\"\nReported evidence: In a table of pharmacological properties of antiseizure drugs for genetic generalised epilepsies, clobazam is reported to have 90–100% bioavailability with rapid absorption.\n\nRecord 5-7\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 100 %\nSpecies: human\nExperimental details:\n  - oral_exposure_mode: oral ingestion\n\nReported evidence: In a table summarizing pharmacokinetic characteristics for antiepileptic drugs, clobazam (CLB) is reported to have an oral bioavailability of 100%.\n\nRecord 5-8\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: extent_f\nResult: >0.8\nSpecies: human\nReported evidence: In a table of representative pharmacokinetic parameters for older antiepileptic drugs, Clobazam is reported to have a bioavailable fraction of oral dose (FPO) of >0.8.\n\nRecord 5-9\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 87 %\nSpecies: humans\nReported evidence: According to the pharmacokinetic characteristics table, the oral bioavailability of Clobazam is 87%.\n\nRecord 5-10\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 100 %\nSpecies: human\nExperimental details:\n  - oral_exposure_mode: oral film (Sympazan®)\n\nAdditional details: \"Complete absorption.\"\nReported evidence: Clobazam (Onfi®) is reported to have 100% bioavailability and complete absorption.\n\n## Molecule 6\nSMILES: Cc1nnc2n1-c1ccc(Cl)cc1C(c1ccccc1Cl)=NC2\nTransfer likelihood: 0.9881\n\nRecord 6-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 60 %\nSpecies: healthy subjects\nReported evidence: Triazolam oral bioavailability is 60% in 16 healthy subjects (ages 19–28).\n\nRecord 6-2\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 55 %\nSpecies: 21 healthy subjects\nAdditional details: \"Bioavailability was linked to CYP3A-mediated extraction by the intestine and liver.\"\nReported evidence: In a study of 21 healthy subjects, triazolam had an oral bioavailability of 55% ± 20%, which was attributed to the CYP3A-mediated extraction by the intestine and liver.\n\nRecord 6-3\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 44 %\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: Oral\n\nReported evidence: In a table summarizing the physical and pharmacokinetic characteristics of three benzodiazepines, triazolam is reported to have an oral bioavailability of 44%.\n\nRecord 6-4\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 44 %\nSpecies: volunteers or patients\nExperimental details:\n  - dose: 0.25 mg\n  - oral_exposure_mode: Compressed oral tablet\n\nReported evidence: In a study of benzodiazepines in volunteers or patients, compressed oral tablets of triazolam at a dose of 0.25 mg showed a bioavailability (F) of 44%.\n\nRecord 6-5\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 0.85 fraction\nSpecies: virtual subjects (healthy volunteers or cancer patients)\nAdditional details: \"Geometric mean for 300\\u2013500 virtual subjects; PBPK model simulation.\"\nReported evidence: In a PBPK model simulation for virtual subjects, Triazolam showed a single-agent oral bioavailability (F) of 0.85.\n\nRecord 6-6\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: approximately 45% to 50%\nSpecies: humans\nExperimental details:\n  - comparator: vs IV\n\nAdditional details: \"Estimated hepatic extraction ratios are on the order of 0.2; presystemic extraction is primarily attributed to enteric metabolism.\"\nReported evidence: Previous studies of intravenous and oral triazolam in humans have indicated an absolute bioavailability of approximately 45% to 50%.\n\nRecord 6-7\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: systemic_availability\nResult: 0.358 fraction\nSpecies: human\nExperimental details:\n  - comparator: vs IV\n\nAdditional details: \"Reported as interstudy bioavailability (BA\\u03b7,obs); derived from clinical pharmacokinetic data after oral and intravenous administration.\"\nReported evidence: The observed interstudy bioavailability (BAη,obs) for Triazolam was reported as 0.358.\n\nRecord 6-8\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: systemic_availability\nResult: 75 %\nSpecies: humans\nExperimental details:\n  - comparator: vs IV\n  - oral_exposure_mode: oral administration\n\nAdditional details: \"Value is predicted based on systemic clearance after intravenous administration.\"\nReported evidence: Systemic clearance after intravenous administration in these subjects indicates that triazolam should undergo only modest first-pass metabolism with a predicted systemic availability of approximately 75% on average after oral administration.\n\nRecord 6-9\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 30-40%\nSpecies: human\nReported evidence: Table 1 lists the innate oral drug bioavailability of Triazolam as 30-40%.\n\nRecord 6-10\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 50 %\nSpecies: human\nExperimental details:\n  - oral_exposure_mode: oral\n\nAdditional details: \"Clearance is 10 ml/min/kg relative to hepatic blood flow of 20 ml/min/kg; bioavailability is likely due to first-pass metabolism.\"\nReported evidence: Triazolam has a clearance (10 ml/min/kg) in the intermediate range relative to hepatic blood flow (20 ml/min/kg) and bioavailability of ~50%, probably due, in large part, to its first-pass metabolism.\n\n## Molecule 7\nSMILES: CN(C)C(=O)C(CCN1CCC(O)(c2ccc(Cl)cc2)CC1)(c1ccccc1)c1ccccc1\nTransfer likelihood: 0.0001\n\nRecord 7-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: systemic_availability\nResult: low oral bioavailability category\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral\n\nAdditional details: \"Low systemic oral bioavailability is cited as a reason for the molecule\\u0027s poor penetration of the blood-brain barrier.\"\nReported evidence: The poor central nervous system (CNS) penetration of loperamide is attributed both to LOP active cellular efflux via the multidrug resistance transporter P-glycoprotein (P-gp) in the blood-brain barrier and to low systemic oral bioavailability.\n\nRecord 7-2\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: low\nSpecies: humans\nAdditional details: \"The exact value is unknown; it is thought that absorption is incomplete and subject to considerable first-pass metabolism.\"\nReported evidence: The exact oral bioavailability of loperamide in humans is unknown, but it is described as low. This is thought to be due to incomplete absorption and considerable first-pass metabolism.\n\nRecord 7-3\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 0.3 %\nSpecies: humans\nExperimental details:\n  - dose: 2–8 mg/day\n\nAdditional details: \"Associated with P-gp liability (efflux ratio = 10.4).\"\nReported evidence: At the recommended therapeutic dose of 2–8 mg/day, loperamide has low oral bioavailability (%F = 0.3%), which is associated with its P-gp liability (efflux ratio = 10.4).\n\nRecord 7-4\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 0.3 %\nSpecies: humans\nExperimental details:\n  - oral_exposure_mode: oral\n\nReported evidence: In humans, oral bioavailability is much lower (%F = 0.3%).\n\nRecord 7-5\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: low\nSpecies: human\nAdditional details: \"Low oral bioavailability is ascribed in part to the molecule\\u0027s low solubility and its affinity for Pgp as a substrate.\"\nReported evidence: Loperamide low oral bioavailability has been ascribed, in part, to its low solubility and affinity for Pgp as a substrate.\n\nRecord 7-6\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: low\nSpecies: patients\nExperimental details:\n  - dose: 200–400 mg per day\n  - oral_exposure_mode: orally\n\nAdditional details: \"While standard antidiarrheal doses are 4\\u201316 mg per day, the low bioavailability requires doses of 200\\u2013400 mg per day for euphoric effects.\"\nReported evidence: Loperamide hydrochloride is an antidiarrheal administered orally at 4–16 mg per day; however, due to the drug's low bioavailability, doses upwards of 200–400 mg per day are needed to achieve a euphoric effect.\n\nRecord 7-7\nLevel: L1\nEvidence family: direct_oral_bioavailability\nResult: 40 %\nSpecies: humans\nExperimental details:\n  - dose: 2mg\n  - oral_exposure_mode: capsule\n\nReported evidence: The bioavailability of loperamide is about 40% in humans, where plasma concentrations remain below 2 µg/L after an oral dose of 2mg in capsule form.\n\n## Molecule 8\nSMILES: NC(=O)N1C(=O)/C(=C(\\O)c2cccs2)c2cc(Cl)ccc21\nTransfer likelihood: 0.9856\n\nRecord 8-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 85 %\nSpecies: healthy male volunteers\nExperimental details:\n  - comparator: vs 20 mg iv infusion\n  - dose: 120 mg\n  - oral_exposure_mode: oral\n\nAdditional details: \"The value was calculated for both single and multiple doses.\"\nReported evidence: In Study 2, thirteen healthy male volunteers received a single 120 mg oral dose and a 20 mg iv infusion of deuterated tenidap. Absolute bioavailability (single and multiple dose) for tenidap was calculated as 85%.\n\n## Molecule 9\nSMILES: CN(C)CCOC1=Cc2ccccc2Sc2ccc(Cl)cc21\nTransfer likelihood: 0.0\n\nRecord 9-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: absolute\nResult: 7 bis 13%\nSpecies: patients\nReported evidence: In a table of pharmacokinetic data for atypical antipsychotics, Zotepin is reported to have a bioavailability ranging from 7 to 13%.\n\n## Molecule 10\nSMILES: CN1CCN(C2=Nc3ccccc3Oc3ccc(Cl)cc32)CC1\nTransfer likelihood: 0.9892\n\nRecord 10-1\nLevel: L1\nEvidence family: direct_oral_bioavailability\nEndpoint: systemic_availability\nResult: 0.29 fraction\nSpecies: humans\nAdditional details: \"The drug is described as highly extracted with a hepatic extraction ratio (EH) of 0.71.\"\nReported evidence: For loxapine, the fraction of the parent drug absorbed into the systemic circulation (F) was estimated as 0.29, indicating that the drug is highly extracted with a hepatic extraction ratio (EH) of 0.71.\n\n# Required JSON shape\n{\n  \"claims\": [\n    {\n      \"claim\": \"concise evidence-grounded statement\",\n      \"evidence_role\": \"supportive | contradictory\",\n      \"molecule_ids\": [\n        \"Molecule N\"\n      ],\n      \"record_ids\": [\n        \"Record N-N\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"pass | fail\"\n}"
+        },
+        {
+          "role": "user",
+          "content": "Retry the flat-context-final response (attempt 2 of 4). Return one complete JSON object matching the required schema. Validation errors: empty_or_non_object_json."
+        },
+        {
+          "role": "assistant",
+          "content": "{\n  \"claims\": [\n    {\n      \"claim\": \"Alprazolam, a close triazolobenzodiazepine analogue, showed mean absolute oral bioavailability >0.84 (84-91%) after single oral sustained-release doses in healthy volunteers, strongly supporting high oral bioavailability for the benzodiazepine scaffold.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 1\"],\n      \"record_ids\": [\"Record 1-1\", \"Record 1-2\", \"Record 1-3\", \"Record 1-4\"]\n    },\n    {\n      \"claim\": \"Estazolam, a closely related benzodiazepine, had 87% oral bioavailability in healthy volunteers after a single 4 mg oral dose.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 2\"],\n      \"record_ids\": [\"Record 2-1\"]\n    },\n    {\n      \"claim\": \"Adinazolam, a benzodiazepine analogue, has absolute oral bioavailability of approximately 39-40% (reported range 33-45%) in healthy volunteers/humans, above the 20% threshold.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 4\"],\n      \"record_ids\": [\"Record 4-1\", \"Record 4-2\", \"Record 4-3\", \"Record 4-4\"]\n    },\n    {\n      \"claim\": \"Clobazam, a 1,5-benzodiazepine, has oral bioavailability of 87-100% in humans, with rapid absorption and no food effect, supporting high F for benzodiazepine-type structures.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 5\"],\n      \"record_ids\": [\"Record 5-1\", \"Record 5-2\", \"Record 5-3\", \"Record 5-4\", \"Record 5-5\", \"Record 5-6\", \"Record 5-7\", \"Record 5-8\", \"Record 5-9\", \"Record 5-10\"]\n    },\n    {\n      \"claim\": \"Triazolam, a close triazolobenzodiazepine, has reported oral bioavailability values mostly 44-60% (with PBPK/predicted estimates of 75-85% and an interstudy estimate of 0.358), all above 20%.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 6\"],\n      \"record_ids\": [\"Record 6-1\", \"Record 6-2\", \"Record 6-3\", \"Record 6-4\", \"Record 6-5\", \"Record 6-6\", \"Record 6-7\", \"Record 6-8\", \"Record 6-9\", \"Record 6-10\"]\n    },\n    {\n      \"claim\": \"Tenidap, a chlorophenyl heterocycle with high transfer likelihood, had absolute oral bioavailability of 85% in healthy male volunteers.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 8\"],\n      \"record_ids\": [\"Record 8-1\"]\n    },\n    {\n      \"claim\": \"Loxapine, despite high hepatic extraction, had systemic availability of 0.29 (29%) in humans, above the 20% threshold.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 10\"],\n      \"record_ids\": [\"Record 10-1\"]\n    },\n    {\n      \"claim\": \"Prochlorperazine has low oral bioavailability (5.7%, 12.5%, <10%, poor), but its transfer likelihood is 0.0 and it is a phenothiazine antipsychotic lacking the benzodiazepine core, so it provides only weak contradictory evidence.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 3\"],\n      \"record_ids\": [\"Record 3-1\", \"Record 3-2\", \"Record 3-3\", \"Record 3-4\", \"Record 3-5\", \"Record 3-6\", \"Record 3-7\", \"Record 3-8\", \"Record 3-9\", \"Record 3-10\"]\n    },\n    {\n      \"claim\": \"Zotepine has low oral bioavailability (7-13%), but its transfer likelihood is 0.0 and it is a dibenzothiepine antipsychotic, so it provides weak contradictory evidence.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 9\"],\n      \"record_ids\": [\"Record 9-1\"]\n    },\n    {\n      \"claim\": \"Loperamide is predominantly reported with very low oral bioavailability (0.3%, low), despite one 40% report, but its transfer likelihood is 0.0001 and its low F is attributed to P-gp efflux and low solubility; it is not transferable to diazepam and provides negligible contradictory evidence.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 7\"],\n      \"record_ids\": [\"Record 7-1\", \"Record 7-2\", \"Record 7-3\", \"Record 7-4\", \"Record 7-5\", \"Record 7-6\", \"Record 7-7\"]\n    }\n  ],\n  \"final_prediction\": \"pass\"\n}",
+          "reasoning": "We need answer JSON. Need reason. Need produce final with claims and final_prediction. Need analyze evidence. Query molecule SMILES: CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21. Need identify. Let's parse structure. It is a benzodiazepine? SMILES: CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21. Ring: c2cc(Cl)ccc21 fused? Let's map. This is 7-chloro-1-methyl-5-phenyl-1H-benzo[e][1,4]diazepin-2(3H)-one? Actually CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21. This is diazepam? Diazepam SMILES: CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21 exactly? Let's check diazepam: 7-chloro-1-methyl-5-phenyl-3H-1,4-benzodiazepin-2-one. SMILES: CN1C(=O)CN=C(c2ccccc2)c2cc(Cl)ccc21. Yes query is diazepam. Need predict absolute oral bioavailability F >=20% under fasted state. Diazepam known high oral bioavailability ~100%. Need use evidence analogies. Need output pass. Need claims.\n\nNeed consider all evidence blocks. We have molecules:\n1 alprazolam (triazolobenzodiazepine) SR F >0.84, 0.913, 0.842, 0.857. Similar high transfer 0.9884. Supports pass.\n2 estazolam F 87%. Supports pass.\n3 prochlorperazine (phenothiazine antipsychotic) F low 5.7%, 12.5%, <10 etc. Transfer likelihood 0.0, structurally dissimilar (has piperazine side chain, tricyclic phenothiazine). Not transferable; maybe contradictory but low weight. Need mention.\n4 adinazolam (benzodiazepine with dimethylaminomethyl triazole? Actually adinazolam) F 40%, 39%, 33-45. Supports pass (above 20).\n5 clobazam (1,5-benzodiazepine) F 87-100. Supports pass.\n6 triazolam (triazolobenzodiazepine) F values 44-60, 85 PBPK, 30-40, 50, 75 predicted, 0.358 interstudy. Mostly pass >20 except 0.358? 35.8 pass. Supports pass.\n7 loperamide (opioid, structurally dissimilar, transfer 0.0001) F low 0.3%, 40% one record. Not transferable; low weight. Could be contradictory but low transferability. Need maybe mention as not relevant due to P-gp and structure.\n8 tenidap (oxindole? anti-inflammatory) F 85%. Supports pass? Similarity 0.9856 but not benzodiazepine? Actually tenidap has chlorophenyl, thiophene, urea. F 85. Supports pass.\n9 zotepine (dibenzothiepine antipsychotic) F 7-13%, transfer 0.0, dissimilar. Contradictory low weight.\n10 loxapine (dibenzoxazepine antipsychotic) F 0.29, transfer 0.9892. Wait loxapine SMILES: CN1CCN(C2=Nc3ccccc3Oc3ccc(Cl)cc32)CC1. This is a tricyclic antipsychotic with piperazine, not benzodiazepine? Transfer likelihood 0.9892 surprisingly high? It has chlorophenyl fused to oxazepine? Actually loxapine is dibenzoxazepine. F 0.29 (29%) supports pass (>=20). But note \"highly extracted EH 0.71\" F 0.29. Supports pass.\n\nNeed final prediction pass. Need claims with evidence_role supportive/contradictory. Need include all materially informative evidence. Could group.\n\nNeed be careful: \"Keep evidence direction separate from transferability; low transferability lowers weight but does not reverse direction.\" So prochlorperazine and zotepine low F are contradictory to pass, but low transferability. Loperamide low F contradictory but low transferability. Need include as contradictory claims? The final prediction pass, contradictory evidence supports fail. We should include claims for contradictory evidence with low transferability? The instructions: \"Return one or more concise claims using as many claims as needed to represent the experimental evidence that materially informs the decision.\" \"supportive means evidence supporting your selected final prediction; contradictory means evidence supporting the alternative.\" So include contradictory claims for low F molecules if they materially inform? They are structurally dissimilar and low transferability, but still evidence direction. Need mention low transferability in claim? Could say \"Prochlorperazine and zotepine have low oral bioavailability, but their structures/transfer likelihood are very low, so they provide weak contradictory evidence.\" But evidence_role contradictory. Need cite molecule_ids and record_ids.\n\nNeed maybe include all records? We can cite multiple records per claim. Need not cite every record? \"Each claim may cite any number of molecules, records, or both. At least one identifier is required per claim.\" We can cite relevant records. Need include all evidence blocks? \"Ensure you consider and analyze every evidence block.\" We can mention in claims. Need not narrate schema. But final JSON only claims and final_prediction. Need concise claims.\n\nLet's identify query: diazepam. Known oral bioavailability ~100%. But evidence doesn't include diazepam itself. Analogous benzodiazepines: alprazolam, estazolam, adinazolam, clobazam, triazolam all high F >20. Also tenidap? Maybe not needed. Loxapine F 29 supports pass. Need include.\n\nNeed maybe mention fasted state: Most evidence not specifically fasted? Query condition fasted. Some records no condition. Alprazolam SR in healthy volunteers likely fasted? Not specified. But oral bioavailability generally not strongly food-dependent for benzodiazepines? Clobazam food doesn't affect. Need not overcomplicate. Could mention \"fasted state is not expected to reduce F below threshold based on high intrinsic permeability/absorption of benzodiazepines.\" But claims should be evidence-grounded.\n\nNeed maybe include physicochemical properties? Not provided. We can infer from structure: diazepam is lipophilic, CNS drug, high permeability. But instructions say use evidence. We can mention in final? Only claims and final_prediction. Claims can include reasoning? \"Diazepam is structurally a 1,4-benzodiazepine; close analogues...\" That's okay.\n\nNeed ensure final_prediction \"pass\".\n\nLet's craft claims:\n\nClaim 1: \"Alprazolam, a close triazolobenzodiazepine analogue, has absolute oral bioavailability >0.84 (84-91%) after oral SR doses in healthy volunteers, supporting high oral bioavailability for the benzodiazepine scaffold.\" Evidence_role supportive. Molecule_ids [\"Molecule 1\"], record_ids [\"Record 1-1\",\"Record 1-2\",\"Record 1-3\",\"Record 1-4\"].\n\nClaim 2: \"Estazolam, another closely related benzodiazepine, has 87% oral bioavailability in healthy volunteers.\" Supportive. Molecule 2 Record 2-1.\n\nClaim 3: \"Adinazolam, a benzodiazepine analogue, has absolute oral bioavailability ~39-40% (range 33-45%) in healthy volunteers/humans, above the 20% threshold.\" Supportive. Molecule 4 records 4-1 to 4-4.\n\nClaim 4: \"Clobazam, a 1,5-benzodiazepine, has oral bioavailability 87-100% in humans, with food not affecting absorption.\" Supportive. Molecule 5 records 5-1 to 5-10 maybe cite all? Could cite representative. Need maybe include all? \"records 5-1 through 5-10\" but record_ids list. We can list all? It's okay. But concise. Maybe cite 5-1,5-2,5-3,5-4,5-6,5-7,5-8,5-9,5-10. Need include 5-5 \"good\" too. Could cite all.\n\nClaim 5: \"Triazolam, a close triazolobenzodiazepine, has oral bioavailability mostly 44-60% (with one PBPK estimate 85% and one predicted 75%), consistently above 20%.\" Supportive. Molecule 6 records 6-1,6-2,6-3,6-4,6-5,6-6,6-8,6-9,6-10. Record 6-7 0.358 = 35.8% also above 20. Include 6-7. Need note \"one interstudy estimate 0.358\" still above. Good.\n\nClaim 6: \"Loxapine, despite high hepatic extraction, has systemic availability 0.29 (29%), above 20%.\" Supportive. Molecule 10 Record 10-1. But loxapine is not benzodiazepine? It is tricyclic antipsychotic. Transfer likelihood high 0.9892. Supports pass.\n\nClaim 7: \"Tenidap, a structurally related chlorophenyl heterocycle, has absolute oral bioavailability 85% in healthy volunteers.\" Supportive. Molecule 8 Record 8-1. But is tenidap relevant? Transfer likelihood 0.9856. Could include. However tenidap is not benzodiazepine; but high transfer score. It supports high F. Need maybe include.\n\nContradictory claims:\nClaim 8: \"Prochlorperazine, a phenothiazine antipsychotic, has low oral bioavailability (5.7%, 12.5%, <10%, poor), but its transfer likelihood is 0.0 and it lacks the benzodiazepine core, so it provides weak contradictory evidence.\" Evidence_role contradictory. Molecule 3 records 3-1 to 3-10. Need maybe cite all? Could cite representative 3-2,3-3,3-5,3-6. But \"consider every evidence block\" maybe cite all. We can list all record IDs. It's okay.\n\nClaim 9: \"Zotepine, a dibenzothiepine antipsychotic, has low oral bioavailability 7-13%, but transfer likelihood is 0.0 and structure is dissimilar, so weak contradictory evidence.\" Contradictory. Molecule 9 Record 9-1.\n\nClaim 10: \"Loperamide has very low oral bioavailability (0.3% in humans) in some reports, but transfer likelihood is 0.0001 and its low F is driven by P-gp efflux/low solubility, not relevant to diazepam.\" Contradictory. Molecule 7 records 7-1 to 7-7. But one record 7-7 says 40% (pass). Need mention? Could say \"Loperamide is generally low (0.3%) but one report 40%; structurally dissimilar and P-gp substrate, weak contradictory evidence.\" Need include all records? Maybe cite 7-1,7-2,7-3,7-4,7-5,7-6,7-7. But 7-7 is not contradictory; it's supportive? Actually 40% supports pass. But loperamide overall low. Since transferability 0.0001, not material. Could include in contradictory claim with nuance. But evidence_role contradictory for loperamide low F. Record 7-7 is supportive? It is 40% but not necessarily absolute? \"bioavailability about 40%\" supports pass. But if we cite it in contradictory claim, that's wrong. Could either omit 7-7 from contradictory claim or mention \"one report of 40% is inconsistent but still not transferable.\" Better to cite only low F records in contradictory claim: 7-1,7-2,7-3,7-4,7-5,7-6. Record 7-7 is supportive but low transferability; maybe include in a separate supportive claim? But loperamide is not relevant. The instructions say \"Missing, neutral, uncertain, or weak evidence is not evidence for low bioavailability.\" Record 7-7 40% is not low. But loperamide overall low. We can mention in contradictory claim \"although one record reports 40%, the weight of evidence is low F; transferability is negligible.\" But evidence_role contradictory? Hmm.\n\nNeed maybe not include loperamide as contradictory because transfer likelihood 0.0 and not relevant. But \"consider every evidence block\" means we should mention. Could include a claim: \"Loperamide evidence is not transferable due to P-gp efflux and very low structural similarity; its low F does not inform diazepam.\" But evidence_role? If it supports alternative, contradictory. But if not transferable, maybe not materially inform. The schema requires evidence_role supportive/contradictory. We can include as contradictory with low weight. Need be careful: \"low transferability lowers weight but does not reverse direction.\" So yes, contradictory.\n\nNeed maybe include \"prochlorperazine and zotepine are antipsychotics with phenothiazine/dibenzothiepine cores, not benzodiazepines; their low F is due to first-pass metabolism/P-gp and does not transfer.\" Good.\n\nNeed maybe include \"clobazam food doesn't affect absorption\" relevant to fasted state. Good.\n\nNeed maybe include \"diazepam itself is known to have near-complete oral absorption\" but no evidence block. Could include as claim? It is not from evidence. Better not.\n\nNeed final prediction pass.\n\nNeed ensure JSON valid. Need no extra text. Need \"claims\" array with objects. Need \"final_prediction\": \"pass\".\n\nLet's craft final with maybe 10 claims. Need concise but enough.\n\nPotential issue: \"Molecule 8 tenidap\" transfer likelihood 0.9856 but structure? Let's examine tenidap SMILES: NC(=O)N1C(=O)/C(=C(\\O)c2cccs2)c2cc(Cl)ccc21. It is a 3-substituted oxindole? Actually tenidap is an anti-inflammatory, not benzodiazepine. Transfer likelihood high due to chlorophenyl fused ring? It has F 85%. Supports pass. But is it \"meaningfully similar\"? It has a chlorinated aromatic fused to a heterocycle, but not benzodiazepine. Transfer score high maybe because Morgan similarity? Hmm. We can include as supportive but lower weight? The instructions: \"Compare directness, endpoint match, conditions, transferability, and uncertainty without counting repeated records independently.\" Tenidap direct absolute F, high transfer score, supports pass. Include.\n\nNeed maybe include \"Molecule 2 estazolam\" F 87% not absolute? Record says \"bioavailability\" not \"absolute\" but likely oral. Supports pass.\n\nNeed maybe include \"Molecule 1 alprazolam SR\" modified release. Query condition fasted, not modified release. But F high. Directness: modified release may differ from immediate release, but absolute F high. Supports pass. Need mention \"despite modified-release formulation, F remains high.\" Good.\n\nNeed maybe include \"Molecule 6 triazolam\" has variable values, some 30-40, 44, 50, 55, 60, 75, 85, 35.8. All above 20. Supports pass. Need mention \"variable but consistently above threshold.\" Good.\n\nNeed maybe include \"Molecule 4 adinazolam\" F 39-40, above threshold but lower than others. Supports pass.\n\nNeed maybe include \"Molecule 10 loxapine\" F 0.29, above threshold. Supports pass.\n\nNeed maybe include \"Molecule 7 loperamide\" one record 40%? Actually record 7-7 says 40%, which is above threshold. But loperamide is known low. Since transferability 0.0001, not material. Could mention in contradictory claim \"loperamide is generally reported low (0.3%) but one record 40%; due to P-gp and structural dissimilarity, it is not informative.\" But if we include record 7-7 in contradictory claim, it's not contradictory. Better to cite only low records. But \"consider every evidence block\" maybe we can mention in claim text \"Record 7-7 reports 40%, but the overall loperamide evidence is low and not transferable.\" But evidence_role contradictory? Hmm.\n\nMaybe create a separate claim for loperamide 40% as supportive? But loperamide is not similar; transfer likelihood 0.0001. It would be weak supportive. But the overall loperamide evidence is low. The instructions: \"Missing, neutral, uncertain, or weak evidence is not evidence for low bioavailability.\" Record 7-7 is weak due to transferability. Could ignore? But \"consider every evidence block\" means not skip. We can include a claim: \"Loperamide evidence is mixed (mostly very low F, one 40% report) but has negligible transferability due to P-gp efflux and structural dissimilarity; it does not materially inform the prediction.\" Evidence_role? It doesn't support either. But schema requires supportive/contradictory. Could set \"contradictory\" because low F supports fail, but with caveat. Or \"supportive\" because 40% supports pass? No, overall low. Better to set contradictory and mention the 40% outlier in text? But then evidence_role contradictory with a supportive record cited? Not ideal.\n\nMaybe omit loperamide from claims? But \"consider every evidence block\" maybe not necessarily include in claims? It says \"Return one or more concise claims using as many claims as needed to represent the experimental evidence that materially informs the decision.\" Loperamide is not material due to transferability 0.0. We can state in a claim \"Loperamide is not materially informative due to negligible transferability; its low F is driven by P-gp efflux.\" Evidence_role contradictory. That's okay. We don't need cite record 7-7. But \"consider every evidence block\" maybe we should mention record 7-7? Could say \"including one 40% report\" in text. But if we cite record 7-7 in contradictory claim, it's contradictory? Hmm.\n\nLet's think: The final answer is evaluated maybe by human? Need be accurate. We can include all records in claims. For loperamide, maybe claim: \"Loperamide has very low oral bioavailability in most reports (0.3%, low), but its transfer likelihood is 0.0001 and its low F is attributed to P-gp efflux and low solubility; one report of 40% is inconsistent and not transferable. This provides negligible contradictory evidence.\" Evidence_role contradictory. Cite records 7-1 through 7-7. This is okay because the claim overall is about loperamide evidence being non-transferable; the evidence_role contradictory because the low F direction supports fail. The 40% record is mentioned but not as primary. But \"contradictory means evidence supporting the alternative\" - if we cite 7-7, it doesn't support alternative. But the claim as a whole is contradictory? Hmm.\n\nMaybe better to not cite 7-7 in contradictory claim. But then \"consider every evidence block\" maybe not necessary to cite every record. The instructions: \"Each claim may cite any number of molecules, records, or both. At least one identifier is required per claim.\" It doesn't require every record cited. But \"Ensure you consider and analyze every evidence block.\" We can consider and decide not material. We can mention in claim text \"Record 7-7's 40% value is an outlier and not transferable.\" But if not cited, okay. But maybe better to cite all records in the relevant molecule claim. Hmm.\n\nLet's structure claims:\n\nSupportive:\n1. Alprazolam high F (records 1-1 to 1-4)\n2. Estazolam 87% (2-1)\n3. Adinazolam 39-40% (4-1 to 4-4)\n4. Clobazam 87-100% (5-1 to 5-10)\n5. Triazolam 44-60% etc (6-1 to 6-10)\n6. Tenidap 85% (8-1)\n7. Loxapine 29% (10-1)\n\nContradictory:\n8. Prochlorperazine low F but low transferability (3-1 to 3-10)\n9. Zotepine low F but low transferability (9-1)\n10. Loperamide low F but negligible transferability (7-1 to 7-6 maybe 7-7? Could cite 7-1 to 7-7 and mention 40% outlier? Hmm.)\n\nNeed maybe include \"Molecule 7 loperamide\" record 7-7 40% is actually supportive. If we cite it in contradictory, maybe not. Could create a separate supportive claim: \"Loperamide has one report of 40% oral bioavailability, but this is outweighed by low F reports and negligible transferability; not material.\" But evidence_role supportive? It supports pass weakly. But then contradictory claim for loperamide low F? That would be double-counting. Better to combine in one claim with evidence_role contradictory? Hmm.\n\nMaybe we can omit loperamide entirely from claims because not material. But \"consider every evidence block\" maybe we can mention in a claim \"Loperamide is not considered material due to negligible transferability.\" But evidence_role? Could be \"contradictory\" with low weight. Let's include with records 7-1 to 7-6 and not 7-7. But then record 7-7 not considered? We can mention in text \"Record 7-7's 40% value is an outlier and does not overcome the low-F loperamide profile; in any case transferability is negligible.\" But if not cited, maybe okay. But to be safe, cite 7-7 in the same claim? The claim could be \"Loperamide evidence is mixed (mostly very low F, one 40% report) but has negligible transferability; it does not materially support either outcome.\" But evidence_role? The schema only supportive/contradictory. If it doesn't materially support either, maybe not include? But \"Return one or more concise claims using as many claims as needed to represent the experimental evidence that materially informs the decision.\" If not material, no need. But \"consider every evidence block\" maybe we can include a claim \"Loperamide is not transferable and therefore not material\" with evidence_role contradictory? Hmm.\n\nLet's read user: \"Missing, neutral, uncertain, or weak evidence is not evidence for low bioavailability.\" This suggests we should not treat loperamide as evidence for fail. So maybe we should not include loperamide as contradictory. But we can mention in a claim \"Loperamide is weak/not transferable and is not used as evidence for low bioavailability.\" Evidence_role? Could be \"contradictory\" because it is low F but weak. But the instruction says weak evidence is not evidence for low bioavailability. So maybe evidence_role \"supportive\"? No.\n\nMaybe we can include a claim with evidence_role \"contradictory\" but text says \"not material.\" That's acceptable? The schema says \"supportive means evidence supporting your selected final prediction; contradictory means evidence supporting the alternative.\" If we say not material, it doesn't support alternative. But the low F direction is alternative. Hmm.\n\nI think it's okay to include contradictory claims for low F molecules with low transferability, because \"low transferability lowers weight but does not reverse direction.\" So they are contradictory but weak. For loperamide, record 7-7 40% is supportive but weak. We can mention in the contradictory claim \"although one record reports 40%, the overall loperamide profile is low; transferability is negligible.\" But then the claim is not purely contradictory. Maybe better to not cite 7-7 in contradictory claim. But \"consider every evidence block\" maybe not necessary to cite every record. Let's cite 7-1 to 7-6 for loperamide low F. Record 7-7 is a 40% report; we can include in a supportive claim? But loperamide is not similar. Maybe \"Loperamide has one report of 40% oral bioavailability, but this is an outlier and not transferable; it does not materially inform the prediction.\" Evidence_role supportive? Hmm.\n\nMaybe we can avoid loperamide entirely. But the instruction \"Ensure you consider and analyze every evidence block\" doesn't require every block in claims. We can consider and decide not material. But final answer should show reasoning? The claims are the reasoning. If we omit loperamide, maybe okay if not material. But \"Do not skip records; briefly state why any materially uninformative evidence deserves little weight.\" Ah! It says \"Do not skip records; briefly state why any materially uninformative evidence deserves little weight.\" So we should mention loperamide and prochlorperazine/zotepine as uninformative due to low transferability. So include claims.\n\nNeed maybe include \"Molecule 3 prochlorperazine\" and \"Molecule 9 zotepine\" and \"Molecule 7 loperamide\" as low transferability. Good.\n\nNeed maybe include \"Molecule 8 tenidap\" and \"Molecule 10 loxapine\" as supportive but maybe not as close as benzodiazepines. Good.\n\nNeed maybe include \"Molecule 2 estazolam\" and \"Molecule 1 alprazolam\" etc.\n\nLet's craft final JSON.\n\nNeed ensure no markdown? The user says \"Return exactly one valid JSON object\". We can output code block? Probably not; just JSON. Need valid JSON. Use double quotes. No trailing commas.\n\nLet's write claims:\n\n[\n  {\n    \"claim\": \"Alprazolam, a close triazolobenzodiazepine analogue, showed mean absolute oral bioavailability >0.84 (84-91%) after single oral sustained-release doses in healthy volunteers, strongly supporting high oral bioavailability for the benzodiazepine scaffold.\",\n    \"evidence_role\": \"supportive\",\n    \"molecule_ids\": [\"Molecule 1\"],\n    \"record_ids\": [\"Record 1-1\",\"Record 1-2\",\"Record 1-3\",\"Record 1-4\"]\n  },\n  {\n    \"claim\": \"Estazolam, a closely related benzodiazepine, had 87% oral bioavailability in healthy volunteers after a single 4 mg oral dose.\",\n    \"evidence_role\": \"supportive\",\n    \"molecule_ids\": [\"Molecule 2\"],\n    \"record_ids\": [\"Record 2-1\"]\n  },\n  {\n    \"claim\": \"Adinazolam, a benzodiazepine analogue, has absolute oral bioavailability of approximately 39-40% (reported range 33-45%) in healthy volunteers/humans, above the 20% threshold.\",\n    \"evidence_role\": \"supportive\",\n    \"molecule_ids\": [\"Molecule 4\"],\n    \"record_ids\": [\"Record 4-1\",\"Record 4-2\",\"Record 4-3\",\"Record 4-4\"]\n  },\n  {\n    \"claim\": \"Clobazam, a 1,5-benzodiazepine, has oral bioavailability of 87-100% in humans, with rapid absorption and no food effect, supporting high F for benzodiazepine-type structures.\",\n    \"evidence_role\": \"supportive\",\n    \"molecule_ids\": [\"Molecule 5\"],\n    \"record_ids\": [\"Record 5-1\",\"Record 5-2\",\"Record 5-3\",\"Record 5-4\",\"Record 5-5\",\"Record 5-6\",\"Record 5-7\",\"Record 5-8\",\"Record 5-9\",\"Record 5-10\"]\n  },\n  {\n    \"claim\": \"Triazolam, a close triazolobenzodiazepine, has reported oral bioavailability values mostly 44-60% (with PBPK/predicted estimates of 75-85% and an interstudy estimate of 0.358), all above 20%.\",\n    \"evidence_role\": \"supportive\",\n    \"molecule_ids\": [\"Molecule 6\"],\n    \"record_ids\": [\"Record 6-1\",\"Record 6-2\",\"Record 6-3\",\"Record 6-4\",\"Record 6-5\",\"Record 6-6\",\"Record 6-7\",\"Record 6-8\",\"Record 6-9\",\"Record 6-10\"]\n  },\n  {\n    \"claim\": \"Tenidap, a chlorophenyl heterocycle with high transfer likelihood, had absolute oral bioavailability of 85% in healthy male volunteers.\",\n    \"evidence_role\": \"supportive\",\n    \"molecule_ids\": [\"Molecule 8\"],\n    \"record_ids\": [\"Record 8-1\"]\n  },\n  {\n    \"claim\": \"Loxapine, despite high hepatic extraction, had systemic availability of 0.29 (29%) in humans, above the 20% threshold.\",\n    \"evidence_role\": \"supportive\",\n    \"molecule_ids\": [\"Molecule 10\"],\n    \"record_ids\": [\"Record 10-1\"]\n  },\n  {\n    \"claim\": \"Prochlorperazine has low oral bioavailability (5.7%, 12.5%, <10%, poor), but its transfer likelihood is 0.0 and it is a phenothiazine antipsychotic lacking the benzodiazepine core, so it provides only weak contradictory evidence.\",\n    \"evidence_role\": \"contradictory\",\n    \"molecule_ids\": [\"Molecule 3\"],\n    \"record_ids\": [\"Record 3-1\",\"Record 3-2\",\"Record 3-3\",\"Record 3-4\",\"Record 3-5\",\"Record 3-6\",\"Record 3-7\",\"Record 3-8\",\"Record 3-9\",\"Record 3-10\"]\n  },\n  {\n    \"claim\": \"Zotepine has low oral bioavailability (7-13%), but its transfer likelihood is 0.0 and it is a dibenzothiepine antipsychotic, so it provides weak contradictory evidence.\",\n    \"evidence_role\": \"contradictory\",\n    \"molecule_ids\": [\"Molecule 9\"],\n    \"record_ids\": [\"Record 9-1\"]\n  },\n  {\n    \"claim\": \"Loperamide is generally reported to have very low oral bioavailability (0.3%, low), but its transfer likelihood is 0.0001 and its low F is attributed to P-gp efflux and low solubility; it is not transferable to diazepam and provides negligible contradictory evidence.\",\n    \"evidence_role\": \"contradictory\",\n    \"molecule_ids\": [\"Molecule 7\"],\n    \"record_ids\": [\"Record 7-1\",\"Record 7-2\",\"Record 7-3\",\"Record 7-4\",\"Record 7-5\",\"Record 7-6\",\"Record 7-7\"]\n  }\n]\n\nNeed maybe include record 7-7 in contradictory? It says 40%, not low. The claim says \"generally reported very low\" and cites 7-7. That's inaccurate. Better to not cite 7-7 in contradictory claim. But \"Do not skip records\" maybe mention 7-7 in text: \"One record reports 40%, but this is an outlier and not transferable.\" But if we cite 7-7, the claim \"generally reported very low\" is still true, but record 7-7 is not low. Hmm.\n\nMaybe revise loperamide claim: \"Loperamide evidence is mixed (mostly very low F, with one 40% report) but has negligible transferability due to P-gp efflux and structural dissimilarity; it does not materially inform the prediction.\" Evidence_role contradictory? It doesn't support alternative. But maybe \"contradictory\" because low F direction. But the claim says mixed. Hmm.\n\nMaybe better to split:\n- Contradictory claim for loperamide low F records 7-1 to 7-6.\n- Supportive claim for loperamide 40% record 7-7? But loperamide is not similar; transferability 0.0001. It would be weak supportive. But \"low transferability lowers weight but does not reverse direction.\" So record 7-7 supports pass weakly. But including it as supportive might be weird because loperamide overall low. However, the instruction says \"Missing, neutral, uncertain, or weak evidence is not evidence for low bioavailability.\" Record 7-7 is weak evidence for pass. But not material. We can mention in a claim \"Loperamide record 7-7 reports 40%, but this is an outlier and not transferable; it does not affect the prediction.\" Evidence_role supportive? Hmm.\n\nMaybe we can include loperamide in a single claim with evidence_role \"contradictory\" and cite only low records. Then in the claim text mention \"Record 7-7's 40% value is an outlier and not transferable.\" But if not cited, okay. But \"Do not skip records\" maybe we should cite it. Could cite it in the same claim but the claim is contradictory. The record 7-7 is not contradictory. Hmm.\n\nLet's think of evaluation. The final answer likely checked for JSON and maybe final_prediction. The claims are for explanation. It's okay if one claim includes a mixed record? Maybe not.\n\nMaybe we can omit loperamide from claims entirely? But \"Do not skip records\" says briefly state why materially uninformative evidence deserves little weight. We can include a claim: \"Loperamide evidence is not material because transfer likelihood is 0.0001 and its low F is driven by P-gp efflux; the single 40% report does not change this.\" Evidence_role contradictory? Hmm.\n\nLet's set evidence_role \"contradictory\" for loperamide low F, cite records 7-1 to 7-6. Then add a separate supportive claim? \"Loperamide record 7-7 reports 40% oral bioavailability, but this is an outlier and not transferable; it provides negligible supportive evidence.\" Evidence_role supportive. But then we have two loperamide claims, one contradictory one supportive. That might be overkill but covers all records. However, \"without counting repeated records independently\" - we should not count loperamide 40% as independent support. But we can mention it's negligible. Maybe not necessary.\n\nMaybe better to include loperamide in one claim with evidence_role \"contradictory\" and cite all records, but phrase: \"Loperamide is predominantly very low F (0.3%, low) despite one 40% report; because transferability is negligible, this evidence is not informative.\" The evidence_role contradictory because the predominant direction is low. That's acceptable.\n\nNeed maybe include \"Molecule 7 record 7-7\" in the claim? It says \"despite one 40% report\" so citing it is okay. The claim is about loperamide evidence overall. I'll include all records and phrase carefully.\n\nNeed maybe include \"Molecule 3 prochlorperazine\" all records. Good.\n\nNeed maybe include \"Molecule 9 zotepine\" one record. Good.\n\nNeed maybe include \"Molecule 8 tenidap\" and \"Molecule 10 loxapine\" supportive. Good.\n\nNeed maybe include \"Molecule 1 alprazolam\" SR modified release. Query fasted. Should we mention \"modified-release formulation\" in claim? Yes.\n\nNeed maybe include \"Molecule 5 clobazam\" food doesn't affect absorption, relevant to fasted. Good.\n\nNeed maybe include \"Molecule 6 triazolam\" variable but above threshold. Good.\n\nNeed maybe include \"Molecule 4 adinazolam\" F 39-40. Good.\n\nNeed maybe include \"Molecule 2 estazolam\" 87%. Good.\n\nNeed maybe include \"Molecule 10 loxapine\" F 0.29. Good.\n\nNeed maybe include \"Molecule 8 tenidap\" F 85. Good.\n\nNeed maybe include \"Molecule 1 alprazolam\" F >0.84. Good.\n\nNeed final_prediction pass.\n\nLet's ensure JSON valid. Need no comments. Use double quotes. Need escape? No special characters except maybe \">\" okay. Need \"evidence_role\" values exactly \"supportive\" or \"contradictory\". Good.\n\nLet's produce final."
+        }
+      ],
+      "usage": {
+        "completion_tokens": 9055,
+        "prompt_tokens": 6137,
+        "total_tokens": 15192,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": {
+          "audio_tokens": null,
+          "cached_tokens": 512
+        },
+        "reasoning_tokens": 7887
+      },
+      "tool_count": 0
+    }
+  ],
+  "provenance": {
+    "source_kind": "original",
+    "requested_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "served_model": "deepseek-ai/DeepSeek-V4-Flash-0731",
+    "provider": "dgx027",
+    "upstream_provider": ""
+  },
+  "source_hashes": {
+    "trace_messages.jsonl": "92c03adb0ec590639ab62c16a1457af66e13986077d55e404f721a452a617ee9",
+    "final_reasoning_output.json": "29f416804d1bd2b4cc6d79f95b090bb3fe3030f717fdea23edc2b11b38467475",
+    "request.json": "db8699042091cdbad430d0132028f3a0a26c92a9b9c7ee20675e0fc74f5bc809"
+  }
+}

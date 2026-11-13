@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-store">
+<title>Token entropy · Gold trace samples</title>
+<style>
+  * { box-sizing: border-box; }
+  :root {
+    --bg: #f4f6f8;
+    --panel: #ffffff;
+    --line: #dce2e8;
+    --muted: #64748b;
+    --text: #17202a;
+    --nav: #17212b;
+    --blue: #1d5fa7;
+    --green: #087a55;
+    --red: #b42318;
+    --amber: #a15c00;
+  }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+  header { position: sticky; top: 0; z-index: 10; padding: 12px 18px; color: #fff; background: var(--nav); box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+  h1 { margin: 0 0 10px; font-size: 18px; letter-spacing: 0; }
+  .build { margin-left: 8px; color: #9bc5ed; font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .task-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+  .task-nav + .task-nav { margin-top: 8px; }
+  .nav-label { min-width: 58px; align-self: center; color: #9fb0c1; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+  .task-link { padding: 7px 11px; border: 1px solid #526171; border-radius: 5px; color: #dbe7f2; text-decoration: none; font-size: 13px; font-weight: 700; }
+  .task-link.active { border-color: #9bc5ed; color: #fff; background: var(--blue); }
+  .task-link.download { margin-left: auto; }
+  select, input, button { min-height: 34px; border-radius: 5px; font: 13px inherit; }
+  select, input { width: 100%; border: 1px solid #526171; padding: 6px 8px; color: #fff; background: #263442; }
+  button { border: 0; padding: 7px 12px; color: #fff; background: var(--blue); cursor: pointer; font-weight: 700; }
+  button:disabled { opacity: .55; cursor: wait; }
+  main { max-width: 1600px; margin: 0 auto; padding: 14px; }
+  .release-note { margin-bottom: 14px; padding: 11px 13px; border: 1px solid #b8d3ec; background: #eef7ff; font-size: 13px; line-height: 1.5; }
+  .release-note a { color: var(--blue); font-weight: 700; }
+  .layout { display: grid; grid-template-columns: 350px minmax(0, 1fr); gap: 14px; }
+  aside, .section { border: 1px solid var(--line); background: var(--panel); }
+  aside { position: sticky; top: 148px; align-self: start; max-height: calc(100vh - 162px); overflow: hidden; }
+  .aside-head, .section-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 9px 11px; border-bottom: 1px solid var(--line); background: #edf1f4; font-size: 13px; font-weight: 750; }
+  .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; padding: 9px; border-bottom: 1px solid var(--line); }
+  .filters input { grid-column: 1 / -1; color: var(--text); background: #fff; border-color: #b9c3ce; }
+  .filters select { color: var(--text); background: #fff; border-color: #b9c3ce; }
+  .sample-list { max-height: calc(100vh - 286px); overflow: auto; padding: 8px; }
+  .sample { width: 100%; margin-bottom: 6px; padding: 8px 9px; text-align: left; color: var(--text); background: #fff; border: 1px solid var(--line); border-radius: 5px; }
+  .sample.active { border-color: var(--blue); box-shadow: inset 3px 0 0 var(--blue); }
+  .sample-main { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
+  .sample-sub { margin-top: 4px; color: var(--muted); font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sample-levels { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+  .level-result { padding: 2px 6px; border: 1px solid currentColor; border-radius: 999px; font: 700 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .detail { min-width: 0; display: grid; gap: 12px; }
+  .overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border-bottom: 1px solid var(--line); }
+  .metric { min-width: 0; padding: 9px 11px; background: #fff; }
+  .metric-wide { grid-column: 1 / -1; }
+  .metric-key { color: var(--muted); font-size: 10px; font-weight: 800; text-transform: uppercase; }
+  .metric-value { margin-top: 4px; font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; white-space: pre-wrap; }
+  .stage-nav { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 11px; }
+  .pill { display: inline-flex; gap: 5px; align-items: center; padding: 3px 8px; border: 1px solid #ced7e0; border-radius: 999px; background: #f7f9fb; color: #344256; font-size: 11px; font-weight: 750; }
+  .ok { color: var(--green); }
+  .bad { color: var(--red); }
+  .warn { color: var(--amber); }
+  .tag { color: var(--muted); font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .section-body { padding: 10px 11px; }
+  .stage { border-top: 1px solid var(--line); }
+  .stage:first-child { border-top: 0; }
+  .stage > summary { display: flex; justify-content: space-between; gap: 10px; padding: 10px 11px; cursor: pointer; background: #f8fafb; font-size: 13px; font-weight: 750; }
+  .stage-content { min-width: 0; padding: 11px; display: grid; gap: 10px; }
+  .stage-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+  .json, .json-object, .json-array, .array-item { min-width: 0; }
+  .json { display: grid; gap: 7px; }
+  .json-row { min-width: 0; display: grid; gap: 9px; padding: 5px 0; border-bottom: 1px solid #edf1f4; }
+  .json-object.json-depth-0 > .json-row { grid-template-columns: minmax(110px, 180px) minmax(0, 1fr); }
+  .json-object:not(.json-depth-0) > .json-row { grid-template-columns: minmax(0, 1fr); gap: 3px; padding: 6px 0; }
+  .json-key { color: #596879; font-size: 12px; font-weight: 750; overflow-wrap: anywhere; }
+  .json-value { min-width: 0; font-size: 13px; line-height: 1.45; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .json-object { margin: 3px 0 5px; }
+  .json-object.json-depth-0 { padding-left: 0; border-left: 0; }
+  .json-object:not(.json-depth-0) {
+    margin: 5px 0;
+    padding: 6px 8px;
+    border: 1px solid #cfdfed;
+    border-left: 4px solid #6798c6;
+    border-radius: 5px;
+    background: #f6faff;
+  }
+  .json-object.json-depth-2 { border-color: #cce3d6; border-left-color: #62a17e; background: #f5fbf7; }
+  .json-object.json-depth-3 { border-color: #eadcbf; border-left-color: #b58b3f; background: #fdfaf3; }
+  .json-object.json-depth-4 { border-color: #ded4eb; border-left-color: #8c6bb1; background: #faf7fd; }
+  .json-object.json-depth-5 { border-color: #ecd2d8; border-left-color: #b96f7f; background: #fdf7f8; }
+  .json-object.json-depth-6 { border-color: #d5dce3; border-left-color: #758493; background: #f8fafb; }
+  .json-object:not(.json-depth-0) > .json-row > .json-key {
+    width: fit-content;
+    max-width: 100%;
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: #315d89;
+    background: #edf5fc;
+    font-size: 11px;
+  }
+  .json-object.json-depth-2 > .json-row > .json-key { color: #356b51; background: #edf7f1; }
+  .json-object.json-depth-3 > .json-row > .json-key { color: #765b2a; background: #faf5e9; }
+  .json-object.json-depth-4 > .json-row > .json-key { color: #62477e; background: #f2ecf8; }
+  .json-object.json-depth-5 > .json-row > .json-key { color: #854b58; background: #f9ecef; }
+  .json-object.json-depth-6 > .json-row > .json-key { color: #52606d; background: #eef1f4; }
+  .json-array { display: grid; gap: 7px; }
+  .json-array:not(.json-depth-0) { padding-left: 8px; }
+  .array-item { min-width: 0; padding: 7px 8px; border-left: 3px solid #7ea7cf; background: #f8fafb; }
+  .json-array.json-depth-2 > .array-item { border-left-color: #77aa91; }
+  .json-array.json-depth-3 > .array-item { border-left-color: #b49a68; }
+  .json-array.json-depth-4 > .array-item { border-left-color: #8c6bb1; background: #faf7fd; }
+  .json-array.json-depth-5 > .array-item { border-left-color: #b96f7f; background: #fdf7f8; }
+  .json-array.json-depth-6 > .array-item { border-left-color: #758493; }
+  .content-block { min-width: 0; margin-top: 7px; padding: 8px 9px; border-left: 3px solid #b8c4d0; background: #fafbfc; }
+  .trace-part { border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+  .trace-part > summary { padding: 9px 11px; cursor: pointer; font-size: 12px; font-weight: 800; background: #f3f6f8; }
+  .trace-part-body { padding: 10px; display: grid; gap: 10px; }
+  .evidence-grid, .record-grid { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .evidence-card, .record-card { min-width: 0; border: 1px solid #cfdfed; border-radius: 6px; background: #f8fbfe; }
+  .evidence-card > summary, .card-head { padding: 8px 10px; overflow-wrap: anywhere; font-size: 12px; font-weight: 800; }
+  .evidence-card > summary { cursor: pointer; background: #edf5fc; }
+  .card-body { padding: 9px 10px; display: grid; gap: 9px; }
+  .record-card .card-head { color: #356b51; background: #edf7f1; }
+  .card-smiles { padding: 7px 8px; border-left: 3px solid #6798c6; background: #fff; font: 11px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
+  pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  details.raw > summary { cursor: pointer; color: var(--muted); font-size: 12px; }
+  .empty, .loading { padding: 34px 20px; text-align: center; color: var(--muted); }
+  .error { padding: 12px; color: var(--red); background: #fff1f0; border: 1px solid #f1b8b3; }
+  @media (max-width: 900px) {
+    .task-link.download { margin-left: 0; }
+    .layout { grid-template-columns: 1fr; }
+    aside { position: static; max-height: none; }
+    .sample-list { max-height: 340px; }
+  }
+  @media (min-width: 901px) and (max-width: 1200px) {
+    .json-object.json-depth-0 > .json-row { grid-template-columns: minmax(0, 1fr); gap: 3px; }
+  }
+  .reference-link { color: var(--blue); text-decoration: underline; cursor: pointer; }
+  .unresolved { text-decoration: underline dotted; color: var(--amber); }
+  .record-card, .evidence-card { scroll-margin-top: 160px; }
+  .record-card:target, .evidence-card:target { outline: 3px solid var(--blue); }
+  .reference-intro { margin: 0 0 12px; font-size: 13px; line-height: 1.5; }
+  .record-card { margin-top: 8px; }
+  .card-body pre { font-size: 12px; }
+  .reference-grid { display: grid; gap: 8px; }
+  .entropy-controls { padding: 10px; border: 1px solid #b8d3ec; background: #f5faff; font-size: 12px; line-height: 1.5; }
+  .entropy-controls input { width: auto; min-height: auto; accent-color: var(--blue); }
+  .entropy-controls.provisional { border-color: #c88b35; background: #fff8eb; }
+  .entropy-provisional { color: #8a4800; }
+  .entropy-scale { display: inline-block; width: 110px; height: 12px; margin: 0 6px; vertical-align: middle; background: linear-gradient(to right, #fff, #ffb347); }
+  .entropy-token { background: var(--entropy-color); }
+  .entropy-token:hover { outline: 1px solid #a15c00; }
+  .entropy-top-only .entropy-token:not(.entropy-high) { background: transparent; }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="page-title">Token entropy · Gold trace samples</h1>
+  <nav class="task-nav" aria-label="Configuration">
+    <span class="nav-label">Evidence</span>
+    <a class="task-link" data-config="direct" href="?configuration=direct">Direct only</a>
+    <a class="task-link" data-config="direct_plus_indirect" href="?configuration=direct_plus_indirect">Direct + indirect</a>
+  </nav>
+  <nav class="task-nav" aria-label="Dataset">
+    <span class="nav-label">Dataset</span>
+    <a class="task-link" data-task="bbb_martins" href="?task=bbb_martins">Gold BBB</a>
+    <a class="task-link" data-task="bioavailability_ma" href="?task=bioavailability_ma">Gold Oral bioavailability</a>
+    <a class="task-link" href="summary.tsv" download>Entropy summary TSV</a>
+    <a class="task-link" href="entropy_distribution.svg">Entropy distribution</a>
+    <a class="task-link download" href="legacy_gold_results.tsv" download>Full-run results TSV</a>
+  </nav>
+</header>
+<main>
+  <div id="task-note" class="release-note">Loading saved legacy Gold test examples…</div>
+  <div class="layout">
+    <aside>
+      <div class="aside-head"><span>Paired trace samples</span><span id="count" class="tag">0</span></div>
+      <div class="filters">
+        <input id="search" type="text" placeholder="Search query, outcome, SMILES" aria-label="Search examples">
+        <select id="correctness" aria-label="Correctness"><option value="">All outcomes</option><option value="correct">Correct</option><option value="wrong">Wrong</option></select>
+        <select id="status" aria-label="Status"><option value="">All statuses</option><option value="ok">OK</option><option value="failed">Failed</option></select>
+      </div>
+      <div id="samples" class="sample-list"></div>
+    </aside>
+    <section id="detail" class="detail" aria-live="polite"></section>
+  </div>
+</main>
+<script>
+const params = new URLSearchParams(location.search);
+const state = { release: null, task: params.get("task") || "bbb_martins",
+  config: params.get("configuration") || "direct_plus_indirect", selected: params.get("query"), payload: null, loading: 0,
+  entropyManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false };
+const $ = id => document.getElementById(id);
+const outcomes = { TP: "True positive", TN: "True negative", FP: "False positive", FN: "False negative" };
+function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"}[c])); }
+function panel(title, content, open = false) { return `<details class="trace-part"${open ? " open" : ""}><summary>${esc(title)}</summary><div class="trace-part-body">${content}</div></details>`; }
+function metric(title, value) { return `<div class="metric"><div class="metric-key">${esc(title)}</div><div class="metric-value">${esc(value)}</div></div>`; }
+function referenceId(visibleId) { return `ref-${encodeURIComponent(visibleId)}`; }
+async function fetchJson(path) {
+  const response = await fetch(path, { cache: "no-store" });
+  if (!response.ok) throw new Error(`HTTP ${response.status}: ${path}`);
+  return response.json();
+}
+function scoredRange(source, start, end, groups) {
+  let html = "", previous = start;
+  for (const group of groups) {
+    const left = Math.max(start, group.start), right = Math.min(end, group.end);
+    if (left >= right) continue;
+    html += esc(source.slice(previous, left));
+    html += `<span class="entropy-token${group.high ? " entropy-high" : ""}" style="--entropy-color:${group.color}" title="${esc(group.title)}">${esc(source.slice(left, right))}</span>`;
+    previous = right;
+  }
+  return html + esc(source.slice(previous, end));
+}
+function linkedText(value, references = state.payload?.references || [], groups = []) {
+  const ids = new Set(references.map(r => r.visible_id.toLowerCase()));
+  const aliases = references.map(r => r.visible_id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const pattern = new RegExp(`\\b(?:${[...aliases.sort((a, b) => b.length - a.length), "Molecule\\s+\\d+", "Record\\s+\\d+(?:-\\d+)?"].join("|")})\\b`, "gi");
+  const source = String(value ?? "");
+  let html = "", previous = 0;
+  for (const match of source.matchAll(pattern)) {
+    html += scoredRange(source, previous, match.index, groups);
+    const known = ids.has(match[0].toLowerCase());
+    const reference = known && references.find(r => r.visible_id.toLowerCase() === match[0].toLowerCase());
+    const text = scoredRange(source, match.index, match.index + match[0].length, groups);
+    html += known ? `<a class="reference-link" href="#${referenceId(reference.visible_id)}">${text}</a>`
+      : `<span class="unresolved" title="This exact reference is absent from the saved prompt index.">${text}</span>`;
+    previous = match.index + match[0].length;
+  }
+  return html + scoredRange(source, previous, source.length, groups);
+}
+function entropyText(name, text) {
+  const section = state.entropy?.sections[name];
+  if (!section) return linkedText(text);
+  const offsets = [0];
+  for (const char of text) offsets.push(offsets[offsets.length - 1] + char.length);
+  const groups = [];
+  for (const token of [...section.tokens].sort((a, b) => a.start - b.start || a.end - b.end)) {
+    if (token.start === token.end) continue;
+    const previous = groups[groups.length - 1];
+    if (previous && token.start < previous.end) {
+      previous.end = Math.max(previous.end, token.end);
+      previous.tokens.push(token);
+    } else groups.push({start: token.start, end: token.end, tokens: [token]});
+  }
+  for (const group of groups) {
+    group.start = offsets[group.start]; group.end = offsets[group.end];
+    const ratio = Math.min(1, Math.max(...group.tokens.map(t => t.entropy)) / state.entropyManifest.color_max);
+    group.color = `rgb(255,${Math.round(255 - 76 * ratio)},${Math.round(255 - 184 * ratio)})`;
+    group.high = group.tokens.some(t => t.top20);
+    group.title = group.tokens.map(t => `Position ${t.position} · token ${t.token_id} · H=${t.entropy.toFixed(6)} nats · log p=${t.logprob.toFixed(6)}${t.alternate_entropy === undefined ? "" : ` · alternate H=${t.alternate_entropy.toFixed(6)} nats (half-sized chunks) · |ΔH|=${t.absolute_chunk_difference.toFixed(6)} nats`}${t.top20 ? " · top 20%" : ""}`).join("\n");
+  }
+  return linkedText(text, state.payload.references, groups);
+}
+async function loadEntropy(sample, payload) {
+  const manifest = state.entropyManifest;
+  if (!manifest) return {entropy: null, notice: state.entropyNotice};
+  const key = `${state.task}/${state.config}/${String(sample.configurations[state.config].query_index).padStart(5, "0")}`;
+  const entry = manifest.examples[key];
+  if (!entry) return {entropy: null, notice: "Token entropy is not available for this example."};
+  try {
+    const response = await fetch(entry.path, {cache: "no-store"});
+    if (!response.ok) throw new Error(`HTTP ${response.status}: ${entry.path}`);
+    const bytes = await response.arrayBuffer();
+    const digest = await crypto.subtle.digest("SHA-256", bytes);
+    const sha256 = Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, "0")).join("");
+    if (sha256 !== entry.sha256) throw new Error("Sidecar hash mismatch");
+    const entropy = JSON.parse(new TextDecoder().decode(bytes));
+    const final = payload.trace.find(r => r.task === "final_summary");
+    const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
+    for (const [name, text] of Object.entries({reasoning: assistant?.reasoning || "", answer: assistant?.content || ""})) {
+      const section = entropy.sections?.[name], length = Array.from(text).length;
+      if (section?.text !== text || !Array.isArray(section.tokens)) throw new Error(`Saved ${name} text mismatch`);
+      if (section.tokens.some(t => !Number.isInteger(t.position) || !Number.isInteger(t.token_id) || !Number.isInteger(t.start) || !Number.isInteger(t.end)
+          || t.start < 0 || t.end < t.start || t.end > length || !Number.isFinite(t.entropy) || t.entropy < 0
+          || !Number.isFinite(t.logprob) || typeof t.top20 !== "boolean"
+          || ((t.alternate_entropy !== undefined || t.absolute_chunk_difference !== undefined)
+              && (!Number.isFinite(t.alternate_entropy) || t.alternate_entropy < 0
+                  || !Number.isFinite(t.absolute_chunk_difference) || t.absolute_chunk_difference < 0)))) throw new Error(`Invalid ${name} token scores`);
+      let covered = 0;
+      for (const token of [...section.tokens].sort((a, b) => a.start - b.start)) {
+        if (token.start > covered) throw new Error(`Incomplete ${name} token scores`);
+        covered = Math.max(covered, token.end);
+      }
+      if (covered !== length) throw new Error(`Incomplete ${name} token scores`);
+    }
+    if (!Object.keys(payload.source_hashes).every(k => entropy.source_hashes?.[k] === payload.source_hashes[k])) throw new Error("Source trace hash mismatch");
+    return {entropy, notice: ""};
+  } catch (error) {
+    return {entropy: null, notice: `Token entropy unavailable: ${error.message}. The original trace is shown.`};
+  }
+}
+function renderReferences() {
+  const references = state.payload.references;
+  const molecules = references.filter(r => r.unit_kind === "molecule");
+  const records = references.filter(r => r.unit_kind === "record");
+  const cards = molecules.map(molecule => {
+    const children = records.filter(r => r.containing_unit_id === molecule.stable_id);
+    const body = children.map(record => `<details class="record-card" id="${referenceId(record.visible_id)}"><summary class="card-head">${esc(record.visible_id)} · measurement for ${esc(molecule.visible_id)}</summary><div class="card-body"><pre>${esc(record.text)}</pre>${panel("Source identity", `<pre>${esc(JSON.stringify(record, null, 2))}</pre>`)}</div></details>`).join("");
+    return `<details class="evidence-card" id="${referenceId(molecule.visible_id)}"><summary>${esc(molecule.visible_id)} · reference molecule · L${esc(molecule.first_visible_level)} <span class="tag">${children.length} records</span></summary><div class="card-body"><pre>${esc(molecule.text)}</pre>${body}</div></details>`;
+  }).join("");
+  const unmatched = records.filter(r => !molecules.some(m => m.stable_id === r.containing_unit_id));
+  return `<div class="section"><div class="section-head">Reference guide <span class="tag">${molecules.length} molecules · ${records.length} records</span></div><div class="section-body">
+    <p class="reference-intro"><strong>Molecule 3</strong> identifies a reference molecule in this saved prompt. <strong>Record 3-2</strong> is its second experimental record. Click a reference in the reasoning or final answer to open its evidence below. Numbering is local to each trace.</p>
+    <p class="reference-intro">These legacy prompts use <strong>Molecule / Record</strong> labels. C1 or C2 inside chemical notation can describe atoms or ring closures; they are not automatically context IDs. Dotted amber references have no exact match in the saved index.</p>
+    ${panel(`Browse ${molecules.length} context molecules and ${records.length} records`, `<div class="reference-grid">${cards}</div>`)}${unmatched.length ? `<div class="warn">Records with no saved parent mapping: ${esc(unmatched.map(r => r.visible_id).join(", "))}</div>` : ""}
+  </div></div>`;
+}
+function renderInput(record) {
+  return record.messages.filter(m => m.role !== "assistant").map((message, index) =>
+    panel(`${message.role === "system" ? "System" : "User"} prompt${index > 1 ? " (retry)" : ""}`, `<pre>${esc(message.content)}</pre>`, message.role === "user")).join("");
+}
+function renderDetail(sample) {
+  const arm = state.release.tasks[state.task].configurations[state.config];
+  const prediction = sample.configurations[state.config];
+  const final = state.payload.trace.find(r => r.task === "final_summary");
+  const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
+  const prior = state.payload.trace.filter(r => r.task !== "final_summary");
+  const provenance = state.payload.provenance;
+  const outcome = `${sample.label === prediction.pred_label ? "T" : "F"}${prediction.pred_label ? "P" : "N"}`;
+  const overview = [metric("Query index", prediction.query_index), metric("Gold label", sample.label), metric("Prediction", prediction.pred_label),
+    metric("Outcome", outcomes[outcome]), metric("Configuration", arm.label), metric("Served model", provenance.served_model),
+    metric("Provider", [provenance.provider, provenance.upstream_provider].filter(Boolean).join(" / ")), metric("Query UID", sample.query_uid), metric("SMILES", sample.smiles)].join("");
+  const provisional = /\bPROVISIONAL\b/i.test(state.entropyManifest?.notice || "");
+  const entropyControls = state.entropy ? `<div class="entropy-controls${provisional ? " provisional" : ""}">${provisional ? '<strong class="entropy-provisional">Provisional entropy estimates</strong><br>' : ""}Token entropy · T=${esc(state.entropyManifest.temperature)} · nats. <span class="entropy-scale"></span> 0–${state.entropyManifest.color_max.toFixed(2)} nats (shared scale; darker values are clipped).<br><label><input id="entropy-top-only" type="checkbox"${state.entropyTopOnly ? " checked" : ""}> Highlight only the highest-entropy 20% of tokens in each section</label><br>${esc(state.entropyManifest.notice)}<br>Scores follow the original generated text, including JSON spacing.<br>Scoring revision: ${esc(state.entropy.model_revision)}. Prompt token difference: ${esc(state.entropy.diagnostics?.prompt_token_delta ?? "unknown")}. Hover over text for individual token scores.</div>`
+    : state.entropyNotice ? `<div class="entropy-controls warn">${esc(state.entropyNotice)}</div>` : "";
+  $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
+  $("detail").innerHTML = `<div class="section"><div class="section-head">Sample overview <span class="tag">Gold test</span></div><div class="overview">${overview}</div></div>
+    ${renderReferences()}<div class="section"><div class="section-head">Saved prediction <span class="tag">${esc(arm.label)}</span></div><div class="stage-content">
+      ${panel("Input", renderInput(final), true)}
+      ${entropyControls}
+      ${panel("Reasoning", assistant?.reasoning ? `<pre>${entropyText("reasoning", assistant.reasoning)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>')}
+      ${panel("Final output", `<pre>${entropyText("answer", state.entropy ? assistant?.content || "" : final.response_text || assistant?.content || "")}</pre>`)}
+      ${panel("Cached query prior", prior.map(record => `${renderInput(record)}${panel("Saved prior output", `<pre>${esc(record.response_text)}</pre>`)}`).join("") || "No cached prior recorded.")}
+      ${panel("Provenance", `<pre>${esc(JSON.stringify({run_uid: arm.run_uid, prompt_version: arm.prompt_version, identity_policy: arm.identity_policy, ...provenance, source_hashes: state.payload.source_hashes}, null, 2))}</pre>`)}
+      ${panel("Raw saved messages", `<pre>${esc(JSON.stringify(state.payload.trace, null, 2))}</pre>`)}
+    </div></div>`;
+  if ($("entropy-top-only")) $("entropy-top-only").onchange = event => {
+    state.entropyTopOnly = event.target.checked;
+    $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
+  };
+}
+function updateNavigation() {
+  const query = new URLSearchParams({ task: state.task, configuration: state.config, query: state.selected || "" });
+  history.replaceState(null, "", `?${query}`);
+  document.querySelectorAll("[data-config], [data-task]").forEach(link => {
+    const next = new URLSearchParams(query);
+    if (link.dataset.config) next.set("configuration", link.dataset.config);
+    if (link.dataset.task) { next.set("task", link.dataset.task); next.delete("query"); }
+    link.href = `?${next}`;
+    link.classList.toggle("active", link.dataset.config ? link.dataset.config === state.config : link.dataset.task === state.task);
+  });
+}
+function renderSamples() {
+  const samples = state.release.tasks[state.task].samples;
+  const search = $("search").value.toLowerCase(), correctness = $("correctness").value, status = $("status").value;
+  const filtered = samples.filter(s => {
+    const p = s.configurations[state.config];
+    return (!search || `${s.query_index} ${s.query_uid} ${s.smiles} ${s.selection_outcome} ${outcomes[s.selection_outcome]}`.toLowerCase().includes(search))
+      && (!correctness || p.correct === (correctness === "correct")) && status !== "failed";
+  });
+  $("count").textContent = `${filtered.length} / ${samples.length}`;
+  $("samples").innerHTML = filtered.map(s => {
+    const p = s.configurations[state.config];
+    return `<button class="sample${state.selected === s.query_uid ? " active" : ""}" data-query="${esc(s.query_uid)}"><div class="sample-main"><strong>#${p.query_index}</strong><span class="${p.correct ? "ok" : "bad"}">${p.correct ? "correct" : "wrong"}</span></div><div class="sample-sub">label=${s.label} prediction=${p.pred_label}</div><div class="sample-sub">Selected as ${esc(outcomes[s.selection_outcome])} in direct + indirect</div></button>`;
+  }).join("") || '<div class="empty">No matching samples.</div>';
+  document.querySelectorAll("[data-query]").forEach(button => button.onclick = () => selectSample(button.dataset.query));
+}
+async function selectSample(uid) {
+  const loading = ++state.loading;
+  state.selected = uid;
+  renderSamples(); updateNavigation();
+  $("detail").innerHTML = '<div class="section"><div class="loading">Loading saved trace…</div></div>';
+  const sample = state.release.tasks[state.task].samples.find(s => s.query_uid === uid);
+  try {
+    const payload = await fetchJson(sample.configurations[state.config].path);
+    if (loading !== state.loading) return;
+    state.payload = payload;
+    const scored = await loadEntropy(sample, payload);
+    if (loading !== state.loading) return;
+    state.entropy = scored.entropy; state.entropyNotice = scored.notice;
+    renderDetail(sample);
+  } catch (error) {
+    if (loading === state.loading) $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`;
+  }
+}
+function openReference(id) {
+  const target = document.getElementById(id);
+  if (!target) return;
+  for (let element = target; element; element = element.parentElement) if (element.tagName === "DETAILS") element.open = true;
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+document.addEventListener("click", event => {
+  const link = event.target.closest(".reference-link");
+  if (link) { event.preventDefault(); openReference(link.getAttribute("href").slice(1)); }
+});
+window.addEventListener("hashchange", () => openReference(location.hash.slice(1)));
+for (const id of ["search", "correctness", "status"]) $(id).addEventListener("input", () => { if (state.release) renderSamples(); });
+fetchJson("legacy_gold_release_manifest.json").then(async release => {
+  state.release = release;
+  try {
+    const response = await fetch("entropy_manifest.json", {cache: "no-store"});
+    if (response.status !== 404) {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const manifest = await response.json();
+      if (manifest.schema_version !== "trace_token_entropy.v1" || manifest.units !== "nats" || manifest.temperature !== 1
+          || !Number.isFinite(manifest.color_max) || manifest.color_max <= 0 || !manifest.examples || typeof manifest.examples !== "object") throw new Error("Invalid entropy manifest");
+      state.entropyManifest = manifest;
+    }
+  } catch (error) { state.entropyNotice = `Token entropy unavailable: ${error.message}. The original trace is shown.`; }
+  if (!release.tasks[state.task]) state.task = "bbb_martins";
+  const task = release.tasks[state.task];
+  if (!task.configurations[state.config]) state.config = "direct_plus_indirect";
+  const arm = task.configurations[state.config];
+  document.title = `${task.title} · Token entropy`;
+  $("page-title").textContent = `${task.title} · Token entropy`;
+  $("task-note").textContent = `${release.notice} ${arm.label}: full test cohort n=${arm.metrics.n_total}, macro-F1=${arm.metrics.macro_f1.toFixed(4)}. Labels: 1=${state.task === "bbb_martins" ? "BBB pass" : "high oral bioavailability"}; 0=${state.task === "bbb_martins" ? "BBB fail" : "low oral bioavailability"}.`;
+  const sample = task.samples.find(s => s.query_uid === state.selected) || task.samples[0];
+  await selectSample(sample.query_uid);
+}).catch(error => { $("task-note").textContent = "Unable to load saved examples."; $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`; });
+</script>
+</body>
+</html>

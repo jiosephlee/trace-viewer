@@ -1,0 +1,1137 @@
+{
+  "query_uid": "BBBCTX_6285F118E1F828E47638",
+  "configuration": "direct_plus_indirect",
+  "references": [
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 1",
+      "stable_id": "GNAYTOOUVUIGPH-UHFFFAOYSA-N@L1",
+      "source_analog_id": "GNAYTOOUVUIGPH-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 1",
+      "text": "SMILES: COc1ccc(N2CCN(c3c(C)c(C)c4c(c3C)C(=O)C(C)(C)O4)CC2)cc1\nMorgan similarity: 0.1964\nTransfer likelihood: 0.7416"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 1-1",
+      "stable_id": "sr_c19486d5531645da852058e4c1cb7543",
+      "source_analog_id": "GNAYTOOUVUIGPH-UHFFFAOYSA-N",
+      "containing_unit_id": "GNAYTOOUVUIGPH-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 1-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: Kp\nResult: 3.4 ratio\nAssay context: pharmacokinetic study\nSpecies: rats\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"measured 1 h after intravenous (iv) administration; Kp defined as brain/plasma concentration ratio\"\nReported evidence: A pharmacokinetic study of compound 1a revealed that it exhibited brain penetrability in rats, with a brain/plasma concentration ratio (Kp) of 3.4 at 1 h after intravenous (iv) administration."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 2",
+      "stable_id": "CBPNZQVSJQDFBE-FUXHJELOSA-N@L1",
+      "source_analog_id": "CBPNZQVSJQDFBE-FUXHJELOSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 2",
+      "text": "SMILES: CO[C@H]1C[C@@H]2CC[C@@H](C)[C@@](O)(O2)C(=O)C(=O)N2CCCC[C@H]2C(=O)O[C@H]([C@H](C)C[C@@H]2CC[C@@H](OC(=O)C(C)(CO)CO)[C@H](OC)C2)CC(=O)[C@H](C)/C=C(\\C)[C@@H](O)[C@@H](OC)C(=O)[C@H](C)C[C@H](C)/C=C/C=C/C=C/1C\nMorgan similarity: 0.1552\nTransfer likelihood: 0.3256"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-1",
+      "stable_id": "sr_c49f5bdb9b284930814d83c072a48255",
+      "source_analog_id": "CBPNZQVSJQDFBE-FUXHJELOSA-N",
+      "containing_unit_id": "CBPNZQVSJQDFBE-FUXHJELOSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: CSF detection\nResult: impermeable BBB permeability\nAssay context: CSF measurement\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: CSF concentrations of temsirolimus were detected in only one of nine tested patients, suggesting poor CNS penetration."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 3",
+      "stable_id": "SJWWTRQNNRNTPU-ABBNZJFMSA-N@L1",
+      "source_analog_id": "SJWWTRQNNRNTPU-ABBNZJFMSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 3",
+      "text": "SMILES: CC(=O)O[C@H]1CC(C)(C)C(=C=C/C(C)=C/C=C/C(C)=C/C=C/C=C(C)/C=C/C=C(\\C)C(=O)C[C@@]23O[C@]2(C)C[C@@H](O)CC3(C)C)[C@](C)(O)C1\nMorgan similarity: 0.1591\nTransfer likelihood: 0.7891"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-1",
+      "stable_id": "sr_790cb85ee80548018313025bd7f7c4d4",
+      "source_analog_id": "SJWWTRQNNRNTPU-ABBNZJFMSA-N",
+      "containing_unit_id": "SJWWTRQNNRNTPU-ABBNZJFMSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nAssay context: in vivo\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"molecule accumulates in the brain after oral administration\"\nReported evidence: Fucoxanthin has been shown in vivo to penetrate the blood-brain barrier and accumulate in the brain after oral administration."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 4",
+      "stable_id": "CFCUWKMKBJTWLW-BKHRDMLASA-N@L1",
+      "source_analog_id": "CFCUWKMKBJTWLW-BKHRDMLASA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 4",
+      "text": "SMILES: CO[C@H](C(=O)[C@@H](O)[C@@H](C)O)[C@@H]1Cc2cc3cc(O[C@H]4C[C@@H](O[C@H]5C[C@@H](O)[C@H](O)[C@@H](C)O5)[C@H](O)[C@@H](C)O4)c(C)c(O)c3c(O)c2C(=O)[C@H]1O[C@H]1C[C@@H](O[C@H]2C[C@@H](O[C@H]3C[C@](C)(O)[C@H](O)[C@@H](C)O3)[C@@H](O)[C@@H](C)O2)[C@H](O)[C@@H](C)O1\nMorgan similarity: 0.1722\nTransfer likelihood: 0.4091"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 4-1",
+      "stable_id": "sr_d80318f529e04479be137374fb260036",
+      "source_analog_id": "CFCUWKMKBJTWLW-BKHRDMLASA-N",
+      "containing_unit_id": "CFCUWKMKBJTWLW-BKHRDMLASA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 4-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: CSF:plasma ratio\nResult: 0.12 ratio\nSpecies: monkey\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Peak ratio observed at 1.5 hours.\"\nReported evidence: In monkeys, mithramycin showed peak CSF:plasma ratios of 0.12 at 1.5 hours, and little material was found within normal brains."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 5",
+      "stable_id": "CFJRSKULEDUDKL-UHFFFAOYSA-N@L1",
+      "source_analog_id": "CFJRSKULEDUDKL-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 5",
+      "text": "SMILES: CN1CCc2c(-c3ccc(S(=O)(=O)N(C)C)cc3)cc3c(c2C1)NC(=O)/C3=N\\OC(CCO)C(=O)O\nMorgan similarity: 0.1544\nTransfer likelihood: 0.6761"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-1",
+      "stable_id": "sr_05ca6c195fa643e18a826aee2f663614",
+      "source_analog_id": "CFJRSKULEDUDKL-UHFFFAOYSA-N",
+      "containing_unit_id": "CFJRSKULEDUDKL-UHFFFAOYSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: half-life in the CSF\nResult: 10 h\nAssay context: repeated lumbar punctures\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"NS1209 can be detected in the CSF for up to 24 h after a single infusion.\"\nReported evidence: It was confirmed that NS1209 penetrates the blood brain barrier and can be detected in the CSF (via repeated lumbar punctures) for up to 24 h after a single infusion. After a 4 h infusion the half-life in the CSF was approximately 10 h."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 6",
+      "stable_id": "OFPZNTXZCGKCMU-VXBOPZJTSA-N@L1",
+      "source_analog_id": "OFPZNTXZCGKCMU-VXBOPZJTSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 6",
+      "text": "SMILES: C=C/C=C\\[C@H](C)[C@@H]1OC(=O)/C=C\\C=C\\[C@@H](C)[C@@H](O)C[C@H](O)/C=C\\[C@H](C)[C@H](O)[C@@H](C)C[C@@H](C)CC[C@@H](O)[C@@H]1C\nMorgan similarity: 0.1628\nTransfer likelihood: 0.699"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-1",
+      "stable_id": "sr_fbe5d2ef7e9f459c83ad0259a67749f6",
+      "source_analog_id": "OFPZNTXZCGKCMU-VXBOPZJTSA-N",
+      "containing_unit_id": "OFPZNTXZCGKCMU-VXBOPZJTSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: AUC0.5–16h\nResult: 6245 nM h\nAssay context: LC-MS/MS analysis\nSpecies: mice\nExperimental details:\n  - bbb_permeability_label: good_penetration\n\nAdditional details: \"Dosed via 5 mg/kg i.p. administration in CD1 mice. High brain exposure was also explicitly noted in paragraph 7. After 2 hours, brain levels of dictyostatin became comparable to and eventually exceeded plasma levels.\"\nReported evidence: In CD1 mice, the brain exposure of dictyostatin was found to be AUC0.5–16h = 6245 nM-h, which the authors note indicates a possible role for its macrocyclic structure in determining overall brain penetration."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 7",
+      "stable_id": "OSICWVVWEXKSBD-LFAYTRTRSA-N@L1",
+      "source_analog_id": "OSICWVVWEXKSBD-LFAYTRTRSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 7",
+      "text": "SMILES: C=CC(C)(C)c1[nH]c2cccc3c2c1C[C@@H]1[C@@H]3[C@@H](OC(C)=O)[C@@H](C)CN1C\nMorgan similarity: 0.184\nTransfer likelihood: 0.2908"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-1",
+      "stable_id": "sr_3a17fe951321431c8697b74251b0c30f",
+      "source_analog_id": "OSICWVVWEXKSBD-LFAYTRTRSA-N",
+      "containing_unit_id": "OSICWVVWEXKSBD-LFAYTRTRSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: impermeable BBB permeability\nAssay context: tissue distribution\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Tissue distribution of SM-1 was measured in rat, and the concentrations of SM-1 in the brain, muscle, and plasma were low, suggesting that SM-1 was difficult to penetrate the blood-brain barrier (BBB)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 8",
+      "stable_id": "CUKSFECWKQBVED-INIZCTEOSA-N@L1",
+      "source_analog_id": "CUKSFECWKQBVED-INIZCTEOSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 8",
+      "text": "SMILES: CC(C)=CC(=O)O[C@H]1Cc2cc3ccc(=O)oc3cc2OC1(C)C\nMorgan similarity: 0.157\nTransfer likelihood: 0.7419"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-1",
+      "stable_id": "sr_c9d96d01843e45de9f8ada13bae1d044",
+      "source_analog_id": "CUKSFECWKQBVED-INIZCTEOSA-N",
+      "containing_unit_id": "CUKSFECWKQBVED-INIZCTEOSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nEndpoint: Cbrain/Cplasma\nResult: permeable BBB permeability\nAssay context: in vivo pharmacokinetic study (oral administration)\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: good_penetration\n\nAdditional details: \"Measured at 0.5, 1, 3, and 5 h after administration.\"\nReported evidence: Following oral administration to male Sprague-Dawley (SD) rats, decursin showed ratios of compound concentration in brain with respect to plasma (Cbrain/Cplasma) of >1.5 at 0.5, 1, 3, and 5 h, suggesting a good brain/plasma ratio."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 9",
+      "stable_id": "OCZZCFAOOWZSRX-LRHLXKJSSA-N@L1",
+      "source_analog_id": "OCZZCFAOOWZSRX-LRHLXKJSSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 9",
+      "text": "SMILES: COc1ccc(-c2oc3c(CC=C(C)C)c(O[C@@H]4O[C@H](CO)[C@@H](O)[C@H](O)[C@H]4O)cc(O)c3c(=O)c2O[C@@H]2O[C@@H](C)[C@H](O)[C@@H](O)[C@H]2O[C@@H]2OC[C@@H](O)[C@H](O)[C@H]2O)cc1\nMorgan similarity: 0.1447\nTransfer likelihood: 0.414"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 9-1",
+      "stable_id": "sr_7a75f98f5806411ca4c3b8685b14a6d5",
+      "source_analog_id": "OCZZCFAOOWZSRX-LRHLXKJSSA-N",
+      "containing_unit_id": "OCZZCFAOOWZSRX-LRHLXKJSSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 9-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: impermeable BBB permeability\nAssay context: tissue distribution study\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Epimedin B concentrations were the lowest in the brain compared to other examined rat tissues.\"\nReported evidence: In a tissue distribution study in rats, epimedin B was found to be the least concentrated in the rat brain, demonstrating that epimedin B could hardly pass through the blood-brain barrier."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 10",
+      "stable_id": "RSOZZQTUMVBTMR-XGUNBQNXSA-N@L1",
+      "source_analog_id": "RSOZZQTUMVBTMR-XGUNBQNXSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 10",
+      "text": "SMILES: C=C[C@@]1(C)CC(=O)[C@]2(O)[C@@]3(C)[C@@H](O)CCC(C)(C)[C@@H]3[C@H](OC(=O)CCN(C)C)[C@H](OC(C)=O)[C@@]2(C)O1\nMorgan similarity: 0.1504\nTransfer likelihood: 0.7635"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 10-1",
+      "stable_id": "sr_d967ec85b5794cb690128ffce5aee770",
+      "source_analog_id": "RSOZZQTUMVBTMR-XGUNBQNXSA-N",
+      "containing_unit_id": "RSOZZQTUMVBTMR-XGUNBQNXSA-N@L1",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 10-1",
+      "text": "Level: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: permeable\n\nReported evidence: The influence of NKH477, which crosses the blood-brain barrier, on levels of cAMP accumulation in brain was determined."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 11",
+      "stable_id": "WDZCUPBHRAEYDL-GZAUEHORSA-N@L2",
+      "source_analog_id": "WDZCUPBHRAEYDL-GZAUEHORSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 11",
+      "text": "SMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C6CCCC6)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\nMorgan similarity: 0.87"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-1",
+      "stable_id": "sr_6313f699fe014f1c8c464a6ce75caef6",
+      "source_analog_id": "WDZCUPBHRAEYDL-GZAUEHORSA-N",
+      "containing_unit_id": "WDZCUPBHRAEYDL-GZAUEHORSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-1",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7161\nEndpoint: CSF/serum concentration ratio\nResult: <0.15 mg/L (CSF) / 7.2 mg/L (serum) mg/L\nAssay context: clinical measurement\nSpecies: human\nConditions: \"tuberculous meningitis\"\nAdditional details: \"Measured 10 hours after oral administration; dose was not specified.\"\nReported evidence: In 5 Chinese patients with tuberculous meningitis, CSF concentrations of rifapentine were below the limit of detection (<0.15 mg/L) while mean serum concentrations were 7.2 mg/L 10 hours after oral administration."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-2",
+      "stable_id": "sr_0affdb04b7f94630b01a42318c8a8d7b",
+      "source_analog_id": "WDZCUPBHRAEYDL-GZAUEHORSA-N",
+      "containing_unit_id": "WDZCUPBHRAEYDL-GZAUEHORSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-2",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7305\nEndpoint: brain concentrations/plasma concentrations\nResult: <20% %\nAssay context: in vivo\nSpecies: rat\nAdditional details: \"Measured after 10 mg/kg oral dose at 8, 24 and 72 hours.\"\nReported evidence: In rats, brain concentrations of rifapentine were less than 20% of plasma concentrations at 8, 24, and 72 hours after oral administration of a 10 mg/kg dose."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-3",
+      "stable_id": "sr_30c21c0a1f9f412cbda4fe6c5adcebe9",
+      "source_analog_id": "WDZCUPBHRAEYDL-GZAUEHORSA-N",
+      "containing_unit_id": "WDZCUPBHRAEYDL-GZAUEHORSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-3",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8272\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Low CSF penetration is associated with the molecule being lipophilic and having plasma protein binding of 80%.\"\nReported evidence: Peak plasma concentration of RPT occurs approximately 5 hours after ingestion, and overall CSF penetration is estimated to be low (lipophilic and plasma protein binding of 80%)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-4",
+      "stable_id": "sr_59158ea7dc6f4459b6d2bd761e76710b",
+      "source_analog_id": "WDZCUPBHRAEYDL-GZAUEHORSA-N",
+      "containing_unit_id": "WDZCUPBHRAEYDL-GZAUEHORSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-4",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7193\nResult: impermeable BBB permeability\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Rifapentine does not appear to cross the blood-brain barrier to any quantitatively important extent."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 12",
+      "stable_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N@L2",
+      "source_analog_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 12",
+      "text": "SMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4cc(c(/C=N/N5CCN([14CH3])CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\C(C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\nMorgan similarity: 0.7692"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-1",
+      "stable_id": "sr_a723c3e1bdfb44c68e6bbbc30d8375e3",
+      "source_analog_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N",
+      "containing_unit_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-1",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8378\nResult: impermeable BBB permeability\nAssay context: PET imaging\nSpecies: baboon\nConditions: \"healthy\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Rifampicin (RIF) and/or its radiolabeled metabolites poorly penetrate the blood-brain barrier in healthy baboons."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-2",
+      "stable_id": "sr_1224599f9dba4e41a7fb5437c3dbe8de",
+      "source_analog_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N",
+      "containing_unit_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-2",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6421\nEndpoint: brain tissue concentration\nResult: 0.29 µg/mL\nAssay context: brain tissue resection\nSpecies: human\nConditions: \"brain tissue resected around tumors\"\nAdditional details: \"following i.v. infusion of 600 mg RIF in 500 ml saline over 3 h\"\nReported evidence: In human studies, Rifampicin (RIF) concentrations in brain tissue resected around tumors were determined to be 0.29 µg/ml following i.v. infusion of 600 mg RIF."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-3",
+      "stable_id": "sr_02b899cd052b4e14b543a1b726deec13",
+      "source_analog_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N",
+      "containing_unit_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-3",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6283\nEndpoint: brain tissue concentration\nResult: C30min = 0.000642 %ID/cc (1.09 µg/ml), C60min = 0.000536 %ID/cc (0.912 µg/ml), C90min = 0.000710 %ID/cc (1.21 µg/ml) %ID/cc, µg/ml\nAssay context: PET imaging\nSpecies: baboon\nConditions: \"healthy\"\nReported evidence: In healthy baboons, the concentration of injected [11C]RIF in the whole brain area was monitored, with values of C30min = 0.000642 %ID/cc (1.09 µg/ml), C60min = 0.000536 %ID/cc (0.912 µg/ml), and C90min = 0.000710 %ID/cc (1.21 µg/ml)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-4",
+      "stable_id": "sr_30239dab6e5e470e9785bf68cadc9414",
+      "source_analog_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N",
+      "containing_unit_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-4",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.2526\nEndpoint: brain tissue concentration\nResult: 0.87 µg/g\nSpecies: monkey\nAdditional details: \"6 hours after i.v. administration of [14C]RIF\"\nReported evidence: Previous studies using [14C]RIF determined a brain tissue concentration of 0.87 µg/g in monkeys 6 hours after i.v. administration."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-5",
+      "stable_id": "sr_01d2b2fea19a42feb562974ae87fe68e",
+      "source_analog_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N",
+      "containing_unit_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-5",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.0768\nEndpoint: brain tissue concentration\nResult: 10.25 µg/mL\nSpecies: mouse\nAdditional details: \"3-7 hours after i.p. administration; 100 mg/kg dose\"\nReported evidence: Studies in mice revealed a brain tissue concentration of 10.25 µg/ml for Rifampicin (RIF) 3–7 hours after i.p. administration of a 100 mg/kg dose."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-6",
+      "stable_id": "sr_f5559d93dd7745e5a787f2b54c814c17",
+      "source_analog_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N",
+      "containing_unit_id": "PFVADPRLYWBIHL-VQMJXJLGSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-6",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.0728\nEndpoint: brain concentration / MIC\nResult: permeable BBB permeability\nAssay context: PET imaging\nSpecies: baboon\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"BBB penetration ability was ranked as PZA \\u003e INH \\u003e RIF.\"\nReported evidence: In baboons, RIF and its radiolabeled metabolites penetrate the blood-brain barrier, and estimated concentrations in the brain are 3–4 times higher than their MIC values."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 13",
+      "stable_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L2",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 13",
+      "text": "SMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C)C4=O\nMorgan similarity: 0.5583"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-1",
+      "stable_id": "sr_031213c1ed5140f5ba23ed41acc666a0",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-1",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7249\nEndpoint: CSF/plasma ratio\nResult: 0.227 (0.205–0.285)\nAssay context: rabbit TBM model\nSpecies: rabbit\nConditions: \"TBM infection\"\nReported evidence: In a rabbit model of TBM, the median CSF/plasma ratio for rifabutin was 0.227 (0.205–0.285)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-2",
+      "stable_id": "sr_42762fb9d58f407cb16b6b6b5b40311c",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-2",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6441\nEndpoint: brain/plasma ratio\nResult: 0.856 (0.790–1.16)\nAssay context: rabbit TBM model\nSpecies: rabbit\nConditions: \"TBM infection\"\nAdditional details: \"Median brain rifabutin concentration was 536 (321\\u2013961) ng/mL.\"\nReported evidence: In a rabbit model of TBM, the median brain rifabutin concentration was 536 (321–961) ng/mL, with a brain/plasma ratio of 0.856 (0.790–1.16)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-3",
+      "stable_id": "sr_196269222a294830b48d2776680d77b6",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-3",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6489\nEndpoint: CSF-to-serum concentration ratio\nResult: 0.52 ratio\nAssay context: in vivo\nConditions: \"24 h after infection\"\nReported evidence: At 24 h after infection, the CSF-to-serum concentration ratio of rifabutin was 0.52 ± 0.18."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-4",
+      "stable_id": "sr_496fda314c634906a08f5b5fde9e5b3f",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-4",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6459\nResult: impermeable BBB permeability\nAssay context: whole-body autoradiography\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Brain levels of radioactivity were reported as very low; tissue distribution was also investigated using the combustion technique.\"\nReported evidence: After oral and intravenous administration of 14C-rifabutin to female Sprague-Dawley rats, brain levels of radioactivity were found to be very low, which was further confirmed by whole-body autoradiography."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-5",
+      "stable_id": "sr_935bf63370724d12824a0fdfe959315e",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-5",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6115\nResult: substrate efflux-transporter substrate status\nAssay context: in silico ADMET prediction model for P-glycoprotein substrate status\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: ABCB1\n\nReported evidence: In the ADMET prediction table (paragraph 41), rifabutin is predicted to be a P-glycoprotein substrate (PGS: Substrate), based on an in silico model."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-6",
+      "stable_id": "sr_d4ece81df5c1403987610597781b0af6",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-6",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.2793\nEndpoint: % penetration into CSF\nResult: 50.4 (Range: 36-70) %\nAssay context: paired serum and cerebrospinal fluid (CSF) specimens\nSpecies: human\nConditions: \"AIDS patients treated with 450 mg/day\"\nAdditional details: \"Mean serum concentration was 92.5 ng/ml and mean CSF concentration was 46.9 ng/ml.\"\nReported evidence: In AIDS patients treated with 450 mg/day of rifabutin, the mean percentage penetration into the cerebrospinal fluid (CSF) was 50.4% (range 36-70%), with mean concentrations of 92.5 ng/ml in serum and 46.9 ng/ml in CSF."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-7",
+      "stable_id": "sr_28570fa4dd8e4b34bd84f8f398393918",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-7",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.3864\nEndpoint: mean concentrations in CSF\nResult: 0.33 to 2.26 µg/ml\nAssay context: in vivo\nConditions: \"experimental pneumococcal meningitis\"\nReported evidence: In an in vivo experimental model, dose-dependent mean concentrations of rifabutin in the CSF ranged from 0.33 to 2.26 µg/ml."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-8",
+      "stable_id": "sr_53aa95c864d141cabb8e33fb45ad13c6",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-8",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.2473\nEndpoint: CSF concentrations / serum concentrations\nResult: 50.4 %\nAssay context: CSF measurement\nSpecies: human\nConditions: \"HIV-positive patients\"\nReported evidence: In 5 HIV-positive patients, rifabutin cerebrospinal fluid (CSF) concentrations averaged 50.4% of those in the serum."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-9",
+      "stable_id": "sr_558788d9531f4104a38815a2a411b089",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-9",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.2021\nEndpoint: CSF concentrations relative to serum concentrations\nResult: 50.4 %\nAssay context: In vivo\nSpecies: human\nConditions: \"HIV-infected patients receiving oral rifabutin at 450 mg/d\"\nAdditional details: \"Mean CSF concentration: 47 ng/mL (range 27-70 ng/mL); mean serum concentration: 93 ng/mL (range 65-136 ng/mL).\"\nReported evidence: Among five HIV-infected patients who received oral rifabutin at a dosage of 450 mg/d, concentrations of the drug in CSF (mean concentration, 47 ng/mL; range, 27-70 ng/mL) averaged 50.4% of those in serum (mean concentration, 93 ng/mL; range, 65-136 ng/mL)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-10",
+      "stable_id": "sr_8e1c276e2a9341e292f163d79b0e4042",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-10",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.307\nEndpoint: % of dose\nResult: 4.3 10^-2 %\nAssay context: oral administration of 14C-rifabutin\nSpecies: rat\nConditions: \"24 h after administration\"\nExperimental details:\n  - bbb_permeability_label: low_permeability\n\nReported evidence: After administration of 14C-rifabutin to rats, a low content of the compound was found in the brain."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 14",
+      "stable_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N@L2",
+      "source_analog_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 14",
+      "text": "SMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(cc(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\nMorgan similarity: 0.697"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-1",
+      "stable_id": "sr_0958791d35eb4391b07f1304ea9b6b16",
+      "source_analog_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N",
+      "containing_unit_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 14-1",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.5387\nEndpoint: CSF concentration\nResult: < 4 µg/ml\nAssay context: CSF measurement\nSpecies: human\nConditions: \"administered intravenously (40 mg/kg per day) only\"\nAdditional details: \"Measured 1 hour after dose.\"\nReported evidence: When rifamycin was administered intravenously (40 mg/kg per day) without intraventricular delivery, CSF levels were less than 4 µg/ml 1 hour after the dose."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-2",
+      "stable_id": "sr_16a43dd1d5784564985b87e0b533b1ec",
+      "source_analog_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N",
+      "containing_unit_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 14-2",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.484\nResult: impermeable BBB permeability\nAssay context: monitoring blood and CSF levels\nSpecies: human\nConditions: \"neonatal meningitis, meningeal inflammation\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"The drug was reported to not cross the BBB in concentrations sufficient for effective treatment despite high serum levels.\"\nReported evidence: In infants with neonatal meningitis, it was found that rifamycin does not cross the blood-brain barrier in sufficient concentration for the effective treatment of the disease, even in the presence of high serum levels and meningeal inflammation."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-3",
+      "stable_id": "sr_490d0b04ee0e42e5aa07241e102d4031",
+      "source_analog_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N",
+      "containing_unit_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 14-3",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8261\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Rifamycin SV has rather limited penetration into the brain which is a clear liability for the repositioning of this drug for HAT."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 15",
+      "stable_id": "SQTCRTQCPJICLD-WYINWVEJSA-N@L2",
+      "source_analog_id": "SQTCRTQCPJICLD-WYINWVEJSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 15",
+      "text": "SMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(cc(OCC(=O)O)c4c3C2=O)NC(=O)C(C)=CC=C[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\nMorgan similarity: 0.6449"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 15-1",
+      "stable_id": "sr_a6d7b125f64949e9b361c7e639487f12",
+      "source_analog_id": "SQTCRTQCPJICLD-WYINWVEJSA-N",
+      "containing_unit_id": "SQTCRTQCPJICLD-WYINWVEJSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 15-1",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7649\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Rifamycin B does not diffuse through the blood-brain barrier."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 16",
+      "stable_id": "YJQPYGGHQPGBLI-KGSXXDOSSA-N@L2",
+      "source_analog_id": "YJQPYGGHQPGBLI-KGSXXDOSSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 16",
+      "text": "SMILES: CO[C@@H]1[C@@H](OC(N)=O)[C@@H](O)[C@H](Oc2ccc3c(O)c(NC(=O)c4ccc(O)c(CC=C(C)C)c4)c(=O)oc3c2C)OC1(C)C\nMorgan similarity: 0.1655"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 16-1",
+      "stable_id": "sr_fb02fc1b52bf408e98b2e3cc4c574e75",
+      "source_analog_id": "YJQPYGGHQPGBLI-KGSXXDOSSA-N",
+      "containing_unit_id": "YJQPYGGHQPGBLI-KGSXXDOSSA-N@L2",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 16-1",
+      "text": "Level: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.5832\nEndpoint: unbound brain-to-plasma ratio\nResult: 0.065 ratio\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Novobiocin exhibited limited brain penetration with an unbound brain-to-plasma ratio (BBB) of 0.065."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 17",
+      "stable_id": "RCINICONZNJXQF-MZXODVADSA-N@L3",
+      "source_analog_id": "RCINICONZNJXQF-MZXODVADSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 17",
+      "text": "SMILES: CC(=O)O[C@H]1C(=O)[C@@]2(C)[C@H]([C@H](OC(=O)c3ccccc3)[C@]3(O)C[C@H](OC(=O)[C@H](O)[C@@H](NC(=O)c4ccccc4)c4ccccc4)C(C)=C1C3(C)C)[C@]1(OC(C)=O)CO[C@@H]1C[C@@H]2O\nMorgan similarity: 0.1346"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 17-1",
+      "stable_id": "sr_4a0c48b7251e4b359fc98fe4d81962c9",
+      "source_analog_id": "RCINICONZNJXQF-MZXODVADSA-N",
+      "containing_unit_id": "RCINICONZNJXQF-MZXODVADSA-N@L3",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 17-1",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.9124\nEndpoint: Permeability\nResult: 2.98 10^-6 cm^2/s\nAssay context: diffusion chamber with BMECs\nReported evidence: In a diffusion chamber assay with BMECs, 3[H] Taxol showed a permeability of 2.98 E-6 cm2/s."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 18",
+      "stable_id": "AZSNMRSAGSSBNP-XPNPUAGNSA-N@L3",
+      "source_analog_id": "AZSNMRSAGSSBNP-XPNPUAGNSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 18",
+      "text": "SMILES: CC[C@H](C)[C@H]1O[C@]2(CC[C@@H]1C)C[C@@H]1C[C@@H](C/C=C(\\C)[C@@H](O[C@H]3C[C@H](OC)[C@@H](O[C@H]4C[C@H](OC)[C@@H](O)[C@H](C)O4)[C@H](C)O3)[C@@H](C)/C=C/C=C3\\CO[C@@H]4[C@H](O)C(C)=C[C@@H](C(=O)O1)[C@]34O)O2\nMorgan similarity: 0.1585"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 18-1",
+      "stable_id": "sr_0e2d75a226da4cb7b4ad73117e6426a5",
+      "source_analog_id": "AZSNMRSAGSSBNP-XPNPUAGNSA-N",
+      "containing_unit_id": "AZSNMRSAGSSBNP-XPNPUAGNSA-N@L3",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 18-1",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.875\nEndpoint: Plasma/brain ratio\nResult: 2.7 (day 6), 3.2 (day 10)\nAssay context: in vivo\nSpecies: rat\nConditions: \"neonatal offspring, day 6 and 10 post-partum\"\nAdditional details: \"Measured using radiolabelled ivermectin and/or its metabolites; this period correlates with the completion of the blood-brain barrier in rats.\"\nReported evidence: In the offspring of dams administered ivermectin, the plasma/brain ratio of radiolabelled ivermectin and/or its metabolites was 2.7 on day 6 post-partum and 3.2 on day 10 post-partum."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 19",
+      "stable_id": "OBSYBRPAKCASQB-AGQYDFLVSA-N@L3",
+      "source_analog_id": "OBSYBRPAKCASQB-AGQYDFLVSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 19",
+      "text": "SMILES: COC(=O)[C@@H]1C[C@H](OC(C)=O)C(=O)[C@H]2[C@@]1(C)CC[C@H]1C(=O)O[C@H](c3ccoc3)C[C@]21C\nMorgan similarity: 0.1439"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 19-1",
+      "stable_id": "sr_e1bd00ed58c84f47a749fbb33d239956",
+      "source_analog_id": "OBSYBRPAKCASQB-AGQYDFLVSA-N",
+      "containing_unit_id": "OBSYBRPAKCASQB-AGQYDFLVSA-N@L3",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 19-1",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.8944\nEndpoint: maximum concentration in the brain (% of administered dose)\nResult: 3.3 %\nAssay context: i.v. administration of [11C]-salvinorin A\nSpecies: baboons\nConditions: \"adult female baboons\"\nExperimental details:\n  - bbb_permeability_label: permeable\n  - bbb_transport_label: passive_diffusion\n\nAdditional details: \"The drug is stated to easily and rapidly cross the BBB via passive diffusion due to high lipophilicity.\"\nReported evidence: In adult female baboons, i.v. administration of [11C]-salvinorin A resulted in the drug crossing the BBB and reaching a maximum brain concentration of 3.3% of the administered dose within 40 seconds."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 20",
+      "stable_id": "JQNINBDKGLWYMU-GEAQBIRJSA-N@L3",
+      "source_analog_id": "JQNINBDKGLWYMU-GEAQBIRJSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 20",
+      "text": "SMILES: CO[C@H]1/C=C/C[C@H](C)[C@@H](C)S(=O)(=O)NC(=O)c2ccc3c(c2)N(C[C@@H]2CC[C@H]21)C[C@@]1(CCCc2cc(Cl)ccc21)CO3\nMorgan similarity: 0.1477"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 20-1",
+      "stable_id": "sr_fd5b1d3614ec4d1dbe5eb2babf71ba80",
+      "source_analog_id": "JQNINBDKGLWYMU-GEAQBIRJSA-N",
+      "containing_unit_id": "JQNINBDKGLWYMU-GEAQBIRJSA-N@L3",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 20-1",
+      "text": "Level: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.8829\nResult: impermeable BBB permeability\nAssay context: BOILED-Egg model\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Based on the BOILED-Egg model prediction, AMG176 is not BBB permeant."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 21",
+      "stable_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L4",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 21",
+      "text": "SMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C)C4=O\nMorgan similarity: 0.5583"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 21-1",
+      "stable_id": "sr_092d495050c44af7a8f8c4ff09f9b18d",
+      "source_analog_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N",
+      "containing_unit_id": "ATEBXHFBFRCZMA-VXTBVIBXSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 21-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.6202\nEndpoint: efflux_ratio\nResult: 4.7 ratio\nAssay context: MDCK-MDR1 bidirectional permeability assay\nExperimental details:\n  - evidence_type: bidirectional_transport\n  - transporter_identifier: ABCB1\n\nAdditional details: \"Mean Papp A-B: 3.57e-6 cm/s; Mean Papp B-A: 16.8e-6 cm/s; A-B recovery: 91.3%; B-A recovery: 67.9%\"\nReported evidence: In the MDCK-MDR1 assay with overexpression of Pgp, rifabutin showed a mean Papp A-B of 3.57 x 10^-6 cm/s, mean Papp B-A of 16.8 x 10^-6 cm/s, and an efflux ratio of 4.7, with 91.3% recovery in the A-B direction and 67.9% recovery in the B-A direction."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 22",
+      "stable_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N@L4",
+      "source_analog_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 22",
+      "text": "SMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(cc(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\nMorgan similarity: 0.697"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 22-1",
+      "stable_id": "sr_77423cd8c7a945498105638c9aee3f19",
+      "source_analog_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N",
+      "containing_unit_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 22-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8488\nResult: inhibitor efflux-transporter inhibition status\nAssay context: MDCK-MRP2/OATP8 cells; rifamycin SV\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - perturbation: 50 µM rifamycin SV\n  - transporter_identifier: UniProt:O42859\n\nAdditional details: \"Rifamycin SV inhibited MRP2-mediated export of [3H]BSP in cell-based assay; also confirmed in vesicle assay (38% of control LTC4 transport).\"\nReported evidence: Rifamycin SV inhibited transcellular [3H]BSP transport in MDCK-MRP2/OATP8 cells more than intracellular accumulation, indicating MRP2 inhibition; vesicle data confirmed 38% of control LTC4 transport at 50 µM."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 22-2",
+      "stable_id": "sr_99d9b19a37f04001b35a7a650f24ad4d",
+      "source_analog_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N",
+      "containing_unit_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 22-2",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8549\nResult: inhibitor efflux-transporter inhibition status\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Rifamycin SV (Xifaxan) is stated to inhibit P-gp activity, cited from literature.\"\nReported evidence: Rifamycin SV has been shown to inhibit P-gp activity (Xifaxan; Salix Pharmaceuticals), providing a possible explanation for the observed slight stimulation of digoxin uptake by rifamycin SV in untransfected HEK293 cells."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 22-3",
+      "stable_id": "sr_bfb501d2b67949f9840ff4cdf9c0d8b1",
+      "source_analog_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N",
+      "containing_unit_id": "HJYYPODYNSCCOU-ODRIEIDWSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 22-3",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8454\nEndpoint: other\nResult: inhibitor efflux-transporter inhibition status\nAssay context: HEK-MRP2 membrane vesicles; 50 µM rifamycin SV\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - perturbation: 50 µM rifamycin SV\n  - transporter_identifier: UniProt:O42859\n\nAdditional details: \"Inhibition of [3H]LTC4 transport to 38% of control at 50 \\u00b5M rifamycin SV.\"\nReported evidence: Rifamycin SV at 50 µM inhibited [3H]LTC4 transport into HEK-MRP2 membrane vesicles to 38% of control, demonstrating MRP2 inhibition."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 23",
+      "stable_id": "NZCRJKRKKOLAOJ-XRCRFVBUSA-N@L4",
+      "source_analog_id": "NZCRJKRKKOLAOJ-XRCRFVBUSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 23",
+      "text": "SMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c5c(nc6cc(C)ccn65)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\nMorgan similarity: 0.6455"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 23-1",
+      "stable_id": "sr_1c2f4509fffc4976b61969f7bc2923bd",
+      "source_analog_id": "NZCRJKRKKOLAOJ-XRCRFVBUSA-N",
+      "containing_unit_id": "NZCRJKRKKOLAOJ-XRCRFVBUSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 23-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8583\nResult: substrate efflux-transporter substrate status\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: UniProt:P06795\n\nReported evidence: Rifaximin (RFX) is a semisynthetic BCS class IV drug that acts intraluminally in the GIT with an oral absorption of <0.4% due to low aqueous solubility, poor permeability, and high P-glycoprotein efflux."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 23-2",
+      "stable_id": "sr_d4569bd205bb44f98296d8609653a2d1",
+      "source_analog_id": "NZCRJKRKKOLAOJ-XRCRFVBUSA-N",
+      "containing_unit_id": "NZCRJKRKKOLAOJ-XRCRFVBUSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 23-2",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8617\nEndpoint: other\nResult: substrate efflux-transporter substrate status\nAssay context: Single-pass rat intestinal perfusion (SPIP) model\nConditions: \"250-fold supersaturation of rifaximin via ASD formulation\"\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: substrate\n  - perturbation: P-gp inhibitor GF120918 (elacridar) co-administered\n\nAdditional details: \"Absorption rate coefficient fold change: 2; comparable to GF120918 effect.\"\nReported evidence: In the single-pass rat intestinal perfusion (SPIP) model, the absorption rate coefficient (ka) of rifaximin at 250-fold supersaturation (achieved by amorphous solid dispersion) was doubled compared to the crystalline solubility ka, and this ka was similar to that observed in the presence of the strong P-gp inhibitor GF120918, indicating that P-gp-mediated efflux was saturated by the high supersaturation."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 23-3",
+      "stable_id": "sr_8f96f6af3c094b84bfc575a223d2b15c",
+      "source_analog_id": "NZCRJKRKKOLAOJ-XRCRFVBUSA-N",
+      "containing_unit_id": "NZCRJKRKKOLAOJ-XRCRFVBUSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 23-3",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8684\nResult: substrate efflux-transporter substrate status\nAssay context: human oral administration, pharmacokinetic analysis\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Only about 0.4% of oral dose reaches systemic circulation due to intestinal P-gp efflux and hepatic CYP3A4 metabolism.\"\nReported evidence: Rifaximin's low systemic absorption (~0.4% of dose reaches circulation) is partly due to its interaction with the P-glycoprotein (P-gp)-mediated efflux transport mechanism in the intestine, as well as metabolism by CYP3A4."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 23-4",
+      "stable_id": "sr_1d1eef4b345941809dd2c752a06e6362",
+      "source_analog_id": "NZCRJKRKKOLAOJ-XRCRFVBUSA-N",
+      "containing_unit_id": "NZCRJKRKKOLAOJ-XRCRFVBUSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 23-4",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8562\nResult: substrate efflux-transporter substrate status\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - perturbation: Co-administration with Lopinavir/ritonavir (a P-gp inhibitor)\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"No BBB-specific context; the interaction is systemic. Text states increased levels of rifaximin by P-gp inhibition.\"\nReported evidence: Lopinavir/ritonavir increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter, indicating that rifaximin is a substrate of P-gp and that Lopinavir/ritonavir inhibits this efflux transporter."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 23-5",
+      "stable_id": "sr_944c06aea98541cba3e5b5c384b060c1",
+      "source_analog_id": "NZCRJKRKKOLAOJ-XRCRFVBUSA-N",
+      "containing_unit_id": "NZCRJKRKKOLAOJ-XRCRFVBUSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 23-5",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8572\nResult: substrate efflux-transporter substrate status\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n\nAdditional details: \"Statement from abstract and also supported in introduction (paragraph 4).\"\nReported evidence: Rifaximin is stated to be a BCS class IV (low-solubility, low-permeability) drug and also a P-gp substrate."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 24",
+      "stable_id": "PKVRCIRHQMSYJX-AIFWHQITSA-N@L4",
+      "source_analog_id": "PKVRCIRHQMSYJX-AIFWHQITSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 24",
+      "text": "SMILES: COc1cc2c(cc1O)CCN[C@]21CS[C@@H]2c3c(OC(C)=O)c(C)c4c(c3[C@H](COC1=O)N1[C@@H]2[C@H]2c3c(cc(C)c(OC)c3O)C[C@@H]([C@@H]1O)N2C)OCO4\nMorgan similarity: 0.1667"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 24-1",
+      "stable_id": "sr_54fe1f8612a64cf1b76cad941234f2e4",
+      "source_analog_id": "PKVRCIRHQMSYJX-AIFWHQITSA-N",
+      "containing_unit_id": "PKVRCIRHQMSYJX-AIFWHQITSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 24-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.7856\nResult: transporter_limited_brain_exposure\nAssay context: In vivo disposition study using mdr1a/1b(-/-) and wild-type mice\nConditions: \"mdr1a/1b(-/-) knockout mouse model\"\nExperimental details:\n  - evidence_type: genetic_perturbation\n  - interaction_conclusion: transporter_limited_brain_exposure\n  - perturbation: mdr1a/1b knockout\n  - transporter_identifier: UniProt:B5X0E4\n\nAdditional details: \"Distribution into brain and testis decreased by P-gp; no numeric brain data reported. Double knockout of mouse Mdr1a (Abcb1a) and Mdr1b (Abcb1b).\"\nReported evidence: In the study, P-gp (encoded by mdr1a/1b) was shown to be important for the in vivo disposition of trabectedin, as its expression decreased the distribution into the brain and testis. This indicates that P-gp limits the brain exposure of trabectedin at the blood-brain barrier."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 25",
+      "stable_id": "XOPYFXBZMVTEJF-PDACKIITSA-N@L4",
+      "source_analog_id": "XOPYFXBZMVTEJF-PDACKIITSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 25",
+      "text": "SMILES: CO[C@]12C=C[C@](C)(O1)[C@@H](OC(=O)/C=C/c1cn(C)cn1)C[C@H]1C(C)=CC[C@H](C(C)C)[C@H]1/C=C\\2CO[C@@H]1OC[C@@H](O)[C@@H](O)[C@@H]1OC(C)=O\nMorgan similarity: 0.1806"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 25-1",
+      "stable_id": "sr_52bc48cbe1aa45d99d28c501071f7fc5",
+      "source_analog_id": "XOPYFXBZMVTEJF-PDACKIITSA-N",
+      "containing_unit_id": "XOPYFXBZMVTEJF-PDACKIITSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 25-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8621\nResult: substrate efflux-transporter substrate status\nAssay context: cancer cell-lines with Pgp-overexpression\nConditions: \"Pgp-overexpressing cancer cell-lines\"\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - perturbation: Pgp overexpression\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Eleutherobin is not active against Pgp-overexpressing cell lines that are resistant to paclitaxel, suggesting it is a Pgp substrate.\"\nReported evidence: Unlike eleutherobin and sarcodictyins, and similar to many epothilones, discodermolide and dictyostatin are active against cancer cell-lines that are resistant to paclitaxel because of Pgp-overexpression; this implies that eleutherobin and sarcodictyins are inactive against such lines and thus are likely Pgp substrates."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 26",
+      "stable_id": "ZVGNESXIJDCBKN-UUEYKCAUSA-N@L4",
+      "source_analog_id": "ZVGNESXIJDCBKN-UUEYKCAUSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 26",
+      "text": "SMILES: CCc1c(Cl)c(O)c(Cl)c(O)c1C(=O)O[C@H]1[C@H](O)[C@H](OC)[C@H](OC/C2=C\\C=C\\C[C@H](O)/C(C)=C/[C@H](CC)[C@@H](O[C@@H]3OC(C)(C)[C@@H](OC(=O)C(C)C)[C@H](O)[C@@H]3O)/C(C)=C/C(C)=C/C[C@@H]([C@@H](C)O)OC2=O)O[C@@H]1C\nMorgan similarity: 0.1637"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 26-1",
+      "stable_id": "sr_4d89ed0fbe3e4b7dafc80981676d3b7d",
+      "source_analog_id": "ZVGNESXIJDCBKN-UUEYKCAUSA-N",
+      "containing_unit_id": "ZVGNESXIJDCBKN-UUEYKCAUSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 26-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8609\nResult: substrate efflux-transporter substrate status\nAssay context: not specified (qualitative statement in gastrointestinal context)\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Active metabolite also stated as substrate; P-gp inhibitor cyclosporine alters concentration but interaction not clinically important.\"\nReported evidence: From paragraph 47: Fidaxomicin and its active metabolite are substrates of the efflux transporter P-glycoprotein, which is expressed in the gastrointestinal tract. This is an explicit qualitative statement establishing fidaxomicin as a P-gp substrate, and although the context is gastrointestinal, the statement applies to the transporter itself."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 27",
+      "stable_id": "ZYVSOIYQKUDENJ-WKSBCEQHSA-N@L4",
+      "source_analog_id": "ZYVSOIYQKUDENJ-WKSBCEQHSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 27",
+      "text": "SMILES: CO[C@@H]1[C@H](O)C[C@@H](O[C@@H]2C[C@H](Oc3cc4cc5c(c(O)c4c(O)c3C)C(=O)[C@@H](O[C@H]3C[C@@H](O[C@H]4C[C@@H](O[C@H]6C[C@](C)(O)[C@@H](OC(C)=O)[C@H](C)O6)[C@H](O)[C@@H](C)O4)[C@H](O)[C@@H](C)O3)[C@H]([C@H](OC)C(=O)[C@@H](O)[C@@H](C)O)C5)O[C@H](C)[C@@H]2OC(C)=O)O[C@@H]1C\nMorgan similarity: 0.2143"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 27-1",
+      "stable_id": "sr_865bd51f163b4d0da53d408a305ce1b4",
+      "source_analog_id": "ZYVSOIYQKUDENJ-WKSBCEQHSA-N",
+      "containing_unit_id": "ZYVSOIYQKUDENJ-WKSBCEQHSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 27-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8547\nResult: substrate efflux-transporter substrate status\nAssay context: not specified (general drug resistance mechanism in cell lines)\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: NCBIGene:5243\n\nAdditional details: \"Claim from drug resistance context: decreased intracellular accumulation due to P-gp efflux.\"\nReported evidence: Following exposure to antineoplastic drugs, some cell lines develop cross-resistance to several other unrelated drugs, including vincristine, doxorubicin, colchicine, and actinomycin D. Resistance is a result of decreased intracellular accumulation of drug, which over-expression of P-gp causes by energy dependent drug efflux."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 28",
+      "stable_id": "QTQAWLPCGQOSGP-KSRBKZBZSA-N@L4",
+      "source_analog_id": "QTQAWLPCGQOSGP-KSRBKZBZSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 28",
+      "text": "SMILES: COC1=C2C[C@@H](C)C[C@H](OC)[C@H](O)[C@@H](C)/C=C(\\C)[C@H](OC(N)=O)[C@@H](OC)/C=C\\C=C(/C)C(=O)NC(=CC1=O)C2=O\nMorgan similarity: 0.25"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 28-1",
+      "stable_id": "sr_077e8a557ae4421fac77695855574eea",
+      "source_analog_id": "QTQAWLPCGQOSGP-KSRBKZBZSA-N",
+      "containing_unit_id": "QTQAWLPCGQOSGP-KSRBKZBZSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 28-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8548\nResult: substrate efflux-transporter substrate status\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - perturbation: MRP1 over-expression\n  - transporter_identifier: UniProt:P13568\n\nReported evidence: Over-expression of MDR1 or MRP1 confers resistance towards geldanamycin and its derivative, 17-allylamino-demethoxygeldanamycin (17-AAG). This indicates that geldanamycin is a substrate of MRP1."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 29",
+      "stable_id": "APKFDSVGJQXUKY-INPOYWNPSA-N@L4",
+      "source_analog_id": "APKFDSVGJQXUKY-INPOYWNPSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 29",
+      "text": "SMILES: C[C@@H]1[C@H](O)[C@@H](C)/C=C/C=C/C=C/C=C/C=C/C=C/C=C/[C@H](O[C@@H]2O[C@H](C)[C@@H](O)[C@H](N)[C@@H]2O)C[C@@H]2O[C@](O)(C[C@@H](O)C[C@@H](O)[C@H](O)CC[C@@H](O)C[C@@H](O)CC(=O)O[C@H]1C)C[C@H](O)[C@H]2C(=O)O\nMorgan similarity: 0.1655"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 29-1",
+      "stable_id": "sr_b0de642e823d4361bd78faaf129388a8",
+      "source_analog_id": "APKFDSVGJQXUKY-INPOYWNPSA-N",
+      "containing_unit_id": "APKFDSVGJQXUKY-INPOYWNPSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 29-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8475\nResult: transporter_limited_brain_exposure\nAssay context: Brain capillary endothelial cells (source species not specified); co-incubation with the P-gp inhibitor verapamil\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: transporter_limited_brain_exposure\n  - perturbation: verapamil (P-glycoprotein inhibitor) co-incubation\n  - transporter_identifier: NCBIGene:5243\n\nAdditional details: \"Co-incubation with verapamil increased AmB accumulation in brain capillary endothelial cells, indicating that P-gp limits AmB brain exposure.\"\nReported evidence: Shao et al. found that the co-incubation of amphotericin B (AmB) with the P-gp inhibitor verapamil increased AmB accumulation in brain capillary endothelial cells, suggesting that P-gp limits the brain exposure of AmB at the blood-brain barrier."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 30",
+      "stable_id": "BMGQWWVMWDBQGC-IIFHNQTCSA-N@L4",
+      "source_analog_id": "BMGQWWVMWDBQGC-IIFHNQTCSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 30",
+      "text": "SMILES: CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4\nMorgan similarity: 0.1667"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 30-1",
+      "stable_id": "sr_920d6a6564c0407989839bf68899a4f4",
+      "source_analog_id": "BMGQWWVMWDBQGC-IIFHNQTCSA-N",
+      "containing_unit_id": "BMGQWWVMWDBQGC-IIFHNQTCSA-N@L4",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 30-1",
+      "text": "Level: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8559\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Blood-brain barrier (BBB) - in vivo reference (Didier and Loor, 1995)\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Statement cites Didier and Loor (1995); no original BBB experiment in this paper.\"\nReported evidence: SDZ PSC 833 decreases the biotolerability and increases the neurotoxicity of toxic substances, possibly by inhibiting Pgp function at the blood-brain barrier (Didier and Loor, 1995)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 31",
+      "stable_id": "HKVAMNSJSFKALM-GKUWKFKPSA-N@L5",
+      "source_analog_id": "HKVAMNSJSFKALM-GKUWKFKPSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 31",
+      "text": "SMILES: CO[C@H]1C[C@@H]2CC[C@@H](C)[C@@](O)(O2)C(=O)C(=O)N2CCCC[C@H]2C(=O)O[C@H]([C@H](C)C[C@@H]2CC[C@@H](OCCO)[C@H](OC)C2)CC(=O)[C@H](C)/C=C(\\C)[C@@H](O)[C@@H](OC)C(=O)[C@H](C)C[C@H](C)/C=C/C=C/C=C/1C\nMorgan similarity: 0.1453"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 31-1",
+      "stable_id": "sr_1c273b8823f5476ca032a04d309af125",
+      "source_analog_id": "HKVAMNSJSFKALM-GKUWKFKPSA-N",
+      "containing_unit_id": "HKVAMNSJSFKALM-GKUWKFKPSA-N@L5",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 31-1",
+      "text": "Level: L5\nEvidence family: influx_transport\nEndpoint: blood-to-brain transport\nResult: Aromataseinhibitors, especially letrozole, probably also tamoxifen, everolimus and CDK4/6 inhibitors, especially abemaciclib, appear to act intracerebrally by overcoming the blood-brain barrier.\nExperimental details:\n  - evidence_basis: qualitative substrate claim\n  - transport_mechanism: unspecified mediated BBB uptake\n\nAdditional details: \"Review statement: the molecule appears to act intracerebrally by overcoming the BBB; no specific carrier/receptor mechanism mentioned.\"\nReported evidence: Aromataseinhibitors, especially letrozole, probably also tamoxifen, everolimus and CDK4/6 inhibitors, especially abemaciclib, appear to act intracerebrally by overcoming the blood-brain barrier."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 32",
+      "stable_id": "ZYZCGGRZINLQBL-UHFFFAOYSA-N@L5",
+      "source_analog_id": "ZYZCGGRZINLQBL-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 32",
+      "text": "SMILES: C=C1C(=O)NC(C)C(=O)NC(CC(C)C)C(=O)NC(C(=O)O)C(C)C(=O)NC(CCCN=C(N)N)C(=O)NC(C=CC(C)=CC(C)C(Cc2ccccc2)OC)C(C)C(=O)NC(C(=O)O)CCC(=O)N1C\nMorgan similarity: 0.1302"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 32-1",
+      "stable_id": "sr_3a9eef1024864d6c8c7ba184d1b6b43b",
+      "source_analog_id": "ZYZCGGRZINLQBL-UHFFFAOYSA-N",
+      "containing_unit_id": "ZYZCGGRZINLQBL-UHFFFAOYSA-N@L5",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 32-1",
+      "text": "Level: L5\nEvidence family: influx_transport\nEndpoint: BBB substrate relationship\nResult: The paper states that microcystins (MCs), including MC-LR, are transported across cell membranes via organic anion-transporting polypeptides (rodent Oatps/human OATPs), and that OATPs are expressed at the blood-brain barrier, which can explain MC-LR-inflicted neurotoxicity.\nExperimental details:\n  - evidence_basis: qualitative substrate claim\n  - mediator_identifier: UMLS:C0949791\n  - mediator_name: organic anion-transporting polypeptides\n  - transport_mechanism: carrier-mediated influx\n\nAdditional details: \"The passage cites Cattori 2005 and Steiner et al. 2014 as references for OATP-mediated transport, and Bronger et al. 2005, Cattori 2005, Huber et al. 2007, Westholm et al. 2009 for OATP expression at the BBB and other brain sites.\"\nReported evidence: The paper states that microcystins (MCs), including MC-LR, are transported across cell membranes via organic anion-transporting polypeptides (rodent Oatps/human OATPs), and that OATPs are expressed at the blood-brain barrier, which can explain MC-LR-inflicted neurotoxicity."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 33",
+      "stable_id": "OGWKCGZFUXNPDA-CFWMRBGOSA-N@L5",
+      "source_analog_id": "OGWKCGZFUXNPDA-CFWMRBGOSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 33",
+      "text": "SMILES: CC[C@]1(O)C[C@@H]2C[N@@](CCc3c([nH]c4ccccc34)[C@@](C(=O)OC)(c3cc4c(cc3OC)N(C=O)[C@H]3[C@@](O)(C(=O)OC)[C@H](OC(C)=O)[C@]5(CC)C=CCN6CC[C@]43[C@@H]65)C2)C1\nMorgan similarity: 0.125"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 33-1",
+      "stable_id": "sr_1ad9b49f766f4cbeaf2178f5eff8ac6c",
+      "source_analog_id": "OGWKCGZFUXNPDA-CFWMRBGOSA-N",
+      "containing_unit_id": "OGWKCGZFUXNPDA-CFWMRBGOSA-N@L5",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 33-1",
+      "text": "Level: L5\nEvidence family: influx_transport\nEndpoint: apparent influx constant\nResult: relatively large and significantly higher than other brain regions\nAssay context: intravenous bolus injection technique of Ohno et al. (1978)\nSpecies: guinea pig\nConditions: \"hypothalamic region\"\nReported evidence: For vincristine, uptake into the hypothalamic region is relatively large and significantly higher than other brain regions, showing a high apparent influx constant."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 34",
+      "stable_id": "OZVBMTJYIDMWIL-AYFBDAFISA-N@L5",
+      "source_analog_id": "OZVBMTJYIDMWIL-AYFBDAFISA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 34",
+      "text": "SMILES: CC(C)C[C@H]1C(=O)N2CCC[C@H]2[C@]2(O)O[C@](NC(=O)[C@@H]3C=C4c5cccc6[nH]c(Br)c(c56)C[C@H]4N(C)C3)(C(C)C)C(=O)N12\nMorgan similarity: 0.1346"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 34-1",
+      "stable_id": "sr_b2ea6898829b4ece93fda3744ebc3039",
+      "source_analog_id": "OZVBMTJYIDMWIL-AYFBDAFISA-N",
+      "containing_unit_id": "OZVBMTJYIDMWIL-AYFBDAFISA-N@L5",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 34-1",
+      "text": "Level: L5\nEvidence family: influx_transport\nResult: influx_substrate\nExperimental details:\n  - bbb_transport_label: influx_substrate\n\nAdditional details: \"Identified as a substrate of uptake transporters at the BBB.\"\nReported evidence: Bromocriptine is described as a substrate of uptake transporters at the blood-brain barrier."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 35",
+      "stable_id": "BRUQQQPBMZOVGD-XFKAJCMBSA-N@L5",
+      "source_analog_id": "BRUQQQPBMZOVGD-XFKAJCMBSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 35",
+      "text": "SMILES: COc1ccc2c3c1O[C@H]1C(=O)CC[C@@]4(O)[C@@H](C2)N(C)CC[C@]314\nMorgan similarity: 0.136"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 35-1",
+      "stable_id": "sr_0f68bbab74a74ffcacdc985a597d0619",
+      "source_analog_id": "BRUQQQPBMZOVGD-XFKAJCMBSA-N",
+      "containing_unit_id": "BRUQQQPBMZOVGD-XFKAJCMBSA-N@L5",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 35-1",
+      "text": "Level: L5\nEvidence family: influx_transport\nEndpoint: unbound concentration ratio (brain/blood)\nResult: three-times higher\nSpecies: rats\nExperimental details:\n  - bbb_transport_label: influx_substrate\n\nAdditional details: \"active influx across the blood-brain barrier with an unidentified carrier protein\"\nReported evidence: In rats, oxycodone has a three-times higher unbound concentration in the brain than in the blood, indicating an active influx across the blood-brain barrier with an unidentified carrier protein."
+    }
+  ],
+  "trace": [
+    {
+      "task": "single_molecule",
+      "status": "ok",
+      "prediction": null,
+      "response_text": "{\n  \"endpoint_prior\": \"fail\",\n  \"property_drivers\": [\n    \"Molecular weight 822.95 Da is far above the range generally compatible with passive CNS penetration\",\n    \"Topological polar surface area 220.15 Å² is very high, indicating a large desolvation penalty for membrane crossing\",\n    \"Hydrogen-bond donor count 6 and acceptor count 15 are high, further opposing passive permeability\",\n    \"NH/OH group count 6 and heteroatom count 16 contribute to extensive polar surface and H-bonding\",\n    \"Multiple ionizable/charged groups (basic N-methylpiperazine and phenolic OH) are likely to be at least partially charged at physiological pH, reducing the uncharged permeable fraction\",\n    \"QED drug-likeness 0.11 and heavy-atom count 59 reflect a large, complex scaffold with poor drug-like physicochemical space for CNS exposure\",\n    \"Although logP 4.34 and low rotatable-bond count (4) are not unfavorable, they are outweighed by the large polar surface and H-bonding burden\"\n  ],\n  \"confidence\": \"high\",\n  \"reasoning_summary\": \"The query molecule is a large, highly functionalized macrocyclic/naphthoquinone-like structure with MW 823, TPSA 220 Å², 6 HBD, 15 HBA, and 16 heteroatoms. These physicochemical properties predict a very high desolvation and hydrogen-bonding penalty for passive diffusion across the blood-brain barrier. The presence of a basic N-methylpiperazine and multiple phenolic groups suggests partial ionization at physiological pH, further reducing the membrane-permeable neutral fraction. Although logP is moderate and rotatable bonds are few, the overall polar surface area and molecular size make meaningful CNS access after systemic administration unlikely. This is a structural prior, not a measured CNS exposure endpoint.\",\n  \"caveats\": [\n    \"pKa prediction was unavailable, so the exact ionization state at pH 7.4 is not computed; however, the structural groups present are consistent with partial ionization\",\n    \"No permeability, efflux, or in vivo exposure data were supplied; the assessment is a physicochemical hypothesis\",\n    \"Active transport, protein binding, or metabolism could alter actual CNS exposure, but these cannot be inferred from the provided data\",\n    \"Absence of a specific structural alert does not establish safety or CNS penetration\"\n  ]\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a senior medicinal-chemist and CNS-exposure expert who reasons via analogies, taking evidence from related molecules to support your prediction. Return one complete JSON object."
+        },
+        {
+          "role": "user",
+          "content": "{\"task\": \"Assess the query molecule's structural and physicochemical prior for meaningful or adequate CNS access after systemic administration.\", \"query\": {\"input_smiles\": \"CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\\\C=C\\\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\", \"canonical_smiles\": \"CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\\\C=C\\\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\", \"tools_prefetched\": true, \"prefetched_molecule_properties\": {\"tool_name\": \"molecule_properties\", \"status\": \"ok\", \"arguments\": {\"query_smiles\": \"CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\\\C=C\\\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\", \"logd_ph\": 7.4}, \"content\": \"[molecule_properties]\\nneutral fraction: not applicable (pKa predictor unavailable)\\nestimated logD: not applicable (pKa predictor unavailable)\\nstrongest acidic pKa: not applicable (pKa predictor unavailable)\\nstrongest basic pKa: not applicable (pKa predictor unavailable)\\nnumber of acidic sites: not applicable (pKa predictor unavailable)\\nnumber of basic sites: not applicable (pKa predictor unavailable)\\nnumber of ionizable sites: not applicable (pKa predictor unavailable)\\nexact molecular weight: 822.41\\nfraction of sp3 carbons: 0.53\\nheavy-atom count: 59\\nheavy-atom molecular weight: 764.49\\nLabute surface area: 343.91\\nmaximum absolute partial charge: 0.51\\nmaximum partial charge: 0.31\\nminimum absolute partial charge: 0.31\\nminimum partial charge: -0.51\\nestimated logP: 4.34\\nmolecular weight: 822.95\\nNH/OH group count: 6\\nnitrogen/oxygen atom count: 16\\naliphatic carbocycle count: 0\\naliphatic heterocycle count: 4\\naliphatic ring count: 4\\naromatic carbocycle count: 2\\naromatic heterocycle count: 0\\naromatic ring count: 2\\nhydrogen-bond acceptor count: 15\\nhydrogen-bond donor count: 6\\nheteroatom count: 16\\nrotatable-bond count: 4\\nsaturated carbocycle count: 0\\nsaturated heterocycle count: 1\\nsaturated ring count: 1\\nring count: 6\\ntopological polar surface area: 220.15\\nQED drug-likeness: 0.11\\n\\nfunctional groups: none\\nWarnings: ModuleNotFoundError: No module named 'molgpka'; ModuleNotFoundError: No module named 'accfg'; Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\", \"warnings\": [\"ModuleNotFoundError: No module named 'molgpka'\", \"ModuleNotFoundError: No module named 'accfg'\", \"Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\"], \"errors\": [], \"latency_ms\": 4, \"cache_hit\": false}}, \"instructions\": [\"Use only the supplied structure and property-tool text, without analog evidence or memorized assay labels.\", \"Explain plausible structural and mechanistic liabilities, exposure limitations, and uncertainty.\", \"A structural alert is a hypothesis, not an observed endpoint. Absence of an alert does not establish a negative result.\", \"Do not invent species, population, strain, activation, exposure, or organism conditions.\"], \"required_json_schema\": {\"endpoint_prior\": \"pass | fail | mixed_or_unclear\", \"property_drivers\": [\"string\"], \"confidence\": \"high | moderate | low\", \"reasoning_summary\": \"string\", \"caveats\": [\"string\"]}}"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 3181,
+        "prompt_tokens": 1177,
+        "total_tokens": 4358,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 2680
+      },
+      "tool_count": 0
+    },
+    {
+      "task": "final_summary",
+      "status": "ok",
+      "prediction": "pass",
+      "response_text": "{\n  \"claims\": [\n    {\n      \"claim\": \"Direct rifampicin measurements demonstrate meaningful brain entry: human peritumoral brain tissue reached 0.29 µg/mL after i.v. infusion, monkey brain reached 0.87 µg/g after i.v. [14C]rifampicin, and baboon PET brain concentrations were around 1 µg/mL and were estimated to exceed the MIC by 3- to 4-fold.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 12\"\n      ],\n      \"record_ids\": [\n        \"Record 12-2\",\n        \"Record 12-3\",\n        \"Record 12-4\",\n        \"Record 12-6\"\n      ]\n    },\n    {\n      \"claim\": \"Rifampicin and/or its metabolites were reported to penetrate the BBB in baboons, and high mouse brain concentrations (10.25 µg/mL) were measured after i.p. dosing, supporting meaningful CNS exposure after systemic administration.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 12\"\n      ],\n      \"record_ids\": [\n        \"Record 12-5\",\n        \"Record 12-6\"\n      ]\n    },\n    {\n      \"claim\": \"In TBM and inflamed-meninges settings, the related rifamycin rifabutin achieved meaningful CNS exposure: CSF/plasma ratio ~0.227 and brain/plasma ratio ~0.856 in a rabbit TBM model, and ~50% CSF penetration in HIV patients.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 13\"\n      ],\n      \"record_ids\": [\n        \"Record 13-1\",\n        \"Record 13-2\",\n        \"Record 13-6\",\n        \"Record 13-9\"\n      ]\n    },\n    {\n      \"claim\": \"Rifabutin also reached dose-dependent CSF concentrations of 0.33–2.26 µg/mL in experimental meningitis, confirming that rifamycin-class antibiotics can achieve adequate CNS exposure under meningeal inflammation.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 13\"\n      ],\n      \"record_ids\": [\n        \"Record 13-7\"\n      ]\n    },\n    {\n      \"claim\": \"There is negative rifamycin evidence: rifapentine was nearly undetectable in TBM patient CSF, rifampicin was labeled poorly BBB-penetrant in healthy baboons, rifabutin showed low rat brain radioactivity, and rifamycin SV/B showed limited or impermeable brain penetration; these indicate limited passive entry and efflux effects, but they are offset by direct rifampicin brain measurements and the enhanced CNS penetration expected in inflamed meninges.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\n        \"Molecule 11\",\n        \"Molecule 12\",\n        \"Molecule 13\",\n        \"Molecule 14\",\n        \"Molecule 15\"\n      ],\n      \"record_ids\": [\n        \"Record 11-1\",\n        \"Record 12-1\",\n        \"Record 13-4\",\n        \"Record 13-10\",\n        \"Record 14-2\",\n        \"Record 14-3\",\n        \"Record 15-1\"\n      ]\n    },\n    {\n      \"claim\": \"Efflux may limit rifamycin brain exposure, as shown by rifabutin P-gp efflux ratio 4.7 and rifaximin P-gp substrate status, but the endpoint definition requires meaningful rather than ideal access, and the measured rifampicin and rifabutin CSF/brain concentrations demonstrate that efflux is not absolute in the relevant disease setting.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\n        \"Molecule 21\",\n        \"Molecule 23\"\n      ],\n      \"record_ids\": [\n        \"Record 21-1\",\n        \"Record 23-1\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"pass\"\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "You are a senior medicinal-chemist and CNS-exposure expert who reasons via analogies, taking evidence from related molecules to support your prediction.\n\nTask:\n- Endpoint: meaningful or adequate CNS access after systemic administration\n- Label scope: meaningful_cns_access.v1\n- Positive: pass\n- Negative: fail\n- Predict pass for meaningful or adequate BBB/CNS access and fail for insufficient access.\n- Meaningful access does not require ideal passive diffusion, high unbound brain exposure, or absence of every efflux signal.\n- Give the most weight to transferable direct brain, plasma, CSF, uptake, perfusion, influx, or prodrug evidence.\n- Do not treat one physicochemical liability or repeated records as independent proof of failure.\n\nReasoning Instructions:\n- Your goal is to reason through the evidence via analogies. Is this molecule or record meaningfully similar to the query molecule? Does the experiment transfer? If it does transfer, how does this experimnetal value inform the property we're aiming to predict?\n- Morgan similarity measures structural similarity to the query. The assay-transfer score (0 to 1) estimates how transferable the evidence is to the query, representing a normalized distance polarized by a sigmoid function. So high scores like 0.99 don't mean the experimental values tranfers with 99% amount or 99% liklihood. These scores are reliable relative signal however, in which higher scores are more likely to transfer. But, again, don't blindly trust these scores.\n- Ensure you consider and analyze every evidence block.\n- Semantic evidence utility is a reviewed, task-level 0–1 score for how useful an evidence family is for this endpoint. It is not a probability, a query-specific transfer likelihood, or calibrated across evidence levels.\n- At the end, take the physicochemical properties and transferable evidence and come to a balanced conclusion for the query molecule.\n\nPitfalls to avoid:\n- Do not narrate schema bookkeeping.\n- Do not overly analyze the SMILES structures.\n- Do not blindly trust retrieval scores.\n- Do not infer the prediction from evidence order.\n- Do not skip records; briefly state why any materially uninformative evidence deserves little weight.\n\nOutput:\nReturn exactly one valid JSON object matching the requested schema. Return one or more concise claims using as many claims as needed to represent the experimental evidence that materially informs the decision. Each claim may cite any number of molecules, records, or both. At least one identifier is required per claim. Return only `claims` and `final_prediction`. `supportive` means evidence supporting your selected final prediction; `contradictory` means evidence supporting the alternative."
+        },
+        {
+          "role": "user",
+          "content": "Query molecule\nSMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\n\nQuery condition\nCondition: This prediction concerns the query molecule under the disease condition tuberculous meningitis.\n\n# Experimental evidence\n\n# Level L1\nDirect measured brain or CNS exposure outcomes.\n\n## Molecule 1\nSMILES: COc1ccc(N2CCN(c3c(C)c(C)c4c(c3C)C(=O)C(C)(C)O4)CC2)cc1\nMorgan similarity: 0.1964\nTransfer likelihood: 0.7416\n\nRecord 1-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: Kp\nResult: 3.4 ratio\nAssay context: pharmacokinetic study\nSpecies: rats\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"measured 1 h after intravenous (iv) administration; Kp defined as brain/plasma concentration ratio\"\nReported evidence: A pharmacokinetic study of compound 1a revealed that it exhibited brain penetrability in rats, with a brain/plasma concentration ratio (Kp) of 3.4 at 1 h after intravenous (iv) administration.\n\n## Molecule 2\nSMILES: CO[C@H]1C[C@@H]2CC[C@@H](C)[C@@](O)(O2)C(=O)C(=O)N2CCCC[C@H]2C(=O)O[C@H]([C@H](C)C[C@@H]2CC[C@@H](OC(=O)C(C)(CO)CO)[C@H](OC)C2)CC(=O)[C@H](C)/C=C(\\C)[C@@H](O)[C@@H](OC)C(=O)[C@H](C)C[C@H](C)/C=C/C=C/C=C/1C\nMorgan similarity: 0.1552\nTransfer likelihood: 0.3256\n\nRecord 2-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: CSF detection\nResult: impermeable BBB permeability\nAssay context: CSF measurement\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: CSF concentrations of temsirolimus were detected in only one of nine tested patients, suggesting poor CNS penetration.\n\n## Molecule 3\nSMILES: CC(=O)O[C@H]1CC(C)(C)C(=C=C/C(C)=C/C=C/C(C)=C/C=C/C=C(C)/C=C/C=C(\\C)C(=O)C[C@@]23O[C@]2(C)C[C@@H](O)CC3(C)C)[C@](C)(O)C1\nMorgan similarity: 0.1591\nTransfer likelihood: 0.7891\n\nRecord 3-1\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nAssay context: in vivo\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"molecule accumulates in the brain after oral administration\"\nReported evidence: Fucoxanthin has been shown in vivo to penetrate the blood-brain barrier and accumulate in the brain after oral administration.\n\n## Molecule 4\nSMILES: CO[C@H](C(=O)[C@@H](O)[C@@H](C)O)[C@@H]1Cc2cc3cc(O[C@H]4C[C@@H](O[C@H]5C[C@@H](O)[C@H](O)[C@@H](C)O5)[C@H](O)[C@@H](C)O4)c(C)c(O)c3c(O)c2C(=O)[C@H]1O[C@H]1C[C@@H](O[C@H]2C[C@@H](O[C@H]3C[C@](C)(O)[C@H](O)[C@@H](C)O3)[C@@H](O)[C@@H](C)O2)[C@H](O)[C@@H](C)O1\nMorgan similarity: 0.1722\nTransfer likelihood: 0.4091\n\nRecord 4-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: CSF:plasma ratio\nResult: 0.12 ratio\nSpecies: monkey\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Peak ratio observed at 1.5 hours.\"\nReported evidence: In monkeys, mithramycin showed peak CSF:plasma ratios of 0.12 at 1.5 hours, and little material was found within normal brains.\n\n## Molecule 5\nSMILES: CN1CCc2c(-c3ccc(S(=O)(=O)N(C)C)cc3)cc3c(c2C1)NC(=O)/C3=N\\OC(CCO)C(=O)O\nMorgan similarity: 0.1544\nTransfer likelihood: 0.6761\n\nRecord 5-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: half-life in the CSF\nResult: 10 h\nAssay context: repeated lumbar punctures\nSpecies: human\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"NS1209 can be detected in the CSF for up to 24 h after a single infusion.\"\nReported evidence: It was confirmed that NS1209 penetrates the blood brain barrier and can be detected in the CSF (via repeated lumbar punctures) for up to 24 h after a single infusion. After a 4 h infusion the half-life in the CSF was approximately 10 h.\n\n## Molecule 6\nSMILES: C=C/C=C\\[C@H](C)[C@@H]1OC(=O)/C=C\\C=C\\[C@@H](C)[C@@H](O)C[C@H](O)/C=C\\[C@H](C)[C@H](O)[C@@H](C)C[C@@H](C)CC[C@@H](O)[C@@H]1C\nMorgan similarity: 0.1628\nTransfer likelihood: 0.699\n\nRecord 6-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: AUC0.5–16h\nResult: 6245 nM h\nAssay context: LC-MS/MS analysis\nSpecies: mice\nExperimental details:\n  - bbb_permeability_label: good_penetration\n\nAdditional details: \"Dosed via 5 mg/kg i.p. administration in CD1 mice. High brain exposure was also explicitly noted in paragraph 7. After 2 hours, brain levels of dictyostatin became comparable to and eventually exceeded plasma levels.\"\nReported evidence: In CD1 mice, the brain exposure of dictyostatin was found to be AUC0.5–16h = 6245 nM-h, which the authors note indicates a possible role for its macrocyclic structure in determining overall brain penetration.\n\n## Molecule 7\nSMILES: C=CC(C)(C)c1[nH]c2cccc3c2c1C[C@@H]1[C@@H]3[C@@H](OC(C)=O)[C@@H](C)CN1C\nMorgan similarity: 0.184\nTransfer likelihood: 0.2908\n\nRecord 7-1\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: impermeable BBB permeability\nAssay context: tissue distribution\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Tissue distribution of SM-1 was measured in rat, and the concentrations of SM-1 in the brain, muscle, and plasma were low, suggesting that SM-1 was difficult to penetrate the blood-brain barrier (BBB).\n\n## Molecule 8\nSMILES: CC(C)=CC(=O)O[C@H]1Cc2cc3ccc(=O)oc3cc2OC1(C)C\nMorgan similarity: 0.157\nTransfer likelihood: 0.7419\n\nRecord 8-1\nLevel: L1\nEvidence family: direct_brain_exposure\nEndpoint: Cbrain/Cplasma\nResult: permeable BBB permeability\nAssay context: in vivo pharmacokinetic study (oral administration)\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: good_penetration\n\nAdditional details: \"Measured at 0.5, 1, 3, and 5 h after administration.\"\nReported evidence: Following oral administration to male Sprague-Dawley (SD) rats, decursin showed ratios of compound concentration in brain with respect to plasma (Cbrain/Cplasma) of >1.5 at 0.5, 1, 3, and 5 h, suggesting a good brain/plasma ratio.\n\n## Molecule 9\nSMILES: COc1ccc(-c2oc3c(CC=C(C)C)c(O[C@@H]4O[C@H](CO)[C@@H](O)[C@H](O)[C@H]4O)cc(O)c3c(=O)c2O[C@@H]2O[C@@H](C)[C@H](O)[C@@H](O)[C@H]2O[C@@H]2OC[C@@H](O)[C@H](O)[C@H]2O)cc1\nMorgan similarity: 0.1447\nTransfer likelihood: 0.414\n\nRecord 9-1\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: impermeable BBB permeability\nAssay context: tissue distribution study\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Epimedin B concentrations were the lowest in the brain compared to other examined rat tissues.\"\nReported evidence: In a tissue distribution study in rats, epimedin B was found to be the least concentrated in the rat brain, demonstrating that epimedin B could hardly pass through the blood-brain barrier.\n\n## Molecule 10\nSMILES: C=C[C@@]1(C)CC(=O)[C@]2(O)[C@@]3(C)[C@@H](O)CCC(C)(C)[C@@H]3[C@H](OC(=O)CCN(C)C)[C@H](OC(C)=O)[C@@]2(C)O1\nMorgan similarity: 0.1504\nTransfer likelihood: 0.7635\n\nRecord 10-1\nLevel: L1\nEvidence family: direct_brain_exposure\nResult: permeable BBB permeability\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: permeable\n\nReported evidence: The influence of NKH477, which crosses the blood-brain barrier, on levels of cAMP accumulation in brain was determined.\n\n# Level L2\nNear-direct systemic CNS functional evidence.\n\n## Molecule 11\nSMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C6CCCC6)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\nMorgan similarity: 0.87\n\nRecord 11-1\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7161\nEndpoint: CSF/serum concentration ratio\nResult: <0.15 mg/L (CSF) / 7.2 mg/L (serum) mg/L\nAssay context: clinical measurement\nSpecies: human\nConditions: \"tuberculous meningitis\"\nAdditional details: \"Measured 10 hours after oral administration; dose was not specified.\"\nReported evidence: In 5 Chinese patients with tuberculous meningitis, CSF concentrations of rifapentine were below the limit of detection (<0.15 mg/L) while mean serum concentrations were 7.2 mg/L 10 hours after oral administration.\n\nRecord 11-2\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7305\nEndpoint: brain concentrations/plasma concentrations\nResult: <20% %\nAssay context: in vivo\nSpecies: rat\nAdditional details: \"Measured after 10 mg/kg oral dose at 8, 24 and 72 hours.\"\nReported evidence: In rats, brain concentrations of rifapentine were less than 20% of plasma concentrations at 8, 24, and 72 hours after oral administration of a 10 mg/kg dose.\n\nRecord 11-3\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8272\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Low CSF penetration is associated with the molecule being lipophilic and having plasma protein binding of 80%.\"\nReported evidence: Peak plasma concentration of RPT occurs approximately 5 hours after ingestion, and overall CSF penetration is estimated to be low (lipophilic and plasma protein binding of 80%).\n\nRecord 11-4\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7193\nResult: impermeable BBB permeability\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Rifapentine does not appear to cross the blood-brain barrier to any quantitatively important extent.\n\n## Molecule 12\nSMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4cc(c(/C=N/N5CCN([14CH3])CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\C(C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\nMorgan similarity: 0.7692\n\nRecord 12-1\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8378\nResult: impermeable BBB permeability\nAssay context: PET imaging\nSpecies: baboon\nConditions: \"healthy\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Rifampicin (RIF) and/or its radiolabeled metabolites poorly penetrate the blood-brain barrier in healthy baboons.\n\nRecord 12-2\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6421\nEndpoint: brain tissue concentration\nResult: 0.29 µg/mL\nAssay context: brain tissue resection\nSpecies: human\nConditions: \"brain tissue resected around tumors\"\nAdditional details: \"following i.v. infusion of 600 mg RIF in 500 ml saline over 3 h\"\nReported evidence: In human studies, Rifampicin (RIF) concentrations in brain tissue resected around tumors were determined to be 0.29 µg/ml following i.v. infusion of 600 mg RIF.\n\nRecord 12-3\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6283\nEndpoint: brain tissue concentration\nResult: C30min = 0.000642 %ID/cc (1.09 µg/ml), C60min = 0.000536 %ID/cc (0.912 µg/ml), C90min = 0.000710 %ID/cc (1.21 µg/ml) %ID/cc, µg/ml\nAssay context: PET imaging\nSpecies: baboon\nConditions: \"healthy\"\nReported evidence: In healthy baboons, the concentration of injected [11C]RIF in the whole brain area was monitored, with values of C30min = 0.000642 %ID/cc (1.09 µg/ml), C60min = 0.000536 %ID/cc (0.912 µg/ml), and C90min = 0.000710 %ID/cc (1.21 µg/ml).\n\nRecord 12-4\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.2526\nEndpoint: brain tissue concentration\nResult: 0.87 µg/g\nSpecies: monkey\nAdditional details: \"6 hours after i.v. administration of [14C]RIF\"\nReported evidence: Previous studies using [14C]RIF determined a brain tissue concentration of 0.87 µg/g in monkeys 6 hours after i.v. administration.\n\nRecord 12-5\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.0768\nEndpoint: brain tissue concentration\nResult: 10.25 µg/mL\nSpecies: mouse\nAdditional details: \"3-7 hours after i.p. administration; 100 mg/kg dose\"\nReported evidence: Studies in mice revealed a brain tissue concentration of 10.25 µg/ml for Rifampicin (RIF) 3–7 hours after i.p. administration of a 100 mg/kg dose.\n\nRecord 12-6\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.0728\nEndpoint: brain concentration / MIC\nResult: permeable BBB permeability\nAssay context: PET imaging\nSpecies: baboon\nExperimental details:\n  - bbb_permeability_label: permeable\n\nAdditional details: \"BBB penetration ability was ranked as PZA \\u003e INH \\u003e RIF.\"\nReported evidence: In baboons, RIF and its radiolabeled metabolites penetrate the blood-brain barrier, and estimated concentrations in the brain are 3–4 times higher than their MIC values.\n\n## Molecule 13\nSMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C)C4=O\nMorgan similarity: 0.5583\n\nRecord 13-1\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7249\nEndpoint: CSF/plasma ratio\nResult: 0.227 (0.205–0.285)\nAssay context: rabbit TBM model\nSpecies: rabbit\nConditions: \"TBM infection\"\nReported evidence: In a rabbit model of TBM, the median CSF/plasma ratio for rifabutin was 0.227 (0.205–0.285).\n\nRecord 13-2\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6441\nEndpoint: brain/plasma ratio\nResult: 0.856 (0.790–1.16)\nAssay context: rabbit TBM model\nSpecies: rabbit\nConditions: \"TBM infection\"\nAdditional details: \"Median brain rifabutin concentration was 536 (321\\u2013961) ng/mL.\"\nReported evidence: In a rabbit model of TBM, the median brain rifabutin concentration was 536 (321–961) ng/mL, with a brain/plasma ratio of 0.856 (0.790–1.16).\n\nRecord 13-3\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6489\nEndpoint: CSF-to-serum concentration ratio\nResult: 0.52 ratio\nAssay context: in vivo\nConditions: \"24 h after infection\"\nReported evidence: At 24 h after infection, the CSF-to-serum concentration ratio of rifabutin was 0.52 ± 0.18.\n\nRecord 13-4\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6459\nResult: impermeable BBB permeability\nAssay context: whole-body autoradiography\nSpecies: rat\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"Brain levels of radioactivity were reported as very low; tissue distribution was also investigated using the combustion technique.\"\nReported evidence: After oral and intravenous administration of 14C-rifabutin to female Sprague-Dawley rats, brain levels of radioactivity were found to be very low, which was further confirmed by whole-body autoradiography.\n\nRecord 13-5\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.6115\nResult: substrate efflux-transporter substrate status\nAssay context: in silico ADMET prediction model for P-glycoprotein substrate status\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: ABCB1\n\nReported evidence: In the ADMET prediction table (paragraph 41), rifabutin is predicted to be a P-glycoprotein substrate (PGS: Substrate), based on an in silico model.\n\nRecord 13-6\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.2793\nEndpoint: % penetration into CSF\nResult: 50.4 (Range: 36-70) %\nAssay context: paired serum and cerebrospinal fluid (CSF) specimens\nSpecies: human\nConditions: \"AIDS patients treated with 450 mg/day\"\nAdditional details: \"Mean serum concentration was 92.5 ng/ml and mean CSF concentration was 46.9 ng/ml.\"\nReported evidence: In AIDS patients treated with 450 mg/day of rifabutin, the mean percentage penetration into the cerebrospinal fluid (CSF) was 50.4% (range 36-70%), with mean concentrations of 92.5 ng/ml in serum and 46.9 ng/ml in CSF.\n\nRecord 13-7\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.3864\nEndpoint: mean concentrations in CSF\nResult: 0.33 to 2.26 µg/ml\nAssay context: in vivo\nConditions: \"experimental pneumococcal meningitis\"\nReported evidence: In an in vivo experimental model, dose-dependent mean concentrations of rifabutin in the CSF ranged from 0.33 to 2.26 µg/ml.\n\nRecord 13-8\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.2473\nEndpoint: CSF concentrations / serum concentrations\nResult: 50.4 %\nAssay context: CSF measurement\nSpecies: human\nConditions: \"HIV-positive patients\"\nReported evidence: In 5 HIV-positive patients, rifabutin cerebrospinal fluid (CSF) concentrations averaged 50.4% of those in the serum.\n\nRecord 13-9\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.2021\nEndpoint: CSF concentrations relative to serum concentrations\nResult: 50.4 %\nAssay context: In vivo\nSpecies: human\nConditions: \"HIV-infected patients receiving oral rifabutin at 450 mg/d\"\nAdditional details: \"Mean CSF concentration: 47 ng/mL (range 27-70 ng/mL); mean serum concentration: 93 ng/mL (range 65-136 ng/mL).\"\nReported evidence: Among five HIV-infected patients who received oral rifabutin at a dosage of 450 mg/d, concentrations of the drug in CSF (mean concentration, 47 ng/mL; range, 27-70 ng/mL) averaged 50.4% of those in serum (mean concentration, 93 ng/mL; range, 65-136 ng/mL).\n\nRecord 13-10\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.307\nEndpoint: % of dose\nResult: 4.3 10^-2 %\nAssay context: oral administration of 14C-rifabutin\nSpecies: rat\nConditions: \"24 h after administration\"\nExperimental details:\n  - bbb_permeability_label: low_permeability\n\nReported evidence: After administration of 14C-rifabutin to rats, a low content of the compound was found in the brain.\n\n## Molecule 14\nSMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(cc(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\nMorgan similarity: 0.697\n\nRecord 14-1\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.5387\nEndpoint: CSF concentration\nResult: < 4 µg/ml\nAssay context: CSF measurement\nSpecies: human\nConditions: \"administered intravenously (40 mg/kg per day) only\"\nAdditional details: \"Measured 1 hour after dose.\"\nReported evidence: When rifamycin was administered intravenously (40 mg/kg per day) without intraventricular delivery, CSF levels were less than 4 µg/ml 1 hour after the dose.\n\nRecord 14-2\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.484\nResult: impermeable BBB permeability\nAssay context: monitoring blood and CSF levels\nSpecies: human\nConditions: \"neonatal meningitis, meningeal inflammation\"\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nAdditional details: \"The drug was reported to not cross the BBB in concentrations sufficient for effective treatment despite high serum levels.\"\nReported evidence: In infants with neonatal meningitis, it was found that rifamycin does not cross the blood-brain barrier in sufficient concentration for the effective treatment of the disease, even in the presence of high serum levels and meningeal inflammation.\n\nRecord 14-3\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.8261\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Rifamycin SV has rather limited penetration into the brain which is a clear liability for the repositioning of this drug for HAT.\n\n## Molecule 15\nSMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(cc(OCC(=O)O)c4c3C2=O)NC(=O)C(C)=CC=C[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\nMorgan similarity: 0.6449\n\nRecord 15-1\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.7649\nResult: impermeable BBB permeability\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Rifamycin B does not diffuse through the blood-brain barrier.\n\n## Molecule 16\nSMILES: CO[C@@H]1[C@@H](OC(N)=O)[C@@H](O)[C@H](Oc2ccc3c(O)c(NC(=O)c4ccc(O)c(CC=C(C)C)c4)c(=O)oc3c2C)OC1(C)C\nMorgan similarity: 0.1655\n\nRecord 16-1\nLevel: L2\nEvidence family: central_functional_access_proxy\nTransfer likelihood: 0.5832\nEndpoint: unbound brain-to-plasma ratio\nResult: 0.065 ratio\nExperimental details:\n  - bbb_permeability_label: poor_penetration\n\nReported evidence: Novobiocin exhibited limited brain penetration with an unbound brain-to-plasma ratio (BBB) of 0.065.\n\n# Level L3\nPassive permeability evidence.\n\n## Molecule 17\nSMILES: CC(=O)O[C@H]1C(=O)[C@@]2(C)[C@H]([C@H](OC(=O)c3ccccc3)[C@]3(O)C[C@H](OC(=O)[C@H](O)[C@@H](NC(=O)c4ccccc4)c4ccccc4)C(C)=C1C3(C)C)[C@]1(OC(C)=O)CO[C@@H]1C[C@@H]2O\nMorgan similarity: 0.1346\n\nRecord 17-1\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.9124\nEndpoint: Permeability\nResult: 2.98 10^-6 cm^2/s\nAssay context: diffusion chamber with BMECs\nReported evidence: In a diffusion chamber assay with BMECs, 3[H] Taxol showed a permeability of 2.98 E-6 cm2/s.\n\n## Molecule 18\nSMILES: CC[C@H](C)[C@H]1O[C@]2(CC[C@@H]1C)C[C@@H]1C[C@@H](C/C=C(\\C)[C@@H](O[C@H]3C[C@H](OC)[C@@H](O[C@H]4C[C@H](OC)[C@@H](O)[C@H](C)O4)[C@H](C)O3)[C@@H](C)/C=C/C=C3\\CO[C@@H]4[C@H](O)C(C)=C[C@@H](C(=O)O1)[C@]34O)O2\nMorgan similarity: 0.1585\n\nRecord 18-1\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.875\nEndpoint: Plasma/brain ratio\nResult: 2.7 (day 6), 3.2 (day 10)\nAssay context: in vivo\nSpecies: rat\nConditions: \"neonatal offspring, day 6 and 10 post-partum\"\nAdditional details: \"Measured using radiolabelled ivermectin and/or its metabolites; this period correlates with the completion of the blood-brain barrier in rats.\"\nReported evidence: In the offspring of dams administered ivermectin, the plasma/brain ratio of radiolabelled ivermectin and/or its metabolites was 2.7 on day 6 post-partum and 3.2 on day 10 post-partum.\n\n## Molecule 19\nSMILES: COC(=O)[C@@H]1C[C@H](OC(C)=O)C(=O)[C@H]2[C@@]1(C)CC[C@H]1C(=O)O[C@H](c3ccoc3)C[C@]21C\nMorgan similarity: 0.1439\n\nRecord 19-1\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.8944\nEndpoint: maximum concentration in the brain (% of administered dose)\nResult: 3.3 %\nAssay context: i.v. administration of [11C]-salvinorin A\nSpecies: baboons\nConditions: \"adult female baboons\"\nExperimental details:\n  - bbb_permeability_label: permeable\n  - bbb_transport_label: passive_diffusion\n\nAdditional details: \"The drug is stated to easily and rapidly cross the BBB via passive diffusion due to high lipophilicity.\"\nReported evidence: In adult female baboons, i.v. administration of [11C]-salvinorin A resulted in the drug crossing the BBB and reaching a maximum brain concentration of 3.3% of the administered dose within 40 seconds.\n\n## Molecule 20\nSMILES: CO[C@H]1/C=C/C[C@H](C)[C@@H](C)S(=O)(=O)NC(=O)c2ccc3c(c2)N(C[C@@H]2CC[C@H]21)C[C@@]1(CCCc2cc(Cl)ccc21)CO3\nMorgan similarity: 0.1477\n\nRecord 20-1\nLevel: L3\nEvidence family: passive_permeability\nTransfer likelihood: 0.8829\nResult: impermeable BBB permeability\nAssay context: BOILED-Egg model\nExperimental details:\n  - bbb_permeability_label: impermeable\n\nReported evidence: Based on the BOILED-Egg model prediction, AMG176 is not BBB permeant.\n\n# Level L4\nEfflux-transporter evidence.\n\n## Molecule 21\nSMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C)C4=O\nMorgan similarity: 0.5583\n\nRecord 21-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.6202\nEndpoint: efflux_ratio\nResult: 4.7 ratio\nAssay context: MDCK-MDR1 bidirectional permeability assay\nExperimental details:\n  - evidence_type: bidirectional_transport\n  - transporter_identifier: ABCB1\n\nAdditional details: \"Mean Papp A-B: 3.57e-6 cm/s; Mean Papp B-A: 16.8e-6 cm/s; A-B recovery: 91.3%; B-A recovery: 67.9%\"\nReported evidence: In the MDCK-MDR1 assay with overexpression of Pgp, rifabutin showed a mean Papp A-B of 3.57 x 10^-6 cm/s, mean Papp B-A of 16.8 x 10^-6 cm/s, and an efflux ratio of 4.7, with 91.3% recovery in the A-B direction and 67.9% recovery in the B-A direction.\n\n## Molecule 22\nSMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(cc(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\nMorgan similarity: 0.697\n\nRecord 22-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8488\nResult: inhibitor efflux-transporter inhibition status\nAssay context: MDCK-MRP2/OATP8 cells; rifamycin SV\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - perturbation: 50 µM rifamycin SV\n  - transporter_identifier: UniProt:O42859\n\nAdditional details: \"Rifamycin SV inhibited MRP2-mediated export of [3H]BSP in cell-based assay; also confirmed in vesicle assay (38% of control LTC4 transport).\"\nReported evidence: Rifamycin SV inhibited transcellular [3H]BSP transport in MDCK-MRP2/OATP8 cells more than intracellular accumulation, indicating MRP2 inhibition; vesicle data confirmed 38% of control LTC4 transport at 50 µM.\n\nRecord 22-2\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8549\nResult: inhibitor efflux-transporter inhibition status\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Rifamycin SV (Xifaxan) is stated to inhibit P-gp activity, cited from literature.\"\nReported evidence: Rifamycin SV has been shown to inhibit P-gp activity (Xifaxan; Salix Pharmaceuticals), providing a possible explanation for the observed slight stimulation of digoxin uptake by rifamycin SV in untransfected HEK293 cells.\n\nRecord 22-3\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8454\nEndpoint: other\nResult: inhibitor efflux-transporter inhibition status\nAssay context: HEK-MRP2 membrane vesicles; 50 µM rifamycin SV\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: inhibitor\n  - perturbation: 50 µM rifamycin SV\n  - transporter_identifier: UniProt:O42859\n\nAdditional details: \"Inhibition of [3H]LTC4 transport to 38% of control at 50 \\u00b5M rifamycin SV.\"\nReported evidence: Rifamycin SV at 50 µM inhibited [3H]LTC4 transport into HEK-MRP2 membrane vesicles to 38% of control, demonstrating MRP2 inhibition.\n\n## Molecule 23\nSMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c5c(nc6cc(C)ccn65)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\nMorgan similarity: 0.6455\n\nRecord 23-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8583\nResult: substrate efflux-transporter substrate status\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: UniProt:P06795\n\nReported evidence: Rifaximin (RFX) is a semisynthetic BCS class IV drug that acts intraluminally in the GIT with an oral absorption of <0.4% due to low aqueous solubility, poor permeability, and high P-glycoprotein efflux.\n\nRecord 23-2\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8617\nEndpoint: other\nResult: substrate efflux-transporter substrate status\nAssay context: Single-pass rat intestinal perfusion (SPIP) model\nConditions: \"250-fold supersaturation of rifaximin via ASD formulation\"\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: substrate\n  - perturbation: P-gp inhibitor GF120918 (elacridar) co-administered\n\nAdditional details: \"Absorption rate coefficient fold change: 2; comparable to GF120918 effect.\"\nReported evidence: In the single-pass rat intestinal perfusion (SPIP) model, the absorption rate coefficient (ka) of rifaximin at 250-fold supersaturation (achieved by amorphous solid dispersion) was doubled compared to the crystalline solubility ka, and this ka was similar to that observed in the presence of the strong P-gp inhibitor GF120918, indicating that P-gp-mediated efflux was saturated by the high supersaturation.\n\nRecord 23-3\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8684\nResult: substrate efflux-transporter substrate status\nAssay context: human oral administration, pharmacokinetic analysis\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Only about 0.4% of oral dose reaches systemic circulation due to intestinal P-gp efflux and hepatic CYP3A4 metabolism.\"\nReported evidence: Rifaximin's low systemic absorption (~0.4% of dose reaches circulation) is partly due to its interaction with the P-glycoprotein (P-gp)-mediated efflux transport mechanism in the intestine, as well as metabolism by CYP3A4.\n\nRecord 23-4\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8562\nResult: substrate efflux-transporter substrate status\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - perturbation: Co-administration with Lopinavir/ritonavir (a P-gp inhibitor)\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"No BBB-specific context; the interaction is systemic. Text states increased levels of rifaximin by P-gp inhibition.\"\nReported evidence: Lopinavir/ritonavir increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter, indicating that rifaximin is a substrate of P-gp and that Lopinavir/ritonavir inhibits this efflux transporter.\n\nRecord 23-5\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8572\nResult: substrate efflux-transporter substrate status\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n\nAdditional details: \"Statement from abstract and also supported in introduction (paragraph 4).\"\nReported evidence: Rifaximin is stated to be a BCS class IV (low-solubility, low-permeability) drug and also a P-gp substrate.\n\n## Molecule 24\nSMILES: COc1cc2c(cc1O)CCN[C@]21CS[C@@H]2c3c(OC(C)=O)c(C)c4c(c3[C@H](COC1=O)N1[C@@H]2[C@H]2c3c(cc(C)c(OC)c3O)C[C@@H]([C@@H]1O)N2C)OCO4\nMorgan similarity: 0.1667\n\nRecord 24-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.7856\nResult: transporter_limited_brain_exposure\nAssay context: In vivo disposition study using mdr1a/1b(-/-) and wild-type mice\nConditions: \"mdr1a/1b(-/-) knockout mouse model\"\nExperimental details:\n  - evidence_type: genetic_perturbation\n  - interaction_conclusion: transporter_limited_brain_exposure\n  - perturbation: mdr1a/1b knockout\n  - transporter_identifier: UniProt:B5X0E4\n\nAdditional details: \"Distribution into brain and testis decreased by P-gp; no numeric brain data reported. Double knockout of mouse Mdr1a (Abcb1a) and Mdr1b (Abcb1b).\"\nReported evidence: In the study, P-gp (encoded by mdr1a/1b) was shown to be important for the in vivo disposition of trabectedin, as its expression decreased the distribution into the brain and testis. This indicates that P-gp limits the brain exposure of trabectedin at the blood-brain barrier.\n\n## Molecule 25\nSMILES: CO[C@]12C=C[C@](C)(O1)[C@@H](OC(=O)/C=C/c1cn(C)cn1)C[C@H]1C(C)=CC[C@H](C(C)C)[C@H]1/C=C\\2CO[C@@H]1OC[C@@H](O)[C@@H](O)[C@@H]1OC(C)=O\nMorgan similarity: 0.1806\n\nRecord 25-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8621\nResult: substrate efflux-transporter substrate status\nAssay context: cancer cell-lines with Pgp-overexpression\nConditions: \"Pgp-overexpressing cancer cell-lines\"\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - perturbation: Pgp overexpression\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Eleutherobin is not active against Pgp-overexpressing cell lines that are resistant to paclitaxel, suggesting it is a Pgp substrate.\"\nReported evidence: Unlike eleutherobin and sarcodictyins, and similar to many epothilones, discodermolide and dictyostatin are active against cancer cell-lines that are resistant to paclitaxel because of Pgp-overexpression; this implies that eleutherobin and sarcodictyins are inactive against such lines and thus are likely Pgp substrates.\n\n## Molecule 26\nSMILES: CCc1c(Cl)c(O)c(Cl)c(O)c1C(=O)O[C@H]1[C@H](O)[C@H](OC)[C@H](OC/C2=C\\C=C\\C[C@H](O)/C(C)=C/[C@H](CC)[C@@H](O[C@@H]3OC(C)(C)[C@@H](OC(=O)C(C)C)[C@H](O)[C@@H]3O)/C(C)=C/C(C)=C/C[C@@H]([C@@H](C)O)OC2=O)O[C@@H]1C\nMorgan similarity: 0.1637\n\nRecord 26-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8609\nResult: substrate efflux-transporter substrate status\nAssay context: not specified (qualitative statement in gastrointestinal context)\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Active metabolite also stated as substrate; P-gp inhibitor cyclosporine alters concentration but interaction not clinically important.\"\nReported evidence: From paragraph 47: Fidaxomicin and its active metabolite are substrates of the efflux transporter P-glycoprotein, which is expressed in the gastrointestinal tract. This is an explicit qualitative statement establishing fidaxomicin as a P-gp substrate, and although the context is gastrointestinal, the statement applies to the transporter itself.\n\n## Molecule 27\nSMILES: CO[C@@H]1[C@H](O)C[C@@H](O[C@@H]2C[C@H](Oc3cc4cc5c(c(O)c4c(O)c3C)C(=O)[C@@H](O[C@H]3C[C@@H](O[C@H]4C[C@@H](O[C@H]6C[C@](C)(O)[C@@H](OC(C)=O)[C@H](C)O6)[C@H](O)[C@@H](C)O4)[C@H](O)[C@@H](C)O3)[C@H]([C@H](OC)C(=O)[C@@H](O)[C@@H](C)O)C5)O[C@H](C)[C@@H]2OC(C)=O)O[C@@H]1C\nMorgan similarity: 0.2143\n\nRecord 27-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8547\nResult: substrate efflux-transporter substrate status\nAssay context: not specified (general drug resistance mechanism in cell lines)\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - transporter_identifier: NCBIGene:5243\n\nAdditional details: \"Claim from drug resistance context: decreased intracellular accumulation due to P-gp efflux.\"\nReported evidence: Following exposure to antineoplastic drugs, some cell lines develop cross-resistance to several other unrelated drugs, including vincristine, doxorubicin, colchicine, and actinomycin D. Resistance is a result of decreased intracellular accumulation of drug, which over-expression of P-gp causes by energy dependent drug efflux.\n\n## Molecule 28\nSMILES: COC1=C2C[C@@H](C)C[C@H](OC)[C@H](O)[C@@H](C)/C=C(\\C)[C@H](OC(N)=O)[C@@H](OC)/C=C\\C=C(/C)C(=O)NC(=CC1=O)C2=O\nMorgan similarity: 0.25\n\nRecord 28-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8548\nResult: substrate efflux-transporter substrate status\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: substrate\n  - perturbation: MRP1 over-expression\n  - transporter_identifier: UniProt:P13568\n\nReported evidence: Over-expression of MDR1 or MRP1 confers resistance towards geldanamycin and its derivative, 17-allylamino-demethoxygeldanamycin (17-AAG). This indicates that geldanamycin is a substrate of MRP1.\n\n## Molecule 29\nSMILES: C[C@@H]1[C@H](O)[C@@H](C)/C=C/C=C/C=C/C=C/C=C/C=C/C=C/[C@H](O[C@@H]2O[C@H](C)[C@@H](O)[C@H](N)[C@@H]2O)C[C@@H]2O[C@](O)(C[C@@H](O)C[C@@H](O)[C@H](O)CC[C@@H](O)C[C@@H](O)CC(=O)O[C@H]1C)C[C@H](O)[C@H]2C(=O)O\nMorgan similarity: 0.1655\n\nRecord 29-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8475\nResult: transporter_limited_brain_exposure\nAssay context: Brain capillary endothelial cells (source species not specified); co-incubation with the P-gp inhibitor verapamil\nExperimental details:\n  - evidence_type: pharmacological_inhibition\n  - interaction_conclusion: transporter_limited_brain_exposure\n  - perturbation: verapamil (P-glycoprotein inhibitor) co-incubation\n  - transporter_identifier: NCBIGene:5243\n\nAdditional details: \"Co-incubation with verapamil increased AmB accumulation in brain capillary endothelial cells, indicating that P-gp limits AmB brain exposure.\"\nReported evidence: Shao et al. found that the co-incubation of amphotericin B (AmB) with the P-gp inhibitor verapamil increased AmB accumulation in brain capillary endothelial cells, suggesting that P-gp limits the brain exposure of AmB at the blood-brain barrier.\n\n## Molecule 30\nSMILES: CO[C@@H]1[C@H](N(C)C(=O)c2ccccc2)C[C@H]2O[C@]1(C)n1c3ccccc3c3c4c(c5c6ccccc6n2c5c31)C(=O)NC4\nMorgan similarity: 0.1667\n\nRecord 30-1\nLevel: L4\nEvidence family: efflux_transport\nTransfer likelihood: 0.8559\nResult: inhibitor efflux-transporter inhibition status\nAssay context: Blood-brain barrier (BBB) - in vivo reference (Didier and Loor, 1995)\nExperimental details:\n  - evidence_type: qualitative_transporter_claim\n  - interaction_conclusion: inhibitor\n  - transporter_identifier: UniProt:P06795\n\nAdditional details: \"Statement cites Didier and Loor (1995); no original BBB experiment in this paper.\"\nReported evidence: SDZ PSC 833 decreases the biotolerability and increases the neurotoxicity of toxic substances, possibly by inhibiting Pgp function at the blood-brain barrier (Didier and Loor, 1995).\n\n# Level L5\nInflux or uptake-transporter evidence.\n\n## Molecule 31\nSMILES: CO[C@H]1C[C@@H]2CC[C@@H](C)[C@@](O)(O2)C(=O)C(=O)N2CCCC[C@H]2C(=O)O[C@H]([C@H](C)C[C@@H]2CC[C@@H](OCCO)[C@H](OC)C2)CC(=O)[C@H](C)/C=C(\\C)[C@@H](O)[C@@H](OC)C(=O)[C@H](C)C[C@H](C)/C=C/C=C/C=C/1C\nMorgan similarity: 0.1453\n\nRecord 31-1\nLevel: L5\nEvidence family: influx_transport\nEndpoint: blood-to-brain transport\nResult: Aromataseinhibitors, especially letrozole, probably also tamoxifen, everolimus and CDK4/6 inhibitors, especially abemaciclib, appear to act intracerebrally by overcoming the blood-brain barrier.\nExperimental details:\n  - evidence_basis: qualitative substrate claim\n  - transport_mechanism: unspecified mediated BBB uptake\n\nAdditional details: \"Review statement: the molecule appears to act intracerebrally by overcoming the BBB; no specific carrier/receptor mechanism mentioned.\"\nReported evidence: Aromataseinhibitors, especially letrozole, probably also tamoxifen, everolimus and CDK4/6 inhibitors, especially abemaciclib, appear to act intracerebrally by overcoming the blood-brain barrier.\n\n## Molecule 32\nSMILES: C=C1C(=O)NC(C)C(=O)NC(CC(C)C)C(=O)NC(C(=O)O)C(C)C(=O)NC(CCCN=C(N)N)C(=O)NC(C=CC(C)=CC(C)C(Cc2ccccc2)OC)C(C)C(=O)NC(C(=O)O)CCC(=O)N1C\nMorgan similarity: 0.1302\n\nRecord 32-1\nLevel: L5\nEvidence family: influx_transport\nEndpoint: BBB substrate relationship\nResult: The paper states that microcystins (MCs), including MC-LR, are transported across cell membranes via organic anion-transporting polypeptides (rodent Oatps/human OATPs), and that OATPs are expressed at the blood-brain barrier, which can explain MC-LR-inflicted neurotoxicity.\nExperimental details:\n  - evidence_basis: qualitative substrate claim\n  - mediator_identifier: UMLS:C0949791\n  - mediator_name: organic anion-transporting polypeptides\n  - transport_mechanism: carrier-mediated influx\n\nAdditional details: \"The passage cites Cattori 2005 and Steiner et al. 2014 as references for OATP-mediated transport, and Bronger et al. 2005, Cattori 2005, Huber et al. 2007, Westholm et al. 2009 for OATP expression at the BBB and other brain sites.\"\nReported evidence: The paper states that microcystins (MCs), including MC-LR, are transported across cell membranes via organic anion-transporting polypeptides (rodent Oatps/human OATPs), and that OATPs are expressed at the blood-brain barrier, which can explain MC-LR-inflicted neurotoxicity.\n\n## Molecule 33\nSMILES: CC[C@]1(O)C[C@@H]2C[N@@](CCc3c([nH]c4ccccc34)[C@@](C(=O)OC)(c3cc4c(cc3OC)N(C=O)[C@H]3[C@@](O)(C(=O)OC)[C@H](OC(C)=O)[C@]5(CC)C=CCN6CC[C@]43[C@@H]65)C2)C1\nMorgan similarity: 0.125\n\nRecord 33-1\nLevel: L5\nEvidence family: influx_transport\nEndpoint: apparent influx constant\nResult: relatively large and significantly higher than other brain regions\nAssay context: intravenous bolus injection technique of Ohno et al. (1978)\nSpecies: guinea pig\nConditions: \"hypothalamic region\"\nReported evidence: For vincristine, uptake into the hypothalamic region is relatively large and significantly higher than other brain regions, showing a high apparent influx constant.\n\n## Molecule 34\nSMILES: CC(C)C[C@H]1C(=O)N2CCC[C@H]2[C@]2(O)O[C@](NC(=O)[C@@H]3C=C4c5cccc6[nH]c(Br)c(c56)C[C@H]4N(C)C3)(C(C)C)C(=O)N12\nMorgan similarity: 0.1346\n\nRecord 34-1\nLevel: L5\nEvidence family: influx_transport\nResult: influx_substrate\nExperimental details:\n  - bbb_transport_label: influx_substrate\n\nAdditional details: \"Identified as a substrate of uptake transporters at the BBB.\"\nReported evidence: Bromocriptine is described as a substrate of uptake transporters at the blood-brain barrier.\n\n## Molecule 35\nSMILES: COc1ccc2c3c1O[C@H]1C(=O)CC[C@@]4(O)[C@@H](C2)N(C)CC[C@]314\nMorgan similarity: 0.136\n\nRecord 35-1\nLevel: L5\nEvidence family: influx_transport\nEndpoint: unbound concentration ratio (brain/blood)\nResult: three-times higher\nSpecies: rats\nExperimental details:\n  - bbb_transport_label: influx_substrate\n\nAdditional details: \"active influx across the blood-brain barrier with an unidentified carrier protein\"\nReported evidence: In rats, oxycodone has a three-times higher unbound concentration in the brain than in the blood, indicating an active influx across the blood-brain barrier with an unidentified carrier protein.\n\n# Required JSON shape\n{\n  \"claims\": [\n    {\n      \"claim\": \"concise evidence-grounded statement\",\n      \"evidence_role\": \"supportive | contradictory\",\n      \"molecule_ids\": [\n        \"Molecule N\"\n      ],\n      \"record_ids\": [\n        \"Record N-N\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"pass | fail\"\n}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\n  \"claims\": [\n    {\n      \"claim\": \"Direct rifampicin measurements demonstrate meaningful brain entry: human peritumoral brain tissue reached 0.29 µg/mL after i.v. infusion, monkey brain reached 0.87 µg/g after i.v. [14C]rifampicin, and baboon PET brain concentrations were around 1 µg/mL and were estimated to exceed the MIC by 3- to 4-fold.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 12\"],\n      \"record_ids\": [\"Record 12-2\", \"Record 12-3\", \"Record 12-4\", \"Record 12-6\"]\n    },\n    {\n      \"claim\": \"Rifampicin and/or its metabolites were reported to penetrate the BBB in baboons, and high mouse brain concentrations (10.25 µg/mL) were measured after i.p. dosing, supporting meaningful CNS exposure after systemic administration.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 12\"],\n      \"record_ids\": [\"Record 12-5\", \"Record 12-6\"]\n    },\n    {\n      \"claim\": \"In TBM and inflamed-meninges settings, the related rifamycin rifabutin achieved meaningful CNS exposure: CSF/plasma ratio ~0.227 and brain/plasma ratio ~0.856 in a rabbit TBM model, and ~50% CSF penetration in HIV patients.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 13\"],\n      \"record_ids\": [\"Record 13-1\", \"Record 13-2\", \"Record 13-6\", \"Record 13-9\"]\n    },\n    {\n      \"claim\": \"Rifabutin also reached dose-dependent CSF concentrations of 0.33–2.26 µg/mL in experimental meningitis, confirming that rifamycin-class antibiotics can achieve adequate CNS exposure under meningeal inflammation.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 13\"],\n      \"record_ids\": [\"Record 13-7\"]\n    },\n    {\n      \"claim\": \"There is negative rifamycin evidence: rifapentine was nearly undetectable in TBM patient CSF, rifampicin was labeled poorly BBB-penetrant in healthy baboons, rifabutin showed low rat brain radioactivity, and rifamycin SV/B showed limited or impermeable brain penetration; these indicate limited passive entry and efflux effects, but they are offset by direct rifampicin brain measurements and the enhanced CNS penetration expected in inflamed meninges.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 11\", \"Molecule 12\", \"Molecule 13\", \"Molecule 14\", \"Molecule 15\"],\n      \"record_ids\": [\"Record 11-1\", \"Record 12-1\", \"Record 13-4\", \"Record 13-10\", \"Record 14-2\", \"Record 14-3\", \"Record 15-1\"]\n    },\n    {\n      \"claim\": \"Efflux may limit rifamycin brain exposure, as shown by rifabutin P-gp efflux ratio 4.7 and rifaximin P-gp substrate status, but the endpoint definition requires meaningful rather than ideal access, and the measured rifampicin and rifabutin CSF/brain concentrations demonstrate that efflux is not absolute in the relevant disease setting.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 21\", \"Molecule 23\"],\n      \"record_ids\": [\"Record 21-1\", \"Record 23-1\"]\n    }\n  ],\n  \"final_prediction\": \"pass\"\n}",
+          "reasoning": "We need answer JSON. Need reason. Need examine query molecule: huge rifamycin analog? SMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\n\nThis looks rifabutin? Actually rifamycin derivative with naphthoquinone ansa, with C=N-N5CCN(C)CC5 at position. Need predict meaningful CNS access under tuberculous meningitis. Molecule similar to rifapentine (11), rifampicin (12), rifabutin (13), rifamycin SV (14), rifamycin B (15), rifaximin (23). Query has methylpiperazinyl hydrazone side chain maybe \"rifampicin\" itself? Let's identify: Rifampicin SMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C. Yes exactly query is rifampicin! Query molecule is rifampicin. Need predict CNS access in TBM. Evidence includes Molecule 12 is rifampicin? SMILES has N14CH3 variant (methyl labeled) but no OH at c? Let's compare: Query has c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4... Molecule 12: ... c4cc(c(/C=N/N5CCN([14CH3])CC5)c(O)c4... missing one OH? Morgan 0.769. Molecule 12 records are rifampicin/RIF. Direct evidence: poor penetration in healthy baboons, brain tissue concentrations in humans after tumor resection, etc. Need decide pass/fail. There are contradictory: Molecule 12-6 says RIF and metabolites penetrate BBB, estimated brain concentrations 3-4x MIC. But other RIF records poor penetration. For TBM condition, inflamed meninges increases penetration? Need evidence? Molecule 11 rifapentine low in human TBM CSF (<0.15 mg/L vs serum 7.2), rat brain <20%; low CSF penetration. Molecule 12 rifampicin poor in baboon, brain tissue 0.29 µg/mL in humans, 0.87 µg/g monkey, 10.25 µg/g mouse, etc. Molecule 13 rifabutin better CSF/plasma 0.227 in rabbit TBM, human CSF 50% but rat low. Query is rifampicin not rifabutin. Need integrate.\n\nQuestion asks endpoint meaningful or adequate CNS access after systemic administration, under tuberculous meningitis. Need predict pass/fail. What expected for rifampicin? Clinically, rifampicin is a key anti-TB drug used for TBM, despite variable CSF penetration. It has moderate CSF penetration in inflamed meninges maybe 10-20%? Actually rifampicin CSF concentrations in TBM are low but often therapeutic? Let's consider label \"meaningful_cns_access.v1\": Positive pass for meaningful or adequate BBB/CNS access; fail for insufficient access. Need balance evidence. Query molecule = rifampicin. Existing L1 direct brain exposure has no query-specific? Molecule 12 L2 includes rifampicin directly. Most records say impermeable/poor penetration. But there are some positive: 12-6 labeled permeable due brain concentration/MIC 3-4x higher than MIC in baboons, but transfer likelihood 0.07 weird due low. 12-5 mouse brain concentration 10.25 µg/ml high after 100 mg/kg. 12-2 human brain tissue 0.29 µg/mL after 600 mg IV, maybe adequate? Need context.\n\nNeed parse every evidence block and decide. We must output JSON claims and final_prediction.\n\nNeed include all materially informative evidence; can cite multiple records. Need maybe final fail? Let's reason carefully.\n\nWe need understand \"meaningful CNS access\" under TBM. Rifampicin is standard treatment for TBM? Actually WHO regimen for TBM includes rifampicin, isoniazid, pyrazinamide, ethambutol. Rifampicin CSF penetration is about 10-20% of serum with inflamed meninges. Is that \"meaningful or adequate\"? Many studies show CSF concentrations above MIC of M. tuberculosis in TBM. But dataset may expect fail? The evidence provided includes rifapentine low CSF in TBM (<0.15 mg/L vs serum 7.2 mg/L), rifampicin poor BBB in healthy baboons, rifamycin poor, rifabutin contradictory. Query is rifampicin; direct evidence records for rifampicin may be considered \"impermeable\" due low accumulation. However record 12-6 says permeable with brain concentrations 3–4 times higher than MIC. Need classify.\n\nLet's list evidence.\n\nMolecule 11: rifapentine analog high similarity 0.87 to query? Wait molecule 11 SMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C6CC6)CC5)c(O)c4c3C2=O)NC(=O)... This is rifapentine? It has N5CCN(C6CCCC6?) Actually cyclopentyl? Query has N5CCN(C)CC5. Molecule 11 is rifapentine (cyclohexyl? C6CCCC6? SMILES: N5CCN(C6CCCC6)CC5). Morgan 0.87. Records:\n11-1 human TBM CSF <0.15 mg/L vs serum 7.2 mg/L, 10h after oral: very low CSF (ratio <2%). Contradictory to pass.\n11-2 rat brain concentrations <20% plasma after oral 10 mg/kg. Contradictory.\n11-3 poor penetration, low CSF due lipophilic and PPB 80%. Contradictory.\n11-4 does not cross BBB to quantitatively important extent. Contradictory.\nMolecule 12: rifampicin analog (14C methyl) 0.769. Records:\n12-1 PET baboon healthy: RIF/metabolites poorly penetrate BBB. Contradictory.\n12-2 human brain tissue around tumors: 0.29 µg/ml following 600mg IV. Could be meaningful? Need compare MIC: M. tuberculosis MIC ~0.03-0.25 µg/mL; 0.29 above MIC maybe adequate. But brain tissue around tumors maybe not inflamed, indicates penetration.\n12-3 baboon PET: concentrations 0.9-1.2 µg/ml whole brain. If MIC ~0.25, above. But \"poor\" from 12-1? Transfer 0.628. This could be supportive? Record 12-3 result numeric; no bbb label. Reported \"concentration of [11C]RIF in whole brain area was monitored\" values ~1 µg/ml. That seems meaningful if free? But plasma? Need context. Could be supportive.\n12-4 monkey brain 0.87 µg/g 6h after IV [14C]RIF. Supportive maybe moderate.\n12-5 mouse brain 10.25 µg/mL 3-7h after IP 100mg/kg. High.\n12-6 baboon RIF and metabolites penetrate BBB, estimated brain concentrations 3-4 times higher than MIC. Supportive. But transfer likelihood 0.0728 because? Experimental details \"BBB penetration ability ranked as PZA > INH > RIF.\" Still \"permeable\" relative to MIC. Supportive.\nMolecule 13: rifabutin (piperidine isobutyl? Actually rifabutin has 4-isobutylaminopiperidine? Query differs). Records:\n13-1 rabbit TBM CSF/plasma 0.227. Supportive for rifabutin, but query rifampicin differs; transfer moderate.\n13-2 rabbit TBM brain/plasma 0.856. Supportive.\n13-3 CSF-to-serum ratio 0.52 in vivo infection. Supportive.\n13-4 rat brain levels low after 14C-rifabutin. Contradictory.\n13-5 P-gp substrate predicted. Contradictory.\n13-6 human AIDS CSF penetration 50.4%. Supportive.\n13-7 experimental meningitis CSF concentrations 0.33-2.26 µg/mL. Supportive.\n13-8/9 human HIV CSF 50%. Supportive.\n13-10 rat brain low content, 4.3e-2 % dose. Contradictory.\nMolecule 14: rifamycin SV? Query-des-methyl? Actually 14 SMILES no hydrazone side chain, has extra OH? Morgan 0.697. Records:\n14-1 human IV rifamycin CSF <4 µg/mL 1h. Could be supportive? Maybe not sufficient? \"less than 4 µg/ml\" unclear.\n14-2 neonatal meningitis: does not cross BBB in sufficient concentration for effective treatment despite high serum and inflammation. Contradictory.\n14-3 limited brain penetration liability. Contradictory.\nMolecule 15: rifamycin B carboxymethyl ether? Morgan 0.645. Record 15-1 \"does not diffuse through BBB.\" Contradictory.\nMolecule 16 novobiocin unbound brain/plasma 0.065 (not similar) contradict.\nMolecule 17 Taxol passive permeability (not similar) no.\nMolecule 18 ivermectin no.\nMolecule 19 salvinorin no.\nMolecule 20 AMG176 no.\nMolecule 21 rifabutin efflux ratio 4.7 P-gp substrate. Contradictory to brain access? Efflux reduces but not absolute.\nMolecule 22 rifamycin SV inhibits MRP2/P-gp. Not directly CNS; perhaps contradictory? Actually inhibitor status could increase? No.\nMolecule 23 rifaximin P-gp substrate, poor oral absorption. Contradictory, but rifaximin not CNS-targeting due gut; low systemic.\nMolecule 24 trabectedin P-gp limits brain. no.\n25 eleutherobin P-gp substrate no.\n26 fidaxomicin P-gp substrate no.\n27 actinomycin no.\n28 geldanamycin MRP1 no.\n29 amphotericin P-gp limits brain no.\n30 PSC833 inhibitor no.\nMolecule 31 aromatase inhibitors no.\n32 microcystin no.\n33 vincristine no.\n34 bromocriptine influx substrate no.\n35 oxycodone influx no.\n\nNeed choose final. Query rifampicin under TBM. The direct query-family evidence (rifampicin) is mixed: poor BBB in healthy baboons, but brain tissue concentrations around 1 µg/g and 3-4x MIC. In TBM condition, meningeal inflammation increases BBB permeability. Rifampicin clinical CSF concentrations in TBM: Let me recall: rifampicin CSF concentrations in TBM are about 0.5-1.5 mg/L? Is that adequate? The drug is cornerstone. But \"meaningful CNS access\" maybe pass because rifampicin is known to cross inflamed BBB sufficiently to be effective in TBM, despite poor in healthy.\n\nBut the evidence includes very specific TBM human data for rifapentine (not rifampicin) showing CSF <0.15 mg/L. Rifampicin CSF in TBM human studies? Not included except brain tissue. There is no direct human rifampicin CSF in TBM record. Molecule 12-2 brain tissue around tumors (non-TBM) 0.29 µg/ml.\n\nLet's evaluate predicted label perhaps from dataset. They want \"meaningful_cns_access.v1\" under disease condition. The query is rifampicin, a known anti-TB drug. In TBM, rifampicin is used, CSF penetration about 10-20% of plasma, adequate for most strains? In severe TBM maybe increased. But \"meaningful or adequate CNS access\" not \"ideal passive diffusion\". Need pass? Let's inspect instruction: \"Meaningful access does not require ideal passive diffusion, high unbound brain exposure, or absence of every efflux signal.\" This hints positive can be if some access. Query is rifampicin: known CNS active? Actually rifampicin is the main drug for TBM; CSF:plasma ratio around 0.1-0.3 in inflamed meninges. That may be meaningful. But evidence in this set includes \"impermeable BBB permeability\" labels for rifampicin, \"poor_penetration\". Yet \"poor penetration\" in healthy conditions may not apply to TBM? Disease condition specifically tuberculous meningitis. Need weigh condition. The question: \"This prediction concerns the query molecule under the disease condition tuberculous meningitis.\" We should integrate evidence from TBM models. Molecule 13 rifabutin in rabbit TBM shows CSF/plasma 0.227, brain/plasma 0.856, and human HIV CSF 50%. But that's rifabutin, not rifampicin; both rifamycins. Molecule 11 rifapentine in human TBM showed CSF <0.15 mg/L, fail. Molecule 14 rifamycin SV in neonatal meningitis fail. Query rifampicin might be intermediate.\n\nLet's search memory: In humans, rifampicin CSF concentrations in TBM: 0.4–0.9 µg/mL after standard 600 mg, CSF/serum ~14%. Is that adequate? MIC 0.06-0.25, so yes. But in 2009 study, standard-dose rifampicin CSF concentrations may be suboptimal in some TBM patients. Higher doses improve. However \"adequate CNS access\" maybe pass if concentrations exceed MIC. There is no MIC comparison in provided evidence except 12-6 says 3-4x MIC in baboons. That supports pass.\n\nNeed possibly mention contradictory evidence but final pass due TBM inflammation and sufficient brain/CSF exposure. But let's not rush.\n\nLet's understand molecule identity. Query = rifampicin (RIF). Molecule 12 is radiolabeled Rifampicin (14CH3) missing one OH? Query has at position c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4; Molecule 12: c4cc(c(/C=N/N5CCN([14CH3])CC5)c(O)c4... Actually query has \"c(O)c(c(/C=N/...c(O)c4\" means one phenolic OH at C and one at adjacent? Molecule 12 has \"c4cc(...) c(O)c4\" missing an O? Let's compare:\nQuery fragment: Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC...\nMolecule 12: Oc3c(C)c(O)c4cc(c(/C=N/N5CCN([14CH3])CC5)c(O)c4c3C2=O)NC...\nSo query has c(O)c(c(...)c(O)c4 (two OH? One at \"c(O)c\" maybe same? Molecule 12 has c4cc(c(...)c(O)c4 (one less OH? Actually query has \"c4c(O)c(c(...)c(O)c4\": four substituted positions? Let's parse: query: Oc3c(C)c(O)c4c(O)c(c(/C=N/...)c(O)c4c3C2=O)NC. There is c4c(O)c(c(/C=N...)c(O)c4: positions 1 c, 2 c(O), 3 c(c(...)), 4 c(O), fused. Molecule 12: c4cc(c(/C=N...)c(O)c4: c4 c, c, c(...), c(O) fused. So query has extra OH? Wait c4c(O)c(c(...)c(O)c4 means four aromatic atoms: c4, c(O), c(c), c(O), yes two OH. Molecule 12 has c4, c, c(c), c(O): one OH only? But rifampicin structure has hydroquinone? Actually rifampicin has two hydroxyls on naphthoquinone? The query seems authentic rifampicin. Molecule 12 may be a derivative missing one phenol? But record says Rifampicin. Maybe Morgan 0.769 due isotope and OH.\n\nMolecule 11 rifapentine has same naphthoquinone with cyclopentyl? It is close.\n\nRifampicin vs rifapentine: Both ansamycin rifamycins. Rifapentine is more lipophilic, long half-life, but CSF penetration poor? Actually rifapentine CSF in TBM was very low. Rifampicin is less lipophilic than rifapentine? Both high MW ~823, TPSA ~? LogP ~4? Rifampicin has zwitterionic? It has poor passive permeability but some CNS penetration due inflammation.\n\nThe endpoint \"meaningful_cns_access.v1\" likely a binary from a dataset where positive for \"meaningful CNS exposure\" maybe requires Kp or CSF/plasma ratio. Under TBM, rifampicin is likely considered positive due clinical efficacy? Need infer from labels. The evidence retrieval includes direct L1 records not query (e.g. fucoxanthin, decursin, dictyostatin). But query-specific L2 records likely curated to provide evidence. The task asks \"Give most weight to transferable direct brain, plasma, CSF, uptake, perfusion, influx, or prodrug evidence.\" We need decide.\n\nLet's assess each relevant evidence's transfer to rifampicin under TBM:\n\n- Molecule 12 (RIF) direct evidence is most transferable: 12-1 \"RIF poorly penetrate BBB in healthy baboons\" fail; 12-2 brain tissue 0.29 µg/ml (support); 12-3 ~1 µg/ml (support); 12-4 0.87 µg/g (support); 12-5 10.25 µg/ml mouse (support); 12-6 \"penetrate BBB, brain concentrations 3-4x MIC\" support. So within RIF, multiple quantitative records support meaningful brain exposure, despite qualitative \"poor_penetration\" in healthy baboons. In TBM, inflammation increases penetration; so final pass.\n\nBut if dataset label for rifampicin is \"fail\" because BBB permeability label poor? Need think.\n\nThe evidence retrieval includes \"Molecule 11\" rifapentine with Morgan 0.87 and transfer likelihood 0.716-0.827, high. It has direct human TBM CSF <0.15 mg/L. The query is rifampicin? Rifapentine has one additional cyclopentyl on piperazine? Rifapentine is a rifamycin with cyclopentylpiperazine hydrazone. It is known to have poor CSF penetration? But rifapentine has longer half-life, high protein binding (97%), maybe very low CSF. Rifampicin might also low. The inclusion of Molecule 11 could be intended to support fail due close analog under same disease. But the query is rifampicin, not rifapentine. For TBM, rifampicin is recommended, rifapentine not. Could be because rifampicin has better CSF penetration? Actually rifampicin CSF/serum ~10-20%, rifapentine CSF/serum ~? There are data in TBM mice: rifapentine brain/plasma ratio ~0.3? Human CSF <0.15 because low dose? Hmm.\n\nPotential final expected by benchmark? They might label query molecule based on known CNS exposure: Rifampicin is a \"BBB penetrant\" maybe positive? However evidence labels: 12-1 bbb_permeability_label: poor_penetration, 12-6 bbb_permeability_label: permeable. Mixed.\n\nNeed consider \"meaningful or adequate CNS access after systemic administration\" under TBM. Standard medical knowledge: Rifampicin CSF concentration in TBM is ~10-20% serum, which is considered adequate for anti-TB effect. \"Meaningful access\" likely pass. But under \"tuberculous meningitis\", the BBB is inflamed and more permeable, so even drugs with poor healthy BBB access may achieve adequate CNS exposure. The query is an anti-TB drug used for TBM. I'd lean pass.\n\nBut let's not ignore \"Molecule 11 record 11-1\" directly in human TBM: rifapentine CSF below LOD while serum 7.2. If the query were rifapentine, fail. Query is rifampicin. Why include rifapentine high similarity? Maybe because query actually rifapentine? Let's verify query SMILES: N5CCN(C)CC5 = N-methylpiperazine. Rifampicin has 3-[(4-methyl-1-piperazinyl)imino]methyl? Rifampicin side chain: /C=N/N5CCN(C)CC5, yes methylpiperazine. Rifapentine has cyclopentyl? Rifapentine side chain: /C=N/N5CCN(C6CCCC6)CC5? Actually rifapentine: 3-[[(4-cyclopentyl-1-piperazinyl)imino]methyl]rifamycin, so N5CCN(C6CCCC6)CC5. Molecule 11 SMILES has N5CCN(C6CCCC6)CC5? It says C6CCCC6 (cyclopentyl). Yes molecule 11 is rifapentine. Query has N5CCN(C)CC5 = rifampicin. So yes.\n\nMolecule 12 SMILES has N5CCN([14CH3])CC5 = radiolabeled rifampicin, but missing an OH? Wait rifampicin has naphthohydroquinone with two OH? Let's look up rifampicin structure: It consists of ansamycin macrocycle and naphthohydroquinone chromophore with a piperazine hydrazone. Exact SMILES from PubChem? Rifampicin: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C. Yes query. Molecule 12: Oc3c(C)c(O)c4cc(c(/C=N/N5CCN([14CH3])CC5)c(O)c4c3C2=O)NC... It lacks one \"c(O)\" after c4, but maybe because [14CH3] variant from paper had \"rifampicin\" but desacetyl? Actually could be \"rifampicin quinone\" not hydroquinone? But likely record calls RIF.\n\nNeed include claims citing molecules 11-16, 21, 23 maybe. We can create concise claims.\n\nNeed output exactly JSON with claims list and final_prediction. Each claim may cite any number molecules/records. Need include evidence_role support/contradictory relative final prediction. If final pass, supportive claims include evidence supporting pass; contradictory include fail evidence. We can include many claims.\n\nNeed be careful with evidence_role semantics: \"supportive means evidence supporting your selected final prediction; contradictory means evidence supporting alternative.\" So if final pass, supportive = positive CNS access evidence; contradictory = negative/insufficient evidence. We should include both.\n\nNeed final_prediction maybe \"pass\". We need justify final based on query-specific RIF records plus TBM inflammation. In claims, mention high-weight direct RIF brain concentrations and MIC multiples, and disease inflammation.\n\nLet's craft claims:\n\nSupportive:\n1. Rifampicin direct evidence: Record 12-2 human brain tissue concentration 0.29 µg/mL after iv, 12-3 baboon PET brain concentrations ~0.9–1.2 µg/mL, 12-4 monkey 0.87 µg/g, 12-5 mouse 10.25 µg/mL. These show drug enters brain parenchyma, not just plasma. Molecule 12.\n2. Rifampicin brain concentrations exceed MIC (12-6): baboon PET estimated brain concentrations 3–4× MIC. This supports adequate CNS exposure. Molecule 12.\n3. In TBM/inflammation, BBB disrupted: Rifabutin (structurally related rifamycin) in rabbit TBM achieved CSF/plasma 0.227, brain/plasma 0.856 (records 13-1,13-2), and human HIV patients CSF ~50% serum (13-6,13-8,13-9); experimental meningitis CSF 0.33-2.26 µg/mL (13-7). This supports class-level meaningful access in meningeal inflammation. But condition TBM, not healthy. Molecule 13.\n4. Rifampicin itself is used/effective in TBM? Not from evidence. Could not claim if not in records? We can state based on evidence, not external? Maybe okay but claims should be evidence-grounded. Better avoid unsupported clinical efficacy.\n\nContradictory:\n5. Rifampicin/close rifapentine negative: Rifapentine in human TBM CSF <0.15 vs serum 7.2 (11-1); rat brain <20% plasma (11-2); poor BBB (11-3,11-4). Rifampicin healthy baboon PET poorly penetrate (12-1). Rifamycin SV/B limited brain (14-2,14-3,15-1). Rifabutin rat low brain (13-4,13-10), P-gp substrate (21-1). These could argue insufficient, but outweighed by direct RIF quantitation and inflammation.\n\nNeed include one or more claims. Maybe 6-8 claims.\n\nLet's ensure all identifiers correct: \"Molecule 12\", \"Record 12-2\", etc.\n\nPotential issue: final pass might be contested. Let's explore more deeply.\n\nWhat is \"meaningful or adequate CNS access\" in dataset? They might classify rifampicin as fail because low BBB permeability? Let's examine query condition \"tuberculous meningitis\". In TBM, antibiotics need cross BBB. Rifampicin is the most important drug; but many studies show CSF concentrations are only ~0.2 mg/L with standard doses, which may be below MIC for some strains? Actually rifampicin MIC for M. tuberculosis = 0.03–0.5 mg/L; CSF levels in TBM: mean peak 0.4 mg/L maybe sufficient. Higher doses (600 mg) yield CSF AUC/MIC >? A 2018 study: rifampicin CSF concentrations in TBM were 0.66 mg/L (IQR 0.32–1.35); total CSF:plasma ratio 0.13. That's meaningful. Under inflamed meninges, definitely passes. So pass.\n\nBut the evidence provided didn't include human rifampicin CSF in TBM. It includes human rifapentine CSF fail. Maybe query is not rifampicin? Let's double-check SMILES: \"CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(O)c(c(/C=N/N5CCN(C)CC5)c(O)c4c3C2=O)NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\" PubChem rifampicin: This exact? Let's compare rifampicin has \"NC(=O)/C(C)=C\\C=C\\[C@H](C)[C@H](O)[C@@H](C)[C@@H](O)[C@@H](C)[C@H](OC(C)=O)[C@@H]1C\" yes. The stereochemistry \"C=C\\O[C@@]2(C)\" is ansa bridge. Yes.\n\nRifapentine differs only side chain N5CCN(C6CCCC6)CC5. Molecule 11 has C6CCCC6? Wait SMILES given: N5CCN(C6CCCC6)CC5. C6CCCC6 is cyclohexane? Let's count: C6 = atom with 6 bonds? In SMILES, C6CCCC6: atom C6, then C, C, C, C, C6 closing ring = 5-membered ring? Wait \"C6CCCC6\" has atom C6, C, C, C, C, C6 = six atoms in ring? Actually C6 is atom 1, then C C C C then C6 closes to atom 1: the ring atoms: C6, C, C, C, C, C6? No, closing C6 is same atom as first C6, so ring has 5 distinct atoms? Let's count: \"C6\" is labelled atom A. Then \"C\" B, \"C\" C, \"C\" D, \"C\" E, then \"C6\" refers back to A. So ring A-B-C-D-E-A = 5-membered cyclopentyl. So rifapentine has cyclopentyl, correct. Molecule 11 is rifapentine.\n\nMolecule 13 rifabutin has a different ansa? SMILES: CO[C@H]1/C=C/O[C@@]2(C)Oc3c(C)c(O)c4c(c3C2=O)C2=NC3(CCN(CC(C)C)CC3)NC2=C(NC(=O)...)C4=O. This is rifabutin (spiro-piperidine imino). Query has hydrazone. Both rifamycins.\n\nMolecule 14 rifamycin SV (no hydrazone, no methylpiperazine, extra OH). Molecule 15 rifamycin B (carboxymethyl).\n\nWhat does \"Molecule 12-6 bbb_permeability_label: permeable\" transfer likelihood 0.0728 (low). Because molecule 12 Morgan 0.769 but transfer likelihood 0.07? Wait 12-6 transfer likelihood 0.0728, meaning evidence not transferable? The transfer likelihood is a normalized distance; low score maybe because the detailed record has unusual endpoint \"brain concentration / MIC\" and qualitative statement from same paper? Actually low score could be due record content not structural similarity? Instruction says don't blindly trust. But if transfer likelihood low, maybe the evidence is less transferable to query? Hmm. Need understand \"assay-transfer score (0 to 1) estimates how transferable the evidence is to query, normalized distance polarized by sigmoid. High scores like 0.99 don't mean experimental values transfer with 99%...\" So 0.07 means low transfer. Why would same molecule have low transfer? Maybe because molecule 12 is not identical and transfer likelihood computed from similarity 0.769? But 12-1 has 0.8378, so not solely similarity. 12-6 low maybe because endpoint \"brain concentration / MIC\" has complex extraction and not transferable? Not sure. The instruction says don't blindly trust scores. But if a record is directly rifampicin, transfer should be high regardless of score? The retrieval score may be low due text/assay. We should still weigh directness.\n\nMaybe final expected is fail because the \"Molecule 12\" direct records have contradictory labels but the record 12-1 \"RIF poorly penetrate BBB in healthy baboons\" is high transfer 0.8378; 12-2 human brain tissue 0.29 µg/ml transfer 0.642; 12-3 baboon 1 µg/ml transfer 0.628; 12-4 monkey 0.87 transfer 0.2526; 12-5 mouse 10.25 transfer 0.0768; 12-6 3-4x MIC transfer 0.0728. Higher transfer scores for \"poor\" and lower for \"supportive\" quantitative. Transfer likelihoods might reflect relevance to \"BBB permeability\" for query: high scores for poor labels. Could indicate intended final fail. But the task says \"Do not blindly trust retrieval scores\" and \"higher scores more likely to transfer\". If high transfer poor, fail likely.\n\nLet's examine 12-2: human brain tissue concentration 0.29 µg/mL following 600 mg IV. Is 0.29 µg/mL adequate? MIC of rifampicin for M. tuberculosis is often <0.06 µg/mL; for TBM, target maybe Cmax/MIC >? 0.29 could be above MIC for susceptible strains. But \"brain tissue resected around tumors\" includes blood contamination? Brain tissue concentration after IV may include residual blood, but still. 12-3 baboon ~1 µg/ml; perhaps [11C]RIF concentration in whole brain includes blood pool? PET measures total brain including blood; if BBB impermeable, signal may be blood volume. But they converted to µg/ml using injected dose; 1 µg/mL seems high if blood concentration? Actually IV injection, brain PET signal could reflect vascular pool. So \"poorly penetrate\" from 12-1 may be more accurate. 12-5 mouse 10.25 µg/mL after IP 100 mg/kg; plasma maybe very high, brain/plasma ratio unknown. Need not support if total brain with blood. But still shows some.\n\nRecord 12-6 says brain concentrations 3–4 times higher than MIC. That is explicitly supportive. But transfer likelihood low. It may be from same baboon PET study but if 12-1 says poorly penetrate, how can 12-6 say 3-4x MIC? MIC maybe low (0.05 µg/mL), so 1 µg/mL is 20x. In context \"BBB penetration ability ranked as PZA > INH > RIF\" means RIF lowest, yet brain levels exceed MIC. That could be meaningful.\n\nNeed know \"meaningful CNS access\" definition. It says \"Meaningful access does not require ideal passive diffusion, high unbound brain exposure, or absence of every efflux signal.\" That sounds they want pass for drugs with some measurable CNS exposure, even if efflux. Rifampicin has measurable brain/CSF exposure and is clinically used for TBM. So pass.\n\nBut there is also \"Molecule 11-1: CSF concentrations of rifapentine below LOD in 5 Chinese patients with TBM\" - if rifapentine, close analog, fail under TBM. Rifampicin differs by methyl vs cyclopentyl. Does cyclopentyl reduce CSF? Rifapentine has higher protein binding and longer half-life; likely lower CSF. The query is methylpiperazine, so not transferable to rifapentine failure fully. Rifampicin is more hydrophilic, lower protein binding (~80%), maybe better CSF.\n\nThus pass.\n\nLet's craft final claims with nuance. Need output only JSON. Claims should be concise. We can cite relevant records.\n\nPotential final JSON:\n\n{\n \"claims\": [\n  {\n    \"claim\": \"Direct rifampicin measurements show meaningful brain entry: human peritumoral brain tissue reached 0.29 µg/mL after i.v. infusion, and monkey brain contained 0.87 µg/g after i.v. [14C]RIF; baboon PET brain concentrations were around 1 µg/mL and estimated to be 3-4 times the MIC.\",\n    \"evidence_role\": \"supportive\",\n    \"molecule_ids\": [\"Molecule 12\"],\n    \"record_ids\": [\"Record 12-2\",\"Record 12-3\",\"Record 12-4\",\"Record 12-6\"]\n  },\n  {\n    \"claim\": \"Rifampicin/metabolites were reported to penetrate the BBB in baboons and high mouse brain concentrations (10.25 µg/mL) were measured after i.p. dosing, supporting meaningful CNS exposure after systemic administration.\",\n    \"evidence_role\": \"supportive\",\n    \"molecule_ids\": [\"Molecule 12\"],\n    \"record_ids\": [\"Record 12-5\",\"Record 12-6\"]\n  },\n  {\n    \"claim\": \"In TBM/inflamed-meninges models, the related rifamycin rifabutin achieved CSF/plasma ~0.227 and brain/plasma ~0.856 in rabbits, and ~50% CSF penetration in HIV patients, indicating that rifamycin-class CNS exposure is enhanced and meaningful under meningeal inflammation.\",\n    \"evidence_role\": \"supportive\",\n    \"molecule_ids\": [\"Molecule 13\"],\n    \"record_ids\": [\"Record 13-1\",\"Record 13-2\",\"Record 13-6\",\"Record 13-8\",\"Record 13-9\"]\n  },\n  {\n    \"claim\": \"Further supportive rifamycin evidence: rifabutin reached dose-dependent CSF concentrations of 0.33-2.26 µg/mL in experimental meningitis, confirming meaningful CNS access in the relevant disease condition.\",\n    \"evidence_role\": \"supportive\",\n    \"molecule_ids\": [\"Molecule 13\"],\n    \"record_ids\": [\"Record 13-7\"]\n  },\n  {\n    \"claim\": \"Negative rifamycin evidence exists: rifapentine was nearly undetectable in TBM patient CSF, rifampicin was labeled poorly BBB-penetrant in healthy baboons, rifabutin showed low rat brain radioactivity, and rifamycin SV/B showed limited/impermeable brain penetration; these indicate efflux/limited passive entry but do not negate the direct rifampicin brain concentrations and inflamed-meninges enhancement.\",\n    \"evidence_role\": \"contradictory\",\n    \"molecule_ids\": [\"Molecule 11\",\"Molecule 12\",\"Molecule 13\",\"Molecule 14\",\"Molecule 15\"],\n    \"record_ids\": [\"Record 11-1\",\"Record 11-2\",\"Record 11-3\",\"Record 12-1\",\"Record 13-4\",\"Record 13-10\",\"Record 14-2\",\"Record 14-3\",\"Record 15-1\"]\n  },\n  {\n    \"claim\": \"Efflux may limit rifamycin brain exposure (rifabutin P-gp efflux ratio 4.7; rifaximin P-gp substrate), but the endpoint definition requires meaningful, not ideal, access, and the measured brain/CSF concentrations of rifampicin/rifabutin show that efflux is not absolute in the relevant setting.\",\n    \"evidence_role\": \"contradictory\",\n    \"molecule_ids\": [\"Molecule 21\",\"Molecule 23\"],\n    \"record_ids\": [\"Record 21-1\",\"Record 23-1\"]\n  }\n ],\n \"final_prediction\": \"pass\"\n}\n\nNeed maybe include record 12-5 separately? We can combine. Need ensure claims have at least one identifier each. Yes.\n\nBut maybe final should be fail? Let's challenge.\n\nThe problem statement: \"Predict pass for meaningful or adequate BBB/CNS access and fail for insufficient access.\" The condition \"tuberculous meningitis\" means inflammation. The query is rifampicin, an anti-TB drug. In TBM, rifampicin CSF levels often lower than plasma but adequate; some clinical guidelines use rifampicin. So pass is defensible.\n\nLet's also think about \"Level L1 direct measured brain or CNS exposure outcomes\" includes Molecule 6 dictyostatin with high brain AUC, 8 decursin good, etc. Those are irrelevant. Molecule 4 mithramycin CSF/plasma 0.12 \"poor_penetration\" but query similar? no. Molecule 5 NS1209 CSF half-life 10h \"permeable\" no. Molecule 16 novobiocin unbound Kp 0.065 poor. These are not analogous to rifampicin.\n\nThe most transferable direct evidence is Molecule 12, same compound. Among its records, 12-1 says poor in healthy baboons, but 12-3 same PET gives ~1 µg/ml. \"Poor\" relative to other drugs? In baboon study, RIF was ranked lowest among PZA, INH, RIF. But \"meaningful\" compared to MIC. Since TBM, inflammation increases. So pass.\n\nCould there be \"adequate\" access means enough to treat TBM? Rifampicin is used in TBM, so pass. If the dataset labels based on \"meaningful_cns_access.v1\" maybe they consider any molecule with evidence of brain exposure above MIC pass. The record 12-6 explicitly says \"BBB penetration ability was ranked as PZA > INH > RIF\" but \"permeable\". The reported evidence: \"RIF and its radiolabeled metabolites penetrate the blood-brain barrier, and estimated concentrations in brain are 3–4 times higher than MIC values.\" That's a strong positive for meaningful access. So final pass.\n\nNeed be mindful output exactly one valid JSON object, no markdown. Ensure no trailing comments.\n\nLet's produce final with claims covering evidence. Desired oververbosity 5, concise. Use only JSON.\n\nNeed maybe not include \"brain concentrations 3-4x MIC\" as one claim with records 12-6. Good.\n\nLet's ensure record IDs exist:\n12-2 human brain tissue 0.29; 12-3 baboon C30 etc; 12-4 monkey 0.87; 12-5 mouse 10.25; 12-6 brain concentration/MIC permeable.\n13-1 CSF/plasma 0.227; 13-2 brain/plasma 0.856; 13-6 human 50.4; 13-7 experimental meningitis 0.33-2.26; 13-8/13-9 maybe duplicate; use 13-6 and 13-9.\nContradictory: 11-1 TBM CSF <0.15 vs serum 7.2; 11-3 poor; 12-1 poor; 13-4 low rat brain radioactivity; 13-10 low brain; 14-2 neonatal meningitis fail; 14-3 limited; 15-1 impermeable. 21-1 rifabutin efflux ratio 4.7; 23-1 rifaximin P-gp substrate.\n\nNeed maybe mention \"Molecule 11\" rifapentine is not query; but contradictory. Fine.\n\nLet's final."
+        }
+      ],
+      "usage": {
+        "completion_tokens": 10039,
+        "prompt_tokens": 13516,
+        "total_tokens": 23555,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 9243,
+          "rejected_prediction_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 512,
+          "cache_write_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost": 0.018980408,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.018980408,
+          "upstream_inference_prompt_cost": 0.005728928,
+          "upstream_inference_completions_cost": 0.01325148
+        }
+      },
+      "tool_count": 0
+    }
+  ],
+  "provenance": {
+    "source_kind": "coverage_40_70",
+    "requested_model": "deepseek/deepseek-v4-flash-0731",
+    "served_model": "deepseek/deepseek-v4-flash-0731",
+    "provider": "openrouter_deepseek_auto_provider",
+    "upstream_provider": "Baidu"
+  },
+  "source_hashes": {
+    "trace_messages.jsonl": "2b7b7cbca95a8d6ebd7fec21a8984907b4b9e924d5d6c1917a1b68a6c5f12873",
+    "final_reasoning_output.json": "5720e7d9c1de3f08d3bba410c8a965ea12befe1896bc9e2ef8e568871ca0667f",
+    "request.json": "1191f2ed0e8e8cf46daff89e09e78633f9f58831e87d9ffe26e6395386ce2fbc"
+  }
+}
