@@ -209,7 +209,7 @@ function probabilityPercent(logprob) {
   return percent === 0 ? "<1e-300%" : `${Number(percent.toPrecision(4))}%`;
 }
 function probabilityStatistics(mean, sd) {
-  return `${Number((100 * mean).toPrecision(4))}% ± ${Number((100 * sd).toPrecision(4))} pp`;
+  return `${Number((100 * mean).toPrecision(4))}% ± ${Number((100 * sd).toPrecision(4))}`;
 }
 async function sha256(bytes) {
   const digest = await crypto.subtle.digest("SHA-256", bytes);
