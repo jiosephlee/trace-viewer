@@ -33,10 +33,10 @@
   select, input { width: 100%; border: 1px solid #526171; padding: 6px 8px; color: #fff; background: #263442; }
   button { border: 0; padding: 7px 12px; color: #fff; background: var(--blue); cursor: pointer; font-weight: 700; }
   button:disabled { opacity: .55; cursor: wait; }
-  main { max-width: 1600px; margin: 0 auto; padding: 14px; }
+  main { width: 100%; margin: 0; padding: clamp(12px, 1vw, 24px); }
   .release-note { margin-bottom: 14px; padding: 11px 13px; border: 1px solid #b8d3ec; background: #eef7ff; font-size: 13px; line-height: 1.5; }
   .release-note a { color: var(--blue); font-weight: 700; }
-  .layout { display: grid; grid-template-columns: 350px minmax(0, 1fr); gap: 14px; }
+  .layout { display: grid; grid-template-columns: clamp(260px, 18vw, 320px) minmax(0, 1fr); gap: 14px; }
   aside, .section { border: 1px solid var(--line); background: var(--panel); }
   aside { position: sticky; top: 148px; align-self: start; max-height: calc(100vh - 162px); overflow: hidden; }
   .aside-head, .section-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 9px 11px; border-bottom: 1px solid var(--line); background: #edf1f4; font-size: 13px; font-weight: 750; }
