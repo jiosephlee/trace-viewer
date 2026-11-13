@@ -554,7 +554,7 @@
       ]
     }
   },
-  "viewer_sha256": "f8251260ca6048133194de45e04c81215c7ec2dd81986b0c16da5b2b599cb5cb",
+  "viewer_sha256": "ef17a89554bbc48d39a9ca547c80261a047320be2202bff9709a8e74f503fede",
   "source_release_sha256": "51edaac6af82cea3c4f19026e369181a09b5b139335142c9769c40e3cad47f07",
   "entropy_manifest": "entropy_manifest.json"
 }
