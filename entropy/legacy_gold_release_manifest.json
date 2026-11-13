@@ -1686,7 +1686,8 @@
     }
   },
   "verified_prior_requests": 3972,
-  "viewer_sha256": "e4ad3aa214cab1767d342e9af37bced92f5d28b6f1771842abd7dea0768335f3",
+  "viewer_sha256": "c4076d2e33b7903dc477abbf8995bba256aadc86cb8ec8864b8b9b79e66c2f67",
   "source_release_sha256": "118d3f3f67064f2cf1d7abdcd5fd0f2ec8ee7bd21c6836fef3346c81500b389b",
-  "entropy_manifest": "entropy_manifest.json"
+  "entropy_manifest": "entropy_manifest.json",
+  "entropy_statistics_manifest": "entropy_statistics_manifest.json"
 }

@@ -151,6 +151,7 @@
   .entropy-controls { padding: 10px; border: 1px solid #b8d3ec; background: #f5faff; font-size: 12px; line-height: 1.5; }
   .entropy-controls input { width: auto; min-height: auto; accent-color: var(--blue); }
   .entropy-controls.provisional { border-color: #c88b35; background: #fff8eb; }
+  .entropy-controls.repeatability-failed { border-color: var(--red); background: #fff3f2; }
   .entropy-provisional { color: #8a4800; }
   .entropy-scale { display: inline-block; width: 110px; height: 12px; margin: 0 6px; vertical-align: middle; background: linear-gradient(to right, #fff, #ffb347); }
   .entropy-token { background: var(--entropy-color); }
@@ -196,7 +197,7 @@
 const params = new URLSearchParams(location.search);
 const state = { release: null, task: params.get("task") || "bbb_martins",
   config: params.get("configuration") || "direct_plus_indirect", selected: params.get("query"), payload: null, loading: 0,
-  repetition: params.get("repetition"), completions: [], entropyManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false };
+  repetition: params.get("repetition"), completions: [], entropyManifest: null, entropyStatisticsManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false };
 const $ = id => document.getElementById(id);
 const outcomes = { TP: "True positive", TN: "True negative", FP: "False positive", FN: "False negative" };
 function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"}[c])); }
@@ -206,6 +207,13 @@ function referenceId(visibleId) { return `ref-${encodeURIComponent(visibleId)}`;
 function probabilityPercent(logprob) {
   const percent = 100 * Math.exp(logprob);
   return percent === 0 ? "<1e-300%" : `${Number(percent.toPrecision(4))}%`;
+}
+function probabilityStatistics(mean, sd) {
+  return `${Number((100 * mean).toPrecision(4))}% ± ${Number((100 * sd).toPrecision(4))} pp`;
+}
+async function sha256(bytes) {
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, "0")).join("");
 }
 async function fetchJson(path) {
   const response = await fetch(path, { cache: "no-store" });
@@ -218,7 +226,7 @@ function scoredRange(source, start, end, groups) {
     const left = Math.max(start, group.start), right = Math.min(end, group.end);
     if (left >= right) continue;
     html += esc(source.slice(previous, left));
-    html += `<span class="entropy-token${group.high ? " entropy-high" : ""}" style="--entropy-color:${group.color}" tabindex="0" data-entropy="${esc(group.title)}">${esc(source.slice(left, right))}</span>`;
+    html += `<span class="entropy-token${group.high ? " entropy-high" : ""}" style="--entropy-color:${group.color}" tabindex="0" data-entropy-positions="${group.positions}" data-entropy="${esc(group.title)}">${esc(source.slice(left, right))}</span>`;
     previous = right;
   }
   return html + esc(source.slice(previous, end));
@@ -256,13 +264,15 @@ function entropyText(name, text, entropy = state.entropy, references = state.pay
   }
   for (const group of groups) {
     group.start = offsets[group.start]; group.end = offsets[group.end];
-    const ratio = Math.min(1, Math.max(...group.tokens.map(t => t.entropy)) / state.entropyManifest.color_max);
+    const ratio = Math.min(1, Math.max(...group.tokens.map(t => t.entropy)) / (state.entropyStatisticsManifest || state.entropyManifest).color_max);
     group.color = `rgb(255,${Math.round(255 - 76 * ratio)},${Math.round(255 - 184 * ratio)})`;
     group.high = group.tokens.some(t => t.top20);
+    group.positions = group.tokens.map(t => t.position).join(",");
     group.title = group.tokens.map(t => {
       const tokenText = JSON.stringify(text.slice(offsets[t.start], offsets[t.end]));
-      const alternatives = t.alternatives ? `\nTop 4 other tokens:\n${t.alternatives.map((a, index) => `${index + 1}. ${JSON.stringify(a.text)} · ${probabilityPercent(a.logprob)}`).join("\n")}` : "";
-      return `Token ${tokenText} · probability ${probabilityPercent(t.logprob)}${alternatives}\nH=${t.entropy.toFixed(6)} nats${t.top20 ? " · top 20%" : ""}${t.alternate_entropy === undefined ? "" : `\nalternate H=${t.alternate_entropy.toFixed(6)} nats (half-sized chunks) · |ΔH|=${t.absolute_chunk_difference.toFixed(6)} nats`}\nPosition ${t.position} · token ${t.token_id}`;
+      const statistics = t.probability_mean !== undefined;
+      const alternatives = t.alternatives ? `\n${statistics ? "Other tokens:" : "Top 4 other tokens:"}\n${t.alternatives.map((a, index) => `${index + 1}. ${JSON.stringify(a.text)} · ${statistics ? probabilityStatistics(a.probability_mean, a.probability_sd) : probabilityPercent(a.logprob)}`).join("\n")}` : "";
+      return `Token ${tokenText} · probability ${statistics ? probabilityStatistics(t.probability_mean, t.probability_sd) : probabilityPercent(t.logprob)}${alternatives}`;
     }).join("\n\n");
   }
   return linkedText(text, references, groups);
@@ -283,7 +293,7 @@ function showEntropyTooltip(token, event) {
     if (rect.bottom <= bounds.top || rect.top >= bounds.bottom || rect.right <= bounds.left || rect.left >= bounds.right) return;
   }
   entropyTarget = token;
-  tooltip.textContent = `Saved token probability · T=1\n${token.dataset.entropy}`;
+  tooltip.textContent = `Probabilities${state.entropyStatisticsManifest ? " · mean ± SD" : ""}\n${token.dataset.entropy}`;
   token.setAttribute("aria-describedby", "entropy-tooltip");
   tooltip.hidden = false;
   tooltip.style.left = "8px"; tooltip.style.top = "8px";
@@ -327,9 +337,7 @@ async function loadEntropy(sample, payload) {
     const response = await fetch(entry.path, {cache: "no-store"});
     if (!response.ok) throw new Error(`HTTP ${response.status}: ${entry.path}`);
     const bytes = await response.arrayBuffer();
-    const digest = await crypto.subtle.digest("SHA-256", bytes);
-    const sha256 = Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, "0")).join("");
-    if (sha256 !== entry.sha256) throw new Error("Sidecar hash mismatch");
+    if (await sha256(bytes) !== entry.sha256) throw new Error("Sidecar hash mismatch");
     const entropy = JSON.parse(new TextDecoder().decode(bytes));
     const final = payload.trace.find(r => r.task === "final_summary");
     const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
@@ -358,6 +366,55 @@ async function loadEntropy(sample, payload) {
       if (covered !== length) throw new Error(`Incomplete ${name} token scores`);
     }
     if (!Object.keys(payload.source_hashes).every(k => entropy.source_hashes?.[k] === payload.source_hashes[k])) throw new Error("Source trace hash mismatch");
+    if (state.entropyStatisticsManifest) {
+      const statisticsEntry = state.entropyStatisticsManifest.examples[key];
+      if (!statisticsEntry || statisticsEntry.source_sidecar_sha256 !== entry.sha256) throw new Error("Statistics source sidecar hash mismatch");
+      const response = await fetch(statisticsEntry.path, {cache: "no-store"});
+      if (!response.ok) throw new Error(`HTTP ${response.status}: ${statisticsEntry.path}`);
+      const bytes = await response.arrayBuffer();
+      if (await sha256(bytes) !== statisticsEntry.sha256) throw new Error("Statistics sidecar hash mismatch");
+      const statistics = JSON.parse(new TextDecoder().decode(bytes));
+      const tokens = [...Object.values(entropy.sections).flatMap(s => s.tokens), ...(entropy.structural_tokens || [])]
+        .sort((a, b) => a.absolute_position - b.absolute_position);
+      const arrays = ["positions", "candidate_ids", "probability_mean", "probability_sd", "entropy_mean", "entropy_sd", "top20"];
+      if (statistics.key !== key || statistics.source_sidecar_sha256 !== entry.sha256
+          || arrays.some(name => !Array.isArray(statistics[name]) || statistics[name].length !== tokens.length)) throw new Error("Invalid statistics arrays or source");
+      if (await sha256(new TextEncoder().encode(JSON.stringify(statistics.candidate_ids))) !== statistics.candidate_ids_sha256) throw new Error("Statistics candidate hash mismatch");
+      for (const [i, token] of tokens.entries()) {
+        const ids = [token.token_id, ...(token.alternatives || []).map(a => a.token_id)];
+        if (!Number.isInteger(token.absolute_position) || statistics.positions[i] !== token.absolute_position
+            || (i > 0 && statistics.positions[i] <= statistics.positions[i - 1])
+            || !Array.isArray(statistics.candidate_ids[i]) || ids.length !== 5
+            || JSON.stringify(statistics.candidate_ids[i]) !== JSON.stringify(ids)) throw new Error("Statistics position or candidate mapping mismatch");
+        const means = statistics.probability_mean[i], deviations = statistics.probability_sd[i];
+        if (!Array.isArray(means) || means.length !== 5 || means.some(p => !Number.isFinite(p) || p < 0 || p > 1)
+            || means.reduce((sum, p) => sum + p, 0) > 1 + 1e-5
+            || !Array.isArray(deviations) || deviations.length !== 5 || deviations.some(s => !Number.isFinite(s) || s < 0 || s > 1)
+            || !Number.isFinite(statistics.entropy_mean[i]) || statistics.entropy_mean[i] < 0
+            || !Number.isFinite(statistics.entropy_sd[i]) || statistics.entropy_sd[i] < 0
+            || typeof statistics.top20[i] !== "boolean") throw new Error("Invalid statistics values");
+      }
+      const indices = new Map(statistics.positions.map((position, i) => [position, i]));
+      const sections = {};
+      for (const [name, section] of Object.entries(entropy.sections)) {
+        const tokens = section.tokens.map(token => {
+          const i = indices.get(token.absolute_position);
+          return {...token, entropy: statistics.entropy_mean[i], entropy_sd: statistics.entropy_sd[i],
+            probability_mean: statistics.probability_mean[i][0], probability_sd: statistics.probability_sd[i][0],
+            alternatives: token.alternatives.map((a, j) => ({...a, probability_mean: statistics.probability_mean[i][j + 1], probability_sd: statistics.probability_sd[i][j + 1]}))
+              .sort((a, b) => b.probability_mean - a.probability_mean || a.token_id - b.token_id)};
+        });
+        const top = new Set([...tokens].sort((a, b) => b.entropy - a.entropy || a.absolute_position - b.absolute_position)
+          .slice(0, Math.ceil(tokens.length * .2)).map(t => t.absolute_position));
+        for (const token of tokens) {
+          token.top20 = top.has(token.absolute_position);
+          if (token.top20 !== statistics.top20[indices.get(token.absolute_position)]) throw new Error("Statistics top-20% ranking mismatch");
+        }
+        sections[name] = {...section, tokens};
+      }
+      if ((entropy.structural_tokens || []).some(t => statistics.top20[indices.get(t.absolute_position)])) throw new Error("Invalid structural top-20% flag");
+      return {entropy: {...entropy, sections}, notice: ""};
+    }
     return {entropy, notice: ""};
   } catch (error) {
     return {entropy: null, notice: `Token entropy unavailable: ${error.message}. The original trace is shown.`};
@@ -405,8 +462,14 @@ function renderCompletions(sample) {
   const arm = state.release.tasks[state.task].configurations[state.config];
   const all = state.repetition === "all" && state.completions.length > 1;
   const hasEntropy = all ? state.completions.some(c => c.entropy) : Boolean(state.entropy);
-  const provisional = /\bPROVISIONAL\b/i.test(state.entropyManifest?.notice || "");
-  const entropyControls = hasEntropy ? `<div class="entropy-controls${provisional ? " provisional" : ""}">${provisional ? '<strong class="entropy-provisional">Provisional local rescoring</strong><br>' : ""}Token entropy · T=${esc(state.entropyManifest.temperature)} · nats. <span class="entropy-scale"></span> 0–${state.entropyManifest.color_max.toFixed(2)} nats (shared scale; darker values are clipped).<br><label><input id="entropy-top-only" type="checkbox"${state.entropyTopOnly ? " checked" : ""}> Highlight only the highest-entropy 20% of tokens in each section</label><br>${provisional ? "Scores may depend on the evaluation configuration. " : ""}Hover, focus, or tap text to see token probabilities and entropy. Scores follow the original generated text.</div>`
+  const statistics = state.entropyStatisticsManifest;
+  const provisional = Boolean(statistics) || /\bPROVISIONAL\b/i.test(state.entropyManifest?.notice || "");
+  const validation = (statistics || state.entropyManifest)?.numerical_validation;
+  const repeatabilityFailed = validation?.status === "failed_repeatability";
+  const qualification = repeatabilityFailed ? `<strong class="bad">Repeatability check failed</strong><br>${esc(validation.message)}<br>`
+    : `${provisional ? '<strong class="entropy-provisional">Provisional local rescoring</strong><br>' : ""}${statistics && validation?.message ? `${esc(validation.message)}<br>` : ""}`;
+  const colorMax = (state.entropyStatisticsManifest || state.entropyManifest)?.color_max;
+  const entropyControls = hasEntropy ? `<div class="entropy-controls${repeatabilityFailed ? " repeatability-failed" : provisional ? " provisional" : ""}">${qualification}${statistics ? "Per saved trace: mean ± sample SD over n=3 full-prefill scoring passes. Probability SD is in percentage points (pp).<br>" : ""}Token entropy · T=${esc(state.entropyManifest.temperature)} · nats. <span class="entropy-scale"></span> 0–${colorMax.toFixed(2)} nats (shared scale; darker values are clipped).<br><label><input id="entropy-top-only" type="checkbox"${state.entropyTopOnly ? " checked" : ""}> Highlight only the highest-entropy 20% of tokens in each section</label><br>${provisional && !repeatabilityFailed ? "Scores may depend on the evaluation configuration. " : ""}Hover, focus, or tap text to see token probabilities. Scores follow the original generated text.</div>`
     : !all && state.entropyNotice ? `<div class="entropy-controls warn">${esc(state.entropyNotice)}</div>` : "";
   $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
   if (all) {
@@ -528,8 +591,14 @@ fetchJson("legacy_gold_release_manifest.json").then(async release => {
       if (manifest.schema_version !== "trace_token_entropy.v1" || manifest.units !== "nats" || manifest.temperature !== 1
           || !Number.isFinite(manifest.color_max) || manifest.color_max <= 0 || !manifest.examples || typeof manifest.examples !== "object") throw new Error("Invalid entropy manifest");
       state.entropyManifest = manifest;
+      if (release.entropy_statistics_manifest) {
+        const statistics = await fetchJson(release.entropy_statistics_manifest);
+        if (statistics.schema_version !== "trace_entropy_statistics.v1" || statistics.repetitions !== 3 || statistics.ddof !== 1
+            || !Number.isFinite(statistics.color_max) || statistics.color_max <= 0 || !statistics.examples || typeof statistics.examples !== "object") throw new Error("Invalid entropy statistics manifest");
+        state.entropyStatisticsManifest = statistics;
+      }
     }
-  } catch (error) { state.entropyNotice = `Token entropy unavailable: ${error.message}. The original trace is shown.`; }
+  } catch (error) { state.entropyManifest = null; state.entropyNotice = `Token entropy unavailable: ${error.message}. The original trace is shown.`; }
   if (!release.tasks[state.task]) state.task = "bbb_martins";
   const task = release.tasks[state.task];
   if (!task.configurations[state.config]) state.config = "direct_plus_indirect";
