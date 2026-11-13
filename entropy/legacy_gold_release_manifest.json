@@ -1686,8 +1686,11 @@
     }
   },
   "verified_prior_requests": 3972,
-  "viewer_sha256": "2596ac2887d1a42682e1ecbd525241664f5df5646ed8ec617045359785e05eea",
+  "viewer_sha256": "155942a3071d1a50108a88f5959f0e040179f3a7a3accc68744f3770effc88fc",
   "source_release_sha256": "118d3f3f67064f2cf1d7abdcd5fd0f2ec8ee7bd21c6836fef3346c81500b389b",
   "entropy_manifest": "entropy_manifest.json",
-  "entropy_statistics_manifest": "entropy_statistics_manifest.json"
+  "entropy_statistics_manifest": "entropy_statistics_manifest.json",
+  "token_marks": {
+    "api_url": "https://jiosephlee-trace-marks.vivaciouspuffin3.chatgpt.site"
+  }
 }

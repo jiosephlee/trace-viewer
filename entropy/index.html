@@ -156,6 +156,14 @@
   .entropy-scale { display: inline-block; width: 110px; height: 12px; margin: 0 6px; vertical-align: middle; background: linear-gradient(to right, #fff, #ffb347); }
   .entropy-token { background: var(--entropy-color); }
   .entropy-token:hover, .entropy-token:focus { outline: 1px solid #a15c00; }
+  .token-marks { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px; font-size: 12px; }
+  .token-marks button[aria-pressed="true"] { color: #fff; background: #7135ad; }
+  .entropy-token.token-marked { text-decoration: underline 2px #7135ad; text-underline-offset: 3px; outline: 1px solid #7135ad; }
+  .marking .entropy-token[data-mark-native] { cursor: crosshair; }
+  .marked-token-list { padding: 0 10px 10px; font-size: 12px; }
+  #marked-token-links { max-height: 240px; overflow: auto; }
+  .marked-token-link { display: block; padding: 6px; border-bottom: 1px solid var(--line); }
+  .marked-token-link code { margin-right: 8px; white-space: pre-wrap; }
   .entropy-top-only .entropy-token:not(.entropy-high) { background: transparent; }
   #entropy-tooltip { position: fixed; z-index: 100; max-width: min(440px, calc(100vw - 16px)); max-height: calc(100vh - 16px); overflow: hidden; padding: 9px 11px; border-radius: 5px; color: #fff; background: #17212b; box-shadow: 0 3px 12px #0004; font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap; overflow-wrap: anywhere; pointer-events: none; }
 </style>
@@ -173,9 +181,9 @@
     <span class="nav-label">Dataset</span>
     <a class="task-link" data-task="bbb_martins" href="?task=bbb_martins">Gold BBB</a>
     <a class="task-link" data-task="bioavailability_ma" href="?task=bioavailability_ma">Gold Oral bioavailability</a>
+    <a class="task-link download" href="legacy_gold_results.tsv" download>Full-run results TSV</a>
     <a class="task-link" href="summary.tsv" download>Entropy summary TSV</a>
     <a class="task-link" href="entropy_distribution.svg">Entropy distribution</a>
-    <a class="task-link download" href="legacy_gold_results.tsv" download>Full-run results TSV</a>
   </nav>
 </header>
 <main>
@@ -197,7 +205,9 @@
 const params = new URLSearchParams(location.search);
 const state = { release: null, task: params.get("task") || "bbb_martins",
   config: params.get("configuration") || "direct_plus_indirect", selected: params.get("query"), payload: null, loading: 0,
-  repetition: params.get("repetition"), completions: [], entropyManifest: null, entropyStatisticsManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false };
+  repetition: params.get("repetition"), completions: [], entropyManifest: null, entropyStatisticsManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false,
+  marks: new Set(), markRecords: [], marking: false, marksBusy: false, marksLoaded: false, marksStatus: "Loading shared marks…",
+  markedPosition: params.has("marked_position") && /^\d+$/.test(params.get("marked_position")) ? Number(params.get("marked_position")) : null };
 const $ = id => document.getElementById(id);
 const outcomes = { TP: "True positive", TN: "True negative", FP: "False positive", FN: "False negative" };
 function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"}[c])); }
@@ -226,7 +236,7 @@ function scoredRange(source, start, end, groups) {
     const left = Math.max(start, group.start), right = Math.min(end, group.end);
     if (left >= right) continue;
     html += esc(source.slice(previous, left));
-    html += `<span class="entropy-token${group.high ? " entropy-high" : ""}" style="--entropy-color:${group.color}" tabindex="0" data-entropy-positions="${group.positions}" data-entropy="${esc(group.title)}">${esc(source.slice(left, right))}</span>`;
+    html += `<span class="entropy-token${group.high ? " entropy-high" : ""}" style="--entropy-color:${group.color}" tabindex="0" data-entropy-positions="${group.positions}"${group.native ? ` data-mark-native="${group.native}" data-entropy-section="${group.section}"` : ""} data-entropy="${esc(group.title)}">${esc(source.slice(left, right))}</span>`;
     previous = right;
   }
   return html + esc(source.slice(previous, end));
@@ -268,6 +278,10 @@ function entropyText(name, text, entropy = state.entropy, references = state.pay
     group.color = `rgb(255,${Math.round(255 - 76 * ratio)},${Math.round(255 - 184 * ratio)})`;
     group.high = group.tokens.some(t => t.top20);
     group.positions = group.tokens.map(t => t.position).join(",");
+    if (state.release?.token_marks && entropy.key && entropy.sequence_sha256 && group.tokens.every(t => Number.isInteger(t.absolute_position))) {
+      group.native = group.tokens.map(t => `${t.absolute_position}:${t.token_id}`).join(",");
+      group.section = name;
+    }
     group.title = group.tokens.map(t => {
       const tokenText = JSON.stringify(text.slice(offsets[t.start], offsets[t.end]));
       const statistics = t.probability_mean !== undefined;
@@ -277,6 +291,95 @@ function entropyText(name, text, entropy = state.entropy, references = state.pay
   }
   return linkedText(text, references, groups);
 }
+function markId(token) {
+  return `${token.trace_key}|${token.sequence_sha256}|${token.absolute_position}|${token.token_id}`;
+}
+function syncMarkUI() {
+  if (!state.release?.token_marks) return;
+  $("detail").classList.toggle("marking", state.marking);
+  const button = $("marks-toggle");
+  if (button) {
+    button.textContent = state.marking ? "Done marking" : "Mark tokens";
+    button.disabled = state.marksBusy;
+    button.setAttribute("aria-pressed", String(state.marking));
+    button.onclick = async () => {
+      if (!state.marksLoaded && !await syncTokenMarks()) return;
+      state.marking = !state.marking; syncMarkUI();
+    };
+    $("marks-count").textContent = state.marksLoaded ? `${state.marks.size} shared marked tokens` : "";
+    $("marks-status").textContent = state.marksStatus;
+    $("marks-list-title").textContent = `Marked tokens (${state.marks.size})`;
+    const examples = new Map();
+    for (const [task, data] of Object.entries(state.release.tasks)) data.samples.forEach((sample, ordinal) => {
+      for (const [repetition, configurations] of Object.entries(sample.by_repetition || {})) for (const [configuration, prediction] of Object.entries(configurations)) {
+        const key = `${task}/${configuration}/rep-${String(repetition).padStart(2, "0")}/${String(prediction.query_index).padStart(5, "0")}`;
+        const label = `${data.title} · ${data.configurations[configuration].label} · Sample ${ordinal + 1} · Repetition ${data.repetitions.map(String).indexOf(repetition) + 1}`;
+        examples.set(key, {task, configuration, query: sample.query_uid, repetition, label});
+      }
+    });
+    const links = state.markRecords.map(mark => {
+      const example = examples.get(mark.trace_key);
+      if (!example) return `<div><code>${esc(JSON.stringify(mark.token_text))}</code> · Saved trace</div>`;
+      const {label, ...query} = example;
+      const href = `?${new URLSearchParams({...query, marked_position: mark.absolute_position})}`;
+      return `<a class="marked-token-link" href="${esc(href)}"><code>${esc(JSON.stringify(mark.token_text))}</code>${esc(label)}</a>`;
+    }).join("") || '<div class="empty">No marked tokens yet.</div>';
+    const list = $("marked-token-links");
+    if (list.markListHTML !== links) { list.innerHTML = links; list.markListHTML = links; }
+  }
+  document.querySelectorAll(".entropy-token[data-mark-native]").forEach(span => {
+    const parent = span.closest("[data-mark-trace]");
+    const marked = span.dataset.markNative.split(",").some(pair => {
+      const [absolute_position, token_id] = pair.split(":").map(Number);
+      return state.marks.has(markId({trace_key: parent.dataset.markTrace, sequence_sha256: parent.dataset.markSequence, absolute_position, token_id}));
+    });
+    span.classList.toggle("token-marked", marked);
+    if (state.marking) {
+      span.setAttribute("role", "button"); span.setAttribute("aria-pressed", String(marked));
+      span.setAttribute("aria-disabled", String(state.marksBusy));
+      span.style.cursor = state.marksBusy ? "wait" : "";
+    } else {
+      span.removeAttribute("role"); span.removeAttribute("aria-pressed"); span.removeAttribute("aria-disabled"); span.style.cursor = "";
+    }
+  });
+}
+async function syncTokenMarks(update) {
+  const config = state.release?.token_marks;
+  if (!config || state.marksBusy) return false;
+  state.marksBusy = true; state.marksStatus = update ? "Saving…" : "Refreshing shared marks…"; syncMarkUI();
+  try {
+    const response = await fetch(`${config.api_url.replace(/\/$/, "")}/api/marks`, {method: update ? "POST" : "GET", cache: "no-store", credentials: "omit",
+      ...(update ? {headers: {"Content-Type": "application/json"}, body: JSON.stringify(update)} : {})});
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    if (!Array.isArray(data.marks) || data.marks.some(t => typeof t.trace_key !== "string" || !/^[a-f0-9]{64}$/i.test(t.sequence_sha256)
+        || !Number.isInteger(t.absolute_position) || t.absolute_position < 0 || !Number.isInteger(t.token_id) || t.token_id < 0 || typeof t.token_text !== "string")) throw new Error("Invalid shared marks");
+    state.markRecords = data.marks; state.marks = new Set(data.marks.map(markId)); state.marksLoaded = true; state.marksStatus = "Synced";
+    return true;
+  } catch (error) { state.marksStatus = `Could not ${update ? "save" : "refresh"} marks: ${error.message}`; return false; }
+  finally { state.marksBusy = false; syncMarkUI(); }
+}
+document.addEventListener("click", async event => {
+  const span = event.target.closest(".entropy-token[data-mark-native]");
+  if (!state.marking || !span) return;
+  event.preventDefault(); event.stopImmediatePropagation();
+  if (state.marksBusy) return;
+  const parent = span.closest("[data-mark-trace]");
+  const entropy = state.completions.find(c => c.entropy?.key === parent.dataset.markTrace)?.entropy || state.entropy;
+  const section = entropy.sections[span.dataset.entropySection], text = Array.from(section.text);
+  const tokens = span.dataset.entropyPositions.split(",").map(position => {
+    const token = section.tokens.find(t => t.position === Number(position));
+    return {trace_key: entropy.key, sequence_sha256: entropy.sequence_sha256, absolute_position: token.absolute_position,
+      token_id: token.token_id, token_text: text.slice(token.start, token.end).join("")};
+  });
+  await syncTokenMarks({marked: !tokens.some(t => state.marks.has(markId(t))), tokens});
+}, true);
+document.addEventListener("keydown", event => {
+  if (state.marking && ["Enter", " "].includes(event.key) && event.target.matches(".entropy-token[data-mark-native]")) {
+    event.preventDefault(); event.stopImmediatePropagation(); event.target.click();
+  }
+}, true);
+window.addEventListener("focus", () => syncTokenMarks());
 let entropyTarget = null;
 function hideEntropyTooltip() {
   $("entropy-tooltip").hidden = true;
@@ -471,6 +574,11 @@ function renderCompletions(sample) {
   const colorMax = (state.entropyStatisticsManifest || state.entropyManifest)?.color_max;
   const entropyControls = hasEntropy ? `<div class="entropy-controls${repeatabilityFailed ? " repeatability-failed" : provisional ? " provisional" : ""}">${qualification}${statistics ? "Per saved trace: mean ± sample SD over n=3 full-prefill scoring passes. Probability SD is in percentage points (pp).<br>" : ""}Token entropy · T=${esc(state.entropyManifest.temperature)} · nats. <span class="entropy-scale"></span> 0–${colorMax.toFixed(2)} nats (shared scale; darker values are clipped).<br><label><input id="entropy-top-only" type="checkbox"${state.entropyTopOnly ? " checked" : ""}> Highlight only the highest-entropy 20% of tokens in each section</label><br>${provisional && !repeatabilityFailed ? "Scores may depend on the evaluation configuration. " : ""}Hover, focus, or tap text to see token probabilities. Scores follow the original generated text.</div>`
     : !all && state.entropyNotice ? `<div class="entropy-controls warn">${esc(state.entropyNotice)}</div>` : "";
+  const markControls = hasEntropy && state.release.token_marks ? '<div class="token-marks"><button id="marks-toggle" aria-pressed="false">Mark tokens</button><span id="marks-count"></span><span id="marks-status" role="status"></span><span>Anyone can mark or unmark.</span></div><details class="marked-token-list"><summary id="marks-list-title">Marked tokens</summary><div id="marked-token-links"></div></details>' : "";
+  if (state.release.token_marks) {
+    $("completion-area").dataset.markTrace = state.entropy?.key || "";
+    $("completion-area").dataset.markSequence = state.entropy?.sequence_sha256 || "";
+  }
   $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
   if (all) {
     const columns = state.completions.map(({repetition, payload, entropy, notice}) => {
@@ -478,15 +586,16 @@ function renderCompletions(sample) {
       const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
       const prediction = predictionFor(sample, repetition);
       const retries = final.messages.filter(m => m.role === "user" && m.content.startsWith("Retry the flat-context-final response"));
-      return `<article class="completion-card" data-repetition="${esc(repetition)}"><div class="completion-heading"><button data-focus-repetition="${esc(repetition)}" title="Open this repetition at full width">Repetition ${esc(repetitionNumber(repetition))} ↗</button><span class="${prediction.correct ? "ok" : "bad"}">Prediction ${esc(prediction.pred_label)} · ${prediction.correct ? "correct" : "wrong"}</span></div><div class="stage-content">
+      return `<article class="completion-card" data-repetition="${esc(repetition)}"${state.release.token_marks && entropy ? ` data-mark-trace="${esc(entropy.key)}" data-mark-sequence="${esc(entropy.sequence_sha256)}"` : ""}><div class="completion-heading"><button data-focus-repetition="${esc(repetition)}" title="Open this repetition at full width">Repetition ${esc(repetitionNumber(repetition))} ↗</button><span class="${prediction.correct ? "ok" : "bad"}">Prediction ${esc(prediction.pred_label)} · ${prediction.correct ? "correct" : "wrong"}</span></div><div class="stage-content">
         ${retries.length ? panel("Additional retry instructions", retries.map(m => `<pre>${esc(m.content)}</pre>`).join("")) : ""}
         ${notice ? `<div class="entropy-controls warn">${esc(notice)}</div>` : ""}
         ${panel("Reasoning", assistant?.reasoning ? `<pre>${entropyText("reasoning", assistant.reasoning, entropy, payload.references)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>', true)}
         ${panel("Final output", `<pre>${entropyText("answer", entropy ? assistant?.content || "" : final.response_text || assistant?.content || "", entropy, payload.references)}</pre>`, true)}
       </div></article>`;
     }).join("");
-    $("completion-area").innerHTML = `<div class="section-head">Reasoning and output · all three repetitions <span class="tag">Click a repetition to open it</span></div>${entropyControls}<div class="completion-scroll"><div class="completion-grid">${columns}</div></div>`;
+    $("completion-area").innerHTML = `<div class="section-head">Reasoning and output · all three repetitions <span class="tag">Click a repetition to open it</span></div>${entropyControls}${markControls}<div class="completion-scroll"><div class="completion-grid">${columns}</div></div>`;
     $("completion-area").querySelectorAll("[data-focus-repetition]").forEach(button => button.onclick = () => showRepetition(button.dataset.focusRepetition));
+    syncMarkUI();
     return;
   }
   const prediction = predictionFor(sample);
@@ -497,13 +606,15 @@ function renderCompletions(sample) {
   $("completion-area").innerHTML = `<div class="section-head"><span>Saved prediction${state.repetition ? ` · Repetition ${esc(repetitionNumber(state.repetition))}` : ""}</span>${sample.by_repetition ? '<button id="show-all-repetitions">← All three repetitions</button>' : `<span class="tag">${esc(arm.label)}</span>`}</div><div class="stage-content">
       <div class="${prediction.correct ? "ok" : "bad"}">Prediction ${esc(prediction.pred_label)} · ${esc(outcomes[outcome])}</div>
       ${retries.length ? panel("Additional retry instructions", retries.map(m => `<pre>${esc(m.content)}</pre>`).join("")) : ""}
-      ${entropyControls}
+      ${entropyControls}${markControls}
       ${panel("Reasoning", assistant?.reasoning ? `<pre>${entropyText("reasoning", assistant.reasoning)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>', Boolean(sample.by_repetition))}
       ${panel("Final output", `<pre>${entropyText("answer", state.entropy ? assistant?.content || "" : final.response_text || assistant?.content || "")}</pre>`, Boolean(sample.by_repetition))}
     </div>`;
   if (sample.by_repetition) $("show-all-repetitions").onclick = () => showRepetition("all");
+  syncMarkUI();
 }
 function showRepetition(repetition) {
+  if (state.repetition !== repetition) state.markedPosition = null;
   state.repetition = repetition;
   $("repetition").value = repetition;
   const selected = state.completions.find(c => c.repetition === repetition) || state.completions[0];
@@ -515,9 +626,11 @@ function showRepetition(repetition) {
 function updateNavigation() {
   const query = new URLSearchParams({ task: state.task, configuration: state.config, query: state.selected || "" });
   if (state.repetition) query.set("repetition", state.repetition);
+  if (state.markedPosition !== null) query.set("marked_position", state.markedPosition);
   history.replaceState(null, "", `?${query}`);
   document.querySelectorAll("[data-config], [data-task]").forEach(link => {
     const next = new URLSearchParams(query);
+    next.delete("marked_position");
     if (link.dataset.config) next.set("configuration", link.dataset.config);
     if (link.dataset.task) { next.set("task", link.dataset.task); next.delete("query"); next.delete("repetition"); }
     link.href = `?${next}`;
@@ -543,6 +656,7 @@ function renderSamples() {
 }
 async function selectSample(uid) {
   const loading = ++state.loading;
+  if (state.selected !== uid) state.markedPosition = null;
   state.selected = uid;
   state.completions = [];
   renderSamples(); updateNavigation();
@@ -564,6 +678,10 @@ async function selectSample(uid) {
     const selected = completions.find(c => c.repetition === state.repetition) || completions[0];
     state.payload = selected.payload; state.entropy = selected.entropy; state.entropyNotice = selected.notice;
     renderDetail(sample);
+    if (state.markedPosition !== null) {
+      const target = [...document.querySelectorAll(".entropy-token[data-mark-native]")].find(span => span.dataset.markNative.split(",").some(pair => Number(pair.split(":")[0]) === state.markedPosition));
+      if (target) { target.scrollIntoView({block: "center"}); target.focus({preventScroll: true}); }
+    }
   } catch (error) {
     if (loading === state.loading) $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`;
   }
@@ -583,6 +701,7 @@ for (const id of ["search", "correctness", "status"]) $(id).addEventListener("in
 $("repetition").onchange = event => showRepetition(event.target.value);
 fetchJson("legacy_gold_release_manifest.json").then(async release => {
   state.release = release;
+  if (release.token_marks) { syncTokenMarks(); setInterval(() => syncTokenMarks(), 15000); }
   try {
     const response = await fetch("entropy_manifest.json", {cache: "no-store"});
     if (response.status !== 404) {
