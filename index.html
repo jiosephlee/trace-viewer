@@ -367,6 +367,10 @@ function renderInput(record) {
 function predictionFor(sample, repetition = state.repetition) {
   return (sample.by_repetition?.[repetition] || sample.configurations)[state.config];
 }
+function repetitionNumber(repetition) {
+  const index = state.release.tasks[state.task].repetitions?.map(String).indexOf(String(repetition)) ?? -1;
+  return index >= 0 ? index + 1 : repetition;
+}
 function renderDetail(sample) {
   const arm = state.release.tasks[state.task].configurations[state.config];
   const final = state.payload.trace.find(r => r.task === "final_summary");
@@ -386,7 +390,7 @@ function renderCompletions(sample) {
       const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
       const prediction = predictionFor(sample, repetition);
       const retries = final.messages.filter(m => m.role === "user" && m.content.startsWith("Retry the flat-context-final response"));
-      return `<article class="completion-card" data-repetition="${esc(repetition)}"><div class="completion-heading"><button data-focus-repetition="${esc(repetition)}" title="Open this repetition at full width">Repetition ${esc(repetition)} ↗</button><span class="${prediction.correct ? "ok" : "bad"}">Prediction ${esc(prediction.pred_label)} · ${prediction.correct ? "correct" : "wrong"}</span></div><div class="stage-content">
+      return `<article class="completion-card" data-repetition="${esc(repetition)}"><div class="completion-heading"><button data-focus-repetition="${esc(repetition)}" title="Open this repetition at full width">Repetition ${esc(repetitionNumber(repetition))} ↗</button><span class="${prediction.correct ? "ok" : "bad"}">Prediction ${esc(prediction.pred_label)} · ${prediction.correct ? "correct" : "wrong"}</span></div><div class="stage-content">
         ${retries.length ? panel("Additional retry instructions", retries.map(m => `<pre>${esc(m.content)}</pre>`).join("")) : ""}
         ${panel("Reasoning", assistant?.reasoning ? `<pre>${linkedText(assistant.reasoning, payload.references)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>', true)}
         ${panel("Final output", `<pre>${linkedText(final.response_text || assistant?.content || "", payload.references)}</pre>`, true)}
@@ -405,7 +409,7 @@ function renderCompletions(sample) {
   const entropyControls = state.entropy ? `<div class="entropy-controls${provisional ? " provisional" : ""}">${provisional ? '<strong class="entropy-provisional">Provisional entropy estimates</strong><br>' : ""}Token entropy · T=${esc(state.entropyManifest.temperature)} · nats. <span class="entropy-scale"></span> 0–${state.entropyManifest.color_max.toFixed(2)} nats (shared scale; darker values are clipped).<br><label><input id="entropy-top-only" type="checkbox"${state.entropyTopOnly ? " checked" : ""}> Highlight only the highest-entropy 20% of tokens in each section</label><br>${provisional ? "Local rescoring is sensitive to evaluation chunk size. " : ""}Hover, focus, or tap text to see entropy and the alternate chunk-size measurement. Scores follow the original generated text.</div>`
     : state.entropyNotice ? `<div class="entropy-controls warn">${esc(state.entropyNotice)}</div>` : "";
   $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
-  $("completion-area").innerHTML = `<div class="section-head"><span>Saved prediction${state.repetition ? ` · repetition ${esc(state.repetition)}` : ""}</span>${sample.by_repetition ? '<button id="show-all-repetitions">← All three repetitions</button>' : `<span class="tag">${esc(arm.label)}</span>`}</div><div class="stage-content">
+  $("completion-area").innerHTML = `<div class="section-head"><span>Saved prediction${state.repetition ? ` · Repetition ${esc(repetitionNumber(state.repetition))}` : ""}</span>${sample.by_repetition ? '<button id="show-all-repetitions">← All three repetitions</button>' : `<span class="tag">${esc(arm.label)}</span>`}</div><div class="stage-content">
       <div class="${prediction.correct ? "ok" : "bad"}">Prediction ${esc(prediction.pred_label)} · ${esc(outcomes[outcome])}</div>
       ${retries.length ? panel("Additional retry instructions", retries.map(m => `<pre>${esc(m.content)}</pre>`).join("")) : ""}
       ${entropyControls}
@@ -452,7 +456,7 @@ function renderSamples() {
     const predictions = state.repetition === "all" && s.by_repetition ? Object.values(s.by_repetition).map(c => c[state.config]) : [predictionFor(s)];
     const correct = predictions.filter(p => p.correct).length;
     const outcome = predictions.length > 1 ? `${correct}/${predictions.length} correct` : correct ? "correct" : "wrong";
-    return `<button class="sample${state.selected === s.query_uid ? " active" : ""}" data-query="${esc(s.query_uid)}"><div class="sample-main"><strong>Sample ${samples.indexOf(s) + 1}</strong><span class="${correct === predictions.length ? "ok" : correct === 0 ? "bad" : "warn"}">${outcome}</span></div><div class="sample-sub">label=${s.label} prediction=${predictions.map(p => p.pred_label).join(" / ")}</div><div class="sample-sub">Selected as ${esc(outcomes[s.selection_outcome])} in direct + indirect${s.selection_outcome_repetition ? `, repetition ${esc(s.selection_outcome_repetition)}` : ""}</div></button>`;
+    return `<button class="sample${state.selected === s.query_uid ? " active" : ""}" data-query="${esc(s.query_uid)}"><div class="sample-main"><strong>Sample ${samples.indexOf(s) + 1}</strong><span class="${correct === predictions.length ? "ok" : correct === 0 ? "bad" : "warn"}">${outcome}</span></div><div class="sample-sub">label=${s.label} prediction=${predictions.map(p => p.pred_label).join(" / ")}</div><div class="sample-sub">Selected as ${esc(outcomes[s.selection_outcome])} in direct + indirect${s.selection_outcome_repetition ? `, Repetition ${esc(repetitionNumber(s.selection_outcome_repetition))}` : ""}</div></button>`;
   }).join("") || '<div class="empty">No matching samples.</div>';
   document.querySelectorAll("[data-query]").forEach(button => button.onclick = () => selectSample(button.dataset.query));
 }
@@ -515,13 +519,13 @@ fetchJson("legacy_gold_release_manifest.json").then(async release => {
     const repetitions = task.repetitions.map(String);
     if (state.repetition !== "all" && !repetitions.includes(state.repetition)) state.repetition = "all";
     $("repetition-control").hidden = false;
-    $("repetition").innerHTML = '<option value="all">All three repetitions</option>' + repetitions.map(rep => `<option value="${esc(rep)}">Repetition ${esc(rep)}</option>`).join("");
+    $("repetition").innerHTML = '<option value="all">All three repetitions</option>' + repetitions.map(rep => `<option value="${esc(rep)}">Repetition ${esc(repetitionNumber(rep))}</option>`).join("");
     $("repetition").value = state.repetition;
   } else state.repetition = null;
   const arm = task.configurations[state.config];
   document.title = `${task.title} · ${release.title || "Legacy trace samples"}`;
   $("page-title").textContent = document.title;
-  const score = arm.metrics.n_repetitions ? `three-run mean macro-F1=${arm.metrics.macro_f1.toFixed(4)} (SD ${arm.metrics.std_macro_f1.toFixed(4)}), repetitions ${task.repetitions.join(", ")}` : `macro-F1=${arm.metrics.macro_f1.toFixed(4)}`;
+  const score = arm.metrics.n_repetitions ? `three-run mean macro-F1=${arm.metrics.macro_f1.toFixed(4)} (SD ${arm.metrics.std_macro_f1.toFixed(4)}), repetitions ${task.repetitions.map(repetitionNumber).join(", ")}` : `macro-F1=${arm.metrics.macro_f1.toFixed(4)}`;
   $("task-note").textContent = `${release.notice || "These examples were selected using test results and are illustrative."} ${arm.label}: full test cohort n=${arm.metrics.n_total}, ${score}. Labels: 1=${state.task === "bbb_martins" ? "BBB pass" : "high oral bioavailability"}; 0=${state.task === "bbb_martins" ? "BBB fail" : "low oral bioavailability"}.`;
   const sample = task.samples.find(s => s.query_uid === state.selected) || task.samples[0];
   await selectSample(sample.query_uid);
