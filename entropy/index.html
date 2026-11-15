@@ -181,8 +181,8 @@
   #annotation-editor h2 { margin-top: 0; font-size: 18px; }
   #annotation-quote { max-height: 160px; overflow-y: auto; font-size: 12px; }
   #annotation-comment { width: 100%; min-height: 100px; margin: 7px 0; padding: 8px; font: 14px/1.5 inherit; }
-  #annotation-tags, #annotation-sources { display: flex; flex-wrap: wrap; gap: 5px 12px; margin: 8px 0; padding: 8px; border: 1px solid var(--line); font-size: 12px; }
-  #annotation-tags input, #annotation-sources input { width: auto; min-height: auto; }
+  #annotation-tags, #annotation-sources, #annotation-fidelity { display: flex; flex-wrap: wrap; gap: 5px 12px; margin: 8px 0; padding: 8px; border: 1px solid var(--line); font-size: 12px; }
+  #annotation-tags input, #annotation-sources input, #annotation-fidelity input { width: auto; min-height: auto; }
   #annotation-editor-status { min-height: 1.5em; font-size: 12px; }
   ::highlight(reasoning-annotations) { background-color: #b9eadb; color: #103b30; text-decoration: underline; }
   ::highlight(reasoning-draft) { background-color: #b8d6ff; color: #102e50; }
@@ -235,7 +235,9 @@
   <textarea id="annotation-comment" maxlength="4000" placeholder="What is this passage doing? What makes it interesting?"></textarea>
   <fieldset id="annotation-tags"><legend>Reasoning behaviors · optional draft labels</legend></fieldset>
   <fieldset id="annotation-sources"><legend>Knowledge source · optional</legend></fieldset>
+  <fieldset id="annotation-fidelity"><legend>Input fidelity · optional mismatch flags</legend></fieldset>
   <p class="tag">Source labels describe the premises or background claims. A new conclusion is not parametric merely because it is absent from the input. Explain the evidence in your comment.</p>
+  <p class="tag">Fidelity flags describe observable mismatches with the input, not their internal cause. Explain the mismatch and note any inconsistency already present in the input. Unflagged passages are not certified error-free.</p>
   <div id="annotation-editor-status" role="status"></div>
   <div id="annotation-conflict" hidden><p>This annotation changed elsewhere. Your draft is kept. Review the latest saved version below.</p><blockquote id="annotation-latest"></blockquote><button id="annotation-resolve">Rebase draft on latest version</button></div>
   <div class="annotation-actions"><button id="annotation-save">Save shared annotation</button><button id="annotation-cancel">Cancel</button></div>
@@ -273,7 +275,12 @@ const reasoningSources = {
   source_mixed: ["Mixed sources", "The passage combines supplied evidence with background claims absent from the input."],
   source_unclear: ["Source unclear", "The source of the relevant premise or background claim cannot be determined from the saved record."]
 };
-const reasoningLabels = {...reasoningBehaviors, ...reasoningSources, infer: ["Derive a conclusion (earlier draft)", "Earlier draft label."]};
+const inputFidelity = {
+  fidelity_misstates_input: ["Misstates input", "Changes or overgeneralizes a supplied value, condition, endpoint, or evidence direction."],
+  fidelity_citation_mismatch: ["Citation mismatch", "Attributes a claim to records that do not support it, even if support exists elsewhere in the input."],
+  fidelity_conflation: ["Conflates evidence", "Combines entities, records, species, or conditions as though they were the same. Note if the input itself was inconsistent."]
+};
+const reasoningLabels = {...reasoningBehaviors, ...reasoningSources, ...inputFidelity, infer: ["Derive a conclusion (earlier draft)", "Earlier draft label."]};
 function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"}[c])); }
 function panel(title, content, open = false) { return `<details class="trace-part"${open ? " open" : ""}><summary>${esc(title)}</summary><div class="trace-part-body">${content}</div></details>`; }
 function metric(title, value) { return `<div class="metric"><div class="metric-key">${esc(title)}</div><div class="metric-value">${esc(value)}</div></div>`; }
@@ -490,7 +497,7 @@ function paintAnnotations() {
 function annotationPanel() {
   if (!state.release.reasoning_annotations) return "";
   return `<section id="entropy-analysis-panel" class="section"><div class="section-head">Entropy analysis</div><div class="analysis-panel"><div class="analysis-metrics"><span><strong id="analysis-token-count">—</strong> scored tokens</span><span>Mean entropy <strong id="analysis-mean">—</strong></span><span>Median entropy <strong id="analysis-median">—</strong></span></div><p>Current trace view. Entropy summarizes the next-token distribution; the hover shows token probabilities.</p></div></section>
-    <section id="annotation-panel" class="section" hidden><div class="section-head">Reasoning annotations <span id="annotation-count" class="tag"></span></div><div class="analysis-panel"><p>Select a passage in the reasoning or final output to highlight it and write a comment. Anyone can add, edit, or delete shared annotations.</p><p id="annotation-support"></p><details><summary>Draft reasoning labels</summary><p>Labels describe visible behavior in the text. They do not establish the model's internal process. Choose several, or leave them blank.</p>${Object.values(reasoningBehaviors).map(([label, definition]) => `<p><strong>${esc(label)}</strong> — ${esc(definition)}</p>`).join("")}<p><strong>Knowledge source</strong> labels concern background claims and premises. A newly derived conclusion is not automatically parametric just because it is absent from the input.</p>${Object.values(reasoningSources).map(([label, definition]) => `<p><strong>${esc(label)}</strong> — ${esc(definition)}</p>`).join("")}</details><details><summary id="annotation-global-count">Browse all annotations</summary><div id="annotation-global-list"></div></details><div class="annotation-actions"><button id="annotation-use-selection">Annotate selected text</button><button id="annotation-refresh">Refresh saved annotations</button><span id="annotation-status" role="status"></span></div><div id="annotation-list"></div></div></section>`;
+    <section id="annotation-panel" class="section" hidden><div class="section-head">Reasoning annotations <span id="annotation-count" class="tag"></span></div><div class="analysis-panel"><p>Select a passage in the reasoning or final output to highlight it and write a comment. Anyone can add, edit, or delete shared annotations.</p><p id="annotation-support"></p><details><summary>Draft reasoning labels</summary><p>Labels describe visible behavior in the text. They do not establish the model's internal process. Choose several, or leave them blank.</p>${Object.values(reasoningBehaviors).map(([label, definition]) => `<p><strong>${esc(label)}</strong> — ${esc(definition)}</p>`).join("")}<p><strong>Knowledge source</strong> labels concern background claims and premises. A newly derived conclusion is not automatically parametric just because it is absent from the input.</p>${Object.values(reasoningSources).map(([label, definition]) => `<p><strong>${esc(label)}</strong> — ${esc(definition)}</p>`).join("")}<p><strong>Input fidelity</strong> flags observable mismatches separately from knowledge source. Added background knowledge and a new conclusion are not themselves input errors.</p>${Object.values(inputFidelity).map(([label, definition]) => `<p><strong>${esc(label)}</strong> — ${esc(definition)}</p>`).join("")}</details><details><summary id="annotation-global-count">Browse all annotations</summary><div id="annotation-global-list"></div></details><div class="annotation-actions"><button id="annotation-use-selection">Annotate selected text</button><button id="annotation-refresh">Refresh saved annotations</button><span id="annotation-status" role="status"></span></div><div id="annotation-list"></div></div></section>`;
 }
 function syncAnnotationUI(refreshAnalysis = false) {
   if (!state.release?.reasoning_annotations) return;
@@ -540,6 +547,7 @@ function syncAnnotationUI(refreshAnalysis = false) {
   $("annotation-comment").disabled = state.annotationsBusy;
   $("annotation-tags").disabled = state.annotationsBusy;
   $("annotation-sources").disabled = state.annotationsBusy;
+  $("annotation-fidelity").disabled = state.annotationsBusy;
   if ($("annotation-editor").open) $("annotation-editor-status").textContent = state.annotationStatus;
   $("annotation-conflict").hidden = !state.annotationConflict;
   if (state.annotationConflict && state.annotationDraft) {
@@ -593,6 +601,8 @@ function openAnnotationEditor(annotation) {
     .map(([id, [label, definition]]) => `<label title="${esc(definition)}"><input type="checkbox" value="${id}"${annotation.tags.includes(id) ? " checked" : ""}> ${esc(label)}</label>`).join("");
   $("annotation-sources").innerHTML = '<legend>Knowledge source · optional</legend>' + Object.entries(reasoningSources)
     .map(([id, [label, definition]]) => `<label title="${esc(definition)}"><input type="checkbox" value="${id}"${annotation.tags.includes(id) ? " checked" : ""}> ${esc(label)}</label>`).join("");
+  $("annotation-fidelity").innerHTML = '<legend>Input fidelity · optional mismatch flags</legend>' + Object.entries(inputFidelity)
+    .map(([id, [label, definition]]) => `<label title="${esc(definition)}"><input type="checkbox" value="${id}"${annotation.tags.includes(id) ? " checked" : ""}> ${esc(label)}</label>`).join("");
   state.annotationStatus = "Unsaved annotation"; $("annotation-editor").showModal(); syncAnnotationUI(); $("annotation-comment").focus();
 }
 function captureAnnotationSelection() {
@@ -627,7 +637,7 @@ $("annotation-save").onclick = async () => {
   const annotation = state.annotationDraft;
   if (!annotation || state.annotationsBusy) return;
   annotation.comment = $("annotation-comment").value;
-  annotation.tags = [...$("annotation-tags").querySelectorAll("input:checked"), ...$("annotation-sources").querySelectorAll("input:checked")].map(input => input.value);
+  annotation.tags = [...$("annotation-tags").querySelectorAll("input:checked"), ...$("annotation-sources").querySelectorAll("input:checked"), ...$("annotation-fidelity").querySelectorAll("input:checked")].map(input => input.value);
   if (annotation.tags.length > 8) { state.annotationStatus = "Choose at most eight labels in total."; syncAnnotationUI(); return; }
   if (new TextEncoder().encode(annotation.comment).length > 4000) {
     state.annotationStatus = "The comment is too long. Please shorten it."; syncAnnotationUI(); return;
