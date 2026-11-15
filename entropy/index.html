@@ -576,7 +576,10 @@ async function syncAnnotations(update, manual = false) {
         || !Number.isInteger(a.start) || !Number.isInteger(a.end) || a.start < 0 || a.end <= a.start
         || typeof a.quote !== "string" || typeof a.comment !== "string" || !Array.isArray(a.tags) || a.tags.some(t => typeof t !== "string")
         || !Number.isInteger(a.revision) || a.revision < 1)) throw new Error("Invalid shared annotations");
-    state.annotations = data.annotations; state.annotationsLoaded = true; state.annotationStatus = "Synced";
+    state.annotations = data.annotations.sort((a, b) => a.trace_key.localeCompare(b.trace_key)
+      || (a.section === "reasoning" ? 0 : 1) - (b.section === "reasoning" ? 0 : 1)
+      || a.start - b.start || a.end - b.end || a.id.localeCompare(b.id));
+    state.annotationsLoaded = true; state.annotationStatus = "Synced";
     return true;
   } catch (error) { state.annotationStatus = `Could not ${update ? "save" : "refresh"}: ${error.message}`; return false; }
   finally { state.annotationsBusy = false; syncAnnotationUI(); }
