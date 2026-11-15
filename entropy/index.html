@@ -18,6 +18,7 @@
     --green: #087a55;
     --red: #b42318;
     --amber: #a15c00;
+    --header-height: 148px;
   }
   body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
   header { position: sticky; top: 0; z-index: 10; padding: 12px 18px; color: #fff; background: var(--nav); box-shadow: 0 2px 8px rgba(0,0,0,.18); }
@@ -36,12 +37,12 @@
   main { width: 100%; margin: 0; padding: clamp(12px, 1vw, 24px); }
   .layout { display: grid; grid-template-columns: clamp(260px, 18vw, 320px) minmax(0, 1fr); gap: 14px; }
   aside, .section { border: 1px solid var(--line); background: var(--panel); }
-  aside { position: sticky; top: 148px; align-self: start; max-height: calc(100vh - 162px); overflow: hidden; }
+  aside { position: sticky; top: calc(var(--header-height) + 12px); align-self: start; max-height: calc(100vh - var(--header-height) - 24px); overflow: hidden; }
   .aside-head, .section-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 9px 11px; border-bottom: 1px solid var(--line); background: #edf1f4; font-size: 13px; font-weight: 750; }
   .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; padding: 9px; border-bottom: 1px solid var(--line); }
   .filters input { grid-column: 1 / -1; color: var(--text); background: #fff; border-color: #b9c3ce; }
   .filters select { color: var(--text); background: #fff; border-color: #b9c3ce; }
-  .sample-list { max-height: calc(100vh - 286px); overflow: auto; padding: 8px; }
+  .sample-list { max-height: calc(100vh - var(--header-height) - 148px); overflow: auto; padding: 8px; }
   .sample { width: 100%; margin-bottom: 6px; padding: 8px 9px; text-align: left; color: var(--text); background: #fff; border: 1px solid var(--line); border-radius: 5px; }
   .sample.active { border-color: var(--blue); box-shadow: inset 3px 0 0 var(--blue); }
   .sample-main { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
@@ -136,7 +137,7 @@
   }
   .reference-link { color: var(--blue); text-decoration: underline; cursor: pointer; }
   .unresolved { text-decoration: underline dotted; color: var(--amber); }
-  .record-card, .evidence-card { scroll-margin-top: 160px; }
+  .record-card, .evidence-card { scroll-margin-top: calc(var(--header-height) + 12px); }
   .record-card:target, .evidence-card:target { outline: 3px solid var(--blue); }
   .reference-intro { margin: 0 0 12px; font-size: 13px; line-height: 1.5; }
   .record-card { margin-top: 8px; }
@@ -147,7 +148,7 @@
   .completion-card { min-width: 0; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
   .completion-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 10px; background: #edf1f4; }
   .completion-grid .trace-part-body > pre { max-height: 65vh; overflow-y: auto; }
-  #completion-area { min-width: 0; scroll-margin-top: 165px; }
+  #completion-area { min-width: 0; scroll-margin-top: calc(var(--header-height) + 12px); }
   .entropy-controls { padding: 10px; border: 1px solid #b8d3ec; background: #f5faff; font-size: 12px; line-height: 1.5; }
   .entropy-controls input { width: auto; min-height: auto; accent-color: var(--blue); }
   .entropy-controls.provisional { border-color: #c88b35; background: #fff8eb; }
@@ -164,6 +165,27 @@
   #marked-token-links { max-height: 240px; overflow: auto; }
   .marked-token-link { display: block; padding: 6px; border-bottom: 1px solid var(--line); }
   .marked-token-link code { margin-right: 8px; white-space: pre-wrap; }
+  .analysis-nav { margin-bottom: 10px; }
+  .analysis-nav button { border: 1px solid #526171; background: transparent; }
+  .analysis-nav button.active { background: var(--blue); border-color: #9bc5ed; }
+  #analysis-navigation[hidden], #annotation-panel[hidden], #entropy-analysis-panel[hidden] { display: none; }
+  .analysis-panel { padding: 11px; font-size: 13px; line-height: 1.5; }
+  .analysis-panel p { margin: 0 0 9px; }
+  .analysis-metrics { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+  .annotation-card { padding: 10px 0; border-top: 1px solid var(--line); }
+  .annotation-card blockquote, #annotation-quote { margin: 6px 0; padding: 7px 10px; border-left: 3px solid #168568; background: #edf9f4; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .annotation-comment { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .annotation-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 7px; }
+  #annotation-editor { width: min(620px, calc(100vw - 24px)); max-height: calc(100vh - 32px); overflow-y: auto; border: 1px solid var(--line); border-radius: 8px; color: var(--text); padding: 18px; }
+  #annotation-editor::backdrop { background: #17212b88; }
+  #annotation-editor h2 { margin-top: 0; font-size: 18px; }
+  #annotation-quote { max-height: 160px; overflow-y: auto; font-size: 12px; }
+  #annotation-comment { width: 100%; min-height: 100px; margin: 7px 0; padding: 8px; font: 14px/1.5 inherit; }
+  #annotation-tags, #annotation-sources { display: flex; flex-wrap: wrap; gap: 5px 12px; margin: 8px 0; padding: 8px; border: 1px solid var(--line); font-size: 12px; }
+  #annotation-tags input, #annotation-sources input { width: auto; min-height: auto; }
+  #annotation-editor-status { min-height: 1.5em; font-size: 12px; }
+  ::highlight(reasoning-annotations) { background-color: #b9eadb; color: #103b30; text-decoration: underline; }
+  ::highlight(reasoning-draft) { background-color: #b8d6ff; color: #102e50; }
   .entropy-top-only .entropy-token:not(.entropy-high) { background: transparent; }
   #entropy-tooltip { position: fixed; z-index: 100; max-width: min(440px, calc(100vw - 16px)); max-height: calc(100vh - 16px); overflow: hidden; padding: 9px 11px; border-radius: 5px; color: #fff; background: #17212b; box-shadow: 0 3px 12px #0004; font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap; overflow-wrap: anywhere; pointer-events: none; }
 </style>
@@ -171,6 +193,10 @@
 <body>
 <header>
   <h1 id="page-title">Token entropy · Gold trace samples</h1>
+  <nav id="analysis-navigation" class="task-nav analysis-nav" aria-label="Analysis" hidden>
+    <button id="entropy-analysis" class="active" aria-pressed="true">Entropy analysis</button>
+    <button id="reasoning-annotations" aria-pressed="false">Annotate reasoning</button>
+  </nav>
   <nav class="task-nav" aria-label="Configuration">
     <span class="nav-label">Evidence</span>
     <a class="task-link" data-config="direct" href="?configuration=direct">Direct only</a>
@@ -201,15 +227,53 @@
   </div>
 </main>
 <div id="entropy-tooltip" role="tooltip" hidden></div>
+<dialog id="annotation-editor" aria-labelledby="annotation-editor-title">
+  <h2 id="annotation-editor-title">Annotate passage</h2>
+  <p id="annotation-context" class="tag"></p>
+  <blockquote id="annotation-quote"></blockquote>
+  <label for="annotation-comment">Comment (optional)</label>
+  <textarea id="annotation-comment" maxlength="4000" placeholder="What is this passage doing? What makes it interesting?"></textarea>
+  <fieldset id="annotation-tags"><legend>Reasoning behaviors · optional draft labels</legend></fieldset>
+  <fieldset id="annotation-sources"><legend>Knowledge source · optional</legend></fieldset>
+  <p class="tag">Source labels describe the premises or background claims. A new conclusion is not parametric merely because it is absent from the input. Explain the evidence in your comment.</p>
+  <div id="annotation-editor-status" role="status"></div>
+  <div id="annotation-conflict" hidden><p>This annotation changed elsewhere. Your draft is kept. Review the latest saved version below.</p><blockquote id="annotation-latest"></blockquote><button id="annotation-resolve">Rebase draft on latest version</button></div>
+  <div class="annotation-actions"><button id="annotation-save">Save shared annotation</button><button id="annotation-cancel">Cancel</button></div>
+</dialog>
 <script>
 const params = new URLSearchParams(location.search);
 const state = { release: null, task: params.get("task") || "bbb_martins",
   config: params.get("configuration") || "direct_plus_indirect", selected: params.get("query"), payload: null, loading: 0,
   repetition: params.get("repetition"), completions: [], entropyManifest: null, entropyStatisticsManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false,
   marks: new Set(), markRecords: [], marking: false, marksBusy: false, marksLoaded: false, marksStatus: "Loading shared marks…",
+  annotating: params.get("mode") === "annotations", annotations: [], annotationsLoaded: false, annotationsBusy: false,
+  annotationDraft: null, annotationStatus: "Loading shared annotations…", annotationId: params.get("annotation_id"),
+  annotationConflict: false,
   markedPosition: params.has("marked_position") && /^\d+$/.test(params.get("marked_position")) ? Number(params.get("marked_position")) : null };
 const $ = id => document.getElementById(id);
+if (globalThis.ResizeObserver) {
+  const header = document.querySelector("header");
+  new ResizeObserver(() => document.documentElement.style.setProperty("--header-height", `${Math.ceil(header.getBoundingClientRect().height)}px`)).observe(header);
+}
 const outcomes = { TP: "True positive", TN: "True negative", FP: "False positive", FN: "False negative" };
+const reasoningBehaviors = {
+  state_knowledge: ["State information", "Present a fact, claim, observation, or general rule without deriving it here."],
+  connect: ["Connect cases or ideas", "Relate the current case to another case, concept, or pattern."],
+  apply_rule: ["Apply a rule", "Use a familiar rule, procedure, or generalization to derive a conclusion for this case."],
+  construct_explanation: ["Construct an explanation", "Build an explanatory account connecting observations, assumptions, or mechanisms."],
+  weigh: ["Weigh evidence", "Compare support, objections, or competing explanations."],
+  hypothesize: ["Propose a possibility", "Suggest a candidate explanation or conditional possibility."],
+  estimate: ["Make a tentative judgment", "Tentatively commit to an answer or value under uncertainty; this does not establish unsupported guessing."],
+  check: ["Check or revise", "Test a claim, detect a conflict, or change an earlier view."],
+  plan: ["Plan the approach", "Choose a strategy, next step, or response structure."]
+};
+const reasoningSources = {
+  source_input: ["Retrieved / input-supported", "The relevant premise or background claim is supported by the saved input or retrieved evidence."],
+  source_parametric: ["Parametric / absent from input", "The background claim is absent from the inspected input and is presented as model knowledge; this does not prove an internal retrieval mechanism."],
+  source_mixed: ["Mixed sources", "The passage combines supplied evidence with background claims absent from the input."],
+  source_unclear: ["Source unclear", "The source of the relevant premise or background claim cannot be determined from the saved record."]
+};
+const reasoningLabels = {...reasoningBehaviors, ...reasoningSources, infer: ["Derive a conclusion (earlier draft)", "Earlier draft label."]};
 function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"}[c])); }
 function panel(title, content, open = false) { return `<details class="trace-part"${open ? " open" : ""}><summary>${esc(title)}</summary><div class="trace-part-body">${content}</div></details>`; }
 function metric(title, value) { return `<div class="metric"><div class="metric-key">${esc(title)}</div><div class="metric-value">${esc(value)}</div></div>`; }
@@ -289,10 +353,23 @@ function entropyText(name, text, entropy = state.entropy, references = state.pay
       return `Token ${tokenText} · probability ${statistics ? probabilityStatistics(t.probability_mean, t.probability_sd) : probabilityPercent(t.logprob)}${alternatives}`;
     }).join("\n\n");
   }
-  return linkedText(text, references, groups);
+  const html = linkedText(text, references, groups);
+  return state.release?.reasoning_annotations && entropy.key && entropy.sequence_sha256
+    ? `<span class="annotation-text" data-annotation-trace="${esc(entropy.key)}" data-annotation-sequence="${esc(entropy.sequence_sha256)}" data-annotation-section="${name}">${html}</span>` : html;
 }
 function markId(token) {
   return `${token.trace_key}|${token.sequence_sha256}|${token.absolute_position}|${token.token_id}`;
+}
+function traceExamples() {
+  const examples = new Map();
+  for (const [task, data] of Object.entries(state.release.tasks)) data.samples.forEach((sample, ordinal) => {
+    for (const [repetition, configurations] of Object.entries(sample.by_repetition || {})) for (const [configuration, prediction] of Object.entries(configurations)) {
+      const key = `${task}/${configuration}/rep-${String(repetition).padStart(2, "0")}/${String(prediction.query_index).padStart(5, "0")}`;
+      const label = `${data.title} · ${data.configurations[configuration].label} · Sample ${ordinal + 1} · Repetition ${data.repetitions.map(String).indexOf(repetition) + 1}`;
+      examples.set(key, {task, configuration, query: sample.query_uid, repetition, label});
+    }
+  });
+  return examples;
 }
 function syncMarkUI() {
   if (!state.release?.token_marks) return;
@@ -300,23 +377,18 @@ function syncMarkUI() {
   const button = $("marks-toggle");
   if (button) {
     button.textContent = state.marking ? "Done marking" : "Mark tokens";
-    button.disabled = state.marksBusy;
+    button.disabled = state.marksBusy || state.annotating;
     button.setAttribute("aria-pressed", String(state.marking));
     button.onclick = async () => {
       if (!state.marksLoaded && !await syncTokenMarks()) return;
-      state.marking = !state.marking; syncMarkUI();
+      state.marking = !state.marking;
+      if (state.marking) { state.annotating = false; syncAnnotationUI(); updateNavigation(); }
+      syncMarkUI();
     };
     $("marks-count").textContent = state.marksLoaded ? `${state.marks.size} shared marked tokens` : "";
     $("marks-status").textContent = state.marksStatus;
     $("marks-list-title").textContent = `Marked tokens (${state.marks.size})`;
-    const examples = new Map();
-    for (const [task, data] of Object.entries(state.release.tasks)) data.samples.forEach((sample, ordinal) => {
-      for (const [repetition, configurations] of Object.entries(sample.by_repetition || {})) for (const [configuration, prediction] of Object.entries(configurations)) {
-        const key = `${task}/${configuration}/rep-${String(repetition).padStart(2, "0")}/${String(prediction.query_index).padStart(5, "0")}`;
-        const label = `${data.title} · ${data.configurations[configuration].label} · Sample ${ordinal + 1} · Repetition ${data.repetitions.map(String).indexOf(repetition) + 1}`;
-        examples.set(key, {task, configuration, query: sample.query_uid, repetition, label});
-      }
-    });
+    const examples = traceExamples();
     const links = state.markRecords.map(mark => {
       const example = examples.get(mark.trace_key);
       if (!example) return `<div><code>${esc(JSON.stringify(mark.token_text))}</code> · Saved trace</div>`;
@@ -380,6 +452,201 @@ document.addEventListener("keydown", event => {
   }
 }, true);
 window.addEventListener("focus", () => syncTokenMarks());
+function annotationSection(annotation) {
+  const entropy = state.completions.find(c => c.entropy?.key === annotation.trace_key
+    && c.entropy.sequence_sha256 === annotation.sequence_sha256)?.entropy;
+  return entropy?.sections[annotation.section];
+}
+function annotationRange(root, start, end) {
+  const chars = Array.from(root.textContent);
+  const first = chars.slice(0, start).join("").length, last = chars.slice(0, end).join("").length;
+  const range = document.createRange(), walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  let offset = 0, began = false, node;
+  while ((node = walker.nextNode())) {
+    const next = offset + node.length;
+    if (!began && first < next) { range.setStart(node, first - offset); began = true; }
+    if (began && last <= next) { range.setEnd(node, last - offset); return range; }
+    offset = next;
+  }
+  return null;
+}
+function paintAnnotations() {
+  if (!globalThis.CSS?.highlights || !globalThis.Highlight) return;
+  const saved = [], draft = [];
+  if (state.annotating) for (const root of document.querySelectorAll(".annotation-text")) {
+    for (const [records, ranges] of [[state.annotations, saved], [state.annotationDraft ? [state.annotationDraft] : [], draft]]) {
+      for (const annotation of records) {
+        if (annotation.trace_key !== root.dataset.annotationTrace || annotation.sequence_sha256 !== root.dataset.annotationSequence
+            || annotation.section !== root.dataset.annotationSection) continue;
+        if (Array.from(root.textContent).slice(annotation.start, annotation.end).join("") !== annotation.quote) continue;
+        const range = annotationRange(root, annotation.start, annotation.end);
+        if (range) ranges.push(range);
+      }
+    }
+  }
+  CSS.highlights.set("reasoning-annotations", new Highlight(...saved));
+  CSS.highlights.set("reasoning-draft", new Highlight(...draft));
+}
+function annotationPanel() {
+  if (!state.release.reasoning_annotations) return "";
+  return `<section id="entropy-analysis-panel" class="section"><div class="section-head">Entropy analysis</div><div class="analysis-panel"><div class="analysis-metrics"><span><strong id="analysis-token-count">—</strong> scored tokens</span><span>Mean entropy <strong id="analysis-mean">—</strong></span><span>Median entropy <strong id="analysis-median">—</strong></span></div><p>Current trace view. Entropy summarizes the next-token distribution; the hover shows token probabilities.</p></div></section>
+    <section id="annotation-panel" class="section" hidden><div class="section-head">Reasoning annotations <span id="annotation-count" class="tag"></span></div><div class="analysis-panel"><p>Select a passage in the reasoning or final output to highlight it and write a comment. Anyone can add, edit, or delete shared annotations.</p><p id="annotation-support"></p><details><summary>Draft reasoning labels</summary><p>Labels describe visible behavior in the text. They do not establish the model's internal process. Choose several, or leave them blank.</p>${Object.values(reasoningBehaviors).map(([label, definition]) => `<p><strong>${esc(label)}</strong> — ${esc(definition)}</p>`).join("")}<p><strong>Knowledge source</strong> labels concern background claims and premises. A newly derived conclusion is not automatically parametric just because it is absent from the input.</p>${Object.values(reasoningSources).map(([label, definition]) => `<p><strong>${esc(label)}</strong> — ${esc(definition)}</p>`).join("")}</details><details><summary id="annotation-global-count">Browse all annotations</summary><div id="annotation-global-list"></div></details><div class="annotation-actions"><button id="annotation-use-selection">Annotate selected text</button><button id="annotation-refresh">Refresh saved annotations</button><span id="annotation-status" role="status"></span></div><div id="annotation-list"></div></div></section>`;
+}
+function syncAnnotationUI(refreshAnalysis = false) {
+  if (!state.release?.reasoning_annotations) return;
+  $("analysis-navigation").hidden = false;
+  for (const [id, active] of [["entropy-analysis", !state.annotating], ["reasoning-annotations", state.annotating]]) {
+    $(id).classList.toggle("active", active); $(id).setAttribute("aria-pressed", String(active));
+  }
+  if ($("annotation-panel")) {
+    if (refreshAnalysis) {
+      const tokens = (state.repetition === "all" ? state.completions : state.completions.filter(c => c.repetition === state.repetition))
+        .flatMap(c => Object.values(c.entropy?.sections || {}).flatMap(s => s.tokens));
+      const values = tokens.map(t => t.entropy).sort((a, b) => a - b), n = values.length;
+      $("analysis-token-count").textContent = n.toLocaleString();
+      $("analysis-mean").textContent = n ? `${(values.reduce((a, b) => a + b, 0) / n).toFixed(2)} nats` : "—";
+      $("analysis-median").textContent = n ? `${((values[Math.floor((n - 1) / 2)] + values[Math.floor(n / 2)]) / 2).toFixed(2)} nats` : "—";
+    }
+    $("annotation-panel").hidden = !state.annotating; $("entropy-analysis-panel").hidden = state.annotating;
+    $("annotation-support").textContent = globalThis.CSS?.highlights && globalThis.Highlight ? "" : "This browser can save comments, but passage highlights require a browser with Custom Highlight support.";
+    $("annotation-status").textContent = state.annotationStatus;
+    const records = state.annotations.filter(a => annotationSection(a));
+    $("annotation-count").textContent = `${records.length} here · ${state.annotations.length} shared`;
+    const html = records.map(annotation => {
+      const completion = state.completions.find(c => c.entropy?.key === annotation.trace_key);
+      const query = new URLSearchParams({task: state.task, configuration: state.config, query: state.selected,
+        repetition: completion.repetition, mode: "annotations", annotation_id: annotation.id});
+      const valid = Array.from(annotationSection(annotation).text).slice(annotation.start, annotation.end).join("") === annotation.quote;
+      return `<article class="annotation-card"><strong>Repetition ${esc(repetitionNumber(completion.repetition))} · ${annotation.section === "reasoning" ? "Reasoning" : "Final output"}</strong><blockquote>${esc(annotation.quote)}</blockquote><div class="annotation-comment">${esc(annotation.comment)}</div><div>${annotation.tags.map(tag => `<span class="pill">${esc(reasoningLabels[tag]?.[0] || tag.replace(/_/g, " "))}</span>`).join(" ")}</div>${valid ? "" : '<p class="warn">This saved quote no longer matches the displayed passage.</p>'}<div class="annotation-actions"><a href="?${esc(query)}">Revisit passage</a><button data-annotation-edit="${esc(annotation.id)}">Edit</button><button data-annotation-delete="${esc(annotation.id)}">Delete</button></div></article>`;
+    }).join("") || '<p class="empty">No annotations on this sample yet.</p>';
+    const list = $("annotation-list");
+    if (list.annotationHTML !== html) { list.innerHTML = html; list.annotationHTML = html; }
+    const examples = traceExamples();
+    const globalHTML = state.annotations.map(annotation => {
+      const example = examples.get(annotation.trace_key);
+      if (!example) return "";
+      const {label, ...query} = example;
+      const href = `?${new URLSearchParams({...query, mode: "annotations", annotation_id: annotation.id})}`;
+      return `<a class="marked-token-link" href="${esc(href)}"><code>${esc(Array.from(annotation.quote).slice(0, 80).join(""))}</code>${esc(label)}</a>`;
+    }).join("") || '<p class="empty">No shared annotations yet.</p>';
+    $("annotation-global-count").textContent = `Browse all annotations (${state.annotations.length})`;
+    const globalList = $("annotation-global-list");
+    if (globalList.annotationHTML !== globalHTML) { globalList.innerHTML = globalHTML; globalList.annotationHTML = globalHTML; }
+    $("annotation-refresh").disabled = state.annotationsBusy;
+    document.querySelectorAll("[data-annotation-edit], [data-annotation-delete]").forEach(button => button.disabled = state.annotationsBusy);
+  }
+  $("annotation-save").disabled = state.annotationsBusy || !state.annotationDraft;
+  $("annotation-cancel").disabled = state.annotationsBusy;
+  $("annotation-comment").disabled = state.annotationsBusy;
+  $("annotation-tags").disabled = state.annotationsBusy;
+  $("annotation-sources").disabled = state.annotationsBusy;
+  if ($("annotation-editor").open) $("annotation-editor-status").textContent = state.annotationStatus;
+  $("annotation-conflict").hidden = !state.annotationConflict;
+  if (state.annotationConflict && state.annotationDraft) {
+    const latest = state.annotations.find(a => a.id === state.annotationDraft.id);
+    $("annotation-latest").textContent = latest ? `${latest.quote}\n\n${latest.comment || "(No comment)"}\nLabels: ${latest.tags.map(t => reasoningLabels[t]?.[0] || t.replace(/_/g, " ")).join(", ") || "None"}` : "The saved annotation was deleted.";
+    $("annotation-resolve").textContent = latest ? "Rebase draft on latest version" : "Keep draft as a new annotation";
+    $("annotation-resolve").disabled = state.annotationsBusy;
+  }
+  paintAnnotations();
+  if (state.annotating && state.annotationId && state.annotationFocused !== state.annotationId) {
+    const annotation = state.annotations.find(a => a.id === state.annotationId);
+    const root = annotation && [...document.querySelectorAll(".annotation-text")].find(r => r.dataset.annotationTrace === annotation.trace_key
+      && r.dataset.annotationSequence === annotation.sequence_sha256 && r.dataset.annotationSection === annotation.section);
+    if (root && Array.from(root.textContent).slice(annotation.start, annotation.end).join("") === annotation.quote) {
+      const range = annotationRange(root, annotation.start, annotation.end), target = range?.startContainer.parentElement;
+      if (target) { target.scrollIntoView({block: "center"}); target.setAttribute("tabindex", "-1"); target.focus({preventScroll: true}); state.annotationFocused = annotation.id; }
+    }
+  }
+}
+async function syncAnnotations(update, manual = false) {
+  const config = state.release?.reasoning_annotations;
+  if (!config || state.annotationsBusy || (!update && state.annotationDraft && !manual)) return false;
+  state.annotationsBusy = true; state.annotationStatus = update ? "Saving…" : "Refreshing…"; syncAnnotationUI();
+  try {
+    const response = await fetch(`${config.api_url.replace(/\/$/, "")}/api/annotations`, {method: update ? "POST" : "GET", cache: "no-store", credentials: "omit",
+      ...(update ? {headers: {"Content-Type": "application/json"}, body: JSON.stringify(update)} : {})});
+    if (!response.ok) {
+      if (response.status === 409 && state.annotationDraft) state.annotationConflict = true;
+      throw new Error(response.status === 409 ? "This annotation changed elsewhere. Review the latest version below; your draft is kept." : `HTTP ${response.status}`);
+    }
+    const data = await response.json();
+    if (!Array.isArray(data.annotations) || data.annotations.some(a => typeof a.id !== "string" || typeof a.trace_key !== "string"
+        || !/^[a-f0-9]{64}$/i.test(a.sequence_sha256) || !["reasoning", "answer"].includes(a.section)
+        || !Number.isInteger(a.start) || !Number.isInteger(a.end) || a.start < 0 || a.end <= a.start
+        || typeof a.quote !== "string" || typeof a.comment !== "string" || !Array.isArray(a.tags) || a.tags.some(t => typeof t !== "string")
+        || !Number.isInteger(a.revision) || a.revision < 1)) throw new Error("Invalid shared annotations");
+    state.annotations = data.annotations; state.annotationsLoaded = true; state.annotationStatus = "Synced";
+    return true;
+  } catch (error) { state.annotationStatus = `Could not ${update ? "save" : "refresh"}: ${error.message}`; return false; }
+  finally { state.annotationsBusy = false; syncAnnotationUI(); }
+}
+function openAnnotationEditor(annotation) {
+  state.annotationDraft = {...annotation, tags: [...annotation.tags]};
+  state.annotationConflict = false;
+  $("annotation-context").textContent = traceExamples().get(annotation.trace_key)?.label || "Saved trace";
+  $("annotation-quote").textContent = annotation.quote; $("annotation-comment").value = annotation.comment;
+  $("annotation-tags").innerHTML = '<legend>Reasoning behaviors · optional draft labels</legend>' + Object.entries(reasoningBehaviors)
+    .map(([id, [label, definition]]) => `<label title="${esc(definition)}"><input type="checkbox" value="${id}"${annotation.tags.includes(id) ? " checked" : ""}> ${esc(label)}</label>`).join("");
+  $("annotation-sources").innerHTML = '<legend>Knowledge source · optional</legend>' + Object.entries(reasoningSources)
+    .map(([id, [label, definition]]) => `<label title="${esc(definition)}"><input type="checkbox" value="${id}"${annotation.tags.includes(id) ? " checked" : ""}> ${esc(label)}</label>`).join("");
+  state.annotationStatus = "Unsaved annotation"; $("annotation-editor").showModal(); syncAnnotationUI(); $("annotation-comment").focus();
+}
+function captureAnnotationSelection() {
+  if (!state.annotating || state.annotationsBusy || state.annotationDraft) return;
+  const selection = window.getSelection();
+  if (!selection || selection.isCollapsed || !selection.rangeCount) return;
+  const range = selection.getRangeAt(0), element = node => node.nodeType === 1 ? node : node.parentElement;
+  const root = element(range.startContainer)?.closest(".annotation-text");
+  if (!root || root !== element(range.endContainer)?.closest(".annotation-text")) {
+    state.annotationStatus = "Select a passage within one reasoning or final-output section."; syncAnnotationUI(); return;
+  }
+  const before = document.createRange(); before.selectNodeContents(root); before.setEnd(range.startContainer, range.startOffset);
+  const start = Array.from(before.toString()).length, quote = range.toString(), end = start + Array.from(quote).length;
+  const annotation = {id: crypto.randomUUID(), trace_key: root.dataset.annotationTrace, sequence_sha256: root.dataset.annotationSequence,
+    section: root.dataset.annotationSection, start, end, quote, comment: "", tags: [], revision: 0};
+  if (!quote.trim() || end - start > 4000 || Array.from(annotationSection(annotation)?.text || "").slice(start, end).join("") !== quote) {
+    state.annotationStatus = "Select a nonempty passage of at most 4,000 characters."; syncAnnotationUI(); return;
+  }
+  selection.removeAllRanges(); hideEntropyTooltip(); openAnnotationEditor(annotation);
+}
+document.addEventListener("pointerup", event => { if (event.target.closest(".annotation-text")) captureAnnotationSelection(); });
+document.addEventListener("keyup", event => { if (event.key === "Shift") captureAnnotationSelection(); });
+document.addEventListener("click", async event => {
+  if (event.target.id === "annotation-use-selection") captureAnnotationSelection();
+  if (event.target.id === "annotation-refresh") await syncAnnotations(null, true);
+  const edit = event.target.closest("[data-annotation-edit]"), remove = event.target.closest("[data-annotation-delete]");
+  const annotation = state.annotations.find(a => a.id === (edit?.dataset.annotationEdit || remove?.dataset.annotationDelete));
+  if (edit && annotation) openAnnotationEditor(annotation);
+  if (remove && annotation) await syncAnnotations({action: "delete", id: annotation.id, revision: annotation.revision});
+});
+$("annotation-save").onclick = async () => {
+  const annotation = state.annotationDraft;
+  if (!annotation || state.annotationsBusy) return;
+  annotation.comment = $("annotation-comment").value;
+  annotation.tags = [...$("annotation-tags").querySelectorAll("input:checked"), ...$("annotation-sources").querySelectorAll("input:checked")].map(input => input.value);
+  if (annotation.tags.length > 8) { state.annotationStatus = "Choose at most eight labels in total."; syncAnnotationUI(); return; }
+  if (new TextEncoder().encode(annotation.comment).length > 4000) {
+    state.annotationStatus = "The comment is too long. Please shorten it."; syncAnnotationUI(); return;
+  }
+  if (await syncAnnotations({action: "upsert", annotation})) {
+    state.annotationDraft = null; $("annotation-editor").close(); syncAnnotationUI();
+  } else if (state.annotationConflict) await syncAnnotations(null, true);
+};
+$("annotation-resolve").onclick = () => {
+  if (!state.annotationDraft || state.annotationsBusy) return;
+  const latest = state.annotations.find(a => a.id === state.annotationDraft.id);
+  if (latest) state.annotationDraft.revision = latest.revision;
+  else { state.annotationDraft.id = crypto.randomUUID(); state.annotationDraft.revision = 0; }
+  state.annotationConflict = false; state.annotationStatus = "Your draft is ready. Save to apply it."; syncAnnotationUI();
+};
+$("annotation-cancel").onclick = () => { if (!state.annotationsBusy) $("annotation-editor").close(); };
+$("annotation-editor").addEventListener("cancel", event => { if (state.annotationsBusy) event.preventDefault(); });
+$("annotation-editor").addEventListener("close", () => { state.annotationDraft = null; state.annotationConflict = false; syncAnnotationUI(); });
+for (const [id, annotating] of [["entropy-analysis", false], ["reasoning-annotations", true]]) $(id).onclick = () => {
+  state.annotating = annotating; state.marking = false; hideEntropyTooltip(); syncMarkUI(); syncAnnotationUI(); updateNavigation();
+};
+window.addEventListener("focus", () => syncAnnotations());
 let entropyTarget = null;
 function hideEntropyTooltip() {
   $("entropy-tooltip").hidden = true;
@@ -388,6 +655,7 @@ function hideEntropyTooltip() {
 }
 function showEntropyTooltip(token, event) {
   hideEntropyTooltip();
+  if (state.annotating) return;
   const tooltip = $("entropy-tooltip"), rect = token.getBoundingClientRect();
   if (rect.bottom < 0 || rect.top > window.innerHeight || rect.right < 0 || rect.left > window.innerWidth) return;
   for (const clip of [token.closest(".completion-grid pre"), token.closest(".completion-scroll")]) {
@@ -556,7 +824,7 @@ function renderDetail(sample) {
   const overview = [metric("Gold label", sample.label), metric("Configuration", arm.label),
     metric("Model", state.payload.provenance.served_model), metric("SMILES", sample.smiles)].join("");
   const base = state.sharedInput || final.messages.filter(m => m.role !== "assistant" && !m.content?.startsWith("Retry the flat-context-final response"));
-  $("detail").innerHTML = `<div class="section"><div class="section-head">Sample overview <span class="tag">Gold test</span></div><div class="overview">${overview}</div></div>
+  $("detail").innerHTML = `${annotationPanel()}<div class="section"><div class="section-head">Sample overview <span class="tag">Gold test</span></div><div class="overview">${overview}</div></div>
     ${renderReferences()}<div class="section" id="shared-input"><div class="section-head">${sample.by_repetition ? "Shared input · identical across repetitions" : "Input"}</div><div class="stage-content">${panel("Input", renderInput({messages: base}), !sample.by_repetition)}</div></div>
     <div id="completion-area" class="section"></div>`;
   renderCompletions(sample);
@@ -596,6 +864,7 @@ function renderCompletions(sample) {
     $("completion-area").innerHTML = `<div class="section-head">Reasoning and output · all three repetitions <span class="tag">Click a repetition to open it</span></div>${entropyControls}${markControls}<div class="completion-scroll"><div class="completion-grid">${columns}</div></div>`;
     $("completion-area").querySelectorAll("[data-focus-repetition]").forEach(button => button.onclick = () => showRepetition(button.dataset.focusRepetition));
     syncMarkUI();
+    syncAnnotationUI(true);
     return;
   }
   const prediction = predictionFor(sample);
@@ -612,6 +881,7 @@ function renderCompletions(sample) {
     </div>`;
   if (sample.by_repetition) $("show-all-repetitions").onclick = () => showRepetition("all");
   syncMarkUI();
+  syncAnnotationUI(true);
 }
 function showRepetition(repetition) {
   if (state.repetition !== repetition) state.markedPosition = null;
@@ -626,11 +896,14 @@ function showRepetition(repetition) {
 function updateNavigation() {
   const query = new URLSearchParams({ task: state.task, configuration: state.config, query: state.selected || "" });
   if (state.repetition) query.set("repetition", state.repetition);
+  if (state.annotating) query.set("mode", "annotations");
+  if (state.annotating && state.annotationId) query.set("annotation_id", state.annotationId);
   if (state.markedPosition !== null) query.set("marked_position", state.markedPosition);
   history.replaceState(null, "", `?${query}`);
   document.querySelectorAll("[data-config], [data-task]").forEach(link => {
     const next = new URLSearchParams(query);
     next.delete("marked_position");
+    next.delete("annotation_id");
     if (link.dataset.config) next.set("configuration", link.dataset.config);
     if (link.dataset.task) { next.set("task", link.dataset.task); next.delete("query"); next.delete("repetition"); }
     link.href = `?${next}`;
@@ -656,7 +929,7 @@ function renderSamples() {
 }
 async function selectSample(uid) {
   const loading = ++state.loading;
-  if (state.selected !== uid) state.markedPosition = null;
+  if (state.selected !== uid) { state.markedPosition = null; state.annotationId = null; state.annotationFocused = null; }
   state.selected = uid;
   state.completions = [];
   renderSamples(); updateNavigation();
@@ -694,7 +967,7 @@ function openReference(id) {
 }
 document.addEventListener("click", event => {
   const link = event.target.closest(".reference-link");
-  if (link) { event.preventDefault(); openReference(link.getAttribute("href").slice(1)); }
+  if (link) { event.preventDefault(); if (!state.annotating) openReference(link.getAttribute("href").slice(1)); }
 });
 window.addEventListener("hashchange", () => openReference(location.hash.slice(1)));
 for (const id of ["search", "correctness", "status"]) $(id).addEventListener("input", () => { if (state.release) renderSamples(); });
@@ -702,6 +975,9 @@ $("repetition").onchange = event => showRepetition(event.target.value);
 fetchJson("legacy_gold_release_manifest.json").then(async release => {
   state.release = release;
   if (release.token_marks) { syncTokenMarks(); setInterval(() => syncTokenMarks(), 15000); }
+  if (release.reasoning_annotations) {
+    syncAnnotationUI(); syncAnnotations(); setInterval(() => syncAnnotations(), 15000);
+  } else state.annotating = false;
   try {
     const response = await fetch("entropy_manifest.json", {cache: "no-store"});
     if (response.status !== 404) {

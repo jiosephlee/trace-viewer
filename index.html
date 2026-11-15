@@ -18,6 +18,7 @@
     --green: #087a55;
     --red: #b42318;
     --amber: #a15c00;
+    --header-height: 148px;
   }
   body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
   header { position: sticky; top: 0; z-index: 10; padding: 12px 18px; color: #fff; background: var(--nav); box-shadow: 0 2px 8px rgba(0,0,0,.18); }
@@ -36,12 +37,12 @@
   main { width: 100%; margin: 0; padding: clamp(12px, 1vw, 24px); }
   .layout { display: grid; grid-template-columns: clamp(260px, 18vw, 320px) minmax(0, 1fr); gap: 14px; }
   aside, .section { border: 1px solid var(--line); background: var(--panel); }
-  aside { position: sticky; top: 148px; align-self: start; max-height: calc(100vh - 162px); overflow: hidden; }
+  aside { position: sticky; top: calc(var(--header-height) + 12px); align-self: start; max-height: calc(100vh - var(--header-height) - 24px); overflow: hidden; }
   .aside-head, .section-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 9px 11px; border-bottom: 1px solid var(--line); background: #edf1f4; font-size: 13px; font-weight: 750; }
   .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; padding: 9px; border-bottom: 1px solid var(--line); }
   .filters input { grid-column: 1 / -1; color: var(--text); background: #fff; border-color: #b9c3ce; }
   .filters select { color: var(--text); background: #fff; border-color: #b9c3ce; }
-  .sample-list { max-height: calc(100vh - 286px); overflow: auto; padding: 8px; }
+  .sample-list { max-height: calc(100vh - var(--header-height) - 148px); overflow: auto; padding: 8px; }
   .sample { width: 100%; margin-bottom: 6px; padding: 8px 9px; text-align: left; color: var(--text); background: #fff; border: 1px solid var(--line); border-radius: 5px; }
   .sample.active { border-color: var(--blue); box-shadow: inset 3px 0 0 var(--blue); }
   .sample-main { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
@@ -136,7 +137,7 @@
   }
   .reference-link { color: var(--blue); text-decoration: underline; cursor: pointer; }
   .unresolved { text-decoration: underline dotted; color: var(--amber); }
-  .record-card, .evidence-card { scroll-margin-top: 160px; }
+  .record-card, .evidence-card { scroll-margin-top: calc(var(--header-height) + 12px); }
   .record-card:target, .evidence-card:target { outline: 3px solid var(--blue); }
   .reference-intro { margin: 0 0 12px; font-size: 13px; line-height: 1.5; }
   .record-card { margin-top: 8px; }
@@ -147,7 +148,7 @@
   .completion-card { min-width: 0; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
   .completion-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 10px; background: #edf1f4; }
   .completion-grid .trace-part-body > pre { max-height: 65vh; overflow-y: auto; }
-  #completion-area { min-width: 0; scroll-margin-top: 165px; }
+  #completion-area { min-width: 0; scroll-margin-top: calc(var(--header-height) + 12px); }
   .entropy-controls { padding: 10px; border: 1px solid #b8d3ec; background: #f5faff; font-size: 12px; line-height: 1.5; }
   .entropy-controls input { width: auto; min-height: auto; accent-color: var(--blue); }
   .entropy-controls.provisional { border-color: #c88b35; background: #fff8eb; }
@@ -162,6 +163,11 @@
 <body>
 <header>
   <h1 id="page-title">Legacy Gold Trace Samples</h1>
+  <nav class="task-nav" aria-label="Analysis">
+    <span class="nav-label">Analysis</span>
+    <a id="entropy-analysis-link" class="task-link" href="entropy/">Entropy analysis</a>
+    <a id="reasoning-annotations-link" class="task-link" href="entropy/?mode=annotations">Annotate reasoning</a>
+  </nav>
   <nav class="task-nav" aria-label="Configuration">
     <span class="nav-label">Evidence</span>
     <a class="task-link" data-config="direct" href="?configuration=direct">Direct only</a>
@@ -196,6 +202,10 @@ const state = { release: null, task: params.get("task") || "bbb_martins",
   config: params.get("configuration") || "direct_plus_indirect", selected: params.get("query"), payload: null, loading: 0,
   repetition: params.get("repetition"), completions: [], entropyManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false };
 const $ = id => document.getElementById(id);
+if (globalThis.ResizeObserver) {
+  const header = document.querySelector("header");
+  new ResizeObserver(() => document.documentElement.style.setProperty("--header-height", `${Math.ceil(header.getBoundingClientRect().height)}px`)).observe(header);
+}
 const outcomes = { TP: "True positive", TN: "True negative", FP: "False positive", FN: "False negative" };
 function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"}[c])); }
 function panel(title, content, open = false) { return `<details class="trace-part"${open ? " open" : ""}><summary>${esc(title)}</summary><div class="trace-part-body">${content}</div></details>`; }
@@ -432,6 +442,10 @@ function updateNavigation() {
   const query = new URLSearchParams({ task: state.task, configuration: state.config, query: state.selected || "" });
   if (state.repetition) query.set("repetition", state.repetition);
   history.replaceState(null, "", `?${query}`);
+  $("entropy-analysis-link").href = `entropy/?${query}`;
+  const annotations = new URLSearchParams(query);
+  annotations.set("mode", "annotations");
+  $("reasoning-annotations-link").href = `entropy/?${annotations}`;
   document.querySelectorAll("[data-config], [data-task]").forEach(link => {
     const next = new URLSearchParams(query);
     if (link.dataset.config) next.set("configuration", link.dataset.config);
