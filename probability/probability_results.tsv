@@ -1,0 +1,2 @@
+task	configuration	n_queries	macro_f1	accuracy	auroc	run_uid
+ames	direct_plus_indirect	1457	0.797167	0.811256	0.8847980183673071	f26a122d-5273-48ed-98c7-748f86d09bb1

@@ -1,0 +1,1240 @@
+{
+  "query_uid": "TDC_AMES_A93EAF08F375550DBF4F",
+  "configuration": "direct_plus_indirect",
+  "positive_probability": 0.87,
+  "query_prior_included": true,
+  "references": [
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 1",
+      "stable_id": "CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34",
+      "source_analog_id": "CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 1",
+      "text": "SMILES: CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.7941\nTransfer likelihood: 0.7356"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 1-1",
+      "stable_id": "32d95f5ed406cd4180525a48feff04fdf0dcff6b43d044640daf31405f4a9098",
+      "source_analog_id": "CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34",
+      "containing_unit_id": "CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 1-1",
+      "text": "Evidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34\n  - Drug_ID: Drug 5330\n  - Y: 1\n  - label: 1"
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 2",
+      "stable_id": "CC(=O)Nc1ccc2ccc3ccc(O)c4ccc1c2c34",
+      "source_analog_id": "CC(=O)Nc1ccc2ccc3ccc(O)c4ccc1c2c34",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 2",
+      "text": "SMILES: CC(=O)Nc1ccc2ccc3ccc(O)c4ccc1c2c34\nMorgan similarity: 0.6316\nTransfer likelihood: 0.8338"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 2-1",
+      "stable_id": "c686edc21b530d979f64e39ff9f7772c03c13e0a8f07913c76b8f609468dde1c",
+      "source_analog_id": "CC(=O)Nc1ccc2ccc3ccc(O)c4ccc1c2c34",
+      "containing_unit_id": "CC(=O)Nc1ccc2ccc3ccc(O)c4ccc1c2c34",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 2-1",
+      "text": "Evidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1ccc2ccc3ccc(O)c4ccc1c2c34\n  - Drug_ID: Drug 5968\n  - Y: 1\n  - label: 1"
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 3",
+      "stable_id": "CC(=O)Nc1cccc2ncccc12",
+      "source_analog_id": "CC(=O)Nc1cccc2ncccc12",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 3",
+      "text": "SMILES: CC(=O)Nc1cccc2ncccc12\nMorgan similarity: 0.4318\nTransfer likelihood: 0.0092"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 3-1",
+      "stable_id": "8e8e295b040bf6fa2910ff17411554f56292ba90951e24581d02543ac443dce8",
+      "source_analog_id": "CC(=O)Nc1cccc2ncccc12",
+      "containing_unit_id": "CC(=O)Nc1cccc2ncccc12",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 3-1",
+      "text": "Evidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1cccc2ncccc12\n  - Drug_ID: Drug 1916\n  - Y: 0\n  - label: 0"
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 4",
+      "stable_id": "CC(=O)Nc1ccc2ccc3c(O)ccc4ccc1c2c43",
+      "source_analog_id": "CC(=O)Nc1ccc2ccc3c(O)ccc4ccc1c2c43",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 4",
+      "text": "SMILES: CC(=O)Nc1ccc2ccc3c(O)ccc4ccc1c2c43\nMorgan similarity: 0.6316\nTransfer likelihood: 0.7853"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 4-1",
+      "stable_id": "2db2b2f3faf8446d3beef701c53ddf9e28e7c24525206888f6464daaace5f7c0",
+      "source_analog_id": "CC(=O)Nc1ccc2ccc3c(O)ccc4ccc1c2c43",
+      "containing_unit_id": "CC(=O)Nc1ccc2ccc3c(O)ccc4ccc1c2c43",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 4-1",
+      "text": "Evidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1ccc2ccc3c(O)ccc4ccc1c2c43\n  - Drug_ID: Drug 1855\n  - Y: 1\n  - label: 1"
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 5",
+      "stable_id": "CC(=O)Nc1cc(O)c2ccc3cccc4ccc1c2c34",
+      "source_analog_id": "CC(=O)Nc1cc(O)c2ccc3cccc4ccc1c2c34",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 5",
+      "text": "SMILES: CC(=O)Nc1cc(O)c2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.6098\nTransfer likelihood: 0.7765"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 5-1",
+      "stable_id": "92658983bd190ad732599f89a089c6eb4d93ea619a6162e3e764a563c3115584",
+      "source_analog_id": "CC(=O)Nc1cc(O)c2ccc3cccc4ccc1c2c34",
+      "containing_unit_id": "CC(=O)Nc1cc(O)c2ccc3cccc4ccc1c2c34",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 5-1",
+      "text": "Evidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1cc(O)c2ccc3cccc4ccc1c2c34\n  - Drug_ID: Drug 5839\n  - Y: 1\n  - label: 1"
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 6",
+      "stable_id": "CC(=O)Nc1ccc2c3c(cccc13)-c1ccc(O)cc1-2",
+      "source_analog_id": "CC(=O)Nc1ccc2c3c(cccc13)-c1ccc(O)cc1-2",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 6",
+      "text": "SMILES: CC(=O)Nc1ccc2c3c(cccc13)-c1ccc(O)cc1-2\nMorgan similarity: 0.4783\nTransfer likelihood: 0.9335"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 6-1",
+      "stable_id": "271134580f337c41a3679076f14338b794e3529aa391662b0a61a02a76540b3b",
+      "source_analog_id": "CC(=O)Nc1ccc2c3c(cccc13)-c1ccc(O)cc1-2",
+      "containing_unit_id": "CC(=O)Nc1ccc2c3c(cccc13)-c1ccc(O)cc1-2",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 6-1",
+      "text": "Evidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1ccc2c3c(cccc13)-c1ccc(O)cc1-2\n  - Drug_ID: Drug 4395\n  - Y: 1\n  - label: 1"
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 7",
+      "stable_id": "CC(=O)Nc1ccc2c3c(cccc13)-c1cc(O)ccc1-2",
+      "source_analog_id": "CC(=O)Nc1ccc2c3c(cccc13)-c1cc(O)ccc1-2",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 7",
+      "text": "SMILES: CC(=O)Nc1ccc2c3c(cccc13)-c1cc(O)ccc1-2\nMorgan similarity: 0.4783\nTransfer likelihood: 0.9332"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 7-1",
+      "stable_id": "4d7bc2e967fb9bcc5346a7be755844d8d9a5a6713ddb84e4f25b5c512acd711a",
+      "source_analog_id": "CC(=O)Nc1ccc2c3c(cccc13)-c1cc(O)ccc1-2",
+      "containing_unit_id": "CC(=O)Nc1ccc2c3c(cccc13)-c1cc(O)ccc1-2",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 7-1",
+      "text": "Evidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1ccc2c3c(cccc13)-c1cc(O)ccc1-2\n  - Drug_ID: Drug 4606\n  - Y: 1\n  - label: 1"
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 8",
+      "stable_id": "CC(=O)Nc1cccc(N=Nc2cccc(NC(C)=O)c2C)c1C",
+      "source_analog_id": "CC(=O)Nc1cccc(N=Nc2cccc(NC(C)=O)c2C)c1C",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 8",
+      "text": "SMILES: CC(=O)Nc1cccc(N=Nc2cccc(NC(C)=O)c2C)c1C\nMorgan similarity: 0.3953\nTransfer likelihood: 0.0039"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 8-1",
+      "stable_id": "822f7d4da7c525f73386fdc2244d0a378aef4b9199888079499b5216aca4046e",
+      "source_analog_id": "CC(=O)Nc1cccc(N=Nc2cccc(NC(C)=O)c2C)c1C",
+      "containing_unit_id": "CC(=O)Nc1cccc(N=Nc2cccc(NC(C)=O)c2C)c1C",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 8-1",
+      "text": "Evidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1cccc(N=Nc2cccc(NC(C)=O)c2C)c1C\n  - Drug_ID: Drug 3748\n  - Y: 0\n  - label: 0"
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 9",
+      "stable_id": "CC(=O)Nc1ccc(NC(C)=O)c2c1C(=O)c1ccccc1C2=O",
+      "source_analog_id": "CC(=O)Nc1ccc(NC(C)=O)c2c1C(=O)c1ccccc1C2=O",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 9",
+      "text": "SMILES: CC(=O)Nc1ccc(NC(C)=O)c2c1C(=O)c1ccccc1C2=O\nMorgan similarity: 0.4048\nTransfer likelihood: 0.9541"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 9-1",
+      "stable_id": "2ef374c0e85c34ace723fc2222519f758eadf0883c1e68566e06ae3310a95d2a",
+      "source_analog_id": "CC(=O)Nc1ccc(NC(C)=O)c2c1C(=O)c1ccccc1C2=O",
+      "containing_unit_id": "CC(=O)Nc1ccc(NC(C)=O)c2c1C(=O)c1ccccc1C2=O",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 9-1",
+      "text": "Evidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1ccc(NC(C)=O)c2c1C(=O)c1ccccc1C2=O\n  - Drug_ID: Drug 1646\n  - Y: 1\n  - label: 1"
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 10",
+      "stable_id": "CC(=O)Nc1cccc2cccnc12",
+      "source_analog_id": "CC(=O)Nc1cccc2cccnc12",
+      "containing_unit_id": "",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "## Molecule 10",
+      "text": "SMILES: CC(=O)Nc1cccc2cccnc12\nMorgan similarity: 0.4091\nTransfer likelihood: 0.8353"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 10-1",
+      "stable_id": "a3b03e2e2c24faaa4d3877530564f0fa352b5a8ee47289b52c946f1c6a0cb535",
+      "source_analog_id": "CC(=O)Nc1cccc2cccnc12",
+      "containing_unit_id": "CC(=O)Nc1cccc2cccnc12",
+      "first_visible_level": 1,
+      "is_new": true,
+      "prompt_heading": "Record 10-1",
+      "text": "Evidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1cccc2cccnc12\n  - Drug_ID: Drug 2045\n  - Y: 1\n  - label: 1"
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 11",
+      "stable_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "source_analog_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 11",
+      "text": "SMILES: CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.7941"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-1",
+      "stable_id": "sr_afcb1b31740542f6a94f261f7f0579a0",
+      "source_analog_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "containing_unit_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.6706\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella Typhimurium TA98/TA98NR/TA98/1,8-DNP6\n\nAdditional details: \"N-acetyl-1-aminopyrene (also 1-acetamidopyrene, NAAP), synthesized by acetylation of AP with acetic anhydride, >=99% pure. Positive under at least one tested condition (merged across strains and S9 presence/absence); dependent on transesterification for mutagenicity expression, particularly with S9.\"\nReported evidence: In the Ames plate incorporation assay with Salmonella tester strains TA98, TA98NR and TA98/1,8-DNP6, in the presence or absence of Aroclor-induced rat liver S9, N-acetyl-1-aminopyrene exhibited mutagenic activity under one or more assay conditions."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-2",
+      "stable_id": "sr_c32f6414a6a24ae1b537c7cbce381d68",
+      "source_analog_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "containing_unit_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-2",
+      "text": "Evidence family: \nTransfer likelihood: 0.8238\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella typhimurium TA98\n\nAdditional details: \"Preliminary Ames test results; mutagenic activity reported with liver supernatant (S9-equivalent activation). Origin: acetylation product of the microbial metabolite 1-aminopyrene (1-AP) from 1-nitropyrene.\"\nReported evidence: The paper reports preliminary mutagenicity test results indicating that, whereas N-acetyl-1-AP does show mutagenic activity with liver supernatant, FAP is not mutagenic toward Salmonella typhimurium TA98 in the absence or presence of S9; the reason for the absence of mutagenic activity with FAP is stated as uncertain and under investigation."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-3",
+      "stable_id": "sr_0eaa188defb34456bf7cee1b99014947",
+      "source_analog_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "containing_unit_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-3",
+      "text": "Evidence family: \nTransfer likelihood: 0.8336\nEndpoint: unspecified_mutagenicity\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: not_reported\n  - metabolic_activation: not_reported\n\nAdditional details: \"Identified as a mutagenic metabolite of 1-nitropyrene; the metabolites were generated by rabbit lung S9. Specific mutagenicity assay not stated.\"\nReported evidence: Lewtas et al. [38] applied effect-directed analysis to 1-nitropyrene metabolites generated by rabbit lung S9, and identified hydroxylated nitropyrenes, 1-aminopyrene, N-acetyl-1-aminopyrene and hydroxylated derivatives, and trans-4,5-dihydro-4,5-dihydroxy-1-nitropyrene as mutagenic metabolites."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-4",
+      "stable_id": "sr_a6787f3422ef4673b4bd5cf61eb76547",
+      "source_analog_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "containing_unit_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 11-4",
+      "text": "Evidence family: \nTransfer likelihood: 0.3968\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella Typhimurium TA98\n\nAdditional details: \"Acetylation of 1-aminopyrene increased mutagenic activity by more than 6-fold, whereas most polycyclic aromatic amines (PAA) were markedly reduced in mutagenic activity by acetylation (acetic anhydride reaction). 1-acetylaminopyrene was also observed as a metabolite of 1-nitropyrene in Salmonella bacteria (Messier et al., 1985) and in perfused lungs (Bond, 1983).\"\nReported evidence: In the acetylation derivatization study (reaction of acetic anhydride with primary amines), it was found that while most polycyclic aromatic amines (PAA) are markedly reduced in mutagenic activity by acetylation, 1-aminopyrene actually increases in mutagenicity by a factor of more than 6. The mutagenicity was assessed in the Salmonella TA98 Ames test (the Salmonella TA98 cells survived treatment similar to those subjected to nitrous acid)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-5",
+      "stable_id": "sr_be8fe6e099fd4232bef5814447db2025",
+      "source_analog_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "containing_unit_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 11-5",
+      "text": "Evidence family: \nTransfer likelihood: 0.8579\nEndpoint: oxidized_base_measurement\nResult: 1 signed_effect_direction\nExperimental details:\n  - assay_version: urinary 8-hydroxydeoxyguanosine (8-OHdG) concentration measurement\n  - biological_system: human biomonitoring | Homo sapiens | urine\n  - endpoint_class: extracellular_damage_or_repair_product\n  - endpoint_subtype: 8-OHdG (8-hydroxydeoxyguanosine)\n  - molecule_role: test_or_damage_agent\n  - result_status: damage_or_response_increased\n\nAdditional details: \"human biomonitoring study; 44 Korean adults living in Cheongju, Republic of Korea; 1-NAAP is a urinary metabolite of 1-nitropyrene (via 1-aminopyrene/1-AP) and was a significant determinant of urinary 8-OHdG in summer; atmospheric 1-NP itself did not show a significant correlation with oxidative stress marker concentrations; urinary 1-NAAP concentration values not given in supplied text; assay method and numeric values outside provided window.; compound_name: N-acetyl-1-aminopyrene\"\nReported evidence: In this study, urinary N-acetyl-1-aminopyrene (1-NAAP) concentration was a significant determinant for urinary 8-hydroxydeoxyguanosine (8-OHdG) concentration in summer. The authors state that more 8-OHdG is produced in the body as the amount of 1-nitropyrene (1-NP), which is metabolized to 1-aminopyrene (1-AP) or 1-NAAP, increases."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 11-6",
+      "stable_id": "sr_4a5555847e204fb7b95442658c0b7e99",
+      "source_analog_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "containing_unit_id": "GJNGMQYHOZFQNX-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 11-6",
+      "text": "Evidence family: \nTransfer likelihood: 0.4199\nEndpoint: strand_break_physical_assay\nResult: 0 signed_effect_direction\nExperimental details:\n  - assay_version: alkaline sucrose-density gradient\n  - biological_system: in vitro cells | Cricetulus griseus | Don (Chinese hamster lung) cells\n  - dose_or_concentration: 0.25-48 µg/ml (mean of 3 experiments)\n  - dose_unit: µg/ml\n  - endpoint_class: strand_break_or_alkali_labile_site\n  - endpoint_subtype: DNA single-strand breaks\n  - molecule_role: test_or_damage_agent\n  - result_status: no_damage_or_response_change\n\nAdditional details: \"exposure_duration_or_schedule: 30 min; sampling_time: after 30-min exposure.\"\nReported evidence: N-acetyl-1-aminopyrene failed to induce any detectable DNA damage (DNA single-strand breaks measured in alkaline sucrose-density gradients) in Don cells following a 30-min exposure."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 12",
+      "stable_id": "JVSYZGLUYQMVQJ-UHFFFAOYSA-N",
+      "source_analog_id": "JVSYZGLUYQMVQJ-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 12",
+      "text": "SMILES: CC(=O)Nc1ccc2ccc3ccc(O)c4ccc1c2c34\nMorgan similarity: 0.6316"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-1",
+      "stable_id": "sr_c50becd156af40559996496fd9a676f6",
+      "source_analog_id": "JVSYZGLUYQMVQJ-UHFFFAOYSA-N",
+      "containing_unit_id": "JVSYZGLUYQMVQJ-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9552\nEndpoint: bacterial_reverse_mutation\nResult: 1 ordinal_outcome_class\nConditions: \"Reported as only minimally active; borderline mutagenic response.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella Typhimurium TA98 (plate incorporation)\n\nAdditional details: \"Only minimally active in the assay.\"\nReported evidence: 1-Acetamidopyren-8-ol was reported to be only minimally active as a mutagen in the Ames plate incorporation assay with the TA98 strain variants."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 12-2",
+      "stable_id": "sr_19b5d4608c91487592dcf0b66e80f142",
+      "source_analog_id": "JVSYZGLUYQMVQJ-UHFFFAOYSA-N",
+      "containing_unit_id": "JVSYZGLUYQMVQJ-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 12-2",
+      "text": "Evidence family: \nTransfer likelihood: 0.8065\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella assay\n\nAdditional details: \"Metabolite of 1-nitropyrene (1-NP) in rat urine; mutagenic only with exogenous metabolic activation (Ball et al., 1984).\"\nReported evidence: The text reports that conjugates of 3- and 8-hydroxy-1-nitropyrene as well as 6- and 8-hydroxy-N-acetylaminopyrene were principal urinary metabolites of 1-NP, and that these metabolites required exogenous metabolic activation to be mutagenic in the Salmonella assay (Ball et al., 1984). Thus, 8-hydroxy-N-acetylaminopyrene is mutagenic in Salmonella only when exogenous metabolic activation is supplied."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 13",
+      "stable_id": "KEMFSGIRESMWFE-UHFFFAOYSA-N",
+      "source_analog_id": "KEMFSGIRESMWFE-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 13",
+      "text": "SMILES: CC(=O)Nc1ccc2c3c(cccc13)-c1ccccc1-2\nMorgan similarity: 0.55"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-1",
+      "stable_id": "sr_596adaecf9bf46afa4dd1b131b6c4802",
+      "source_analog_id": "KEMFSGIRESMWFE-UHFFFAOYSA-N",
+      "containing_unit_id": "KEMFSGIRESMWFE-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.917\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nConditions: \"Requires S9; tested in part in the O-acetyltransferase-deficient variant TA98/1,8-DNP6.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella Typhimurium TA98 (and TA98/1,8-DNP6)\n\nAdditional details: \"Weakest mutagen in the series; requires S9 for N-hydroxylation to the hydroxamic acid (species 9), with deacetylation to 3-AFA possible. Contrasted with 1-acetamidopyrene, which with S9 is more active than 1-NP.\"\nReported evidence: The acetylated product 3-AAFA (3-acetamidofluoranthene) is the weakest mutagen considered in this series of nitro- and aminofluoranthenes. It requires S9 for N-hydroxylation to the hydroxamic acid; its decrease in activity in the O-acetyltransferase-deficient variant TA98/1,8-DNP6 relative to TA98 is greater than that of 3-AFA."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 13-2",
+      "stable_id": "sr_deaa483c85604dff923419943947880d",
+      "source_analog_id": "KEMFSGIRESMWFE-UHFFFAOYSA-N",
+      "containing_unit_id": "KEMFSGIRESMWFE-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 13-2",
+      "text": "Evidence family: \nTransfer likelihood: 0.7572\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella typhimurium TA98 variants\n\nAdditional details: \"Acetylated derivative of 3-NFA (tested though not detected as a metabolite); less mutagenic than parent 3-NFA and required exogenous S9 activation.\"\nReported evidence: 3-AAFA, an acetylated derivative of 3-NFA, was examined for mutagenicity in the TA98 variants and was less mutagenic than 3-NFA, and required S9 for activation. 3-AAFA itself was not detected as a metabolite in any of the TA98 variants."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 14",
+      "stable_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "source_analog_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 14",
+      "text": "SMILES: CC(=O)Nc1ccc2ccc3c(O)ccc4ccc1c2c43\nMorgan similarity: 0.6316"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-1",
+      "stable_id": "sr_b12b97d8f76d4d27aacdb611b446fc1c",
+      "source_analog_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "containing_unit_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 14-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9596\nEndpoint: bacterial_reverse_mutation\nResult: 0 ordinal_outcome_class\nConditions: \"Negativity observed specifically in systems lacking N-oxidation (no S9) or lacking bacterial O-acetylation; activity depends on both pathways being present.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: absent\n  - test_system: Salmonella typhimurium plate incorporation assay\n\nAdditional details: \"Contrasts with the positive activity seen when both N-oxidation and O-acetylation are available, confirming that this metabolite is only mutagenic when fully activated.\"\nReported evidence: 1-Acetamidopyren-6-ol is virtually inactive in Salmonella typhimurium plate incorporation assay systems devoid of either the N-oxidation or the O-acetylation pathway (i.e., without S9-dependent N-oxidation or without bacterial acetylation)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-2",
+      "stable_id": "sr_6f5686d4a43c4eb2961c113958b2f1cf",
+      "source_analog_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "containing_unit_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 14-2",
+      "text": "Evidence family: \nTransfer likelihood: 0.8557\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n\nAdditional details: \"Ames plate incorporation assay (bacterial reverse mutation); mutagenic urinary metabolite of 1-nitropyrene, previously identified as the predominant contributor to the mutagenicity of urine of NP-dosed rats; maximal expression required exogenous S9 fraction from livers of Aroclor 1254-treated rats; excreted mainly as beta-glucuronide conjugate; reduced and acetylated on the nitrogen and hydroxylated on the aromatic pyrene moiety.\"\nReported evidence: 6-hydroxy-1-acetamidopyrene (NAAP-6-OH) was previously identified as the predominant contributor to the mutagenicity of the urines of rats dosed with NP, detected with the Ames plate incorporation assay with maximal expression in the presence of S9 (from the livers of Aroclor 1254-treated rats), and excreted mainly as its beta-glucuronide conjugate."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-3",
+      "stable_id": "sr_c60f5551ea574fbea1561a4b89f49285",
+      "source_analog_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "containing_unit_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 14-3",
+      "text": "Evidence family: \nTransfer likelihood: 0.8361\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella assay\n\nAdditional details: \"Metabolite of 1-nitropyrene (1-NP) in rat urine; mutagenic only with exogenous metabolic activation (Ball et al., 1984).\"\nReported evidence: The text reports that conjugates of 3- and 8-hydroxy-1-nitropyrene as well as 6- and 8-hydroxy-N-acetylaminopyrene were principal urinary metabolites of 1-NP, and that these metabolites required exogenous metabolic activation to be mutagenic in the Salmonella assay (Ball et al., 1984). Thus, 6-hydroxy-N-acetylaminopyrene is mutagenic in Salmonella only when exogenous metabolic activation is supplied."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-4",
+      "stable_id": "sr_a138318cb5c84529bfc8da201f185ad5",
+      "source_analog_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "containing_unit_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 14-4",
+      "text": "Evidence family: \nTransfer likelihood: 0.6805\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella typhimurium plate incorporation assay\n\nAdditional details: \"Major urinary metabolite of 1-nitropyrene (1-NP); principal (1,6) isomer responsible for mutagenicity in urine of 1-NP-dosed rats. Activation requires S9-catalyzed N-oxidation (likely CYP2B/CYP1A) followed by O-acetylation, generating an N-acylarylnitrenium ion; 1-acetamidopyren-6-ol is mutagenic when both pathways are operative.\"\nReported evidence: The activity of the major urinary metabolite of 1-nitropyrene (1-NP), 1-acetamidopyren-6-ol, in the Salmonella typhimurium plate incorporation assay clearly depends on N-oxidation followed by O-acetylation; the compound shows mutagenic activity when S9 provides the N-oxidation pathway and bacterial O-acetylation is available. The principal 1,6 isomer (1-acetamidopyren-6-ol) is the one responsible for mutagenic activity in the urines of rats dosed with 1-NP."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-5",
+      "stable_id": "sr_c1d621bc0fee4d398de070e0ed285393",
+      "source_analog_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "containing_unit_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 14-5",
+      "text": "Evidence family: \nTransfer likelihood: 0.8701\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: explicit_mutagen_statement\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella Typhimurium TA98\n\nAdditional details: \"Indirect-acting mutagen, i.e., mutagenic activity detected in the presence of S9 mix (TA98 with S9 mix). Detection/classification supported by refs 2 and 18. The increase in bile mutagenicity after incubation with intestinal contents was attributed to deconjugation of this acetylaminohydroxypyrene aglycon by intestinal microflora.\"\nReported evidence: The mutagenicity of rat bile (TA98 with S9 mix) increased after incubation with intestinal contents; together with the metabolite analysis this showed that 1-acetylamino-6-hydroxypyrene (1-acetylaminino-6-hydroxypyrene), an indirect-acting mutagen (sources cited as refs 2 and 18), was deconjugated from its glucuronide by intestinal microflora."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-6",
+      "stable_id": "sr_82b724861b12429ba17755ddca3c4b0e",
+      "source_analog_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "containing_unit_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 14-6",
+      "text": "Evidence family: \nTransfer likelihood: 0.8566\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella typhimurium TA98\n\nAdditional details: \"Ames plate incorporation assay on urine from rats dosed i.p. with 1-nitropyrene (10 mg/kg); mutagenicity required exogenous metabolic activation (0.6 mg S9 protein per plate). Specific mutagenicity reported as 600 or 700 rev/nmol in the accompanying fraction set, though the assignment between 6-hydroxy-N-acetyl-1-aminopyrene and the nitropyrene phenols is ambiguous in the text. A urinary metabolite of 1-nitropyrene, excreted mainly as a glucuronide conjugate.\"\nReported evidence: Mutagenic activity was detected by the Ames Salmonella (strain TA98) plate incorporation assay in the urine of rats dosed with 1-nitropyrene. This mutagenicity, unlike that of NP itself, required exogenous metabolic activation, and was predominantly associated with 6-hydroxy-N-acetyl-1-aminopyrene and with the nitropyrene phenols (specific mutagenicity 600 and 700 rev/nmol respectively in the presence of 0.6 mg of S9 protein per plate)."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 14-7",
+      "stable_id": "sr_70bcbc7f68de4fd494474dfa6b580909",
+      "source_analog_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "containing_unit_id": "VCLWCBGOALUALI-UHFFFAOYSA-N",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 14-7",
+      "text": "Evidence family: \nTransfer likelihood: 0.9557\nEndpoint: detoxification_or_conjugation_assay\nResult: 1 binary_outcome_class\nExperimental details:\n  - assay_method_and_endpoint: Microbial β-glucuronidase hydrolysis of the glucuronide conjugate 6-hydroxy-1-acetamidopyrene-β-D-glucuronide to release the active aglycone 6-hydroxy-1-acetamidopyrene\n  - biological_system: Intact Bifidobacterium spp.; in vivo hepatoportal recycling in 1-NP-treated rats\n  - exposure_and_mechanistic_conditions: 6-Hydroxy-1-acetamidopyrene-β-D-glucuronide exposed to Bifidobacterium spp. β-glucuronidase\n  - mechanism_category: detoxification_or_conjugation\n  - metabolic_activation_system: other_metabolic_system\n  - molecule_role: metabolite_or_reactive_product\n  - result_direction: detected\n\nAdditional details: \"NAAP-6-OH is a 1-nitropyrene metabolite; β-glucuronidase deconjugation reactivates the aglycone, which is a predominant urinary mutagen in 1-NP-treated rats [164]; secondary citations [186].\"\nReported evidence: Bifidobacterium spp. catalyze the β-glucuronidase reaction converting 6-hydroxy-1-acetamidopyrene-β-D-glucuronide (NAAP-6-OH glucuronide, a 1-nitropyrene metabolite) to 6-hydroxy-1-acetamidopyrene (NAAP-6-OH). The 1-NP metabolite 6-hydroxy-1-acetamidopyrene is recycled through the hepatoportal pathway following β-glucuronidase deconjugation and is a predominant mutagen in urine from 1-NP-treated rats."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 15",
+      "stable_id": "AIXMKWLMVGVTGG-UHFFFAOYSA-N",
+      "source_analog_id": "AIXMKWLMVGVTGG-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 15",
+      "text": "SMILES: CC(=O)OCc1c2ccccc2c2ccc3cccc4ccc1c2c43\nMorgan similarity: 0.3878"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 15-1",
+      "stable_id": "sr_283eb2e9f0af4f18ac7384d8511af64f",
+      "source_analog_id": "AIXMKWLMVGVTGG-UHFFFAOYSA-N",
+      "containing_unit_id": "AIXMKWLMVGVTGG-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 15-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.766\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: bacteria (Salmonella typhimurium)\n\nAdditional details: \"Significant bacterial mutagenicity of AMBP attributed to its moderate half-life (0.7 day) (ref 8); prolonged interaction with bacterial DNA over a 2-3 day Ames incubation produces cumulative mutation induction.\"\nReported evidence: The significant bacterial mutagenicity of 6-acetoxymethylbenzo[a]pyrene (AMBP) in this case appears to be attributed to its moderate half-life (0.7 day), such that once taken up by bacteria it can interact for many hours with bacterial DNA to induce mutations."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 16",
+      "stable_id": "JKCATVQPENLMQJ-UHFFFAOYSA-N",
+      "source_analog_id": "JKCATVQPENLMQJ-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 16",
+      "text": "SMILES: O=c1c(=O)c2cccc3ccc4cccc1c4c32\nMorgan similarity: 0.5455"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 16-1",
+      "stable_id": "sr_13b19f945be544e59af3e66d41030729",
+      "source_analog_id": "JKCATVQPENLMQJ-UHFFFAOYSA-N",
+      "containing_unit_id": "JKCATVQPENLMQJ-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 16-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9571\nEndpoint: bacterial_reverse_mutation\nResult: 0 ordinal_outcome_class\nConditions: \"Tested with engineered repair/regulatory mutants (uvrA, pKM101; IC203 carries ΔoxyR30); negative as a pure single chemical while mutagenic in soil fractions.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Escherichia coli WP2 uvrA/pKM101 (IC188) and WP2 uvrA oxyR/pKM101 (IC203)\n\nAdditional details: \"Synthesized per cited methods; identity verified by NMR. Oxidized PAH/quinone negative when tested alone despite being present in mutagenic fractions.\"\nReported evidence: In the reverse mutation assay using E. coli WP2 strains IC188 (uvrA/pKM101) and IC203 (uvrA oxyR/pKM101), oxidized PAH compounds including quinones were identified in the mutagenic polar fractions of PAH-contaminated soil but 'were not by themselves mutagenic' when tested individually."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 16-2",
+      "stable_id": "sr_94597f49cd7d468ab57b00e5efa1a44b",
+      "source_analog_id": "JKCATVQPENLMQJ-UHFFFAOYSA-N",
+      "containing_unit_id": "JKCATVQPENLMQJ-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 16-2",
+      "text": "Evidence family: \nTransfer likelihood: 0.8032\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella Typhimurium TA100 (hisG base-pair substitution reversion)\n\nAdditional details: \"Point (base-pair substitution) mutations reverting hisG -GGG- for -GAG-. NPQ, 9,10PQ, 5MCQ and BPQ were the four o-quinones positive in TA100.\"\nReported evidence: The PAH o-quinone 9,10PQ (9,10-pyrenequinone) caused point mutations in tester strain TA100, which reverts the hisG gene by base-pair substitution. The authors propose these point-mutagenic PAH o-quinones damage guanosine residues by covalent bond formation and/or cross-linking."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 16-3",
+      "stable_id": "sr_f075fcc86a8b4436a258315d2997a7ec",
+      "source_analog_id": "JKCATVQPENLMQJ-UHFFFAOYSA-N",
+      "containing_unit_id": "JKCATVQPENLMQJ-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 16-3",
+      "text": "Evidence family: \nTransfer likelihood: 0.9562\nEndpoint: oxidative_damage_assay\nResult: 1 binary_outcome_class\nExperimental details:\n  - assay_method_and_endpoint: Oxidative DNA damage in HeLa cells measured as aldehydic DNA lesions (ADL) and base oxidation\n  - biological_system: HeLa S3 cells (Homo sapiens), intact-cell system\n  - exposure_and_mechanistic_conditions: P45Q treatment of HeLa cells; neocuproine (copper chelator) added to test copper involvement in intracellular oxidant generation\n  - mechanism_category: oxidative_dna_damage\n  - molecule_role: parent_test_agent\n  - result_direction: detected\n\nAdditional details: \"P45Q caused both ADL and base oxidation in cells; neocuproine reduced P45Q-induced ADL, indicating copper dependence of intracellular oxidant generation.\"\nReported evidence: In contrast, P45Q caused both ADL and base oxidation in cells. Neocuproine reduced the amount of ADL caused by P45Q, indicating that copper was still important for the intracellular generation of damaging oxidants."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 17",
+      "stable_id": "USYQPRSFXFKSHI-UHFFFAOYSA-N",
+      "source_analog_id": "USYQPRSFXFKSHI-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 17",
+      "text": "SMILES: CC(=O)Nc1ccc(-c2ccccc2)cc1O\nMorgan similarity: 0.3478"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 17-1",
+      "stable_id": "sr_850142a23a9b4f3b999947ba354c318a",
+      "source_analog_id": "USYQPRSFXFKSHI-UHFFFAOYSA-N",
+      "containing_unit_id": "USYQPRSFXFKSHI-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 17-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9652\nEndpoint: bacterial_reverse_mutation\nResult: 0 ordinal_outcome_class\nConditions: \"Testing used human urothelial cell microsomal activation in the O-acetyltransferase-deficient strain TA98/1,8-DNP6; activity in this strain was not detected.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella Typhimurium TA98/1,8-DNP6\n\nAdditional details: \"The strain's low O-acetyltransferase activity prevented mutagenic activation; activity was also only marginally detectable in the parent TA98 under these conditions.\"\nReported evidence: For N-OH-AABP in the comparison of strains, the activity was only marginally detectable in TA98 and was not detected in TA98/1,8-DNP6 (an O-acetyltransferase-deficient strain)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 18",
+      "stable_id": "CRYMJHJFLJAFNU-UHFFFAOYSA-N",
+      "source_analog_id": "CRYMJHJFLJAFNU-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 18",
+      "text": "SMILES: O=c1ccc2c(cc3ccc4cccc5ccc2c3c45)c1=O\nMorgan similarity: 0.3636"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 18-1",
+      "stable_id": "sr_a93e213a4dff4f2c8b999d55eabdab0d",
+      "source_analog_id": "CRYMJHJFLJAFNU-UHFFFAOYSA-N",
+      "containing_unit_id": "CRYMJHJFLJAFNU-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 18-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9079\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella typhimurium tester strains TA97a, TA98, TA100, TA102, TA104\n\nAdditional details: \"Abbreviated BPQ; bay region. Predominantly frameshift mutagen; more mutagenic than the positive-control test mutagens used for each tester strain. Aroclor-induced rat liver S9 plus NADPH did not increase mutagenicity in TA102 and TA104. BPQ also forms 2'-deoxyguanosine adducts with calf thymus DNA, plasmid DNA and oligonucleotides.\"\nReported evidence: The PAH o-quinones examined, including benzo[a]pyrene-7,8-dione (BPQ), were tested as direct-acting mutagens in Salmonella typhimurium tester strains TA97a, TA98, TA100, TA102 and TA104, and were found more mutagenic than the positive-control test mutagens used for each strain, being predominantly frameshift mutagens. An Aroclor-induced rat liver S9 plus NADPH activating system did not increase their mutagenicity."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 19",
+      "stable_id": "GXXUKTFRBUDHNA-UHFFFAOYSA-N",
+      "source_analog_id": "GXXUKTFRBUDHNA-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 19",
+      "text": "SMILES: CC(=O)Nc1cc(O)c2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.6098"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 19-1",
+      "stable_id": "sr_4d368f59a2b640de852a36de1b8b4f66",
+      "source_analog_id": "GXXUKTFRBUDHNA-UHFFFAOYSA-N",
+      "containing_unit_id": "GXXUKTFRBUDHNA-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 19-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.5127\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: absent\n  - test_system: Salmonella Typhimurium TA98 (plate incorporation)\n\nAdditional details: \"Direct-acting mutagenicity. Enhanced in YG1024 and diminished in TA98/1,8-DNP6.\"\nReported evidence: 1-Acetamidopyren-3-ol exhibited direct-acting mutagenicity in the Ames plate incorporation assay, with enhancement in the OAT-overproducing strain YG1024 and diminution in the OAT-deficient strain TA98/1,8-DNP6."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 20",
+      "stable_id": "RPQHVGSJKJADLO-UHFFFAOYSA-N",
+      "source_analog_id": "RPQHVGSJKJADLO-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 20",
+      "text": "SMILES: CC(=O)N(O)c1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.4091"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 20-1",
+      "stable_id": "sr_1d9f769854524e43824b3caac0dc3e49",
+      "source_analog_id": "RPQHVGSJKJADLO-UHFFFAOYSA-N",
+      "containing_unit_id": "RPQHVGSJKJADLO-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 20-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.731\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella Typhimurium TA98/TA98NR/TA98/1,8-DNP6\n\nAdditional details: \"N-hydroxy-N-acetyl-1-aminopyrene (NOHAAP, >=98% pure). Positive under at least one tested condition (merged across strains and S9 presence/absence); dependent on transesterification for mutagenicity expression, particularly with S9.\"\nReported evidence: In the Ames plate incorporation assay with Salmonella tester strains TA98, TA98NR and TA98/1,8-DNP6, in the presence or absence of Aroclor-induced rat liver S9, N-hydroxy-N-acetyl-1-aminopyrene exhibited mutagenic activity under one or more assay conditions."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 21",
+      "stable_id": "LQWUGNODGKKHOP-UHFFFAOYSA-N",
+      "source_analog_id": "LQWUGNODGKKHOP-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 21",
+      "text": "SMILES: ONc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.4737"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 21-1",
+      "stable_id": "sr_a9829d1462c2446ba2df0fe1a52b0c7f",
+      "source_analog_id": "LQWUGNODGKKHOP-UHFFFAOYSA-N",
+      "containing_unit_id": "LQWUGNODGKKHOP-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 21-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.8227\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella typhimurium\n\nAdditional details: \"Cited as reference 12. The hydroxylamine forms a C8-deoxyguanosyl adduct stated to be responsible for mutagenesis in Salmonella typhimurium (Ames assay). Note: no dose, strain (e.g., TA98/TA100), or activation details are given in this passage.\"\nReported evidence: The paper describes contrasting pathways for metabolic activation and detoxification of 1-nitropyrene, noting that sequential nitroreduction yields 1-nitrosopyrene, N-hydroxy-1-aminopyrene and 1-aminopyrene. It states that the hydroxylamino derivative (N-hydroxy-1-aminopyrene) has been shown to form a C8-deoxyguanosyl adduct that is responsible for the mutagenesis in Salmonella typhimurium (reference 12), as well as in Chinese hamster ovary cells, human HepG2 cells, V79 cells and human foreskin fibroblasts."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 22",
+      "stable_id": "WQQVPPRATBCYON-UHFFFAOYSA-N",
+      "source_analog_id": "WQQVPPRATBCYON-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 22",
+      "text": "SMILES: CC(=O)Nc1c(O)cc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.5"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 22-1",
+      "stable_id": "sr_a301d41f931f48cb8292f28d33907cd7",
+      "source_analog_id": "WQQVPPRATBCYON-UHFFFAOYSA-N",
+      "containing_unit_id": "WQQVPPRATBCYON-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 22-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.905\nEndpoint: unspecified_mutagenicity\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: explicit_mutagen_statement\n  - experimental_context: not_reported\n  - metabolic_activation: not_applicable\n\nAdditional details: \"Described as an indirect-acting mutagen (i.e., requiring metabolic activation), citing references 2 and 18; it is a biliary metabolite of 1-nitropyrene that is released/deconjugated from a conjugate by intestinal microflora. Note: mutagenicity of the bile itself is a mixture-based finding and was not extracted.\"\nReported evidence: The text describes biliary metabolites released by intestinal-content (IC) treatment of bile from a rat administered [3H]1-nitropyrene. It states that 1-acetylaminohydroxypyrene is an 'indirect-acting mutagen (2, 18)' that was deconjugated by intestinal microflora, and that nitrohydroxypyrenes possess direct-acting mutagenicity (5, 25), noting their proportion decreased over incubation time while aminohydroxypyrenes and acetylaminohydroxypyrenes increased."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 23",
+      "stable_id": "FFULSSWAQYOBLC-UHFFFAOYSA-N",
+      "source_analog_id": "FFULSSWAQYOBLC-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 23",
+      "text": "SMILES: O=c1c(=O)c2ccc([N+](=O)[O-])c3ccc4cccc1c4c32\nMorgan similarity: 0.5"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 23-1",
+      "stable_id": "sr_7d212edf1ac44cbebc9d4f34863df41e",
+      "source_analog_id": "FFULSSWAQYOBLC-UHFFFAOYSA-N",
+      "containing_unit_id": "FFULSSWAQYOBLC-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 23-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.8155\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: both\n  - test_system: Salmonella typhimurium TA100\n\nAdditional details: \"More mutagenic than 1-nitropyrene; mutagenic activity greater with than without the hepatic activating system, interpreted as more facile nitroreduction in the presence of the 9000 g supernatant from Aroclor pretreated rats. The hypothesis that conversion to the highly mutagenic lactone (compound 6) explains the enhanced activity was not supported since compound 6 was not detected as a metabolite.\"\nReported evidence: 1-Nitro-4,5-pyrenedione (compound 3) was also more mutagenic toward Salmonella typhimurium TA 100 than was 1-nitropyrene but, in contrast to 1-nitropyrene-4,5-diol, its mutagenic activity was greater in the presence of 9000 g supernatant (from Aroclor pretreated rats) than in its absence."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 24",
+      "stable_id": "SJXDHZGVKPNCHK-UHFFFAOYSA-N",
+      "source_analog_id": "SJXDHZGVKPNCHK-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 24",
+      "text": "SMILES: O=c1oc2cccc3ccc4cccc1c4c32\nMorgan similarity: 0.3571"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 24-1",
+      "stable_id": "sr_feb74d9c9aa043f68a80480d3b4f74f3",
+      "source_analog_id": "SJXDHZGVKPNCHK-UHFFFAOYSA-N",
+      "containing_unit_id": "SJXDHZGVKPNCHK-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 24-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.7727\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: explicit_mutagen_statement\n  - experimental_context: in_vitro\n  - metabolic_activation: absent\n  - test_system: Salmonella (Ames assay)\n\nAdditional details: \"Designated as a new type of direct mutagen in combustion-generated particulate organic matter (direct = active in the Ames assay without added S9); CAS 23702-49-0. The paper also reports the mutagenic activities of highly purified samples of this compound and their contribution to the mutagenic activity of the diesel POM organic extracts.\"\nReported evidence: The paper identifies 5H-phenanthro[4,5-bcd]pyran-5-one (compound I) as a new type of direct mutagen in combustion-generated particulate organic matter, determined along with three nitroarenes (1-nitropyrene, 9-nitroanthracene and 6-nitrobenzo[a]pyrene)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 25",
+      "stable_id": "WBMMGDBHMOUTCS-UHFFFAOYSA-N",
+      "source_analog_id": "WBMMGDBHMOUTCS-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 25",
+      "text": "SMILES: CC(=O)Nc1cc2ccc3cccc4ccc(c1O)c2c34\nMorgan similarity: 0.5714"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 25-1",
+      "stable_id": "sr_e441cad4f2da40f99fc90dff7c5eb022",
+      "source_analog_id": "WBMMGDBHMOUTCS-UHFFFAOYSA-N",
+      "containing_unit_id": "WBMMGDBHMOUTCS-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 25-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.946\nEndpoint: unspecified_mutagenicity\nResult: 2 ordinal_outcome_class\nConditions: \"Indirect-acting mutagenicity, implying a requirement for metabolic activation; evidence rests on attribution of fecal (mixture) mutagenic activity mainly to this metabolite rather than testing of the pure substance.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: ex_vivo\n  - metabolic_activation: not_reported\n\nAdditional details: \"1-Acetylamino-6-HP is a nitropyrene metabolite identified in feces and (with 1-acetylamino-8-HP) in urine after β-glucuronidase treatment of 1-NP-dosed conventional rats; attributed as the main contributor to the indirect-acting mutagenicity of the feces.\"\nReported evidence: In metabolism studies in conventional rats administered 1-NP, the feces showed indirect-acting mutagenicity, which was mainly due to the metabolite 1-acetylamino-6-HP, with 1-acetylamino-6-HP and 1-acetylamino-8-HP as the major metabolites in β-glucuronidase-treated urine."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 26",
+      "stable_id": "LFCWFVPSUMBNQM-UHFFFAOYSA-N",
+      "source_analog_id": "LFCWFVPSUMBNQM-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 26",
+      "text": "SMILES: CC(O)c1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.3488"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 26-1",
+      "stable_id": "sr_ef3941e9e1b849a787d440b96381be53",
+      "source_analog_id": "LFCWFVPSUMBNQM-UHFFFAOYSA-N",
+      "containing_unit_id": "LFCWFVPSUMBNQM-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 26-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9532\nEndpoint: bacterial_reverse_mutation\nResult: 0 ordinal_outcome_class\nConditions: \"Engineered bacterial strain expressing the rat orthologous enzyme rEST; negative reflects lack of SULT-mediated activation in this strain, contrasting with strong mutagenicity via hSULT1E1.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: absent\n  - test_system: Salmonella typhimurium TA1538 expressing rat SULT1E1 (rEST)\n\nAdditional details: \"Paper designation 21.\"\nReported evidence: Several polycyclic benzylic alcohols, including (-)-1-(α-hydroxyethyl)pyrene (21), were strongly mutagenic to TA1538-hSULT1E1 but inactive to the strain expressing the orthologous rat enzyme (rEST)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 27",
+      "stable_id": "HSJQJGAVYCLWJA-UHFFFAOYSA-N",
+      "source_analog_id": "HSJQJGAVYCLWJA-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 27",
+      "text": "SMILES: O=c1c2ccc3cccc4c(=O)cc(c5ccccc15)-c2c34\nMorgan similarity: 0.3404"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 27-1",
+      "stable_id": "sr_3ee56ab92bde44489d2ad8c7fb58c83f",
+      "source_analog_id": "HSJQJGAVYCLWJA-UHFFFAOYSA-N",
+      "containing_unit_id": "HSJQJGAVYCLWJA-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 27-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9611\nEndpoint: bacterial_reverse_mutation\nResult: 1 ordinal_outcome_class\nConditions: \"Low mutagenicity is enhanced by inclusion of one-electron-activating systems such as NADPH-cytochrome P450 reductase; mutagenicity is abolished by SOD and catalase, indicating reactive oxygen species mediate the effect.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Ames test (bacterial reverse mutation)\n\nAdditional details: \"Cited from reference 24. B[a]P-6,12-dione treated together with B[a]P-1,6-dione and B[a]P-3,6-dione as PAH o-quinone / extended quinone examples displaying low mutagenicity in the Ames test.\"\nReported evidence: The authors note, in a final analogy, that B[a]P-1,6-dione, B[a]P-3,6-dione, and B[a]P-6,12-dione display low mutagenicity in the Ames test. This mutagenicity is significantly enhanced by the inclusion of one-electron-activating systems such as NADPH-cytochrome P450 reductase, and is abolished by the inclusion of SOD and catalase, indicating reactive oxygen species are responsible."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 28",
+      "stable_id": "ITUWBVBHDYKSII-UHFFFAOYSA-N",
+      "source_analog_id": "ITUWBVBHDYKSII-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 28",
+      "text": "SMILES: CC(=O)N(C(C)=O)c1cc2cc3ccccc3c3ccc4cccc1c4c23\nMorgan similarity: 0.3878"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 28-1",
+      "stable_id": "sr_c01f83c1d3cb4d8db5376ca1ff98b6ec",
+      "source_analog_id": "ITUWBVBHDYKSII-UHFFFAOYSA-N",
+      "containing_unit_id": "ITUWBVBHDYKSII-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 28-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.8755\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella typhimurium TA98 and TA1538\n\nAdditional details: \"Described as 'a potent mutagen' in the synopsis; more potent than BaP; from prior report (ref 6) employing an S9 activating system.\"\nReported evidence: The authors state that in the Ames' Salmonella typhimurium assay (ref 6) the order of mutagenic potency in TA98 and TA1538 with an S9 activating system places 4-(N,N-diacetylamino)-BaP as a potent mutagen, second only to 4-amino-BaP. The abstract independently describes 4-(N,N-diacetylamino)benzo[a]pyrene as 'a potent mutagen'."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 29",
+      "stable_id": "KRCPDXFCTQIOPS-UHFFFAOYSA-N",
+      "source_analog_id": "KRCPDXFCTQIOPS-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 29",
+      "text": "SMILES: O=Nc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.3415"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 29-1",
+      "stable_id": "sr_a13f725312264b0aa61989198921f72b",
+      "source_analog_id": "KRCPDXFCTQIOPS-UHFFFAOYSA-N",
+      "containing_unit_id": "KRCPDXFCTQIOPS-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 29-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9558\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: positive_control_or_reference_use\n  - experimental_context: in_vitro\n  - metabolic_activation: absent\n  - test_system: Salmonella typhimurium TA98, TA98NR, TA98/1,8-DNP6\n\nAdditional details: \"Standard mutagen used as reference in the reversion assay; 2027 revertants at 0.02 µg/plate in TA98.\"\nReported evidence: Table 1 includes 1-nitrosopyrene as a standard mutagen, giving 2027±121 revertants/plate at 0.02 µg/plate in Salmonella typhimurium TA98 in the absence of exogenous activation, with 2086±220 in TA98NR and 1742±196 in TA98/1,8-DNP6."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 30",
+      "stable_id": "NGDMLQSGYUCLDC-UHFFFAOYSA-N",
+      "source_analog_id": "NGDMLQSGYUCLDC-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 30",
+      "text": "SMILES: OCc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.3659"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 30-1",
+      "stable_id": "sr_d9dd19dfe27044369da5b07741db3a54",
+      "source_analog_id": "NGDMLQSGYUCLDC-UHFFFAOYSA-N",
+      "containing_unit_id": "NGDMLQSGYUCLDC-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 30-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9139\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nConditions: \"Mutagenicity elicited via expression of human SULT1A1 (exogenous sulfotransferase activation); nitroreductase-deficiency comparison used strain YG7131 instead of TA1538.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella typhimurium TA1538 (human SULT1A1) compared with nitroreductase-deficient YG7131\n\nAdditional details: \"SULT-dependent mutagenicity was unaffected by nitroreductase deficiency, implying activation at the benzylic carbon rather than an N-hydroxylamine (compound contains no nitro group).\"\nReported evidence: In the abstract of the study, expression of human SULTs in Salmonella typhimurium TA1538 or TA100 strongly enhanced the mutagenicity of various nitrotoluenes and nitro- and amino-substituted benzyl alcohols. For the discrete test substance 1-hydroxymethylpyrene (which contains no nitro group), nitroreductase deficiency (using strain YG7131 instead of TA1538 for human SULT1A1 expression) did not affect the SULT-dependent mutagenicity."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 31",
+      "stable_id": "CDUQFNFUZQTOMS-UHFFFAOYSA-N",
+      "source_analog_id": "CDUQFNFUZQTOMS-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 31",
+      "text": "SMILES: CCc1c(NC(=O)CBr)ccc2c1ccc1ccccc12\nMorgan similarity: 0.3725"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 31-1",
+      "stable_id": "sr_a86ccb072f6f4ca386b116d3336930bb",
+      "source_analog_id": "CDUQFNFUZQTOMS-UHFFFAOYSA-N",
+      "containing_unit_id": "CDUQFNFUZQTOMS-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 31-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.7306\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella histidine auxotrophs\n\nAdditional details: \"Reported [7] to be at least as mutagenic as 2-acetamidofluorene (AAF); produces base-pair transitions, deletions and frameshift mutations; tested with activating enzymes from rat liver.\"\nReported evidence: In comparison studies with AAF, the authors reported [7] that AAP (2-acetamidophenanthrene) is at least as mutagenic as AAF in histidine auxotrophs of Salmonella, and that it produces base-pair transitions as well as deletions and frameshift mutations; these data were obtained in the presence of activating enzymes from rat liver."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 32",
+      "stable_id": "MGTMTTGZMPDIQS-UHFFFAOYSA-N",
+      "source_analog_id": "MGTMTTGZMPDIQS-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 32",
+      "text": "SMILES: Oc1c2ccccc2c2ccc3cccc4ccc1c2c43\nMorgan similarity: 0.3571"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 32-1",
+      "stable_id": "sr_588686e4285d45cfb9289796298190cf",
+      "source_analog_id": "MGTMTTGZMPDIQS-UHFFFAOYSA-N",
+      "containing_unit_id": "MGTMTTGZMPDIQS-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 32-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9196\nEndpoint: unspecified_mutagenicity\nResult: 2 ordinal_outcome_class\nConditions: \"Mutagenicity evaluated by the Ames test on TLC fraction M2 extracts rather than on the pure compound; identity of the mutagenic metabolite given as 'probable' per reference 41.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: explicit_mutagen_statement\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella (Ames test on bile/liver TLC fractions)\n\nAdditional details: \"Fraction M2 only 'possibly' among the most mutagenic fractions. Per reference 41 probable identities: M2 - 6-OH-benzo(a)pyrene and 5-OH-benzo(a)pyrene.\"\nReported evidence: TLC fraction M2 was identified as containing 6-hydroxybenzo[a]pyrene among others, and the text refers to these as mutagenic/carcinogenic metabolites, with fraction M2 possibly among the most mutagenic fractions in bile and liver."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 33",
+      "stable_id": "GEMOJIKPQLZCMJ-UHFFFAOYSA-N",
+      "source_analog_id": "GEMOJIKPQLZCMJ-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 33",
+      "text": "SMILES: O=c1c2cccc3ccc4c5ccccc5cc1c4c32\nMorgan similarity: 0.4634"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 33-1",
+      "stable_id": "sr_6bb4b25a3e6d4c94bc670cce4c8116bd",
+      "source_analog_id": "GEMOJIKPQLZCMJ-UHFFFAOYSA-N",
+      "containing_unit_id": "GEMOJIKPQLZCMJ-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 33-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.7687\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: bacterial (strain not specified in this passage)\n\nAdditional details: \"Result attributed to cited reference 91; the paper describes the assay only as a 'bacterial bioassay' without strain, activation, or dose details in this passage. Compound was one of the oxygenated components not tested in the human-cell bioassay of Durant et al. (7, 8).\"\nReported evidence: Cyclopenta[def]chrysene-4-one, an oxygenated PAH in Table 6 not tested by Durant et al., was reported (cited reference 91) to be mutagenic in a bacterial bioassay. This is presented in contrast to the human-cell (lymphoblastoid) bioassay mutagenicity data used elsewhere in the paper."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 34",
+      "stable_id": "URVBKBCOIJEGIQ-UHFFFAOYSA-N",
+      "source_analog_id": "URVBKBCOIJEGIQ-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 34",
+      "text": "SMILES: CC(=O)Nc1ccc2c3c(cccc13)C(=O)c1ccccc1-2\nMorgan similarity: 0.5227"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 34-1",
+      "stable_id": "sr_e15951b4a19443548d06714f8adb762e",
+      "source_analog_id": "URVBKBCOIJEGIQ-UHFFFAOYSA-N",
+      "containing_unit_id": "URVBKBCOIJEGIQ-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 34-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.6359\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella (reversion assay)\n\nAdditional details: \"3-AABA is a 3-NBA (3-nitrobenzanthrone) metabolite; claimed genotoxic together with 3-ABA in the Salmonella reversion assay and in vivo mouse assays per Watanabe et al., 2005. Activation pathways involving nitroreduction, cytochrome P450 oxidation, and O-acetylation were invoked.\"\nReported evidence: 3-ABA and 3-acetylaminobenzanthrone (3-AABA) were identified as 3-NBA metabolites in mammalian cells [Borlak et al., 2000] and both are genotoxic in a number of in vitro (Salmonella reversion assay) and in vivo (mouse) assays [Watanabe et al., 2005]. The results from the Salmonella assay and the mouse model support observations that nitroreduction of 3-NBA, oxidation of the reduced metabolites by cytochrome P450 enzymes, and O-acetylation are involved in multiple activation pathways that can lead to DNA damage."
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 34-2",
+      "stable_id": "sr_71f424e2837a49e199e287cf2ad5709d",
+      "source_analog_id": "URVBKBCOIJEGIQ-UHFFFAOYSA-N",
+      "containing_unit_id": "URVBKBCOIJEGIQ-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 34-2",
+      "text": "Evidence family: \nTransfer likelihood: 0.9226\nEndpoint: covalent_binding_or_adduct\nResult: 1 binary_outcome_class\nExperimental details:\n  - assay_method_and_endpoint: 32P-postlabeling DNA adduct detection (nuclease P1 and butanol extraction); DNA adduct formation in engineered cells\n  - biological_system: Chinese hamster V79MZ-h1A2 derived cell lines expressing human CYP1A2 with human NAT1, NAT2, SULT1A1 or SULT1A2\n  - exposure_and_mechanistic_conditions: 0.01, 0.1 or 1 µM 3-Ac-ABA; CYP1A2 present/absent comparison (CYP1A2 required for activation)\n  - mechanism_category: reactive_metabolite_formation\n  - metabolic_activation_system: enzyme_engineered_cells\n  - molecule_role: parent_test_agent\n  - result_direction: detected\n\nAdditional details: \"CYP1A2 required for activation of 3-Ac-ABA, probably via N-oxidation; absence of acetylated adducts suggests N-deacetylation of 3-Ac-ABA; human NATs and SULTs strongly contributed to genotoxicity.\"\nReported evidence: V79MZ-h1A2 derived cells expressing human CYP1A2 with human NAT1, NAT2, SULT1A1 or SULT1A2 were treated with 3-Ac-ABA (3-acetylaminobenzanthrone). 32P-postlabeling detected essentially 4 major and 2 minor DNA adducts. Human CYP1A2 was required for the metabolic activation of 3-Ac-ABA, probably via N-oxidation; the lack of acetylated adducts suggests N-deacetylation of 3-Ac-ABA."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 35",
+      "stable_id": "FKBNAFMSSLGSAX-UHFFFAOYSA-N",
+      "source_analog_id": "FKBNAFMSSLGSAX-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "## Molecule 35",
+      "text": "SMILES: O=C(N[N+](=O)[O-])c1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.3542"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 35-1",
+      "stable_id": "sr_fb2122c6a05744f99cfe13e6cf8854fb",
+      "source_analog_id": "FKBNAFMSSLGSAX-UHFFFAOYSA-N",
+      "containing_unit_id": "FKBNAFMSSLGSAX-UHFFFAOYSA-N",
+      "first_visible_level": 2,
+      "is_new": true,
+      "prompt_heading": "Record 35-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.7604\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nConditions: \"Intrasanguinous host-mediated assay in rats; bacteria (TA1950) injected via tail vein, NPYR given i.m.; tested only in rats, not hamsters (Syrian golden hamsters have tails too short for i.v. injection).\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: host_mediated\n  - metabolic_activation: not_applicable\n  - test_system: Salmonella Typhimurium TA1950 harvested from rat liver\n\nAdditional details: \"Male rats (~150 g) were injected with bacteria via the tail vein, 45 min later i.m. with NPYR, and killed 60 min after NPYR injection; livers homogenized in 20 ml saline. Revertants/10^8 cfu: rat 1 (100 mg/kg) = 6.0 x 10^3; rat 2 (50 mg/kg) = 4.0 x 10^3; control = 0.2 x 10^3. NPYR is a liver carcinogen in rats.\"\nReported evidence: One mutagenesis experiment was carried out using an intrasanguinous host-mediated assay in rats. Salmonella TA1950 was injected into the tail vein of rats; 45 min later the rats were injected i.m. with NPYR, either 50 or 100 mg/kg, and 1 h subsequently the bacteria were harvested from the liver. Both doses led to an increase in revertant fraction relative to the revertant fraction in bacteria harvested from the untreated control, and the revertant fraction was greater at the higher dose (Table III)."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 36",
+      "stable_id": "IQYISZCFWBSTIV-UHFFFAOYSA-N",
+      "source_analog_id": "IQYISZCFWBSTIV-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 36",
+      "text": "SMILES: CC(=O)Nc1cc([N+](=O)[O-])c2cccc3c2c1-c1ccccc1C3=O\nMorgan similarity: 0.3636"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 36-1",
+      "stable_id": "sr_a71ee734f7c9483d9fb703a9f0ccc8b4",
+      "source_analog_id": "IQYISZCFWBSTIV-UHFFFAOYSA-N",
+      "containing_unit_id": "IQYISZCFWBSTIV-UHFFFAOYSA-N",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 36-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.812\nEndpoint: other_mammalian_forward_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - biological_test_system: Homo sapiens; human cells; plasmid supF shuttle vector\n  - endpoint_class: sequence_level_gene_change\n  - genetic_locus_or_chromosome_target: supF\n  - result_call: positive\n  - study_context: in_vitro\n\nAdditional details: \"Summary-of-literature result: N-Aco-N-Ac-ABA, the N-acetoxy amide derivative of the 3-NBA metabolite, induced mainly GC to TA transversion mutations in human cells via a plasmid supF shuttle vector system (associated reference 47). A companion plasmid polymerase arrest assay on the same supF target showed preferential binding to guanine residues, consistent with guanine-adduct-driven mutations. No dose, exposure duration, cell line designation, activation condition, or numeric mutant frequency was reported in this passage; endpoint and mutation spectrum are as stated.\"\nReported evidence: The paper notes evidence that 3-Ac-ABA derivatives may play a role in the biological activity of 3-NBA, citing that N-Aco-N-Ac-ABA (3-nitro-N-acetylaminobenzanthrone, a reactive acetyl ester metabolite) induces mainly GC to TA transversion mutations in human cells using a plasmid supF shuttle vector system (reference 47). A parallel plasmid polymerase arrest assay targeting the supF gene showed preferential binding of N-Aco-N-Ac-ABA to guanine residues, which the authors relate to the observed mutations being induced by guanine adducts."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 37",
+      "stable_id": "NOEOUKDLTDMGKA-UHFFFAOYSA-N",
+      "source_analog_id": "NOEOUKDLTDMGKA-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 37",
+      "text": "SMILES: CC(=O)Nc1ccc2c(ccc3ccccc32)c1\nMorgan similarity: 0.4419"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 37-1",
+      "stable_id": "sr_0d32518b1e4c4c2bacf4b89c7e1d05cf",
+      "source_analog_id": "NOEOUKDLTDMGKA-UHFFFAOYSA-N",
+      "containing_unit_id": "NOEOUKDLTDMGKA-UHFFFAOYSA-N",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 37-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.8803\nEndpoint: mammalian_cell_gene_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: AS52 cells (gpt-transfected CHO-derived, HPRT-deficient)\n\nAdditional details: \"Mutagenic and cytotoxic only with S9 mix; AAF=AAP potency; 10-100 µM (30 µM run shown); gpt gene mutation assay; 6-thioguanine resistance; mutation spectrum among 5 clones: G→T 5/5, G→C 2/5, G→A 1/5, C→T 1/5.\"\nReported evidence: 2-Acetylaminophenanthrene (AAP) was mutagenic and cytotoxic in AS52 cells only when supplemented with rat liver S9 mix; AAP was equally potent to AAF and less potent than AAS, tested at 10-100 µM."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 38",
+      "stable_id": "KBSPJIWZDWBDGM-UHFFFAOYSA-N",
+      "source_analog_id": "KBSPJIWZDWBDGM-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "## Molecule 38",
+      "text": "SMILES: Cc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.359"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 38-1",
+      "stable_id": "sr_5b3204cf2e8c4a1dbe496fe9a50b2529",
+      "source_analog_id": "KBSPJIWZDWBDGM-UHFFFAOYSA-N",
+      "containing_unit_id": "KBSPJIWZDWBDGM-UHFFFAOYSA-N",
+      "first_visible_level": 3,
+      "is_new": true,
+      "prompt_heading": "Record 38-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.7631\nEndpoint: other_microorganism_mutation\nResult: 2 ordinal_outcome_class\nConditions: \"Site-specific N6-adenine MP DNA adducts preformed in a 28-base oligonucleotide construct; mutagenesis scored only for constructs with double adducts positioned 3 bp apart on opposite strands.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: absent\n  - test_system: Escherichia coli (M13mp19 shuttle vector; 28mer lac construct)\n\nAdditional details: \"Double MP adducts induced base substitutions mainly adjacent to the modified adenines and single base insertions; frequency ~4% (8/196 analyzed clones); single MP adducts were not mutagenic; mutations detected by direct nucleotide sequencing of clones carrying the 28mer construct.\"\nReported evidence: In Escherichia coli, double 1-methylpyrene (MP) adducts induced base substitutions at positions mainly adjacent to modified adenines and single base insertions, whereas single MP adducts were not mutagenic; the mutation frequency induced by double MP adducts was ~4% (eight mutations out of 196 analyzed). DNA was a 28-base construct ligated into M13mp19 for transfection into E. coli."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 39",
+      "stable_id": "FOLHWFUOQIHNLM-UHFFFAOYSA-N",
+      "source_analog_id": "FOLHWFUOQIHNLM-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 39",
+      "text": "SMILES: Nc1nc2nc(Nc3ccc4ccc5cccc6ccc3c4c56)[nH]c2c(=O)[nH]1\nMorgan similarity: 0.3455"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 39-1",
+      "stable_id": "sr_c9e5e8706889477d9861039c26f0dcb3",
+      "source_analog_id": "FOLHWFUOQIHNLM-UHFFFAOYSA-N",
+      "containing_unit_id": "FOLHWFUOQIHNLM-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 39-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9315\nEndpoint: repair_activity_or_kinetics\nResult: incorporation order dCTP>dGTP>dATP≈dTTP (Mg^2+ and Mn^2+); extension order G^4P·C>G^4P·A>G^4P·G≈G^4P·T (Mg^2+) and G^4P·C>G^4P·G≈G^4P·A>G^4P·T (Mn^2+)\nExperimental details:\n  - assay_version: single-nucleotide incorporation and extension of KF (exo−) on dG4AP-modified primer-template, Mg2+ vs Mn2+, followed by Maxam-Gilbert sequence analysis of isolated extension products\n  - biological_system: in vitro cell-free | synthetic 20mer/21mer primer-templates opposite dG4AP, purified KF (exo−)\n  - dose_or_concentration: 100\n  - dose_unit: µM dNTP\n  - endpoint_class: repair_activity_capacity_or_lesion_removal\n  - endpoint_subtype: nucleotide incorporation opposite and extension past dG4AP (dCTP preference / bypass efficiency)\n  - molecule_role: repair_factor_or_substrate\n  - result_status: quantitative_result_without_directional_call\n\nAdditional details: \"single-dNTP incorporation measured as % of 20mer primer elongated to 21mer; extension measured as % of 21mer elongated to full-length product; extension runs used 100 µM of all four dNTPs; each time-course data point is average of two independent determinations; Maxam-Gilbert sequencing showed dCTP incorporation opposite dG4P, interpreted as primarily error-free bypass within detection limit (~95%); sequencing 'shadow' bands in G and A+G lanes noted as uncertain, not scored as mutagenic bypass.\"\nReported evidence: At 100 µM, the correct nucleotide dCTP was incorporated opposite the dG4AP adduct more rapidly than any other dNTP in the presence of Mg2+; dGTP was incorporated at significant frequency but more slowly, while dATP and dTTP rates were negligible. With Mg2+ replaced by Mn2+, dCTP was still most preferred and the incorporation rate followed dCTP > dGTP > dATP ≈ dTTP. Extension of 21mer primer-templates with C, G, A or T opposite the adduct to full-length followed G4P·C > G4P·A > G4P·G ≈ G4P·T (Mg2+) and G4P·C > G4P·G ≈ G4P·A > G4P·T (Mn2+). Maxam-Gilbert sequencing confirmed deoxycytidylic acid incorporation opposite dG4P, i.e. primarily error-free bypass within the ~95% detection limit."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 40",
+      "stable_id": "KXCMRGBZYRCRHB-UHFFFAOYSA-N",
+      "source_analog_id": "KXCMRGBZYRCRHB-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 40",
+      "text": "SMILES: CC(=O)Nc1ccc2c3c(cccc13)C(=O)c1[c]cccc1-2\nMorgan similarity: 0.46"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 40-1",
+      "stable_id": "sr_fd0cb7227b6343cab29252933c317cb3",
+      "source_analog_id": "KXCMRGBZYRCRHB-UHFFFAOYSA-N",
+      "containing_unit_id": "KXCMRGBZYRCRHB-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 40-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9453\nEndpoint: 32p_postlabelling\nResult: 1 signed_effect_direction\nExperimental details:\n  - assay_version: nuclease P1 digestion and butanol extraction enrichment versions\n  - biological_system: in vitro cells | Cricetulus griseus | V79MZ-h1A2-derived cell lines expressing human CYP1A2 in conjunction with human NAT1, NAT2, SULT1A1 or SULT1A2\n  - dose_or_concentration: 0.01, 0.1, 1\n  - dose_unit: µM\n  - endpoint_class: dna_adduct\n  - endpoint_subtype: DNA adducts (4 major, 2 minor)\n  - metabolic_activation_presence: present\n  - molecule_role: test_or_damage_agent\n  - result_status: damage_or_response_increased\n\nAdditional details: \"lack of acetylated adducts suggests N-deacetylation; NAT-catalyzed N,O-acetyltransfer to N-acetoxyester proposed in bioactivation; RAL not reported in supplied text\"\nReported evidence: Cells were treated with 0.01, 0.1 or 1 µM N-acetyl-N-hydroxy-3-aminobenzanthrone (N-Ac-N-OH-ABA); using both enrichment versions of the 32P-postlabeling assay (nuclease P1 digestion and butanol extraction), essentially 4 major and 2 minor DNA adducts were detected in the appropriate V79MZ-h1A2-derived cell lines expressing human CYP1A2 plus NAT1/NAT2/SULT1A1/SULT1A2. The lack of acetylated adducts suggests N-deacetylation of N-Ac-N-OH-ABA, and N,O-acetyltransfer reactions catalyzed by human NATs leading to the corresponding N-acetoxyester may be important in the bioactivation of N-Ac-N-OH-ABA."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 41",
+      "stable_id": "UYGSYQUJNHJPBU-UHFFFAOYSA-N",
+      "source_analog_id": "UYGSYQUJNHJPBU-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "## Molecule 41",
+      "text": "SMILES: CC(=O)Nc1cccc(C(=O)O)c1F\nMorgan similarity: 0.3556"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 41-1",
+      "stable_id": "sr_4a35d735fb20431a9583286bf4967300",
+      "source_analog_id": "UYGSYQUJNHJPBU-UHFFFAOYSA-N",
+      "containing_unit_id": "UYGSYQUJNHJPBU-UHFFFAOYSA-N",
+      "first_visible_level": 4,
+      "is_new": true,
+      "prompt_heading": "Record 41-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9303\nEndpoint: targeted_dna_adduct_measurement\nResult: Harsch and Vouros coupled CE, using the linear polymer PVP as a replaceable sieving matrix, to an ion trap mass spectrometer to analyze a series of oligonucleotides containing covalent AAF modifications, with identification by ESI-MS in negative ion detection. Separation was accomplished for isomeric AAF-modified hexanucleotides differing only in base sequence, and baseline separation was achieved for a 10-compound mixture of five nonisomeric AAF-modified oligonucleotides and their unmodified parent oligonucleotides. Mass determination gives nucleobase composition, requiring CID/multiple-stage MS for base-sequence elucidation.\nExperimental details:\n  - assay_version: CE with PVP sieving matrix coupled to ion trap MS, ESI negative ion detection\n  - biological_system: cell-free | AAF-modified oligonucleotides (isomeric hexanucleotides and 5 nonisomeric AAF-modified oligonucleotides and their unmodified parent oligonucleotides)\n  - endpoint_class: dna_adduct\n  - endpoint_subtype: covalent AAF (aminofluorene) adducts on oligonucleotides\n  - molecule_role: measured_dna_lesion_or_product\n  - result_status: analytical_validation\n\nAdditional details: \"Method-performance demonstration: separation of AAF-adducted versus unmodified oligonucleotides based partly on hydrophobic interactions (polycyclic aromatic fluorene moiety); baseline separation of a 10-compound mixture; mass determination yields nucleobase composition, base-sequence identity needs CID multi-stage MS; evidence_source = prior study by Harsch and Vouros (ref 101) reviewed in the supplied text.\"\nReported evidence: Harsch and Vouros coupled CE, using the linear polymer PVP as a replaceable sieving matrix, to an ion trap mass spectrometer to analyze a series of oligonucleotides containing covalent AAF modifications, with identification by ESI-MS in negative ion detection. Separation was accomplished for isomeric AAF-modified hexanucleotides differing only in base sequence, and baseline separation was achieved for a 10-compound mixture of five nonisomeric AAF-modified oligonucleotides and their unmodified parent oligonucleotides. Mass determination gives nucleobase composition, requiring CID/multiple-stage MS for base-sequence elucidation."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 42",
+      "stable_id": "CVEFIQVNOAJGDW-UHFFFAOYSA-N",
+      "source_analog_id": "CVEFIQVNOAJGDW-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 42",
+      "text": "SMILES: O=C(CI)Nc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.561"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 42-1",
+      "stable_id": "sr_439a73db015641b2b2ca3114a44e19ea",
+      "source_analog_id": "CVEFIQVNOAJGDW-UHFFFAOYSA-N",
+      "containing_unit_id": "CVEFIQVNOAJGDW-UHFFFAOYSA-N",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 42-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.8879\nEndpoint: covalent_binding_or_adduct\nResult: 1 binary_outcome_class\nExperimental details:\n  - assay_method_and_endpoint: In vitro alkylation/covalent modification of CYP3A4 Cys239 (protein adduct formation) with assessment of resulting enzyme inactivation\n  - biological_system: CYP3A4 enzyme in vitro (Cys239 as modification site)\n  - exposure_and_mechanistic_conditions: PIA is a direct-acting electrophile that alkylates CYP3A4 without requiring enzyme-catalyzed bioactivation; compound concentration not stated in the cited prior study\n  - mechanism_category: electrophile_reactivity_or_covalent_binding\n  - molecule_role: parent_test_agent\n  - result_direction: detected\n\nAdditional details: \"Secondary-citation evidence (Baer et al., 2007). PIA alkylated CYP3A4 Cys239 (covalent modification detected) but produced no measurable enzyme inactivation rate, illustrating that covalent modification does not necessarily cause loss of function.\"\nReported evidence: Prior work (Baer et al., 2007) demonstrated that both raloxifene and N-(1-pyrene)iodoacetamide (PIA) alkylate Cysteine 239 of CYP3A4 in vitro (covalent modification detected for both), yet only raloxifene produced a measurable enzyme inactivation rate, showing a compound-dependent disconnect between covalent protein modification and activity loss."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 43",
+      "stable_id": "WGIPFLBLEHRDPV-UHFFFAOYSA-N",
+      "source_analog_id": "WGIPFLBLEHRDPV-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 43",
+      "text": "SMILES: CC(=O)NC1=Cc2cccc3cccc(c23)C1=O\nMorgan similarity: 0.4444"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 43-1",
+      "stable_id": "sr_b6885076201b4213b48bad945b082dfa",
+      "source_analog_id": "WGIPFLBLEHRDPV-UHFFFAOYSA-N",
+      "containing_unit_id": "WGIPFLBLEHRDPV-UHFFFAOYSA-N",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 43-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.9434\nEndpoint: oxidative_damage_assay\nResult: 1 binary_outcome_class\nExperimental details:\n  - assay_method_and_endpoint: Immunohistochemical detection of nitrotyrosine (peroxynitrite-mediated protein nitration) in liver sections using anti-nitrotyrosine antibody visualized with Vectastain ABC kit (magnification x400)\n  - biological_system: In vivo mouse (Mus musculus) liver; wild-type or TNFR1-/- mice\n  - exposure_and_mechanistic_conditions: Acetaminophen 300 mg/kg vs PBS control; liver sections prepared 1-6 h after treatment; genotype comparison wild-type vs TNFR1-/-\n  - mechanism_category: oxidative_stress_or_antioxidant_defense\n  - metabolic_activation_system: whole_animal_metabolism\n  - molecule_role: parent_test_agent\n  - result_direction: detected\n\nAdditional details: \"In wild-type mice nitrotyrosine staining of hepatocytes was evident at 6 h; in TNFR1-/- mice hepatocyte nitrotyrosine staining appeared within 1 h. Kupffer cell peroxynitrite (nitrotyrosine) production occurred rapidly after acetaminophen in wild-type mice but was not detectable at any time in TNFR1-/- mice, despite NOS II protein appearance. Peroxynitrite is described as an oxidant able to induce lipid peroxidation and DNA damage.\"\nReported evidence: Liver sections prepared 1-6 h after treatment of wild-type or TNFR1-/- mice with PBS control or acetaminophen (300 mg/kg) were stained with antibody to nitrotyrosine. Arrowheads indicate areas of nitrotyrosine staining."
+    },
+    {
+      "unit_kind": "molecule",
+      "visible_id": "Molecule 44",
+      "stable_id": "HLCJPUJUJMVQRZ-UHFFFAOYSA-N",
+      "source_analog_id": "HLCJPUJUJMVQRZ-UHFFFAOYSA-N",
+      "containing_unit_id": "",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "## Molecule 44",
+      "text": "SMILES: O=c1c(=O)c2cc3ccccc3c3ccc4cccc1c4c23\nMorgan similarity: 0.5"
+    },
+    {
+      "unit_kind": "record",
+      "visible_id": "Record 44-1",
+      "stable_id": "sr_6dd48356a88040bf8e2b848ff9731f52",
+      "source_analog_id": "HLCJPUJUJMVQRZ-UHFFFAOYSA-N",
+      "containing_unit_id": "HLCJPUJUJMVQRZ-UHFFFAOYSA-N",
+      "first_visible_level": 5,
+      "is_new": true,
+      "prompt_heading": "Record 44-1",
+      "text": "Evidence family: \nTransfer likelihood: 0.8218\nEndpoint: metabolic_enzyme_activity_or_inactivation\nResult: 1 binary_outcome_class\nExperimental details:\n  - assay_method_and_endpoint: DDH quinone reductase activity (rate of NADPH-dependent reduction of the K-region o-quinone)\n  - biological_system: Purified rat liver dihydrodiol/3alpha-hydroxysteroid dehydrogenase (DDH) enzyme preparation\n  - exposure_and_mechanistic_conditions: NADPH present as cofactor for quinone reduction; substrate concentration not reported in the abstract\n  - mechanism_category: detoxification_or_conjugation\n  - metabolic_activation_system: recombinant_or_reconstituted_enzyme\n  - molecule_role: parent_test_agent\n  - result_direction: detected\n\nAdditional details: \"Reported within the group of K-region o-quinones reduced at 1-10 µmol/min·mg enzyme; range not representable by a single value.\"\nReported evidence: The K-region o-quinone of benzo(a)pyrene (benzo(a)pyrene-4,5-quinone) was reduced by purified rat liver DDH at rates within 1-10 µmol/min·mg enzyme in the presence of NADPH."
+    }
+  ],
+  "trace": [
+    {
+      "task": "single_molecule",
+      "status": "ok",
+      "prediction": null,
+      "response_text": "{\n  \"endpoint_prior\": \"fail\",\n  \"property_drivers\": [\n    \"Extended planar polycyclic aromatic system (4 aromatic rings) with low fraction sp3 (0.06) and only one rotatable bond, favoring DNA intercalation and frameshift mutagenicity.\",\n    \"Aromatic acetamido group (aromatic amide) that can undergo metabolic N-hydroxylation and subsequent formation of electrophilic nitrenium species, a classic bacterial reverse-mutation liability.\",\n    \"Quinone/diketone carbonyl moieties capable of redox cycling and reactive oxygen species generation, potentially contributing to oxidative DNA damage.\",\n    \"Moderate estimated logP (2.7) and topological polar surface area (63.24 Å²) suggesting reasonable cellular uptake, though aqueous solubility may be limited and affect achievable test concentrations.\",\n    \"One hydrogen-bond donor and three acceptors, with no ionizable-site data, leaving uncertainty about speciation at assay pH.\"\n  ],\n  \"confidence\": \"low\",\n  \"reasoning_summary\": \"The molecule contains multiple structural alerts for bacterial reverse mutation: a large planar polycyclic aromatic quinone and an acetamido-substituted aromatic amine. These features are associated with frameshift and/or oxidative mutagenicity, especially after metabolic activation. However, the exact reported strain panel and S9 condition were not provided, and no experimental Ames data are present in the supplied tool output. The prior is therefore a structural/physicochemical hypothesis rather than an observed endpoint, and confidence is limited by missing condition-specific information and unavailable pKa/logD values.\",\n  \"caveats\": [\n    \"No exact strain panel or metabolic activation condition was supplied, so the prior cannot be tailored to a specific Ames protocol.\",\n    \"Structural alerts are hypotheses, not observed mutagenicity; absence of an alert would not establish a negative result.\",\n    \"pKa and logD at pH 7.4 were not calculable, so ionization state and solubility at assay pH remain uncertain.\",\n    \"The acetamido group may require metabolic activation; activity could differ substantially with and without S9.\",\n    \"No experimental bacterial reverse-mutation data were included in the prefetched properties, so this assessment is purely inferential.\"\n  ]\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Assess condition-specific bacterial reverse-mutation evidence. Return one complete JSON object."
+        },
+        {
+          "role": "user",
+          "content": "{\"task\": \"Assess the query molecule's structural and physicochemical prior for bacterial reverse mutation under the exact reported strain panel and metabolic activation condition.\", \"query\": {\"input_smiles\": \"CC(=O)Nc1ccc2c(=O)c(=O)c3cccc4ccc1c2c43\", \"canonical_smiles\": \"CC(=O)Nc1ccc2c(=O)c(=O)c3cccc4ccc1c2c43\", \"tools_prefetched\": true, \"prefetched_molecule_properties\": {\"tool_name\": \"molecule_properties\", \"status\": \"ok\", \"arguments\": {\"query_smiles\": \"CC(=O)Nc1ccc2c(=O)c(=O)c3cccc4ccc1c2c43\", \"logd_ph\": 7.4}, \"content\": \"[molecule_properties]\\nneutral fraction: not applicable (pKa predictor unavailable)\\nestimated logD: not applicable (pKa predictor unavailable)\\nstrongest acidic pKa: not applicable (pKa predictor unavailable)\\nstrongest basic pKa: not applicable (pKa predictor unavailable)\\nnumber of acidic sites: not applicable (pKa predictor unavailable)\\nnumber of basic sites: not applicable (pKa predictor unavailable)\\nnumber of ionizable sites: not applicable (pKa predictor unavailable)\\nexact molecular weight: 289.07\\nfraction of sp3 carbons: 0.06\\nheavy-atom count: 22\\nheavy-atom molecular weight: 278.2\\nLabute surface area: 124.22\\nmaximum absolute partial charge: 0.33\\nmaximum partial charge: 0.23\\nminimum absolute partial charge: 0.23\\nminimum partial charge: -0.33\\nestimated logP: 2.7\\nmolecular weight: 289.29\\nNH/OH group count: 1\\nnitrogen/oxygen atom count: 4\\naliphatic carbocycle count: 0\\naliphatic heterocycle count: 0\\naliphatic ring count: 0\\naromatic carbocycle count: 4\\naromatic heterocycle count: 0\\naromatic ring count: 4\\nhydrogen-bond acceptor count: 3\\nhydrogen-bond donor count: 1\\nheteroatom count: 4\\nrotatable-bond count: 1\\nsaturated carbocycle count: 0\\nsaturated heterocycle count: 0\\nsaturated ring count: 0\\nring count: 4\\ntopological polar surface area: 63.24\\nQED drug-likeness: 0.43\\n\\nfunctional groups: none\\nWarnings: ModuleNotFoundError: No module named 'molgpka'; ModuleNotFoundError: No module named 'accfg'; Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\", \"warnings\": [\"ModuleNotFoundError: No module named 'molgpka'\", \"ModuleNotFoundError: No module named 'accfg'\", \"Tool initialization warning: ModuleNotFoundError: No module named 'molgpka'\"], \"errors\": [], \"latency_ms\": 2, \"cache_hit\": false}}, \"instructions\": [\"Use only the supplied structure and property-tool text, without analog evidence or memorized assay labels.\", \"Explain plausible structural and mechanistic liabilities, exposure limitations, and uncertainty.\", \"A structural alert is a hypothesis, not an observed endpoint. Absence of an alert does not establish a negative result.\", \"Do not invent species, population, strain, activation, exposure, or organism conditions.\"], \"required_json_schema\": {\"endpoint_prior\": \"pass | fail | mixed_or_unclear\", \"property_drivers\": [\"string\"], \"confidence\": \"high | moderate | low\", \"reasoning_summary\": \"string\", \"caveats\": [\"string\"]}}"
+        }
+      ],
+      "usage": {
+        "completion_tokens": 2889,
+        "prompt_tokens": 914,
+        "total_tokens": 3803,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null,
+        "reasoning_tokens": 2430
+      },
+      "tool_count": 0
+    },
+    {
+      "task": "final_summary",
+      "status": "ok",
+      "prediction": "positive",
+      "response_text": "{\n  \"claims\": [\n    {\n      \"claim\": \"1-Acetamidopyrene, which shares the acetamido-pyrene core with the query, is positive in TDC training labels and in Ames tests using TA98, TA98NR and TA98/1,8-DNP6, both with and without S9. This strongly supports a positive outcome for the query because the acetamido-pyrene moiety is the key mutagenic liability, and the additional quinone carbonyls add redox/DNA-reactive potential.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 1\",\n        \"Molecule 11\"\n      ],\n      \"record_ids\": [\n        \"Record 1-1\",\n        \"Record 11-1\",\n        \"Record 11-2\",\n        \"Record 11-4\"\n      ]\n    },\n    {\n      \"claim\": \"Hydroxylated acetamidopyrenes such as 1-acetamidopyren-8-ol, -6-ol and -3-ol are positive in TDC labels and/or Ames TA98 assays, with activity dependent on N-oxidation and O-acetylation. These pathways are available to the query's acetamido group and support a positive bacterial reverse-mutation prediction.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 2\",\n        \"Molecule 4\",\n        \"Molecule 5\",\n        \"Molecule 12\",\n        \"Molecule 14\",\n        \"Molecule 19\"\n      ],\n      \"record_ids\": [\n        \"Record 2-1\",\n        \"Record 12-1\",\n        \"Record 12-2\",\n        \"Record 14-2\",\n        \"Record 14-4\",\n        \"Record 19-1\"\n      ]\n    },\n    {\n      \"claim\": \"Acetamido-substituted polycyclic quinone/ketone systems, including diacetamidoanthraquinone and 3-acetylaminobenzanthrone, are positive in Salmonella reversion assays. This provides direct support for an acetamido group combined with a quinone/ketone-containing polycyclic scaffold being mutagenic.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 9\",\n        \"Molecule 34\"\n      ],\n      \"record_ids\": [\n        \"Record 9-1\",\n        \"Record 34-1\"\n      ]\n    },\n    {\n      \"claim\": \"N-hydroxy-N-acetyl-1-aminopyrene and N-hydroxy-1-aminopyrene are positive in Salmonella, supporting the bioactivation pathway of acetamido-pyrenes to reactive nitrenium species that cause bacterial reverse mutations.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\n        \"Molecule 20\",\n        \"Molecule 21\"\n      ],\n      \"record_ids\": [\n        \"Record 20-1\",\n        \"Record 21-1\"\n      ]\n    },\n    {\n      \"claim\": \"Quinone-only evidence is mixed: an unsubstituted pyrenequinone was negative in E. coli WP2, and some B[a]P-quinones show low ROS-mediated Ames activity, but 9,10-pyrenequinone and B[a]P-7,8-dione are positive in Salmonella. These quinone data do not outweigh the strong positive acetamido-pyrene evidence, but they provide limited contradictory context.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\n        \"Molecule 16\",\n        \"Molecule 18\",\n        \"Molecule 27\"\n      ],\n      \"record_ids\": [\n        \"Record 16-1\",\n        \"Record 16-2\",\n        \"Record 18-1\",\n        \"Record 27-1\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"positive\",\n  \"positive_probability\": 0.87\n}",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Assess condition-specific bacterial reverse-mutation evidence.\n\nTask:\n- Endpoint: bacterial reverse mutation under the exact reported strain panel and metabolic activation condition\n- Label scope: ames_bacterial_reverse_mutation.v1\n- Positive: positive\n- Negative: negative\n- Predict positive for a positive bacterial reverse-mutation outcome and negative for a negative outcome under the query strain panel and activation condition.\n- Ensure final_prediction agrees with your overall evidence assessment.\n- Predict the bacterial reverse-mutation result only under the query's exact reported strain panel and metabolic activation condition; do not invent missing strains or activation conditions.\n- A negative result for one strain or a limited panel must not imply a global negative across other strains or activation conditions.\n- A panel-positive label means at least one reported positive response within that exact panel. both_reported is one pooled activation summary; it does not assert the same result in each activation arm.\n- Other genetic-damage endpoints, DNA damage and genotoxicity mechanisms may support, contradict, or inform an Ames prediction when the evidence is sufficiently strong and transferable to the query's structure, strain panel and activation condition. New direct Ames data are not required. Explain the mechanistic link and its limitations; distinguish the resulting prediction from a measured Ames outcome.\n- Nonvoter bacterial outcomes retain their source qualifications; their family membership does not establish a gold-voting result.\n- Predictions, missing context and mixed or equivocal directions remain qualified evidence at their endpoint family. Do not treat predictions as measured outcomes or invent missing experimental details.\n- Assay application, protocol and analytical records may describe what was tested without reporting an effect; do not infer an outcome from assay presence alone. Broad redox or cytogenetic context may have low transferability to the requested bacterial condition.\n- Respect the reported molecule role: a modifier/protectant, measured lesion, metabolite, probe or comparator is not automatically the agent whose own mutagenicity was tested. Preserve the affected molecule and co-treatment context when judging relevance to the query.\n\nUse the supplied query-property assessment only as an uncertain physicochemical prior. It is not experimental evidence or a label prediction. Let stronger, transferable experimental evidence override it.\n\nReasoning Instructions:\n\n- Distinguish what was observed for each evidence molecule from what you infer for the query. State the molecular features and experimental conditions that support transfer, and identify relevant differences or missing information. Binary analog labels and experimental measurements both require this assessment; neither takes precedence solely because of its source or the number of records. Multiple records from the same molecule or study may provide correlated support. Treat retrieval scores and structural similarities as prioritization hints, not outcome evidence or calibrated probabilities. Do not assume that differently written structures are the same molecule without establishing their relationship.\n- Your goal is to reason through the evidence via analogies. Is this molecule or record meaningfully similar to the query molecule? Does the experiment transfer? If it does transfer, how does this experimnetal value inform the property we're aiming to predict?\n- Morgan similarity measures structural similarity to the query. Where shown, the transfer likelihood (0 to 1) is a relative transfer signal, not a probability or an effect size. Some records have no exact score; do not infer one from their neighbors or retrieval order.\n- Ensure you consider and analyze every evidence block.\n- At the end, take the physicochemical properties and transferable evidence and come to a balanced conclusion for the query molecule.\n\nPitfalls to avoid:\n- Do not narrate schema bookkeeping.\n- Do not overly analyze the SMILES structures.\n- Do not blindly trust retrieval scores.\n- Do not infer the prediction from evidence order.\n- Do not skip records; briefly state why any materially uninformative evidence deserves little weight.\n\nOutput:\nReturn exactly one valid JSON object matching the requested schema. Return one or more concise claims using as many claims as needed to represent the experimental evidence that materially informs the decision. Each claim may cite any number of molecules, records, or both. At least one identifier is required per claim. Return only `claims`, `final_prediction`, and `positive_probability`. Estimate `positive_probability` as the probability that the query belongs to the positive class, `positive` (TDC label 1): a positive bacterial reverse-mutation outcome. Preserve the reported strain panel and metabolic activation scope; do not invent those conditions when absent. Return a JSON number from 0 to 1 inclusive. This is class-membership probability, not confidence in your selected class. `supportive` means evidence supporting your selected final prediction; `contradictory` means evidence supporting the alternative."
+        },
+        {
+          "role": "user",
+          "content": "Query molecule\nSMILES: CC(=O)Nc1ccc2c(=O)c(=O)c3cccc4ccc1c2c43\n\n# Query-property prior\nThis is a physicochemical prior.\n\nendpoint prior: \"fail\"\nproperty drivers: [\"Extended planar polycyclic aromatic system (4 aromatic rings) with low fraction sp3 (0.06) and only one rotatable bond, favoring DNA intercalation and frameshift mutagenicity.\", \"Aromatic acetamido group (aromatic amide) that can undergo metabolic N-hydroxylation and subsequent formation of electrophilic nitrenium species, a classic bacterial reverse-mutation liability.\", \"Quinone/diketone carbonyl moieties capable of redox cycling and reactive oxygen species generation, potentially contributing to oxidative DNA damage.\", \"Moderate estimated logP (2.7) and topological polar surface area (63.24 Å²) suggesting reasonable cellular uptake, though aqueous solubility may be limited and affect achievable test concentrations.\", \"One hydrogen-bond donor and three acceptors, with no ionizable-site data, leaving uncertainty about speciation at assay pH.\"]\nconfidence: \"low\"\nreasoning summary: \"The molecule contains multiple structural alerts for bacterial reverse mutation: a large planar polycyclic aromatic quinone and an acetamido-substituted aromatic amine. These features are associated with frameshift and/or oxidative mutagenicity, especially after metabolic activation. However, the exact reported strain panel and S9 condition were not provided, and no experimental Ames data are present in the supplied tool output. The prior is therefore a structural/physicochemical hypothesis rather than an observed endpoint, and confidence is limited by missing condition-specific information and unavailable pKa/logD values.\"\ncaveats: [\"No exact strain panel or metabolic activation condition was supplied, so the prior cannot be tailored to a specific Ames protocol.\", \"Structural alerts are hypotheses, not observed mutagenicity; absence of an alert would not establish a negative result.\", \"pKa and logD at pH 7.4 were not calculable, so ionization state and solubility at assay pH remain uncertain.\", \"The acetamido group may require metabolic activation; activity could differ substantially with and without S9.\", \"No experimental bacterial reverse-mutation data were included in the prefetched properties, so this assessment is purely inferential.\"]\n\n# Experimental evidence\n\n## Molecule 1\nSMILES: CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.7941\nTransfer likelihood: 0.7356\n\nRecord 1-1\nEvidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34\n  - Drug_ID: Drug 5330\n  - Y: 1\n  - label: 1\n\n## Molecule 2\nSMILES: CC(=O)Nc1ccc2ccc3ccc(O)c4ccc1c2c34\nMorgan similarity: 0.6316\nTransfer likelihood: 0.8338\n\nRecord 2-1\nEvidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1ccc2ccc3ccc(O)c4ccc1c2c34\n  - Drug_ID: Drug 5968\n  - Y: 1\n  - label: 1\n\n## Molecule 3\nSMILES: CC(=O)Nc1cccc2ncccc12\nMorgan similarity: 0.4318\nTransfer likelihood: 0.0092\n\nRecord 3-1\nEvidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1cccc2ncccc12\n  - Drug_ID: Drug 1916\n  - Y: 0\n  - label: 0\n\n## Molecule 4\nSMILES: CC(=O)Nc1ccc2ccc3c(O)ccc4ccc1c2c43\nMorgan similarity: 0.6316\nTransfer likelihood: 0.7853\n\nRecord 4-1\nEvidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1ccc2ccc3c(O)ccc4ccc1c2c43\n  - Drug_ID: Drug 1855\n  - Y: 1\n  - label: 1\n\n## Molecule 5\nSMILES: CC(=O)Nc1cc(O)c2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.6098\nTransfer likelihood: 0.7765\n\nRecord 5-1\nEvidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1cc(O)c2ccc3cccc4ccc1c2c34\n  - Drug_ID: Drug 5839\n  - Y: 1\n  - label: 1\n\n## Molecule 6\nSMILES: CC(=O)Nc1ccc2c3c(cccc13)-c1ccc(O)cc1-2\nMorgan similarity: 0.4783\nTransfer likelihood: 0.9335\n\nRecord 6-1\nEvidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1ccc2c3c(cccc13)-c1ccc(O)cc1-2\n  - Drug_ID: Drug 4395\n  - Y: 1\n  - label: 1\n\n## Molecule 7\nSMILES: CC(=O)Nc1ccc2c3c(cccc13)-c1cc(O)ccc1-2\nMorgan similarity: 0.4783\nTransfer likelihood: 0.9332\n\nRecord 7-1\nEvidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1ccc2c3c(cccc13)-c1cc(O)ccc1-2\n  - Drug_ID: Drug 4606\n  - Y: 1\n  - label: 1\n\n## Molecule 8\nSMILES: CC(=O)Nc1cccc(N=Nc2cccc(NC(C)=O)c2C)c1C\nMorgan similarity: 0.3953\nTransfer likelihood: 0.0039\n\nRecord 8-1\nEvidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1cccc(N=Nc2cccc(NC(C)=O)c2C)c1C\n  - Drug_ID: Drug 3748\n  - Y: 0\n  - label: 0\n\n## Molecule 9\nSMILES: CC(=O)Nc1ccc(NC(C)=O)c2c1C(=O)c1ccccc1C2=O\nMorgan similarity: 0.4048\nTransfer likelihood: 0.9541\n\nRecord 9-1\nEvidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1ccc(NC(C)=O)c2c1C(=O)c1ccccc1C2=O\n  - Drug_ID: Drug 1646\n  - Y: 1\n  - label: 1\n\n## Molecule 10\nSMILES: CC(=O)Nc1cccc2cccnc12\nMorgan similarity: 0.4091\nTransfer likelihood: 0.8353\n\nRecord 10-1\nEvidence family: tdc_training_labels\nExperimental details:\n  - Drug: CC(=O)Nc1cccc2cccnc12\n  - Drug_ID: Drug 2045\n  - Y: 1\n  - label: 1\n\n## Molecule 11\nSMILES: CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.7941\n\nRecord 11-1\nEvidence family: \nTransfer likelihood: 0.6706\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella Typhimurium TA98/TA98NR/TA98/1,8-DNP6\n\nAdditional details: \"N-acetyl-1-aminopyrene (also 1-acetamidopyrene, NAAP), synthesized by acetylation of AP with acetic anhydride, >=99% pure. Positive under at least one tested condition (merged across strains and S9 presence/absence); dependent on transesterification for mutagenicity expression, particularly with S9.\"\nReported evidence: In the Ames plate incorporation assay with Salmonella tester strains TA98, TA98NR and TA98/1,8-DNP6, in the presence or absence of Aroclor-induced rat liver S9, N-acetyl-1-aminopyrene exhibited mutagenic activity under one or more assay conditions.\n\nRecord 11-2\nEvidence family: \nTransfer likelihood: 0.8238\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella typhimurium TA98\n\nAdditional details: \"Preliminary Ames test results; mutagenic activity reported with liver supernatant (S9-equivalent activation). Origin: acetylation product of the microbial metabolite 1-aminopyrene (1-AP) from 1-nitropyrene.\"\nReported evidence: The paper reports preliminary mutagenicity test results indicating that, whereas N-acetyl-1-AP does show mutagenic activity with liver supernatant, FAP is not mutagenic toward Salmonella typhimurium TA98 in the absence or presence of S9; the reason for the absence of mutagenic activity with FAP is stated as uncertain and under investigation.\n\nRecord 11-3\nEvidence family: \nTransfer likelihood: 0.8336\nEndpoint: unspecified_mutagenicity\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: not_reported\n  - metabolic_activation: not_reported\n\nAdditional details: \"Identified as a mutagenic metabolite of 1-nitropyrene; the metabolites were generated by rabbit lung S9. Specific mutagenicity assay not stated.\"\nReported evidence: Lewtas et al. [38] applied effect-directed analysis to 1-nitropyrene metabolites generated by rabbit lung S9, and identified hydroxylated nitropyrenes, 1-aminopyrene, N-acetyl-1-aminopyrene and hydroxylated derivatives, and trans-4,5-dihydro-4,5-dihydroxy-1-nitropyrene as mutagenic metabolites.\n\nRecord 11-4\nEvidence family: \nTransfer likelihood: 0.3968\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella Typhimurium TA98\n\nAdditional details: \"Acetylation of 1-aminopyrene increased mutagenic activity by more than 6-fold, whereas most polycyclic aromatic amines (PAA) were markedly reduced in mutagenic activity by acetylation (acetic anhydride reaction). 1-acetylaminopyrene was also observed as a metabolite of 1-nitropyrene in Salmonella bacteria (Messier et al., 1985) and in perfused lungs (Bond, 1983).\"\nReported evidence: In the acetylation derivatization study (reaction of acetic anhydride with primary amines), it was found that while most polycyclic aromatic amines (PAA) are markedly reduced in mutagenic activity by acetylation, 1-aminopyrene actually increases in mutagenicity by a factor of more than 6. The mutagenicity was assessed in the Salmonella TA98 Ames test (the Salmonella TA98 cells survived treatment similar to those subjected to nitrous acid).\n\nRecord 11-5\nEvidence family: \nTransfer likelihood: 0.8579\nEndpoint: oxidized_base_measurement\nResult: 1 signed_effect_direction\nExperimental details:\n  - assay_version: urinary 8-hydroxydeoxyguanosine (8-OHdG) concentration measurement\n  - biological_system: human biomonitoring | Homo sapiens | urine\n  - endpoint_class: extracellular_damage_or_repair_product\n  - endpoint_subtype: 8-OHdG (8-hydroxydeoxyguanosine)\n  - molecule_role: test_or_damage_agent\n  - result_status: damage_or_response_increased\n\nAdditional details: \"human biomonitoring study; 44 Korean adults living in Cheongju, Republic of Korea; 1-NAAP is a urinary metabolite of 1-nitropyrene (via 1-aminopyrene/1-AP) and was a significant determinant of urinary 8-OHdG in summer; atmospheric 1-NP itself did not show a significant correlation with oxidative stress marker concentrations; urinary 1-NAAP concentration values not given in supplied text; assay method and numeric values outside provided window.; compound_name: N-acetyl-1-aminopyrene\"\nReported evidence: In this study, urinary N-acetyl-1-aminopyrene (1-NAAP) concentration was a significant determinant for urinary 8-hydroxydeoxyguanosine (8-OHdG) concentration in summer. The authors state that more 8-OHdG is produced in the body as the amount of 1-nitropyrene (1-NP), which is metabolized to 1-aminopyrene (1-AP) or 1-NAAP, increases.\n\nRecord 11-6\nEvidence family: \nTransfer likelihood: 0.4199\nEndpoint: strand_break_physical_assay\nResult: 0 signed_effect_direction\nExperimental details:\n  - assay_version: alkaline sucrose-density gradient\n  - biological_system: in vitro cells | Cricetulus griseus | Don (Chinese hamster lung) cells\n  - dose_or_concentration: 0.25-48 µg/ml (mean of 3 experiments)\n  - dose_unit: µg/ml\n  - endpoint_class: strand_break_or_alkali_labile_site\n  - endpoint_subtype: DNA single-strand breaks\n  - molecule_role: test_or_damage_agent\n  - result_status: no_damage_or_response_change\n\nAdditional details: \"exposure_duration_or_schedule: 30 min; sampling_time: after 30-min exposure.\"\nReported evidence: N-acetyl-1-aminopyrene failed to induce any detectable DNA damage (DNA single-strand breaks measured in alkaline sucrose-density gradients) in Don cells following a 30-min exposure.\n\n## Molecule 12\nSMILES: CC(=O)Nc1ccc2ccc3ccc(O)c4ccc1c2c34\nMorgan similarity: 0.6316\n\nRecord 12-1\nEvidence family: \nTransfer likelihood: 0.9552\nEndpoint: bacterial_reverse_mutation\nResult: 1 ordinal_outcome_class\nConditions: \"Reported as only minimally active; borderline mutagenic response.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella Typhimurium TA98 (plate incorporation)\n\nAdditional details: \"Only minimally active in the assay.\"\nReported evidence: 1-Acetamidopyren-8-ol was reported to be only minimally active as a mutagen in the Ames plate incorporation assay with the TA98 strain variants.\n\nRecord 12-2\nEvidence family: \nTransfer likelihood: 0.8065\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella assay\n\nAdditional details: \"Metabolite of 1-nitropyrene (1-NP) in rat urine; mutagenic only with exogenous metabolic activation (Ball et al., 1984).\"\nReported evidence: The text reports that conjugates of 3- and 8-hydroxy-1-nitropyrene as well as 6- and 8-hydroxy-N-acetylaminopyrene were principal urinary metabolites of 1-NP, and that these metabolites required exogenous metabolic activation to be mutagenic in the Salmonella assay (Ball et al., 1984). Thus, 8-hydroxy-N-acetylaminopyrene is mutagenic in Salmonella only when exogenous metabolic activation is supplied.\n\n## Molecule 13\nSMILES: CC(=O)Nc1ccc2c3c(cccc13)-c1ccccc1-2\nMorgan similarity: 0.55\n\nRecord 13-1\nEvidence family: \nTransfer likelihood: 0.917\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nConditions: \"Requires S9; tested in part in the O-acetyltransferase-deficient variant TA98/1,8-DNP6.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella Typhimurium TA98 (and TA98/1,8-DNP6)\n\nAdditional details: \"Weakest mutagen in the series; requires S9 for N-hydroxylation to the hydroxamic acid (species 9), with deacetylation to 3-AFA possible. Contrasted with 1-acetamidopyrene, which with S9 is more active than 1-NP.\"\nReported evidence: The acetylated product 3-AAFA (3-acetamidofluoranthene) is the weakest mutagen considered in this series of nitro- and aminofluoranthenes. It requires S9 for N-hydroxylation to the hydroxamic acid; its decrease in activity in the O-acetyltransferase-deficient variant TA98/1,8-DNP6 relative to TA98 is greater than that of 3-AFA.\n\nRecord 13-2\nEvidence family: \nTransfer likelihood: 0.7572\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella typhimurium TA98 variants\n\nAdditional details: \"Acetylated derivative of 3-NFA (tested though not detected as a metabolite); less mutagenic than parent 3-NFA and required exogenous S9 activation.\"\nReported evidence: 3-AAFA, an acetylated derivative of 3-NFA, was examined for mutagenicity in the TA98 variants and was less mutagenic than 3-NFA, and required S9 for activation. 3-AAFA itself was not detected as a metabolite in any of the TA98 variants.\n\n## Molecule 14\nSMILES: CC(=O)Nc1ccc2ccc3c(O)ccc4ccc1c2c43\nMorgan similarity: 0.6316\n\nRecord 14-1\nEvidence family: \nTransfer likelihood: 0.9596\nEndpoint: bacterial_reverse_mutation\nResult: 0 ordinal_outcome_class\nConditions: \"Negativity observed specifically in systems lacking N-oxidation (no S9) or lacking bacterial O-acetylation; activity depends on both pathways being present.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: absent\n  - test_system: Salmonella typhimurium plate incorporation assay\n\nAdditional details: \"Contrasts with the positive activity seen when both N-oxidation and O-acetylation are available, confirming that this metabolite is only mutagenic when fully activated.\"\nReported evidence: 1-Acetamidopyren-6-ol is virtually inactive in Salmonella typhimurium plate incorporation assay systems devoid of either the N-oxidation or the O-acetylation pathway (i.e., without S9-dependent N-oxidation or without bacterial acetylation).\n\nRecord 14-2\nEvidence family: \nTransfer likelihood: 0.8557\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n\nAdditional details: \"Ames plate incorporation assay (bacterial reverse mutation); mutagenic urinary metabolite of 1-nitropyrene, previously identified as the predominant contributor to the mutagenicity of urine of NP-dosed rats; maximal expression required exogenous S9 fraction from livers of Aroclor 1254-treated rats; excreted mainly as beta-glucuronide conjugate; reduced and acetylated on the nitrogen and hydroxylated on the aromatic pyrene moiety.\"\nReported evidence: 6-hydroxy-1-acetamidopyrene (NAAP-6-OH) was previously identified as the predominant contributor to the mutagenicity of the urines of rats dosed with NP, detected with the Ames plate incorporation assay with maximal expression in the presence of S9 (from the livers of Aroclor 1254-treated rats), and excreted mainly as its beta-glucuronide conjugate.\n\nRecord 14-3\nEvidence family: \nTransfer likelihood: 0.8361\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella assay\n\nAdditional details: \"Metabolite of 1-nitropyrene (1-NP) in rat urine; mutagenic only with exogenous metabolic activation (Ball et al., 1984).\"\nReported evidence: The text reports that conjugates of 3- and 8-hydroxy-1-nitropyrene as well as 6- and 8-hydroxy-N-acetylaminopyrene were principal urinary metabolites of 1-NP, and that these metabolites required exogenous metabolic activation to be mutagenic in the Salmonella assay (Ball et al., 1984). Thus, 6-hydroxy-N-acetylaminopyrene is mutagenic in Salmonella only when exogenous metabolic activation is supplied.\n\nRecord 14-4\nEvidence family: \nTransfer likelihood: 0.6805\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella typhimurium plate incorporation assay\n\nAdditional details: \"Major urinary metabolite of 1-nitropyrene (1-NP); principal (1,6) isomer responsible for mutagenicity in urine of 1-NP-dosed rats. Activation requires S9-catalyzed N-oxidation (likely CYP2B/CYP1A) followed by O-acetylation, generating an N-acylarylnitrenium ion; 1-acetamidopyren-6-ol is mutagenic when both pathways are operative.\"\nReported evidence: The activity of the major urinary metabolite of 1-nitropyrene (1-NP), 1-acetamidopyren-6-ol, in the Salmonella typhimurium plate incorporation assay clearly depends on N-oxidation followed by O-acetylation; the compound shows mutagenic activity when S9 provides the N-oxidation pathway and bacterial O-acetylation is available. The principal 1,6 isomer (1-acetamidopyren-6-ol) is the one responsible for mutagenic activity in the urines of rats dosed with 1-NP.\n\nRecord 14-5\nEvidence family: \nTransfer likelihood: 0.8701\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: explicit_mutagen_statement\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella Typhimurium TA98\n\nAdditional details: \"Indirect-acting mutagen, i.e., mutagenic activity detected in the presence of S9 mix (TA98 with S9 mix). Detection/classification supported by refs 2 and 18. The increase in bile mutagenicity after incubation with intestinal contents was attributed to deconjugation of this acetylaminohydroxypyrene aglycon by intestinal microflora.\"\nReported evidence: The mutagenicity of rat bile (TA98 with S9 mix) increased after incubation with intestinal contents; together with the metabolite analysis this showed that 1-acetylamino-6-hydroxypyrene (1-acetylaminino-6-hydroxypyrene), an indirect-acting mutagen (sources cited as refs 2 and 18), was deconjugated from its glucuronide by intestinal microflora.\n\nRecord 14-6\nEvidence family: \nTransfer likelihood: 0.8566\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella typhimurium TA98\n\nAdditional details: \"Ames plate incorporation assay on urine from rats dosed i.p. with 1-nitropyrene (10 mg/kg); mutagenicity required exogenous metabolic activation (0.6 mg S9 protein per plate). Specific mutagenicity reported as 600 or 700 rev/nmol in the accompanying fraction set, though the assignment between 6-hydroxy-N-acetyl-1-aminopyrene and the nitropyrene phenols is ambiguous in the text. A urinary metabolite of 1-nitropyrene, excreted mainly as a glucuronide conjugate.\"\nReported evidence: Mutagenic activity was detected by the Ames Salmonella (strain TA98) plate incorporation assay in the urine of rats dosed with 1-nitropyrene. This mutagenicity, unlike that of NP itself, required exogenous metabolic activation, and was predominantly associated with 6-hydroxy-N-acetyl-1-aminopyrene and with the nitropyrene phenols (specific mutagenicity 600 and 700 rev/nmol respectively in the presence of 0.6 mg of S9 protein per plate).\n\nRecord 14-7\nEvidence family: \nTransfer likelihood: 0.9557\nEndpoint: detoxification_or_conjugation_assay\nResult: 1 binary_outcome_class\nExperimental details:\n  - assay_method_and_endpoint: Microbial β-glucuronidase hydrolysis of the glucuronide conjugate 6-hydroxy-1-acetamidopyrene-β-D-glucuronide to release the active aglycone 6-hydroxy-1-acetamidopyrene\n  - biological_system: Intact Bifidobacterium spp.; in vivo hepatoportal recycling in 1-NP-treated rats\n  - exposure_and_mechanistic_conditions: 6-Hydroxy-1-acetamidopyrene-β-D-glucuronide exposed to Bifidobacterium spp. β-glucuronidase\n  - mechanism_category: detoxification_or_conjugation\n  - metabolic_activation_system: other_metabolic_system\n  - molecule_role: metabolite_or_reactive_product\n  - result_direction: detected\n\nAdditional details: \"NAAP-6-OH is a 1-nitropyrene metabolite; β-glucuronidase deconjugation reactivates the aglycone, which is a predominant urinary mutagen in 1-NP-treated rats [164]; secondary citations [186].\"\nReported evidence: Bifidobacterium spp. catalyze the β-glucuronidase reaction converting 6-hydroxy-1-acetamidopyrene-β-D-glucuronide (NAAP-6-OH glucuronide, a 1-nitropyrene metabolite) to 6-hydroxy-1-acetamidopyrene (NAAP-6-OH). The 1-NP metabolite 6-hydroxy-1-acetamidopyrene is recycled through the hepatoportal pathway following β-glucuronidase deconjugation and is a predominant mutagen in urine from 1-NP-treated rats.\n\n## Molecule 15\nSMILES: CC(=O)OCc1c2ccccc2c2ccc3cccc4ccc1c2c43\nMorgan similarity: 0.3878\n\nRecord 15-1\nEvidence family: \nTransfer likelihood: 0.766\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: bacteria (Salmonella typhimurium)\n\nAdditional details: \"Significant bacterial mutagenicity of AMBP attributed to its moderate half-life (0.7 day) (ref 8); prolonged interaction with bacterial DNA over a 2-3 day Ames incubation produces cumulative mutation induction.\"\nReported evidence: The significant bacterial mutagenicity of 6-acetoxymethylbenzo[a]pyrene (AMBP) in this case appears to be attributed to its moderate half-life (0.7 day), such that once taken up by bacteria it can interact for many hours with bacterial DNA to induce mutations.\n\n## Molecule 16\nSMILES: O=c1c(=O)c2cccc3ccc4cccc1c4c32\nMorgan similarity: 0.5455\n\nRecord 16-1\nEvidence family: \nTransfer likelihood: 0.9571\nEndpoint: bacterial_reverse_mutation\nResult: 0 ordinal_outcome_class\nConditions: \"Tested with engineered repair/regulatory mutants (uvrA, pKM101; IC203 carries ΔoxyR30); negative as a pure single chemical while mutagenic in soil fractions.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Escherichia coli WP2 uvrA/pKM101 (IC188) and WP2 uvrA oxyR/pKM101 (IC203)\n\nAdditional details: \"Synthesized per cited methods; identity verified by NMR. Oxidized PAH/quinone negative when tested alone despite being present in mutagenic fractions.\"\nReported evidence: In the reverse mutation assay using E. coli WP2 strains IC188 (uvrA/pKM101) and IC203 (uvrA oxyR/pKM101), oxidized PAH compounds including quinones were identified in the mutagenic polar fractions of PAH-contaminated soil but 'were not by themselves mutagenic' when tested individually.\n\nRecord 16-2\nEvidence family: \nTransfer likelihood: 0.8032\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella Typhimurium TA100 (hisG base-pair substitution reversion)\n\nAdditional details: \"Point (base-pair substitution) mutations reverting hisG -GGG- for -GAG-. NPQ, 9,10PQ, 5MCQ and BPQ were the four o-quinones positive in TA100.\"\nReported evidence: The PAH o-quinone 9,10PQ (9,10-pyrenequinone) caused point mutations in tester strain TA100, which reverts the hisG gene by base-pair substitution. The authors propose these point-mutagenic PAH o-quinones damage guanosine residues by covalent bond formation and/or cross-linking.\n\nRecord 16-3\nEvidence family: \nTransfer likelihood: 0.9562\nEndpoint: oxidative_damage_assay\nResult: 1 binary_outcome_class\nExperimental details:\n  - assay_method_and_endpoint: Oxidative DNA damage in HeLa cells measured as aldehydic DNA lesions (ADL) and base oxidation\n  - biological_system: HeLa S3 cells (Homo sapiens), intact-cell system\n  - exposure_and_mechanistic_conditions: P45Q treatment of HeLa cells; neocuproine (copper chelator) added to test copper involvement in intracellular oxidant generation\n  - mechanism_category: oxidative_dna_damage\n  - molecule_role: parent_test_agent\n  - result_direction: detected\n\nAdditional details: \"P45Q caused both ADL and base oxidation in cells; neocuproine reduced P45Q-induced ADL, indicating copper dependence of intracellular oxidant generation.\"\nReported evidence: In contrast, P45Q caused both ADL and base oxidation in cells. Neocuproine reduced the amount of ADL caused by P45Q, indicating that copper was still important for the intracellular generation of damaging oxidants.\n\n## Molecule 17\nSMILES: CC(=O)Nc1ccc(-c2ccccc2)cc1O\nMorgan similarity: 0.3478\n\nRecord 17-1\nEvidence family: \nTransfer likelihood: 0.9652\nEndpoint: bacterial_reverse_mutation\nResult: 0 ordinal_outcome_class\nConditions: \"Testing used human urothelial cell microsomal activation in the O-acetyltransferase-deficient strain TA98/1,8-DNP6; activity in this strain was not detected.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella Typhimurium TA98/1,8-DNP6\n\nAdditional details: \"The strain's low O-acetyltransferase activity prevented mutagenic activation; activity was also only marginally detectable in the parent TA98 under these conditions.\"\nReported evidence: For N-OH-AABP in the comparison of strains, the activity was only marginally detectable in TA98 and was not detected in TA98/1,8-DNP6 (an O-acetyltransferase-deficient strain).\n\n## Molecule 18\nSMILES: O=c1ccc2c(cc3ccc4cccc5ccc2c3c45)c1=O\nMorgan similarity: 0.3636\n\nRecord 18-1\nEvidence family: \nTransfer likelihood: 0.9079\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella typhimurium tester strains TA97a, TA98, TA100, TA102, TA104\n\nAdditional details: \"Abbreviated BPQ; bay region. Predominantly frameshift mutagen; more mutagenic than the positive-control test mutagens used for each tester strain. Aroclor-induced rat liver S9 plus NADPH did not increase mutagenicity in TA102 and TA104. BPQ also forms 2'-deoxyguanosine adducts with calf thymus DNA, plasmid DNA and oligonucleotides.\"\nReported evidence: The PAH o-quinones examined, including benzo[a]pyrene-7,8-dione (BPQ), were tested as direct-acting mutagens in Salmonella typhimurium tester strains TA97a, TA98, TA100, TA102 and TA104, and were found more mutagenic than the positive-control test mutagens used for each strain, being predominantly frameshift mutagens. An Aroclor-induced rat liver S9 plus NADPH activating system did not increase their mutagenicity.\n\n## Molecule 19\nSMILES: CC(=O)Nc1cc(O)c2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.6098\n\nRecord 19-1\nEvidence family: \nTransfer likelihood: 0.5127\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: absent\n  - test_system: Salmonella Typhimurium TA98 (plate incorporation)\n\nAdditional details: \"Direct-acting mutagenicity. Enhanced in YG1024 and diminished in TA98/1,8-DNP6.\"\nReported evidence: 1-Acetamidopyren-3-ol exhibited direct-acting mutagenicity in the Ames plate incorporation assay, with enhancement in the OAT-overproducing strain YG1024 and diminution in the OAT-deficient strain TA98/1,8-DNP6.\n\n## Molecule 20\nSMILES: CC(=O)N(O)c1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.4091\n\nRecord 20-1\nEvidence family: \nTransfer likelihood: 0.731\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella Typhimurium TA98/TA98NR/TA98/1,8-DNP6\n\nAdditional details: \"N-hydroxy-N-acetyl-1-aminopyrene (NOHAAP, >=98% pure). Positive under at least one tested condition (merged across strains and S9 presence/absence); dependent on transesterification for mutagenicity expression, particularly with S9.\"\nReported evidence: In the Ames plate incorporation assay with Salmonella tester strains TA98, TA98NR and TA98/1,8-DNP6, in the presence or absence of Aroclor-induced rat liver S9, N-hydroxy-N-acetyl-1-aminopyrene exhibited mutagenic activity under one or more assay conditions.\n\n## Molecule 21\nSMILES: ONc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.4737\n\nRecord 21-1\nEvidence family: \nTransfer likelihood: 0.8227\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella typhimurium\n\nAdditional details: \"Cited as reference 12. The hydroxylamine forms a C8-deoxyguanosyl adduct stated to be responsible for mutagenesis in Salmonella typhimurium (Ames assay). Note: no dose, strain (e.g., TA98/TA100), or activation details are given in this passage.\"\nReported evidence: The paper describes contrasting pathways for metabolic activation and detoxification of 1-nitropyrene, noting that sequential nitroreduction yields 1-nitrosopyrene, N-hydroxy-1-aminopyrene and 1-aminopyrene. It states that the hydroxylamino derivative (N-hydroxy-1-aminopyrene) has been shown to form a C8-deoxyguanosyl adduct that is responsible for the mutagenesis in Salmonella typhimurium (reference 12), as well as in Chinese hamster ovary cells, human HepG2 cells, V79 cells and human foreskin fibroblasts.\n\n## Molecule 22\nSMILES: CC(=O)Nc1c(O)cc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.5\n\nRecord 22-1\nEvidence family: \nTransfer likelihood: 0.905\nEndpoint: unspecified_mutagenicity\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: explicit_mutagen_statement\n  - experimental_context: not_reported\n  - metabolic_activation: not_applicable\n\nAdditional details: \"Described as an indirect-acting mutagen (i.e., requiring metabolic activation), citing references 2 and 18; it is a biliary metabolite of 1-nitropyrene that is released/deconjugated from a conjugate by intestinal microflora. Note: mutagenicity of the bile itself is a mixture-based finding and was not extracted.\"\nReported evidence: The text describes biliary metabolites released by intestinal-content (IC) treatment of bile from a rat administered [3H]1-nitropyrene. It states that 1-acetylaminohydroxypyrene is an 'indirect-acting mutagen (2, 18)' that was deconjugated by intestinal microflora, and that nitrohydroxypyrenes possess direct-acting mutagenicity (5, 25), noting their proportion decreased over incubation time while aminohydroxypyrenes and acetylaminohydroxypyrenes increased.\n\n## Molecule 23\nSMILES: O=c1c(=O)c2ccc([N+](=O)[O-])c3ccc4cccc1c4c32\nMorgan similarity: 0.5\n\nRecord 23-1\nEvidence family: \nTransfer likelihood: 0.8155\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: both\n  - test_system: Salmonella typhimurium TA100\n\nAdditional details: \"More mutagenic than 1-nitropyrene; mutagenic activity greater with than without the hepatic activating system, interpreted as more facile nitroreduction in the presence of the 9000 g supernatant from Aroclor pretreated rats. The hypothesis that conversion to the highly mutagenic lactone (compound 6) explains the enhanced activity was not supported since compound 6 was not detected as a metabolite.\"\nReported evidence: 1-Nitro-4,5-pyrenedione (compound 3) was also more mutagenic toward Salmonella typhimurium TA 100 than was 1-nitropyrene but, in contrast to 1-nitropyrene-4,5-diol, its mutagenic activity was greater in the presence of 9000 g supernatant (from Aroclor pretreated rats) than in its absence.\n\n## Molecule 24\nSMILES: O=c1oc2cccc3ccc4cccc1c4c32\nMorgan similarity: 0.3571\n\nRecord 24-1\nEvidence family: \nTransfer likelihood: 0.7727\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: explicit_mutagen_statement\n  - experimental_context: in_vitro\n  - metabolic_activation: absent\n  - test_system: Salmonella (Ames assay)\n\nAdditional details: \"Designated as a new type of direct mutagen in combustion-generated particulate organic matter (direct = active in the Ames assay without added S9); CAS 23702-49-0. The paper also reports the mutagenic activities of highly purified samples of this compound and their contribution to the mutagenic activity of the diesel POM organic extracts.\"\nReported evidence: The paper identifies 5H-phenanthro[4,5-bcd]pyran-5-one (compound I) as a new type of direct mutagen in combustion-generated particulate organic matter, determined along with three nitroarenes (1-nitropyrene, 9-nitroanthracene and 6-nitrobenzo[a]pyrene).\n\n## Molecule 25\nSMILES: CC(=O)Nc1cc2ccc3cccc4ccc(c1O)c2c34\nMorgan similarity: 0.5714\n\nRecord 25-1\nEvidence family: \nTransfer likelihood: 0.946\nEndpoint: unspecified_mutagenicity\nResult: 2 ordinal_outcome_class\nConditions: \"Indirect-acting mutagenicity, implying a requirement for metabolic activation; evidence rests on attribution of fecal (mixture) mutagenic activity mainly to this metabolite rather than testing of the pure substance.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: ex_vivo\n  - metabolic_activation: not_reported\n\nAdditional details: \"1-Acetylamino-6-HP is a nitropyrene metabolite identified in feces and (with 1-acetylamino-8-HP) in urine after β-glucuronidase treatment of 1-NP-dosed conventional rats; attributed as the main contributor to the indirect-acting mutagenicity of the feces.\"\nReported evidence: In metabolism studies in conventional rats administered 1-NP, the feces showed indirect-acting mutagenicity, which was mainly due to the metabolite 1-acetylamino-6-HP, with 1-acetylamino-6-HP and 1-acetylamino-8-HP as the major metabolites in β-glucuronidase-treated urine.\n\n## Molecule 26\nSMILES: CC(O)c1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.3488\n\nRecord 26-1\nEvidence family: \nTransfer likelihood: 0.9532\nEndpoint: bacterial_reverse_mutation\nResult: 0 ordinal_outcome_class\nConditions: \"Engineered bacterial strain expressing the rat orthologous enzyme rEST; negative reflects lack of SULT-mediated activation in this strain, contrasting with strong mutagenicity via hSULT1E1.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: absent\n  - test_system: Salmonella typhimurium TA1538 expressing rat SULT1E1 (rEST)\n\nAdditional details: \"Paper designation 21.\"\nReported evidence: Several polycyclic benzylic alcohols, including (-)-1-(α-hydroxyethyl)pyrene (21), were strongly mutagenic to TA1538-hSULT1E1 but inactive to the strain expressing the orthologous rat enzyme (rEST).\n\n## Molecule 27\nSMILES: O=c1c2ccc3cccc4c(=O)cc(c5ccccc15)-c2c34\nMorgan similarity: 0.3404\n\nRecord 27-1\nEvidence family: \nTransfer likelihood: 0.9611\nEndpoint: bacterial_reverse_mutation\nResult: 1 ordinal_outcome_class\nConditions: \"Low mutagenicity is enhanced by inclusion of one-electron-activating systems such as NADPH-cytochrome P450 reductase; mutagenicity is abolished by SOD and catalase, indicating reactive oxygen species mediate the effect.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Ames test (bacterial reverse mutation)\n\nAdditional details: \"Cited from reference 24. B[a]P-6,12-dione treated together with B[a]P-1,6-dione and B[a]P-3,6-dione as PAH o-quinone / extended quinone examples displaying low mutagenicity in the Ames test.\"\nReported evidence: The authors note, in a final analogy, that B[a]P-1,6-dione, B[a]P-3,6-dione, and B[a]P-6,12-dione display low mutagenicity in the Ames test. This mutagenicity is significantly enhanced by the inclusion of one-electron-activating systems such as NADPH-cytochrome P450 reductase, and is abolished by the inclusion of SOD and catalase, indicating reactive oxygen species are responsible.\n\n## Molecule 28\nSMILES: CC(=O)N(C(C)=O)c1cc2cc3ccccc3c3ccc4cccc1c4c23\nMorgan similarity: 0.3878\n\nRecord 28-1\nEvidence family: \nTransfer likelihood: 0.8755\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella typhimurium TA98 and TA1538\n\nAdditional details: \"Described as 'a potent mutagen' in the synopsis; more potent than BaP; from prior report (ref 6) employing an S9 activating system.\"\nReported evidence: The authors state that in the Ames' Salmonella typhimurium assay (ref 6) the order of mutagenic potency in TA98 and TA1538 with an S9 activating system places 4-(N,N-diacetylamino)-BaP as a potent mutagen, second only to 4-amino-BaP. The abstract independently describes 4-(N,N-diacetylamino)benzo[a]pyrene as 'a potent mutagen'.\n\n## Molecule 29\nSMILES: O=Nc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.3415\n\nRecord 29-1\nEvidence family: \nTransfer likelihood: 0.9558\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: positive_control_or_reference_use\n  - experimental_context: in_vitro\n  - metabolic_activation: absent\n  - test_system: Salmonella typhimurium TA98, TA98NR, TA98/1,8-DNP6\n\nAdditional details: \"Standard mutagen used as reference in the reversion assay; 2027 revertants at 0.02 µg/plate in TA98.\"\nReported evidence: Table 1 includes 1-nitrosopyrene as a standard mutagen, giving 2027±121 revertants/plate at 0.02 µg/plate in Salmonella typhimurium TA98 in the absence of exogenous activation, with 2086±220 in TA98NR and 1742±196 in TA98/1,8-DNP6.\n\n## Molecule 30\nSMILES: OCc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.3659\n\nRecord 30-1\nEvidence family: \nTransfer likelihood: 0.9139\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nConditions: \"Mutagenicity elicited via expression of human SULT1A1 (exogenous sulfotransferase activation); nitroreductase-deficiency comparison used strain YG7131 instead of TA1538.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella typhimurium TA1538 (human SULT1A1) compared with nitroreductase-deficient YG7131\n\nAdditional details: \"SULT-dependent mutagenicity was unaffected by nitroreductase deficiency, implying activation at the benzylic carbon rather than an N-hydroxylamine (compound contains no nitro group).\"\nReported evidence: In the abstract of the study, expression of human SULTs in Salmonella typhimurium TA1538 or TA100 strongly enhanced the mutagenicity of various nitrotoluenes and nitro- and amino-substituted benzyl alcohols. For the discrete test substance 1-hydroxymethylpyrene (which contains no nitro group), nitroreductase deficiency (using strain YG7131 instead of TA1538 for human SULT1A1 expression) did not affect the SULT-dependent mutagenicity.\n\n## Molecule 31\nSMILES: CCc1c(NC(=O)CBr)ccc2c1ccc1ccccc12\nMorgan similarity: 0.3725\n\nRecord 31-1\nEvidence family: \nTransfer likelihood: 0.7306\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: Salmonella histidine auxotrophs\n\nAdditional details: \"Reported [7] to be at least as mutagenic as 2-acetamidofluorene (AAF); produces base-pair transitions, deletions and frameshift mutations; tested with activating enzymes from rat liver.\"\nReported evidence: In comparison studies with AAF, the authors reported [7] that AAP (2-acetamidophenanthrene) is at least as mutagenic as AAF in histidine auxotrophs of Salmonella, and that it produces base-pair transitions as well as deletions and frameshift mutations; these data were obtained in the presence of activating enzymes from rat liver.\n\n## Molecule 32\nSMILES: Oc1c2ccccc2c2ccc3cccc4ccc1c2c43\nMorgan similarity: 0.3571\n\nRecord 32-1\nEvidence family: \nTransfer likelihood: 0.9196\nEndpoint: unspecified_mutagenicity\nResult: 2 ordinal_outcome_class\nConditions: \"Mutagenicity evaluated by the Ames test on TLC fraction M2 extracts rather than on the pure compound; identity of the mutagenic metabolite given as 'probable' per reference 41.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: explicit_mutagen_statement\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella (Ames test on bile/liver TLC fractions)\n\nAdditional details: \"Fraction M2 only 'possibly' among the most mutagenic fractions. Per reference 41 probable identities: M2 - 6-OH-benzo(a)pyrene and 5-OH-benzo(a)pyrene.\"\nReported evidence: TLC fraction M2 was identified as containing 6-hydroxybenzo[a]pyrene among others, and the text refers to these as mutagenic/carcinogenic metabolites, with fraction M2 possibly among the most mutagenic fractions in bile and liver.\n\n## Molecule 33\nSMILES: O=c1c2cccc3ccc4c5ccccc5cc1c4c32\nMorgan similarity: 0.4634\n\nRecord 33-1\nEvidence family: \nTransfer likelihood: 0.7687\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: bacterial (strain not specified in this passage)\n\nAdditional details: \"Result attributed to cited reference 91; the paper describes the assay only as a 'bacterial bioassay' without strain, activation, or dose details in this passage. Compound was one of the oxygenated components not tested in the human-cell bioassay of Durant et al. (7, 8).\"\nReported evidence: Cyclopenta[def]chrysene-4-one, an oxygenated PAH in Table 6 not tested by Durant et al., was reported (cited reference 91) to be mutagenic in a bacterial bioassay. This is presented in contrast to the human-cell (lymphoblastoid) bioassay mutagenicity data used elsewhere in the paper.\n\n## Molecule 34\nSMILES: CC(=O)Nc1ccc2c3c(cccc13)C(=O)c1ccccc1-2\nMorgan similarity: 0.5227\n\nRecord 34-1\nEvidence family: \nTransfer likelihood: 0.6359\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: cited_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: not_reported\n  - test_system: Salmonella (reversion assay)\n\nAdditional details: \"3-AABA is a 3-NBA (3-nitrobenzanthrone) metabolite; claimed genotoxic together with 3-ABA in the Salmonella reversion assay and in vivo mouse assays per Watanabe et al., 2005. Activation pathways involving nitroreduction, cytochrome P450 oxidation, and O-acetylation were invoked.\"\nReported evidence: 3-ABA and 3-acetylaminobenzanthrone (3-AABA) were identified as 3-NBA metabolites in mammalian cells [Borlak et al., 2000] and both are genotoxic in a number of in vitro (Salmonella reversion assay) and in vivo (mouse) assays [Watanabe et al., 2005]. The results from the Salmonella assay and the mouse model support observations that nitroreduction of 3-NBA, oxidation of the reduced metabolites by cytochrome P450 enzymes, and O-acetylation are involved in multiple activation pathways that can lead to DNA damage.\n\nRecord 34-2\nEvidence family: \nTransfer likelihood: 0.9226\nEndpoint: covalent_binding_or_adduct\nResult: 1 binary_outcome_class\nExperimental details:\n  - assay_method_and_endpoint: 32P-postlabeling DNA adduct detection (nuclease P1 and butanol extraction); DNA adduct formation in engineered cells\n  - biological_system: Chinese hamster V79MZ-h1A2 derived cell lines expressing human CYP1A2 with human NAT1, NAT2, SULT1A1 or SULT1A2\n  - exposure_and_mechanistic_conditions: 0.01, 0.1 or 1 µM 3-Ac-ABA; CYP1A2 present/absent comparison (CYP1A2 required for activation)\n  - mechanism_category: reactive_metabolite_formation\n  - metabolic_activation_system: enzyme_engineered_cells\n  - molecule_role: parent_test_agent\n  - result_direction: detected\n\nAdditional details: \"CYP1A2 required for activation of 3-Ac-ABA, probably via N-oxidation; absence of acetylated adducts suggests N-deacetylation of 3-Ac-ABA; human NATs and SULTs strongly contributed to genotoxicity.\"\nReported evidence: V79MZ-h1A2 derived cells expressing human CYP1A2 with human NAT1, NAT2, SULT1A1 or SULT1A2 were treated with 3-Ac-ABA (3-acetylaminobenzanthrone). 32P-postlabeling detected essentially 4 major and 2 minor DNA adducts. Human CYP1A2 was required for the metabolic activation of 3-Ac-ABA, probably via N-oxidation; the lack of acetylated adducts suggests N-deacetylation of 3-Ac-ABA.\n\n## Molecule 35\nSMILES: O=C(N[N+](=O)[O-])c1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.3542\n\nRecord 35-1\nEvidence family: \nTransfer likelihood: 0.7604\nEndpoint: bacterial_reverse_mutation\nResult: 2 ordinal_outcome_class\nConditions: \"Intrasanguinous host-mediated assay in rats; bacteria (TA1950) injected via tail vein, NPYR given i.m.; tested only in rats, not hamsters (Syrian golden hamsters have tails too short for i.v. injection).\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: host_mediated\n  - metabolic_activation: not_applicable\n  - test_system: Salmonella Typhimurium TA1950 harvested from rat liver\n\nAdditional details: \"Male rats (~150 g) were injected with bacteria via the tail vein, 45 min later i.m. with NPYR, and killed 60 min after NPYR injection; livers homogenized in 20 ml saline. Revertants/10^8 cfu: rat 1 (100 mg/kg) = 6.0 x 10^3; rat 2 (50 mg/kg) = 4.0 x 10^3; control = 0.2 x 10^3. NPYR is a liver carcinogen in rats.\"\nReported evidence: One mutagenesis experiment was carried out using an intrasanguinous host-mediated assay in rats. Salmonella TA1950 was injected into the tail vein of rats; 45 min later the rats were injected i.m. with NPYR, either 50 or 100 mg/kg, and 1 h subsequently the bacteria were harvested from the liver. Both doses led to an increase in revertant fraction relative to the revertant fraction in bacteria harvested from the untreated control, and the revertant fraction was greater at the higher dose (Table III).\n\n## Molecule 36\nSMILES: CC(=O)Nc1cc([N+](=O)[O-])c2cccc3c2c1-c1ccccc1C3=O\nMorgan similarity: 0.3636\n\nRecord 36-1\nEvidence family: \nTransfer likelihood: 0.812\nEndpoint: other_mammalian_forward_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - biological_test_system: Homo sapiens; human cells; plasmid supF shuttle vector\n  - endpoint_class: sequence_level_gene_change\n  - genetic_locus_or_chromosome_target: supF\n  - result_call: positive\n  - study_context: in_vitro\n\nAdditional details: \"Summary-of-literature result: N-Aco-N-Ac-ABA, the N-acetoxy amide derivative of the 3-NBA metabolite, induced mainly GC to TA transversion mutations in human cells via a plasmid supF shuttle vector system (associated reference 47). A companion plasmid polymerase arrest assay on the same supF target showed preferential binding to guanine residues, consistent with guanine-adduct-driven mutations. No dose, exposure duration, cell line designation, activation condition, or numeric mutant frequency was reported in this passage; endpoint and mutation spectrum are as stated.\"\nReported evidence: The paper notes evidence that 3-Ac-ABA derivatives may play a role in the biological activity of 3-NBA, citing that N-Aco-N-Ac-ABA (3-nitro-N-acetylaminobenzanthrone, a reactive acetyl ester metabolite) induces mainly GC to TA transversion mutations in human cells using a plasmid supF shuttle vector system (reference 47). A parallel plasmid polymerase arrest assay targeting the supF gene showed preferential binding of N-Aco-N-Ac-ABA to guanine residues, which the authors relate to the observed mutations being induced by guanine adducts.\n\n## Molecule 37\nSMILES: CC(=O)Nc1ccc2c(ccc3ccccc32)c1\nMorgan similarity: 0.4419\n\nRecord 37-1\nEvidence family: \nTransfer likelihood: 0.8803\nEndpoint: mammalian_cell_gene_mutation\nResult: 2 ordinal_outcome_class\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: present\n  - test_system: AS52 cells (gpt-transfected CHO-derived, HPRT-deficient)\n\nAdditional details: \"Mutagenic and cytotoxic only with S9 mix; AAF=AAP potency; 10-100 µM (30 µM run shown); gpt gene mutation assay; 6-thioguanine resistance; mutation spectrum among 5 clones: G→T 5/5, G→C 2/5, G→A 1/5, C→T 1/5.\"\nReported evidence: 2-Acetylaminophenanthrene (AAP) was mutagenic and cytotoxic in AS52 cells only when supplemented with rat liver S9 mix; AAP was equally potent to AAF and less potent than AAS, tested at 10-100 µM.\n\n## Molecule 38\nSMILES: Cc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.359\n\nRecord 38-1\nEvidence family: \nTransfer likelihood: 0.7631\nEndpoint: other_microorganism_mutation\nResult: 2 ordinal_outcome_class\nConditions: \"Site-specific N6-adenine MP DNA adducts preformed in a 28-base oligonucleotide construct; mutagenesis scored only for constructs with double adducts positioned 3 bp apart on opposite strands.\"\nExperimental details:\n  - chemical_entity_type: defined_chemical\n  - evidence_basis: current_study_experiment\n  - experimental_context: in_vitro\n  - metabolic_activation: absent\n  - test_system: Escherichia coli (M13mp19 shuttle vector; 28mer lac construct)\n\nAdditional details: \"Double MP adducts induced base substitutions mainly adjacent to the modified adenines and single base insertions; frequency ~4% (8/196 analyzed clones); single MP adducts were not mutagenic; mutations detected by direct nucleotide sequencing of clones carrying the 28mer construct.\"\nReported evidence: In Escherichia coli, double 1-methylpyrene (MP) adducts induced base substitutions at positions mainly adjacent to modified adenines and single base insertions, whereas single MP adducts were not mutagenic; the mutation frequency induced by double MP adducts was ~4% (eight mutations out of 196 analyzed). DNA was a 28-base construct ligated into M13mp19 for transfection into E. coli.\n\n## Molecule 39\nSMILES: Nc1nc2nc(Nc3ccc4ccc5cccc6ccc3c4c56)[nH]c2c(=O)[nH]1\nMorgan similarity: 0.3455\n\nRecord 39-1\nEvidence family: \nTransfer likelihood: 0.9315\nEndpoint: repair_activity_or_kinetics\nResult: incorporation order dCTP>dGTP>dATP≈dTTP (Mg^2+ and Mn^2+); extension order G^4P·C>G^4P·A>G^4P·G≈G^4P·T (Mg^2+) and G^4P·C>G^4P·G≈G^4P·A>G^4P·T (Mn^2+)\nExperimental details:\n  - assay_version: single-nucleotide incorporation and extension of KF (exo−) on dG4AP-modified primer-template, Mg2+ vs Mn2+, followed by Maxam-Gilbert sequence analysis of isolated extension products\n  - biological_system: in vitro cell-free | synthetic 20mer/21mer primer-templates opposite dG4AP, purified KF (exo−)\n  - dose_or_concentration: 100\n  - dose_unit: µM dNTP\n  - endpoint_class: repair_activity_capacity_or_lesion_removal\n  - endpoint_subtype: nucleotide incorporation opposite and extension past dG4AP (dCTP preference / bypass efficiency)\n  - molecule_role: repair_factor_or_substrate\n  - result_status: quantitative_result_without_directional_call\n\nAdditional details: \"single-dNTP incorporation measured as % of 20mer primer elongated to 21mer; extension measured as % of 21mer elongated to full-length product; extension runs used 100 µM of all four dNTPs; each time-course data point is average of two independent determinations; Maxam-Gilbert sequencing showed dCTP incorporation opposite dG4P, interpreted as primarily error-free bypass within detection limit (~95%); sequencing 'shadow' bands in G and A+G lanes noted as uncertain, not scored as mutagenic bypass.\"\nReported evidence: At 100 µM, the correct nucleotide dCTP was incorporated opposite the dG4AP adduct more rapidly than any other dNTP in the presence of Mg2+; dGTP was incorporated at significant frequency but more slowly, while dATP and dTTP rates were negligible. With Mg2+ replaced by Mn2+, dCTP was still most preferred and the incorporation rate followed dCTP > dGTP > dATP ≈ dTTP. Extension of 21mer primer-templates with C, G, A or T opposite the adduct to full-length followed G4P·C > G4P·A > G4P·G ≈ G4P·T (Mg2+) and G4P·C > G4P·G ≈ G4P·A > G4P·T (Mn2+). Maxam-Gilbert sequencing confirmed deoxycytidylic acid incorporation opposite dG4P, i.e. primarily error-free bypass within the ~95% detection limit.\n\n## Molecule 40\nSMILES: CC(=O)Nc1ccc2c3c(cccc13)C(=O)c1[c]cccc1-2\nMorgan similarity: 0.46\n\nRecord 40-1\nEvidence family: \nTransfer likelihood: 0.9453\nEndpoint: 32p_postlabelling\nResult: 1 signed_effect_direction\nExperimental details:\n  - assay_version: nuclease P1 digestion and butanol extraction enrichment versions\n  - biological_system: in vitro cells | Cricetulus griseus | V79MZ-h1A2-derived cell lines expressing human CYP1A2 in conjunction with human NAT1, NAT2, SULT1A1 or SULT1A2\n  - dose_or_concentration: 0.01, 0.1, 1\n  - dose_unit: µM\n  - endpoint_class: dna_adduct\n  - endpoint_subtype: DNA adducts (4 major, 2 minor)\n  - metabolic_activation_presence: present\n  - molecule_role: test_or_damage_agent\n  - result_status: damage_or_response_increased\n\nAdditional details: \"lack of acetylated adducts suggests N-deacetylation; NAT-catalyzed N,O-acetyltransfer to N-acetoxyester proposed in bioactivation; RAL not reported in supplied text\"\nReported evidence: Cells were treated with 0.01, 0.1 or 1 µM N-acetyl-N-hydroxy-3-aminobenzanthrone (N-Ac-N-OH-ABA); using both enrichment versions of the 32P-postlabeling assay (nuclease P1 digestion and butanol extraction), essentially 4 major and 2 minor DNA adducts were detected in the appropriate V79MZ-h1A2-derived cell lines expressing human CYP1A2 plus NAT1/NAT2/SULT1A1/SULT1A2. The lack of acetylated adducts suggests N-deacetylation of N-Ac-N-OH-ABA, and N,O-acetyltransfer reactions catalyzed by human NATs leading to the corresponding N-acetoxyester may be important in the bioactivation of N-Ac-N-OH-ABA.\n\n## Molecule 41\nSMILES: CC(=O)Nc1cccc(C(=O)O)c1F\nMorgan similarity: 0.3556\n\nRecord 41-1\nEvidence family: \nTransfer likelihood: 0.9303\nEndpoint: targeted_dna_adduct_measurement\nResult: Harsch and Vouros coupled CE, using the linear polymer PVP as a replaceable sieving matrix, to an ion trap mass spectrometer to analyze a series of oligonucleotides containing covalent AAF modifications, with identification by ESI-MS in negative ion detection. Separation was accomplished for isomeric AAF-modified hexanucleotides differing only in base sequence, and baseline separation was achieved for a 10-compound mixture of five nonisomeric AAF-modified oligonucleotides and their unmodified parent oligonucleotides. Mass determination gives nucleobase composition, requiring CID/multiple-stage MS for base-sequence elucidation.\nExperimental details:\n  - assay_version: CE with PVP sieving matrix coupled to ion trap MS, ESI negative ion detection\n  - biological_system: cell-free | AAF-modified oligonucleotides (isomeric hexanucleotides and 5 nonisomeric AAF-modified oligonucleotides and their unmodified parent oligonucleotides)\n  - endpoint_class: dna_adduct\n  - endpoint_subtype: covalent AAF (aminofluorene) adducts on oligonucleotides\n  - molecule_role: measured_dna_lesion_or_product\n  - result_status: analytical_validation\n\nAdditional details: \"Method-performance demonstration: separation of AAF-adducted versus unmodified oligonucleotides based partly on hydrophobic interactions (polycyclic aromatic fluorene moiety); baseline separation of a 10-compound mixture; mass determination yields nucleobase composition, base-sequence identity needs CID multi-stage MS; evidence_source = prior study by Harsch and Vouros (ref 101) reviewed in the supplied text.\"\nReported evidence: Harsch and Vouros coupled CE, using the linear polymer PVP as a replaceable sieving matrix, to an ion trap mass spectrometer to analyze a series of oligonucleotides containing covalent AAF modifications, with identification by ESI-MS in negative ion detection. Separation was accomplished for isomeric AAF-modified hexanucleotides differing only in base sequence, and baseline separation was achieved for a 10-compound mixture of five nonisomeric AAF-modified oligonucleotides and their unmodified parent oligonucleotides. Mass determination gives nucleobase composition, requiring CID/multiple-stage MS for base-sequence elucidation.\n\n## Molecule 42\nSMILES: O=C(CI)Nc1ccc2ccc3cccc4ccc1c2c34\nMorgan similarity: 0.561\n\nRecord 42-1\nEvidence family: \nTransfer likelihood: 0.8879\nEndpoint: covalent_binding_or_adduct\nResult: 1 binary_outcome_class\nExperimental details:\n  - assay_method_and_endpoint: In vitro alkylation/covalent modification of CYP3A4 Cys239 (protein adduct formation) with assessment of resulting enzyme inactivation\n  - biological_system: CYP3A4 enzyme in vitro (Cys239 as modification site)\n  - exposure_and_mechanistic_conditions: PIA is a direct-acting electrophile that alkylates CYP3A4 without requiring enzyme-catalyzed bioactivation; compound concentration not stated in the cited prior study\n  - mechanism_category: electrophile_reactivity_or_covalent_binding\n  - molecule_role: parent_test_agent\n  - result_direction: detected\n\nAdditional details: \"Secondary-citation evidence (Baer et al., 2007). PIA alkylated CYP3A4 Cys239 (covalent modification detected) but produced no measurable enzyme inactivation rate, illustrating that covalent modification does not necessarily cause loss of function.\"\nReported evidence: Prior work (Baer et al., 2007) demonstrated that both raloxifene and N-(1-pyrene)iodoacetamide (PIA) alkylate Cysteine 239 of CYP3A4 in vitro (covalent modification detected for both), yet only raloxifene produced a measurable enzyme inactivation rate, showing a compound-dependent disconnect between covalent protein modification and activity loss.\n\n## Molecule 43\nSMILES: CC(=O)NC1=Cc2cccc3cccc(c23)C1=O\nMorgan similarity: 0.4444\n\nRecord 43-1\nEvidence family: \nTransfer likelihood: 0.9434\nEndpoint: oxidative_damage_assay\nResult: 1 binary_outcome_class\nExperimental details:\n  - assay_method_and_endpoint: Immunohistochemical detection of nitrotyrosine (peroxynitrite-mediated protein nitration) in liver sections using anti-nitrotyrosine antibody visualized with Vectastain ABC kit (magnification x400)\n  - biological_system: In vivo mouse (Mus musculus) liver; wild-type or TNFR1-/- mice\n  - exposure_and_mechanistic_conditions: Acetaminophen 300 mg/kg vs PBS control; liver sections prepared 1-6 h after treatment; genotype comparison wild-type vs TNFR1-/-\n  - mechanism_category: oxidative_stress_or_antioxidant_defense\n  - metabolic_activation_system: whole_animal_metabolism\n  - molecule_role: parent_test_agent\n  - result_direction: detected\n\nAdditional details: \"In wild-type mice nitrotyrosine staining of hepatocytes was evident at 6 h; in TNFR1-/- mice hepatocyte nitrotyrosine staining appeared within 1 h. Kupffer cell peroxynitrite (nitrotyrosine) production occurred rapidly after acetaminophen in wild-type mice but was not detectable at any time in TNFR1-/- mice, despite NOS II protein appearance. Peroxynitrite is described as an oxidant able to induce lipid peroxidation and DNA damage.\"\nReported evidence: Liver sections prepared 1-6 h after treatment of wild-type or TNFR1-/- mice with PBS control or acetaminophen (300 mg/kg) were stained with antibody to nitrotyrosine. Arrowheads indicate areas of nitrotyrosine staining.\n\n## Molecule 44\nSMILES: O=c1c(=O)c2cc3ccccc3c3ccc4cccc1c4c23\nMorgan similarity: 0.5\n\nRecord 44-1\nEvidence family: \nTransfer likelihood: 0.8218\nEndpoint: metabolic_enzyme_activity_or_inactivation\nResult: 1 binary_outcome_class\nExperimental details:\n  - assay_method_and_endpoint: DDH quinone reductase activity (rate of NADPH-dependent reduction of the K-region o-quinone)\n  - biological_system: Purified rat liver dihydrodiol/3alpha-hydroxysteroid dehydrogenase (DDH) enzyme preparation\n  - exposure_and_mechanistic_conditions: NADPH present as cofactor for quinone reduction; substrate concentration not reported in the abstract\n  - mechanism_category: detoxification_or_conjugation\n  - metabolic_activation_system: recombinant_or_reconstituted_enzyme\n  - molecule_role: parent_test_agent\n  - result_direction: detected\n\nAdditional details: \"Reported within the group of K-region o-quinones reduced at 1-10 µmol/min·mg enzyme; range not representable by a single value.\"\nReported evidence: The K-region o-quinone of benzo(a)pyrene (benzo(a)pyrene-4,5-quinone) was reduced by purified rat liver DDH at rates within 1-10 µmol/min·mg enzyme in the presence of NADPH.\n\n# Required JSON shape\n{\n  \"claims\": [\n    {\n      \"claim\": \"concise evidence-grounded statement\",\n      \"evidence_role\": \"supportive | contradictory\",\n      \"molecule_ids\": [\n        \"Molecule N\"\n      ],\n      \"record_ids\": [\n        \"Record N-N\"\n      ]\n    }\n  ],\n  \"final_prediction\": \"positive | negative\",\n  \"positive_probability\": \"JSON number from 0 to 1 inclusive; P(TDC label 1 / positive / a positive bacterial reverse-mutation outcome)\"\n}"
+        },
+        {
+          "role": "assistant",
+          "content": "{\n  \"claims\": [\n    {\n      \"claim\": \"1-Acetamidopyrene, which shares the acetamido-pyrene core with the query, is positive in TDC training labels and in Ames tests using TA98, TA98NR and TA98/1,8-DNP6, both with and without S9. This strongly supports a positive outcome for the query because the acetamido-pyrene moiety is the key mutagenic liability, and the additional quinone carbonyls add redox/DNA-reactive potential.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 1\", \"Molecule 11\"],\n      \"record_ids\": [\"Record 1-1\", \"Record 11-1\", \"Record 11-2\", \"Record 11-4\"]\n    },\n    {\n      \"claim\": \"Hydroxylated acetamidopyrenes such as 1-acetamidopyren-8-ol, -6-ol and -3-ol are positive in TDC labels and/or Ames TA98 assays, with activity dependent on N-oxidation and O-acetylation. These pathways are available to the query's acetamido group and support a positive bacterial reverse-mutation prediction.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 2\", \"Molecule 4\", \"Molecule 5\", \"Molecule 12\", \"Molecule 14\", \"Molecule 19\"],\n      \"record_ids\": [\"Record 2-1\", \"Record 12-1\", \"Record 12-2\", \"Record 14-2\", \"Record 14-4\", \"Record 19-1\"]\n    },\n    {\n      \"claim\": \"Acetamido-substituted polycyclic quinone/ketone systems, including diacetamidoanthraquinone and 3-acetylaminobenzanthrone, are positive in Salmonella reversion assays. This provides direct support for an acetamido group combined with a quinone/ketone-containing polycyclic scaffold being mutagenic.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 9\", \"Molecule 34\"],\n      \"record_ids\": [\"Record 9-1\", \"Record 34-1\"]\n    },\n    {\n      \"claim\": \"N-hydroxy-N-acetyl-1-aminopyrene and N-hydroxy-1-aminopyrene are positive in Salmonella, supporting the bioactivation pathway of acetamido-pyrenes to reactive nitrenium species that cause bacterial reverse mutations.\",\n      \"evidence_role\": \"supportive\",\n      \"molecule_ids\": [\"Molecule 20\", \"Molecule 21\"],\n      \"record_ids\": [\"Record 20-1\", \"Record 21-1\"]\n    },\n    {\n      \"claim\": \"Quinone-only evidence is mixed: an unsubstituted pyrenequinone was negative in E. coli WP2, and some B[a]P-quinones show low ROS-mediated Ames activity, but 9,10-pyrenequinone and B[a]P-7,8-dione are positive in Salmonella. These quinone data do not outweigh the strong positive acetamido-pyrene evidence, but they provide limited contradictory context.\",\n      \"evidence_role\": \"contradictory\",\n      \"molecule_ids\": [\"Molecule 16\", \"Molecule 18\", \"Molecule 27\"],\n      \"record_ids\": [\"Record 16-1\", \"Record 16-2\", \"Record 18-1\", \"Record 27-1\"]\n    }\n  ],\n  \"final_prediction\": \"positive\",\n  \"positive_probability\": 0.87\n}",
+          "reasoning": "We need answer JSON. Need analyze evidence. Need reason. Need produce claims and final prediction positive_probability.\n\nWe have query molecule SMILES: CC(=O)Nc1ccc2c(=O)c(=O)c3cccc4ccc1c2c43. Need parse structure. It is acetamido-substituted polycyclic quinone? SMILES: CC(=O)Nc1ccc2c(=O)c(=O)c3cccc4ccc1c2c43. Let's map. Rings: acetamido on aromatic ring. There are two carbonyls adjacent? c(=O)c(=O) indicates adjacent quinone (diketone) fused to polycyclic aromatic. Maybe this is 6-acetamido...pyrenequinone? Query has acetamido and quinone carbonyls. Need predict bacterial reverse mutation under exact reported strain panel and metabolic activation condition? Query says exact reported strain panel and activation condition not provided. We need predict positive/negative bacterial reverse-mutation outcome. Use evidence. Need decide.\n\nLet's understand query structure. SMILES: CC(=O)Nc1ccc2c(=O)c(=O)c3cccc4ccc1c2c43. This is maybe N-(6-oxo? no) - acetamido anthracenedione? Let's count rings. Atoms: aromatic carbons. Acetamido group N-C(=O)-CH3 on ring. Then c1ccc2 c(=O) c(=O) c3 cccc4 ccc1 c2 c43. Looks like 1-acetamido-pyrene-? with two carbonyls as quinone at positions? Maybe pyrenequinone with acetamido substituent. Similar to Molecule 1? Molecule 1: CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34 (N-acetyl-1-aminopyrene, 1-acetamidopyrene) no quinone. Query has c(=O)c(=O) adjacent = pyrene-4,5-dione? Maybe 1-acetamido-4,5-pyrenedione? Need evaluate.\n\nEvidence includes many acetamido-pyrene analogs with hydroxy groups; most positive. Also some quinones (pyrenequinone) negative or positive depending. Need integrate.\n\nMain evidence:\n- Molecule 1 identical to query except no quinone carbonyls? Molecule 1: CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34. Query: CC(=O)Nc1ccc2c(=O)c(=O)c3cccc4ccc1c2c43. Difference: Molecule 1 has two aromatic CH in positions where query has two carbonyls? Actually Molecule 1 has ccc ccc? Query has c(=O)c(=O). So query is quinone version. Molecule 1 label positive (TDC training label) and direct Ames records positive. Molecule 2,4,5 etc hydroxy acetamidopyrenes positive. Molecule 16 is pyrenequinone? SMILES: O=c1c(=O)c2cccc3ccc4cccc1c4c32 (maybe 4,5-pyrenequinone? no substituent). Records: negative in E. coli, positive in TA100 point mutations? Wait record 16-2: 9,10-pyrenequinone? For Molecule 16 SMILES O=c1c(=O)c2cccc3ccc4cccc1c4c32 likely pyrenequinone? Record 16-1 negative in E. coli WP2; record 16-2 positive in TA100 for 9,10-pyrenequinone, but Molecule 16 may be 4,5-pyrenequinone? Need parse. Molecule 18: O=c1ccc2c(cc3ccc4cccc5ccc2c3c45)c1=O (benzo[a]pyrene-7,8-dione) positive. Molecule 27 B[a]P-quinones low mutagenicity. So quinone alone can be positive oxidative.\n\nQuery has both acetamido and quinone. Need assess likely bacterial reverse mutation.\n\nNeed identify exact strain panel and activation? Query didn't supply. We need predict positive/negative. Direct evidence from analogs.\n\nNeed consider labels from tdc_training_labels: Molecule 1 positive, Molecule 2 positive, Molecule 4 positive, Molecule 5 positive, Molecule 6 positive, Molecule 7 positive, Molecule 9 positive, Molecule 10 positive. Negative: Molecule 3 (quinoline? no), Molecule 8 (azo). Query most similar to Molecule 1 (Morgan 0.7941), which is positive. Query also has quinone, which may be direct-acting positive or negative but likely still positive. Need maybe query is \"1-acetamidopyrene-4,5-dione\" and known mutagen? Let's see.\n\nCould be 1-acetamido-4,5-pyrenequinone. Potential structural alerts: aromatic acetamido can form nitrenium after S9; quinone can redox cycling. Likely positive.\n\nNeed produce final JSON with claims. Need include claim molecules/records. Need \"positive_probability\" as probability positive. Probably high ~0.85-0.9. Need balance.\n\nLet's analyze all evidence blocks to make claims.\n\nWe need process each molecule/record.\n\nMolecule 1: SMILES same as 1-acetamidopyrene, query is quinone derivative. Record 1-1 TDC label Y=1 positive. Record 11 direct evidence for same molecule: positive Ames TA98 strains, with/without S9, and specifically TA98 with S9. Also oxidativedamage, no strand breaks in mammalian cells but not relevant. Strong supportive analog: removal of quinone? Actually analog has no carbonyls; query has carbonyls. But acetamido pyrene core same. Positive.\n\nMolecule 2: 1-acetamidopyren-8-ol, TDC label positive; Record 12-1 minimally active positive? label Y=1 in TDC. Record 12-2 mutagenic only with S9 in Salmonella. Supportive.\n\nMolecule 3: acetamido quinoline? negative, low similarity 0.43; not transferable to polycyclic quinone.\n\nMolecule 4: 1-acetamidopyren-6-ol, TDC positive; Record 14 negative without S9 / lacking O-acetylation but positive with S9 and bacterial O-acetylation; positive in TA98 with S9. Supportive.\n\nMolecule 5: 1-acetamidopyren-3-ol, TDC positive; Record 19 direct-acting positive in TA98, enhanced OAT. Supportive.\n\nMolecule 6,7: acenaphthene? acetamido phenanthrene? Actually different polycyclic with phenol, positive TDC. Supportive.\n\nMolecule 9: acetamido anthraquinone? SMILES CC(=O)Nc1ccc(NC(C)=O)c2c1C(=O)c1ccccc1C2=O (2,7-diacetamido anthraquinone?) positive TDC. This has quinone plus acetamido, structurally relevant. Supportive.\n\nMolecule 10: N-acetyl aminoquinoline? positive TDC.\n\nMolecule 8: azo negative, not relevant.\n\nMolecule 16: pyrenequinone without acetamido? Need assess. Record 16-1 negative in E. coli WP2; but E. coli WP2 not Salmonella? It says reverse mutation assay E. coli WP2 strains, negative as pure chemical. Record 16-2 positive in Salmonella TA100 for 9,10-pyrenequinone. So quinone itself may be positive in TA100, but query likely TA98? If query has acetamido, frameshift. This evidence contradictory for broad quinone but not strong. Molecule 18 BPQ positive in TA strains (frameshift). Molecule 27 B[a]P quinones low mutagenicity, ROS-mediated. So quinone evidence mixed.\n\nMolecule 15: acetoxymethyl-BaP positive but has no acetamido, not direct.\n\nMolecule 17: N-OH-AABP? negative in TA98/1,8-DNP6, marginal TA98; but not query.\n\nMolecule 20: N-hydroxy-N-acetyl-1-aminopyrene positive; query acetamido not N-hydroxy but can be bioactivated.\n\nMolecule 21: N-hydroxy-1-aminopyrene positive; supports activation.\n\nMolecule 22: 1-acetylaminohydroxypyrene indirect-acting positive.\n\nMolecule 23: 1-nitro-4,5-pyrenedione positive in TA100 (quinone + nitro), relevant to quinone.\n\nMolecule 25: 1-acetylamino-6-HP positive indirect.\n\nMolecule 28: diacetyl amino BaP positive.\n\nMolecule 34: 3-acetylaminobenzanthrone positive in Salmonella, plus DNA adducts. This is significant: acetamido polycyclic ketone/quinone? It has benzanthrone with acetyl amino, positive. Similar to query acetamido + carbonyl-containing PAH.\n\nMolecule 43: acetaminophen oxidative not relevant.\n\nMolecule 44: BaP quinone reduction not mutagenicity.\n\nNeed final prediction positive. Need include claims supportive for major analogs and contradictory maybe pyrenequinone negative? Claims should reflect evidence.\n\nNeed output exactly JSON with claims array. final_prediction \"positive\". positive_probability maybe 0.85? Need justify. Since no exact strain panel, but positive across TA98 and S9 based on analog. Let's set 0.87.\n\nNeed ensure molecule_ids and record_ids strings. Could cite Molecule 1, Records 1-1 and 11-1 etc. Need at least one identifier per claim. Let's craft claims:\n\n1. N-acetyl-1-aminopyrene (same acetamido-pyrene core, lacking quinone carbonyls) is positive in TDC training labels and in Ames TA98, with/without S9; supports positive for query because acetamido-pyrene moiety is the key mutagenic liability, and carbonyls add redox/DNA-reactive potential.\n2. Hydroxylated acetamidopyrene analogs (Molecules 2,4,5) are positive, often requiring S9 and O-acetylation; support transferability across substitutions on pyrene, including electron-withdrawing carbonyls.\n3. Acetamido-substituted PAH quinone/anthraquinone analogs (Molecule 9, 34) positive; direct evidence for acetamido + quinone/ketone.\n4. Quinone-only evidence mixed: pyrenequinone negative in E. coli but positive in TA100; B[a]P quinones positive; not decisive but not outweighing acetamido positive.\n5. Negative analogs (Molecule 3, 8) structurally dissimilar, little weight.\n\nNeed maybe contradictory claim: Molecule 16-1 negative in E. coli WP2; but not same strain/activation, limited. Could include in contradictory claim? The \"evidence_role\" for claim: supportive or contradictory. We can include one contradictory claim: Unsubstituted pyrenequinone lacked mutagenicity in E. coli WP2 (Record 16-1), and B[a]P quinones low mutagenicity (Record 27-1), suggesting quinone alone not strongly positive; but query's acetamido group supplies additional activation pathway. That is contradictory evidence. But final positive.\n\nNeed not overdo. Output JSON with claims maybe 4-5.\n\nNeed positive_probability as JSON number 0.87. Ensure final_prediction string \"positive\" not \"positive\"? Instructions say \"positive\" or \"negative\". Use \"positive\".\n\nLet's craft concise claims.\n\nNeed be careful \"Molecule 11\" is same SMILES as Molecule 1 but separate molecule ID? They are duplicates? Both SMILES CC(=O)Nc1ccc2ccc3cccc4ccc1c2c34. Yes Molecule 1 and Molecule 11 same. We can cite both Molecule 1 and 11 and records.\n\nLet's create claims:\n\nClaim 1:\n\"1-Acetamidopyrene (Molecule 1/11), sharing the acetamido-pyrene core with the query, is positive in TDC labels and Ames TA98/TA98NR/TA98/1,8-DNP6 with and without S9; positive mutagenicity even without S9 in some conditions.\"\nEvidence_role supportive\nmolecule_ids: [\"Molecule 1\", \"Molecule 11\"]\nrecord_ids: [\"Record 1-1\", \"Record 11-1\", \"Record 11-2\", \"Record 11-4\"]\n\nClaim 2:\n\"Hydroxylated acetamidopyrenes (1-acetamidopyren-8-ol, -6-ol, -3-ol) are positive in TDC labels and/or Ames TA98 with S9; activity depends on N-oxidation and O-acetylation, pathways available to the query's acetamido group.\"\nSupportive; Molecule 2,4,5,12,14,19; records 2-1,12-1,12-2,14-2,14-4,19-1 etc.\n\nClaim 3:\n\"Acetamido-substituted anthraquinone/benzanthrone PAHs, e.g., diacetamidoanthraquinone (Molecule 9) and 3-acetylaminobenzanthrone (Molecule 34), are positive in Salmonella, directly supporting an acetamido + quinone/ketone polycyclic scaffold.\"\nSupportive; Molecule 9,34; records 9-1,34-1.\n\nClaim 4:\n\"N-hydroxy-N-acetyl-1-aminopyrene (Molecule 20) and N-hydroxy-1-aminopyrene (Molecule 21) are positive in Salmonella, supporting the bioactivation pathway for acetamido-pyrene to reactive nitrenium.\"\nSupportive; records 20-1,21-1.\n\nClaim 5:\n\"Quinone-only compounds provide mixed evidence: pyrenequinone was negative in E. coli WP2 (Record 16-1) but 9,10-pyrenequinone was positive in TA100 (Record 16-2), and B[a]P-7,8-dione positive (Record 18-1); thus the quinone moiety does not rule out positivity and may contribute oxidative/frameshift mutagenicity.\"\nMaybe role supportive? It's mixed; could be \"supportive\" because final positive? Or \"contradictory\" because includes negative. Better maybe separate contradictory claim:\n\"Unsubstituted pyrenequinone was not mutagenic in E. coli WP2 (Record 16-1) and some B[a]P-quinones show low ROS-dependent Ames activity (Record 27-1), providing limited contradictory context; however, the query's acetamido group offers an additional strong activation pathway absent in these quinones.\"\nEvidence_role contradictory\nmolecule_ids [\"Molecule 16\",\"Molecule 27\"] records [\"Record 16-1\",\"Record 27-1\"].\n\nClaim 6: Negative dissimilar analogs? Maybe not needed.\n\nNeed final prediction positive. Positive_probability maybe 0.86. Let's choose 0.87.\n\nNeed ensure JSON valid with keys. \"positive_probability\" as number not string. final_prediction no extra. Use double quotes.\n\nLet's produce."
+        }
+      ],
+      "usage": {
+        "completion_tokens": 4088,
+        "prompt_tokens": 18183,
+        "total_tokens": 22271,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": null,
+          "audio_tokens": 0,
+          "reasoning_tokens": 3313,
+          "rejected_prediction_tokens": null,
+          "image_tokens": 0
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost": 0.0020155422,
+        "is_byok": false,
+        "cost_details": {
+          "upstream_inference_cost": 0.0020155422,
+          "upstream_inference_prompt_cost": 0.0007891422,
+          "upstream_inference_completions_cost": 0.0012264
+        }
+      },
+      "tool_count": 0
+    }
+  ],
+  "source_hashes": {
+    "request.json": "3eb1c9a6b07b74951c14246337193cea18ee273fd245d7edebd96bcbff12a549",
+    "trace_messages.jsonl": "15079ca5f05a422d9d8cf0db329d48c895bac103a3df7e03bebe1d9b9ded694a",
+    "final_reasoning_output.json": "67367d5312bb4fd5478470ca18ec7afa4b3ae7a5bf77e49c65394c4688c24254",
+    "single_molecule_reasoning_output.json": "5e8df2aa7f3073031e1c6aa8df763887fe277b13c23c66af37d8b0b1b558d97d"
+  },
+  "provenance": {
+    "run_uid": "f26a122d-5273-48ed-98c7-748f86d09bb1",
+    "source_run_uid": "d4ee4860-61b7-4cda-a368-f1eb341d2cdf",
+    "prompt_version": "final_full_flat_compact_transfer_v3_ames_probability_v1",
+    "provider": "Wafer",
+    "requested_model": "deepseek/deepseek-v4-flash-0731",
+    "served_model": "deepseek/deepseek-v4-flash-0731"
+  }
+}

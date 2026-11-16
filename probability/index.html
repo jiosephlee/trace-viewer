@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-store">
+<title>TDC Probability Trace Example</title>
+<style>
+  * { box-sizing: border-box; }
+  :root {
+    --bg: #f4f6f8;
+    --panel: #ffffff;
+    --line: #dce2e8;
+    --muted: #64748b;
+    --text: #17202a;
+    --nav: #17212b;
+    --blue: #1d5fa7;
+    --green: #087a55;
+    --red: #b42318;
+    --amber: #a15c00;
+    --header-height: 148px;
+  }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+  header { position: sticky; top: 0; z-index: 10; padding: 12px 18px; color: #fff; background: var(--nav); box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+  h1 { margin: 0 0 10px; font-size: 18px; letter-spacing: 0; }
+  .build { margin-left: 8px; color: #9bc5ed; font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .task-nav { display: flex; flex-wrap: wrap; gap: 8px; }
+  .task-nav + .task-nav { margin-top: 8px; }
+  .nav-label { min-width: 58px; align-self: center; color: #9fb0c1; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+  .task-link { padding: 7px 11px; border: 1px solid #526171; border-radius: 5px; color: #dbe7f2; text-decoration: none; font-size: 13px; font-weight: 700; }
+  .task-link.active { border-color: #9bc5ed; color: #fff; background: var(--blue); }
+  .task-link.download { margin-left: auto; }
+  select, input, button { min-height: 34px; border-radius: 5px; font: 13px inherit; }
+  select, input { width: 100%; border: 1px solid #526171; padding: 6px 8px; color: #fff; background: #263442; }
+  button { border: 0; padding: 7px 12px; color: #fff; background: var(--blue); cursor: pointer; font-weight: 700; }
+  button:disabled { opacity: .55; cursor: wait; }
+  main { width: 100%; margin: 0; padding: clamp(12px, 1vw, 24px); }
+  .layout { display: grid; grid-template-columns: clamp(260px, 18vw, 320px) minmax(0, 1fr); gap: 14px; }
+  aside, .section { border: 1px solid var(--line); background: var(--panel); }
+  aside { position: sticky; top: calc(var(--header-height) + 12px); align-self: start; max-height: calc(100vh - var(--header-height) - 24px); overflow: hidden; }
+  .aside-head, .section-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 9px 11px; border-bottom: 1px solid var(--line); background: #edf1f4; font-size: 13px; font-weight: 750; }
+  .filters { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; padding: 9px; border-bottom: 1px solid var(--line); }
+  .filters input { grid-column: 1 / -1; color: var(--text); background: #fff; border-color: #b9c3ce; }
+  .filters select { color: var(--text); background: #fff; border-color: #b9c3ce; }
+  .sample-list { max-height: calc(100vh - var(--header-height) - 148px); overflow: auto; padding: 8px; }
+  .sample { width: 100%; margin-bottom: 6px; padding: 8px 9px; text-align: left; color: var(--text); background: #fff; border: 1px solid var(--line); border-radius: 5px; }
+  .sample.active { border-color: var(--blue); box-shadow: inset 3px 0 0 var(--blue); }
+  .sample-main { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; }
+  .sample-sub { margin-top: 4px; color: var(--muted); font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sample-levels { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+  .level-result { padding: 2px 6px; border: 1px solid currentColor; border-radius: 999px; font: 700 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .detail { min-width: 0; display: grid; gap: 12px; }
+  .overview { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border-bottom: 1px solid var(--line); }
+  .metric { min-width: 0; padding: 9px 11px; background: #fff; }
+  .metric-wide { grid-column: 1 / -1; }
+  .metric-key { color: var(--muted); font-size: 10px; font-weight: 800; text-transform: uppercase; }
+  .metric-value { margin-top: 4px; font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; white-space: pre-wrap; }
+  .stage-nav { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 11px; }
+  .pill { display: inline-flex; gap: 5px; align-items: center; padding: 3px 8px; border: 1px solid #ced7e0; border-radius: 999px; background: #f7f9fb; color: #344256; font-size: 11px; font-weight: 750; }
+  .ok { color: var(--green); }
+  .bad { color: var(--red); }
+  .warn { color: var(--amber); }
+  .tag { color: var(--muted); font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .section-body { padding: 10px 11px; }
+  .stage { border-top: 1px solid var(--line); }
+  .stage:first-child { border-top: 0; }
+  .stage > summary { display: flex; justify-content: space-between; gap: 10px; padding: 10px 11px; cursor: pointer; background: #f8fafb; font-size: 13px; font-weight: 750; }
+  .stage-content { min-width: 0; padding: 11px; display: grid; gap: 10px; }
+  .stage-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+  .json, .json-object, .json-array, .array-item { min-width: 0; }
+  .json { display: grid; gap: 7px; }
+  .json-row { min-width: 0; display: grid; gap: 9px; padding: 5px 0; border-bottom: 1px solid #edf1f4; }
+  .json-object.json-depth-0 > .json-row { grid-template-columns: minmax(110px, 180px) minmax(0, 1fr); }
+  .json-object:not(.json-depth-0) > .json-row { grid-template-columns: minmax(0, 1fr); gap: 3px; padding: 6px 0; }
+  .json-key { color: #596879; font-size: 12px; font-weight: 750; overflow-wrap: anywhere; }
+  .json-value { min-width: 0; font-size: 13px; line-height: 1.45; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .json-object { margin: 3px 0 5px; }
+  .json-object.json-depth-0 { padding-left: 0; border-left: 0; }
+  .json-object:not(.json-depth-0) {
+    margin: 5px 0;
+    padding: 6px 8px;
+    border: 1px solid #cfdfed;
+    border-left: 4px solid #6798c6;
+    border-radius: 5px;
+    background: #f6faff;
+  }
+  .json-object.json-depth-2 { border-color: #cce3d6; border-left-color: #62a17e; background: #f5fbf7; }
+  .json-object.json-depth-3 { border-color: #eadcbf; border-left-color: #b58b3f; background: #fdfaf3; }
+  .json-object.json-depth-4 { border-color: #ded4eb; border-left-color: #8c6bb1; background: #faf7fd; }
+  .json-object.json-depth-5 { border-color: #ecd2d8; border-left-color: #b96f7f; background: #fdf7f8; }
+  .json-object.json-depth-6 { border-color: #d5dce3; border-left-color: #758493; background: #f8fafb; }
+  .json-object:not(.json-depth-0) > .json-row > .json-key {
+    width: fit-content;
+    max-width: 100%;
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: #315d89;
+    background: #edf5fc;
+    font-size: 11px;
+  }
+  .json-object.json-depth-2 > .json-row > .json-key { color: #356b51; background: #edf7f1; }
+  .json-object.json-depth-3 > .json-row > .json-key { color: #765b2a; background: #faf5e9; }
+  .json-object.json-depth-4 > .json-row > .json-key { color: #62477e; background: #f2ecf8; }
+  .json-object.json-depth-5 > .json-row > .json-key { color: #854b58; background: #f9ecef; }
+  .json-object.json-depth-6 > .json-row > .json-key { color: #52606d; background: #eef1f4; }
+  .json-array { display: grid; gap: 7px; }
+  .json-array:not(.json-depth-0) { padding-left: 8px; }
+  .array-item { min-width: 0; padding: 7px 8px; border-left: 3px solid #7ea7cf; background: #f8fafb; }
+  .json-array.json-depth-2 > .array-item { border-left-color: #77aa91; }
+  .json-array.json-depth-3 > .array-item { border-left-color: #b49a68; }
+  .json-array.json-depth-4 > .array-item { border-left-color: #8c6bb1; background: #faf7fd; }
+  .json-array.json-depth-5 > .array-item { border-left-color: #b96f7f; background: #fdf7f8; }
+  .json-array.json-depth-6 > .array-item { border-left-color: #758493; }
+  .content-block { min-width: 0; margin-top: 7px; padding: 8px 9px; border-left: 3px solid #b8c4d0; background: #fafbfc; }
+  .trace-part { border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+  .trace-part > summary { padding: 9px 11px; cursor: pointer; font-size: 12px; font-weight: 800; background: #f3f6f8; }
+  .trace-part-body { padding: 10px; display: grid; gap: 10px; }
+  .evidence-grid, .record-grid { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .evidence-card, .record-card { min-width: 0; border: 1px solid #cfdfed; border-radius: 6px; background: #f8fbfe; }
+  .evidence-card > summary, .card-head { padding: 8px 10px; overflow-wrap: anywhere; font-size: 12px; font-weight: 800; }
+  .evidence-card > summary { cursor: pointer; background: #edf5fc; }
+  .card-body { padding: 9px 10px; display: grid; gap: 9px; }
+  .record-card .card-head { color: #356b51; background: #edf7f1; }
+  .card-smiles { padding: 7px 8px; border-left: 3px solid #6798c6; background: #fff; font: 11px/1.45 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
+  pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  details.raw > summary { cursor: pointer; color: var(--muted); font-size: 12px; }
+  .empty, .loading { padding: 34px 20px; text-align: center; color: var(--muted); }
+  .error { padding: 12px; color: var(--red); background: #fff1f0; border: 1px solid #f1b8b3; }
+  @media (max-width: 900px) {
+    .task-link.download { margin-left: 0; }
+    .layout { grid-template-columns: 1fr; }
+    aside { position: static; max-height: none; }
+    .sample-list { max-height: 340px; }
+  }
+  @media (min-width: 901px) and (max-width: 1200px) {
+    .json-object.json-depth-0 > .json-row { grid-template-columns: minmax(0, 1fr); gap: 3px; }
+  }
+  .reference-link { color: var(--blue); text-decoration: underline; cursor: pointer; }
+  .unresolved { text-decoration: underline dotted; color: var(--amber); }
+  .record-card, .evidence-card { scroll-margin-top: calc(var(--header-height) + 12px); }
+  .record-card:target, .evidence-card:target { outline: 3px solid var(--blue); }
+  .reference-intro { margin: 0 0 12px; font-size: 13px; line-height: 1.5; }
+  .record-card { margin-top: 8px; }
+  .card-body pre { font-size: 12px; }
+  .reference-grid { display: grid; gap: 8px; }
+  .completion-scroll { min-width: 0; overflow-x: auto; }
+  .completion-grid { display: grid; grid-template-columns: repeat(3, minmax(280px, 1fr)); gap: 12px; padding: 11px; }
+  .completion-card { min-width: 0; border: 1px solid var(--line); border-radius: 5px; background: #fff; }
+  .completion-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 10px; background: #edf1f4; }
+  .completion-grid .trace-part-body > pre { max-height: 65vh; overflow-y: auto; }
+  #completion-area { min-width: 0; scroll-margin-top: calc(var(--header-height) + 12px); }
+  .entropy-controls { padding: 10px; border: 1px solid #b8d3ec; background: #f5faff; font-size: 12px; line-height: 1.5; }
+  .entropy-controls input { width: auto; min-height: auto; accent-color: var(--blue); }
+  .entropy-controls.provisional { border-color: #c88b35; background: #fff8eb; }
+  .entropy-controls.repeatability-failed { border-color: var(--red); background: #fff3f2; }
+  .entropy-provisional { color: #8a4800; }
+  .entropy-scale { display: inline-block; width: 110px; height: 12px; margin: 0 6px; vertical-align: middle; background: linear-gradient(to right, #fff, #ffb347); }
+  .entropy-token { background: var(--entropy-color); }
+  .entropy-token:hover, .entropy-token:focus { outline: 1px solid #a15c00; }
+  .token-marks { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px; font-size: 12px; }
+  .token-marks button[aria-pressed="true"] { color: #fff; background: #7135ad; }
+  .entropy-token.token-marked { text-decoration: underline 2px #7135ad; text-underline-offset: 3px; outline: 1px solid #7135ad; }
+  .marking .entropy-token[data-mark-native] { cursor: crosshair; }
+  .marked-token-list { padding: 0 10px 10px; font-size: 12px; }
+  #marked-token-links { max-height: 240px; overflow: auto; }
+  .marked-token-link { display: block; padding: 6px; border-bottom: 1px solid var(--line); }
+  .marked-token-link code { margin-right: 8px; white-space: pre-wrap; }
+  .analysis-nav { margin-bottom: 10px; }
+  .analysis-nav button { border: 1px solid #526171; background: transparent; }
+  .analysis-nav button.active { background: var(--blue); border-color: #9bc5ed; }
+  #analysis-navigation[hidden], #annotation-panel[hidden], #entropy-analysis-panel[hidden] { display: none; }
+  .analysis-panel { padding: 11px; font-size: 13px; line-height: 1.5; }
+  .analysis-panel p { margin: 0 0 9px; }
+  .analysis-metrics { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+  .annotation-card { padding: 10px 0; border-top: 1px solid var(--line); }
+  .annotation-card blockquote, #annotation-quote { margin: 6px 0; padding: 7px 10px; border-left: 3px solid #168568; background: #edf9f4; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .annotation-comment { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .annotation-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 7px; }
+  #annotation-editor { width: min(620px, calc(100vw - 24px)); max-height: calc(100vh - 32px); overflow-y: auto; border: 1px solid var(--line); border-radius: 8px; color: var(--text); padding: 18px; }
+  #annotation-editor::backdrop { background: #17212b88; }
+  #annotation-editor h2 { margin-top: 0; font-size: 18px; }
+  #annotation-quote { max-height: 160px; overflow-y: auto; font-size: 12px; }
+  #annotation-comment { width: 100%; min-height: 100px; margin: 7px 0; padding: 8px; font: 14px/1.5 inherit; }
+  #annotation-tags, #annotation-sources, #annotation-fidelity { display: flex; flex-wrap: wrap; gap: 5px 12px; margin: 8px 0; padding: 8px; border: 1px solid var(--line); font-size: 12px; }
+  #annotation-tags input, #annotation-sources input, #annotation-fidelity input { width: auto; min-height: auto; }
+  #annotation-editor-status { min-height: 1.5em; font-size: 12px; }
+  .annotating .entropy-token, .annotating.entropy-top-only .entropy-token { background: transparent; outline: none; }
+  .annotating .entropy-token.token-marked { text-decoration: none; }
+  .annotating .entropy-controls, .annotating .token-marks, .annotating .marked-token-list { display: none; }
+  .behavior-key { padding: 2px 6px; border-radius: 3px; }
+  ::highlight(reasoning-unclassified) { background-color: #e0e4e9; color: #17202a; }
+  ::highlight(reasoning-errors) { text-decoration: underline wavy #b42318; text-decoration-thickness: 2px; }
+  ::highlight(reasoning-draft) { background-color: #b8d6ff; color: #102e50; }
+  .entropy-top-only .entropy-token:not(.entropy-high) { background: transparent; }
+  #entropy-tooltip, #annotation-tooltip { position: fixed; z-index: 100; max-width: min(440px, calc(100vw - 16px)); max-height: calc(100vh - 16px); overflow: hidden; padding: 9px 11px; border-radius: 5px; color: #fff; background: #17212b; box-shadow: 0 3px 12px #0004; font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: pre-wrap; overflow-wrap: anywhere; pointer-events: none; }
+</style>
+<style id="annotation-behavior-colors"></style>
+</head>
+<body>
+<header>
+  <h1 id="page-title">TDC Probability Trace Example</h1>
+  <nav id="analysis-navigation" class="task-nav analysis-nav" aria-label="Analysis" hidden>
+    <button id="entropy-analysis" class="active" aria-pressed="true">Entropy analysis</button>
+    <button id="reasoning-annotations" aria-pressed="false">Annotate reasoning</button>
+  </nav>
+  <nav class="task-nav" aria-label="Configuration">
+    <span class="nav-label">Evidence</span>
+    <a class="task-link" data-config="direct_plus_indirect" href="?configuration=direct_plus_indirect">Direct + indirect</a>
+    <span id="repetition-control" hidden><label for="repetition">Repetition</label> <select id="repetition" class="task-link" aria-label="Repetition"></select></span>
+  </nav>
+  <nav class="task-nav" aria-label="Dataset">
+    <span class="nav-label">Dataset</span>
+    <a class="task-link" data-task="ames" href="?task=ames">TDC Ames</a>
+    <a class="task-link" href="../">Other trace examples</a>
+    <a class="task-link download" href="probability_results.tsv" download>Full-run results TSV</a>
+  </nav>
+</header>
+<main>
+  <div class="layout">
+    <aside>
+      <div class="aside-head"><span>Probability trace example</span><span id="count" class="tag">0</span></div>
+      <div class="filters">
+        <input id="search" type="text" placeholder="Search molecule or outcome" aria-label="Search examples">
+        <select id="correctness" aria-label="Correctness"><option value="">All outcomes</option><option value="correct">Correct</option><option value="wrong">Wrong</option></select>
+        <select id="status" aria-label="Status"><option value="">All statuses</option><option value="ok">OK</option><option value="failed">Failed</option></select>
+      </div>
+      <div id="samples" class="sample-list"></div>
+    </aside>
+    <section id="detail" class="detail" aria-live="polite"></section>
+  </div>
+</main>
+<div id="entropy-tooltip" role="tooltip" hidden></div>
+<div id="annotation-tooltip" role="tooltip" hidden></div>
+<dialog id="annotation-editor" aria-labelledby="annotation-editor-title">
+  <h2 id="annotation-editor-title">Annotate passage</h2>
+  <p id="annotation-context" class="tag"></p>
+  <blockquote id="annotation-quote"></blockquote>
+  <label for="annotation-comment">Comment (optional)</label>
+  <textarea id="annotation-comment" maxlength="4000" placeholder="What is this passage doing? What makes it interesting?"></textarea>
+  <fieldset id="annotation-tags"><legend>Reasoning behaviors · optional draft labels</legend></fieldset>
+  <fieldset id="annotation-sources"><legend>Knowledge source · optional</legend></fieldset>
+  <fieldset id="annotation-fidelity"><legend>Input fidelity · optional mismatch flags</legend></fieldset>
+  <p class="tag">Source labels describe the premises or background claims. A new conclusion is not parametric merely because it is absent from the input. Explain the evidence in your comment.</p>
+  <p class="tag">Fidelity flags describe observable mismatches with the input, not their internal cause. Explain the mismatch and note any inconsistency already present in the input. Unflagged passages are not certified error-free.</p>
+  <div id="annotation-editor-status" role="status"></div>
+  <div id="annotation-conflict" hidden><p>This annotation changed elsewhere. Your draft is kept. Review the latest saved version below.</p><blockquote id="annotation-latest"></blockquote><button id="annotation-resolve">Rebase draft on latest version</button></div>
+  <div class="annotation-actions"><button id="annotation-save">Save shared annotation</button><button id="annotation-cancel">Cancel</button></div>
+</dialog>
+<script>
+const params = new URLSearchParams(location.search);
+const state = { release: null, task: params.get("task") || "ames",
+  config: params.get("configuration") || "direct_plus_indirect", selected: params.get("query"), payload: null, loading: 0,
+  repetition: params.get("repetition"), completions: [], entropyManifest: null, entropyStatisticsManifest: null, entropy: null, entropyNotice: "", entropyTopOnly: false,
+  marks: new Set(), markRecords: [], marking: false, marksBusy: false, marksLoaded: false, marksStatus: "Loading shared marks…",
+  annotating: params.get("mode") === "annotations", annotations: [], annotationsLoaded: false, annotationsBusy: false,
+  annotationDraft: null, annotationStatus: "Loading shared annotations…", annotationId: params.get("annotation_id"),
+  annotationConflict: false,
+  annotationRanges: [],
+  markedPosition: params.has("marked_position") && /^\d+$/.test(params.get("marked_position")) ? Number(params.get("marked_position")) : null };
+const $ = id => document.getElementById(id);
+if (globalThis.ResizeObserver) {
+  const header = document.querySelector("header");
+  new ResizeObserver(() => document.documentElement.style.setProperty("--header-height", `${Math.ceil(header.getBoundingClientRect().height)}px`)).observe(header);
+}
+const outcomes = { TP: "True positive", TN: "True negative", FP: "False positive", FN: "False negative" };
+const reasoningBehaviors = {
+  state_knowledge: ["State information", "Present a fact, claim, observation, or general rule without deriving it here."],
+  connect: ["Connect cases or ideas", "Relate the current case to another case, concept, or pattern."],
+  apply_rule: ["Apply a rule", "Use a familiar rule, procedure, or generalization to derive a conclusion for this case."],
+  construct_explanation: ["Construct an explanation", "Build an explanatory account connecting observations, assumptions, or mechanisms."],
+  weigh: ["Weigh evidence", "Compare support, objections, or competing explanations."],
+  hypothesize: ["Propose a possibility", "Suggest a candidate explanation or conditional possibility."],
+  estimate: ["Make a tentative judgment", "Tentatively commit to an answer or value under uncertainty; this does not establish unsupported guessing."],
+  check: ["Check or revise", "Test a claim, detect a conflict, or change an earlier view."],
+  plan: ["Plan the approach", "Choose a strategy, next step, or response structure."]
+};
+const reasoningSources = {
+  source_input: ["Retrieved / input-supported", "The relevant premise or background claim is supported by the saved input or retrieved evidence."],
+  source_parametric: ["Parametric / absent from input", "The background claim is absent from the inspected input and is presented as model knowledge; this does not prove an internal retrieval mechanism."],
+  source_mixed: ["Mixed sources", "The passage combines supplied evidence with background claims absent from the input."],
+  source_unclear: ["Source unclear", "The source of the relevant premise or background claim cannot be determined from the saved record."]
+};
+const inputFidelity = {
+  fidelity_misstates_input: ["Misstates input", "Changes or overgeneralizes a supplied value, condition, endpoint, or evidence direction."],
+  fidelity_citation_mismatch: ["Citation mismatch", "Attributes a claim to records that do not support it, even if support exists elsewhere in the input."],
+  fidelity_conflation: ["Conflates evidence", "Combines entities, records, species, or conditions as though they were the same. Note if the input itself was inconsistent."]
+};
+const reasoningLabels = {...reasoningBehaviors, ...reasoningSources, ...inputFidelity, infer: ["Derive a conclusion (earlier draft)", "Earlier draft label."]};
+function reasoningLabel(tag) { return Object.hasOwn(reasoningLabels, tag) ? reasoningLabels[tag][0] : tag.replace(/_/g, " "); }
+const behaviorColors = {state_knowledge: "#d5e5ff", connect: "#b9e5dd", apply_rule: "#ddd0f5", construct_explanation: "#f6d4ee",
+  weigh: "#ffe4a8", hypothesize: "#ffd3bd", estimate: "#e4e9ae", check: "#bfe3f5", plan: "#dce0e7"};
+function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"}[c])); }
+function panel(title, content, open = false) { return `<details class="trace-part"${open ? " open" : ""}><summary>${esc(title)}</summary><div class="trace-part-body">${content}</div></details>`; }
+function metric(title, value) { return `<div class="metric"><div class="metric-key">${esc(title)}</div><div class="metric-value">${esc(value)}</div></div>`; }
+function referenceId(visibleId) { return `ref-${encodeURIComponent(visibleId)}`; }
+function probabilityPercent(logprob) {
+  const percent = 100 * Math.exp(logprob);
+  return percent === 0 ? "<1e-300%" : `${Number(percent.toPrecision(4))}%`;
+}
+function probabilityStatistics(mean, sd) {
+  return `${Number((100 * mean).toPrecision(4))}% ± ${Number((100 * sd).toPrecision(4))}`;
+}
+async function sha256(bytes) {
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, "0")).join("");
+}
+async function fetchJson(path) {
+  const response = await fetch(path, { cache: "no-store" });
+  if (!response.ok) throw new Error(`HTTP ${response.status}: ${path}`);
+  return response.json();
+}
+function scoredRange(source, start, end, groups) {
+  let html = "", previous = start;
+  for (const group of groups) {
+    const left = Math.max(start, group.start), right = Math.min(end, group.end);
+    if (left >= right) continue;
+    html += esc(source.slice(previous, left));
+    html += `<span class="entropy-token${group.high ? " entropy-high" : ""}" style="--entropy-color:${group.color}" tabindex="0" data-entropy-positions="${group.positions}"${group.native ? ` data-mark-native="${group.native}" data-entropy-section="${group.section}"` : ""} data-entropy="${esc(group.title)}">${esc(source.slice(left, right))}</span>`;
+    previous = right;
+  }
+  return html + esc(source.slice(previous, end));
+}
+function linkedText(value, references = state.payload?.references || [], groups = []) {
+  const ids = new Set(references.map(r => r.visible_id.toLowerCase()));
+  const aliases = references.map(r => r.visible_id.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const pattern = new RegExp(`\\b(?:${[...aliases.sort((a, b) => b.length - a.length), "Molecule\\s+\\d+", "Record\\s+\\d+(?:-\\d+)?"].join("|")})\\b`, "gi");
+  const source = String(value ?? "");
+  let html = "", previous = 0;
+  for (const match of source.matchAll(pattern)) {
+    html += scoredRange(source, previous, match.index, groups);
+    const known = ids.has(match[0].toLowerCase());
+    const reference = known && references.find(r => r.visible_id.toLowerCase() === match[0].toLowerCase());
+    const text = scoredRange(source, match.index, match.index + match[0].length, groups);
+    html += known ? `<a class="reference-link" href="#${referenceId(reference.visible_id)}">${text}</a>`
+      : `<span class="unresolved" title="This exact reference is absent from the saved prompt index.">${text}</span>`;
+    previous = match.index + match[0].length;
+  }
+  return html + scoredRange(source, previous, source.length, groups);
+}
+function entropyText(name, text, entropy = state.entropy, references = state.payload?.references || []) {
+  const section = entropy?.sections[name];
+  if (!section) return linkedText(text, references);
+  const offsets = [0];
+  for (const char of text) offsets.push(offsets[offsets.length - 1] + char.length);
+  const groups = [];
+  for (const token of [...section.tokens].sort((a, b) => a.start - b.start || a.end - b.end)) {
+    if (token.start === token.end) continue;
+    const previous = groups[groups.length - 1];
+    if (previous && token.start < previous.end) {
+      previous.end = Math.max(previous.end, token.end);
+      previous.tokens.push(token);
+    } else groups.push({start: token.start, end: token.end, tokens: [token]});
+  }
+  for (const group of groups) {
+    group.start = offsets[group.start]; group.end = offsets[group.end];
+    const ratio = Math.min(1, Math.max(...group.tokens.map(t => t.entropy)) / (state.entropyStatisticsManifest || state.entropyManifest).color_max);
+    group.color = `rgb(255,${Math.round(255 - 76 * ratio)},${Math.round(255 - 184 * ratio)})`;
+    group.high = group.tokens.some(t => t.top20);
+    group.positions = group.tokens.map(t => t.position).join(",");
+    if (state.release?.token_marks && entropy.key && entropy.sequence_sha256 && group.tokens.every(t => Number.isInteger(t.absolute_position))) {
+      group.native = group.tokens.map(t => `${t.absolute_position}:${t.token_id}`).join(",");
+      group.section = name;
+    }
+    group.title = group.tokens.map(t => {
+      const tokenText = JSON.stringify(text.slice(offsets[t.start], offsets[t.end]));
+      const statistics = t.probability_mean !== undefined;
+      const alternatives = t.alternatives ? `\n${statistics ? "Other tokens:" : "Top 4 other tokens:"}\n${t.alternatives.map((a, index) => `${index + 1}. ${JSON.stringify(a.text)} · ${statistics ? probabilityStatistics(a.probability_mean, a.probability_sd) : probabilityPercent(a.logprob)}`).join("\n")}` : "";
+      return `Token ${tokenText} · probability ${statistics ? probabilityStatistics(t.probability_mean, t.probability_sd) : probabilityPercent(t.logprob)}${alternatives}`;
+    }).join("\n\n");
+  }
+  const html = linkedText(text, references, groups);
+  return state.release?.reasoning_annotations && entropy.key && entropy.sequence_sha256
+    ? `<span class="annotation-text" data-annotation-trace="${esc(entropy.key)}" data-annotation-sequence="${esc(entropy.sequence_sha256)}" data-annotation-section="${name}">${html}</span>` : html;
+}
+function markId(token) {
+  return `${token.trace_key}|${token.sequence_sha256}|${token.absolute_position}|${token.token_id}`;
+}
+function traceExamples() {
+  const examples = new Map();
+  for (const [task, data] of Object.entries(state.release.tasks)) data.samples.forEach((sample, ordinal) => {
+    for (const [repetition, configurations] of Object.entries(sample.by_repetition || {})) for (const [configuration, prediction] of Object.entries(configurations)) {
+      const key = `${task}/${configuration}/rep-${String(repetition).padStart(2, "0")}/${String(prediction.query_index).padStart(5, "0")}`;
+      const label = `${data.title} · ${data.configurations[configuration].label} · Sample ${ordinal + 1} · Repetition ${data.repetitions.map(String).indexOf(repetition) + 1}`;
+      examples.set(key, {task, configuration, query: sample.query_uid, repetition, label});
+    }
+  });
+  return examples;
+}
+function syncMarkUI() {
+  if (!state.release?.token_marks) return;
+  $("detail").classList.toggle("marking", state.marking);
+  const button = $("marks-toggle");
+  if (button) {
+    button.textContent = state.marking ? "Done marking" : "Mark tokens";
+    button.disabled = state.marksBusy || state.annotating;
+    button.setAttribute("aria-pressed", String(state.marking));
+    button.onclick = async () => {
+      if (!state.marksLoaded && !await syncTokenMarks()) return;
+      state.marking = !state.marking;
+      if (state.marking) { state.annotating = false; syncAnnotationUI(); updateNavigation(); }
+      syncMarkUI();
+    };
+    $("marks-count").textContent = state.marksLoaded ? `${state.marks.size} shared marked tokens` : "";
+    $("marks-status").textContent = state.marksStatus;
+    $("marks-list-title").textContent = `Marked tokens (${state.marks.size})`;
+    const examples = traceExamples();
+    const links = state.markRecords.map(mark => {
+      const example = examples.get(mark.trace_key);
+      if (!example) return `<div><code>${esc(JSON.stringify(mark.token_text))}</code> · Saved trace</div>`;
+      const {label, ...query} = example;
+      const href = `?${new URLSearchParams({...query, marked_position: mark.absolute_position})}`;
+      return `<a class="marked-token-link" href="${esc(href)}"><code>${esc(JSON.stringify(mark.token_text))}</code>${esc(label)}</a>`;
+    }).join("") || '<div class="empty">No marked tokens yet.</div>';
+    const list = $("marked-token-links");
+    if (list.markListHTML !== links) { list.innerHTML = links; list.markListHTML = links; }
+  }
+  document.querySelectorAll(".entropy-token[data-mark-native]").forEach(span => {
+    const parent = span.closest("[data-mark-trace]");
+    const marked = span.dataset.markNative.split(",").some(pair => {
+      const [absolute_position, token_id] = pair.split(":").map(Number);
+      return state.marks.has(markId({trace_key: parent.dataset.markTrace, sequence_sha256: parent.dataset.markSequence, absolute_position, token_id}));
+    });
+    span.classList.toggle("token-marked", marked);
+    if (state.marking) {
+      span.setAttribute("role", "button"); span.setAttribute("aria-pressed", String(marked));
+      span.setAttribute("aria-disabled", String(state.marksBusy));
+      span.style.cursor = state.marksBusy ? "wait" : "";
+    } else {
+      span.removeAttribute("role"); span.removeAttribute("aria-pressed"); span.removeAttribute("aria-disabled"); span.style.cursor = "";
+    }
+  });
+}
+async function syncTokenMarks(update) {
+  const config = state.release?.token_marks;
+  if (!config || state.marksBusy) return false;
+  state.marksBusy = true; state.marksStatus = update ? "Saving…" : "Refreshing shared marks…"; syncMarkUI();
+  try {
+    const response = await fetch(`${config.api_url.replace(/\/$/, "")}/api/marks`, {method: update ? "POST" : "GET", cache: "no-store", credentials: "omit",
+      ...(update ? {headers: {"Content-Type": "application/json"}, body: JSON.stringify(update)} : {})});
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    if (!Array.isArray(data.marks) || data.marks.some(t => typeof t.trace_key !== "string" || !/^[a-f0-9]{64}$/i.test(t.sequence_sha256)
+        || !Number.isInteger(t.absolute_position) || t.absolute_position < 0 || !Number.isInteger(t.token_id) || t.token_id < 0 || typeof t.token_text !== "string")) throw new Error("Invalid shared marks");
+    state.markRecords = data.marks; state.marks = new Set(data.marks.map(markId)); state.marksLoaded = true; state.marksStatus = "Synced";
+    return true;
+  } catch (error) { state.marksStatus = `Could not ${update ? "save" : "refresh"} marks: ${error.message}`; return false; }
+  finally { state.marksBusy = false; syncMarkUI(); }
+}
+document.addEventListener("click", async event => {
+  const span = event.target.closest(".entropy-token[data-mark-native]");
+  if (!state.marking || !span) return;
+  event.preventDefault(); event.stopImmediatePropagation();
+  if (state.marksBusy) return;
+  const parent = span.closest("[data-mark-trace]");
+  const entropy = state.completions.find(c => c.entropy?.key === parent.dataset.markTrace)?.entropy || state.entropy;
+  const section = entropy.sections[span.dataset.entropySection], text = Array.from(section.text);
+  const tokens = span.dataset.entropyPositions.split(",").map(position => {
+    const token = section.tokens.find(t => t.position === Number(position));
+    return {trace_key: entropy.key, sequence_sha256: entropy.sequence_sha256, absolute_position: token.absolute_position,
+      token_id: token.token_id, token_text: text.slice(token.start, token.end).join("")};
+  });
+  await syncTokenMarks({marked: !tokens.some(t => state.marks.has(markId(t))), tokens});
+}, true);
+document.addEventListener("keydown", event => {
+  if (state.marking && ["Enter", " "].includes(event.key) && event.target.matches(".entropy-token[data-mark-native]")) {
+    event.preventDefault(); event.stopImmediatePropagation(); event.target.click();
+  }
+}, true);
+window.addEventListener("focus", () => syncTokenMarks());
+function annotationSection(annotation) {
+  const entropy = state.completions.find(c => c.entropy?.key === annotation.trace_key
+    && c.entropy.sequence_sha256 === annotation.sequence_sha256)?.entropy;
+  return entropy?.sections[annotation.section];
+}
+function annotationRange(root, start, end) {
+  const chars = Array.from(root.textContent);
+  const first = chars.slice(0, start).join("").length, last = chars.slice(0, end).join("").length;
+  const range = document.createRange(), walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  let offset = 0, began = false, node;
+  while ((node = walker.nextNode())) {
+    const next = offset + node.length;
+    if (!began && first < next) { range.setStart(node, first - offset); began = true; }
+    if (began && last <= next) { range.setEnd(node, last - offset); return range; }
+    offset = next;
+  }
+  return null;
+}
+function paintAnnotations() {
+  state.annotationRanges = [];
+  if (!globalThis.CSS?.highlights || !globalThis.Highlight) return;
+  const groups = Object.fromEntries([...Object.keys(behaviorColors), "unclassified", "errors", "draft"].map(key => [key, []]));
+  if (state.annotating) for (const root of document.querySelectorAll(".annotation-text")) {
+    const text = Array.from(root.textContent);
+    const records = state.annotations.filter(a => a.trace_key === root.dataset.annotationTrace && a.sequence_sha256 === root.dataset.annotationSequence
+      && a.section === root.dataset.annotationSection && text.slice(a.start, a.end).join("") === a.quote)
+      .sort((a, b) => (a.end - a.start) - (b.end - b.start) || (b.updated_at || "").localeCompare(a.updated_at || "") || a.id.localeCompare(b.id));
+    for (const annotation of records) {
+      const range = annotationRange(root, annotation.start, annotation.end);
+      if (range) state.annotationRanges.push({annotation, root, range});
+    }
+    const boundaries = [...new Set(records.flatMap(a => [a.start, a.end]))].sort((a, b) => a - b);
+    for (let i = 1; i < boundaries.length; i++) {
+      const start = boundaries[i - 1], end = boundaries[i], annotation = records.find(a => a.start <= start && a.end >= end);
+      if (!annotation) continue;
+      const range = annotationRange(root, start, end);
+      if (!range) continue;
+      groups[annotation.tags.find(tag => Object.hasOwn(behaviorColors, tag)) || "unclassified"].push(range);
+      if (annotation.tags.some(tag => Object.hasOwn(inputFidelity, tag))) groups.errors.push(range);
+    }
+    const draft = state.annotationDraft;
+    if (draft && draft.trace_key === root.dataset.annotationTrace && draft.sequence_sha256 === root.dataset.annotationSequence
+        && draft.section === root.dataset.annotationSection && text.slice(draft.start, draft.end).join("") === draft.quote) {
+      const range = annotationRange(root, draft.start, draft.end);
+      if (range) groups.draft.push(range);
+    }
+  }
+  for (const [name, ranges] of Object.entries(groups)) {
+    const highlight = new Highlight(...ranges);
+    highlight.priority = name === "draft" ? 2 : name === "errors" ? 1 : 0;
+    CSS.highlights.set(`reasoning-${name}`, highlight);
+  }
+  if (annotationHover) {
+    const {point, target} = annotationHover, root = target?.closest(".annotation-text");
+    const matches = point ? annotationsAtPoint(point.x, point.y)
+      : state.annotationRanges.filter(entry => entry.root === root && entry.range.intersectsNode(target));
+    showAnnotationTooltip(matches, point, target?.isConnected ? target : null);
+  }
+}
+function annotationPanel() {
+  if (!state.release.reasoning_annotations) return "";
+  return `<section id="entropy-analysis-panel" class="section"><div class="section-head">Entropy analysis</div><div class="analysis-panel"><div class="analysis-metrics"><span><strong id="analysis-token-count">—</strong> scored tokens</span><span>Mean entropy <strong id="analysis-mean">—</strong></span><span>Median entropy <strong id="analysis-median">—</strong></span></div><p>Current trace view. Entropy summarizes the next-token distribution; the hover shows token probabilities.</p></div></section>
+    <section id="annotation-panel" class="section" hidden><div class="section-head">Reasoning annotations <span id="annotation-count" class="tag"></span></div><div class="analysis-panel"><p>Colors mark reasoning behaviors. Hover, focus, or tap a highlighted passage for its labels and explanation; a red wavy underline marks an input-fidelity flag. Select text to add a shared note.</p><p id="annotation-support"></p><details><summary>Draft reasoning labels</summary><p>Labels describe visible behavior in the text. They do not establish the model's internal process. Choose several, or leave them blank.</p>${Object.entries(reasoningBehaviors).map(([id, [label, definition]]) => `<p><strong class="behavior-key" style="background:${behaviorColors[id]}">${esc(label)}</strong> — ${esc(definition)}</p>`).join("")}<p><strong>Knowledge source</strong> labels concern background claims and premises. A newly derived conclusion is not automatically parametric just because it is absent from the input.</p>${Object.values(reasoningSources).map(([label, definition]) => `<p><strong>${esc(label)}</strong> — ${esc(definition)}</p>`).join("")}<p><strong>Input fidelity</strong> flags observable mismatches separately from knowledge source. Added background knowledge and a new conclusion are not themselves input errors.</p>${Object.values(inputFidelity).map(([label, definition]) => `<p><strong>${esc(label)}</strong> — ${esc(definition)}</p>`).join("")}</details><details><summary id="annotation-global-count">Browse all annotations</summary><div id="annotation-global-list"></div></details><div class="annotation-actions"><button id="annotation-use-selection">Annotate selected text</button><button id="annotation-refresh">Refresh saved annotations</button><span id="annotation-status" role="status"></span></div><details id="annotation-local-list"><summary id="annotation-local-count">Notes on this sample</summary><div id="annotation-list"></div></details></div></section>`;
+}
+function syncAnnotationUI(refreshAnalysis = false) {
+  if (!state.release?.reasoning_annotations) return;
+  $("detail").classList.toggle("annotating", state.annotating);
+  if (!$("annotation-behavior-colors").textContent) $("annotation-behavior-colors").textContent = Object.entries(behaviorColors)
+    .map(([id, color]) => `::highlight(reasoning-${id}) { background-color: ${color}; color: #17202a; }`).join("\n");
+  if (!state.annotating) hideAnnotationTooltip();
+  $("analysis-navigation").hidden = false;
+  for (const [id, active] of [["entropy-analysis", !state.annotating], ["reasoning-annotations", state.annotating]]) {
+    $(id).classList.toggle("active", active); $(id).setAttribute("aria-pressed", String(active));
+  }
+  if ($("annotation-panel")) {
+    if (refreshAnalysis) {
+      const tokens = (state.repetition === "all" ? state.completions : state.completions.filter(c => c.repetition === state.repetition))
+        .flatMap(c => Object.values(c.entropy?.sections || {}).flatMap(s => s.tokens));
+      const values = tokens.map(t => t.entropy).sort((a, b) => a - b), n = values.length;
+      $("analysis-token-count").textContent = n.toLocaleString();
+      $("analysis-mean").textContent = n ? `${(values.reduce((a, b) => a + b, 0) / n).toFixed(2)} nats` : "—";
+      $("analysis-median").textContent = n ? `${((values[Math.floor((n - 1) / 2)] + values[Math.floor(n / 2)]) / 2).toFixed(2)} nats` : "—";
+    }
+    $("annotation-panel").hidden = !state.annotating; $("entropy-analysis-panel").hidden = state.annotating;
+    $("annotation-support").textContent = globalThis.CSS?.highlights && globalThis.Highlight ? "" : "This browser can save comments, but passage highlights require a browser with Custom Highlight support.";
+    $("annotation-status").textContent = state.annotationStatus;
+    const records = state.annotations.filter(a => annotationSection(a));
+    $("annotation-count").textContent = `${records.length} here · ${state.annotations.length} shared`;
+    $("annotation-local-count").textContent = `Notes on this sample (${records.length})`;
+    const html = records.map(annotation => {
+      const completion = state.completions.find(c => c.entropy?.key === annotation.trace_key);
+      const query = new URLSearchParams({task: state.task, configuration: state.config, query: state.selected,
+        repetition: completion.repetition, mode: "annotations", annotation_id: annotation.id});
+      const valid = Array.from(annotationSection(annotation).text).slice(annotation.start, annotation.end).join("") === annotation.quote;
+      return `<article class="annotation-card"><strong>Repetition ${esc(repetitionNumber(completion.repetition))} · ${annotation.section === "reasoning" ? "Reasoning" : "Final output"}</strong><blockquote>${esc(annotation.quote)}</blockquote><div class="annotation-comment">${esc(annotation.comment)}</div><div>${annotation.tags.map(tag => `<span class="pill">${esc(reasoningLabel(tag))}</span>`).join(" ")}</div>${valid ? "" : '<p class="warn">This saved quote no longer matches the displayed passage.</p>'}<div class="annotation-actions"><a href="?${esc(query)}">Revisit passage</a><button data-annotation-edit="${esc(annotation.id)}">Edit</button><button data-annotation-delete="${esc(annotation.id)}">Delete</button></div></article>`;
+    }).join("") || '<p class="empty">No annotations on this sample yet.</p>';
+    const list = $("annotation-list");
+    if (list.annotationHTML !== html) { list.innerHTML = html; list.annotationHTML = html; }
+    const examples = traceExamples();
+    const globalHTML = state.annotations.map(annotation => {
+      const example = examples.get(annotation.trace_key);
+      if (!example) return "";
+      const {label, ...query} = example;
+      const href = `?${new URLSearchParams({...query, mode: "annotations", annotation_id: annotation.id})}`;
+      return `<a class="marked-token-link" href="${esc(href)}"><code>${esc(Array.from(annotation.quote).slice(0, 80).join(""))}</code>${esc(label)}</a>`;
+    }).join("") || '<p class="empty">No shared annotations yet.</p>';
+    $("annotation-global-count").textContent = `Browse all annotations (${state.annotations.length})`;
+    const globalList = $("annotation-global-list");
+    if (globalList.annotationHTML !== globalHTML) { globalList.innerHTML = globalHTML; globalList.annotationHTML = globalHTML; }
+    $("annotation-refresh").disabled = state.annotationsBusy;
+    document.querySelectorAll("[data-annotation-edit], [data-annotation-delete]").forEach(button => button.disabled = state.annotationsBusy);
+  }
+  $("annotation-save").disabled = state.annotationsBusy || !state.annotationDraft;
+  $("annotation-cancel").disabled = state.annotationsBusy;
+  $("annotation-comment").disabled = state.annotationsBusy;
+  $("annotation-tags").disabled = state.annotationsBusy;
+  $("annotation-sources").disabled = state.annotationsBusy;
+  $("annotation-fidelity").disabled = state.annotationsBusy;
+  if ($("annotation-editor").open) $("annotation-editor-status").textContent = state.annotationStatus;
+  $("annotation-conflict").hidden = !state.annotationConflict;
+  if (state.annotationConflict && state.annotationDraft) {
+    const latest = state.annotations.find(a => a.id === state.annotationDraft.id);
+    $("annotation-latest").textContent = latest ? `${latest.quote}\n\n${latest.comment || "(No comment)"}\nLabels: ${latest.tags.map(reasoningLabel).join(", ") || "None"}` : "The saved annotation was deleted.";
+    $("annotation-resolve").textContent = latest ? "Rebase draft on latest version" : "Keep draft as a new annotation";
+    $("annotation-resolve").disabled = state.annotationsBusy;
+  }
+  paintAnnotations();
+  if (state.annotating && state.annotationId && state.annotationFocused !== state.annotationId) {
+    const annotation = state.annotations.find(a => a.id === state.annotationId);
+    const root = annotation && [...document.querySelectorAll(".annotation-text")].find(r => r.dataset.annotationTrace === annotation.trace_key
+      && r.dataset.annotationSequence === annotation.sequence_sha256 && r.dataset.annotationSection === annotation.section);
+    if (root && Array.from(root.textContent).slice(annotation.start, annotation.end).join("") === annotation.quote) {
+      const range = annotationRange(root, annotation.start, annotation.end), target = range?.startContainer.parentElement;
+      if (target) { target.scrollIntoView({block: "center"}); target.setAttribute("tabindex", "-1"); target.focus({preventScroll: true}); state.annotationFocused = annotation.id; }
+    }
+  }
+}
+async function syncAnnotations(update, manual = false) {
+  const config = state.release?.reasoning_annotations;
+  if (!config || state.annotationsBusy || (!update && state.annotationDraft && !manual)) return false;
+  state.annotationsBusy = true; state.annotationStatus = update ? "Saving…" : "Refreshing…"; syncAnnotationUI();
+  try {
+    const response = await fetch(`${config.api_url.replace(/\/$/, "")}/api/annotations`, {method: update ? "POST" : "GET", cache: "no-store", credentials: "omit",
+      ...(update ? {headers: {"Content-Type": "application/json"}, body: JSON.stringify(update)} : {})});
+    if (!response.ok) {
+      if (response.status === 409 && state.annotationDraft) state.annotationConflict = true;
+      throw new Error(response.status === 409 ? "This annotation changed elsewhere. Review the latest version below; your draft is kept." : `HTTP ${response.status}`);
+    }
+    const data = await response.json();
+    if (!Array.isArray(data.annotations) || data.annotations.some(a => typeof a.id !== "string" || typeof a.trace_key !== "string"
+        || !/^[a-f0-9]{64}$/i.test(a.sequence_sha256) || !["reasoning", "answer"].includes(a.section)
+        || !Number.isInteger(a.start) || !Number.isInteger(a.end) || a.start < 0 || a.end <= a.start
+        || typeof a.quote !== "string" || typeof a.comment !== "string" || !Array.isArray(a.tags) || a.tags.some(t => typeof t !== "string")
+        || !Number.isInteger(a.revision) || a.revision < 1)) throw new Error("Invalid shared annotations");
+    state.annotations = data.annotations.sort((a, b) => a.trace_key.localeCompare(b.trace_key)
+      || (a.section === "reasoning" ? 0 : 1) - (b.section === "reasoning" ? 0 : 1)
+      || a.start - b.start || a.end - b.end || a.id.localeCompare(b.id));
+    state.annotationsLoaded = true; state.annotationStatus = "Synced";
+    return true;
+  } catch (error) { state.annotationStatus = `Could not ${update ? "save" : "refresh"}: ${error.message}`; return false; }
+  finally { state.annotationsBusy = false; syncAnnotationUI(); }
+}
+function openAnnotationEditor(annotation) {
+  hideAnnotationTooltip();
+  state.annotationDraft = {...annotation, tags: [...annotation.tags]};
+  state.annotationConflict = false;
+  $("annotation-context").textContent = traceExamples().get(annotation.trace_key)?.label || "Saved trace";
+  $("annotation-quote").textContent = annotation.quote; $("annotation-comment").value = annotation.comment;
+  $("annotation-tags").innerHTML = '<legend>Reasoning behaviors · optional draft labels</legend>' + Object.entries(reasoningBehaviors)
+    .map(([id, [label, definition]]) => `<label title="${esc(definition)}"><input type="checkbox" value="${id}"${annotation.tags.includes(id) ? " checked" : ""}> ${esc(label)}</label>`).join("");
+  $("annotation-sources").innerHTML = '<legend>Knowledge source · optional</legend>' + Object.entries(reasoningSources)
+    .map(([id, [label, definition]]) => `<label title="${esc(definition)}"><input type="checkbox" value="${id}"${annotation.tags.includes(id) ? " checked" : ""}> ${esc(label)}</label>`).join("");
+  $("annotation-fidelity").innerHTML = '<legend>Input fidelity · optional mismatch flags</legend>' + Object.entries(inputFidelity)
+    .map(([id, [label, definition]]) => `<label title="${esc(definition)}"><input type="checkbox" value="${id}"${annotation.tags.includes(id) ? " checked" : ""}> ${esc(label)}</label>`).join("");
+  state.annotationStatus = "Unsaved annotation"; $("annotation-editor").showModal(); syncAnnotationUI(); $("annotation-comment").focus();
+}
+function captureAnnotationSelection() {
+  if (!state.annotating || state.annotationsBusy || state.annotationDraft) return;
+  const selection = window.getSelection();
+  if (!selection || selection.isCollapsed || !selection.rangeCount) return;
+  const range = selection.getRangeAt(0), element = node => node.nodeType === 1 ? node : node.parentElement;
+  const root = element(range.startContainer)?.closest(".annotation-text");
+  if (!root || root !== element(range.endContainer)?.closest(".annotation-text")) {
+    state.annotationStatus = "Select a passage within one reasoning or final-output section."; syncAnnotationUI(); return;
+  }
+  const before = document.createRange(); before.selectNodeContents(root); before.setEnd(range.startContainer, range.startOffset);
+  const start = Array.from(before.toString()).length, quote = range.toString(), end = start + Array.from(quote).length;
+  const annotation = {id: crypto.randomUUID(), trace_key: root.dataset.annotationTrace, sequence_sha256: root.dataset.annotationSequence,
+    section: root.dataset.annotationSection, start, end, quote, comment: "", tags: [], revision: 0};
+  if (!quote.trim() || end - start > 4000 || Array.from(annotationSection(annotation)?.text || "").slice(start, end).join("") !== quote) {
+    state.annotationStatus = "Select a nonempty passage of at most 4,000 characters."; syncAnnotationUI(); return;
+  }
+  selection.removeAllRanges(); hideEntropyTooltip(); openAnnotationEditor(annotation);
+}
+document.addEventListener("pointerup", event => { if (event.target.closest(".annotation-text")) captureAnnotationSelection(); });
+document.addEventListener("keyup", event => { if (event.key === "Shift") captureAnnotationSelection(); });
+document.addEventListener("click", async event => {
+  if (event.target.id === "annotation-use-selection") captureAnnotationSelection();
+  if (event.target.id === "annotation-refresh") await syncAnnotations(null, true);
+  const edit = event.target.closest("[data-annotation-edit]"), remove = event.target.closest("[data-annotation-delete]");
+  const annotation = state.annotations.find(a => a.id === (edit?.dataset.annotationEdit || remove?.dataset.annotationDelete));
+  if (edit && annotation) openAnnotationEditor(annotation);
+  if (remove && annotation) await syncAnnotations({action: "delete", id: annotation.id, revision: annotation.revision});
+});
+$("annotation-save").onclick = async () => {
+  const annotation = state.annotationDraft;
+  if (!annotation || state.annotationsBusy) return;
+  annotation.comment = $("annotation-comment").value;
+  annotation.tags = [...$("annotation-tags").querySelectorAll("input:checked"), ...$("annotation-sources").querySelectorAll("input:checked"), ...$("annotation-fidelity").querySelectorAll("input:checked")].map(input => input.value);
+  if (annotation.tags.length > 8) { state.annotationStatus = "Choose at most eight labels in total."; syncAnnotationUI(); return; }
+  if (new TextEncoder().encode(annotation.comment).length > 4000) {
+    state.annotationStatus = "The comment is too long. Please shorten it."; syncAnnotationUI(); return;
+  }
+  if (await syncAnnotations({action: "upsert", annotation})) {
+    state.annotationDraft = null; $("annotation-editor").close(); syncAnnotationUI();
+  } else if (state.annotationConflict) await syncAnnotations(null, true);
+};
+$("annotation-resolve").onclick = () => {
+  if (!state.annotationDraft || state.annotationsBusy) return;
+  const latest = state.annotations.find(a => a.id === state.annotationDraft.id);
+  if (latest) state.annotationDraft.revision = latest.revision;
+  else { state.annotationDraft.id = crypto.randomUUID(); state.annotationDraft.revision = 0; }
+  state.annotationConflict = false; state.annotationStatus = "Your draft is ready. Save to apply it."; syncAnnotationUI();
+};
+$("annotation-cancel").onclick = () => { if (!state.annotationsBusy) $("annotation-editor").close(); };
+$("annotation-editor").addEventListener("cancel", event => { if (state.annotationsBusy) event.preventDefault(); });
+$("annotation-editor").addEventListener("close", () => { state.annotationDraft = null; state.annotationConflict = false; syncAnnotationUI(); });
+for (const [id, annotating] of [["entropy-analysis", false], ["reasoning-annotations", true]]) $(id).onclick = () => {
+  state.annotating = annotating; state.marking = false; hideEntropyTooltip(); syncMarkUI(); syncAnnotationUI(); updateNavigation();
+};
+window.addEventListener("focus", () => syncAnnotations());
+let entropyTarget = null;
+function hideEntropyTooltip() {
+  $("entropy-tooltip").hidden = true;
+  entropyTarget?.removeAttribute("aria-describedby");
+  entropyTarget = null;
+}
+function showEntropyTooltip(token, event) {
+  hideEntropyTooltip();
+  if (state.annotating) return;
+  const tooltip = $("entropy-tooltip"), rect = token.getBoundingClientRect();
+  if (rect.bottom < 0 || rect.top > window.innerHeight || rect.right < 0 || rect.left > window.innerWidth) return;
+  for (const clip of [token.closest(".completion-grid pre"), token.closest(".completion-scroll")]) {
+    if (!clip) continue;
+    const bounds = clip.getBoundingClientRect();
+    if (rect.bottom <= bounds.top || rect.top >= bounds.bottom || rect.right <= bounds.left || rect.left >= bounds.right) return;
+  }
+  entropyTarget = token;
+  tooltip.textContent = `Probabilities${state.entropyStatisticsManifest ? " · mean ± SD" : ""}\n${token.dataset.entropy}`;
+  token.setAttribute("aria-describedby", "entropy-tooltip");
+  tooltip.hidden = false;
+  tooltip.style.left = "8px"; tooltip.style.top = "8px";
+  const x = event?.clientX ?? rect.left, y = event?.clientY ?? rect.bottom;
+  const top = y + 18 + tooltip.offsetHeight <= window.innerHeight - 8 ? y + 18 : y - tooltip.offsetHeight - 12;
+  tooltip.style.left = `${Math.max(8, Math.min(x + 12, window.innerWidth - tooltip.offsetWidth - 8))}px`;
+  tooltip.style.top = `${Math.max(8, Math.min(top, window.innerHeight - tooltip.offsetHeight - 8))}px`;
+}
+document.addEventListener("pointerover", event => {
+  const token = event.target.closest(".entropy-token");
+  if (token && event.pointerType !== "touch") showEntropyTooltip(token, event);
+});
+document.addEventListener("pointerout", event => {
+  if (event.target.closest(".entropy-token") && !entropyTarget?.contains(event.relatedTarget) && entropyTarget !== document.activeElement) hideEntropyTooltip();
+});
+document.addEventListener("focusin", event => {
+  const token = event.target.closest(".entropy-token");
+  if (token) showEntropyTooltip(token);
+});
+document.addEventListener("focusout", event => { if (event.target === entropyTarget) hideEntropyTooltip(); });
+document.addEventListener("click", event => {
+  const token = event.target.closest(".entropy-token");
+  if (token) showEntropyTooltip(token, event); else hideEntropyTooltip();
+});
+document.addEventListener("keydown", event => { if (event.key === "Escape") hideEntropyTooltip(); });
+window.addEventListener("scroll", () => { if (entropyTarget) showEntropyTooltip(entropyTarget); }, true);
+window.addEventListener("resize", hideEntropyTooltip);
+document.addEventListener("change", event => {
+  if (event.target.id !== "entropy-top-only") return;
+  state.entropyTopOnly = event.target.checked;
+  $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
+});
+let annotationHover = null;
+function hideAnnotationTooltip() {
+  $("annotation-tooltip").hidden = true;
+  if (annotationHover?.target?.getAttribute("aria-describedby") === "annotation-tooltip") annotationHover.target.removeAttribute("aria-describedby");
+  annotationHover = null;
+}
+function annotationsAtPoint(x, y) {
+  const root = document.elementFromPoint(x, y)?.closest(".annotation-text");
+  return root ? state.annotationRanges.filter(entry => entry.root === root
+    && [...entry.range.getClientRects()].some(r => r.width > 0 && r.height > 0 && x >= r.left && x < r.right && y >= r.top && y < r.bottom)) : [];
+}
+function showAnnotationTooltip(matches, point = null, target = null) {
+  hideAnnotationTooltip();
+  if (!state.annotating || !matches.length || $("annotation-editor").open) return;
+  const root = matches[0].root;
+  const bounds = {left: 0, right: innerWidth, top: document.querySelector("header").getBoundingClientRect().bottom, bottom: innerHeight};
+  for (const clip of [root.closest(".completion-grid pre"), root.closest(".completion-scroll")]) {
+    if (!clip) continue;
+    const r = clip.getBoundingClientRect();
+    bounds.left = Math.max(bounds.left, r.left); bounds.right = Math.min(bounds.right, r.right);
+    bounds.top = Math.max(bounds.top, r.top); bounds.bottom = Math.min(bounds.bottom, r.bottom);
+  }
+  let rect;
+  const entry = matches.find(candidate => {
+    rect = [...candidate.range.getClientRects()].map(r => ({left: Math.max(r.left, bounds.left), right: Math.min(r.right, bounds.right),
+      top: Math.max(r.top, bounds.top), bottom: Math.min(r.bottom, bounds.bottom)})).find(r => r.right > r.left && r.bottom > r.top);
+    return rect;
+  });
+  if (!entry) return;
+  const {annotation} = entry;
+  const behaviors = annotation.tags.filter(tag => Object.hasOwn(reasoningBehaviors, tag) || tag === "infer");
+  const sources = annotation.tags.filter(tag => Object.hasOwn(reasoningSources, tag)), errors = annotation.tags.filter(tag => Object.hasOwn(inputFidelity, tag));
+  const labels = tags => tags.map(reasoningLabel).join(", ");
+  const explanation = Array.from(annotation.comment.trim()), tooltip = $("annotation-tooltip");
+  tooltip.textContent = `Behavior: ${labels(behaviors) || "Unclassified"}\nKnowledge source: ${labels(sources) || "Unspecified"}`
+    + (errors.length ? `\nError: ${labels(errors)}` : "")
+    + `\nExplanation: ${explanation.slice(0, 360).join("") || "No comment yet."}${explanation.length > 360 ? "…" : ""}`
+    + (matches.length > 1 ? `\nShowing the most specific of ${matches.length} overlapping annotations.` : "");
+  target ||= root;
+  target.setAttribute("aria-describedby", "annotation-tooltip");
+  annotationHover = {target, point, annotationId: annotation.id};
+  tooltip.hidden = false; tooltip.style.left = "8px"; tooltip.style.top = "8px";
+  const x = point?.x ?? rect.left, y = point?.y ?? rect.bottom;
+  const top = y + 18 + tooltip.offsetHeight <= innerHeight - 8 ? y + 18 : y - tooltip.offsetHeight - 12;
+  tooltip.style.left = `${Math.max(8, Math.min(x + 12, innerWidth - tooltip.offsetWidth - 8))}px`;
+  tooltip.style.top = `${Math.max(8, Math.min(top, innerHeight - tooltip.offsetHeight - 8))}px`;
+}
+document.addEventListener("pointermove", event => {
+  if (!state.annotating || event.pointerType === "touch") return;
+  if (!window.getSelection().isCollapsed) { hideAnnotationTooltip(); return; }
+  showAnnotationTooltip(annotationsAtPoint(event.clientX, event.clientY), {x: event.clientX, y: event.clientY}, event.target.closest(".entropy-token, .reference-link"));
+});
+document.addEventListener("click", event => {
+  if (state.annotating) showAnnotationTooltip(annotationsAtPoint(event.clientX, event.clientY), {x: event.clientX, y: event.clientY}, event.target.closest(".entropy-token, .reference-link"));
+});
+document.addEventListener("focusin", event => {
+  if (!state.annotating) return;
+  const root = event.target.closest(".annotation-text");
+  showAnnotationTooltip(root ? state.annotationRanges.filter(entry => entry.root === root && entry.range.intersectsNode(event.target)) : [], null, event.target);
+});
+document.addEventListener("focusout", event => { if (annotationHover?.target === event.target) hideAnnotationTooltip(); });
+document.addEventListener("pointerout", event => { if (!event.relatedTarget) hideAnnotationTooltip(); });
+document.addEventListener("keydown", event => { if (event.key === "Escape") hideAnnotationTooltip(); });
+window.addEventListener("scroll", () => {
+  if (!annotationHover) return;
+  const {point, target, annotationId} = annotationHover;
+  if (point) showAnnotationTooltip(annotationsAtPoint(point.x, point.y), point, target);
+  else showAnnotationTooltip(state.annotationRanges.filter(entry => entry.annotation.id === annotationId), null, target);
+}, true);
+window.addEventListener("resize", hideAnnotationTooltip);
+window.addEventListener("blur", hideAnnotationTooltip);
+async function loadEntropy(sample, payload) {
+  const manifest = state.entropyManifest;
+  if (!manifest) return {entropy: null, notice: state.entropyNotice};
+  const repetition = payload.repetition == null ? "" : `/rep-${String(payload.repetition).padStart(2, "0")}`;
+  const key = `${state.task}/${state.config}${repetition}/${String(sample.configurations[state.config].query_index).padStart(5, "0")}`;
+  const entry = manifest.examples[key];
+  if (!entry) return {entropy: null, notice: "Token entropy is not available for this example."};
+  try {
+    const response = await fetch(entry.path, {cache: "no-store"});
+    if (!response.ok) throw new Error(`HTTP ${response.status}: ${entry.path}`);
+    const bytes = await response.arrayBuffer();
+    if (await sha256(bytes) !== entry.sha256) throw new Error("Sidecar hash mismatch");
+    const entropy = JSON.parse(new TextDecoder().decode(bytes));
+    const final = payload.trace.find(r => r.task === "final_summary");
+    const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
+    for (const [name, text] of Object.entries({reasoning: assistant?.reasoning || "", answer: assistant?.content || ""})) {
+      const section = entropy.sections?.[name], length = Array.from(text).length;
+      if (section?.text !== text || !Array.isArray(section.tokens)) throw new Error(`Saved ${name} text mismatch`);
+      if (section.tokens.some(t => !Number.isInteger(t.position) || !Number.isInteger(t.token_id) || !Number.isInteger(t.start) || !Number.isInteger(t.end)
+          || t.start < 0 || t.end < t.start || t.end > length || !Number.isFinite(t.entropy) || t.entropy < 0
+          || !Number.isFinite(t.logprob) || t.logprob > 1e-5 || typeof t.top20 !== "boolean"
+          || ((t.alternate_entropy !== undefined || t.absolute_chunk_difference !== undefined)
+              && (!Number.isFinite(t.alternate_entropy) || t.alternate_entropy < 0
+                  || !Number.isFinite(t.absolute_chunk_difference) || t.absolute_chunk_difference < 0)))) throw new Error(`Invalid ${name} token scores`);
+      if (section.tokens.some(t => t.alternatives !== undefined && (
+          !Array.isArray(t.alternatives) || t.alternatives.length !== 4
+          || new Set(t.alternatives.map(a => a.token_id)).size !== 4
+          || t.alternatives.some((a, i) => !Number.isInteger(a.token_id) || a.token_id < 0 || a.token_id >= 129280
+              || a.token_id === t.token_id || typeof a.text !== "string" || !Number.isFinite(a.logprob) || a.logprob > 1e-5
+              || (i > 0 && a.logprob > t.alternatives[i - 1].logprob))
+          || Math.exp(t.logprob) + t.alternatives.reduce((sum, a) => sum + Math.exp(a.logprob), 0) > 1 + 1e-5)))
+        throw new Error(`Invalid ${name} token alternatives`);
+      let covered = 0;
+      for (const token of [...section.tokens].sort((a, b) => a.start - b.start)) {
+        if (token.start > covered) throw new Error(`Incomplete ${name} token scores`);
+        covered = Math.max(covered, token.end);
+      }
+      if (covered !== length) throw new Error(`Incomplete ${name} token scores`);
+    }
+    if (!Object.keys(payload.source_hashes).every(k => entropy.source_hashes?.[k] === payload.source_hashes[k])) throw new Error("Source trace hash mismatch");
+    if (state.entropyStatisticsManifest) {
+      const statisticsEntry = state.entropyStatisticsManifest.examples[key];
+      if (!statisticsEntry || statisticsEntry.source_sidecar_sha256 !== entry.sha256) throw new Error("Statistics source sidecar hash mismatch");
+      const response = await fetch(statisticsEntry.path, {cache: "no-store"});
+      if (!response.ok) throw new Error(`HTTP ${response.status}: ${statisticsEntry.path}`);
+      const bytes = await response.arrayBuffer();
+      if (await sha256(bytes) !== statisticsEntry.sha256) throw new Error("Statistics sidecar hash mismatch");
+      const statistics = JSON.parse(new TextDecoder().decode(bytes));
+      const tokens = [...Object.values(entropy.sections).flatMap(s => s.tokens), ...(entropy.structural_tokens || [])]
+        .sort((a, b) => a.absolute_position - b.absolute_position);
+      const arrays = ["positions", "candidate_ids", "probability_mean", "probability_sd", "entropy_mean", "entropy_sd", "top20"];
+      if (statistics.key !== key || statistics.source_sidecar_sha256 !== entry.sha256
+          || arrays.some(name => !Array.isArray(statistics[name]) || statistics[name].length !== tokens.length)) throw new Error("Invalid statistics arrays or source");
+      if (await sha256(new TextEncoder().encode(JSON.stringify(statistics.candidate_ids))) !== statistics.candidate_ids_sha256) throw new Error("Statistics candidate hash mismatch");
+      for (const [i, token] of tokens.entries()) {
+        const ids = [token.token_id, ...(token.alternatives || []).map(a => a.token_id)];
+        if (!Number.isInteger(token.absolute_position) || statistics.positions[i] !== token.absolute_position
+            || (i > 0 && statistics.positions[i] <= statistics.positions[i - 1])
+            || !Array.isArray(statistics.candidate_ids[i]) || ids.length !== 5
+            || JSON.stringify(statistics.candidate_ids[i]) !== JSON.stringify(ids)) throw new Error("Statistics position or candidate mapping mismatch");
+        const means = statistics.probability_mean[i], deviations = statistics.probability_sd[i];
+        if (!Array.isArray(means) || means.length !== 5 || means.some(p => !Number.isFinite(p) || p < 0 || p > 1)
+            || means.reduce((sum, p) => sum + p, 0) > 1 + 1e-5
+            || !Array.isArray(deviations) || deviations.length !== 5 || deviations.some(s => !Number.isFinite(s) || s < 0 || s > 1)
+            || !Number.isFinite(statistics.entropy_mean[i]) || statistics.entropy_mean[i] < 0
+            || !Number.isFinite(statistics.entropy_sd[i]) || statistics.entropy_sd[i] < 0
+            || typeof statistics.top20[i] !== "boolean") throw new Error("Invalid statistics values");
+      }
+      const indices = new Map(statistics.positions.map((position, i) => [position, i]));
+      const sections = {};
+      for (const [name, section] of Object.entries(entropy.sections)) {
+        const tokens = section.tokens.map(token => {
+          const i = indices.get(token.absolute_position);
+          return {...token, entropy: statistics.entropy_mean[i], entropy_sd: statistics.entropy_sd[i],
+            probability_mean: statistics.probability_mean[i][0], probability_sd: statistics.probability_sd[i][0],
+            alternatives: token.alternatives.map((a, j) => ({...a, probability_mean: statistics.probability_mean[i][j + 1], probability_sd: statistics.probability_sd[i][j + 1]}))
+              .sort((a, b) => b.probability_mean - a.probability_mean || a.token_id - b.token_id)};
+        });
+        const top = new Set([...tokens].sort((a, b) => b.entropy - a.entropy || a.absolute_position - b.absolute_position)
+          .slice(0, Math.ceil(tokens.length * .2)).map(t => t.absolute_position));
+        for (const token of tokens) {
+          token.top20 = top.has(token.absolute_position);
+          if (token.top20 !== statistics.top20[indices.get(token.absolute_position)]) throw new Error("Statistics top-20% ranking mismatch");
+        }
+        sections[name] = {...section, tokens};
+      }
+      if ((entropy.structural_tokens || []).some(t => statistics.top20[indices.get(t.absolute_position)])) throw new Error("Invalid structural top-20% flag");
+      return {entropy: {...entropy, sections}, notice: ""};
+    }
+    return {entropy, notice: ""};
+  } catch (error) {
+    return {entropy: null, notice: `Token entropy unavailable: ${error.message}. The original trace is shown.`};
+  }
+}
+function renderReferences() {
+  const references = state.payload.references;
+  const molecules = references.filter(r => r.unit_kind === "molecule");
+  const records = references.filter(r => r.unit_kind === "record");
+  const cards = molecules.map(molecule => {
+    const children = records.filter(r => r.containing_unit_id === molecule.stable_id);
+    const body = children.map(record => `<details class="record-card" id="${referenceId(record.visible_id)}"><summary class="card-head">${esc(record.visible_id)} · measurement for ${esc(molecule.visible_id)}</summary><div class="card-body"><pre>${esc(record.text)}</pre></div></details>`).join("");
+    return `<details class="evidence-card" id="${referenceId(molecule.visible_id)}"><summary>${esc(molecule.visible_id)} · reference molecule · L${esc(molecule.first_visible_level)} <span class="tag">${children.length} records</span></summary><div class="card-body"><pre>${esc(molecule.text)}</pre>${body}</div></details>`;
+  }).join("");
+  const unmatched = records.filter(r => !molecules.some(m => m.stable_id === r.containing_unit_id));
+  return `<div class="section"><div class="section-head">Reference guide <span class="tag">${molecules.length} molecules · ${records.length} records</span></div><div class="section-body">
+    <p class="reference-intro"><strong>Molecule 3</strong> identifies a reference molecule. <strong>Record 3-2</strong> is its second experimental record. Click a reference in the reasoning or final answer to open its evidence below. Numbering is local to each sample.</p>
+    <p class="reference-intro">References use <strong>Molecule / Record</strong> labels. C1 or C2 inside chemical notation can describe atoms or ring closures. Dotted amber references have no exact match in the evidence list.</p>
+    ${panel(`Browse ${molecules.length} context molecules and ${records.length} records`, `<div class="reference-grid">${cards}</div>`)}${unmatched.length ? `<div class="warn">Records with no saved parent mapping: ${esc(unmatched.map(r => r.visible_id).join(", "))}</div>` : ""}
+  </div></div>`;
+}
+function renderInput(record) {
+  return record.messages.filter(m => m.role !== "assistant").map((message, index) =>
+    panel(`${message.role === "system" ? "System" : "User"} prompt${index > 1 ? " (retry)" : ""}`, `<pre>${esc(message.content)}</pre>`, message.role === "user")).join("");
+}
+function predictionFor(sample, repetition = state.repetition) {
+  return (sample.by_repetition?.[repetition] || sample.configurations)[state.config];
+}
+function repetitionNumber(repetition) {
+  const index = state.release.tasks[state.task].repetitions?.map(String).indexOf(String(repetition)) ?? -1;
+  return index >= 0 ? index + 1 : repetition;
+}
+function renderDetail(sample) {
+  const arm = state.release.tasks[state.task].configurations[state.config];
+  const final = state.payload.trace.find(r => r.task === "final_summary");
+  const overview = [metric("Reference label", sample.label), metric("P(Y=1)", state.payload.positive_probability.toFixed(2)), metric("Provider", state.payload.provenance.provider), metric("Configuration", arm.label),
+    metric("Model", state.payload.provenance.served_model), metric("SMILES", sample.smiles)].join("");
+  const base = state.sharedInput || final.messages.filter(m => m.role !== "assistant" && !m.content?.startsWith("Retry the flat-context-final response"));
+  $("detail").innerHTML = `${annotationPanel()}<p class="reference-intro">${esc(state.release.notice)}</p><div class="section"><div class="section-head">Sample overview <span class="tag">TDC test</span></div><div class="overview">${overview}</div></div>
+    ${renderReferences()}<div class="section" id="shared-input"><div class="section-head">${sample.by_repetition ? "Shared input · identical across repetitions" : "Input"}</div><div class="stage-content">${panel("Input", renderInput({messages: base}), false)}</div></div>
+    <div id="completion-area" class="section"></div>`;
+  renderCompletions(sample);
+}
+function renderCompletions(sample) {
+  const arm = state.release.tasks[state.task].configurations[state.config];
+  const all = state.repetition === "all" && state.completions.length > 1;
+  const hasEntropy = all ? state.completions.some(c => c.entropy) : Boolean(state.entropy);
+  const statistics = state.entropyStatisticsManifest;
+  const provisional = Boolean(statistics) || /\bPROVISIONAL\b/i.test(state.entropyManifest?.notice || "");
+  const validation = (statistics || state.entropyManifest)?.numerical_validation;
+  const repeatabilityFailed = validation?.status === "failed_repeatability";
+  const qualification = repeatabilityFailed ? `<strong class="bad">Repeatability check failed</strong><br>${esc(validation.message)}<br>`
+    : `${provisional ? '<strong class="entropy-provisional">Provisional local rescoring</strong><br>' : ""}${statistics && validation?.message ? `${esc(validation.message)}<br>` : ""}`;
+  const colorMax = (state.entropyStatisticsManifest || state.entropyManifest)?.color_max;
+  const entropyControls = hasEntropy ? `<div class="entropy-controls${repeatabilityFailed ? " repeatability-failed" : provisional ? " provisional" : ""}">${qualification}${statistics ? "Per saved trace: mean ± sample SD over n=3 full-prefill scoring passes. Probability SD is in percentage points (pp).<br>" : ""}Token entropy · T=${esc(state.entropyManifest.temperature)} · nats. <span class="entropy-scale"></span> 0–${colorMax.toFixed(2)} nats (shared scale; darker values are clipped).<br><label><input id="entropy-top-only" type="checkbox"${state.entropyTopOnly ? " checked" : ""}> Highlight only the highest-entropy 20% of tokens in each section</label><br>${provisional && !repeatabilityFailed ? "Scores may depend on the evaluation configuration. " : ""}Hover, focus, or tap text to see token probabilities. Scores follow the original generated text.</div>`
+    : !all && state.entropyNotice ? `<div class="entropy-controls warn">${esc(state.entropyNotice)}</div>` : "";
+  const markControls = hasEntropy && state.release.token_marks ? '<div class="token-marks"><button id="marks-toggle" aria-pressed="false">Mark tokens</button><span id="marks-count"></span><span id="marks-status" role="status"></span><span>Anyone can mark or unmark.</span></div><details class="marked-token-list"><summary id="marks-list-title">Marked tokens</summary><div id="marked-token-links"></div></details>' : "";
+  if (state.release.token_marks) {
+    $("completion-area").dataset.markTrace = state.entropy?.key || "";
+    $("completion-area").dataset.markSequence = state.entropy?.sequence_sha256 || "";
+  }
+  $("detail").classList.toggle("entropy-top-only", state.entropyTopOnly);
+  if (all) {
+    const columns = state.completions.map(({repetition, payload, entropy, notice}) => {
+      const final = payload.trace.find(r => r.task === "final_summary");
+      const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
+      const prediction = predictionFor(sample, repetition);
+      const retries = final.messages.filter(m => m.role === "user" && m.content.startsWith("Retry the flat-context-final response"));
+      return `<article class="completion-card" data-repetition="${esc(repetition)}"${state.release.token_marks && entropy ? ` data-mark-trace="${esc(entropy.key)}" data-mark-sequence="${esc(entropy.sequence_sha256)}"` : ""}><div class="completion-heading"><button data-focus-repetition="${esc(repetition)}" title="Open this repetition at full width">Repetition ${esc(repetitionNumber(repetition))} ↗</button><span class="${prediction.correct ? "ok" : "bad"}">Prediction ${esc(prediction.pred_label)} · ${prediction.correct ? "correct" : "wrong"}</span></div><div class="stage-content">
+        ${retries.length ? panel("Additional retry instructions", retries.map(m => `<pre>${esc(m.content)}</pre>`).join("")) : ""}
+        ${notice ? `<div class="entropy-controls warn">${esc(notice)}</div>` : ""}
+        ${panel("Reasoning", assistant?.reasoning ? `<pre>${entropyText("reasoning", assistant.reasoning, entropy, payload.references)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>', true)}
+        ${panel("Final output", `<pre>${entropyText("answer", entropy ? assistant?.content || "" : final.response_text || assistant?.content || "", entropy, payload.references)}</pre>`, true)}
+      </div></article>`;
+    }).join("");
+    $("completion-area").innerHTML = `<div class="section-head">Reasoning and output · all three repetitions <span class="tag">Click a repetition to open it</span></div>${entropyControls}${markControls}<div class="completion-scroll"><div class="completion-grid">${columns}</div></div>`;
+    $("completion-area").querySelectorAll("[data-focus-repetition]").forEach(button => button.onclick = () => showRepetition(button.dataset.focusRepetition));
+    syncMarkUI();
+    syncAnnotationUI(true);
+    return;
+  }
+  const prediction = predictionFor(sample);
+  const final = state.payload.trace.find(r => r.task === "final_summary");
+  const assistant = [...final.messages].reverse().find(m => m.role === "assistant");
+  const outcome = `${sample.label === prediction.pred_label ? "T" : "F"}${prediction.pred_label ? "P" : "N"}`;
+  const retries = final.messages.filter(m => m.role === "user" && m.content.startsWith("Retry the flat-context-final response"));
+  $("completion-area").innerHTML = `<div class="section-head"><span>Saved prediction${state.repetition ? ` · Repetition ${esc(repetitionNumber(state.repetition))}` : ""}</span>${sample.by_repetition ? '<button id="show-all-repetitions">← All three repetitions</button>' : `<span class="tag">${esc(arm.label)}</span>`}</div><div class="stage-content">
+      <div class="${prediction.correct ? "ok" : "bad"}">Prediction ${esc(prediction.pred_label)} · ${esc(outcomes[outcome])}</div>
+      ${retries.length ? panel("Additional retry instructions", retries.map(m => `<pre>${esc(m.content)}</pre>`).join("")) : ""}
+      ${entropyControls}${markControls}
+      ${panel("Reasoning", assistant?.reasoning ? `<pre>${entropyText("reasoning", assistant.reasoning)}</pre>` : '<div class="empty">No separate reasoning content recorded.</div>', true)}
+      ${panel("Final output", `<pre>${entropyText("answer", state.entropy ? assistant?.content || "" : final.response_text || assistant?.content || "")}</pre>`, true)}
+    </div>`;
+  if (sample.by_repetition) $("show-all-repetitions").onclick = () => showRepetition("all");
+  syncMarkUI();
+  syncAnnotationUI(true);
+}
+function showRepetition(repetition) {
+  if (state.repetition !== repetition) state.markedPosition = null;
+  state.repetition = repetition;
+  $("repetition").value = repetition;
+  const selected = state.completions.find(c => c.repetition === repetition) || state.completions[0];
+  if (!selected) return;
+  state.payload = selected.payload; state.entropy = selected.entropy; state.entropyNotice = selected.notice;
+  const sample = state.release.tasks[state.task].samples.find(s => s.query_uid === state.selected);
+  renderSamples(); updateNavigation(); renderCompletions(sample);
+}
+function updateNavigation() {
+  const query = new URLSearchParams({ task: state.task, configuration: state.config, query: state.selected || "" });
+  if (state.repetition) query.set("repetition", state.repetition);
+  if (state.annotating) query.set("mode", "annotations");
+  if (state.annotating && state.annotationId) query.set("annotation_id", state.annotationId);
+  if (state.markedPosition !== null) query.set("marked_position", state.markedPosition);
+  history.replaceState(null, "", `?${query}`);
+  document.querySelectorAll("[data-config], [data-task]").forEach(link => {
+    const next = new URLSearchParams(query);
+    next.delete("marked_position");
+    next.delete("annotation_id");
+    if (link.dataset.config) next.set("configuration", link.dataset.config);
+    if (link.dataset.task) { next.set("task", link.dataset.task); next.delete("query"); next.delete("repetition"); }
+    link.href = `?${next}`;
+    link.classList.toggle("active", link.dataset.config ? link.dataset.config === state.config : link.dataset.task === state.task);
+  });
+}
+function renderSamples() {
+  const samples = state.release.tasks[state.task].samples;
+  const search = $("search").value.toLowerCase(), correctness = $("correctness").value, status = $("status").value;
+  const filtered = samples.filter(s => {
+    const predictions = state.repetition === "all" && s.by_repetition ? Object.values(s.by_repetition).map(c => c[state.config]) : [predictionFor(s)];
+    return (!search || `${s.query_index} ${s.query_uid} ${s.smiles} ${s.selection_outcome} ${outcomes[s.selection_outcome]}`.toLowerCase().includes(search))
+      && (!correctness || predictions.some(p => p.correct === (correctness === "correct"))) && status !== "failed";
+  });
+  $("count").textContent = `${filtered.length} / ${samples.length}`;
+  $("samples").innerHTML = filtered.map(s => {
+    const predictions = state.repetition === "all" && s.by_repetition ? Object.values(s.by_repetition).map(c => c[state.config]) : [predictionFor(s)];
+    const correct = predictions.filter(p => p.correct).length;
+    const outcome = predictions.length > 1 ? `${correct}/${predictions.length} correct` : correct ? "correct" : "wrong";
+    return `<button class="sample${state.selected === s.query_uid ? " active" : ""}" data-query="${esc(s.query_uid)}"><div class="sample-main"><strong>Sample ${samples.indexOf(s) + 1}</strong><span class="${correct === predictions.length ? "ok" : correct === 0 ? "bad" : "warn"}">${outcome}</span></div><div class="sample-sub">label=${s.label} prediction=${predictions.map(p => p.pred_label).join(" / ")}</div><div class="sample-sub">First saved query index · illustrative example</div></button>`;
+  }).join("") || '<div class="empty">No matching samples.</div>';
+  document.querySelectorAll("[data-query]").forEach(button => button.onclick = () => selectSample(button.dataset.query));
+}
+async function selectSample(uid) {
+  const loading = ++state.loading;
+  if (state.selected !== uid) { state.markedPosition = null; state.annotationId = null; state.annotationFocused = null; }
+  state.selected = uid;
+  state.completions = [];
+  renderSamples(); updateNavigation();
+  $("detail").innerHTML = '<div class="section"><div class="loading">Loading saved trace…</div></div>';
+  const sample = state.release.tasks[state.task].samples.find(s => s.query_uid === uid);
+  try {
+    const repetitions = state.release.tasks[state.task].repetitions?.map(String) || [null];
+    const completions = await Promise.all(repetitions.map(async repetition => {
+      const configurations = sample.by_repetition?.[repetition] || sample.configurations;
+      const payload = await fetchJson(configurations[state.config].path);
+      const scored = await loadEntropy({...sample, configurations}, payload);
+      return {repetition, payload, ...scored};
+    }));
+    if (loading !== state.loading) return;
+    const inputs = completions.map(c => c.payload.trace.find(r => r.task === "final_summary").messages.filter(m => m.role !== "assistant" && !m.content?.startsWith("Retry the flat-context-final response")));
+    if (inputs.some(messages => JSON.stringify(messages) !== JSON.stringify(inputs[0]))
+        || completions.some(c => JSON.stringify(c.payload.references) !== JSON.stringify(completions[0].payload.references))) throw new Error("Saved inputs differ across repetitions; a shared input cannot be shown.");
+    state.sharedInput = inputs[0]; state.completions = completions;
+    const selected = completions.find(c => c.repetition === state.repetition) || completions[0];
+    state.payload = selected.payload; state.entropy = selected.entropy; state.entropyNotice = selected.notice;
+    renderDetail(sample);
+    if (state.markedPosition !== null) {
+      const target = [...document.querySelectorAll(".entropy-token[data-mark-native]")].find(span => span.dataset.markNative.split(",").some(pair => Number(pair.split(":")[0]) === state.markedPosition));
+      if (target) { target.scrollIntoView({block: "center"}); target.focus({preventScroll: true}); }
+    }
+  } catch (error) {
+    if (loading === state.loading) $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`;
+  }
+}
+function openReference(id) {
+  const target = document.getElementById(id);
+  if (!target) return;
+  for (let element = target; element; element = element.parentElement) if (element.tagName === "DETAILS") element.open = true;
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+document.addEventListener("click", event => {
+  const link = event.target.closest(".reference-link");
+  if (link) { event.preventDefault(); if (!state.annotating) openReference(link.getAttribute("href").slice(1)); }
+});
+window.addEventListener("hashchange", () => openReference(location.hash.slice(1)));
+for (const id of ["search", "correctness", "status"]) $(id).addEventListener("input", () => { if (state.release) renderSamples(); });
+$("repetition").onchange = event => showRepetition(event.target.value);
+fetchJson("legacy_gold_release_manifest.json").then(async release => {
+  state.release = release;
+  if (release.token_marks) { syncTokenMarks(); setInterval(() => syncTokenMarks(), 15000); }
+  if (release.reasoning_annotations) {
+    syncAnnotationUI(); syncAnnotations(); setInterval(() => syncAnnotations(), 15000);
+  } else state.annotating = false;
+  try {
+    const response = {status: 404}; // This example has no token-entropy sidecar.
+    if (response.status !== 404) {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const manifest = await response.json();
+      if (manifest.schema_version !== "trace_token_entropy.v1" || manifest.units !== "nats" || manifest.temperature !== 1
+          || !Number.isFinite(manifest.color_max) || manifest.color_max <= 0 || !manifest.examples || typeof manifest.examples !== "object") throw new Error("Invalid entropy manifest");
+      state.entropyManifest = manifest;
+      if (release.entropy_statistics_manifest) {
+        const statistics = await fetchJson(release.entropy_statistics_manifest);
+        if (statistics.schema_version !== "trace_entropy_statistics.v1" || statistics.repetitions !== 3 || statistics.ddof !== 1
+            || !Number.isFinite(statistics.color_max) || statistics.color_max <= 0 || !statistics.examples || typeof statistics.examples !== "object") throw new Error("Invalid entropy statistics manifest");
+        state.entropyStatisticsManifest = statistics;
+      }
+    }
+  } catch (error) { state.entropyManifest = null; state.entropyNotice = `Token entropy unavailable: ${error.message}. The original trace is shown.`; }
+  if (!release.tasks[state.task]) state.task = "ames";
+  const task = release.tasks[state.task];
+  if (!task.configurations[state.config]) state.config = "direct_plus_indirect";
+  if (task.repetitions) {
+    const repetitions = task.repetitions.map(String);
+    if (state.repetition !== "all" && !repetitions.includes(state.repetition)) state.repetition = "all";
+    $("repetition-control").hidden = false;
+    $("repetition").innerHTML = '<option value="all">All three repetitions</option>' + repetitions.map(rep => `<option value="${esc(rep)}">Repetition ${esc(repetitionNumber(rep))}</option>`).join("");
+    $("repetition").value = state.repetition;
+  } else state.repetition = null;
+  document.title = `${task.title} · ${release.title || "Legacy trace samples"}`;
+  $("page-title").textContent = document.title;
+  const sample = task.samples.find(s => s.query_uid === state.selected) || task.samples[0];
+  await selectSample(sample.query_uid);
+}).catch(error => { $("detail").innerHTML = `<div class="error">${esc(error.message)}</div>`; });
+</script>
+</body>
+</html>
